@@ -1,0 +1,27 @@
+select(name="selectGuests").select
+    option(value="Сколько гостей" selected).select__container
+    option(value="ВЗРОСЛЫЕ") 
+        .select__container
+            div.select__item ВЗРОСЛЫЕ
+            div.select__counter
+                button.select__minus -
+                div.select__count 0
+                button.select__plus +
+    option(value="ДЕТИ") 
+        .select__container
+            div ДЕТИ
+            div.select__counter
+                button.select__minus -
+                div.select__count 0
+                button.select__plus +
+    option(value="МЛАДЕНЦЫ") 
+        .select__container
+            div МЛАДЕНЦЫ
+            div.select__counter
+                button.select__minus -
+                div.select__count 0
+                button.select__plus +
+    option(value="set") 
+        .select__container
+            div.purple-text ОЧИСТИТЬ
+            div.purple-text ПРИМЕНИТЬ

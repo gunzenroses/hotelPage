@@ -1,0 +1,27 @@
+select(name="selectRooms").select-rooms
+    option(value="Сколько гостей" selected).select-rooms__container
+    option(value="ВЗРОСЛЫЕ") 
+        .select-rooms__container
+            div.select__item ВЗРОСЛЫЕ
+            div.select__counter
+                button.select__minus -
+                div.select__count 0
+                button.select__plus +
+    option(value="ДЕТИ") 
+        .select-rooms__container
+            div ДЕТИ
+            div.select__counter
+                button.select__minus -
+                div.select__count 0
+                button.select__plus +
+    option(value="МЛАДЕНЦЫ") 
+        .select-rooms__container
+            div МЛАДЕНЦЫ
+            div.select__counter
+                button.select__minus -
+                div.select__count 0
+                button.select__plus +
+    option(value="set") 
+        .select-rooms__container
+            div.purple-text ОЧИСТИТЬ
+            div.purple-text ПРИМЕНИТЬ

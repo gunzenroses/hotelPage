@@ -1,0 +1,44 @@
+//- _template layout
+doctype html
+html(lang='ru')
+  head
+    //- Meta
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    //- SEO
+
+    //- Basic Seo
+    block basicSeo
+      meta(name='description' content='food for cats')
+      meta(name='keywords', content='')
+      meta(name='author' content='gunzenroses')
+    
+    //- Title
+    block title
+      title 
+
+    block links
+      link(href='')
+
+    block manifestBrowserconfig
+      link(rel='manifest', href='../../../manifest.json')
+
+    //- Fonts
+    block fonts
+      //- preload fonts
+      link(type='font/eot', href=require('../../assets/fonts/Montserrat-Bold.eot'))
+
+      //- font-awesome
+      link(src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css")
+
+  body
+
+    include ../components/header.pug
+    //- block content
+    block content
+      include ../pages/UIKit/formElements.pug
+
+    include ../components/footer.pug
+
+    block script

@@ -1,0 +1,42 @@
+/* src/assets/styles/common/_general.scss  */
+
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+html,
+body {
+  height: 100%;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: $Montserrat;
+  font-weight: 400;
+}
+body {
+  @include container(1200);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+p {
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+
+.purple-text {
+  color: $purple;
+}

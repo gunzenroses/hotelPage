@@ -1,0 +1,68 @@
+/* src/assets/styles/base/_fonts.scss  */
+
+/*
+    Montserrat
+*/
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 400;
+  src: url("@~fonts/Montserrat-Regular.eot");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 400;
+  src: url("@~fonts/Montserrat-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 400;
+  src: url("@~fonts/Montserrat-Regular.woff");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 400;
+  src: url("@~fonts/Montserrat-Regular.svg");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 400;
+  src: url("@~fonts/Montserrat-Regular.otf");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 700;
+  src: url("@~fonts/Montserrat-Bold.eot");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 700;
+  src: url("@~fonts/Montserrat-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 700;
+  src: url("@~fonts/Montserrat-Bold.woff");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 700;
+  src: url("@~fonts/Montserrat-Bold.svg");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 700;
+  src: url("@~fonts/Montserrat-Bold.otf");
+}
+
+
+$Montserrat: "Montserrat", Arial, sans-serif;

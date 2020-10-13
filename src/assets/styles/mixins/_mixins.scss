@@ -1,0 +1,23 @@
+/* src/assets/styles/mixins/_mixins.scss  */
+
+@mixin isFlex($align: center, $justify: flex-start, $direction: row, $wrap: nowrap) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+  flex-wrap: $wrap;
+}
+
+@mixin bgImage($url, $repeat: no-repeat, $position: center, $size: initial) {
+  background-image: url($url);
+  background-repeat: $repeat;
+  background-position: $position;
+  background-size: $size;
+}
+
+@mixin container($width: 0, $height: 0, $marginSides: 0, $marginTop: 0, $marginBottom: 0, $padding: 0) {
+  width: $width + px;
+  height: $height + px;
+  margin: $marginTop $marginSides $marginBottom;
+  padding: $padding;
+}

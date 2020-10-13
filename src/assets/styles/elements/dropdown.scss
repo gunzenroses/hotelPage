@@ -1,0 +1,24 @@
+.select {
+    border-radius: 2px;
+    &__container {
+        @include container($width: 320, $height: 44);
+    }
+
+    &__item,
+    &__count {
+        font-weight: 700;
+    }
+
+    &__counter {
+        @include container($width: 92, $height: 30);
+        @include isFlex($justify: space-between);
+    }
+
+    &__minus,
+    &__plus {
+        @include container($width: 30, $height: 30);
+        border-radius: 50%;
+        border: 1px solid $darkShade25;
+        box-shadow: border-box;
+    }
+}
