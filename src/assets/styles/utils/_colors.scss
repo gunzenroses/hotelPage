@@ -1,9 +1,10 @@
 /* src/assets/styles/utils/_colors.scss  */
 
-$darkShade100: #1Ff041;
-$darkShade75: rgba(31, 32, 65, 0.75);
-$darkShade50: rgba(31, 32, 65, 0.5);
-$darkShade25: rgba(31, 32, 65, 0.25);
-$darkShade5: rgba(31, 32, 65, 0.05);
+$darkShadeMost: rgba(31, 32, 65, 1);
+$darkShadeMore: rgba(31, 32, 65, 0.75);
+$darkShadeMiddle: rgba(31, 32, 65, 0.5);
+$darkShadeLess: rgba(31, 32, 65, 0.25);
+$darkShadeFew: rgba(31, 32, 65, 0.05);
 $purple: #bc9cff;
 $green: #6fcf97;
+$light: #fff;

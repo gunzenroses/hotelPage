@@ -1,5 +1,3 @@
-@import "normalize.css";
-
 /*
   Base
 */
@@ -19,13 +17,23 @@
 */
 @import "./components/card";
 @import "./components/header";
+@import "./components/guests";
 /*
   Layout
 */
 @import "./common/page";
 @import "./common/general";
+@import "./common/elements";
+/*
+  Elements
+*/
+@import "./elements/textField";
+@import "./elements/dropdown";
+@import "./elements/expandableCheckboxList";
+@import "./elements/subscriptionTextField";
+@import "./elements/dropdownRooms";
 
 /*
   Pages
 */
-@import "./pages/pages";
+@import "./pages/form-elements";

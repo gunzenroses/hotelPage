@@ -26,18 +26,14 @@ html(lang='ru')
 
     //- Fonts
     block fonts
-      //- preload fonts
-      link(type='font/eot', href=require('../../assets/fonts/Montserrat-Bold.eot'))
-
       //- font-awesome
       link(src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css")
 
   body
 
     include ../components/header.pug
-    //- block content
+    
     block content
-      include ../pages/UIKit/formElements.pug
 
     include ../components/footer.pug
 

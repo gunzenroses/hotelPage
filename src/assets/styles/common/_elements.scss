@@ -1,0 +1,18 @@
+.container_big {
+    width: 320px;
+}
+
+.container_medium {
+    width: 266px;
+}
+
+.container_small {
+    width: 150px;
+}
+
+
+.container__row_big {
+    @include container($width: 320, $height: calc(1853-140-330));
+}
+
+//320px 126px 320px 72px 320px

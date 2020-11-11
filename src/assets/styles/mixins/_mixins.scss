@@ -15,9 +15,9 @@
   background-size: $size;
 }
 
-@mixin container($width: 0, $height: 0, $marginSides: 0, $marginTop: 0, $marginBottom: 0, $padding: 0) {
+@mixin container($width: 0, $height: 0, $marginTop: 0, $marginSides: 0, $marginBottom: 0, $paddingTop: 0, $paddingSides: 0, $paddingBottom: 0) {
   width: $width + px;
   height: $height + px;
   margin: $marginTop $marginSides $marginBottom;
-  padding: $padding;
+  padding: $paddingTop $paddingSides $paddingBottom;
 }

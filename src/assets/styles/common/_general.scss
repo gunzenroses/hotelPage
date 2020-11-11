@@ -8,13 +8,16 @@ html,
 body {
   height: 100%;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 24px;
   font-family: $Montserrat;
   font-weight: 400;
+  color: $darkShadeMore;
+  max-width: 1440px;
+  background: $light;
+  margin: 0 auto;
+  padding: 0;
 }
-body {
-  @include container(1200);
-}
+
 h1,
 h2,
 h3,
@@ -23,20 +26,102 @@ h5,
 h6 {
   margin: 0;
 }
+
+h1 {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+h2 {
+  font-size: 19px;
+  line-height: 23,75px;
+}
+
+h3 {
+  font-size: 12px;
+  line-height: 14,63px;
+}
+
 a {
   text-decoration: none;
 }
+
 p {
   margin: 0;
 }
+
 ul {
   margin: 0;
   padding: 0;
 }
+
 li {
   list-style: none;
 }
 
 .purple-text {
   color: $purple;
+}
+
+button {
+  border: 0;
+  padding: 0;
+  outline: none;
+  background-color: transparent;
+}
+
+.label {
+  display: inline-block;
+  height: 15px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14,63px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+
+  &_right {
+    @extend .label;
+      color: $darkShadeMiddle;
+      position: absolute;
+      right: 0;
+  }
+}
+
+// .formContainer_big {
+//   @include container($width: 320, $height: 67);
+//   @include isFlex($direction: column);
+// }
+
+// .formContainer_medium {
+//   @include container($width: 267, $height: 64);
+//   @include isFlex($direction: column);
+// }
+
+select {
+  //background-image: url('../../images/svg/arrowSelect.svg');
+  background-repeat: no-repeat;
+  background-color: #fff;
+  background-position: right 13px center;
+  padding-right: 30px;
+}
+
+.widget {
+  position: relative;
+  width: 100%;
+}
+
+.row_middle {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  margin-left: 140px;
+  margin-top: 140px;
+}
+
+input {
+  border: 0;
+  padding: 0;
+  width:95%;
+  height: 90%;
+  appearance: none;
 }

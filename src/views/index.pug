@@ -1,7 +1,21 @@
 extends templates/_template.pug
 
 block content
-    //- Desktop page
-    include ./components/header.pug
-      //-Components
-    include ./components/card.pug
+    div.row_middle
+      //- Desktop page
+      include ./components/header.pug
+        //-Components
+      include ./components/card.pug
+      include ./elements/_textField.pug
+      include ./elements/_textField.pug 
+      
+      include ./elements/_dropdown.pug
+      include ./elements/_maskedTextField.pug
+      include ./elements/_dropdownDate.pug
+
+      .label DROPDOWN
+      include ./components/guests.pug
+
+      .label DROPDOWN
+      include ./elements/_checkboxExpandable.pug
+      include ./elements/_subscriptionTextField.pug

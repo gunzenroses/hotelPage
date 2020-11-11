@@ -1,0 +1,24 @@
+//add some universal labels on the page
+form(action="").widget
+    .dropdown__button_open 
+        input(name='rooms' value='' type='text' placeholder='2 спальни, 2 кровати' readonly)
+    .dropdown__content
+        ul.dropdown__list
+            li.dropdown__item 
+                .item__title Спальни 
+                .item__counter
+                    .item__counter_plus +
+                    .item__counter_number 0
+                    .item__counter_minus -
+            li.dropdown__item 
+                .item__title Кровати
+                .item__counter
+                    .item__counter_plus +
+                    .item__counter_number 0
+                    .item__counter_minus -
+            li.dropdown__item
+                .item__title Ванные комнаты
+                .item__counter
+                    .item__counter_plus +
+                    .item__counter_number 0
+                    .item__counter_minus -
