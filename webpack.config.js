@@ -23,7 +23,7 @@ module.exports = (env) => {
       publicPath: "/",
       filename: "assets/js/[name].[hash:7].bundle.js",
     },
-    devServer: {
+    devner: {
       contentBase: path.resolve(__dirname, "../src"),
     },
     resolve: {
