@@ -6,14 +6,12 @@
 }
 html,
 body {
-  height: 100%;
   font-size: 14px;
   line-height: 24px;
   font-family: $Montserrat;
   font-weight: 400;
   color: $darkShadeMore;
-  max-width: 1440px;
-  background: $light;
+  background: darkkhaki;
   margin: 0 auto;
   padding: 0;
 }
@@ -70,23 +68,6 @@ button {
   background-color: transparent;
 }
 
-.label {
-  display: inline-block;
-  height: 15px;
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 14,63px;
-  margin-bottom: 5px;
-  text-transform: uppercase;
-
-  &_right {
-    @extend .label;
-      color: $darkShadeMiddle;
-      position: absolute;
-      right: 0;
-  }
-}
-
 // .formContainer_big {
 //   @include container($width: 320, $height: 67);
 //   @include isFlex($direction: column);
@@ -119,9 +100,35 @@ select {
 }
 
 input {
-  border: 0;
-  padding: 0;
-  width:95%;
+  width: 95%;
   height: 90%;
   appearance: none;
+  background: transparent;
+  //border: none;
+}
+
+.label {
+  display: inline-block;
+  height: 15px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14,63px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+
+  &_right {
+    @extend .label;
+      color: $darkShadeMiddle;
+      position: absolute;
+      right: 0;
+  }
+}
+
+.error {
+  font-size: 12px;
+  position: absolute;
+  display: block;
+  color: red;
+  bottom: -20px;
+  left: 0;
 }

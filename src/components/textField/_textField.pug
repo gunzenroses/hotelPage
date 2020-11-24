@@ -1,0 +1,11 @@
+//- .widget
+//-     label(for="textField").label Text field
+//-     span.label_right default
+//-     .textField
+//-         input(type="text" id="textField" placeholder="Email" 
+//-             value="" name="textField" data-rule="email")
+//-     .error
+
+include ../../views/mixins/textField.pug
+
++textField("textField", "Text field", "label_right", "default", "Email", "email", false)

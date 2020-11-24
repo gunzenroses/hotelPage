@@ -1,0 +1,18 @@
+.widget
+    legend(for="rooms").label Сheckbox buttons
+    .dropdown__content_transparent
+        label(for="smoking_allowed").checkbox 
+            input(type="checkbox" id="smoking_allowed" name="smoking" value="smoking_allowed").checkbox__real
+            span.checkbox__fake
+            span.checkbox__title Можно курить
+
+        label(for="pets_allowed").checkbox 
+            input(type="checkbox" id="pets_allowed" name="pets" value="pets_allowed").checkbox__real
+            span.checkbox__fake
+            span.checkbox__title Можно с питомцами
+
+        label(for="guests_allowed").checkbox 
+            input(type="checkbox" id="guests_allowed" name="guests" value="guests_allowed").checkbox__real
+            span.checkbox__fake
+            span.checkbox__title Можно пригласить гостей (до 10 человек)
+

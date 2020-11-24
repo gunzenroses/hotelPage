@@ -18,14 +18,25 @@ module.exports = (env) => {
     entry: {
       app: "./app.js",
     },
+
+    // entry: [
+    //   "webpack-dev-server/client?http://127.0.0.0:8080/",
+    //   "webpack/hot/only-dev-server",
+    //   "./app.js"
+    // ],
+
     output: {
       path: path.resolve(__dirname, "../dist"),
       publicPath: "/",
       filename: "assets/js/[name].[hash:7].bundle.js",
     },
+    
     devServer: {
       contentBase: path.resolve(__dirname, "../src"),
+      inline:true,
+      port: 8080,
     },
+
     resolve: {
       extensions: [".js"],
       alias: {
@@ -152,10 +163,10 @@ module.exports = (env) => {
         //   from: "assets/images/svg/logo.svg",
         //   to: "assets/images/svg/logo.svg",
         // },
-        // {
-        //   from: "assets/images/favicons/android-chrome-256x256.png",
-        //   to: "assets/images/android-chrome-256x256.png",
-        // },
+        {
+          from: "assets/images/favicon.ico",
+          to: "assets/images/favicon.ico",
+        },
         // {
         //   from: "assets/images/favicons/mstile-150x150.png",
         //   to: "assets/images/mstile-150x150.png",
@@ -173,7 +184,7 @@ module.exports = (env) => {
       // Desktop page
       new HtmlWebpackPlugin({
         filename: "index.html",
-        template: "views/index.pug",
+        template: "./index.pug",
         inject: true,
       }),
 

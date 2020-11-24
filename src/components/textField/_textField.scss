@@ -1,0 +1,22 @@
+.textField {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 44px;
+    border: 1px solid $darkShadeLess;
+    background: transparent;
+    border-radius: 4px;
+    padding-left: 15px;
+    color: $darkShadeMore;
+
+    &:hover,
+    &:focus {
+        border: 1px solid $darkShadeMiddle;
+    }
+}
+
+.label_none {
+    display: none;
+}

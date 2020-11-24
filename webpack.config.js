@@ -18,14 +18,25 @@ module.exports = (env) => {
     entry: {
       app: "./app.js",
     },
+
+    // entry: [
+    //   "webpack-dev-server/client?http://127.0.0.0:8080/",
+    //   "webpack/hot/only-dev-server",
+    //   "./app.js"
+    // ],
+
     output: {
       path: path.resolve(__dirname, "../dist"),
       publicPath: "/",
       filename: "assets/js/[name].[hash:7].bundle.js",
     },
-    devner: {
+    
+    devServer: {
       contentBase: path.resolve(__dirname, "../src"),
+      inline:true,
+      port: 8080,
     },
+
     resolve: {
       extensions: [".js"],
       alias: {
@@ -155,6 +166,10 @@ module.exports = (env) => {
       new CopyWebpackPlugin([
         {from: "assets/images", to: "assets/images"},
         {from: "assets/fonts", to: "assets/fonts"},
+        {
+          from: "assets/images/favicon.ico",
+          to: "assets/images/favicon.ico",
+        },
       ]),
       new MiniCssExtractPlugin({
         filename: "assets/css/[name].[hash:7].bundle.css",
@@ -168,7 +183,7 @@ module.exports = (env) => {
       // // Desktop page
       new HtmlWebpackPlugin({
         filename: "index.html",
-        template: "views/index.pug",
+        template: path.join(__dirname, "../src/index.pug"),
         inject: true,
       }),
 

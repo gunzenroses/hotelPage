@@ -1,0 +1,11 @@
+//- .widget
+//-     label(for="textFieldFocused").label Text field
+//-     span.label_right hover / focused
+//-     .textField
+//-         input(type="text" id="textFieldFocused" 
+//-         placeholder="This is awesome" 
+//-         value="" name="textFieldFocused" autofocus)
+
+include ../../views/mixins/textField.pug
+
++textField("textFieldFocused", "Text field", "label_right", "hover / focused", "This is awesome", "", true)

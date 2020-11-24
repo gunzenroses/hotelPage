@@ -1,0 +1,52 @@
+//-     select(name="selectGuests").select__container
+//-         option(value="Сколько гостей" selected).select__container
+//-         option(value="ВЗРОСЛЫЕ") 
+//-             .select__container
+//-                 div.select__item ВЗРОСЛЫЕ
+//-                 div.select__counter
+//-                     button.select__minus -
+//-                     div.select__count 0
+//-                     button.select__plus +
+//-         option(value="ДЕТИ") 
+//-             .select__container
+//-                 div ДЕТИ
+//-                 div.select__counter
+//-                     button.select__minus -
+//-                     div.select__count 0
+//-                     button.select__plus +
+//-         option(value="МЛАДЕНЦЫ") 
+//-             .select__container
+//-                 div МЛАДЕНЦЫ
+//-                 div.select__counter
+//-                     button.select__minus -
+//-                     div.select__count 0
+//-                     button.select__plus +
+//-         option(value="set") 
+//-             .select__container
+//-                 button(type='reset').purple-text ОЧИСТИТЬ
+//-                 button(type='submit').purple-text ПРИМЕНИТЬ
+
+
+//- label(for="guests").label Dropdown
+//- .dropdown__button Сколько гостей
+
+.widget
+    label(for="rooms").label Dropdown
+    span.label_right expanded
+    .dropdown__button
+        input#dropRooms(type='text', readonly='', value='Количество спален' name="rooms")
+
+    #content.content
+        //-.guest
+        .list
+            input#bedrooms.list(type='checkbox', value='спальни')
+            label.list(for='bedrooms') Спальни 
+            input.list.quantity(type='hidden', min='0', value='1')
+        .list
+            input#beds.list(type='checkbox', value='кровати')
+            label.list(for='beds') Кровати
+            input.list.quantity(type='hidden', min='0', value='0')
+        .list
+            input#bathrooms.list(type='checkbox', value='ванные')
+            label.list(for='bathrooms') Ванные
+            input.list.quantity(type='hidden', min='0', value='0')

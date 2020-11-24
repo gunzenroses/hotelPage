@@ -1,0 +1,28 @@
+.dropdown__date_masked {
+    @extend .dropdown__button;
+
+    &_open {
+        @extend .dropdown__button;
+        border-radius: 4px 4px 0 0;
+    }
+    
+    &:hover,
+    &:focus {
+        border: 1px solid $darkShadeMiddle;
+    }
+
+    &::before {
+        position: absolute;
+        top: 12px;
+        right: 8px;
+        content: "";
+        transform: translate(-50%,-50%);
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        transform: rotate(45deg);
+        border-image-slice: 1;
+        border-right: 2px solid $darkShadeMiddle;
+        border-bottom: 2px solid $darkShadeMiddle;
+    }
+}
