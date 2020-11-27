@@ -112,7 +112,7 @@ input {
   height: 15px;
   font-weight: 700;
   font-size: 12px;
-  line-height: 14,63px;
+  line-height: 12px;
   margin-bottom: 5px;
   text-transform: uppercase;
 
@@ -131,4 +131,14 @@ input {
   color: red;
   bottom: -20px;
   left: 0;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+}
+
+.row {
+  @include isFlex;
+  width: 100%;
 }

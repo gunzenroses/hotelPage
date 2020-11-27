@@ -2,15 +2,12 @@
     .formElements_inner
         .formElements__element_first
             .formElements__container_first
-                //include ../../components/textField/_textField.pug
-                include ../../views/mixins/textField.pug
-                +textField("textField", "Text field", 
-                                "label_right", "default", "Email", 
-                                "email", false)
-
-
+                include ../../components/textField/_textField.pug
                 include ../../components/textFieldFocuced/_textFieldFocused.pug
+                
+                //dropdowns eщё не переделаны
                 include ../../components/dropdown/_dropdown.pug
+                
                 include ../../components/textFieldMasked/_textFieldMasked.pug
             
             .formElements__container_second
@@ -32,6 +29,10 @@
 
         .formElements__element_second
             include ../../components/buttonsCheckbox/_buttonsCheckbox.pug
+            include ../../components/buttonsRadio/_buttonsRadio.pug
+            include ../../components/buttonToggle/_buttonToggle.pug
+            include ../../components/buttonLike/_buttonLike.pug
+            include ../../components/buttonRate/_buttonRate.pug
 
         .formElements__element_third
         .formElements__element_forth

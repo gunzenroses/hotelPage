@@ -1,9 +1,0 @@
-mixin textField (labelId, labelText, labelRightClass, labelRightText, placeholder, rule, autofocus)
-
-    .widget
-        label(for=labelId class="label")= labelText
-        span(class="" + labelRightClass)= labelRightText
-        .textField
-            input(type="text" id=labelId placeholder=placeholder, 
-                value="" name=labelId data-rule=rule autofocus=autofocus)
-        .error

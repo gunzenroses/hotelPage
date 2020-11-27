@@ -1,8 +1,12 @@
-.widget
-    label(for="birthday").label Masked text field
-    .textField_masked
-        input(type="text" value="" id="birthday" 
-        name="birthday" placeholder="ДД.ММ.ГГГГ" 
-        masked="true" maxlength="10" 
-        data-rule="birthday")
-    .error
+//- .widget
+//-     label(for="birthday").label Masked text field
+//-     .textField_masked
+//-         input(type="text" value="" id="birthday" 
+//-         name="birthday" placeholder="ДД.ММ.ГГГГ" 
+//-         masked="true" maxlength="10" 
+//-         data-rule="birthday")
+//-     .error
+
+include ../../views/mixins/text.pug
+
++text("birthday", "Masked text field", "label_none", "", "textField_masked", "ДД.ММ.ГГГГ", "birthday", false, "10")

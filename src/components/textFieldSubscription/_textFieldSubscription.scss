@@ -3,34 +3,27 @@
     &::before {
         position: absolute;
         content: "";
-        background-color: linear-gradient(#BC9CFF,
-        #8BA4F9);
-        width: 10px;
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        width: 16px;
         height: 2px;
-        top: 8px;
-        right: 5px;
-        display: inline-block;
-        transform: translate(-50%,-50%);
-        border-right: 2px solid transparent;
-        border-bottom: 2px solid transparent;
+        top: 19px;
+        right: 9px;
+        z-index: 2;
     }
 
     &::after {
         position: absolute;
-        background-color: linear-gradient(#BC9CFF,
-        #8BA4F9);
-        width: 10px;
-        height: 2px;
-        top: 8px;
-        right: 5px;
-        transform: rotate(45deg);
         content: "";
-        transform: translate(-50%,-50%);
-        display: inline-block;
-        width: 8px;
-        height: 8px;
+        top: 14px;
+        right: 10px;
+        width: 10px;
+        height: 10px;
+        border-image: linear-gradient(45deg, #BC9CFF 0%, #8BA4F9 100%);
         border-image-slice: 1;
-        border-right: 2px solid transparent;
-        border-bottom: 2px solid transparent;
+        border-style: solid;
+        border-width: 2px 2px 0 0;
+        border-color: transparent;
+        border-style: solid;
+        transform: rotate(45deg);
     }
 }
