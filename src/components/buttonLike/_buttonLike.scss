@@ -1,0 +1,86 @@
+.container_buttonLike {
+    width: 92px;
+    height: 51px;
+    margin-top: 40px;
+    @include isFlex($direction: column);
+}
+
+.buttonLike {
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 20px;
+    font-size: 10px;
+    color: $darkShadeLess;
+    background: $darkShadeLess;
+    border-radius: 10px;
+    cursor: pointer;
+    // border-width: 1px;
+    // border-style: solid;
+    // background: $light;
+}
+
+.buttonLike::before {
+    @extend .buttonLike;
+    content: "";
+    position: absolute;
+    width: 38px;
+    height: 18px;
+    margin: 1px;
+    background: $light;
+}
+
+.buttonLike_popular {
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 20px;
+    font-size: 10px;
+    color: $darkShadeLess;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    border-radius: 10px;
+}
+
+.buttonLike_popular::before {
+    @extend .buttonLike_popular;
+    content: "";
+    position: absolute;
+    width: 38px;
+    height: 18px;
+    margin: 1px;
+    background: $light;
+}
+
+.buttonLike__number {
+    position: absolute;
+    line-height: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 30%;
+}
+
+.buttonLike__number_popular {
+    @extend .buttonLike__number;
+    right: 23%;
+}
+
+.buttonLike__heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    background: url(/assets/images/heart_disabled.svg);
+    background-position: center;
+    background-size: initial;
+    background-repeat: no-repeat;
+}
+
+.buttonLike__heart_popular {
+    @extend .buttonLike__heart;
+    background: url(/assets/images/heart_active.svg);
+    background-position: center;
+    background-size: initial;
+    background-repeat: no-repeat;
+}
+

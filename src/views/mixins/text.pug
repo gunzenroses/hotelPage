@@ -1,0 +1,10 @@
+mixin text (labelId, labelText, labelRightClass, labelRightText, inputClass, placeholder, rule, autofocus=false, maxlength)
+
+    .widget
+        label(for=labelId class="label")= labelText
+        span(class="" + labelRightClass)= labelRightText
+        div(class="" + inputClass)
+            input(type="text" id=labelId placeholder=placeholder, 
+                value="" name=labelId data-rule=rule autofocus=autofocus,
+                maxlength=maxlength)
+        .error
