@@ -5,38 +5,77 @@
     margin-top: 40px;
 }
 
+// .buttonRate {
+//     display: block;
+//     width: 120px;
+//     height: 24px;
+//     //- size of starts depend on font-size
+//     font-size: 24px;
+//     direction: rtl;
+// }
+
+// .input_rate {
+//     display: none;
+// }
+
+// .input_label {
+//     width: 24px;
+//     height: 24px;
+//     color: #BC9CFF;
+//     background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+//     color: transparent;
+//     background-clip: text;
+// }
+
+// .buttonRate > .input_label:before {
+//     content: "\2606";
+// }
+
+// .buttonRate > .input_rate:checked ~ .input_label:before,
+// .buttonRate > .input_rate:checked + .input_label:before {
+//     content: "\2605";
+// }
+
+// .buttonRate > .input_rate:hover ~ .input_label:before,
+// .buttonRate > .input_rate:hover + .input_label:before {
+//     content: "\2605";
+// }
+
 .buttonRate {
     display: block;
+    text-align: center;
     width: 120px;
     height: 24px;
-    //- size of starts depend on font-size
-    font-size: 24px;
+    margin: 0;
+    font-size: 29px;
     direction: rtl;
 }
 
 .input_rate {
     display: none;
+    appearance: none;
 }
 
 .input_label {
     width: 24px;
     height: 24px;
-    color: #BC9CFF;
+    color: purple;
     background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    color: transparent;
+    color:transparent;
+    -webkit-background-clip: text;
     background-clip: text;
 }
 
-.buttonRate > .input_label:before {
-    content: "\2606";
+.input_label:before {
+    content: '☆';
 }
 
-.buttonRate > .input_rate:checked ~ .input_label:before,
-.buttonRate > .input_rate:checked + .input_label:before {
-    content: "\2605";
+input:checked ~ .input_label:before,
+input:checked + .input_label:before {
+    content: '★';
 }
 
-.buttonRate > .input_rate:hover ~ .input_label:before,
-.buttonRate > .input_rate:hover + .input_label:before {
-    content: "\2605";
+.input_rate:hover ~ .input_label:before,
+.input_rate:hover + .input_label:before {
+    content: '★';
 }
