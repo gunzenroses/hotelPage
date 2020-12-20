@@ -1,0 +1,78 @@
+.pagination_contaner {
+    @include isFlex($direction: column);
+    width: 241px;
+    height: 106px;
+}
+
+.pagination_bar {
+    height: 75px;
+    width: 241px;
+    @include isFlex($direction: column);
+}
+
+.pagination__scroll-bar {
+    height: 40.4px;
+    width: 241px;
+    @include isFlex;
+}
+
+.pagination__button_first {
+    @include isPaginated;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    color: $light;
+    font-weight: 700;
+}
+
+.pagination__items {
+    width: 120px;
+    height: 40px;
+    @include isFlex;
+}
+
+.pagination__item,
+.pagination__button_last {
+    @include isPaginated;
+    background: transparent;
+    color: $darkShadeMiddle;
+    font-weight: 400;
+    &:hover {
+        background: $purple;
+    }
+}
+
+.pagination__button_next {
+    position: relative;
+    @include isPaginated;
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    &::before {
+        position: absolute;
+        content: "";
+        background: $light;
+        width: 16px;
+        height: 2px;
+        top: 19px;
+        right: 9px;
+        z-index: 2;
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+        top: 14px;
+        right: 10px;
+        width: 10px;
+        height: 10px;
+        border-color: $light;
+        border-style: solid;
+        border-width: 2px 2px 0 0;
+        transform: rotate(45deg);
+    }
+}
+
+.pagination__info {
+    width: 229px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 14px;
+    margin: 0 auto;
+}

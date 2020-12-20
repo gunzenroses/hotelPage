@@ -29,3 +29,14 @@
   margin: $mt $ms $mb;
   padding: $pt $ps $pb;
 }
+
+@mixin isPaginated() {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0;
+  padding: 0;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+}

@@ -1,0 +1,132 @@
+.button-container {
+    width: 320px;
+    height: 269px;
+    top: 40.5px;
+    @include isFlex($direction: column);
+}
+
+.button-row {
+    @include isFlex($direction: row);
+}
+
+.button-row:nth-child(2) {
+    top: 16px;
+    height: 118px;
+    width: 218px;
+    flex-wrap: wrap;
+}
+
+.button-row:nth-child(3) {
+    top: 31px;
+    height: 16px;
+    width: 142px;
+}
+
+.button-row:last-child {
+    top: 30px;
+    width: 320px;
+    height: 44px;
+}
+
+.button_filled {
+    position: relative;
+    display: block;
+    font-weight: 700;
+    width: 99px;
+    height: 44px;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    color: $light;
+    border-radius: 22px;
+    line-height: 44px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+.button_filled:hover {
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    @extend .button_filled;
+    opacity: 0.5;
+}
+
+.button_white {
+    @extend .button_filled;
+}
+
+.button_white::before {
+    content: "Click me";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 97px;
+    height: 42px;
+    margin: 1px;
+    border-radius: 22px;
+    background: $light;
+    color: $purple;
+}
+
+.button_white:hover {
+    cursor: pointer;
+    @extend .button_filled;
+    opacity: 0.5;
+}
+
+.button_clear {
+    font-weight: 700;
+    color: $purple;
+    width: 66px;
+    height: 15px;
+    text-transform: uppercase;
+}
+
+.button_clear:hover {
+    cursor: pointer;
+    color: $darkShadeMiddle;
+}
+
+.button_payment {
+    position: relative;
+    width: 320px;
+    height: 44px;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    color: $light;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    line-height: 44px;
+    border-radius: 22px;
+
+    &::before {
+        position: absolute;
+        content: "";
+        background: $light;
+        width: 16px;
+        height: 2px;
+        top: 19px;
+        right: 9px;
+        z-index: 2;
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+        top: 14px;
+        right: 10px;
+        width: 10px;
+        height: 10px;
+        border-color: $light;
+        border-style: solid;
+        border-width: 2px 2px 0 0;
+        transform: rotate(45deg);
+    }
+}
+
+.button_payment:hover {
+    cursor: pointer;
+    @extend .button_payment;
+    opacity: 0.5;
+}

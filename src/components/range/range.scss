@@ -1,8 +1,22 @@
+.range_container {
+    position: relative;
+    width: 266px;
+    height: 47px;
+    @include isFlex($direction: column);
+}
+
+.range-slider {
+    top: 20px;
+    height: 12px;
+    width: 100%;
+}
+
 .slider {
     position: relative;
     width: 266px;
     height: 10px;
     z-index: 1;
+    @include isFlex($direction: column, $justify: center, $align: center);
 }
 
 .slider > .track {
@@ -12,61 +26,78 @@
     left: 0;
     bottom: 0;
     right: 0;
-    height: 5px;
+    height: 4px;
     width: 266px;
-    border-radius: 5px;
-    background-color: transparent;
-    border: 1px solid black;
+    border-radius: 3px;
+    background-color: $light;
+    border: 1px solid $darkShadeLess;
 }
 
 
 .slider > .range {
     position: absolute;
     z-index: 2;
-    height: 6px;
+    height: 4px;
     left: 25%;
     right: 25%;
     top: 0;
-    border-radius: 5px;
-    background-color: #6FCF97;
+    border-radius: 3px;
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
 }
 
 .slider > .thumb {
     position: absolute;
     z-index: 3;
-    width: 20px;
-    height: 20px;
-    background-color: #6FCF97;
-    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    border: 2px solid $light;
 }
 
 .slider > .thumb.thumb_left {
     left: 25%;
-    transform: translate(-5px,-5px);
+    transform: translate(-5px,-2px);
 }
 
 .slider > .thumb.thumb_right {
     right: 25%;
-    transform: translate(10px,-5px);
+    transform: translate(4px,-2px);
 }
 
-.input_range {
-    position: absolute;
-    -webkit-appearance: none;
+@mixin track() {
+    width: 100%; 
+    height: 100%;
+	background: none; /* get rid of Firefox track background */
+}
+
+@mixin thumb() {
+	border: none; /* get rid of Firefox thumb border */
+    width: 1em; 
+    height: 1em;
+	border-radius: 0; /* get rid of Firefox corner rounding */
+	pointer-events: auto;
+}
+
+input[type='range'] {
+	&::-webkit-slider-runnable-track, 
+	&::-webkit-slider-thumb, & {
+		-webkit-appearance: none
+	}
+	position: absolute;
+    opacity: 0;
     width: 266px;
     z-index: 2;
-    height: 10px;
-    appearance: none;
-    opacity: 0;
-}
-
-.input_range::-webkit-slider-thumb {
-    pointer-events: all;
-    width: 30px;
-    height: 30px;
+    border: none;
     border-radius: 0;
-    border: 0 none;
-    background-color: blue;
-    -webkit-appearance: none;
+    pointer-events: auto;
+    height: 0;
+    background: none;
+	font: inherit;
+	
+	&::-webkit-slider-runnable-track { @include track }
+	&::-moz-range-track { @include track }
+	
+	&::-webkit-slider-thumb { @include thumb }
+	&::-moz-range-thumb { @include thumb }
 }
-
