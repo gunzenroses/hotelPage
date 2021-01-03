@@ -1,27 +1,29 @@
-select(name="selectRooms").select__container
-    option(value="Сколько гостей" selected).select__container
-    option(value="ВЗРОСЛЫЕ") 
-        .select__container
-            div.select__item ВЗРОСЛЫЕ
-            div.select__counter
-                button.select__minus -
-                div.select__count 0
-                button.select__plus +
-    option(value="ДЕТИ") 
-        .select__container
-            div ДЕТИ
-            div.select__counter
-                button.select__minus -
-                div.select__count 0
-                button.select__plus +
-    option(value="МЛАДЕНЦЫ") 
-        .select__container
-            div МЛАДЕНЦЫ
-            div.select__counter
-                button.select__minus -
-                div.select__count 0
-                button.select__plus +
-    //- option(value="set") 
-    //-     .select__container
-    //-         div.purple-text ОЧИСТИТЬ
-    //-         div.purple-text ПРИМЕНИТЬ
+include ../../views/mixins/dropdowns.pug
+
+
++dropdownGuestsLabeled ("dropdownGuestsInput_1", "dropdown", "label_right", "default", "dropdown_guests_1", "dropdownGuestsInput_1")
+
+
+//- widget
+//-     #dropdown_guests_1.dropdown
+//-         .dropdown__info
+//-         input.dropdown__input(readonly='' type='text' placeholder='Сколько гостей' value='')
+//-         .dropdown__guests
+//-         .dropdown__expandedItem(data-guesttype='grownups')
+//-             .dropdown__text Взрослые
+//-             .dropdown__minus  - 
+//-             .dropdown__number(data-order='0')  0 
+//-             .dropdown__plus  + 
+//-         .dropdown__expandedItem(data-guesttype='kids')
+//-             .dropdown__text Дети
+//-             .dropdown__minus  - 
+//-             .dropdown__number(data-order='1')  1 
+//-             .dropdown__plus  + 
+//-         .dropdown__expandedItem(data-guesttype='infants')
+//-             .dropdown__text Младенцы
+//-             .dropdown__minus  - 
+//-             .dropdown__number(data-order='2')  2 
+//-             .dropdown__plus  + 
+//-         .dropdown__buttons
+//-             button.dropdown__button.button__show(type='submit') Применить
+//-             button.dropdown__button(type='reset') Очистить

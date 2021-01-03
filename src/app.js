@@ -7,4 +7,5 @@ window.onload = function () {
     require("scripts/buttonLike");
     require("scripts/range.js");
     // require("scripts/dropdownRooms");
+    require("scripts/pagination");
 };

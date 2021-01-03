@@ -1,0 +1,123 @@
+.dropdown {
+    width: inherit;
+    position: relative;
+}
+
+.dropdown__info {
+    position: relative;
+    width: 100%;
+    height: 44px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    /*border-radius: 2px;*/
+    border-radius: 2px 2px 0 0;
+    line-height: 44px;
+    font-size: 14px;
+}
+
+.dropdown__info::before {
+    position: absolute;
+    top: 13px;
+    right: 13px;
+    content: "";
+    transform: translate(-50%,-50%);
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    transform: rotate(45deg);
+    border-image-slice: 1;
+    border-right: 2px solid rgba(31, 32, 65, 0.75);
+    border-bottom: 2px solid rgba(31, 32, 65, 0.75);
+    z-index: 2;
+}
+
+.dropdown__input {
+    width: calc(100% - 44px - 15px);
+    margin: 0 44px 0 15px;
+    height: 24px;
+    line-height: 24px;
+    border: none;
+}
+
+.dropdown__rooms {
+    position: relative;
+    width: 100%;
+    height: 118px;
+    border-radius: 0 0 2px 2px;
+    border-left: 1px solid rgba(31, 32, 65, 0.25);
+    border-right: 1px solid rgba(31, 32, 65, 0.25);
+    border-bottom: 1px solid rgba(31, 32, 65, 0.25);
+    display: none;
+}
+
+.dropdown__guests {
+    position: 100%;
+    width: inherit;
+    height: 158px;
+    border-radius: 0 0 2px 2px;
+    border-left: 1px solid rgba(31, 32, 65, 0.25);
+    border-right: 1px solid rgba(31, 32, 65, 0.25);
+    border-bottom: 1px solid rgba(31, 32, 65, 0.25);
+    display: none;
+}
+
+.dropdown__show {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+}
+
+.dropdown__expandedItem {
+    font-size: 12px;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 7px;
+}
+
+.dropdown__buttons {
+    font-size: 12px;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 7px;
+}
+
+.dropdown__text {
+    width: calc(100% - 30px - 30px - 32px);
+    font-weight: 700;
+}
+
+.dropdown__minus,
+.dropdown__plus {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #1F2041;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+}
+
+.dropdown__number {
+    width: 32px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.dropdown__button{
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #BC9CFF;
+    display: none;
+}
+
+.button__show {
+    display: inline-block;
+}
