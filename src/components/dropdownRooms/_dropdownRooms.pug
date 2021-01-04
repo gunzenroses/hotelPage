@@ -1,20 +1,24 @@
-widget
-    #dropdown_rooms_1.dropdown
-        .dropdown__info
-            input.dropdown__input(readonly='' type='text' placeholder='' value='')
-        .dropdown__rooms
-        .dropdown__expandedItem(data-roomtype='bedrooms')
-            .dropdown__text Спальни
-            .dropdown__minus  - 
-            .dropdown__number(data-order='0')  0 
-            .dropdown__plus  + 
-        .dropdown__expandedItem(data-roomtype='beds')
-            .dropdown__text Кровати
-            .dropdown__minus  - 
-            .dropdown__number(data-order='1')  1 
-            .dropdown__plus  + 
-        .dropdown__expandedItem(data-roomtype='bathrooms')
-            .dropdown__text Ванные комнаты
-            .dropdown__minus  - 
-            .dropdown__number(data-order='2')  2 
-            .dropdown__plus  + 
+include ../../views/mixins/dropdowns.pug
+
++mixin dropdownRoomsLabeled ("dropdownRoomsInput_1", "dropdown", "label_right", "default", "dropdown_rooms_1", "dropdownRoomsInput_1")
+
+//- widget
+//-     #dropdown_rooms_1.dropdown
+//-         .dropdown__info
+//-             input.dropdown__input(readonly='' type='text' placeholder='' value='')
+//-         .dropdown__rooms
+//-         .dropdown__expandedItem(data-roomtype='bedrooms')
+//-             .dropdown__text Спальни
+//-             .dropdown__minus  - 
+//-             .dropdown__number(data-order='0')  0 
+//-             .dropdown__plus  + 
+//-         .dropdown__expandedItem(data-roomtype='beds')
+//-             .dropdown__text Кровати
+//-             .dropdown__minus  - 
+//-             .dropdown__number(data-order='1')  1 
+//-             .dropdown__plus  + 
+//-         .dropdown__expandedItem(data-roomtype='bathrooms')
+//-             .dropdown__text Ванные комнаты
+//-             .dropdown__minus  - 
+//-             .dropdown__number(data-order='2')  2 
+//-             .dropdown__plus  + 

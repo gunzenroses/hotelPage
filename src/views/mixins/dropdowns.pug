@@ -1,9 +1,9 @@
 
-mixin dropdownGuestsLabeled (labelId, labelText, labelRightClass, labelRightText, dropdownGuestsId, inputId)
+mixin dropdownGuestsLabeled (labelId, labelText, labelRightClass, labelRightText, dropdownGuestsId, dropdownClassShow, inputId)
     .widget
         label(for=labelId class="label")= labelText
         span(class="" + labelRightClass)= labelRightText
-        + dropdownGuestsItems(dropdownGuestsId, inputId)
+        + dropdownGuestsItems(dropdownGuestsId, dropdownClassShow, inputId)
 
 
 mixin dropdownRoomsLabeled (labelId, labelText, labelRightClass, labelRightText, dropdownRoomsId, inputId)
@@ -13,18 +13,17 @@ mixin dropdownRoomsLabeled (labelId, labelText, labelRightClass, labelRightText,
         +dropdownItemsRooms (dropdownRoomsId, inputId)
 
 
-
-mixin dropdownGuestsItems (dropdownGuestsId, inputId)
+mixin dropdownGuestsItems (dropdownGuestsId, dropdownClassShow, inputId)
     div(class="dropdown" id=dropdownGuestsId)
         .dropdown__info
             input.dropdown__input(readonly='' type='text' placeholder='Сколько гостей' value='' id=inputId)
-    .dropdown__guests
+    div(class="dropdown__guests " + dropdownClassShow)
         +dropdownItem("grownups", "Взрослые")
         +dropdownItem("kids", "Дети")
         +dropdownItem("infants", "Младенцы")
         .dropdown__buttons
-            button.dropdown__button.button__show(type='submit') Применить
-            button.dropdown__button(type='reset') Очистить
+            button.button__button_submit.button__show(type='submit') Применить
+            button.button__button_reset(type='reset') Очистить
 
 
 
@@ -36,6 +35,7 @@ mixin dropdownItemsRooms (dropdownRoomsId, inputId)
         +dropdownItem("bedrooms", "Спальни")
         +dropdownItem("beds", "Кровати")
         +dropdownItem("bathrooms", "Ванные комнаты")
+
 
 
 mixin dropdownItem (itemDataType, itemText)
