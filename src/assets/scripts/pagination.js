@@ -1,5 +1,5 @@
 import { ButtonPagination } from "./myLibrary"
-import { data } from "./myData"
+import { paginationData } from "./myData"
 
 // let data = { 
 //     itemsPerPage: 12,
@@ -8,4 +8,4 @@ import { data } from "./myData"
 //     currentNum: 1
 // }
 
-let btnPagination = new ButtonPagination(data, pagination_bar_1);
+let btnPagination = new ButtonPagination(paginationData, pagination_bar_1);
