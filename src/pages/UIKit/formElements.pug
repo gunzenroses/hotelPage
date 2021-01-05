@@ -1,51 +1,56 @@
+include ../../components/textField/_textField.pug
+include ../../components/buttonsCheckbox/_buttonsCheckbox.pug
+include ../../components/buttonLike/_buttonLike.pug
+include ../../components/range/_range.pug
+include ../../components/pagination/_pagination.pug
+include ../../components/dropdowns/_dropdowns.pug
+
 .formElements_outer
     .formElements_inner
         .formElements__element_first
             .formElements__container_first
-                include ../../components/textField/_textField.pug
-                include ../../components/textFieldFocuced/_textFieldFocused.pug
-                
-                //dropdowns eщё не переделаны
-                include ../../components/dropdown/_dropdown.pug
-                
-                include ../../components/textFieldMasked/_textFieldMasked.pug
-            
+                +text("text", "Text field", "label_right", "default", "textField", "Email", "email", false, "")
+                +text("textFieldFocused", "Text field", "label_right", "hover / focused", "textField", "This is awesome", "", true, "")
+                +dropdownGuestsLabeled("dropdownGuestsInput_0", "dropdown", "label_right", "", "dropdown_guests_0", "", "dropdownGuestsInput_0")
+                +text("birthday", "Masked text field", "label_none", "", "textField_masked", "ДД.ММ.ГГГГ", "birthday", false, "10")
+
             .formElements__container_second
                 .formElements__innerContainer_first
+                    //TODO: mixin in dropdownData.pug for following 3 files
                     .elementContainer_small
                         include ../../components/dropdownDate/_dropdownDate.pug
                     .elementContainer_small
                         include ../../components/dropdownDate/_dropdownDateValued.pug
                 .elementContainer_medium
                     include ../../components/dropdownDateFilter/_dropdownDateFilter.pug
+
                 .elementContainer_medium
-                    include ../../components/textFieldSubscription/_textFieldSubscription.pug
-            
-            //- .formElements__container_third
-            //-     include ../../components/dropdownRoomsClosed/_dropdownRoomsClosed.pug
-            //-     include ../../components/dropdownRooms/_dropdownRooms.pug
-            
-            //- .formElements__container_forth
+                    +text("email", "Subscription text field", "label_none", "", "input_email", "Email", "email", false, "")
 
         .formElements__element_second
-            include ../../components/buttonsCheckbox/_buttonsCheckbox.pug
+            +checkboxButtons("Сheckbox buttons")
             include ../../components/buttonsRadio/_buttonsRadio.pug
             include ../../components/buttonToggle/_buttonToggle.pug
-            include ../../components/buttonLike/_buttonLike.pug
+            
+            +ButtonLikes
             include ../../components/buttonRate/_buttonRate.pug
 
         .formElements__element_third
-            include ../../components/range/range.pug
+            +range("range_1")
             include ../../components/button/button.pug
-            include ../../components/pagination/pagination.pug
+            +paginationContainer("pagination", "pagination_bar_1")
 
         .formElements__element_forth
-            include ../../components/dropdownRooms/_dropdownRooms.pug
+            +dropdownRoomsLabeled ("dropdownRoomsInput_1", "dropdown", "label_right", "default", "dropdown_rooms_1", "", "dropdownRoomsInput_1")
+            +dropdownRoomsLabeled ("dropdownRoomsInput_2", "dropdown", "label_right", "expanded", "dropdown_rooms_2", "dropdown__show", "dropdownRoomsInput_2")
             
             
         .formElements__element_fifth
-            include ../../components/dropdownGuests/_dropdownGuests.pug
+            +dropdownGuestsLabeled ("dropdownGuestsInput_1", "dropdown", "label_right", "", "dropdown_guests_1", "dropdown__show", "dropdownGuestsInput_1")
 
         .formElements__element_sixth
+            +dropdownGuestsLabeled ("dropdownGuestsInput_2", "dropdown", "label_right", "", "dropdown_guests_2", "dropdown__show", "dropdownGuestsInput_2")
+
+
         .formElements__element_seventh
         .formElements__element_eighth

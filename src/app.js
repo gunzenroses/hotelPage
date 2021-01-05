@@ -5,7 +5,7 @@ window.onload = function () {
     require("scripts/data");
     require("scripts/datasetHandler");
     require("scripts/buttonLike");
-    require("scripts/range.js");
+    require("scripts/range.js" );
     // require("scripts/dropdownRooms");
     require("scripts/pagination");
     require("scripts/dropdowns.js");
