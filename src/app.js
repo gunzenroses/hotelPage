@@ -8,4 +8,5 @@ window.onload = function () {
     require("scripts/range.js");
     // require("scripts/dropdownRooms");
     require("scripts/pagination");
+    require("scripts/dropdowns.js");
 };
