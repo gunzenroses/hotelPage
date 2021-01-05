@@ -1,0 +1,95 @@
+
+mixin dropdownGuestsLabeled(labelId, labelText, labelRightClass, labelRightText, dropdownGuestsId, dropdownClassShow, inputId)
+    .widget
+        label(for=labelId class="label")= labelText
+        span(class="" + labelRightClass)= labelRightText
+        +dropdownGuestsItems(dropdownGuestsId, dropdownClassShow, inputId)
+
+
+mixin dropdownRoomsLabeled(labelId, labelText, labelRightClass, labelRightText, dropdownRoomsId, dropdownClassShow, inputId)
+    .widget
+        label(for=labelId class="label")= labelText
+        span(class="" + labelRightClass)= labelRightText
+        +dropdownRoomsItems(dropdownRoomsId, dropdownClassShow, inputId)
+
+
+mixin dropdownGuestsItems(dropdownGuestsId, dropdownClassShow, inputId)
+    div(class="dropdown" id=dropdownGuestsId)
+        .dropdown__info
+            input.dropdown__input(readonly='' type='text' placeholder='Сколько гостей' value='' id=inputId)
+        div(class="dropdown__guests " + dropdownClassShow)
+            +dropdownItem("grownups", "Взрослые", 0)
+            +dropdownItem("kids", "Дети", 1)
+            +dropdownItem("infants", "Младенцы", 2)
+            .dropdown__buttons
+                button.dropdown__button_submit.button__show(type='submit') Применить
+                button.dropdown__button_reset(type='reset') Очистить
+
+
+
+mixin dropdownRoomsItems(dropdownRoomsId, dropdownClassShow, inputId)
+    div(class="dropdown" id=dropdownRoomsId)
+        .dropdown__info
+            input.dropdown__input(readonly='' type='text' placeholder='' value='' id=inputId)
+        div(class="dropdown__rooms " + dropdownClassShow)
+            +dropdownItem("bedrooms", "Спальни", 0)
+            +dropdownItem("beds", "Кровати", 1)
+            +dropdownItem("bathrooms", "Ванные комнаты", 2)
+
+
+
+mixin dropdownItem (itemDataType, itemText, itemDataOrder)
+    .dropdown__expandedItem(data-type=itemDataType)
+        div(class="dropdown__text")= itemText
+        .dropdown__minus  - 
+        .dropdown__number(data-order=itemDataOrder)  0 
+        .dropdown__plus  +
+
+
+
+//- widget
+//-     #dropdown_guests_1.dropdown
+//-         .dropdown__info
+//-         input.dropdown__input(readonly='' type='text' placeholder='Сколько гостей' value='')
+//-         .dropdown__guests
+//-         .dropdown__expandedItem(data-guesttype='grownups')
+//-             .dropdown__text Взрослые
+//-             .dropdown__minus  - 
+//-             .dropdown__number(data-order='0')  0 
+//-             .dropdown__plus  + 
+//-         .dropdown__expandedItem(data-guesttype='kids')
+//-             .dropdown__text Дети
+//-             .dropdown__minus  - 
+//-             .dropdown__number(data-order='1')  1 
+//-             .dropdown__plus  + 
+//-         .dropdown__expandedItem(data-guesttype='infants')
+//-             .dropdown__text Младенцы
+//-             .dropdown__minus  - 
+//-             .dropdown__number(data-order='2')  2 
+//-             .dropdown__plus  + 
+//-         .dropdown__buttons
+//-             button.dropdown__button.button__show(type='submit') Применить
+//-             button.dropdown__button(type='reset') Очистить
+
+
+
+//- widget
+//-     #dropdown_rooms_1.dropdown
+//-         .dropdown__info
+//-             input.dropdown__input(readonly='' type='text' placeholder='' value='')
+//-         .dropdown__rooms
+//-         .dropdown__expandedItem(data-type='bedrooms')
+//-             .dropdown__text Спальни
+//-             .dropdown__minus  - 
+//-             .dropdown__number(data-order='0')  0 
+//-             .dropdown__plus  + 
+//-         .dropdown__expandedItem(data-type='beds')
+//-             .dropdown__text Кровати
+//-             .dropdown__minus  - 
+//-             .dropdown__number(data-order='1')  1 
+//-             .dropdown__plus  + 
+//-         .dropdown__expandedItem(data-type='bathrooms')
+//-             .dropdown__text Ванные комнаты
+//-             .dropdown__minus  - 
+//-             .dropdown__number(data-order='2')  2 
+//-             .dropdown__plus  + 

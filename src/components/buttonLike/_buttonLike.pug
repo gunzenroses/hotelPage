@@ -1,10 +1,27 @@
-.container_buttonLike
-    .label like button
-    .row
-        .buttonLike
-            .buttonLike__heart
-            .buttonLike__number 2
+mixin ButtonLikes()
+    .container_buttonLike
+        .label like button
+        .row
+            +ButtonLikeItem("buttonLike_1")
+            +ButtonLikePopularItem("buttonLike_2")
 
-        .buttonLike.buttonLike_popular
-            .buttonLike__heart.buttonLike__heart_popular
-            .buttonLike__number.buttonLike__number_popular 12
+mixin ButtonLikeItem(buttonId)
+    .buttonLike(id=buttonId) 
+        .buttonLike__heart
+        .buttonLike__number
+
+mixin ButtonLikePopularItem(buttonId)
+    .buttonLike.buttonLike_popular(id=buttonId) 
+        .buttonLike__heart.buttonLike__heart_popular
+        .buttonLike__number.buttonLike__number_popular
+
+//- .container_buttonLike
+//-     .label like button
+//-     .row
+//-         .buttonLike#buttonLike_1
+//-             .buttonLike__heart
+//-             .buttonLike__number
+
+//-         .buttonLike.buttonLike_popular#buttonLike_2
+//-             .buttonLike__heart.buttonLike__heart_popular
+//-             .buttonLike__number.buttonLike__number_popular

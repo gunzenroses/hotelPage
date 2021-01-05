@@ -1,3 +1,13 @@
+mixin text (labelId, labelText, labelRightClass, labelRightText, inputClass, placeholder, rule, autofocus=false, maxlength)
+    .widget
+        label(for=labelId class="label")= labelText
+        span(class="" + labelRightClass)= labelRightText
+        div(class="" + inputClass)
+            input(type="text" id=labelId placeholder=placeholder, 
+                value="" name=labelId data-rule=rule autofocus=autofocus,
+                maxlength=maxlength)
+        .error
+
 //- .widget
 //-     label(for="text").label Text field
 //-     span.label_right default
@@ -6,6 +16,33 @@
 //-             value="" name="textField" data-rule="email")
 //-     .error
 
-include ../../views/mixins/text.pug
+//- textFieldSubscription
 
-+text("text", "Text field", "label_right", "default", "textField", "Email", "email", false, "")
+//- .widget
+//-     label(for="email").label SUBSCRIPTION TEXT FIELD
+//-     .input_email
+//-         input(type="email" placeholder="Email" value="" 
+//-                 name="email" data-rule="email")
+//-     .error
+
+
+//- textFieldMasked
+
+//- .widget
+//-     label(for="birthday").label Masked text field
+//-     .textField_masked
+//-         input(type="text" value="" id="birthday" 
+//-         name="birthday" placeholder="ДД.ММ.ГГГГ" 
+//-         masked="true" maxlength="10" 
+//-         data-rule="birthday")
+//-     .error
+
+//- textFieldFocused
+
+//- .widget
+//-     label(for="textFieldFocused").label Text field
+//-     span.label_right hover / focused
+//-     .textField
+//-         input(type="text" id="textFieldFocused" 
+//-         placeholder="This is awesome" 
+//-         value="" name="textFieldFocused" autofocus)

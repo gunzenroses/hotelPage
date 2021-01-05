@@ -1,18 +1,34 @@
-.widget
-    legend(for="rooms").label Сheckbox buttons
-    .buttonsCheckbox
-        label(for="smoking_allowed").checkbox 
-            input(type="checkbox" id="smoking_allowed" name="smoking" value="smoking_allowed").checkbox__real
-            span.checkbox__fake
-            span.checkbox__title Можно курить
+mixin checkboxButtons (labelText)
+    .widget
+        div(class="label")= labelText 
+        .buttonsCheckbox
+            +checkboxItem("smoking_allowed", "smoking", "Можно курить")
+            +checkboxItem("pets_allowed", "pets", "Можно с питомцами")
+            +checkboxItem("guests_allowed", "guests", "Можно пригласить гостей (до 10 человек)")
 
-        label(for="pets_allowed").checkbox 
-            input(type="checkbox" id="pets_allowed" name="pets" value="pets_allowed").checkbox__real
-            span.checkbox__fake
-            span.checkbox__title Можно с питомцами
 
-        label(for="guests_allowed").checkbox 
-            input(type="checkbox" id="guests_allowed" name="guests" value="guests_allowed").checkbox__real
-            span.checkbox__fake
-            span.checkbox__title Можно пригласить гостей (до 10 человек)
+mixin checkboxItem(inputId, inputName, checkboxTitle)
+    label(for=inputId).checkbox 
+        input(type="checkbox" id=inputId value=inputId name=inputName ).checkbox__real
+        span.checkbox__fake
+        span(class="checkbox__title")= checkboxTitle
+
+
+//- .widget
+//-     legend(for="rooms").label Сheckbox buttons
+//-     .buttonsCheckbox
+//-         label(for="smoking_allowed").checkbox 
+//-             input(type="checkbox" id="smoking_allowed" name="smoking" value="smoking_allowed").checkbox__real
+//-             span.checkbox__fake
+//-             span.checkbox__title Можно курить
+
+//-         label(for="pets_allowed").checkbox 
+//-             input(type="checkbox" id="pets_allowed" name="pets" value="pets_allowed").checkbox__real
+//-             span.checkbox__fake
+//-             span.checkbox__title Можно с питомцами
+
+//-         label(for="guests_allowed").checkbox 
+//-             input(type="checkbox" id="guests_allowed" name="guests" value="guests_allowed").checkbox__real
+//-             span.checkbox__fake
+//-             span.checkbox__title Можно пригласить гостей (до 10 человек)
 
