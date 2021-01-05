@@ -159,7 +159,7 @@ class DropdownGuests {
 
     enableHandlers(){
         this.toggleHandler = this.toggleExpanded.bind(this);
-        this.closeExpandedHandler = this.closeExpanded.bind(this);
+        //this.closeExpandedHandler = this.closeExpanded.bind(this);
         this.plusAndMinusHandler = this.plusAndMinus.bind(this);
         this.resetGuestsHandler = this.resetGuests.bind(this);
         this.submitGuestsHandler = this.submitGuests.bind(this);
@@ -167,7 +167,7 @@ class DropdownGuests {
 
     enableEventListeners(){
         this.info.addEventListener("click", this.toggleHandler);
-        document.addEventListener("click", this.closeExpandedHandler);
+        //document.addEventListener("click", this.closeExpandedHandler);
         this.dropdownExpanded.addEventListener("click", this.plusAndMinusHandler);
         this.resetButton.addEventListener("click", this.resetGuestsHandler);
         this.submitButton.addEventListener("click", this.submitGuestsHandler);
@@ -179,12 +179,12 @@ class DropdownGuests {
         return this;
     }
 
-    closeExpanded(){
-        if (!event.target.closest(this.containerClassExpanded)){
-            this.dropdownExpanded.classList.remove("dropdown__show");
-        }
-        return this;
-    }
+    // closeExpanded(){
+    //     if (!event.target.closest(this.containerClassExpanded)){
+    //         this.dropdownExpanded.classList.remove("dropdown__show");
+    //     }
+    //     return this;
+    // }
 
     plusAndMinus(){
         if (event.target.classList.value == "dropdown__minus"){
@@ -297,16 +297,13 @@ class DropdownRooms {
 
     enableHandlers(){
         this.toggleHandler = this.toggleExpanded.bind(this);
-        this.closeExpandedHandler = this.closeExpanded.bind(this);
+        //this.closeExpandedHandler = this.closeExpanded.bind(this);
         this.plusAndMinusHandler = this.plusAndMinus.bind(this);
     }
 
     enableEventListeners(){
         this.info.addEventListener("click", this.toggleHandler);
-        document.addEventListener("click", this.closeExpandedHandler);
-        //this.dropdownItems.addEventListener("click", this.plusAndMinusHandler);
-        
-
+        //document.addEventListener("click", this.closeExpandedHandler);
         this.dropdownExpanded.addEventListener("click", this.plusAndMinusHandler);
         return this;
     }
@@ -316,12 +313,12 @@ class DropdownRooms {
         return this;
     }
 
-    closeExpanded(){
-        if (!event.target.closest(this.containerClassExpanded)){
-            this.dropdownExpanded.classList.remove("dropdown__show");
-        }
-        return this;
-    }
+    // closeExpanded(){
+    //     if (!event.target.closest(this.containerClassExpanded)){
+    //         this.dropdownExpanded.classList.remove("dropdown__show");
+    //     }
+    //     return this;
+    // }
 
     plusAndMinus(){
         if (event.target.classList.value == "dropdown__minus"){
@@ -392,4 +389,141 @@ class DropdownRooms {
     }
 }
 
-export { ButtonPagination, DropdownGuests, DropdownRooms}
+class Range {
+    constructor(containerId){
+        this.container = document.getElementById(containerId)
+        this.data = []
+        this.init()
+    }
+
+    init(){
+        this.createChildren();
+        this.render();
+        this.enableHandlers();
+        this.enableEventListeners();
+        return this;
+    }
+
+    createChildren(){
+        this.inputLeft = this.container.querySelector(".left_range");
+        this.inputRight = this.container.querySelector(".right_range");
+        this.thumbLeft = this.container.querySelector(".slider > .thumb.thumb_left");
+        this.thumbRight = this.container.querySelector(".slider > .thumb.thumb_right");
+        this.data = [parseInt(this.inputLeft.value), parseInt(this.inputRight.value)];
+        this.range = this.container.querySelector(".slider >.range");
+        this.rangeInfo = this.container.previousElementSibling;
+        return this;
+    }
+
+    enableHandlers(){
+        this.setLeftValueHandler = this.setLeftValue.bind(this);
+        this.setRightValueHandler = this.setRightValue.bind(this);
+        return this;
+    }
+
+    enableEventListeners(){
+        this.inputLeft.addEventListener("input", this.setLeftValueHandler);
+        this.inputRight.addEventListener("input", this.setRightValueHandler);
+        return this;
+    }
+
+    setLeftValue(){
+        let _this = this.inputLeft,
+            min = parseInt(_this.min),
+            max = parseInt(_this.max);
+        _this.value = Math.min(parseInt(_this.value),parseInt(this.inputRight.value)+1);
+        this.data[0] = _this.value;
+        
+        this.render();
+        return this;
+    }
+
+    setRightValue(){
+        let _this = this.inputRight,
+            min = parseInt(_this.min),
+            max = parseInt(_this.max);
+        _this.value = Math.max(parseInt(_this.value),parseInt(this.inputLeft.value)+ 1);
+        this.data[1] = _this.value;
+        
+        this.render();
+        return this;
+    }
+
+    render(){
+        
+        this.leftPercent = this.data[0];
+        this.rightPercent = this.data[1];
+        
+        this.thumbLeft.style.left = this.leftPercent + "%";
+        this.range.style.left = this.leftPercent + "%";
+
+        this.thumbRight.style.right= (100 - this.rightPercent) + "%";
+        this.range.style.right= (100 - this.rightPercent) + "%";
+
+        let highestPrice = parseInt(15000);
+        let start = Math.ceil(this.data[0]/10000 * highestPrice)*100;
+        
+            let startBeginning = Math.floor(start/1000);
+            let startFinish = start.toString().substr(startBeginning.toString().length,);
+            let newStart = startBeginning + " " + startFinish + "₽";
+
+
+        let end = Math.floor(this.data[1]/10000 * highestPrice)*100;
+            let endBeginning = Math.floor(end/1000);
+            let endFinish = end.toString().substr(endBeginning.toString().length,);
+            let newEnd = endBeginning + " " + endFinish + "₽";
+
+        this.rangeInfo.innerText = `${newStart} - ${newEnd}`;
+        return this;
+    }
+}
+
+
+class likeButtons {
+    constructor(containerId, data){
+        this.likeButton = document.getElementById(containerId)
+        this.data = parseInt(data,10)
+        this.init()
+    }
+
+    init(){
+        this.createChildren();
+        this.render();
+        this.enableHandlers();
+        this.enableEventListeners();
+        return this;
+    }
+
+    createChildren(){
+        this.number = this.likeButton.querySelector('.buttonLike__number');
+        this.heart = this.likeButton.querySelector('.buttonLike__heart');
+        return this;
+    }
+    
+    enableHandlers(){
+        this.buttonLikeIncreaseHandler = this.buttonLikeIncrease.bind(this);
+        return this;
+    }
+
+    enableEventListeners(){
+        this.likeButton.addEventListener('click', this.buttonLikeIncreaseHandler)
+        return this;
+    }
+
+    buttonLikeIncrease(){
+        this.data++;
+        this.render();
+        return this;
+    }
+
+    render(){
+        this.number.textContent = this.data;
+        if (parseInt(this.number.textContent) > 9){
+            this.likeButton.classList.add("buttonLike_popular");
+            this.heart.classList.add("buttonLike__heart_popular");
+        }
+        return this;
+    }
+}
+
+export { ButtonPagination, DropdownGuests, DropdownRooms, Range, likeButtons}
