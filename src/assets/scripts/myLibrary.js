@@ -152,8 +152,8 @@ class DropdownGuests {
         this.infoInput = this.container.querySelector(".dropdown__input");
         this.dropdownItems = this.container.querySelectorAll(".dropdown__expandedItem");
         this.containerClassExpanded = "." + this.containerClass;
-        this.resetButton = this.dropdownExpanded.querySelector("button[type=reset]");
-        this.submitButton = this.dropdownExpanded.querySelector("button[type=submit]")
+        this.resetButton = this.dropdownExpanded.querySelector(".dropdown__button_reset");
+        this.submitButton = this.dropdownExpanded.querySelector(".dropdown__button_submit")
         return this;
     }
 
@@ -267,9 +267,6 @@ class DropdownGuests {
     }
 }
 
-let guestsData = [2, 1, 0];
-let guestsHandler = new DropdownGuests("dropdown_guests_1", ".dropdown__guests", guestsData);
-
 
 class DropdownRooms {
     constructor(containerId, expandedClass, data){
@@ -354,10 +351,11 @@ class DropdownRooms {
             dropdownItem.innerText = this.data[i];
         }
 
-        if (this.dropdownItems[0].dataset.roomtype){
+        if (this.dropdownItems[0].dataset.type){
             this.infoInput.value = "";
+            this.roomInfo = [];
             for (let j=0; j<this.data.length;j++){
-                let dataType = this.dropdownItems[j].dataset.roomtype;
+                let dataType = this.dropdownItems[j].dataset.type;
                 let dataTypeName;
                 if (this.data[j]==0){
                     switch(dataType){
@@ -384,18 +382,14 @@ class DropdownRooms {
                         case "bathrooms": dataTypeName = "ванных комнат"; break;
                     }
                 }
-
-                this.infoInput.value += `${this.data[j]} ${dataTypeName}, `;
+                this.roomInfo += `${this.data[j]} ${dataTypeName}, `;
+                //this.infoInput.value += `${this.data[j]} ${dataTypeName}, `;
             }
+            this.infoInput.value = this.roomInfo.slice(0,20) + "..."
         }
 
         return this;
     }
 }
-
-let roomsData = [2, 2, 0];
-let roomsHandler = new DropdownRooms ("dropdown_rooms_1", ".dropdown__rooms", roomsData);
-
-
 
 export { ButtonPagination, DropdownGuests, DropdownRooms}
