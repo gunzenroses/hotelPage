@@ -21,7 +21,6 @@
 /*
     Components
 */
-@import "./components/card/card";
 @import "./components/header/header";
 @import "./components/dropdowns/dropdowns";
 
@@ -29,10 +28,10 @@
     Elements
 */
 @import "./components/textField/textField";
+@import "./components/textField/textFieldSubscription";
+@import "./components/textField/textFieldMasked";
 @import "./components/dropdown/dropdown";
 @import "./components/checkboxExpandable/checkboxExpandable";
-@import "./components/textFieldSubscription/textFieldSubscription";
-@import "./components/textFieldMasked/textFieldMasked";
 @import "./components/dropdownDate/dropdownDate";
 @import "./components/buttonsCheckbox/buttonsCheckbox";
 @import "./components/buttonsRadio/buttonsRadio";
