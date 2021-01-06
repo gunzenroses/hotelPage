@@ -1,6 +1,9 @@
 include ../../components/textField/_textField.pug
 include ../../components/buttonsCheckbox/_buttonsCheckbox.pug
+include ../../components/buttonsRadio/_buttonsRadio.pug
+include ../../components/buttonToggle/_buttonToggle.pug
 include ../../components/buttonLike/_buttonLike.pug
+include ../../components/buttonRate/_buttonRate.pug
 include ../../components/range/_range.pug
 include ../../components/pagination/_pagination.pug
 include ../../components/dropdowns/_dropdowns.pug
@@ -29,11 +32,10 @@ include ../../components/dropdowns/_dropdowns.pug
 
         .formElements__element_second
             +checkboxButtons("Сheckbox buttons")
-            include ../../components/buttonsRadio/_buttonsRadio.pug
-            include ../../components/buttonToggle/_buttonToggle.pug
-            
-            +ButtonLikes
-            include ../../components/buttonRate/_buttonRate.pug
+            +buttonsRadioContainer("Radio buttons", "man", true, "woman", false)
+            +buttonToggleContainer
+            +buttonLikeContainer
+            +buttonRateContainer("Rate button")
 
         .formElements__element_third
             +range("range_1")
@@ -41,15 +43,15 @@ include ../../components/dropdowns/_dropdowns.pug
             +paginationContainer("pagination", "pagination_bar_1")
 
         .formElements__element_forth
-            +dropdownRoomsLabeled ("dropdownRoomsInput_1", "dropdown", "label_right", "default", "dropdown_rooms_1", "", "dropdownRoomsInput_1")
-            +dropdownRoomsLabeled ("dropdownRoomsInput_2", "dropdown", "label_right", "expanded", "dropdown_rooms_2", "dropdown__show", "dropdownRoomsInput_2")
+            +dropdownRoomsLabeled("dropdownRoomsInput_1", "dropdown", "default", "dropdown_rooms_1", "", "dropdownRoomsInput_1")
+            +dropdownRoomsLabeled("dropdownRoomsInput_2", "dropdown", "expanded", "dropdown_rooms_2", "dropdown__show", "dropdownRoomsInput_2")
             
             
         .formElements__element_fifth
-            +dropdownGuestsLabeled ("dropdownGuestsInput_1", "dropdown", "label_right", "", "dropdown_guests_1", "dropdown__show", "dropdownGuestsInput_1")
+            +dropdownGuestsLabeled("dropdownGuestsInput_1", "dropdown", "", "dropdown_guests_1", "dropdown__show", "dropdownGuestsInput_1")
 
         .formElements__element_sixth
-            +dropdownGuestsLabeled ("dropdownGuestsInput_2", "dropdown", "label_right", "", "dropdown_guests_2", "dropdown__show", "dropdownGuestsInput_2")
+            +dropdownGuestsLabeled("dropdownGuestsInput_2", "dropdown", "", "dropdown_guests_2", "dropdown__show", "dropdownGuestsInput_2")
 
 
         .formElements__element_seventh
