@@ -258,10 +258,10 @@ containers for elements
 */
 
 .elementContainer {
-    &_small {
-        @include isFlex($direction: column);
-        width: 150px;
-    }
+    // &_small {
+    //     @include isFlex($direction: column);
+    //     width: 150px;
+    // }
 
     &_medium {
         @include isFlex($direction: column);
