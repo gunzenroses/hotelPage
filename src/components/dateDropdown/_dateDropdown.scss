@@ -1,3 +1,20 @@
+.date__container {
+    width: 320px;
+    height: 65px;
+    @include isFlex();
+}
+
+.date__container_small {
+    @include isFlex($direction: column);
+    width: 150px;
+}
+
+.date__container_medium {
+    @include isFlex($direction: column);
+    width: 266px;
+}
+
+
 .dropdown__date_masked {
     @extend .dropdown__button;
 
