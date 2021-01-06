@@ -1,4 +1,5 @@
 include ../../components/textField/_textField.pug
+include ../../components/dateDropdown/_dateDropdown.pug
 include ../../components/buttonsCheckbox/_buttonsCheckbox.pug
 include ../../components/buttonsRadio/_buttonsRadio.pug
 include ../../components/buttonToggle/_buttonToggle.pug
@@ -12,20 +13,17 @@ include ../../components/dropdowns/_dropdowns.pug
     .formElements_inner
         .formElements__element_first
             .formElements__container_first
+                //TODO: refactor mixin text and its descendants, 
+                //TODO: delete redundant styles
+
                 +text("text", "Text field", "label_right", "default", "textField", "Email", "email", false, "")
                 +text("textFieldFocused", "Text field", "label_right", "hover / focused", "textField", "This is awesome", "", true, "")
                 +dropdownGuestsLabeled("dropdownGuestsInput_0", "dropdown", "label_right", "", "dropdown_guests_0", "", "dropdownGuestsInput_0")
                 +text("birthday", "Masked text field", "label_none", "", "textField_masked", "ДД.ММ.ГГГГ", "birthday", false, "10")
 
             .formElements__container_second
-                .formElements__innerContainer_first
-                    //TODO: mixin in dropdownData.pug for following 3 files
-                    .elementContainer_small
-                        include ../../components/dropdownDate/_dropdownDate.pug
-                    .elementContainer_small
-                        include ../../components/dropdownDate/_dropdownDateValued.pug
-                .elementContainer_medium
-                    include ../../components/dropdownDateFilter/_dropdownDateFilter.pug
+                +dateDropdownContainer("date_start_1", "Date dropdown", "dateStart_1", "", "date_end_1", "Date dropdown", "dateEnd_1", "19.08.2019")
+                +dateDropdownRange("date_range_1", "dropdown", "dateRange_1", "19 авг - 23 авг")
 
                 .elementContainer_medium
                     +text("email", "Subscription text field", "label_none", "", "input_email", "Email", "email", false, "")
