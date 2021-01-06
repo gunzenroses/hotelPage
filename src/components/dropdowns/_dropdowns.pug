@@ -1,15 +1,15 @@
 
-mixin dropdownGuestsLabeled(labelId, labelText, labelRightClass, labelRightText, dropdownGuestsId, dropdownClassShow, inputId)
+mixin dropdownGuestsLabeled(labelId, labelText, labelRightText, dropdownGuestsId, dropdownClassShow, inputId)
     .widget
         label(for=labelId class="label")= labelText
-        span(class="" + labelRightClass)= labelRightText
+        span(class="label_right")= labelRightText
         +dropdownGuestsItems(dropdownGuestsId, dropdownClassShow, inputId)
 
 
-mixin dropdownRoomsLabeled(labelId, labelText, labelRightClass, labelRightText, dropdownRoomsId, dropdownClassShow, inputId)
+mixin dropdownRoomsLabeled(labelId, labelText, labelRightText, dropdownRoomsId, dropdownClassShow, inputId)
     .widget
         label(for=labelId class="label")= labelText
-        span(class="" + labelRightClass)= labelRightText
+        span(class="label_right")= labelRightText
         +dropdownRoomsItems(dropdownRoomsId, dropdownClassShow, inputId)
 
 

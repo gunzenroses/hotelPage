@@ -2,14 +2,14 @@ mixin checkboxButtons (labelText)
     .widget
         div(class="label")= labelText 
         .buttonsCheckbox
-            +checkboxItem("smoking_allowed", "smoking", "Можно курить")
-            +checkboxItem("pets_allowed", "pets", "Можно с питомцами")
-            +checkboxItem("guests_allowed", "guests", "Можно пригласить гостей (до 10 человек)")
+            +checkboxItem("smoking_allowed", "smoking", false, "Можно курить")
+            +checkboxItem("pets_allowed", "pets", true, "Можно с питомцами")
+            +checkboxItem("guests_allowed", "guests", true, "Можно пригласить гостей (до 10 человек)")
 
 
-mixin checkboxItem(inputId, inputName, checkboxTitle)
+mixin checkboxItem(inputId, inputName, ifChecked, checkboxTitle)
     label(for=inputId).checkbox 
-        input(type="checkbox" id=inputId value=inputId name=inputName ).checkbox__real
+        input(type="checkbox" id=inputId value=inputId name=inputName checked=ifChecked).checkbox__real
         span.checkbox__fake
         span(class="checkbox__title")= checkboxTitle
 
