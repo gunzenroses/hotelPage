@@ -2,22 +2,6 @@
     @extend .textField;
     text-transform: uppercase;
     white-space: nowrap;
-
-    // &_open {
-    //     @extend .dropdown__button;
-    //     border-radius: 4px 4px 0 0;
-    // }
-    
-    // &_transparent {
-    //     @extend .dropdown__button;
-    //     border: none;
-    //     padding: 0;
-
-    //     &:hover, &:focus {
-    //         border: none;
-    //     }
-    // }
-
     &:hover,
     &:focus {
         border: 1px solid $darkShadeMiddle;
