@@ -22,15 +22,11 @@
     Components
 */
 @import "./components/header/header";
-@import "./components/dropdowns/dropdowns";
-
-/*
-    Elements
-*/
 @import "./components/textField/textField";
 @import "./components/textField/textFieldSubscription";
 @import "./components/textField/textFieldMasked";
 @import "./components/dropdown/dropdown";
+@import "./components/dropdowns/dropdowns";
 @import "./components/checkboxExpandable/checkboxExpandable";
 @import "./components/dateDropdown/dateDropdown";
 @import "./components/buttonsCheckbox/buttonsCheckbox";

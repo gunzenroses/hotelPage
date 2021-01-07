@@ -33,3 +33,15 @@
         border-bottom: 2px solid $darkShadeMiddle;
     }
 }
+
+.dropdown__content {
+    height: 233px;
+    width: 266px;
+    display: none;
+}
+
+.dropdown__title {
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: start;
+}
