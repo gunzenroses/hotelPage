@@ -128,20 +128,24 @@ class ButtonPagination {
 }
 
 
-
+//TODO: should count adults and kids together and infants separate
 class DropdownGuests {
     constructor(containerId, expandedClass, data){
         this.container = document.getElementById(containerId)
         this.containerClass = this.container.classList.value
         this.dropdownExpanded = this.container.querySelector(expandedClass)
-        this.data = data
+        if (data){
+            this.data = data
+        } else {
+            this.data = [0, 0, 0]
+        }
         this.init()
     }
 
     init(){
         this.createChildren();
-        this.plusAndMinusShow()
-        this.totalGuestsCount()
+        this.plusAndMinusShow();
+        this.totalGuestsCount();
         this.enableHandlers();
         this.enableEventListeners();
         return this;
@@ -233,11 +237,9 @@ class DropdownGuests {
     }
     
     totalGuestsCount(){
-        this.totalGuests = parseInt(0);
-        for (let k=0; k<this.data.length;k++){
-            this.totalGuests += parseInt(this.data[k]);
-        }
-        
+        this.adultGuests = parseInt(this.data[0]) + parseInt(this.data[1])
+        this.infantGuests = parseInt(this.data[2])
+        this.totalGuests = this.adultGuests + this.infantGuests
         if (this.totalGuests > 0){
             this.resetButton.classList.add("button__show");
             this.render();
@@ -249,20 +251,42 @@ class DropdownGuests {
     }
 
     render(){
-        let dataTypeName;
-        switch (this.totalGuests){
+        let dataTypeNameAdults;
+        switch (this.adultGuests){
             case 1: 
-                case 21: this.dataTypeName = "гость"; break;
+                case 21: this.dataTypeNameAdults = "гость"; break;
             case 2:
             case 3:
             case 4:
                 case 22:
                 case 23:
-                case 24: this.dataTypeName = "гостя"; break;
-            default: this.dataTypeName = "гостей"; break;
+                case 24: this.dataTypeNameAdults = "гостя"; break;
+            default: this.dataTypeNameAdults = "гостей"; break;
+        }
+        
+        let dataTypeNameInfant;
+        switch (this.infantGuests){
+            case 1: 
+                case 21: this.dataTypeNameInfant = "младенец"; break;
+            case 2:
+            case 3:
+            case 4:
+                case 22:
+                case 23:
+                case 24: this.dataTypeNameInfant = "младенца"; break;
+            default: this.dataTypeNameInfant = "младенцев"; break;
         }
 
-        this.infoInput.value = `${this.totalGuests} ${this.dataTypeName}`;
+
+        if (this.adultGuests > 0){
+            this.infoInput.value = `${this.adultGuests} ${this.dataTypeNameAdults}`;
+            if (this.infantGuests > 0){
+                this.infoInput.value += `, ${this.infantGuests} ${this.dataTypeNameInfant} `;
+            }
+        } else {
+            this.infoInput.value = ""
+        }
+
         return this;
     }
 }
@@ -385,6 +409,42 @@ class DropdownRooms {
             this.infoInput.value = this.roomInfo.slice(0,20) + "..."
         }
 
+        return this;
+    }
+}
+
+class DropdownCheckbox {
+    constructor(containerId){
+        this.container = document.getElementById(containerId)
+        this.containerClass = this.container.classList.value
+        this.dropdownExpanded = this.container.querySelector(".dropdown__content")
+        this.init()
+    }
+
+    init(){
+        this.createChildren();
+        this.enableHandlers();
+        this.enableEventListeners();
+        return this;
+    }
+
+    createChildren(){
+        this.dropdownButton = this.container.querySelector(".dropdown__button_transparent");
+        this.containerClassExpanded = "." + this.containerClass;
+        return this;
+    }
+
+    enableHandlers(){
+        this.toggleHandler = this.toggleExpanded.bind(this);
+    }
+
+    enableEventListeners(){
+        this.dropdownButton.addEventListener("click", this.toggleHandler);
+        return this;
+    }
+
+    toggleExpanded(){
+        this.dropdownExpanded.classList.toggle("dropdown__show");
         return this;
     }
 }
@@ -526,4 +586,4 @@ class likeButtons {
     }
 }
 
-export { ButtonPagination, DropdownGuests, DropdownRooms, Range, likeButtons}
+export { ButtonPagination, DropdownGuests, DropdownRooms, DropdownCheckbox, Range, likeButtons}
