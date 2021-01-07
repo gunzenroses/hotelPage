@@ -8,6 +8,7 @@ include ../../components/buttonRate/_buttonRate.pug
 include ../../components/range/_range.pug
 include ../../components/pagination/_pagination.pug
 include ../../components/dropdowns/_dropdowns.pug
+include ../../components/checkboxExpandable/_checkboxExpandable.pug
 
 .formElements_outer
     .formElements_inner
@@ -18,14 +19,14 @@ include ../../components/dropdowns/_dropdowns.pug
 
                 +text("text", "Text field", "label_right", "default", "textField", "Email", "email", false, "")
                 +text("textFieldFocused", "Text field", "label_right", "hover / focused", "textField", "This is awesome", "", true, "")
-                +dropdownGuestsLabeled("dropdownGuestsInput_0", "dropdown", "label_right", "", "dropdown_guests_0", "", "dropdownGuestsInput_0")
+                +dropdownGuestsLabeled("dropdownGuestsInput_0", "dropdown", "", "dropdown_guests_0", "", "dropdownGuestsInput_0")
                 +text("birthday", "Masked text field", "label_none", "", "textField_masked", "ДД.ММ.ГГГГ", "birthday", false, "10")
 
             .formElements__container_second
                 +dateDropdownContainer("date_start_1", "Date dropdown", "dateStart_1", "", "date_end_1", "Date dropdown", "dateEnd_1", "19.08.2019")
                 +dateDropdownRange("date_range_1", "dropdown", "dateRange_1", "19 авг - 23 авг")
 
-                .elementContainer_medium
+                .container_medium
                     +text("email", "Subscription text field", "label_none", "", "input_email", "Email", "email", false, "")
 
         .formElements__element_second
@@ -43,6 +44,8 @@ include ../../components/dropdowns/_dropdowns.pug
         .formElements__element_forth
             +dropdownRoomsLabeled("dropdownRoomsInput_1", "dropdown", "default", "dropdown_rooms_1", "", "dropdownRoomsInput_1")
             +dropdownRoomsLabeled("dropdownRoomsInput_2", "dropdown", "expanded", "dropdown_rooms_2", "dropdown__show", "dropdownRoomsInput_2")
+            +dropdownCheckbox("checkboxExpandable_1", "Expandable checkbox list", "dropdown__show")
+            +dropdownCheckbox("checkboxExpandable_2", "Expandable checkbox list", "")
             
             
         .formElements__element_fifth
@@ -50,7 +53,6 @@ include ../../components/dropdowns/_dropdowns.pug
 
         .formElements__element_sixth
             +dropdownGuestsLabeled("dropdownGuestsInput_2", "dropdown", "", "dropdown_guests_2", "dropdown__show", "dropdownGuestsInput_2")
-
 
         .formElements__element_seventh
         .formElements__element_eighth
