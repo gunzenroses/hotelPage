@@ -78,6 +78,16 @@ button {
 //   @include isFlex($direction: column);
 // }
 
+.container_small {
+  @include isFlex($direction: column);
+  width: 150px;
+}
+
+.container_medium {
+  @include isFlex($direction: column);
+  width: 266px;
+}
+
 select {
   //background-image: url('../../images/svg/arrowSelect.svg');
   background-repeat: no-repeat;
