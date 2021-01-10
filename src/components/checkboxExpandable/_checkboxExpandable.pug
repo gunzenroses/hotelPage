@@ -22,6 +22,25 @@ mixin checkboxExpandItem(checkboxName, ifChecked, checkboxTitle)
             span(class="checkbox__title")= checkboxTitle
 
 
+
+mixin richCheckboxButtons(containerText)
+    .widget
+        div(class="label")= containerText
+        +richCheckboxButtonItem("wide corridor", "Широкий коридор", "Ширина коридоров в номере", "не менее 91 см.")
+        +richCheckboxButtonItem("help for disabled", "Помощник для инвалидов", "На 1 этаже вас встретит специалист", "и проводит до номера.")
+
+
+mixin richCheckboxButtonItem(checkboxName, checkboxTitle, checkboxSubtitle, checkboxSubtitle2)
+    label.checkbox_button
+        input(type="checkbox" name=checkboxName).checkbox__real
+        span.checkbox__fake
+        div.checkbox__description
+            span(class="checkbox__title_description")= checkboxTitle
+            span(class="checkbox__subtitle_description")= checkboxSubtitle
+            span(class="checkbox__subtitle_description")= checkboxSubtitle2
+
+
+
 //- .widget.container_medium
 //-     form
 //-         .dropdown__button_transparent

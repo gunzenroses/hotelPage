@@ -13,7 +13,7 @@
 .toggle_element {
     width: 260px;
     height: 24px;
-    @include isFlex;
+    @include isFlex($justify: start);
     font-weight: 400;
     text-transform: none;
 }
@@ -37,6 +37,7 @@
     position: relative;
     border: 1px solid $darkShadeLess;
     border-radius: 10px;
+    margin-right: 10px
 }
 
 .toggle__fake::before {

@@ -1,20 +1,11 @@
-
-mixin dropdownGuestsLabeled(labelId, labelText, labelRightText, dropdownGuestsId, dropdownClassShow, inputId)
+mixin dropdownGuestsLabeled(labelText, labelRightText, dropdownContainerId, dropdownClassShow, inputId)
     .widget
-        label(for=labelId class="label")= labelText
-        span(class="label_right")= labelRightText
-        +dropdownGuestsItems(dropdownGuestsId, dropdownClassShow, inputId)
+        .label!= labelText
+        .label_right!= labelRightText
+        +dropdownGuestsItems(dropdownContainerId, dropdownClassShow, inputId)
 
-
-mixin dropdownRoomsLabeled(labelId, labelText, labelRightText, dropdownRoomsId, dropdownClassShow, inputId)
-    .widget
-        label(for=labelId class="label")= labelText
-        span(class="label_right")= labelRightText
-        +dropdownRoomsItems(dropdownRoomsId, dropdownClassShow, inputId)
-
-
-mixin dropdownGuestsItems(dropdownGuestsId, dropdownClassShow, inputId)
-    div(class="dropdown" id=dropdownGuestsId)
+mixin dropdownGuestsItems(dropdownContainerId, dropdownClassShow, inputId)
+    div(class="dropdown" id=dropdownContainerId)
         .dropdown__info
             input.dropdown__input(readonly='' type='text' placeholder='Сколько гостей' value='' id=inputId)
         div(class="dropdown__guests " + dropdownClassShow)
@@ -25,10 +16,33 @@ mixin dropdownGuestsItems(dropdownGuestsId, dropdownClassShow, inputId)
                 button.dropdown__button_submit.button__show(type='submit') Применить
                 button.dropdown__button_reset(type='reset') Очистить
 
+//- option 2 for dropdownGuestsLabeled
+
+    mixin dropdownGuestsLabeled(labelText, labelRightText, dropdownContainerId, dropdownClassShow, inputId)
+    - var items = [{dataType: "grownups", itemText: "Взрослые", itemDataOrder: 0}, {dataType: "kids", itemText: "Дети", itemDataOrder: 1}, {dataType: "infants", itemText: "Младенцы", itemDataOrder: 2}]
+    
+    .widget
+        .label!= labelText
+        .label_right!= labelRightText
+        div(class="dropdown" id=dropdownContainerId)
+            .dropdown__info
+                input.dropdown__input(readonly='' type='text' placeholder='Сколько гостей' value='' id=inputId)
+            div(class="dropdown__guests " + dropdownClassShow)
+                for item in items
+                    +dropdownItem(item.dataType, item.itemText, item.itemDataOrder)
+                .dropdown__buttons
+                    button.dropdown__button_submit.button__show(type='submit') Применить
+                    button.dropdown__button_reset(type='reset') Очистить
 
 
-mixin dropdownRoomsItems(dropdownRoomsId, dropdownClassShow, inputId)
-    div(class="dropdown" id=dropdownRoomsId)
+mixin dropdownRoomsLabeled(labelText, labelRightText, dropdownContainerId, dropdownClassShow, inputId)
+    .widget
+        label!= labelText
+        span(class="label_right")= labelRightText
+        +dropdownRoomsItems(dropdownContainerId, dropdownClassShow, inputId)
+
+mixin dropdownRoomsItems(dropdownContainerId, dropdownClassShow, inputId)
+    div(class="dropdown" id=dropdownContainerId)
         .dropdown__info
             input.dropdown__input(readonly='' type='text' placeholder='' value='' id=inputId)
         div(class="dropdown__rooms " + dropdownClassShow)
@@ -40,7 +54,7 @@ mixin dropdownRoomsItems(dropdownRoomsId, dropdownClassShow, inputId)
 
 mixin dropdownItem (itemDataType, itemText, itemDataOrder)
     .dropdown__expandedItem(data-type=itemDataType)
-        div(class="dropdown__text")= itemText
+        .dropdown__text!= itemText
         .dropdown__minus  - 
         .dropdown__number(data-order=itemDataOrder)  0 
         .dropdown__plus  +
@@ -51,7 +65,6 @@ mixin dropdownItem (itemDataType, itemText, itemDataOrder)
     .dropdown__button
         input(type="text" id="guests" value="" 
             name="guests" placeholder="Сколько гостей" readonly)
-
 
 //- widget
 //-     #dropdown_guests_1.dropdown
