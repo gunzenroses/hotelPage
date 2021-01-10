@@ -1,0 +1,9 @@
+
+mixin badgeItem(iconName, badgeTitle, badgeSubtitle)
+    .badge
+        .badge__info
+            span(class="maretialIcon")= iconName
+            .info__description
+                div(class="info__main")=badgeTitle
+                div(class="info__additional")= badgeSubtitle
+        .badge__underline

@@ -1,0 +1,14 @@
+//-include ../buttonLike/_buttonLike.pug
+
+mixin comment(authorPic, authorName, commentTime, buttonLikeId, commentText)
+    .widget
+        .comment
+            .comment__head
+                img(class="author__pic" src=authorPic)
+                .info__description
+                    div(class="info__main")= authorName
+                    div(class="info__additional")= commentTime
+            .comment__body
+                .comment__likes
+                    +buttonLikeItem(buttonLikeId)
+                div(class="comment__text")= commentText

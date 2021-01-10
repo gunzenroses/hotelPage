@@ -1,0 +1,51 @@
+.badge {
+    width: 280px;
+    height: 69px;
+    @include isFlex($direction: column);
+}
+
+.badge__info {
+    height: 51px;
+    @include isFlex($justify: start);
+}
+
+.maretialIcon {
+    font-family: $MaterialIcons;
+    position: relative;
+    width: 48px;
+    height: 48px;
+    font-size: 48px;
+    line-height: 48px;
+    margin-right: 10px;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.info__description {
+    height: 48px;
+    width: 200px;
+    margin-top: 3px;
+}
+.info__main {
+    font-family: $Montserrat;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 700;
+}
+.info__additional {
+    font-family: $Montserrat;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.badge__underline {
+    height: 1px;
+    width: 280px;
+    background-color: $darkShadeFew;
+}
+
