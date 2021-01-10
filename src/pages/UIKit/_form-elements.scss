@@ -23,6 +23,18 @@
 }
 
 /*
+    Media query for Page container
+*/
+
+@media (max-width: 750px) {
+    .formElements_outer::before {
+        top: 10px;
+        left: 10px;
+    }
+}
+
+
+/*
     Flex for adaptive design
 */
 
@@ -85,7 +97,8 @@
 }
 
 .formElements__element_eighth {
-    @include container($width: 711px, $height: 133px);
+    max-width: 711px;
+    min-height: 133px;
     margin-top: 10px;
     @include isFlex($direction: column, $align: flex-start);
     background: darkolivegreen;
@@ -150,7 +163,7 @@
         }
 
         &_eighth {
-            width: 711px;
+            width: 320px;;
         }
         }
     }
@@ -161,12 +174,6 @@
         &_inner {
         width: 85%;
         margin: 5% auto 5%;
-        }
-
-        &__element {
-        &_eighth {
-            width: 80vw;
-        }
         }
     }
 }
@@ -227,156 +234,9 @@ Containers to group elements into columns
 }
 
 /*
-
-*/
-
-.formElements {
-    &__innerContainer {
-        &_first,
-        &_second {
-        width: 320px;
-        }
-
-        &_first,
-        &_second {
-        @include isFlex($direction: column);
-        }
-
-        &_first {
-        height: 322px;;
-        }
-        &_second {
-        margin-top: 40px;
-        height: 274px;
-        }
-
-        &_first {
-        height: 65px;
-        }
-
-        &_first {
-        @include isFlex($direction: row);
-        }
-    }
-}
-
-
-/*
 containers for elements
 */
 
-.elementContainer {
-    // &_small {
-    //     @include isFlex($direction: column);
-    //     width: 150px;
-    // }
-
-    // &_medium {
-    //     @include isFlex($direction: column);
-    //     width: 266px;
-    // }
+.margin-left_30 {
+    margin-left: 30px;
 }
-
-
-
-// // @import "./index";
-// .container_page {
-//     position: relative;
-//     width: 1440px;
-//     height: 1853px;
-//     background-color: $light;
-//     display: flex;
-//     flex-direction: column;
-//     margin: 0 auto;
-//     background-color: green;
-// }
-
-// .container_page::before {
-//     position: absolute;
-//     top: 30px;
-//     left: 30px;
-//     content: "";
-//     width: 30px;
-//     height: 30px;
-//     background-image: url(/assets/images/logo.svg);
-//     //background-size: 100%;
-//     background-size: initial;
-//     background-position: center;
-    
-// }
-
-// .container__row {
-//     width: 1159px;
-//     margin-left: 140px;
-//     margin-right: 141px;
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: space-between;
-//     background-color: pink;
-// }
-
-// .container__row:first-child {
-//     margin-top: 140px;
-//     margin-bottom: 0;
-// }
-
-// .container__row:last-child {
-//     margin-top: 40px;
-//     margin-bottom: 132px;
-// }
-
-// .container__column_middle {
-//     width: 320px;
-//     background-color: yellow;
-// }
-
-// .container__column_middle + .container__column_middle {
-//     margin-left: 96px;
-// }
-
-// .container__column_middle + .container__column_middle:last-child {
-//     margin-left: 102px;
-// }
-
-// .container__column_small {
-//     width: 291px;
-//     background-color: orange;
-// }
-
-// .container__column_big {
-//     width: 711px;
-//     margin-left: 156px;
-//     background-color: purple;
-// }
-
-// .fields {
-//     width: 100%;
-//     margin-top: 20px;
-// }
-
-// .fields:first-child {
-//     margin-top: 0px;
-// }
-
-
-
-
-
-
-// .dropdown_date {
-//     position: relative;
-//     display: inline-block;
-//     margin-top: 40px;
-//     width: 321px;
-//     height: 274px;
-// }
-
-// .dropdown_date:first-child {
-//     margin-right: 20px;
-// }
-
-// .dropdown_rooms {
-//     width: 266px;
-//     height: 266px;
-//     margin-top: 100px;
-// }

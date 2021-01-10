@@ -23,8 +23,6 @@
 */
 @import "./components/header/header";
 @import "./components/textField/textField";
-@import "./components/textField/textFieldSubscription";
-@import "./components/textField/textFieldMasked";
 @import "./components/dropdown/dropdown";
 @import "./components/dropdowns/dropdowns";
 @import "./components/checkboxExpandable/checkboxExpandable";
@@ -37,6 +35,10 @@
 @import "./components/range/range.scss";
 @import "./components//button/button.scss";
 @import "./components/pagination/pagination.scss";
+@import "./components/bulletCheckbox/bulletCheckbox";
+@import "./components/badge/badge";
+@import "./components/comment/comment";
+
 /*
     Pages
 */
