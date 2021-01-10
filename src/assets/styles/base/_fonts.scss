@@ -65,4 +65,36 @@
 }
 
 
+/* 
+  Material Design Icons
+*/
+
+@font-face {
+  font-family: "MaterialIcons";
+  font-weight: 700;
+  src: url("@~fonts/MaterialIcons.eot");
+}
+
+@font-face {
+  font-family: "MaterialIcons";
+  font-weight: 700;
+  src: url("@~fonts/MaterialIcons.ttf");
+}
+
+@font-face {
+  font-family: "MaterialIcons";
+  font-weight: 700;
+  src: url("@~fonts/MaterialIcons.woff");
+}
+
+@font-face {
+  font-family: "MaterialIcons";
+  font-weight: 700;
+  src: url("@~fonts/MaterialIcons.woff2");
+}
+
+
+$MaterialIcons: "MaterialIcons";
 $Montserrat: "Montserrat", Arial, sans-serif;
+
+
