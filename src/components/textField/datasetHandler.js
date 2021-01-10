@@ -1,21 +1,21 @@
 let maskDate = require('./datasetMaskDate')
-//let maskDateRange = require('./datasetMaskDateRande');
+let maskDateRange = require('./datasetMaskDateRange')
 let dataValitadion = require('./datasetValidation')
 
-let inputToValidate = document.querySelectorAll('input[data-rule]');
+let inputToValidate = document.querySelectorAll('input[name]');
 
 if (inputToValidate) {
     for (let inputField of inputToValidate){
 
-        let rule = inputField.dataset.rule;
+        let name = inputField.name;
         
-        if (rule == "date" || rule == "birthday"){
+        if (name == "date" || name == "birthday"){
             maskDate(inputField);
         }
 
-        // if (rule == "date-range"){
-        //     maskDateRange(inputField);
-        // }
+        if (name == "date-range"){
+            maskDateRange(inputField);
+        }
 
         dataValitadion(inputField);
     }

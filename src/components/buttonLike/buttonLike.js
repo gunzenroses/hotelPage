@@ -1,4 +1,4 @@
-import { likeButtons } from "./myLibrary.js"
+import { likeButtons } from "../../assets/scripts/myLibrary.js"
 
 let likeButton_1 = new likeButtons("buttonLike_1", 2);
 let likeButton_2 = new likeButtons("buttonLike_2", 12);

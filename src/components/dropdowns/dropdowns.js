@@ -1,5 +1,5 @@
-import { DropdownGuests, DropdownRooms, DropdownCheckbox } from "./myLibrary"
-import { guestsData_1, guestsData_2, roomsData_1, roomsData_2 } from "./myData"
+import { DropdownGuests, DropdownRooms, DropdownCheckbox } from "../../assets/scripts/myLibrary"
+import { guestsData_1, guestsData_2, roomsData_1, roomsData_2 } from "../../assets/scripts/myData"
 
 let roomsHandler = new DropdownRooms ("dropdown_rooms_1", ".dropdown__rooms", roomsData_1);
 let roomsHandler_2 = new DropdownRooms ("dropdown_rooms_2", ".dropdown__rooms", roomsData_2);
