@@ -9,25 +9,29 @@ include ../../components/range/_range.pug
 include ../../components/pagination/_pagination.pug
 include ../../components/dropdowns/_dropdowns.pug
 include ../../components/checkboxExpandable/_checkboxExpandable.pug
+include ../../components/bulletCheckbox/_bulletCheckbox.pug
+include ../../components/badge/_badge.pug
+include ../../components/comment/_comment.pug
 
 .formElements_outer
     .formElements_inner
         .formElements__element_first
             .formElements__container_first
                 //TODO: refactor mixin text and its descendants, 
+                //TODO: dropdownDate dropdownDateRange переделать
                 //TODO: delete redundant styles
 
-                +text("text", "Text field", "label_right", "default", "textField", "Email", "email", false, "")
-                +text("textFieldFocused", "Text field", "label_right", "hover / focused", "textField", "This is awesome", "", true, "")
-                +dropdownGuestsLabeled("dropdownGuestsInput_0", "dropdown", "", "dropdown_guests_0", "", "dropdownGuestsInput_0")
-                +text("birthday", "Masked text field", "label_none", "", "textField_masked", "ДД.ММ.ГГГГ", "birthday", false, "10")
+                +emailContainer("Text field", "default", "")
+                +nameContainer("Text field", "hover / focused", "")
+                +dropdownGuestsLabeled("dropdown", "", "dropdown_guests_0", "", "dropdownGuestsInput_0")
+                +birthdayContainer("Masked text field", "", "")
 
             .formElements__container_second
                 +dateDropdownContainer("date_start_1", "Date dropdown", "dateStart_1", "", "date_end_1", "Date dropdown", "dateEnd_1", "19.08.2019")
                 +dateDropdownRange("date_range_1", "dropdown", "dateRange_1", "19 авг - 23 авг")
 
                 .container_medium
-                    +text("email", "Subscription text field", "label_none", "", "input_email", "Email", "email", false, "")
+                    +emailSubscribeContainer("Subscription text field", "", "")
 
         .formElements__element_second
             +checkboxButtons("Сheckbox buttons")
@@ -42,17 +46,24 @@ include ../../components/checkboxExpandable/_checkboxExpandable.pug
             +paginationContainer("pagination", "pagination_bar_1")
 
         .formElements__element_forth
-            +dropdownRoomsLabeled("dropdownRoomsInput_1", "dropdown", "default", "dropdown_rooms_1", "", "dropdownRoomsInput_1")
-            +dropdownRoomsLabeled("dropdownRoomsInput_2", "dropdown", "expanded", "dropdown_rooms_2", "dropdown__show", "dropdownRoomsInput_2")
+            +dropdownRoomsLabeled("dropdown", "default", "dropdown_rooms_1", "", "dropdownRoomsInput_1")
+            +dropdownRoomsLabeled("dropdown", "expanded", "dropdown_rooms_2", "dropdown__show", "dropdownRoomsInput_2")
             +dropdownCheckbox("checkboxExpandable_1", "Expandable checkbox list", "dropdown__show")
             +dropdownCheckbox("checkboxExpandable_2", "Expandable checkbox list", "")
             
             
         .formElements__element_fifth
-            +dropdownGuestsLabeled("dropdownGuestsInput_1", "dropdown", "", "dropdown_guests_1", "dropdown__show", "dropdownGuestsInput_1")
+            +dropdownGuestsLabeled("dropdown", "", "dropdown_guests_1", "dropdown__show", "dropdownGuestsInput_1")
+            .margin-left_30
+                +richCheckboxButtons("Rich Checkbox Buttons")
 
         .formElements__element_sixth
-            +dropdownGuestsLabeled("dropdownGuestsInput_2", "dropdown", "", "dropdown_guests_2", "dropdown__show", "dropdownGuestsInput_2")
+            +dropdownGuestsLabeled("dropdown", "", "dropdown_guests_2", "dropdown__show", "dropdownGuestsInput_2")
+            +bulletCheckboxList("bullet list")
 
         .formElements__element_seventh
+            +badgeItem("insert_emoticon", "Комфорт", "Шумопоглощающие стены")
+            +badgeItem("location_city", "Удобство", "Окно в каждой из спален")
+            
         .formElements__element_eighth
+            +comment("../../assets/images/avatar.jpg", "Мурад Сарафанов", "5 дней назад", "likes_author_1", "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.")

@@ -1,12 +1,76 @@
-mixin text (labelId, labelText, labelRightClass, labelRightText, inputClass, placeholder, rule, autofocus=false, maxlength)
+//- mixins for formElements (with labels)
+
+mixin nameContainer(labelText, labelRightText, inputId)
     .widget
-        label(for=labelId class="label")= labelText
-        span(class="" + labelRightClass)= labelRightText
-        div(class="" + inputClass)
-            input(type="text" id=labelId placeholder=placeholder, 
-                value="" name=labelId data-rule=rule autofocus=autofocus,
-                maxlength=maxlength)
-        .error
+        +label(labelText, labelRightText)
+        +name(inputId)
+
+mixin surnameContainer(labelText, labelRightText, inputId)
+    .widget
+        +label(labelText, labelRightText)
+        +surname(inputId)
+
+mixin birthdayContainer(labelText, labelRightText, inputId)
+    .widget
+        +label(labelText, labelRightText)
+        +birthday(inputId)
+
+mixin emailContainer(labelText, labelRightText, inputId)
+    .widget
+        +label(labelText, labelRightText)
+        +email(inputId)
+
+mixin emailSubscribeContainer(labelText, labelRightText, inputId)
+    .widget
+        +label(labelText, labelRightText)
+        +emailSubscribe(inputId)
+
+
+
+//-mixins without labels
+
+mixin name(inputId)
+    +text (inputId, "textfield", "", "This is awesome", "name", "20", autofocus=false)
+
+mixin surname(inputId)
+    +text (inputId, "textfield", "", "This is awesome", "surname", "20", autofocus=false)
+
+mixin birthday(inputId)
+    +text(inputId, "textfield_birthday", "ДД.ММ.ГГГГ", "", "birthday", "10", autofocus=false)
+
+mixin email(inputId)
+    +text (inputId, "textfield", "Email", "", "email", "30", autofocus=false)
+
+mixin emailSubscribe(inputId)
+    +text (inputId, "textfield_email", "Email", "", "email", "30", autofocus=false)
+
+
+
+//-mixins basic
+
+mixin label(labelText, labelRightText)
+    .label!= labelText
+    .label_right= labelRightText
+
+mixin text(inputId, inputClass, placeholder, valueText, nameText, maxText, autofocus=false)
+    div(class="" + inputClass)
+        input(type="text" id=inputId placeholder=placeholder, 
+            value=valueText name=nameText data-rule=nameText, 
+            maxlength=maxText autofocus=autofocus)
+    .error
+
+
+
+//- mixin textInput (inputId, labelText, labelRightClass, labelRightText, inputClass, placeholder, rule, autofocus=false, maxlength)
+//-     .widget
+//-         .label!= labelText
+//-         span(class="" + labelRightClass)= labelRightText
+//-         div(class="" + inputClass)
+//-             input(type="text" placeholder=placeholder, 
+//-                 value="" name=inputId data-rule=rule autofocus=autofocus,
+//-                 maxlength=maxlength)
+//-         .error
+
 
 //- .widget
 //-     label(for="text").label Text field
@@ -16,8 +80,8 @@ mixin text (labelId, labelText, labelRightClass, labelRightText, inputClass, pla
 //-             value="" name="textField" data-rule="email")
 //-     .error
 
-//- textFieldSubscription
 
+//- textFieldSubscription
 //- .widget
 //-     label(for="email").label SUBSCRIPTION TEXT FIELD
 //-     .input_email
@@ -27,7 +91,6 @@ mixin text (labelId, labelText, labelRightClass, labelRightText, inputClass, pla
 
 
 //- textFieldMasked
-
 //- .widget
 //-     label(for="birthday").label Masked text field
 //-     .textField_masked
@@ -37,8 +100,8 @@ mixin text (labelId, labelText, labelRightClass, labelRightText, inputClass, pla
 //-         data-rule="birthday")
 //-     .error
 
-//- textFieldFocused
 
+//- textFieldFocused
 //- .widget
 //-     label(for="textFieldFocused").label Text field
 //-     span.label_right hover / focused

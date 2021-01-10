@@ -1,9 +1,0 @@
-.textField_masked {
-    @extend .textField;
-    text-transform: uppercase;
-    white-space: nowrap;
-    &:hover,
-    &:focus {
-        border: 1px solid $darkShadeMiddle;
-    }
-}
