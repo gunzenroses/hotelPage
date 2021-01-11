@@ -214,6 +214,7 @@ class DropdownGuests {
         this.data = [0, 0, 0];
         this.plusAndMinusShow();
         this.infoInput.value = "";
+        this.resetButton.classList.remove("button__show");
         return this;
     }
 
