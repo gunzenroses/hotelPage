@@ -1,23 +1,18 @@
 mixin bulletCheckboxList(containerText)
+    - var list = [ "Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00" ]
     .widget
         .label!= containerText
-        +bulletCheckboxItem("pets are not allowed", "Нельзя с питомцами")
-        +bulletCheckboxItem("no party", "Без вечеринок и мероприятий")
-        +bulletCheckboxItem("late check-in", "Время прибытия — после 13:00, а выезд до 12:00")
+        for item in list 
+            +bulletCheckboxItem(item)
 
-
-
-mixin bulletCheckboxItem(bulletName, bulletTitle)
+mixin bulletCheckboxItem(bulletTitle)
     label.bullet
-        input(type="checkbox" name=checkboxName).bullet__real
-        span.bullet__fake
+        span.bullet__icon
         span.bullet__title!= bulletTitle
 
 
-//- a variation
-
+//- option 1
     mixin bulletCheckboxList(containerText, items)
-
         .widget
             div(class="label")= containerText
                 for {itemName, itemTitle} in items
