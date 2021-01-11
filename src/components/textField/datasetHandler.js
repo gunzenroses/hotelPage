@@ -1,5 +1,4 @@
 let maskDate = require('./datasetMaskDate')
-// let maskDateRange = require('./datasetMaskDateRange')
 let dataValitadion = require('./datasetValidation')
 
 let inputToValidate = document.querySelectorAll('input[data-rule]');
