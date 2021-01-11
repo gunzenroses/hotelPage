@@ -1,29 +1,45 @@
-mixin dateDropdownContainer(inputId_1, labelText_1, inputName_1, inputValue_1, inputId_2, labelText_2, inputName_2, inputValue_2)
-    .date__container
-        +dateDropdownSmall(inputId_1, labelText_1, inputName_1, inputValue_1)
-        +dateDropdownSmall(inputId_2, labelText_2, inputName_2, inputValue_2)
+mixin dateDropdownRangeContainer(labelText_1, inputValue_1, labelText_2, inputValue_2)
+    .dateRangeSelector
+        +dateDropdownSmall(labelText_1, "checkin", inputValue_1)
+        +dateDropdownSmall(labelText_2, "checkout", inputValue_2)
 
-
-mixin dateDropdownSmall(inputId, labelText, inputName, inputValue)
-    .container_small
+mixin dateDropdownSmall(labelText, inputName, inputValue)
+    .dateRangeSelector__container_small
         .widget
-            label.label(for=inputId)= labelText
-            .dropdown__date_masked
-                input(type="text" id=inputId value=inputValue 
+            .label!= labelText
+            .date__range
+                input(type="text" value=inputValue 
                 name=inputName placeholder="ДД.ММ.ГГГГ"
-                maxlength="10" data-rule="date")
+                maxlength="10" data-rule="date" readonly)
             .error
 
 
+//- mixin dateDropdownContainer(inputId_1, labelText_1, inputName_1, inputValue_1, inputId_2, labelText_2, inputName_2, inputValue_2)
+//-     .date__container
+//-         +dateDropdownSmall(inputId_1, labelText_1, inputName_1, inputValue_1)
+//-         +dateDropdownSmall(inputId_2, labelText_2, inputName_2, inputValue_2)
 
-mixin dateDropdownRange(inputId, labelText, inputName, inputValue)
-    .container_medium
+
+//- mixin dateDropdownSmall(inputId, labelText, inputName, inputValue)
+//-     .container_small
+//-         .widget
+//-             label.label(for=inputId)= labelText
+//-             .dropdown__date_masked
+//-                 input(type="text" id=inputId value=inputValue 
+//-                 name=inputName placeholder="ДД.ММ.ГГГГ"
+//-                 maxlength="10" data-rule="date")
+//-             .error
+
+
+
+mixin dateDropdownRange(labelText, inputValue)
+    .dateRangeSelector__container_medium
         .widget
-            label.label(for=inputId)= labelText
-            .dropdown__date_masked
-                input(type="text" id=inputId value=inputValue 
-                name=inputName placeholder="ДД.ММ - ДД.ММ"
-                maxlength="15" data-rule="date-range")
+            .label!= labelText
+            .date__range
+                input(type="text" value=inputValue 
+                name="checkin-checkout" placeholder="ДД.ММ - ДД.ММ"
+                maxlength="15" data-rule="date-range" readonly)
             .error
 
 

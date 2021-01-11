@@ -2,7 +2,7 @@ mixin dropdownCheckbox(containerId, dropdownTitleName, dropdownClassShow)
     .widget.container_medium
         div(class="dropdown" id=containerId)
             .dropdown__button_transparent
-                span(class="dropdown__title")= dropdownTitleName
+                span.dropdown__title!= dropdownTitleName
             div(class="dropdown__content " + dropdownClassShow)
                 +checkboxExpandList()
 
@@ -23,21 +23,20 @@ mixin checkboxExpandItem(checkboxName, ifChecked, checkboxTitle)
 
 
 
-mixin richCheckboxButtons(containerText)
+mixin richCheckboxButtons(checkboxName, containerText)
     .widget
-        div(class="label")= containerText
-        +richCheckboxButtonItem("wide corridor", "Широкий коридор", "Ширина коридоров в номере", "не менее 91 см.")
-        +richCheckboxButtonItem("help for disabled", "Помощник для инвалидов", "На 1 этаже вас встретит специалист", "и проводит до номера.")
+        .label!= containerText
+        +richCheckboxButtonItem(checkboxName, "wide corridor", "Широкий коридор", "Ширина коридоров в номере <br> не менее 91 см.")
+        +richCheckboxButtonItem(checkboxName, "help for disabled", "Помощник для инвалидов", "На 1 этаже вас встретит специалист <br> и проводит до номера.")
 
 
-mixin richCheckboxButtonItem(checkboxName, checkboxTitle, checkboxSubtitle, checkboxSubtitle2)
+mixin richCheckboxButtonItem(checkboxName, checkboxValue, checkboxTitle, checkboxSubtitle, checkboxSubtitle2)
     label.checkbox_button
-        input(type="checkbox" name=checkboxName).checkbox__real
+        input(type="checkbox" name=checkboxName value=checkboxValue).checkbox__real
         span.checkbox__fake
         div.checkbox__description
-            span(class="checkbox__title_description")= checkboxTitle
-            span(class="checkbox__subtitle_description")= checkboxSubtitle
-            span(class="checkbox__subtitle_description")= checkboxSubtitle2
+            span.checkbox__title_description!= checkboxTitle
+            span.checkbox__subtitle_description!= checkboxSubtitle
 
 
 
