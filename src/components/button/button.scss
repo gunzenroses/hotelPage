@@ -101,27 +101,20 @@
     border-radius: 22px;
 
     &::before {
+        font-family: $MaterialIcons;
+        -webkit-font-feature-settings: 'liga' 1;
+        -moz-font-feature-settings: 'liga' 1;
+        font-feature-settings: 'liga' 1;
+        top: 0;
+        right: 0;
         position: absolute;
-        content: "";
-        background: $light;
-        width: 16px;
-        height: 2px;
-        top: 19px;
-        right: 9px;
-        z-index: 2;
-    }
-
-    &::after {
-        position: absolute;
-        content: "";
-        top: 14px;
-        right: 10px;
-        width: 10px;
-        height: 10px;
-        border-color: $light;
-        border-style: solid;
-        border-width: 2px 2px 0 0;
-        transform: rotate(45deg);
+        width: 44px;
+        height: 44px;
+        content: "\e5c8";
+        line-height: 44px;
+        text-align: center;
+        font-size: 24px;
+        color: $light;
     }
 }
 

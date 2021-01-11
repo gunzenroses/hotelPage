@@ -97,31 +97,49 @@ button {
     text-align: center;
     cursor: pointer;
     background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-}
 
-.pagination__button_next::before {
+    &::before {
+        font-family: $MaterialIcons;
+        -webkit-font-feature-settings: 'liga' 1;
+        -moz-font-feature-settings: 'liga' 1;
+        font-feature-settings: 'liga' 1;
+        top: 0;
+        right: 0;
         position: absolute;
-        content: "";
-        background: #fff;
-        width: 16px;
-        height: 2px;
-        top: 19px;
-        right: 9px;
+        width: 40px;
+        height: 40px;
+        content: "\e5c8";
+        line-height: 40px;
+        text-align: center;
+        font-size: 24px;
+        color: $light;
         z-index: 2;
+    }
 }
 
-.pagination__button_next::after {
-    position: absolute;
-    content: "";
-    top: 14px;
-    right: 10px;
-    width: 10px;
-    height: 10px;
-    border-color: #fff;
-    border-style: solid;
-    border-width: 2px 2px 0 0;
-    transform: rotate(45deg);
-}
+// .pagination__button_next::before {
+//         position: absolute;
+//         content: "";
+//         background: #fff;
+//         width: 16px;
+//         height: 2px;
+//         top: 19px;
+//         right: 9px;
+//         z-index: 2;
+// }
+
+// .pagination__button_next::after {
+//     position: absolute;
+//     content: "";
+//     top: 14px;
+//     right: 10px;
+//     width: 10px;
+//     height: 10px;
+//     border-color: #fff;
+//     border-style: solid;
+//     border-width: 2px 2px 0 0;
+//     transform: rotate(45deg);
+// }
 
 .pagination__button_prev {
     position: relative;
@@ -134,6 +152,24 @@ button {
     text-align: center;
     cursor: pointer;
     background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+
+    &::before {
+        font-family: $MaterialIcons;
+        -webkit-font-feature-settings: 'liga' 1;
+        -moz-font-feature-settings: 'liga' 1;
+        font-feature-settings: 'liga' 1;
+        top: 0;
+        right: 0;
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        content: "\e5c4";
+        line-height: 40px;
+        text-align: center;
+        font-size: 24px;
+        color: $light;
+        z-index: 2;
+    }
 }
 
 .pagination__info {
