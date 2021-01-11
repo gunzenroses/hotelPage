@@ -53,11 +53,19 @@ mixin label(labelText, labelRightText)
     .label_right= labelRightText
 
 mixin text(inputId, inputClass, placeholder, valueText, nameText, maxText, autofocus=false)
-    div(class="" + inputClass)
-        input(type="text" id=inputId placeholder=placeholder, 
-            value=valueText name=nameText data-rule=nameText, 
-            maxlength=maxText autofocus=autofocus)
-    .error
+    if inputClass === "textfield_email"
+        div(class="textfield")
+            input(type="text" id=inputId placeholder=placeholder, 
+                value=valueText name=nameText data-rule=nameText, 
+                maxlength=maxText autofocus=autofocus)
+            button(type="submit" class="arrow_submit") arrow_forward
+        .error
+    else
+        div(class="" + inputClass)
+            input(type="text" id=inputId placeholder=placeholder, 
+                value=valueText name=nameText data-rule=nameText, 
+                maxlength=maxText autofocus=autofocus)
+        .error
 
 
 
