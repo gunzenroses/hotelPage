@@ -5,6 +5,9 @@ let likeButton_2 = new likeButtons("buttonLike_2", 12);
 
 
 
+let likeButtons_3 = new likeButtons("likes_author_1", 12);
+
+
 // let likeButtons = document.querySelectorAll('.buttonLike');
 
 // if (likeButtons){

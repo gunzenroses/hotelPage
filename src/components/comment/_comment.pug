@@ -1,6 +1,6 @@
 //-include ../buttonLike/_buttonLike.pug
 
-mixin comment(authorPic, authorName, commentTime, buttonLikeId, commentText)
+mixin comment(authorPic, authorName, commentTime, buttonLikeId, buttonNumber, commentText)
     .widget
         .comment
             .comment__head
@@ -10,5 +10,5 @@ mixin comment(authorPic, authorName, commentTime, buttonLikeId, commentText)
                     div(class="info__additional")= commentTime
             .comment__body
                 .comment__likes
-                    +buttonLikeItem(buttonLikeId)
+                    +buttonLikeItem(buttonLikeId, buttonNumber)
                 div(class="comment__text")= commentText

@@ -2,26 +2,40 @@ mixin buttonLikeContainer()
     .container_buttonLike
         .label like button
         .row
-            +buttonLikeItem("buttonLike_1")
-            +buttonLikePopularItem("buttonLike_2")
+            +buttonLikeItem("buttonLike_1", 2)
+            +buttonLikeItem("buttonLike_2", 12)
 
-mixin buttonLikeItem(buttonId)
-    .buttonLike(id=buttonId) 
-        .buttonLike__heart
-        .buttonLike__number
+mixin buttonLikeItem(buttonId, buttonNumber)
+    if buttonNumber < 10 
+        .buttonLike(id=buttonId)
+            .buttonLike__heart
+            .buttonLike__number!= buttonNumber
+    else
+        .buttonLike(id=buttonId)
+            .buttonLike__heart.buttonLike__heart_popular
+            .buttonLike__number.buttonLike__number_popular!= buttonNumber
 
-mixin buttonLikePopularItem(buttonId)
-    .buttonLike.buttonLike_popular(id=buttonId) 
-        .buttonLike__heart.buttonLike__heart_popular
-        .buttonLike__number.buttonLike__number_popular
 
+//- option 2
+//- mixin buttonLikeItem(buttonId, buttonNumber)
+//-     .buttonLike(id=buttonId) 
+//-         .buttonLike__heart
+//-         .buttonLike__number!= buttonNumber
+//- mixin buttonLikePopularItem(buttonId, buttonNumber)
+//-     .buttonLike.buttonLike_popular(id=buttonId) 
+//-         .buttonLike__heart.buttonLike__heart_popular
+//-         .buttonLike__number.buttonLike__number_popular!= buttonNumber
+
+//- option 1
 //- .container_buttonLike
 //-     .label like button
 //-     .row
 //-         .buttonLike#buttonLike_1
 //-             .buttonLike__heart
 //-             .buttonLike__number
-
+//- .container_buttonLike
+//-     .label like button
+//-     .row
 //-         .buttonLike.buttonLike_popular#buttonLike_2
 //-             .buttonLike__heart.buttonLike__heart_popular
 //-             .buttonLike__number.buttonLike__number_popular
