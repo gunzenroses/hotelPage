@@ -128,7 +128,6 @@ class ButtonPagination {
 }
 
 
-//TODO: should count adults and kids together and infants separate
 class DropdownGuests {
     constructor(containerId, expandedClass, data){
         this.container = document.getElementById(containerId)
@@ -414,11 +413,12 @@ class DropdownRooms {
     }
 }
 
-class DropdownCheckbox {
-    constructor(containerId){
+class Dropdown {
+    constructor(containerId, buttonSelector, contentSelector){
         this.container = document.getElementById(containerId)
         this.containerClass = this.container.classList.value
-        this.dropdownExpanded = this.container.querySelector(".dropdown__content")
+        this.dropdownButton = this.container.querySelector(buttonSelector);
+        this.dropdownExpanded = this.container.querySelector(contentSelector)
         this.init()
     }
 
@@ -430,7 +430,6 @@ class DropdownCheckbox {
     }
 
     createChildren(){
-        this.dropdownButton = this.container.querySelector(".dropdown__button_transparent");
         this.containerClassExpanded = "." + this.containerClass;
         return this;
     }
@@ -449,6 +448,7 @@ class DropdownCheckbox {
         return this;
     }
 }
+
 
 class Range {
     constructor(containerId){
@@ -587,4 +587,218 @@ class likeButtons {
     }
 }
 
-export { ButtonPagination, DropdownGuests, DropdownRooms, DropdownCheckbox, Range, likeButtons}
+class renderCalendar {
+    constructor(calendarId){
+        this.calendarContainer = document.getElementById(calendarId)
+        this.date = new Date()
+        this.months = ["Январь", "Февраль", "Март", "Апрель", 
+            "Май", "Июнь", "Июль", "Август", 
+            "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"]
+        this.buttonPrev = this.calendarContainer.querySelector(".date__prev");
+        this.buttonNext = this.calendarContainer.querySelector(".date__next");
+        this.dateInCalendar = this.calendarContainer.querySelector(".date__month");
+        this.daysOfMonth = this.calendarContainer.querySelector(".weeks__days");
+        this.init()    
+    }
+
+    init(){
+        this.render()
+        this.createChildren()
+        this.enableHandlers()
+        this.addEventListener()
+        return this;
+    }
+
+    createChildren(){
+        this.daysList = this.daysOfMonth.querySelectorAll(".weeks__day");
+            this.listOfDays = Array.prototype.slice.call(this.daysList);
+        this.checkin; 
+        this.checkout;
+        return this;
+    }
+
+    enableHandlers(){
+        this.showNextMonthHandler = this.showNextMonth.bind(this);
+        this.showPrevMonthHandler = this.showPrevMonth.bind(this);
+        this.chooseRangeHandler = this.chooseRange.bind(this);
+        return this;
+    }
+
+    addEventListener(){
+        this.buttonPrev.addEventListener("click", this.showPrevMonthHandler);
+        this.buttonNext.addEventListener("click", this.showNextMonthHandler);
+        this.daysOfMonth.addEventListener("click", this.chooseRangeHandler);
+        return this;
+    }
+
+    chooseRange(){
+        if (!event.target.classList.contains("weeks__day_prev") 
+            && !event.target.classList.contains("weeks__day_next") 
+            && !event.target.classList.contains(".weeks__days") 
+            && (new Date(this.year, this.month, +event.target.innerText) > new Date()))
+        {
+                if 
+                    (this.checkin && this.checkout)
+                {
+                    this.checkin = "";
+                    this.checkout = "";
+                                            // if (this.daysOfMonth.querySelector(".weeks__day_checkin")){
+                                            //     this.daysOfMonth.querySelector(".weeks__day_checkin").classList.remove("weeks__day_checkin");
+                                            // }
+                                            // if (this.daysOfMonth.querySelector(".weeks__day_checkout")){
+                                            //     this.daysOfMonth.querySelector(".weeks__day_checkout").classList.remove("weeks__day_checkout");
+                                            // }
+                                            // event.target.classList.add("weeks__day_checkin");
+                    this.checkin = new Date(this.year, this.month, +event.target.innerText);
+                    this.render()
+                } 
+                
+                else if (
+                    this.checkin 
+                    && !this.checkout
+                    && (+this.month <= +this.checkin.getMonth())
+                    && (+event.target.innerText < +this.checkin.getDate())
+                    )
+                {
+                    this.checkin = "";
+                                            // if (this.daysOfMonth.querySelector(".weeks__day_checkin")){
+                                            //     this.daysOfMonth.querySelector(".weeks__day_checkin").classList.remove("weeks__day_checkin");
+                                            // }
+                                            // event.target.classList.add("weeks__day_checkin");
+                    this.checkin = new Date(this.year, this.month, +event.target.innerText);
+                    this.render()
+                } 
+
+                else if (
+                            this.checkin 
+                            && !this.checkout
+                            && (+this.month >= +this.checkin.getMonth())
+                            && (+event.target.innerText > +this.checkin.getDate())
+                        )
+                {
+                                            // event.target.classList.add("weeks__day_checkout");
+                    this.checkout = new Date(this.year, this.month, +event.target.innerText);
+                    this.render()
+                } 
+                
+                else if (
+                            !this.checkin && !this.checkout
+                        )
+                {
+                                            // event.target.classList.add("weeks__day_checkin");
+                    this.checkin = new Date(this.year, this.month, +event.target.innerText);
+                    this.render()
+                }
+
+            return this;
+        }
+
+        return this;
+    }
+
+    showPrevMonth(){
+        this.date.setMonth(this.date.getMonth() - 1);
+        this.render();
+        return this;
+    }
+
+    showNextMonth(){
+        this.date.setMonth(this.date.getMonth() + 1);
+        this.render();
+        return this;
+    }
+    
+    render(){
+        console.log("hola")
+        this.year = this.date.getFullYear();
+        this.month = this.date.getMonth();
+        this.day = this.date.getDate();
+
+        this.lastDay = new Date(this.year, parseInt(this.month)+1, 0).getDate();
+        this.lastDayPrev = new Date(this.year, parseInt(this.month), 0).getDate();
+        this.dayOfWeekFirst = new Date(this.year, parseInt(this.month), 1).getDay();
+        this.prevMonthDays = (this.dayOfWeekFirst === 0) ? 6 : (this.dayOfWeekFirst - 1);
+        this.dayOfWeekLast = new Date(this.year, parseInt(this.month) + 1, 0).getDay();
+        this.nextMonthDay = (this.dayOfWeekLast === 0) ? 6 : (this.dayOfWeekLast - 1);
+        this.daysLeft = 7 - this.dayOfWeekLast;
+        this.dateInCalendar.textContent = `${this.months[this.month]} ${this.year}`;
+
+        
+        //filling the calendar dates
+
+        this.days = "";
+        for (let p=this.prevMonthDays;p>0;p--){
+            if ( 
+                this.checkin 
+                && this.checkin.getMonth() === this.month 
+                && this.checkin.getDate() === p  
+                ){
+                this.days+=`<div class="weeks__day weeks__day_prev weeks__day_checkin ">${this.lastDayPrev-p+1}</div>`
+            } else if (
+                    this.checkout 
+                    && this.checkout.getMonth() === this.month 
+                    && this.checkout.getDate() === p  
+                ){
+                this.days+=`<div class="weeks__day weeks__day_prev weeks__day_checkout ">${this.lastDayPrev-p+1}</div>`
+            } else {
+                this.days+=`<div class="weeks__day weeks__day_prev">${this.lastDayPrev-p+1}</div>`
+            }
+        }
+
+        for (let i=1;i<=this.lastDay;i++){
+            if (
+                i === new Date().getDate() 
+                && this.date.getMonth() === new Date().getMonth()
+                && this.checkin
+                && this.checkin.getMonth() === this.month 
+                && this.checkin.getDate() === i
+            ){
+                this.days += `<div class="weeks__day weeks__day_today weeks__day_checkin">${i}</div>`;
+            } else if (
+                        this.checkin 
+                        && this.month === this.checkin.getMonth()
+                        && i === this.checkin.getDate()
+                        )
+            {
+                this.days += `<div class="weeks__day weeks__day_checkin">${i}</div>`;
+            } else if (
+                    this.checkout 
+                    && this.month === this.checkout.getMonth()
+                    && i === this.checkout.getDate()
+                    )
+            {
+                this.days += `<div class="weeks__day weeks__day_checkout">${i}</div>`;
+            } 
+            
+            else if (
+                    this.checkin && this.checkout
+                    && this.checkin.getMonth() <= this.month
+                    && this.month <= this.checkout.getMonth()
+                    && this.checkin.getDate() <= i 
+                    && i <= this.checkout.getDate()
+                )
+            {
+                this.days += `<div class="weeks__day weeks__day_range">${i}</div>`;
+            }
+                
+            
+            else if (
+                i === new Date().getDate() 
+                && this.date.getMonth() === new Date().getMonth()
+            ){
+                this.days += `<div class="weeks__day weeks__day_today">${i}</div>`;
+            } else {
+                this.days += `<div class="weeks__day">${i}</div>`;
+            }
+        }
+
+        for (let n=1;n<this.daysLeft+1;n++){
+            this.days += `<div class="weeks__day weeks__day_next">${n}</div>`;
+            this.daysOfMonth.innerHTML = this.days;
+        }
+
+        return this;
+    }
+}
+
+export { ButtonPagination, DropdownGuests, DropdownRooms, Dropdown, Range, likeButtons, renderCalendar}
