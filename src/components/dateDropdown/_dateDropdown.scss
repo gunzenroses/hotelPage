@@ -1,17 +1,14 @@
-.dateRangeSelector {
+.container__dataRange {
+    @include isFlex();
     width: 320px;
     height: 65px;
-    @include isFlex();
 }
 
-.dateRangeSelector__container_small {
-    @include isFlex($direction: column);
-    width: 150px;
-}
-
-.dateRangeSelector__container_medium {
-    @include isFlex($direction: column);
-    width: 266px;
+.dropdown__calendar {
+    width: 320px;
+    height: 369px;
+    margin-top: 5px;
+    display: none;
 }
 
 

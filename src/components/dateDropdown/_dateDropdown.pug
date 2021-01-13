@@ -1,17 +1,18 @@
-mixin dateDropdownRangeContainer(labelText_1, inputValue_1, labelText_2, inputValue_2)
-    .dateRangeSelector
-        +dateDropdownSmall(labelText_1, "checkin", inputValue_1)
-        +dateDropdownSmall(labelText_2, "checkout", inputValue_2)
+mixin dateDropdownRangeContainer(containerId, labelText_1, inputValue_1, labelText_2, inputValue_2, dropdownClassShow)
+    div(class="dateRangeSelector" id=containerId)
+        .container__dataRange
+            +dateDropdownSmall(labelText_1, "checkin", inputValue_1)
+            +dateDropdownSmall(labelText_2, "checkout", inputValue_2)
+        div(class="dropdown__calendar " + dropdownClassShow)
+            +calendar("calendar_1")
 
 mixin dateDropdownSmall(labelText, inputName, inputValue)
-    .dateRangeSelector__container_small
-        .widget
-            .label!= labelText
-            .date__range
-                input(type="text" value=inputValue 
-                name=inputName placeholder="ДД.ММ.ГГГГ"
-                maxlength="10" data-rule="date" readonly)
-            .error
+    .container_small
+        .label!= labelText
+        .date__range
+            input(type="text" value=inputValue 
+            name=inputName placeholder="ДД.ММ.ГГГГ"
+            maxlength="10" data-range="date-range" readonly)
 
 
 //- mixin dateDropdownContainer(inputId_1, labelText_1, inputName_1, inputValue_1, inputId_2, labelText_2, inputName_2, inputValue_2)
@@ -32,15 +33,17 @@ mixin dateDropdownSmall(labelText, inputName, inputValue)
 
 
 
-mixin dateDropdownRange(labelText, inputValue)
-    .dateRangeSelector__container_medium
-        .widget
+mixin dateDropdownRange(containerId, labelText, inputValue, dropdownClassShow)
+    div(class="dateRangeSelector" id=containerId)
+        .container_medium
             .label!= labelText
             .date__range
                 input(type="text" value=inputValue 
                 name="checkin-checkout" placeholder="ДД.ММ - ДД.ММ"
-                maxlength="15" data-rule="date-range" readonly)
-            .error
+                maxlength="15" data-range="date-range" readonly)
+        div(class="dropdown__calendar " + dropdownClassShow)
+            +calendar("calendar_2")
+
 
 
 //-dropdownDateFiltered

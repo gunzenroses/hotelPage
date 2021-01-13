@@ -1,5 +1,6 @@
 include ../../components/textField/_textField.pug
 include ../../components/dateDropdown/_dateDropdown.pug
+include ../../components/calendar/_calendar.pug
 include ../../components/buttonsCheckbox/_buttonsCheckbox.pug
 include ../../components/buttonsRadio/_buttonsRadio.pug
 include ../../components/buttonToggle/_buttonToggle.pug
@@ -17,19 +18,15 @@ include ../../components/comment/_comment.pug
 .formElements_outer
     .formElements_inner
         .formElements__element_first
-            .formElements__container_first
-                //TODO: refactor mixin text and its descendants, 
-                //TODO: dropdownDate dropdownDateRange переделать
-                //TODO: delete redundant styles
-
+            .formElements__container_first 
                 +emailContainer("Text field", "default", "")
                 +nameContainer("Text field", "hover / focused", "")
                 +dropdownGuestsLabeled("dropdown", "", "dropdown_guests_0", "", "dropdownGuestsInput_0")
                 +birthdayContainer("Masked text field", "", "")
 
             .formElements__container_second
-                +dateDropdownRangeContainer("Date dropdown", "", "Date dropdown", "19.08.2019")
-                +dateDropdownRange("dropdown", "19 авг - 23 авг")
+                +dateDropdownRangeContainer("dataRange_1", "Date dropdown", "", "Date dropdown", "19.08.2019", "")
+                +dateDropdownRange("dataRange_2", "dropdown", "19 авг - 23 авг", "")
 
                 .container_medium
                     +emailSubscribeContainer("Subscription text field", "", "")
