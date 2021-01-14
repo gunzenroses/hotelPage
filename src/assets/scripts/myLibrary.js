@@ -610,8 +610,8 @@ class renderCalendar {
     }
 
     createChildren(){
-        this.daysList = this.daysOfMonth.querySelectorAll(".weeks__day");
-            this.listOfDays = Array.prototype.slice.call(this.daysList);
+            // this.daysList = this.daysOfMonth.querySelectorAll(".weeks__day");
+            // this.listOfDays = Array.prototype.slice.call(this.daysList);
         this.checkin; 
         this.checkout;
         return this;
@@ -637,6 +637,7 @@ class renderCalendar {
             && !event.target.classList.contains(".weeks__days") 
             && (new Date(this.year, this.month, +event.target.innerText) > new Date()))
         {
+                //make new checkin-checkout set
                 if 
                     (this.checkin && this.checkout)
                 {
@@ -653,11 +654,20 @@ class renderCalendar {
                     this.render()
                 } 
                 
+                //change checkin on earlier date
                 else if (
                     this.checkin 
                     && !this.checkout
-                    && (+this.month <= +this.checkin.getMonth())
-                    && (+event.target.innerText < +this.checkin.getDate())
+                    && (
+                            (
+                                +this.month < +this.checkin.getMonth()
+                            )
+                        ||
+                            (
+                                +this.month === +this.checkin.getMonth()
+                                && +event.target.innerText < +this.checkin.getDate()
+                            )
+                        )
                     )
                 {
                     this.checkin = "";
@@ -669,15 +679,23 @@ class renderCalendar {
                     this.render()
                 } 
 
+                //make checkout date
                 else if (
                             this.checkin 
                             && !this.checkout
-                            && (+this.month >= +this.checkin.getMonth())
-                            && (+event.target.innerText > +this.checkin.getDate())
+                            && (
+                                //this month then date should be grater than checkin
+                                (+this.month === +this.checkin.getMonth() 
+                                    && +event.target.innerText > +this.checkin.getDate()
+                                )
+                                //or just next month and any date
+                                || +this.month > +this.checkin.getMonth()
+                                )
                         )
                 {
-                                            // event.target.classList.add("weeks__day_checkout");
+                    // event.target.classList.add("weeks__day_checkout");
                     this.checkout = new Date(this.year, this.month, +event.target.innerText);
+                    console.log(this.checkout)
                     this.render()
                 } 
                 
@@ -689,10 +707,7 @@ class renderCalendar {
                     this.checkin = new Date(this.year, this.month, +event.target.innerText);
                     this.render()
                 }
-
-            return this;
         }
-
         return this;
     }
 
@@ -709,11 +724,11 @@ class renderCalendar {
     }
     
     render(){
-        console.log("hola")
         this.year = this.date.getFullYear();
         this.month = this.date.getMonth();
         this.day = this.date.getDate();
 
+        //for setting month days in calendar
         this.lastDay = new Date(this.year, parseInt(this.month)+1, 0).getDate();
         this.lastDayPrev = new Date(this.year, parseInt(this.month), 0).getDate();
         this.dayOfWeekFirst = new Date(this.year, parseInt(this.month), 1).getDay();
@@ -725,26 +740,48 @@ class renderCalendar {
 
         
         //filling the calendar dates
-
+        //add days from previous month
         this.days = "";
         for (let p=this.prevMonthDays;p>0;p--){
             if ( 
                 this.checkin 
-                && this.checkin.getMonth() === this.month 
-                && this.checkin.getDate() === p  
+                && this.checkin.getMonth() === (this.month - 1)
+                && this.checkin.getDate() === (this.lastDayPrev-p+1) 
                 ){
-                this.days+=`<div class="weeks__day weeks__day_prev weeks__day_checkin ">${this.lastDayPrev-p+1}</div>`
+                this.days+=`<div class="weeks__day weeks__day_prev weeks__day_prev_checkin ">${this.lastDayPrev-p+1}</div>`
             } else if (
                     this.checkout 
-                    && this.checkout.getMonth() === this.month 
-                    && this.checkout.getDate() === p  
+                    && this.checkout.getMonth() === (this.month - 1)
+                    && this.checkout.getDate() === (this.lastDayPrev-p+1)  
                 ){
-                this.days+=`<div class="weeks__day weeks__day_prev weeks__day_checkout ">${this.lastDayPrev-p+1}</div>`
+                this.days+=`<div class="weeks__day weeks__day_prev weeks__day_prev_checkout ">${this.lastDayPrev-p+1}</div>`
+            } else if 
+                    (
+                        (
+                            this.checkin && this.checkout
+                            && this.checkin.getMonth() === (this.month - 1)
+                            && this.checkin.getDate() < (this.lastDayPrev-p+1) 
+                        )
+                    ||
+                        (
+                            this.checkin && this.checkout 
+                            && this.checkout.getMonth() === (this.month - 1)
+                            && this.checkout.getDate() > (this.lastDayPrev-p+1) 
+                        )
+                    ||
+                        (
+                            this.checkin && this.checkout 
+                            && this.checkin.getMonth() < (this.month - 1)
+                            && this.checkout.getMonth() > (this.month - 1)
+                        )
+                    ){
+                this.days+=`<div class="weeks__day weeks__day_prev weeks__day_range_another">${this.lastDayPrev-p+1}</div>`
             } else {
                 this.days+=`<div class="weeks__day weeks__day_prev">${this.lastDayPrev-p+1}</div>`
             }
         }
 
+        // add days for this month
         for (let i=1;i<=this.lastDay;i++){
             if (
                 i === new Date().getDate() 
@@ -766,37 +803,79 @@ class renderCalendar {
                     && this.month === this.checkout.getMonth()
                     && i === this.checkout.getDate()
                     )
-            {
+            {   
                 this.days += `<div class="weeks__day weeks__day_checkout">${i}</div>`;
             } 
-            
-            else if (
-                    this.checkin && this.checkout
-                    && this.checkin.getMonth() <= this.month
-                    && this.month <= this.checkout.getMonth()
-                    && this.checkin.getDate() <= i 
-                    && i <= this.checkout.getDate()
-                )
-            {
-                this.days += `<div class="weeks__day weeks__day_range">${i}</div>`;
-            }
-                
-            
             else if (
                 i === new Date().getDate() 
                 && this.date.getMonth() === new Date().getMonth()
             ){
                 this.days += `<div class="weeks__day weeks__day_today">${i}</div>`;
-            } else {
+            }
+            else if (
+                    this.checkin && this.checkout 
+                    &&
+                        (
+                            (
+                                this.month === this.checkin.getMonth()
+                                && this.month === this.checkout.getMonth()
+                                && i > this.checkin.getDate()
+                                && i < this.checkout.getDate()
+                            )
+                        ||
+                            (
+                                this.month === this.checkin.getMonth()
+                                && this.month < this.checkout.getMonth()
+                                && i > this.checkin.getDate()
+                            )
+                        ||
+                            (   
+                                this.month === this.checkout.getMonth()
+                                && this.month > this.checkin.getMonth()
+                                && i < this.checkout.getDate()
+                            )
+                        ||
+                            (   
+                                this.month < this.checkout.getMonth()
+                                && this.month > this.checkin.getMonth()
+                            )
+                        )
+                )
+            {
+                this.days += `<div class="weeks__day weeks__day_range">${i}</div>`;
+            }
+                
+            else {
                 this.days += `<div class="weeks__day">${i}</div>`;
             }
         }
 
+        // add days from next month
         for (let n=1;n<this.daysLeft+1;n++){
-            this.days += `<div class="weeks__day weeks__day_next">${n}</div>`;
-            this.daysOfMonth.innerHTML = this.days;
+            if (
+                    this.checkin
+                    && this.checkin.getMonth() === this.month + 1 
+                    && this.checkin.getDate() === n
+                ){
+                    this.days += `<div class="weeks__day weeks__day_next weeks__day_next_checkin">${n}</div>`;
+            } else if (
+                this.checkout
+                && this.checkout.getMonth() === this.month + 1 
+                && this.checkout.getDate() === n
+                ){
+                    this.days += `<div class="weeks__day weeks__day_next weeks__day_next_checkout">${n}</div>`;
+            } else if 
+                    (
+                        this.checkin && this.checkout 
+                        && (this.month + 1) > this.checkin.getMonth()
+                        && (this.month + 1) <= this.checkout.getMonth()
+                    ){
+                    this.days +=`<div class="weeks__day weeks__day_next weeks__day_range_another">${n}</div>`
+            } else {
+                this.days += `<div class="weeks__day weeks__day_next">${n}</div>`;
+            }
         }
-
+        this.daysOfMonth.innerHTML = this.days;
         return this;
     }
 }
