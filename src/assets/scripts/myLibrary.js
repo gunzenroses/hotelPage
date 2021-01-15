@@ -612,6 +612,19 @@ class renderCalendar {
     createChildren(){
             // this.daysList = this.daysOfMonth.querySelectorAll(".weeks__day");
             // this.listOfDays = Array.prototype.slice.call(this.daysList);
+        this.mainContainer = this.calendarContainer.closest(".dateRangeSelector")
+        this.btnApply = this.mainContainer.querySelector(".calendar__buttons_submit")
+        this.btnReset = this.mainContainer.querySelector(".calendar__buttons_reset")
+        if (this.mainContainer.querySelector("input[name=checkin-checkout]")){
+            this.rangeSpan = this.mainContainer.querySelector("input[name=checkin-checkout]")
+        }
+        if (this.mainContainer.querySelector("input[name=checkin]")){
+            this.rangeStart = this.mainContainer.querySelector("input[name=checkin]")
+        }
+        if (this.mainContainer.querySelector("input[name=checkout]")){
+            this.rangeEnd = this.mainContainer.querySelector("input[name=checkout]")
+        }
+        this.calendar = this.mainContainer.querySelector(".dropdown__calendar ");
         this.checkin; 
         this.checkout;
         return this;
@@ -621,6 +634,9 @@ class renderCalendar {
         this.showNextMonthHandler = this.showNextMonth.bind(this);
         this.showPrevMonthHandler = this.showPrevMonth.bind(this);
         this.chooseRangeHandler = this.chooseRange.bind(this);
+        this.applyRangeHandler = this.applyRange.bind(this);
+        this.applyStartOrEndHandler = this.applyStartOrEnd.bind(this);
+        
         return this;
     }
 
@@ -628,6 +644,13 @@ class renderCalendar {
         this.buttonPrev.addEventListener("click", this.showPrevMonthHandler);
         this.buttonNext.addEventListener("click", this.showNextMonthHandler);
         this.daysOfMonth.addEventListener("click", this.chooseRangeHandler);
+
+        if ( this.rangeSpan ){
+            this.btnApply.addEventListener("click", this.applyRangeHandler)
+        }
+        if ( this.rangeStart && this.rangeEnd ){
+            this.btnApply.addEventListener("click", this.applyStartOrEndHandler)
+        }
         return this;
     }
 
@@ -695,7 +718,6 @@ class renderCalendar {
                 {
                     // event.target.classList.add("weeks__day_checkout");
                     this.checkout = new Date(this.year, this.month, +event.target.innerText);
-                    console.log(this.checkout)
                     this.render()
                 } 
                 
@@ -708,6 +730,42 @@ class renderCalendar {
                     this.render()
                 }
         }
+        return this;
+    }
+
+    applyRange(){
+        if (this.checkin && this.checkout){
+        this.rangeSpanStartMonth = this.months[this.checkin.getMonth()].slice(0,3);
+        this.rangeSpanEndMonth = this.months[this.checkout.getMonth()].slice(0,3);
+        this.rangeSpanText = `${this.checkin.getDate()} ${this.rangeSpanStartMonth} - ${this.checkout.getDate()} ${this.rangeSpanEndMonth}`;
+        // set the range
+        this.rangeSpan.value = this.rangeSpanText;
+        }
+        this.calendar.classList.remove("dropdown__show");
+        return this;
+    }
+
+    applyStartOrEnd(){
+        if (this.checkin){
+            if (parseInt(this.checkin.getMonth()+1) < 10){
+                this.rangeStartMonth = "0" + parseInt(this.checkin.getMonth()+1);
+            } else {
+                this.rangeStartMonth = parseInt(this.checkin.getMonth()+1);
+            }
+            this.rangeSpanStart = `${this.checkin.getDate()}.${this.rangeStartMonth}.${this.checkin.getFullYear()}`;
+            this.rangeStart.value = this.rangeSpanStart;
+
+        }
+        if (this.checkout){
+            if (parseInt(this.checkout.getMonth()+1) < 10){
+                this.rangeEndMonth = "0" + parseInt(this.checkout.getMonth()+1);
+            } else {
+                this.rangeEndMonth = parseInt(this.checkout.getMonth()+1);
+            }
+            this.rangeSpanEnd = `${this.checkout.getDate()}.${this.rangeEndMonth}.${this.checkout.getFullYear()}`;
+            this.rangeEnd.value = this.rangeSpanEnd;
+        }
+        this.calendar.classList.remove("dropdown__show");
         return this;
     }
 
@@ -808,8 +866,13 @@ class renderCalendar {
             } 
             else if (
                 i === new Date().getDate() 
+                && this.date.getFullYear() === new Date().getFullYear()
                 && this.date.getMonth() === new Date().getMonth()
             ){
+                //
+                //
+                //
+                // console.log(new Date().getFullYear());
                 this.days += `<div class="weeks__day weeks__day_today">${i}</div>`;
             }
             else if (
