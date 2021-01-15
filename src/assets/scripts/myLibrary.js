@@ -636,7 +636,7 @@ class renderCalendar {
         this.chooseRangeHandler = this.chooseRange.bind(this);
         this.applyRangeHandler = this.applyRange.bind(this);
         this.applyStartOrEndHandler = this.applyStartOrEnd.bind(this);
-        
+        this.resetInputHandler = this.resetInput.bind(this);
         return this;
     }
 
@@ -644,7 +644,7 @@ class renderCalendar {
         this.buttonPrev.addEventListener("click", this.showPrevMonthHandler);
         this.buttonNext.addEventListener("click", this.showNextMonthHandler);
         this.daysOfMonth.addEventListener("click", this.chooseRangeHandler);
-
+        this.btnReset.addEventListener("click", this.resetInputHandler);
         if ( this.rangeSpan ){
             this.btnApply.addEventListener("click", this.applyRangeHandler)
         }
@@ -744,7 +744,7 @@ class renderCalendar {
         this.calendar.classList.remove("dropdown__show");
         return this;
     }
-
+    
     applyStartOrEnd(){
         if (this.checkin){
             if (parseInt(this.checkin.getMonth()+1) < 10){
@@ -764,6 +764,24 @@ class renderCalendar {
             }
             this.rangeSpanEnd = `${this.checkout.getDate()}.${this.rangeEndMonth}.${this.checkout.getFullYear()}`;
             this.rangeEnd.value = this.rangeSpanEnd;
+        }
+        this.calendar.classList.remove("dropdown__show");
+        return this;
+    }
+
+    resetInput(){
+        if ( this.rangeSpan ){
+            this.rangeSpan.value = "";
+            this.checkin = "";
+            this.checkout = "";
+            this.render();
+        }
+        if ( this.rangeStart && this.rangeEnd ){
+            this.checkin = "";
+            this.checkout = "";
+            this.rangeStart.value = "";
+            this.rangeEnd.value = "";
+            this.render();
         }
         this.calendar.classList.remove("dropdown__show");
         return this;
