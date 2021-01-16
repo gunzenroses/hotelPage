@@ -1,6 +1,7 @@
 .dropdown {
     width: inherit;
     position: relative;
+    @include isFlex($direction: column-reverse)
 }
 
 .dropdown__info {
@@ -57,9 +58,9 @@
     width: 100%;
     height: 118px;
     border-radius: 0 0 2px 2px;
-    border-left: 1px solid rgba(31, 32, 65, 0.25);
-    border-right: 1px solid rgba(31, 32, 65, 0.25);
-    border-bottom: 1px solid rgba(31, 32, 65, 0.25);
+    border-left: 1px solid rgba(31, 32, 65, 0.5);
+    border-right: 1px solid rgba(31, 32, 65, 0.5);
+    border-bottom: 1px solid rgba(31, 32, 65, 0.5);
     z-index: 1;
     display: none;
 }
@@ -110,10 +111,15 @@
 .dropdown__plus {
     width: 30px;
     height: 30px;
-    border: 1px solid #1F2041;
+    border: 1px solid $darkShadeMiddle;
     border-radius: 50%;
     text-align: center;
     line-height: 30px;
+    cursor: pointer;
+}
+
+.button_disabled {
+    border: 1px solid $darkShadeLess;
 }
 
 .dropdown__number {
@@ -190,6 +196,24 @@
 }
 
 .dropdown__show ~ .dropdown__button_transparent::before {
+    position: absolute;
+    font-size: 24px;
+    font-family: $MaterialIcons;
+    top: 0;
+    right: 0;
+    content: "\e5ce";
+    display: block;
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+}
+
+.dropdown__show ~ .dropdown__info {
+    border: 1px solid rgba(31, 32, 65, 0.5);
+}
+
+.dropdown__show ~ .dropdown__info::before {
     position: absolute;
     font-size: 24px;
     font-family: $MaterialIcons;

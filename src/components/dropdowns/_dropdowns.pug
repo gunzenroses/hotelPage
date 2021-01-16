@@ -10,8 +10,6 @@ mixin dropdownGuestsLabeled(labelText, labelRightText, dropdownContainerId, drop
 
 mixin dropdownGuestsItems(dropdownContainerId, dropdownClassShow, inputId)
     div(class="dropdown" id=dropdownContainerId)
-        .dropdown__info
-            input.dropdown__input(readonly='' type='text' placeholder='Сколько гостей' name="guests" value='' id=inputId)
         div(class="dropdown__guests " + dropdownClassShow)
             +dropdownItem("grownups", "Взрослые", 0)
             +dropdownItem("kids", "Дети", 1)
@@ -19,6 +17,8 @@ mixin dropdownGuestsItems(dropdownContainerId, dropdownClassShow, inputId)
             .dropdown__buttons
                 button.dropdown__button_submit.button__show(type='submit') Применить
                 button.dropdown__button_reset(type='reset') Очистить
+        .dropdown__info
+            input.dropdown__input(readonly='' type='text' placeholder='Сколько гостей' name="guests" value='' id=inputId)
 
 
 
@@ -32,12 +32,12 @@ mixin dropdownRoomsLabeled(labelText, labelRightText, dropdownContainerId, dropd
 
 mixin dropdownRoomsItems(dropdownContainerId, dropdownClassShow, inputId)
     div(class="dropdown" id=dropdownContainerId)
-        .dropdown__info
-            input.dropdown__input(readonly='' type='text' placeholder='' value='' name="rooms" id=inputId)
         div(class="dropdown__rooms " + dropdownClassShow)
             +dropdownItem("bedrooms", "Спальни", 0)
             +dropdownItem("beds", "Кровати", 1)
             +dropdownItem("bathrooms", "Ванные комнаты", 2)
+        .dropdown__info
+            input.dropdown__input(readonly='' type='text' placeholder='' value='' name="rooms" id=inputId)
 
 
 
@@ -45,6 +45,6 @@ mixin dropdownRoomsItems(dropdownContainerId, dropdownClassShow, inputId)
 mixin dropdownItem (itemDataType, itemText, itemDataOrder)
     .dropdown__expandedItem(data-type=itemDataType)
         .dropdown__text!= itemText
-        .dropdown__minus  - 
+        .dropdown__minus.button_disabled - 
         .dropdown__number(data-order=itemDataOrder)  0 
         .dropdown__plus  +
