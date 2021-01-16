@@ -8,6 +8,9 @@
     width: 320px;
     height: 369px;
     margin-top: 5px;
+    position: absolute;
+    background: $light;
+    z-index: 1;
     display: none;
 }
 

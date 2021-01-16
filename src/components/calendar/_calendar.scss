@@ -1,12 +1,10 @@
 .calendar {
     width: 320px;
     height: 369px;
-    background-color: $light;
-    width: 100%;
+    background: $light;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    z-index: 1;
 }
 
 .calendar__date {

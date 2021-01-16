@@ -1,10 +1,10 @@
-mixin dateDropdownRangeContainer(containerId, labelText_1, inputValue_1, labelText_2, inputValue_2, dropdownClassShow)
+mixin dateDropdownRangeContainer(containerId, labelText_1, inputValue_1, labelText_2, inputValue_2, dropdownClassShow, calendarId)
     div(class="dateRangeSelector" id=containerId)
         .container__dataRange
             +dateDropdownSmall(labelText_1, "checkin", inputValue_1, "checkin")
             +dateDropdownSmall(labelText_2, "checkout", inputValue_2, "checkout")
         div(class="dropdown__calendar " + dropdownClassShow)
-            +calendar("calendar_1")
+            +calendar(calendarId)
 
 mixin dateDropdownSmall(labelText, inputName, inputValue, dateDataType)
     .container_small

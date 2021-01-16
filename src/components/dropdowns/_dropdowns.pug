@@ -4,10 +4,14 @@ mixin dropdownGuestsLabeled(labelText, labelRightText, dropdownContainerId, drop
         .label_right!= labelRightText
         +dropdownGuestsItems(dropdownContainerId, dropdownClassShow, inputId)
 
+//-example: 
+//- pug: +dropdownGuestsLabeled("dropdown", "", "dropdown_guests_0", "", "dropdownGuestsInput_0")
+//- js: let guestsHandler_0 = new DropdownGuests("dropdown_guests_0", ".dropdown__guests", someGuestsData);
+
 mixin dropdownGuestsItems(dropdownContainerId, dropdownClassShow, inputId)
     div(class="dropdown" id=dropdownContainerId)
         .dropdown__info
-            input.dropdown__input(readonly='' type='text' placeholder='Сколько гостей' value='' id=inputId)
+            input.dropdown__input(readonly='' type='text' placeholder='Сколько гостей' name="guests" value='' id=inputId)
         div(class="dropdown__guests " + dropdownClassShow)
             +dropdownItem("grownups", "Взрослые", 0)
             +dropdownItem("kids", "Дети", 1)
@@ -21,7 +25,7 @@ mixin dropdownGuestsItems(dropdownContainerId, dropdownClassShow, inputId)
 
 mixin dropdownRoomsLabeled(labelText, labelRightText, dropdownContainerId, dropdownClassShow, inputId)
     .widget
-        label!= labelText
+        .label!= labelText
         span(class="label_right")= labelRightText
         +dropdownRoomsItems(dropdownContainerId, dropdownClassShow, inputId)
 
@@ -29,7 +33,7 @@ mixin dropdownRoomsLabeled(labelText, labelRightText, dropdownContainerId, dropd
 mixin dropdownRoomsItems(dropdownContainerId, dropdownClassShow, inputId)
     div(class="dropdown" id=dropdownContainerId)
         .dropdown__info
-            input.dropdown__input(readonly='' type='text' placeholder='' value='' id=inputId)
+            input.dropdown__input(readonly='' type='text' placeholder='' value='' name="rooms" id=inputId)
         div(class="dropdown__rooms " + dropdownClassShow)
             +dropdownItem("bedrooms", "Спальни", 0)
             +dropdownItem("beds", "Кровати", 1)
