@@ -6,3 +6,6 @@ require("../../components/dropdowns/dropdowns");
 require("../../components/dateDropdown/dateDropdown");
 require("../../components/checkboxExpandable/checkboxExpandable");
 require("../../components/calendar/calendar");
+
+
+require("../../components/searchCard/search");

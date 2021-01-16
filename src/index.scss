@@ -19,7 +19,10 @@
 @import "./assets/styles/common/select";
 
 /*
-    Components
+    UIKit
+*/
+/*
+    FormElements
 */
 @import "./components/header/header";
 @import "./components/textField/textField";
@@ -40,6 +43,12 @@
 @import "./components/dropdowns/dropdowns";
 
 /*
+    Cards
+*/
+@import "./components/searchCard/search";
+
+/*
     Pages
 */
 @import "./pages/UIKit/form-elements";
+@import "./pages/UIKit/cards";
