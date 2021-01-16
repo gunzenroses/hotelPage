@@ -1,5 +1,5 @@
 /*
-    Page container
+    Main container
 */
 
 .formElements_outer {
@@ -23,7 +23,7 @@
 }
 
 /*
-    Media query for Page container
+    Media query for Main container
 */
 
 @media (max-width: 750px) {
@@ -33,23 +33,22 @@
     }
 }
 
-
 /*
     Flex for adaptive design
 */
 
 .formElements_inner {
     @include container($width: 1160px, $height: 1580px, $mt: 140px, $ms: auto, $mb: 132px);
-    @include isFlex($direction: row, $justify: space-between, $align: space-between,  $wrap: wrap);
+    @include isFlex($wrap: wrap);
     background: white;
 }
 
 .formElements__element_first {
-    width: 321px;
-    min-height: 636px;
-    //@include isFlex($direction: column, $align: flex-start);
+    @include container($width: 321px, $height: 636px, $mt: 0, $mb: 100px);
+    // width: 321px;
+    // height: 636px;
     margin-right: 126px;
-    margin-bottom: 100px;
+    //margin-bottom: 100px;
     background: darkolivegreen;
 }
 
@@ -68,7 +67,8 @@
 
 .formElements__element_forth {
     width: 267px;
-    min-height: 647px;
+    //min-height: 647px;
+    min-height: 414px;
     margin-right: 151px;
     margin-bottom: 40px;
     @include isFlex($direction: column, $align: flex-start);
@@ -198,7 +198,7 @@
 }
 
 /*
-Containers to group elements into columns
+    Containers to group elements into columns
 */
 
 .formElements {
@@ -234,9 +234,19 @@ Containers to group elements into columns
 }
 
 /*
-containers for elements
+    Containers for components
 */
 
 .margin-left_30 {
     margin-left: 30px;
+}
+
+.width-and-heigh_266 {
+    width: 266px;
+    height: 266px;
+    @include isFlex($direction: column, $justify: flex-start);
+}
+
+.width-and-heigh_266 > div {
+    margin-bottom: 20px;
 }
