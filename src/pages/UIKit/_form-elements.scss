@@ -7,7 +7,7 @@
     position: relative;
     display: block;
     overflow: auto; //to avoid margin-collapse
-    background: cadetblue;
+    background: $light;
 }
 
 .formElements_outer::before {
@@ -49,20 +49,17 @@
     // height: 636px;
     margin-right: 126px;
     //margin-bottom: 100px;
-    background: darkolivegreen;
 }
 
 .formElements__element_second {
     @include container($width: 260px, $height: 537px);
     margin-right: 102px;
     @include isFlex($direction: column, $align: flex-start);
-    background: darkolivegreen;
 }
 
 .formElements__element_third {
     @include container($width: 320px, $height: 503px);
     @include isFlex($direction: column, $align: flex-start);
-    background: darkolivegreen;
 }
 
 .formElements__element_forth {
@@ -72,7 +69,6 @@
     margin-right: 151px;
     margin-bottom: 40px;
     @include isFlex($direction: column, $align: flex-start);
-    background: darkolivegreen;
 }
 
 .formElements__element_fifth {
@@ -80,20 +76,17 @@
     margin-right: 102px;
     margin-top: 37px;
     @include isFlex($direction: column, $align: flex-start);
-    background: darkolivegreen;
 }
 
 .formElements__element_sixth {
     @include container($width: 320px, $height: 467px);
     @include isFlex($direction: column, $align: flex-start);
-    background: darkolivegreen;
 }
 
 .formElements__element_seventh {
     @include container($width: 291px, $height: 158px);
     margin-right: 156px;
     @include isFlex($direction: column, $align: flex-start);
-    background: darkolivegreen;
 }
 
 .formElements__element_eighth {
@@ -101,7 +94,6 @@
     min-height: 133px;
     margin-top: 10px;
     @include isFlex($direction: column, $align: flex-start);
-    background: darkolivegreen;
 }
 
 /*
