@@ -1,0 +1,7 @@
+.card_search {
+    @extend .card__container_shadowed;
+    @include isFlex($direction: column);
+    width: 380px;
+    height: 374px;
+    padding: 40px 30px 30px;
+}

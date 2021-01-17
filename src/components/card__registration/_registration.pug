@@ -1,0 +1,13 @@
+
+include ../textField/_textField.pug
+
+mixin cardRegistration()
+    .card_registration
+        .card__text Регистрация аккаунта
+        +name()
+        +surname()
+        +buttonsRadio(true, false)
+        +birthdayContainer("Дата рождения", "")
+        +loginContainer("Данные для входа в сервис", "")
+        +buttonToggleItem("special offers", false)
+        
