@@ -1,50 +1,59 @@
 //- mixins for formElements (with labels)
 
-mixin nameContainer(labelText, labelRightText, inputId)
+mixin nameContainer(labelText, labelRightText, valueText)
     .widget
         +label(labelText, labelRightText)
-        +name(inputId)
+        +name(valueText)
 
-mixin surnameContainer(labelText, labelRightText, inputId)
+mixin surnameContainer(labelText, labelRightText, valueText)
     .widget
         +label(labelText, labelRightText)
-        +surname(inputId)
+        +surname(valueText)
 
-mixin birthdayContainer(labelText, labelRightText, inputId)
+mixin birthdayContainer(labelText, labelRightText)
     .widget
         +label(labelText, labelRightText)
-        +birthday(inputId)
+        +birthday()
 
-mixin emailContainer(labelText, labelRightText, inputId)
+mixin emailContainer(labelText, labelRightText)
     .widget
         +label(labelText, labelRightText)
-        +email(inputId)
+        +email()
 
-mixin emailSubscribeContainer(labelText, labelRightText, inputId)
+mixin emailSubscribeContainer(labelText, labelRightText)
     .widget
         +label(labelText, labelRightText)
-        +emailSubscribe(inputId)
+        +emailSubscribe()
 
+mixin loginContainer(labelText, labelRightText)
+    .widget
+        +label(labelText, labelRightText)
+        +login()
 
 
 //-mixins without labels
 
-mixin name(inputId)
-    +text (inputId, "textfield", "", "This is awesome", "name", "20", autofocus=false)
+mixin name(valueText="")
+    +text("textfield", "Имя", valueText, "name", "20", autofocus=false)
 
-mixin surname(inputId)
-    +text (inputId, "textfield", "", "This is awesome", "surname", "20", autofocus=false)
+mixin surname(valueText="")
+    +text("textfield", "Фамилия", valueText, "surname", "20", autofocus=false)
 
-mixin birthday(inputId)
-    +text(inputId, "textfield_birthday", "ДД.ММ.ГГГГ", "", "birthday", "10", autofocus=false)
+mixin birthday()
+    +text("textfield_birthday", "ДД.ММ.ГГГГ", "", "birthday", "10", autofocus=false)
 
-mixin email(inputId)
-    +text (inputId, "textfield", "Email", "", "email", "30", autofocus=false)
+mixin email()
+    +text("textfield", "Email", "", "email", "30", autofocus=false)
 
-mixin emailSubscribe(inputId)
-    +text (inputId, "textfield_email", "Email", "", "email", "30", autofocus=false)
+mixin emailSubscribe()
+    +text("textfield_email", "Email", "", "email", "30", autofocus=false)
 
+mixin password()
+    +text("textfield", "Пароль", "", "password", "30", autofocus=false)
 
+mixin login()
+    +email()
+    +password()
 
 //-mixins basic
 
@@ -52,17 +61,17 @@ mixin label(labelText, labelRightText)
     .label!= labelText
     .label_right= labelRightText
 
-mixin text(inputId, inputClass, placeholder, valueText, nameText, maxText, autofocus=false)
+mixin text(inputClass, placeholder, valueText, nameText, maxText, autofocus=false)
     if inputClass === "textfield_email"
         div(class="textfield")
-            input(type="text" id=inputId placeholder=placeholder, 
+            input(type="text" placeholder=placeholder, 
                 value=valueText name=nameText data-rule=nameText, 
                 maxlength=maxText autofocus=autofocus)
             button(type="submit" class="arrow_submit") arrow_forward
         .error
     else
         div(class="" + inputClass)
-            input(type="text" id=inputId placeholder=placeholder, 
+            input(type="text" placeholder=placeholder, 
                 value=valueText name=nameText data-rule=nameText, 
                 maxlength=maxText autofocus=autofocus)
         .error

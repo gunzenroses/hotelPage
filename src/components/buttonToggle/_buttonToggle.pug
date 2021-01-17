@@ -7,9 +7,9 @@ mixin buttonToggleContainer()
                 +buttonToggleItem("offer2", false)
 
 
-mixin buttonToggleItem(inputId, ifChecked)
-    label(for=inputId).toggle_element
-            input(type="checkbox" name=inputId id=inputId value="" checked=ifChecked).toggle__real
+mixin buttonToggleItem(inputName, ifChecked)
+    label.toggle_element
+            input(type="checkbox" name=inputName value="" checked=ifChecked).toggle__real
             span.toggle__fake
             span.toggle__title Получать спецпредложение
 
