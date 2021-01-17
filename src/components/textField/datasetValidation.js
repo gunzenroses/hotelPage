@@ -20,7 +20,7 @@ let dataValitadion = function (elm) {
                 message = "Введите валидный email";
             break;
             case "password":
-                check = /^(?=.*[0-9]+.*)(?=.*[a-zA-Z]+.*)[0-9a-zA-Z]{6,}$/.test(value);
+                check = /^(?=.*[0-9]+.*)(?=.*[a-zA-Z]+.*)[0-9a-zA-Z]{3,}$/.test(value);
                 message = "Введите валидный пароль";
             break;
         }

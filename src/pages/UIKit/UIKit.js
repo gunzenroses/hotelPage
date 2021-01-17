@@ -8,4 +8,4 @@ require("../../components/checkboxExpandable/checkboxExpandable");
 require("../../components/calendar/calendar");
 
 
-require("../../components/searchCard/search");
+require("../../components/card__search/search");
