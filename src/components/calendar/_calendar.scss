@@ -1,10 +1,12 @@
 .calendar {
+    @extend .card__container_dimed;
     width: 320px;
     height: 369px;
     background: $light;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    z-index: 2;
 }
 
 .calendar__date {

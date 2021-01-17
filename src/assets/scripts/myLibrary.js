@@ -381,17 +381,17 @@ class DropdownRooms {
 
         if (this.dropdownItems[0].dataset.type){
             this.infoInput.value = "";
-            this.roomInfo = [];
+            this.roomInfo = "";
             for (let j=0; j<this.data.length;j++){
                 let dataType = this.dropdownItems[j].dataset.type;
                 let dataTypeName;
-                if (this.data[j]==0){
+                if (this.data[j] == 0){
                     switch(dataType){
                         case "bedrooms": dataTypeName = "спален"; break;
                         case "beds": dataTypeName = "кроватей"; break;
                         case "bathrooms": dataTypeName = "ванных комнат"; break;
                     }
-                } else if (this.data[j]==1){
+                } else if (this.data[j] == 1){
                     switch(dataType){
                         case "bedrooms": dataTypeName = "спальня"; break;
                         case "beds": dataTypeName = "кровать"; break;
@@ -411,7 +411,6 @@ class DropdownRooms {
                     }
                 }
                 this.roomInfo += `${this.data[j]} ${dataTypeName}, `;
-                //this.infoInput.value += `${this.data[j]} ${dataTypeName}, `;
             }
             this.infoInput.value = this.roomInfo.slice(0,20) + "..."
         }
