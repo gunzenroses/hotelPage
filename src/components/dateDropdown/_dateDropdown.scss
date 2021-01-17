@@ -1,3 +1,9 @@
+.dateRangeSelector {
+    position: relative;
+    width: 320px;
+    height: 65px;
+}
+
 .container__dataRange {
     @include isFlex();
     width: 320px;
@@ -8,9 +14,10 @@
     width: 320px;
     height: 369px;
     margin-top: 5px;
-    position: absolute;
+    top: 65px;
     background: $light;
     z-index: 2;
+    position: absolute;
     display: none;
 }
 
@@ -18,39 +25,36 @@
 .date__range {
     @extend .dropdown__button;
 
-    &_open {
-        @extend .dropdown__button;
-        border-radius: 4px 4px 0 0;
-    }
-    
-    &:hover,
-    &:focus {
-        border: 1px solid $darkShadeMiddle;
-    }
+    // // &_open {
+    // //     @extend .dropdown__button;
+    // //     border-radius: 4px 4px 0 0;
+    // // }
 
-    &::before {
-        position: absolute;
-        font-size: 24px;
-        font-family: $MaterialIcons;
-        top: 0;
-        right: 0;
-        content: "\e5cf";
-        display: block;
-        width: 44px;
-        height: 44px;
-        line-height: 44px;
-        text-align: center;
-        // position: absolute;
-        // top: 12px;
-        // right: 8px;
-        // content: "";
-        // transform: translate(-50%,-50%);
-        // display: inline-block;
-        // width: 8px;
-        // height: 8px;
-        // transform: rotate(45deg);
-        // border-image-slice: 1;
-        // border-right: 2px solid $darkShadeMiddle;
-        // border-bottom: 2px solid $darkShadeMiddle;
-    }
+    // // &:hover,
+    // // &:focus {
+    // //     border: 1px solid $darkShadeMiddle;
+    // // }
+
+    // // &::before {
+    // //     position: absolute;
+    // //     font-size: 24px;
+    // //     font-family: $MaterialIcons;
+    // //     top: 0;
+    // //     right: 0;
+    // //     content: "\e5ce";
+    // //     display: block;
+    // //     width: 44px;
+    // //     height: 44px;
+    // //     line-height: 44px;
+    // //     text-align: center;
+    // // }
+}
+
+
+.dropdown__show ~ .container__dataRange .date__range::before {
+    transform: rotate(180deg);
+}
+
+.dropdown__show ~ .container_medium .date__range::before {
+    transform: rotate(180deg);
 }

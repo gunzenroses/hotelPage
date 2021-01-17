@@ -1,10 +1,11 @@
 mixin dateDropdownRangeContainer(containerId, labelText_1, inputValue_1, labelText_2, inputValue_2, dropdownClassShow, calendarId)
     div(class="dateRangeSelector" id=containerId)
+        div(class="dropdown__calendar " + dropdownClassShow)
+            +calendar(calendarId)
         .container__dataRange
             +dateDropdownSmall(labelText_1, "checkin", inputValue_1, "checkin")
             +dateDropdownSmall(labelText_2, "checkout", inputValue_2, "checkout")
-        div(class="dropdown__calendar " + dropdownClassShow)
-            +calendar(calendarId)
+        
 
 mixin dateDropdownSmall(labelText, inputName, inputValue, dateDataType)
     .container_small
@@ -35,14 +36,15 @@ mixin dateDropdownSmall(labelText, inputName, inputValue, dateDataType)
 
 mixin dateDropdownRange(containerId, labelText, inputValue, dropdownClassShow)
     div(class="dateRangeSelector" id=containerId)
+        div(class="dropdown__calendar " + dropdownClassShow)
+            +calendar("calendar_2")
         .container_medium
             .label!= labelText
             .date__range
                 input(type="text" value=inputValue 
                 name="checkin-checkout" placeholder="ДД.ММ - ДД.ММ"
                 maxlength="15" data-range="date-range" readonly)
-        div(class="dropdown__calendar " + dropdownClassShow)
-            +calendar("calendar_2")
+        
 
 
 
