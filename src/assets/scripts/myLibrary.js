@@ -210,6 +210,7 @@ class DropdownGuests {
     }
 
     resetGuests(){
+        event.preventDefault();
         this.data = [0, 0, 0];
         this.plusAndMinusShow();
         this.infoInput.value = "";
@@ -218,6 +219,7 @@ class DropdownGuests {
     }
 
     submitGuests(){
+        event.preventDefault();
         this.dropdownExpanded.classList.remove("dropdown__show");
         return this;
     }
@@ -740,6 +742,7 @@ class renderCalendar {
     }
 
     applyRange(){
+        event.preventDefault();
         if (this.checkin && this.checkout){
         this.rangeSpanStartMonth = this.months[this.checkin.getMonth()].slice(0,3);
         this.rangeSpanEndMonth = this.months[this.checkout.getMonth()].slice(0,3);
@@ -752,6 +755,7 @@ class renderCalendar {
     }
     
     applyStartOrEnd(){
+        event.preventDefault();
         if (this.checkin){
             if (parseInt(this.checkin.getMonth()+1) < 10){
                 this.rangeStartMonth = "0" + parseInt(this.checkin.getMonth()+1);
@@ -776,6 +780,7 @@ class renderCalendar {
     }
 
     resetInput(){
+        event.preventDefault();
         if ( this.rangeSpan ){
             this.rangeSpan.value = "";
             this.checkin = "";
