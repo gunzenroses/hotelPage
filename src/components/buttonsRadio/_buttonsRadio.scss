@@ -8,7 +8,8 @@
 
 .radio_row {
     @include isFlex;
-    width: 100%;
+    width: 220px;
+    height: 24px;
 }
 
 .radio__element {

@@ -1,18 +1,18 @@
-mixin buttonsRadioContainer(legendText, ifCheckedMan, ifCheckedWoman)
+mixin buttonsRadioContainer(legendText, inputManId, ifCheckedMan, inputWomanId, ifCheckedWoman)
     .radio_box
         legend.label(for="gender")= legendText
-        +buttonsRadio(ifCheckedMan, ifCheckedWoman)
+        +buttonsRadio(inputManId, ifCheckedMan, inputWomanId, ifCheckedWoman)
             
 
-mixin buttonsRadio(ifCheckedMan, ifCheckedWoman)
+mixin buttonsRadio(inputManId, ifCheckedMan, inputWomanId, ifCheckedWoman)
     .radio_row
-        +buttonsRadioItem(ifCheckedMan, "Мужчина")
-        +buttonsRadioItem(ifCheckedWoman, "Женщина")
+        +buttonsRadioItem(inputManId, ifCheckedMan, "Мужчина")
+        +buttonsRadioItem(inputWomanId, ifCheckedWoman, "Женщина")
 
 
-mixin buttonsRadioItem(ifChecked, buttonTitle)
+mixin buttonsRadioItem(inputId, ifChecked, buttonTitle)
     label(for=inputId).radio__element
-            input(type="radio" name="gender" value=inputId checked=ifChecked).radio__real 
+            input(type="radio" name="gender" id=inputId value=inputId checked=ifChecked).radio__real 
             span.radio__fake
             span(class="radio__title")= buttonTitle
 
