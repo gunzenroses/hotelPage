@@ -12,4 +12,35 @@ let guestsData_3 = [0, 0, 0];
 let roomsData_1 = [2, 2, 0];
 let roomsData_2 = [2, 2, 0];
 
-export { paginationData_1, guestsData_1, guestsData_2, guestsData_3, roomsData_1, roomsData_2 }
+
+let room888 = {
+    number: 888,
+    type: "Люкс",
+    src: {
+        1: "src/assets/images/room.jpg",
+        2: "src/assets/images/room.jpg",
+        3: "src/assets/images/room.jpg",
+        4: "src/assets/images/room.jpg"
+    },
+    price: "9 900",
+    rating: 5,
+    review: 145,
+}
+
+let room840 = {
+    number: 840,
+    type: "",
+    src: {
+        1: "src/assets/images/room2.jpg",
+        2: "src/assets/images/room2.jpg",
+        3: "src/assets/images/room2.jpg",
+        4: "src/assets/images/room2.jpg"
+    },
+    price: "9 900",
+    rating: 4,
+    review: 65,
+}
+
+
+
+export { paginationData_1, guestsData_1, guestsData_2, guestsData_3, roomsData_1, roomsData_2, room888, room840}
