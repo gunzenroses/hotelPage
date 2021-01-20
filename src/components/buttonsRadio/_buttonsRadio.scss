@@ -44,9 +44,10 @@
 .radio__title {
     display: inline-block;
     width: 73px;
+    line-height: 24px;
     height: 100%;
     color: $darkShadeMiddle;
-    vertical-align: middle;
+    //vertical-align: middle;
 }
 
 .radio__real:checked + .radio__fake::before {
