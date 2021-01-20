@@ -9,3 +9,4 @@ require("../../components/calendar/calendar");
 
 
 require("../../components/card__search/search");
+require("../../components/card__booking/booking");

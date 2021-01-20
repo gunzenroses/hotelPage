@@ -1,13 +1,22 @@
-
-include ../textField/_textField.pug
-
 mixin cardRegistration()
     .card_registration
         .card__text Регистрация аккаунта
-        +name()
+        .margin__top_10
+            +name()
         +surname()
-        +buttonsRadio(true, false)
-        +birthdayContainer("Дата рождения", "")
-        +loginContainer("Данные для входа в сервис", "")
+        +buttonsRadio("gender-man", true, "gender-woman", false)
+        .margin__top_10
+            +birthdayContainer("Дата рождения", "")
+        .margin__top_10
+            +loginContainer("Данные для входа в сервис", "")
         +buttonToggleItem("special offers", false)
-        
+        .margin__top_10
+            +buttonSubmit("Перейти к оплате")
+        .margin__top_20
+            .card__text_row
+                .card__subline Уже есть аккаунт на Toxin
+                +buttonLink("Войти", "/login")
+
+
+//-TODO: add buttonLink to button
+//-buttonLink(buttonText, buttonOnclick="#")

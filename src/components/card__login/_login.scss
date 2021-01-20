@@ -1,0 +1,19 @@
+.card__login {
+    @extend .card__container_shadowed;
+    @include isFlex($direction: column);
+    width: 380px;
+    height: 360px;
+}
+
+.card__login > button,
+.card__login > div {
+    margin-top: 20px;
+}
+
+.card__login > div:first-of-type {
+    margin-top: 0;
+}
+
+.card__login > div:last-of-type {
+    margin-top: 30px;
+}

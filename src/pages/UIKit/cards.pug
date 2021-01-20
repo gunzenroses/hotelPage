@@ -1,11 +1,11 @@
-include ../../components/card__search/_search
+include ../../components/card__search/_search.pug
+include ../../components/card__registration/_registration.pug
+include ../../components/card__booking/_booking.pug
+include ../../components/card__login/_login.pug
 
 .cards_outer
     .cards_inner
-        +searchCard()
-        
-        //- .cards__element_first
-        //- .cards__element_second
-        //- .cards__element_third 
-        //-     .cards__element_forth
-        //-     .cards__element_fifth
+        +cardSearch()
+        +cardRegistration(buttonOnclick)
+        +cardBooking()
+        +cardLogin()

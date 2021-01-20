@@ -1,5 +1,4 @@
-import { Dropdown, renderCalendar } from "../../assets/scripts/myLibrary"
-import { DropdownGuests } from "../../assets/scripts/myLibrary"
+import { Dropdown, renderCalendar, DropdownGuests } from "../../assets/scripts/myLibrary"
 import { guestsData_3 } from "../../assets/scripts/myData"
 
 

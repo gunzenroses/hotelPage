@@ -1,0 +1,58 @@
+mixin cardBooking()
+    .card__booking
+        +bookingText("big", "888", "Люкс", "9 990₽")
+        +dateDropdownRangeContainer("dataRange_4", "Прибытие", "19.08.2019", "Выезд", "24.08.2019", "", "calendar_dataRange_4")
+        +dropdownGuestsLabeled("Гости", "", "dropdown_guests_4", "", "dropdownGuestsInput_4")
+        +bookingInfoItem("9 990₽ х 4 суток", "39 960₽")
+        +bookingInfoItem("Сбор за услуги: скидка 2 179₽", "0₽", true)
+        +bookingInfoItem("Сбор за дополнительные услуги", "300₽", true)
+        +bookingTotalPrice("38 081₽")
+        +buttonSubmit("Забронировать")
+        
+        
+
+
+mixin bookingTotalPrice(totalPrice)
+    .booking__total_row
+        .booking__total_text Итого
+        .booking__total_line
+        .booking__total_price 38 081₽
+
+
+
+mixin bookingInfoItem(infoDesctiption, infoPrice, infoSign = false)
+    if infoSign
+        .booking__info_row
+            .booking__info_description!= infoDesctiption
+            .booking__info_sign
+            .booking__info_price!= infoPrice
+    else 
+        .booking__info_row
+            .booking__info_description!= infoDesctiption
+            .booking__info_price!= infoPrice
+
+
+
+mixin bookingText(rowSize, bookingNumber, bookingType, bookingPrice)
+    if rowSize === "big"
+        .booking__row_big
+            .booking__text_left
+                span.booking__text_number-sign №
+                span &nbsp;
+                span.booking__text_number!= bookingNumber  
+                span &nbsp;
+                span.booking__text_number-type!= bookingType
+            .booking__text_right
+                span.booking__text_price!= bookingPrice
+                span.booking__text_period &nbsp;в сутки
+    else
+        .booking__row_small
+            .booking__text_left
+                span.booking__text_number-sign № 
+                span &nbsp;
+                span.booking__text_number!= bookingNumber 
+                span &nbsp;
+                span.booking__text_number-type!= bookingType 
+            .booking__text_right
+                span.booking__text_price!= bookingPrice
+                span.booking__text_period &nbsp;в сутки

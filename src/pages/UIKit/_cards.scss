@@ -41,108 +41,72 @@
 
 .cards_inner {
     @include container($width: 1160px, $height: 1060px, $mt: 150px, $ms: auto, $mb: 140px);
-    @include isFlex($wrap: wrap);
+    @include isFlex($direction: column, $wrap: wrap, $justify: flex-start);
     background: white;
 }
 
-// .cards__element_first {
-//     @include container($width: 380px, $height: 1060px);
-//     //margin-right: 40px;
-//     @include isFlex($direction: column);
-//     background: darkolivegreen;
-// }
-
-// .cards__element_second {
-//     @include container($width: 380px, $height: 909px);
-//     //margin-right: 40px;
-//     @include isFlex($direction: column);
-//     background: darkolivegreen;
-// }
-
-// .cards__element_third {
-//     @include container($width: 320px, $height: 964px);
-//     @include isFlex($direction: column);
-//     background: darkolivegreen;
-// }
-
-// .cards__element_forth {
-//     @include container($width: 320px, $height: 370px);
-//     @include isFlex($direction: column);
-//     background: pink;
-// }
-
-// .cards__element_fifth {
-//     @include container($width: 320px, $height: 555px);
-//     @include isFlex($direction: column);
-//     background: pink;
-// }
-
-// /*
-//     Media queries
-// */
-// @media (max-width: 1440px) {
-//     .cards {
-//         &_outer {
-//         width: 100vw;
-//         height: auto;
-//         }
-
-//         &_inner {
-//         width: 85%;
-//         max-width: 1160px;
-//         margin: 9% auto 9%;
-//         height: auto;
-//         }
-//     }
-// }
-
-// @media (max-width: 1300px) {
-//     .cards {
-//         &_inner {
-//             width: 85%;
-//             margin: 5% auto 5%;
-//             justify-content: space-evenly;
-//         }
-
-//         &__element_third {
-//             width: 100%;
-//             height: 555px;
-//             margin: 5% auto 5%;
-//             flex-direction: row;
-//             justify-content: space-evenly;
-//         }
-//     }
-// }
+.cards_inner > div:nth-of-type(2n) {
+    margin-top: 40px;
+}
 
 
-// // @media (max-width: 970px) {
-// //     .formElements {
-// //         &_inner {
-// //         width: 85%;
-// //         margin: 5% auto 5%;
-// //         }
-// //     }
-// // }
+/*
+    Media queries
+*/
+@media (max-width: 1440px) {
+    .cards {
+        &_outer {
+            width: 100vw;
+            height: auto;
+        }
 
-// // @media (max-width: 750px) {
-// //     .formElements {
-// //         &_outer {
-// //         min-width: 390px;
-// //         }
+        &_inner {
+            width: 85%;
+            max-width: 1160px;
+            margin: 9% auto 9%;
+            height: auto;
+        }
+    }
+}
 
-// //         &_inner {
-// //             max-width: 575px;
-// //             min-width: 330px;
-// //         }
+@media (max-width: 1070px) {
+    .cards {
+        &_inner {
+            max-width: 890px;
+            margin: 7% auto 7%;
+            justify-content: space-evenly;
+        }
+    }
+}
 
-// //         &__element {
-// //             &_first {
-// //                 margin-bottom: 40px;
-// //             }
-// //         }
-// //     }
-// // }
+@media (max-width: 970px) {
+    .cards {
+        &_inner {
+            width: 85%;
+            margin: 5% auto 5%;
+        }
+    }
+}
 
+@media (max-width: 750px) {
+    .cards {
+        &_outer {
+            min-width: 390px;
+        }
+
+        &_inner {
+            max-width: 575px;
+            min-width: 330px;
+        }
+    }
+}
+
+
+
+
+/*
+    Cards components
+*/
 
 .card__text {
     width: 320px;
@@ -154,12 +118,18 @@
     text-align: left;
 }
 
+.card__subline {
+    font-size: 14px;
+    line-height: 44px;
+}
+
 .card__container_shadowed {
     background: $light;
     border: 1px solid rgba(0, 0, 0, 0.12);
     box-sizing: border-box;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+    padding: 40px 30px 30px;
 }
 
 .card__container_dimed {
@@ -168,4 +138,10 @@
     box-sizing: border-box;
     box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
     border-radius: 4px;
+}
+
+.card__text_row {
+    width: 320px;
+    height: 44px;
+    @include isFlex();
 }

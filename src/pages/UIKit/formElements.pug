@@ -33,7 +33,7 @@ include ../../components/comment/_comment.pug
 
         .formElements__element_second
             +checkboxButtons("Сheckbox buttons")
-            +buttonsRadioContainer("Radio buttons", true, false)
+            +buttonsRadioContainer("Radio buttons", "man", true, "woman", false)
             +buttonToggleContainer
             +buttonLikeContainer
             +buttonRateContainer("Rate button")
@@ -53,7 +53,7 @@ include ../../components/comment/_comment.pug
             
         .formElements__element_fifth
             +dropdownGuestsLabeled("dropdown", "", "dropdown_guests_1", "dropdown__show", "dropdownGuestsInput_1")
-            .margin-left_30
+            .margin__left_30
                 +richCheckboxButtons("accessibility", "Rich Checkbox Buttons")
 
         .formElements__element_sixth

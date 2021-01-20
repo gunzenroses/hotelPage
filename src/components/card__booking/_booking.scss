@@ -1,0 +1,123 @@
+.card__booking {
+    @extend .card__container_shadowed;
+    @include isFlex($direction: column);
+    width: 380px;
+    height: 511px;
+    // padding: 30px 40px 40px;
+}
+
+.booking__row_big {
+    width: 320px;
+    height: 30px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    position: relative;
+    @include isFlex();
+}
+
+.booking__row_small {
+    @extend .booking__row_big;
+    width: 233px;
+    height: 24px;
+    line-height: 24px;
+}
+
+.booking__text_left {
+    color: $darkShadeMost;
+    //width: 110px;
+}
+
+.booking__text_number-sign {
+    font-size: 14px;
+    display: inline-block;
+}
+
+.booking__text_number {
+    font-size: 24px;
+    display: inline-block;
+}
+
+.booking__text_number-type {
+    font-size: 12px;
+    color: $purple;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.booking__text_right {
+    color: $darkShadeMiddle;
+    //width: 110px;
+}
+
+.booking__text_price {
+    font-size: 14px;
+}
+
+.booking__text_period {
+    font-weight: 400;
+    font-size: 12px;
+}
+
+
+
+
+.booking__info_row {
+    @include isFlex();
+    width: 320px;
+    min-height: 24px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: $darkShadeMore;
+}
+
+.booking__info_description {
+    display: inline-block;
+    width: 215px;
+    text-align: left;
+}
+
+.booking__info_sign {
+    width: 20px;
+    height: 20px;
+    background: $light;
+    border-radius: 50%;
+    border: 1px solid $darkShadeLess;
+    position: relative;
+}
+
+.booking__info_sign::before {
+    content: "i";
+    position: absolute;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    top: 2px;
+    left: 8px;
+    color: $darkShadeLess;
+}
+
+.booking__info_price {
+    display: inline-block;
+    width: 75px;
+    text-align: right;
+}
+
+
+
+.booking__total_row {
+    @include isFlex();
+    color: $darkShadeMost;
+    font-size: 19px;
+    line-height: 24px;
+    font-weight: 700;
+    position: relative;
+}
+
+.booking__total_line {
+    display: flex;
+    align-items: flex-end;
+    width: 180px;
+    height: 18px;
+    border-bottom: 1px dashed $darkShadeLess;
+}
