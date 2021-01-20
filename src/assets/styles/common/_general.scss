@@ -155,4 +155,25 @@ fieldset {
 
 .margin__top_10 {
   margin-top: 10px;
+  width: 100%;
+}
+
+.margin__top_20 {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.margin__left_30 {
+  margin-left: 30px;
+  width: 100%;
+}
+
+.width-and-heigh_266 {
+  width: 266px;
+  height: 266px;
+  @include isFlex($direction: column, $justify: flex-start);
+}
+
+.width-and-heigh_266 > div {
+  margin-bottom: 20px;
 }
