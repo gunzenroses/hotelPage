@@ -29,9 +29,17 @@ mixin loginContainer(labelText, labelRightText)
     .widget
         +label(labelText, labelRightText)
         +login()
+        //- +email()
+        //- .margin__top_10
+        //- +password()
 
 
 //-mixins without labels
+mixin login()
+    .textfield_login
+        +email()
+        +password()
+
 
 mixin name(valueText="")
     +text("textfield", "Имя", valueText, "name", "20", autofocus=false)
@@ -51,10 +59,7 @@ mixin emailSubscribe()
 mixin password()
     +text("textfield", "Пароль", "", "password", "30", autofocus=false)
 
-mixin login()
-    +email()
-    .margin__top_10
-    +password()
+
 
 //-mixins basic
 
