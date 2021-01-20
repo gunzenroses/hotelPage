@@ -620,9 +620,15 @@ class renderCalendar {
     createChildren(){
             // this.daysList = this.daysOfMonth.querySelectorAll(".weeks__day");
             // this.listOfDays = Array.prototype.slice.call(this.daysList);
-        this.mainContainer = this.calendarContainer.closest(".dateRangeSelector")
+        if (this.calendarContainer.closest(".dateRangeSelector")){
+            this.mainContainer = this.calendarContainer.closest(".dateRangeSelector");
+        } else {
+            this.mainContainer = this.calendarContainer;
+        }
+
         this.btnApply = this.mainContainer.querySelector(".calendar__buttons_submit")
         this.btnReset = this.mainContainer.querySelector(".calendar__buttons_reset")
+        
         if (this.mainContainer.querySelector("input[name=checkin-checkout]")){
             this.rangeSpan = this.mainContainer.querySelector("input[name=checkin-checkout]")
         }
@@ -632,7 +638,10 @@ class renderCalendar {
         if (this.mainContainer.querySelector("input[name=checkout]")){
             this.rangeEnd = this.mainContainer.querySelector("input[name=checkout]")
         }
-        this.calendar = this.mainContainer.querySelector(".dropdown__calendar ");
+
+        if (this.mainContainer.querySelector(".dropdown__calendar ")) {
+            this.calendar = this.mainContainer.querySelector(".dropdown__calendar ");
+        }
         this.checkin; 
         this.checkout;
         return this;
@@ -652,7 +661,9 @@ class renderCalendar {
         this.buttonPrev.addEventListener("click", this.showPrevMonthHandler);
         this.buttonNext.addEventListener("click", this.showNextMonthHandler);
         this.daysOfMonth.addEventListener("click", this.chooseRangeHandler);
-        this.btnReset.addEventListener("click", this.resetInputHandler);
+        if (this.calendar){
+            this.btnReset.addEventListener("click", this.resetInputHandler);
+        }
         if ( this.rangeSpan ){
             this.btnApply.addEventListener("click", this.applyRangeHandler)
         }
