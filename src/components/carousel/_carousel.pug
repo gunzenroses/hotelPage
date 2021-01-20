@@ -1,0 +1,15 @@
+mixin carousel(roomPictures)
+    - let counter = 1;
+    .carousel
+        .carousel__radio
+            for picture in roomPictures
+                label.carousel__element
+                    input(type="radio" name="picture" value="picture_" + counter++).carousel__radio_real
+                    div.carousel__radio_fake
+
+        .carousel__pictures
+            for picture in roomPictures
+                img(src= picture alt="room pictures").carousel__pic
+        .carousel__btn
+            .carousel__btn_prev
+            .carousel__btn_next
