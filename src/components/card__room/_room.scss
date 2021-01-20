@@ -1,0 +1,7 @@
+.card__room {
+    @extend .card__container_dimed;
+    @include isFlex($direction: column);
+    width: 270px;
+    height: 258px;
+    position: relative;
+}
