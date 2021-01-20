@@ -48,7 +48,6 @@
     cursor: pointer;
     margin: 0;
     padding: 0;
-    @extend .button_filled;
     opacity: 0.5;
 }
 
@@ -56,8 +55,12 @@
     @extend .button_filled;
 }
 
-.button_white::before {
-    content: "Click me";
+.button_white:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.button_link {
     position: absolute;
     top: 0;
     left: 0;
@@ -67,12 +70,6 @@
     border-radius: 22px;
     background: $light;
     color: $purple;
-}
-
-.button_white:hover {
-    cursor: pointer;
-    @extend .button_filled;
-    opacity: 0.5;
 }
 
 .button_clear {
@@ -88,7 +85,7 @@
     color: $darkShadeMiddle;
 }
 
-.button_formaction {
+.button_submit {
     position: relative;
     width: 320px;
     height: 44px;
@@ -118,8 +115,7 @@
     }
 }
 
-.button_payment:hover {
+.button_submit:hover {
     cursor: pointer;
-    @extend .button_payment;
     opacity: 0.5;
 }
