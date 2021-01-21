@@ -6,7 +6,6 @@ mixin carousel(roomPictures)
                 label.carousel__element
                     input(type="radio" name="picture" value="picture_" + counter++).carousel__radio_real
                     div.carousel__radio_fake
-
         .carousel__pictures
             for picture in roomPictures
                 img(src= picture alt="room pictures").carousel__pic

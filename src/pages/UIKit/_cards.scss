@@ -33,20 +33,23 @@
     }
 }
 
-
 /*
     Flex for adaptive design
 */
 
-
 .cards_inner {
     @include container($width: 1160px, $height: 1060px, $mt: 150px, $ms: auto, $mb: 140px);
     @include isFlex($direction: column, $wrap: wrap, $justify: flex-start);
-    background: white;
+    background: transparent;
 }
 
-.cards_inner > div:nth-of-type(2n) {
+.cards_inner > div:not(:first-of-type){
     margin-top: 40px;
+}
+
+.cards_inner > div:nth-of-type(3), 
+.cards_inner > div:nth-of-type(5) {
+    margin-top: 0;
 }
 
 
@@ -64,9 +67,19 @@
             width: 85%;
             max-width: 1160px;
             margin: 9% auto 9%;
-            height: auto;
+            height: 1600px;
+            align-items: center;
         }
     }
+
+    .cards_inner > div:not(:first-of-type){
+        margin-top: 20px;
+    }
+    
+    .cards_inner > div:nth-of-type(4) {
+        margin-top: 0;
+    }
+    
 }
 
 @media (max-width: 1070px) {
@@ -74,38 +87,32 @@
         &_inner {
             max-width: 890px;
             margin: 7% auto 7%;
-            justify-content: space-evenly;
         }
     }
 }
 
 @media (max-width: 970px) {
     .cards {
-        &_inner {
-            width: 85%;
-            margin: 5% auto 5%;
-        }
-    }
-}
-
-@media (max-width: 750px) {
-    .cards {
         &_outer {
             min-width: 390px;
         }
 
         &_inner {
-            max-width: 575px;
-            min-width: 330px;
+            width: 85%;
+            min-width: 450px;
+            margin: 5% auto 5%;
+            height: auto;
         }
+    }
+
+    .cards_inner > div:not(:first-of-type){
+        margin-top: 30px;
     }
 }
 
 
-
-
 /*
-    Cards components
+    Cards styles
 */
 
 .card__text {

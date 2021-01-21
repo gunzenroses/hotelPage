@@ -9,6 +9,7 @@ for (let carousel of carousels){
     let carouselPrev = carousel.querySelector(".carousel__btn_prev");
     let carouselPictures = carousel.querySelector(".carousel__pictures");
     let leftValue = carouselPictures.style.left;
+    carouselInputs.querySelectorAll(".carousel__radio_real")[0].checked = true;
     carouselPictures.style.left = 0;
     
     carouselPrev.addEventListener("click", () => {

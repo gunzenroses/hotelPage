@@ -5,3 +5,24 @@
     height: 258px;
     position: relative;
 }
+
+
+.room__info {
+    width: 233px;
+    height: 67px;
+    @include isFlex($direction: column);
+    margin: 20px 17px 19px 20px;
+}
+
+.room__line {
+    width: 100%;
+    height: 10px;
+    border-bottom: 1px solid $darkShadeFew;
+    margin-bottom: 8px;
+}
+
+.room__row {
+    width: 100%;
+    height: 24px;
+    @include isFlex();
+}

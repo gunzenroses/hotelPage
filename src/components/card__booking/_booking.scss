@@ -6,13 +6,18 @@
     // padding: 30px 40px 40px;
 }
 
+
+
 .booking__row_big {
     width: 320px;
     height: 30px;
-    margin-bottom: 20px;
     font-weight: 700;
     position: relative;
     @include isFlex();
+}
+
+.card__booking .booking__row_big {
+    margin-bottom: 20px;
 }
 
 .booking__row_small {
@@ -24,10 +29,9 @@
 
 .booking__text_left {
     color: $darkShadeMost;
-    //width: 110px;
 }
 
-.booking__text_number-sign {
+.booking__text_sign {
     font-size: 14px;
     display: inline-block;
 }
@@ -37,7 +41,7 @@
     display: inline-block;
 }
 
-.booking__text_number-type {
+.booking__text_type {
     font-size: 12px;
     color: $purple;
     text-transform: uppercase;
@@ -46,7 +50,6 @@
 
 .booking__text_right {
     color: $darkShadeMiddle;
-    //width: 110px;
 }
 
 .booking__text_price {
@@ -58,7 +61,10 @@
     font-size: 12px;
 }
 
-
+.booking__text_review {
+    font-weight: 400;
+    font-size: 14px;
+}
 
 
 .booking__info_row {
