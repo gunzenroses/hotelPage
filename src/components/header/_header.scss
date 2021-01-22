@@ -1,17 +1,72 @@
-// .header {
-//     margin-top: 36px;
-//     padding: 0px;
-//     @include isFlex($align: flex-start);
-    
-//     &__header {
-//         font-family: $trebuchet;
-//         position: relative;
-//         margin: 0;
-//         padding: 0;
-//         font-size: 36px;
-//         line-height: 46px;
-//         text-align: center;
-//         color: #fff;
-//         text-shadow: 0px 1px 1px #000000;
-//     }
-// }
+.header {
+    @extend .container_dimed;
+    @include isFlex($align: center);
+    padding: 15px 140px;
+    width: 1440px;
+    height: 70px;
+}
+
+.header__link {
+    width: 106px;
+    height: 40px;
+    line-height: 40px;
+    @include isFlex($align: center);
+}
+
+.header__logo {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: url(/assets/images/logo_colored.svg);
+    background-position: center;
+    background-size: initial;
+    background-repeat: no-repeat;
+}
+
+.header__name {
+    position: relative;
+    width: 53px;
+    height: 13.5px;
+    background: url(/assets/images/logo__name.svg);
+    background-position: center;
+    background-size: initial;
+    background-repeat: no-repeat;
+}
+
+.header__menu {
+    width: 770px;
+    height: 34px;
+    @include isFlex($direction: row-reverse, $justify: flex-start, $align: center);
+}
+
+.header__navbar {
+    width: 447px;
+    height: 21px;
+    @include isFlex($align: center);
+    margin-right: 20px;
+}
+
+.header__navbar > a:first-of-type {
+    font-weight: 700;
+    color: $darkShadeMore;
+}
+
+.header__buttons {
+    width: 303px;
+    height: 34px;
+    @include isFlex($align: center);
+}
+
+
+.header__signed {
+    height: 30px;
+    color: $darkShadeMiddle;
+    font-size: 18px;
+    @include isFlex($align: center);
+}
+
+.header__line {
+    height: 100%;
+    width: 20px;
+    border-left: 1px solid $darkShadeFew;
+}
