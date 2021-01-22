@@ -7,4 +7,3 @@ let roomsHandler_2 = new DropdownRooms ("dropdown_rooms_2", ".dropdown__rooms", 
 let guestsHandler_0 = new DropdownGuests("dropdown_guests_0", ".dropdown__guests", );
 let guestsHandler_1 = new DropdownGuests("dropdown_guests_1", ".dropdown__guests", guestsData_1);
 let guestsHandler_2 = new DropdownGuests("dropdown_guests_2", ".dropdown__guests", guestsData_2);
-

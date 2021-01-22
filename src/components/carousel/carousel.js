@@ -1,5 +1,5 @@
 // choose all containers for carousel
-let carousels = document.querySelectorAll('.carousel');
+let carousels = document.querySelectorAll(".carousel");
 
 
 // do the following code for every carousel

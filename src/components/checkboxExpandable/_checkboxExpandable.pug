@@ -1,9 +1,10 @@
-mixin dropdownCheckbox(containerId, dropdownTitleName, dropdownClassShow)
+mixin dropdownCheckbox(dropdownTitleName, dropdownClassShow)
     .widget.container_medium
-        div(class="dropdown reverse" id=containerId)
+        div(class="dropdown reverse")
             div(class="dropdown__content " + dropdownClassShow)
-                +checkboxExpandList()
-            .dropdown__button_transparent
+                div(class="checkbox__content")
+                    +checkboxExpandList()
+            .dropdown__button_transparent.dropdown__init
                 span.dropdown__title!= dropdownTitleName
 
 mixin checkboxExpandList()

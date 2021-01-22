@@ -122,8 +122,8 @@
 }
 
 .dropdown__content {
-    height: 233px;
-    width: 266px;
+    // height: 233px;
+    // width: 266px;
     display: none;
 }
 
@@ -190,4 +190,11 @@
 
 .dropdown__show ~ .dropdown__info::before {
     content: "\e5ce";
+}
+
+
+
+
+.dropdown__init {
+    
 }

@@ -24,30 +24,6 @@
 
 .date__range {
     @extend .dropdown__button;
-
-    // // &_open {
-    // //     @extend .dropdown__button;
-    // //     border-radius: 4px 4px 0 0;
-    // // }
-
-    // // &:hover,
-    // // &:focus {
-    // //     border: 1px solid $darkShadeMiddle;
-    // // }
-
-    // // &::before {
-    // //     position: absolute;
-    // //     font-size: 24px;
-    // //     font-family: $MaterialIcons;
-    // //     top: 0;
-    // //     right: 0;
-    // //     content: "\e5ce";
-    // //     display: block;
-    // //     width: 44px;
-    // //     height: 44px;
-    // //     line-height: 44px;
-    // //     text-align: center;
-    // // }
 }
 
 
