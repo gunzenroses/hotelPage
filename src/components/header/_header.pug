@@ -7,8 +7,6 @@ mixin header(user)
         +headerMenu(user)
 
 
-
-
 mixin headerMenu(user="")
     .header__menu
         if user
@@ -21,7 +19,23 @@ mixin headerMenu(user="")
                 +buttonBiglink("Зарегестрироваться", buttonOnclick="/registration")
         .header__navbar
             +buttonNavbar("О нас", buttonOnclick="#")
-            +buttonNavbarExpand("Услуги", buttonOnclick="#")
+            +buttonNavbarExpand("Услуги")
             +buttonNavbar("Вакансии", buttonOnclick="#")
             +buttonNavbar("Новости", buttonOnclick="#")
-            +buttonNavbarExpand("Соглашения", buttonOnclick="#")
+            +buttonNavbarExpand("Соглашения")
+                .dropdown__content 
+
+
+
+//- mixins for navbar buttons
+
+mixin buttonNavbar(buttonText, buttonOnclick="#")
+    a(class="button_navlink" href= buttonOnclick)= buttonText
+
+mixin buttonNavbarExpand(buttonText)
+    div(class="button_navlink reverse")
+        .dropdown__content
+            .navbar__dropdown
+        .dropdown_navlink.dropdown__init
+            span(class="button_navlink")= buttonText
+            span(class="dropdown__icon")

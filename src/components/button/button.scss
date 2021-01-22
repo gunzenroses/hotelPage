@@ -28,6 +28,10 @@
     height: 44px;
 }
 
+/*
+    buttomItem()
+*/
+
 .button_filled {
     position: relative;
     display: block;
@@ -61,18 +65,7 @@
     color: $purple;
 }
 
-.button_link {
-    @extend .button_filled;
-    width: 87px;
-    height: 34px;
-    line-height: 34px;
-}
 
-.button_link_inner {
-    @extend .button_filled_inner;
-    width: 85px;
-    height: 32px;
-}
 
 .button_clear {
     font-weight: 700;
@@ -82,34 +75,35 @@
     text-transform: uppercase;
 }
 
-.button_navlink {
-    font-weight: 400;
-    font-size: 14px;
-    color: $darkShadeMiddle;
-    height: 18px;
-    @include isFlex();
-}
-
-.dropdown__icon {
-    position: relative;
-    width: 24px;
-    height: 21px;
-}
-
-.dropdown__icon::before {
-    position: absolute;
-    font-family: $MaterialIcons;
-    font-size: 24px;
-    line-height: 18px;
-    content: "\e5cf";
-}
-
-
-
 .button_clear:hover {
     cursor: pointer;
     color: $darkShadeMiddle;
 }
+
+
+
+
+/*
+    buttonLink
+*/
+
+.button_link {
+    @extend .button_filled;
+    width: 87px;
+    height: 34px;
+}
+
+.button_link_inner {
+    @extend .button_filled_inner;
+    width: 85px;
+    height: 32px;
+    line-height: 32px;
+}
+
+
+/*
+    buttonBiglink
+*/
 
 .button_link_big {
     position: relative;
@@ -127,6 +121,10 @@
         opacity: 0.5;
     }
 }
+
+/*
+    buttonFormSubmit
+*/
 
 .button_submit {
     @extend .button_link_big;

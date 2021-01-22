@@ -36,18 +36,11 @@ mixin buttonBiglink(buttonText, buttonOnclick="#")
 mixin buttonNavLink(buttonText, buttonOnclick="#")
     a(class="button_clear" href = buttonOnclick)= buttonText
 
-//- mixins for navbar buttons
-
-mixin buttonNavbar(buttonText, buttonOnclick="#")
-    a(class="button_navlink" href= buttonOnclick)= buttonText
-
-mixin buttonNavbarExpand(buttonText)
-    div(class="button_navlink")
-        span(class="button_navlink")= buttonText
-        span(class="dropdown__icon")
-
 
 //- basic mixin for buttons
 
 mixin buttonItem(buttonClass, buttonText)
     button(class="" + buttonClass)= buttonText
+
+
+

@@ -46,9 +46,12 @@
     margin-right: 20px;
 }
 
-.header__navbar > a:first-of-type {
+.header__navbar a:hover,
+.header__navbar div:hover,
+.header__navbar span:hover {
     font-weight: 700;
     color: $darkShadeMore;
+    margin-right: -1px;
 }
 
 .header__buttons {
@@ -57,11 +60,10 @@
     @include isFlex($align: center);
 }
 
-
 .header__signed {
     height: 30px;
     color: $darkShadeMiddle;
-    font-size: 18px;
+    font-size: 14px;
     @include isFlex($align: center);
 }
 
@@ -69,4 +71,52 @@
     height: 100%;
     width: 20px;
     border-left: 1px solid $darkShadeFew;
+}
+
+
+// dropdowns in navbar
+
+.button_navlink {
+    position: relative;
+    font-weight: 400;
+    font-size: 14px;
+    color: $darkShadeMiddle;
+    height: 18px;
+    line-height: 18px;
+    @include isFlex($direction: column);
+}
+
+.dropdown_navlink {
+    font-weight: 400;
+    font-size: 14px;
+    color: $darkShadeMiddle;
+    height: 18px;
+    line-height: 18px;
+    @include isFlex();
+}
+
+.dropdown__icon {
+    position: relative;
+    width: 24px;
+    height: 18px;
+}
+
+.dropdown__icon::before {
+    position: absolute;
+    font-family: $MaterialIcons;
+    font-size: 24px;
+    color: $darkShadeMiddle;
+    content: "\e5cf";
+}
+
+.navbar__dropdown {
+    @extend .container_dimed;
+    top: 20px;
+    position: absolute;
+    width: 150px;
+    height: 60px;
+}
+
+.dropdown__show ~ .dropdown__init .dropdown__icon::before {
+    transform: rotate(180deg);
 }
