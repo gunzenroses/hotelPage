@@ -4,24 +4,49 @@ mixin buttonContainer()
         .button-row
             +buttonItem("button_filled", "Click me")
             +buttonItem("button_filled", "Click me")
-            +buttonLink("Click me", "")
-            +buttonLink("Click me", "")
+            +buttonFormLink("Click me", "")
+            +buttonFormLink("Click me", "")
         .button-row
             +buttonItem("button_clear", "Click me")
             +buttonItem("button_clear", "Click me")
         .button-row
-            +buttonSubmit("Click me")
+            +buttonFormSubmit("Click me")
             
 
+//- mixins for form-buttons
+
+mixin buttonFormLink(buttonText, buttonOnclick="#")
+    div(class="button_filled")
+        a(class="button_filled_inner" href = buttonOnclick)= buttonText
+
+mixin buttonFormSubmit(buttonText)
+    button(class="button_submit" type="submit")= buttonText
+
+
+//- mixins for link-buttons
 
 mixin buttonLink(buttonText, buttonOnclick="#")
-    div(class="button_white")
-        a(class="button_link" href = buttonOnclick)= buttonText
+    div(class="button_link")
+        a(class="button_link_inner" href = buttonOnclick)= buttonText
 
-mixin buttonSubmit(buttonText)
-    button(class="button_submit" type="submit")= buttonText
+mixin buttonBiglink(buttonText, buttonOnclick="#")
+    a(class="button_link_big" href = buttonOnclick)= buttonText
+        
+mixin buttonNavLink(buttonText, buttonOnclick="#")
+    a(class="button_clear" href = buttonOnclick)= buttonText
+
+//- mixins for navbar buttons
+
+mixin buttonNavbar(buttonText, buttonOnclick="#")
+    a(class="button_navlink" href= buttonOnclick)= buttonText
+
+mixin buttonNavbarExpand(buttonText)
+    div(class="button_navlink")
+        span(class="button_navlink")= buttonText
+        span(class="dropdown__icon")
+
+
+//- basic mixin for buttons
 
 mixin buttonItem(buttonClass, buttonText)
     button(class="" + buttonClass)= buttonText
-
-//- TODO: добавить асtion
