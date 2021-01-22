@@ -1,0 +1,27 @@
+
+mixin header(user)
+    .header
+        a(href="/landing_page").header__link
+            .header__logo
+            .header__name
+        +headerMenu(user)
+
+
+
+
+mixin headerMenu(user="")
+    .header__menu
+        if user
+            .header__signed
+                .header__line
+                .header__user!= user
+        else
+            .header__buttons
+                +buttonLink("Войти", buttonOnclick="/signin")
+                +buttonBiglink("Зарегестрироваться", buttonOnclick="/registration")
+        .header__navbar
+            +buttonNavbar("О нас", buttonOnclick="#")
+            +buttonNavbarExpand("Услуги", buttonOnclick="#")
+            +buttonNavbar("Вакансии", buttonOnclick="#")
+            +buttonNavbar("Новости", buttonOnclick="#")
+            +buttonNavbarExpand("Соглашения", buttonOnclick="#")

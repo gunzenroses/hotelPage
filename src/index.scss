@@ -19,12 +19,8 @@
 @import "./assets/styles/common/select";
 
 /*
-    UIKit
-*/
-/*
     FormElements
 */
-@import "./components/header/header";
 @import "./components/textField/textField";
 @import "./components/checkboxExpandable/checkboxExpandable";
 @import "./components/dateDropdown/dateDropdown";
@@ -42,6 +38,7 @@
 @import "./components/comment/comment";
 @import "./components/dropdowns/dropdowns";
 @import "./components/carousel/carousel";
+@import "./components/header/header";
 
 /*
     Cards
@@ -57,3 +54,4 @@
 */
 @import "./pages/UIKit/form-elements";
 @import "./pages/UIKit/cards";
+@import "./pages/UIKit/headersAndFooters";
