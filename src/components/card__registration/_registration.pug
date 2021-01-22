@@ -11,12 +11,10 @@ mixin cardRegistration()
             +loginContainer("Данные для входа в сервис", "")
         +buttonToggleItem("special offers", false)
         .margin__top_10
-            +buttonSubmit("Перейти к оплате")
+            +buttonFormSubmit("Перейти к оплате")
         .margin__top_20
             .card__text_row
                 .card__subline Уже есть аккаунт на Toxin
-                +buttonLink("Войти", "/login")
+                +buttonFormLink("Войти", "/login")
 
 
-//-TODO: add buttonLink to button
-//-buttonLink(buttonText, buttonOnclick="#")

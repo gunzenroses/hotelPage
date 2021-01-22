@@ -2,7 +2,7 @@ mixin cardLogin()
     .card__login
         .card__text Войти
         +login()
-        +buttonSubmit("Войти")
+        +buttonFormSubmit("Войти")
         .card__text_row
             .card__subline Нет аккаунта на Toxin?
-            +buttonLink("Создать", "/register")
+            +buttonFormLink("Создать", "/register")
