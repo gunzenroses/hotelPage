@@ -1,5 +1,5 @@
 .card__booking {
-    @extend .card__container_shadowed;
+    @extend .container_shadowed;
     @include isFlex($direction: column);
     width: 380px;
     height: 511px;
