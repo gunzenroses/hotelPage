@@ -6,7 +6,7 @@
 }
 html,
 body {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 14.63px;
   font-family: $Montserrat;
   font-weight: 400;
@@ -23,21 +23,26 @@ h4,
 h5,
 h6 {
   margin: 0;
+  color: $darkShadeMost;
 }
 
 h1 {
   font-size: 24px;
   line-height: 30px;
+  font-weight: 700;
 }
 
 h2 {
   font-size: 19px;
   line-height: 23,75px;
+  font-weight: 700;
 }
 
 h3 {
   font-size: 12px;
+  font-weight: 700;
   line-height: 14,63px;
+  text-transform: uppercase;
 }
 
 a {
@@ -46,6 +51,10 @@ a {
 
 p {
   margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: $darkShadeMore;
 }
 
 ul {
@@ -68,15 +77,6 @@ button {
   background-color: transparent;
 }
 
-// .formContainer_big {
-//   @include container($width: 320, $height: 67);
-//   @include isFlex($direction: column);
-// }
-
-// .formContainer_medium {
-//   @include container($width: 267, $height: 64);
-//   @include isFlex($direction: column);
-// }
 
 .container_small {
   @include isFlex($direction: column);
@@ -116,6 +116,10 @@ input {
   appearance: none;
   background: transparent;
   border: none;
+}
+
+::placeholder { /* Most modern browsers support this now. */
+  color:  $darkShadeLess;
 }
 
 .label {
