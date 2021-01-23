@@ -6,14 +6,15 @@
     height: 70px;
 }
 
-.header__link {
+
+.logo__link {
     width: 106px;
     height: 40px;
     line-height: 40px;
     @include isFlex($align: center);
 }
 
-.header__logo {
+.logo__pic {
     position: relative;
     width: 40px;
     height: 40px;
@@ -23,7 +24,7 @@
     background-repeat: no-repeat;
 }
 
-.header__name {
+.logo__name {
     position: relative;
     width: 53px;
     height: 13.5px;
@@ -33,10 +34,13 @@
     background-repeat: no-repeat;
 }
 
+
+
 .header__menu {
     width: 770px;
     height: 34px;
     @include isFlex($direction: row-reverse, $justify: flex-start, $align: center);
+    color: $darkShadeMiddle;
 }
 
 .header__navbar {
@@ -46,12 +50,17 @@
     margin-right: 20px;
 }
 
+.header__signed .button_navlink:hover,
 .header__navbar a:hover,
 .header__navbar div:hover,
 .header__navbar span:hover {
     font-weight: 700;
     color: $darkShadeMore;
     margin-right: -1px;
+}
+
+.header__signed .button_navlink:hover {
+    margin-right: -4px;
 }
 
 .header__buttons {
@@ -71,6 +80,10 @@
     height: 100%;
     width: 20px;
     border-left: 1px solid $darkShadeFew;
+}
+
+.header__user {
+    color: $darkShadeMiddle;
 }
 
 

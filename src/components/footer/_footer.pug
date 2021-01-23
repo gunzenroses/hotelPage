@@ -1,0 +1,35 @@
+
+mixin footer(footerText = "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»")
+    - var navigations = ["О нас", "Новости", "Служба поддержки", "Услуги"]
+    - var abouts = ["О сервисе", "Наша команда", "Вакансии", "Инвесторы"]
+    - var supports = ["Соглашения", "Сообщества", "Связь с нами"]
+    .footer_outer
+        .footer__navbar_outer
+            .footer__navbar_inner
+                .footer__info
+                    +logo()
+                    p!= footerText
+                .footer__navigation
+                    h3 Навигация
+                    for navigation in navigations
+                        +buttonNavbar(navigation, buttonOnclick="#")
+                .footer__about
+                    h3 О нас
+                    for about in abouts
+                        +buttonNavbar(about, buttonOnclick="#")
+                .footer__support
+                    h3 Служба поддержки
+                    for support in supports
+                        +buttonNavbar(support, buttonOnclick="#")
+                .footer__subscribe
+                    h3 Подписка
+                    p Получайте специальные предложения и новости сервиса
+                    +emailSubscribe()
+        .footer__copyright
+
+
+mixin footerItem()
+    h3
+    p
+    p
+    p

@@ -1,18 +1,22 @@
 
 mixin header(user)
     .header
-        a(href="/landing_page").header__link
-            .header__logo
-            .header__name
+        +logo()
         +headerMenu(user)
+
+mixin logo()
+    a(href="/landing_page").logo__link
+        .logo__pic
+        .logo__name
 
 
 mixin headerMenu(user="")
     .header__menu
         if user
             .header__signed
-                .header__line
-                .header__user!= user
+                p.header__line
+                //p.header__user!= user
+                +buttonNavbar(user, buttonOnclick="#")
         else
             .header__buttons
                 +buttonLink("Войти", buttonOnclick="/signin")
@@ -23,7 +27,10 @@ mixin headerMenu(user="")
             +buttonNavbar("Вакансии", buttonOnclick="#")
             +buttonNavbar("Новости", buttonOnclick="#")
             +buttonNavbarExpand("Соглашения")
-                .dropdown__content 
+                //.dropdown__content 
+
+
+
 
 
 

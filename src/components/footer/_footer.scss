@@ -1,0 +1,73 @@
+.footer_outer {
+    @extend .container_dimed;
+    @include isFlex($direction: column, $align: center);
+    width: 1440px;
+    height: 443px;
+}
+
+.footer__navbar_outer {
+    width: 1440px;
+    height: 372px;
+}
+
+.footer__navbar_inner {
+    @include container($width: 1160px, $height: 172px, $mt: 100px, $ms: 140px, $mb: 100px);
+    @include isFlex($justify: space-between, $wrap: wrap);
+}
+
+.footer__navbar_inner > div:first-of-type {
+    margin-right: 40px;
+}
+
+// .footer__navbar_inner > div:nth-of-type(2) {
+//     margin-right: 57px;
+// }
+
+// .footer__navbar_inner > div:nth-of-type(3) {
+//     margin-right: 92px;
+// }
+
+// .footer__navbar_inner > div:nth-of-type(4) {
+//     margin-right: 39px;
+// }
+
+.footer__info {
+    width: 260px;
+    height: 132px;
+    @include isFlex($direction: column);
+}
+
+.footer__text {
+    width: 260px;
+    height: 72px;
+}
+
+
+.footer__navigation {
+    width: 200px;
+    height: 168px;
+    @include isFlex($direction: column);
+}
+
+.footer__about {
+    width: 200px;
+    height: 168px;
+    @include isFlex($direction: column);
+}
+
+.footer__support {
+    width: 200px;
+    height: 130px;
+    @include isFlex($direction: column);
+}
+
+.footer__subscribe {
+    width: 260px;
+    height: 148px;
+    @include isFlex($direction: column);
+}
+
+.footer__copyright {
+    width: 1440px;
+    height: 70px;
+}
