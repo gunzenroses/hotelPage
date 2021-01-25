@@ -9,27 +9,57 @@ mixin footer(footerText = "Бронирование номеров в лучше
                 .footer__info
                     +logo()
                     p!= footerText
-                .footer__navigation
-                    h3 Навигация
-                    for navigation in navigations
-                        +buttonNavbar(navigation, buttonOnclick="#")
-                .footer__about
-                    h3 О нас
-                    for about in abouts
-                        +buttonNavbar(about, buttonOnclick="#")
-                .footer__support
-                    h3 Служба поддержки
-                    for support in supports
-                        +buttonNavbar(support, buttonOnclick="#")
-                .footer__subscribe
-                    h3 Подписка
+                .footer__info_more
+                    .footer__navigation
+                        h3.dropdown__init Навигация
+                        //- that's initially hidden
+                        .footer__navigation_dropdown.dropdown__content
+                            for navigation in navigations
+                                +buttonNavbar(navigation, buttonOnclick="#")
+                        //- that's initially visible
+                        .footer__links
+                            for navigation in navigations
+                                    +buttonNavbar(navigation, buttonOnclick="#")
+                    .footer__about
+                        h3.dropdown__init О нас
+                        //- that's initially hidden
+                        .footer__about_dropdown.dropdown__content
+                            for about in abouts
+                                +buttonNavbar(about, buttonOnclick="#")
+                        //- that's initially visible
+                        .footer__links
+                            for about in abouts
+                                +buttonNavbar(about, buttonOnclick="#")
+                    .footer__support
+                        h3.dropdown__init Служба поддержки
+                        //- that's initially hidden
+                        .footer__support_dropdown.dropdown__content
+                            for support in supports
+                                +buttonNavbar(support, buttonOnclick="#")
+                        //- that's initially visible
+                        .footer__links
+                            for support in supports
+                                +buttonNavbar(support, buttonOnclick="#")
+                .footer__info_subscribe
+                    h3.label Подписка
                     p Получайте специальные предложения и новости сервиса
                     +emailSubscribe()
-        .footer__copyright
+        .footer__copyright_outer
+            .footer__copyright_inner
+                .copyright__text Copyright © 2018 Toxin отель. Все права зачищены.
+                +socialNets()
 
 
-mixin footerItem()
-    h3
-    p
-    p
-    p
+mixin socialNets()
+    .copyright__social
+        span.fab.fa-twitter
+            a(href="https://www.twitter.com/")
+        span.fab.fa-facebook-square
+            a(href="https://www.facebook.com/")
+        span.fab.fa-instagram
+            a(href="https://www.instagram.com/")
+
+
+
+mixin footerCreative()
+    .footer_creative

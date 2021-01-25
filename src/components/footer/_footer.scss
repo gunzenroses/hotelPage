@@ -1,5 +1,8 @@
+/*
+    outer container
+*/
 .footer_outer {
-    @extend .container_dimed;
+    @include containerDimed();
     @include isFlex($direction: column, $align: center);
     width: 1440px;
     height: 443px;
@@ -10,44 +13,46 @@
     height: 372px;
 }
 
+/*
+    inner container
+*/
+
 .footer__navbar_inner {
     @include container($width: 1160px, $height: 172px, $mt: 100px, $ms: 140px, $mb: 100px);
     @include isFlex($justify: space-between, $wrap: wrap);
+    position: relative;
 }
 
 .footer__navbar_inner > div:first-of-type {
     margin-right: 40px;
 }
 
-// .footer__navbar_inner > div:nth-of-type(2) {
-//     margin-right: 57px;
-// }
+.footer__navbar_inner > div:nth-of-type(2) {
+    margin-right: 50px;
+}
 
-// .footer__navbar_inner > div:nth-of-type(3) {
-//     margin-right: 92px;
-// }
-
-// .footer__navbar_inner > div:nth-of-type(4) {
-//     margin-right: 39px;
-// }
-
+/*
+    inner container > .footer__info
+*/
 .footer__info {
     width: 260px;
     height: 132px;
     @include isFlex($direction: column);
 }
 
-.footer__text {
-    width: 260px;
-    height: 72px;
-}
+/*
+    inner container > .footer__info_more
+*/
 
-
-.footer__navigation {
-    width: 200px;
+.footer__info_more {
     height: 168px;
-    @include isFlex($direction: column);
+    width: 550px;
+    @include isFlex();
 }
+
+/*
+    .footer__info_more > divs
+*/
 
 .footer__about {
     width: 200px;
@@ -61,13 +66,268 @@
     @include isFlex($direction: column);
 }
 
-.footer__subscribe {
+.footer__navigation {
+    width: 200px;
+    height: 168px;
+    @include isFlex($direction: column);
+} 
+
+.footer__links {
+    width: 100%;
+    height: 150px;
+    margin-top: 20px;
+    @include isFlex($direction: column, $align: flex-start, $justify: start);
+}
+
+.footer__links a:not(:last-of-type) {
+    margin-bottom: 20px;
+}
+
+
+/*
+    inner container > .footer__info_more
+*/
+
+
+.footer__info_subscribe {
     width: 260px;
     height: 148px;
     @include isFlex($direction: column);
 }
 
+
+/*
+    media queries for container inner
+*/
+
+@media (max-width: 1440px) {
+    .footer_outer,
+    .footer__navbar_outer {
+        width: 100vw;
+        height: auto;
+    }
+
+    .footer__navbar_inner > div:first-of-type {
+        margin-right: 20px;
+    }
+
+    .footer__navbar_inner > div:nth-of-type(2) {
+        margin-right: 0;
+    }
+    
+    .footer__navbar_inner {
+        @include container($width: 85%, $height: 172px, $mt: 60px, $ms: auto, $mb: 60px);
+    }
+
+    .footer__info_more {
+        width: 47%;
+        min-width: 415px;
+    }
+
+    .footer__navigation {
+        width: 150px;
+    }
+
+    .footer__about {
+        width: 135px;
+    }
+
+    .footer__support {
+        width: 120px;
+    }
+
+    .footer__info,
+    .footer__subscribe {
+        width: 200px;
+        margin: 0;
+    }
+}
+
+@media (max-width: 1170px) {
+    .footer__navbar_inner > div:first-of-type {
+        margin-right: 50px;
+    }
+
+    .footer__info {
+        position: absolute;
+        right: 0;
+        top: -11px;
+        width: 106px;
+        height: 40px;
+    }
+
+    .footer__info_more {
+        width: 60%;
+    }
+
+    .footer__info p {
+        display: none;
+    }
+}
+
+@media (max-width: 800px) {
+    .footer {
+        width: 100vw;
+        padding: 15px 5%;
+    }
+
+    .footer__navbar_inner {
+        @include container($width: 85%, $height: auto, $mt: 40px, $ms: auto, $mb: 40px);
+        justify-content: center;
+    }
+
+    .footer__links a:not(:last-of-type) {
+        margin-bottom: 0;
+    }
+
+    .footer__navbar_inner > div:first-of-type {
+        margin-right: 0;
+    }
+
+    .footer__info {
+        position: relative;
+        width: 60%;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .footer__info_more {
+        height: 120px;
+        margin-bottom: 40px;
+    }
+
+    .footer__info_subscribe {
+        height: auto;
+    }
+
+    .footer__info_subscribe p {
+        display: none;
+    }
+}
+
+@media (max-width: 470px) {
+    .footer__links {
+        display: none;
+    }
+
+    .footer__info_more {
+        @include isFlex($direction: column);
+        width: 200px;
+        font-weight: 400;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .footer__info_more {
+        min-width: 260px;
+        width: 260px;
+    }
+
+    .footer__info_more .dropdown__init {
+        width: 170px;
+        min-width: 170px;
+    }
+
+    .footer__navigation,
+    .footer__about,
+    .footer__support {
+        width: 100%;
+        height: 20px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+/*
+    footer__copyright component
+*/
+
 .footer__copyright {
     width: 1440px;
     height: 70px;
 }
+
+.footer__copyright_outer {
+    width: 1440px;
+    height: 70px;
+    border-top: 1px solid $darkShadeLess;
+}
+
+.footer__copyright_inner {
+    @include container($width: 1160px, $height: 24px, $mt: 23px, $ms: 140px, $mb: 23px);
+    @include isFlex();
+}
+
+.copycopyright__text {
+    height: 18px; 
+}
+
+.copyright__social {
+    width: 112px;
+    height: 24px;
+    @include isFlex($align: center);
+}
+
+.fa-twitter, 
+.fa-facebook-square,
+.fa-instagram {
+    position: relative;
+    width: 24px;
+    height: 24px;
+}
+
+.copyright__social .fa-twitter::before, 
+.copyright__social .fa-facebook-square::before,
+.copyright__social .fa-instagram::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: $FontAwesome;
+    line-height: 24px;
+    font-size: 24px;
+    background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.fa-twitter::before {
+    content: "";
+}
+
+.fa-facebook-square::before {
+    content: "";
+}
+
+.fa-instagram::before {
+    content: "";
+}
+
+
+// .fa-twitter a,
+// .fa-facebook-square a,
+// .fa-instagram a 
+
+.fab a {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 24px;
+    width: 24px;
+}
+
+.footer_creative {
+    height: 367px;
+    width: 768px;
+
+}
+
+
