@@ -1,67 +1,31 @@
-/* src/assets/styles/base/_fonts.scss  */
+/* src/assets/styles/base/_fonts.scss */
 
 /*
-    Montserrat
+    Montserrat 400
 */
 
 @font-face {
   font-family: "Montserrat";
   font-weight: 400;
-  src: url("@~fonts/Montserrat-Regular.eot");
+  src: url("@~fonts/montserrat/Montserrat-Regular.eot");
+  src: url("@~fonts/montserrat/Montserrat-Regular.eot"),
+  url("@~fonts/montserrat/Montserrat-Regular.woff") format('woff'),
+  url("@~fonts/montserrat/Montserrat-Regular.ttf") format('truetype'),
+  url("@~fonts/montserrat/Montserrat-Regular.svg") format('svg');
 }
 
-@font-face {
-  font-family: "Montserrat";
-  font-weight: 400;
-  src: url("@~fonts/Montserrat-Regular.ttf");
-}
-
-@font-face {
-  font-family: "Montserrat";
-  font-weight: 400;
-  src: url("@~fonts/Montserrat-Regular.woff");
-}
-
-@font-face {
-  font-family: "Montserrat";
-  font-weight: 400;
-  src: url("@~fonts/Montserrat-Regular.svg");
-}
-
-@font-face {
-  font-family: "Montserrat";
-  font-weight: 400;
-  src: url("@~fonts/Montserrat-Regular.otf");
-}
+/*
+  Montserrat 700
+*/
 
 @font-face {
   font-family: "Montserrat";
   font-weight: 700;
-  src: url("@~fonts/Montserrat-Bold.eot");
-}
-
-@font-face {
-  font-family: "Montserrat";
-  font-weight: 700;
-  src: url("@~fonts/Montserrat-Bold.ttf");
-}
-
-@font-face {
-  font-family: "Montserrat";
-  font-weight: 700;
-  src: url("@~fonts/Montserrat-Bold.woff");
-}
-
-@font-face {
-  font-family: "Montserrat";
-  font-weight: 700;
-  src: url("@~fonts/Montserrat-Bold.svg");
-}
-
-@font-face {
-  font-family: "Montserrat";
-  font-weight: 700;
-  src: url("@~fonts/Montserrat-Bold.otf");
+  src: url("@~fonts/montserrat/Montserrat-Bold.eot");
+  src: url("@~fonts/montserrat/Montserrat-Bold.eot"),
+  url("@~fonts/montserrat/Montserrat-Bold.woff") format('woff'),
+  url("@~fonts/montserrat/Montserrat-Bold.ttf") format('truetype'),
+  url("@~fonts/montserrat/Montserrat-Bold.svg") format('svg');
 }
 
 
@@ -72,29 +36,28 @@
 @font-face {
   font-family: "MaterialIcons";
   font-weight: 700;
-  src: url("@~fonts/MaterialIcons.eot");
+  src: url("@~fonts/material/MaterialIcons.eot");
+  src: url("@~fonts/material/MaterialIcons.eot"),
+  url("@~fonts/material/MaterialIcons.woff2") format('woff2'),
+  url("@~fonts/material/MaterialIcons.woff") format('woff'),
+  url("@~fonts/material/MaterialIcons.ttf") format('truetype');
 }
+
 
 @font-face {
-  font-family: "MaterialIcons";
-  font-weight: 700;
-  src: url("@~fonts/MaterialIcons.ttf");
+  font-family: "Font Awesome 5 Brands";
+  font-style: normal;
+  font-weight: 400;
+  src: url("@~fonts/fa-brands/fa-brands-400.eot");
+  src: url("@~fonts/fa-brands/fa-brands-400.eot"),
+  url("@~fonts/fa-brands/fa-brands-400.woff2") format('woff2'),
+  url("@~fonts/fa-brands/fa-brands-400.woff") format('woff'),
+  url("@~fonts/fa-brands/fa-brands-400.ttf") format('truetype'),
+  url("@~fonts/fa-brands/fa-brands-400.svg") format('svg');
 }
-
-@font-face {
-  font-family: "MaterialIcons";
-  font-weight: 700;
-  src: url("@~fonts/MaterialIcons.woff");
-}
-
-@font-face {
-  font-family: "MaterialIcons";
-  font-weight: 700;
-  src: url("@~fonts/MaterialIcons.woff2");
-}
-
 
 $MaterialIcons: "MaterialIcons";
 $Montserrat: "Montserrat", Arial, sans-serif;
+$FontAwesome: "Font Awesome 5 Brands";
 
 
