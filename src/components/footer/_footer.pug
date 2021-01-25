@@ -3,41 +3,44 @@ mixin footer(footerText = "Бронирование номеров в лучше
     - var navigations = ["О нас", "Новости", "Служба поддержки", "Услуги"]
     - var abouts = ["О сервисе", "Наша команда", "Вакансии", "Инвесторы"]
     - var supports = ["Соглашения", "Сообщества", "Связь с нами"]
-    .footer_outer
+    .footer_outer.dropdown__watch
         .footer__navbar_outer
             .footer__navbar_inner
                 .footer__info
                     +logo()
                     p!= footerText
+                //- that's initially visible
                 .footer__info_more
                     .footer__navigation
-                        h3.dropdown__init Навигация
-                        //- that's initially hidden
-                        .footer__navigation_dropdown.dropdown__content
-                            for navigation in navigations
-                                +buttonNavbar(navigation, buttonOnclick="#")
-                        //- that's initially visible
+                        h3 Навигация
                         .footer__links
                             for navigation in navigations
                                     +buttonNavbar(navigation, buttonOnclick="#")
                     .footer__about
-                        h3.dropdown__init О нас
-                        //- that's initially hidden
-                        .footer__about_dropdown.dropdown__content
-                            for about in abouts
-                                +buttonNavbar(about, buttonOnclick="#")
-                        //- that's initially visible
+                        h3 О нас
                         .footer__links
                             for about in abouts
                                 +buttonNavbar(about, buttonOnclick="#")
                     .footer__support
-                        h3.dropdown__init Служба поддержки
-                        //- that's initially hidden
-                        .footer__support_dropdown.dropdown__content
+                        h3 Служба поддержки
+                        .footer__links
                             for support in supports
                                 +buttonNavbar(support, buttonOnclick="#")
-                        //- that's initially visible
-                        .footer__links
+                //- that's initially hidden
+                .footer__info_hidden
+                    .footer__navigation
+                        h3.dropdown__init Навигация
+                        .footer__navigation_dropdown.dropdown__content
+                            for navigation in navigations
+                                +buttonNavbar(navigation, buttonOnclick="#")
+                    .footer__about
+                        h3.dropdown__init О нас
+                        .footer__about_dropdown.dropdown__content
+                            for about in abouts
+                                +buttonNavbar(about, buttonOnclick="#")
+                    .footer__support
+                        h3.dropdown__init Служба поддержки
+                        .footer__support_dropdown.dropdown__content
                             for support in supports
                                 +buttonNavbar(support, buttonOnclick="#")
                 .footer__info_subscribe
@@ -62,4 +65,8 @@ mixin socialNets()
 
 
 mixin footerCreative()
-    .footer_creative
+    .footer__creative
+        .footer__creative_inner
+            +logo()
+            .copyright__text Copyright © 2018 Toxin отель. Все права зачищены.
+            +socialNets()
