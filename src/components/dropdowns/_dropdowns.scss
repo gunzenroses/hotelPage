@@ -136,8 +136,18 @@
 .dropdown__show {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+}
+
+// .footer__info_more .dropdown__show {
+//     width: 100%;
+//     height: 150px;
+//     margin-top: 20px;
+//     @include isFlex($direction: column, $align: flex-start, $justify: start);
+// }
+
+.dropdown .dropdown__show {
     justify-content: space-around;
-    
 }
 
 .button__show {
