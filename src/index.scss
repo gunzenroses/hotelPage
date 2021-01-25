@@ -3,8 +3,6 @@
 */
 @import "./assets/styles/base/fonts";
 @import "./assets/styles/base/normalize.scss";
-//@import "./assets/styles/base/brands";
-
 /*
     Utils
 */
@@ -40,6 +38,7 @@
 @import "./components/carousel/carousel";
 @import "./components/header/header";
 @import "./components/footer/footer";
+@import "./components/footer/footerCreative";
 @import "./components/dropdowns/dropdowns";
 
 /*
