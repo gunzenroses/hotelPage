@@ -154,6 +154,7 @@ class DropdownGuests {
         this.info = this.container.querySelector(".dropdown__info");
         this.infoInput = this.container.querySelector(".dropdown__input");
         this.dropdownItems = this.container.querySelectorAll(".dropdown__expandedItem");
+        this.dropdownMinuses = this.container.querySelectorAll(".dropdown__minus");
         this.containerClassExpanded = "." + this.containerClass;
         this.resetButton = this.dropdownExpanded.querySelector(".dropdown__button_reset");
         this.submitButton = this.dropdownExpanded.querySelector(".dropdown__button_submit")
@@ -191,6 +192,7 @@ class DropdownGuests {
 
     plusAndMinus(){
         if (event.target.classList.value == "dropdown__minus"){
+            console.log("minus")
             let orderInData = parseInt(event.target.nextElementSibling.dataset.order);
             this.data[orderInData]--;
             //this.render();
@@ -232,8 +234,17 @@ class DropdownGuests {
             if (this.data[i]>10){
                 this.data[i]=10;
             }
+
             let dropdownItem = this.dropdownItems[i].querySelector(".dropdown__number");
             dropdownItem.innerText = this.data[i];
+
+            if (this.data[i] > 0){
+                this.dropdownMinuses[i].classList.remove("button_disabled");
+            }
+
+            if (this.data[i] === 0){
+                this.dropdownMinuses[i].classList.add("button_disabled");
+            }
         }
         return this;
     }
@@ -278,7 +289,6 @@ class DropdownGuests {
                 case 24: this.dataTypeNameInfant = "младенца"; break;
             default: this.dataTypeNameInfant = "младенцев"; break;
         }
-
 
         if (this.adultGuests > 0){
             this.infoInput.value = `${this.adultGuests} ${this.dataTypeNameAdults}`;
