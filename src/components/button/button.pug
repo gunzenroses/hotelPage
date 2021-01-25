@@ -26,14 +26,14 @@ mixin buttonFormSubmit(buttonText)
 
 //- mixins for link-buttons
 
-mixin buttonLink(buttonText, buttonOnclick="#")
+mixin buttonLink(buttonText="", buttonOnclick="#")
     div(class="button_link")
         a(class="button_link_inner" href = buttonOnclick)= buttonText
 
-mixin buttonBiglink(buttonText, buttonOnclick="#")
+mixin buttonBiglink(buttonText="", buttonOnclick="#")
     a(class="button_link_big" href = buttonOnclick)= buttonText
         
-mixin buttonNavLink(buttonText, buttonOnclick="#")
+mixin buttonNavLink(buttonText="", buttonOnclick="#")
     a(class="button_clear" href = buttonOnclick)= buttonText
 
 
