@@ -5,14 +5,29 @@ let dropdownInits = document.querySelectorAll(".dropdown__init");
 
 // init functionality for every element of the list
 for (let dropdownInit of dropdownInits){
-    let dropdownExpanded;
-    dropdownExpanded = dropdownInit.parentElement.querySelector(".dropdown__content");
+    let dropdownParent = dropdownInit.parentElement;
+    let dropdownExpanded = dropdownParent.querySelector(".dropdown__content");
+
+    if (dropdownParent.closest(".dropdown__watch")){
+        let dropdownWatch = dropdownParent.closest(".dropdown__watch");
+
+        dropdownWatch.addEventListener("click", ()=>{
+            if (event.target != dropdownInit){
+                dropdownExpanded.classList.remove("dropdown__show");
+            } else {
+                dropdownExpanded.classList.toggle("dropdown__show");
+            }
+        })
+    } else {
+
     dropdownInit.addEventListener("click", ()=>{
         dropdownExpanded.classList.toggle("dropdown__show");
     });
+    
+    }
 }
 
-// new code replace this
+// the following code was replaced
 // class Dropdown {
 //     constructor(containerId, buttonSelector, contentSelector){
 //         this.container = document.getElementById(containerId)
