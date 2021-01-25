@@ -3,6 +3,7 @@
 */
 @import "./assets/styles/base/fonts";
 @import "./assets/styles/base/normalize.scss";
+//@import "./assets/styles/base/brands";
 
 /*
     Utils
@@ -36,9 +37,10 @@
 @import "./components/bulletCheckbox/bulletCheckbox";
 @import "./components/badge/badge";
 @import "./components/comment/comment";
-@import "./components/dropdowns/dropdowns";
 @import "./components/carousel/carousel";
 @import "./components/header/header";
+@import "./components/footer/footer";
+@import "./components/dropdowns/dropdowns";
 
 /*
     Cards
