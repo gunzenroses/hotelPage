@@ -33,17 +33,19 @@
 /*
     Media query for Main container
 */
+@media (max-width: 1440px) {
+    .headersAndFooters_outer {
+        width: 100vw;
+        height: auto;
+    }
+}
 
 @media (max-width: 750px) {
     .headersAndFooters_outer {
+    min-width: 360px;
     &::before {
                 top: 10px;
                 left: 10px;
             }
     }
 }
-
-/*
-    Flex for adaptive design
-*/
-
