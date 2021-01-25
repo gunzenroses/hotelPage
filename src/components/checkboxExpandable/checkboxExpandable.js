@@ -6,11 +6,7 @@ let dropdownInits = document.querySelectorAll(".dropdown__init");
 // init functionality for every element of the list
 for (let dropdownInit of dropdownInits){
     let dropdownExpanded;
-    if (dropdownInit.previousElementSibling && dropdownInit.previousElementSibling.classList.contains("dropdown__content")){
-        dropdownExpanded = dropdownInit.previousElementSibling;
-    } else {
-        dropdownExpanded = dropdownInit.nextElementSibling;
-    }
+    dropdownExpanded = dropdownInit.parentElement.querySelector(".dropdown__content");
     dropdownInit.addEventListener("click", ()=>{
         dropdownExpanded.classList.toggle("dropdown__show");
     });
