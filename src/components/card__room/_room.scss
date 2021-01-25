@@ -1,5 +1,5 @@
 .card__room {
-    @extend .container_dimed;
+    @include containerDimed();
     @include isFlex($direction: column);
     width: 270px;
     height: 258px;

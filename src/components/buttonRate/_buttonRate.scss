@@ -66,12 +66,12 @@
     background-clip: text;
 }
 
-.input_label:before {
+.input_label::before {
     content: '☆';
 }
 
-input:checked ~ .input_label:before,
-input:checked + .input_label:before {
+input:checked ~ .input_label::before,
+input:checked + .input_label::before {
     content: '★';
 }
 
