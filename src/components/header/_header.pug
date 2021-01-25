@@ -12,6 +12,14 @@ mixin logo()
 
 mixin headerMenu(user="")
     .header__menu
+        .burger__menu.dropdown__init
+            span
+        .dropdown__navbar.dropdown__content
+            +buttonNavbar("О нас", buttonOnclick="#")
+            +buttonNavbarExpand("Услуги")
+            +buttonNavbar("Вакансии", buttonOnclick="#")
+            +buttonNavbar("Новости", buttonOnclick="#")
+            +buttonNavbarExpand("Соглашения")
         if user
             .header__signed
                 p.header__line
@@ -20,14 +28,13 @@ mixin headerMenu(user="")
         else
             .header__buttons
                 +buttonLink("Войти", buttonOnclick="/signin")
-                +buttonBiglink("Зарегестрироваться", buttonOnclick="/registration")
+                +buttonBiglink("", buttonOnclick="/registration")
         .header__navbar
             +buttonNavbar("О нас", buttonOnclick="#")
             +buttonNavbarExpand("Услуги")
             +buttonNavbar("Вакансии", buttonOnclick="#")
             +buttonNavbar("Новости", buttonOnclick="#")
             +buttonNavbarExpand("Соглашения")
-                //.dropdown__content 
 
 
 
