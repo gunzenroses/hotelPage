@@ -1,7 +1,7 @@
 mixin dropdownGuestsLabeled(labelText, labelRightText, dropdownContainerId, dropdownClassShow, inputId)
-    .widget
-        .label!= labelText
-        .label_right!= labelRightText
+    .dropdown__container
+        h3.label!= labelText
+        h3.label_right!= labelRightText
         +dropdownGuestsItems(dropdownContainerId, dropdownClassShow, inputId)
 
 //-example: 
@@ -25,8 +25,8 @@ mixin dropdownGuestsItems(dropdownContainerId, dropdownClassShow, inputId)
 
 mixin dropdownRoomsLabeled(labelText, labelRightText, dropdownContainerId, dropdownClassShow, inputId)
     .widget
-        .label!= labelText
-        span(class="label_right")= labelRightText
+        h3.label!= labelText
+        h3(class="label_right")= labelRightText
         +dropdownRoomsItems(dropdownContainerId, dropdownClassShow, inputId)
 
 

@@ -1,6 +1,6 @@
 mixin checkboxButtons (labelText, checkboxName="house-rules")
     .widget
-        div(class="label")= labelText 
+        h3(class="label")= labelText 
         .buttonsCheckbox
             +checkboxItem("smoking_allowed", checkboxName, false, "Можно курить")
             +checkboxItem("pets_allowed", checkboxName, true, "Можно с питомцами")

@@ -64,8 +64,8 @@ mixin password()
 //-mixins basic
 
 mixin label(labelText, labelRightText)
-    .label!= labelText
-    .label_right= labelRightText
+    h3.label!= labelText
+    h3.label_right= labelRightText
 
 mixin text(inputClass, placeholder, valueText, nameText, maxText, autofocus=false)
     if inputClass === "textfield_email"
@@ -86,7 +86,7 @@ mixin text(inputClass, placeholder, valueText, nameText, maxText, autofocus=fals
 
 //- mixin textInput (inputId, labelText, labelRightClass, labelRightText, inputClass, placeholder, rule, autofocus=false, maxlength)
 //-     .widget
-//-         .label!= labelText
+//-         h3.label!= labelText
 //-         span(class="" + labelRightClass)= labelRightText
 //-         div(class="" + inputClass)
 //-             input(type="text" placeholder=placeholder, 
@@ -97,7 +97,7 @@ mixin text(inputClass, placeholder, valueText, nameText, maxText, autofocus=fals
 
 //- .widget
 //-     label(for="text").label Text field
-//-     span.label_right default
+//-     h3.label_right default
 //-     .textField
 //-         input(type="text" id="text" placeholder="Email" 
 //-             value="" name="textField" data-rule="email")
@@ -106,7 +106,7 @@ mixin text(inputClass, placeholder, valueText, nameText, maxText, autofocus=fals
 
 //- textFieldSubscription
 //- .widget
-//-     label(for="email").label SUBSCRIPTION TEXT FIELD
+//-     h3(for="email").label SUBSCRIPTION TEXT FIELD
 //-     .input_email
 //-         input(type="email" placeholder="Email" value="" 
 //-                 name="email" data-rule="email")
@@ -127,7 +127,7 @@ mixin text(inputClass, placeholder, valueText, nameText, maxText, autofocus=fals
 //- textFieldFocused
 //- .widget
 //-     label(for="textFieldFocused").label Text field
-//-     span.label_right hover / focused
+//-     h3.label_right hover / focused
 //-     .textField
 //-         input(type="text" id="textFieldFocused" 
 //-         placeholder="This is awesome" 

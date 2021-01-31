@@ -1,24 +1,31 @@
 .radio_box {
-    height: 55px;
+    height: 53px;
     width: 220px;
-    margin-top: 41px;
     line-height: normal;
     @include isFlex($direction: column);
 }
 
+.radio_box .label {
+    letter-spacing: -.01em;
+}
+
 .radio_row {
-    @include isFlex;
+    @include isFlex($justify: flex-start);
     width: 220px;
     height: 24px;
 }
 
 .radio__element {
-    width: 102px;
+    width: 103px;
     height: 24px;
     @include isFlex;
     font-weight: 400;
     font-size: 14px;
     text-transform: none;
+}
+
+.radio__element + .radio__element {
+    margin-left: 16px;
 }
 
 .radio__real {
@@ -44,7 +51,8 @@
 .radio__title {
     display: inline-block;
     width: 73px;
-    line-height: 24px;
+    line-height: 19px;
+    letter-spacing: 0.005em;
     height: 100%;
     color: $darkShadeMiddle;
     //vertical-align: middle;

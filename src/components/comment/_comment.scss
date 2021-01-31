@@ -16,22 +16,28 @@
     box-sizing: border-box;
     border: 2px solid $light;
     filter: drop-shadow(0px 10px 20px rgba(31, 32, 65, 0.1));
+    @include isFlex($justify: center, $align: center);
+    overflow: hidden;
 }
+
+
 
 .comment__body {
     margin-top: 9px;
+    margin-left: 3px;
     min-height: 51px;
     @include isFlex($justify: start);
     width: 100%;
 }
 
 .comment__text {
-    margin-left: 14px;
+    margin-left: 15px;
+    margin-top: -2px;
     min-height: 72px;
     color: $darkShadeMore;
     font-size: 14px;
     line-height: 24px;
-    letter-spacing: -.025em;
+    letter-spacing: -.0001em;
     font-family: $Montserrat;
     font-weight: 400;
     width: 100%;

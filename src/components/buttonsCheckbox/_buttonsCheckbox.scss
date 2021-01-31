@@ -6,6 +6,10 @@
     text-transform: none;
 }
 
+.checkbox:hover {
+    cursor: pointer;
+}
+
 .checkbox + .checkbox {
     margin-top: 10px;
 }
@@ -38,12 +42,13 @@
 .checkbox__real:checked + .checkbox__fake::before {
     position: absolute;
     top: 20%;
-    left: 30%;
+    left: 35%;
     content: "";
     transform: translate(-50%,-50%);
     display: block;
-    width: 6px;
-    height: 8px;
+    width: 4px;
+    height: 6px;
+    color: none;
     transform: rotate(45deg);
     border-image: linear-gradient(#BC9CFF, #8BA4F9);
     border-image-slice: 1;
@@ -53,16 +58,25 @@
 
 .checkbox__title {
     display: inline-block;
-    width: calc(100%-30px);
+    width: 192px;
     font-weight: 400;
     font-size: 14px;
+    letter-spacing: 0.003em;
     line-height: 18px;
     color: $darkShadeMiddle;
-    vertical-align: middle;
+    vertical-align: auto;
+}
+
+.buttonsCheckbox .checkbox__title {
+    margin-top: 2px;
+}
+
+.checkbox__content .checkbox__title {
+    line-height: 20px;
 }
 
 .buttonsCheckbox {
-    margin-top: 16px;
+    margin-top: 11px;
     @include isFlex($direction: column);
-    width: 222px;
+    width: 224px;
 }

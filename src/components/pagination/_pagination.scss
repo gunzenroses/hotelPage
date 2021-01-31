@@ -8,11 +8,11 @@
     flex-wrap: nowrap;
     flex-shrink: 0;
     width: 241px;
-    height: 106px;
+    height: 101px;
 }
 
 .pagination_bar {
-    height: 75px;
+    height: 73px;
     width: 241px;
     display: flex;
     flex-direction: column;
@@ -39,6 +39,7 @@ button {
     align-items: flex-start;
     flex-wrap: nowrap;
     flex-shrink: 0;
+    font-size: 12px;
 }
 
 .pagination__button_current {
@@ -178,5 +179,7 @@ button {
     line-height: 24px;
     font-size: 14px;
     margin: 0 auto;
+    padding-left: 5px;
     text-align: left;
+    letter-spacing: 0.01em;
 }

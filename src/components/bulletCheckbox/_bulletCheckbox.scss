@@ -1,6 +1,15 @@
+.bullet__container {
+    width: 292px;
+    height: 147px;
+}
+
 .bullet {
     position: relative;
     @include isFlex($justify: start);
+}
+
+.bullet__container > .label {
+    margin-bottom: 10px;
 }
 
 .bullet + .bullet {
@@ -24,7 +33,7 @@
     font-size: 14px;
     line-height: 24px;
     color: $darkShadeMore;
-    vertical-align: center;
+    letter-spacing: 0.004em;
 }
 
 //@extend checkbox from checkboxExpandable.scss

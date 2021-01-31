@@ -1,3 +1,9 @@
+.dropdown__container {
+    width: 320px;
+    height: 64px;
+    @include isFlex($direction: column, $justify: flex-start);
+}
+
 .dropdown {
     width: inherit;
     position: relative;
@@ -11,7 +17,7 @@
     border: 1px solid rgba(31, 32, 65, 0.25);
     /*border-radius: 2px;*/
     border-radius: 4px 4px 0 0;
-    line-height: 44px;
+    line-height: 40px;
     font-size: 14px;
 }
 
@@ -31,10 +37,14 @@
 
 .dropdown__input {
     width: calc(100% - 44px - 15px);
-    margin: 0 44px 0 15px;
+    margin: 0 44px 0 11px;
     height: 24px;
     line-height: 24px;
     border: none;
+}
+
+.dropdown__info > .dropdown__input::placeholder {
+    color:  $darkShadeMore;
 }
 
 .dropdown__rooms,
@@ -59,8 +69,9 @@
 
 .dropdown__guests {
     width: 100%;
+    margin-top: -2px;
     background: $light;
-    height: 158px;
+    height: 159px;
     box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
 }
 
@@ -82,13 +93,17 @@
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
-    padding-left: 15px;
-    padding-right: 7px;
+    padding-left: 14px;
+    padding-right: 6px;
+    padding-top: 3px;
+    height: 35px;
 }
 
 .dropdown__text {
     width: calc(100% - 30px - 30px - 32px);
     font-weight: 700;
+    letter-spacing: -0.01em;
+    color: $darkShadeMost;
 }
 
 .dropdown__minus,
@@ -128,6 +143,8 @@
 }
 
 .dropdown__title {
+    letter-spacing: -0.001em;
+    font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
     text-align: start;
@@ -164,16 +181,6 @@
         border-radius: 4px 4px 0 0;
     }
     
-    &_transparent {
-        @extend .dropdown__button;
-        border: none;
-        padding: 0;
-
-        &:hover, &:focus {
-            border: none;
-        }
-    }
-
     &::before {
         position: absolute;
         font-size: 24px;
@@ -184,9 +191,25 @@
         display: block;
         width: 44px;
         height: 44px;
-        line-height: 44px;
+        line-height: 45px;
         text-align: center;
     }
+
+    &_transparent {
+        @extend .dropdown__button;
+        border: none;
+        padding: 0;
+
+        &:hover, &:focus {
+            border: none;
+        }
+
+        &::before {
+            width: 46px;
+            height: 44px;
+        }
+    }
+
 }
 
 .dropdown__show ~ .dropdown__button_transparent::before {
@@ -205,6 +228,10 @@
 
 
 
-.dropdown__init {
+// .dropdown__init {
     
+// }
+
+.dropdown__rooms > .dropdown__expandedItem:last-of-type {
+    margin-bottom: 3px;
 }

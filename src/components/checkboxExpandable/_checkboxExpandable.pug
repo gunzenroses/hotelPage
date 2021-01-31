@@ -12,6 +12,7 @@ mixin checkboxExpandList()
     +checkboxExpandItem("desk", true, "Письменный стол")
     +checkboxExpandItem("feeding chair", true, "Стул для кормления")
     +checkboxExpandItem("baby bed", true, "Кроватка")
+    +checkboxExpandItem("TV", false, "Телевизор")
     +checkboxExpandItem("shampoo", false, "Шампунь")
     +checkboxExpandItem("TV", false, "Телевизор")
     +checkboxExpandItem("shampoo 2", false, "Шампунь")
@@ -25,8 +26,8 @@ mixin checkboxExpandItem(checkboxName, ifChecked, checkboxTitle)
 
 
 mixin richCheckboxButtons(checkboxName, containerText)
-    .widget
-        .label!= containerText
+    .richcheckbox__container
+        h3.label!= containerText
         +richCheckboxButtonItem(checkboxName, "wide corridor", "Широкий коридор", "Ширина коридоров в номере <br> не менее 91 см.")
         +richCheckboxButtonItem(checkboxName, "help for disabled", "Помощник для инвалидов", "На 1 этаже вас встретит специалист <br> и проводит до номера.")
 

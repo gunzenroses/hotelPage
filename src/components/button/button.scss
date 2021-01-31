@@ -2,7 +2,11 @@
     width: 320px;
     height: 269px;
     top: 40.5px;
-    @include isFlex($direction: column);
+    @include isFlex($direction: column, $justify: flex-start);
+}
+
+.button-container > .label {
+    margin-bottom: 12px;
 }
 
 .button-row {
@@ -10,20 +14,19 @@
 }
 
 .button-row:nth-child(2) {
-    top: 16px;
-    height: 118px;
+    margin-top: 1px;
+    height: 148px;
     width: 218px;
     flex-wrap: wrap;
 }
 
 .button-row:nth-child(3) {
-    top: 31px;
     height: 16px;
-    width: 142px;
+    width: 135px;
+    margin-bottom: 30px;
 }
 
 .button-row:last-child {
-    top: 30px;
     width: 320px;
     height: 44px;
 }
@@ -88,7 +91,7 @@
 }
 
 .button_clear + .button_clear {
-    margin-left: 20px;
+    margin-left: 14px;
 }
 
 
@@ -141,6 +144,7 @@
     @extend .button_link_big;
     width: 320px;
     height: 44px;
+    font-size: 12px;
     line-height: 44px;
     &::before {
         font-family: $MaterialIcons;

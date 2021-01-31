@@ -4,7 +4,8 @@ mixin comment(authorPic, authorName, commentTime, buttonLikeId, buttonNumber, co
     .widget
         .comment
             .comment__head
-                img(class="author__pic" src=authorPic)
+                .author__pic
+                    img(src=authorPic alt="profile picture")
                 .info__description
                     div(class="info__main")= authorName
                     div(class="info__additional")= commentTime

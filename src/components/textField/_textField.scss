@@ -9,13 +9,19 @@
     border: 1px solid $darkShadeLess;
     background: transparent;
     border-radius: 4px;
-    padding-left: 15px;
+    padding-left: 13px;
+    padding-bottom: 1px;
     color: $darkShadeMore;
+    letter-spacing: -0.01em;
 
     &:hover,
     &:focus {
         border: 1px solid $darkShadeMiddle;
     }
+}
+
+.textfield > input {
+    letter-spacing: -0.01em;
 }
 
 .label_none {

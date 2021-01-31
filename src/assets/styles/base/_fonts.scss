@@ -9,6 +9,7 @@
   font-weight: 400;
   src: url("@~fonts/montserrat/Montserrat-Regular.eot");
   src: url("@~fonts/montserrat/Montserrat-Regular.eot"),
+  url("@~fonts/montserrat/Montserrat-Regular.woff2") format('woff2'),
   url("@~fonts/montserrat/Montserrat-Regular.woff") format('woff'),
   url("@~fonts/montserrat/Montserrat-Regular.ttf") format('truetype'),
   url("@~fonts/montserrat/Montserrat-Regular.svg") format('svg');
@@ -23,6 +24,7 @@
   font-weight: 700;
   src: url("@~fonts/montserrat/Montserrat-Bold.eot");
   src: url("@~fonts/montserrat/Montserrat-Bold.eot"),
+  url("@~fonts/montserrat/Montserrat-Bold.woff2") format('woff2'),
   url("@~fonts/montserrat/Montserrat-Bold.woff") format('woff'),
   url("@~fonts/montserrat/Montserrat-Bold.ttf") format('truetype'),
   url("@~fonts/montserrat/Montserrat-Bold.svg") format('svg');

@@ -20,13 +20,13 @@ include ../../components/comment/_comment.pug
         .formElements__element_first
             .formElements__container_first 
                 +emailContainer("Text field", "default")
-                +nameContainer("Text field", "hover / focused", "This is awesome")
+                +nameContainer("Text field", "hover / focus", "This is pretty awesome")
                 +dropdownGuestsLabeled("dropdown", "", "dropdown_guests_0", "", "dropdownGuestsInput_0")
                 +birthdayContainer("Masked text field", "")
 
             .formElements__container_second
                 +dateDropdownRangeContainer("dataRange_1", "Date dropdown", "", "Date dropdown", "19.08.2019", "", "calendar_1")
-                +dateDropdownRange("dataRange_2", "dropdown", "19 авг - 23 авг", "")
+                +dateDropdownRange("dataRange_2", "filter rate dropdown", "19 авг - 23 авг", "")
 
                 .container_medium
                     +emailSubscribeContainer("Subscription text field", "")
@@ -47,14 +47,12 @@ include ../../components/comment/_comment.pug
             .width-and-heigh_266
                 +dropdownRoomsLabeled("dropdown", "default", "dropdown_rooms_1", "", "dropdownRoomsInput_1")
                 +dropdownRoomsLabeled("dropdown", "expanded", "dropdown_rooms_2", "dropdown__show", "dropdownRoomsInput_2")
-            +dropdownCheckbox("Expandable checkbox list", "dropdown__show")
             +dropdownCheckbox("Expandable checkbox list", "")
-            
+            +dropdownCheckbox("Expandable checkbox list", "dropdown__show")
             
         .formElements__element_fifth
             +dropdownGuestsLabeled("dropdown", "", "dropdown_guests_1", "dropdown__show", "dropdownGuestsInput_1")
-            .margin__left_30
-                +richCheckboxButtons("accessibility", "Rich Checkbox Buttons")
+            +richCheckboxButtons("accessibility", "Rich Checkbox Buttons")
 
         .formElements__element_sixth
             +dropdownGuestsLabeled("dropdown", "", "dropdown_guests_2", "dropdown__show", "dropdownGuestsInput_2")
@@ -65,4 +63,4 @@ include ../../components/comment/_comment.pug
             +badgeItem("location_city", "Удобство", "Окно в каждой из спален")
             
         .formElements__element_eighth
-            +comment("../../assets/images/avatar.jpg", "Мурад Сарафанов", "5 дней назад", "likes_author_1", 12, "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.")
+            +comment("../../assets/images/avatar.jpg", "Мурад Сарафанов", "5 дней назад", "likes_author_1", 12, "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. \u00A0 И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.")

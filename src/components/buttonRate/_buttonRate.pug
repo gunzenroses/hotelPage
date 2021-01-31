@@ -1,5 +1,5 @@
 mixin buttonRateContainer(labelText)
-    div(class="label")= labelText
+    h3(class="label")= labelText
     .row
         //+buttonRate(...starId, starContainerId, ...starRate)
         +buttonRate("star-5", "star-4", "star-3", "star-2", "star-1", "rating", false, true)
@@ -18,7 +18,7 @@ mixin buttonRateItem(inputId, inputName, inputValue, ifChecked=false)
     label(for=inputId).input_label
 
 //- .container_buttonRate
-//-     .label Rate button
+//-     h3.label Rate button
 //-     .row
 //-         .buttonRate
 //-             input(type="radio" id="star-5" name="rating" value="5").input_rate

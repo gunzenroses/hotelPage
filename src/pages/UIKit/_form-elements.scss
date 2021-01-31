@@ -15,8 +15,8 @@
     top: 30px;
     left: 30px;
     content: "";
-    width: 30px;
-    height: 30px;
+    width: 48px;
+    height: 48px;
     background-image: url(/assets/images/logo.svg);
     background-size: 100%;
     background-position: center;
@@ -38,54 +38,105 @@
 */
 
 .formElements_inner {
-    @include container($width: 1160px, $height: 1580px, $mt: 140px, $ms: auto, $mb: 132px);
+    @include container($width: 1159px, $height: 1580px, $mt: 143px, $ms: auto, $mb: 130px);
     @include isFlex($wrap: wrap);
     background: white;
 }
 
 .formElements__element_first {
-    @include container($width: 321px, $height: 636px, $mt: 0, $mb: 100px);
+    @include container($width: 321px, $height: 636px, $mt: 0, $mb: 94px);
     // width: 321px;
     // height: 636px;
-    margin-right: 126px;
+    margin-right: 120px;
     //margin-bottom: 100px;
 }
 
 .formElements__element_second {
     @include container($width: 260px, $height: 537px);
-    margin-right: 102px;
-    @include isFlex($direction: column, $align: flex-start);
+    margin-right: 127px;
+    @include isFlex($direction: column, $justify: flex-start, $align: flex-start);
+}
+
+.formElements__element_second > div:first-of-type {
+    margin-bottom: 44px;
+}
+
+.formElements__element_second > div:nth-of-type(2) {
+    margin-bottom: 39px;
+}
+
+.formElements__element_second > div:nth-of-type(3) {
+    margin-bottom: 42px;
+}
+
+.formElements__element_second > div:nth-of-type(4) {
+    margin-bottom: 42px;
+}
+
+.formElements__element_second > div:last-of-type {
+    margin-top: 16px;
 }
 
 .formElements__element_third {
     @include container($width: 320px, $height: 503px);
-    @include isFlex($direction: column, $align: flex-start);
+    @include isFlex($direction: column, $align: flex-start, $justify: flex-start);
 }
+
+.formElements__element_third > div:first-of-type {
+    margin-top: 2px;
+}
+
+.formElements__element_third > div:nth-of-type(2) {
+    margin-top: 40px;
+}
+
+.formElements__element_third > div:nth-of-type(3) {
+    margin-top: 40px;
+}
+
 
 .formElements__element_forth {
     width: 267px;
-    //min-height: 647px;
-    min-height: 414px;
-    margin-right: 151px;
-    margin-bottom: 40px;
-    @include isFlex($direction: column, $align: flex-start);
+    min-height: 647px;
+    margin-right: 175px;
+    margin-bottom: 33px;
+    @include isFlex($direction: column, $justify: flex-start, $align: flex-start);
+}
+
+.formElements__element_forth > div:first-of-type {
+    margin-bottom: 41px;
+}
+
+.formElements__element_forth > div:nth-of-type(2) {
+    margin-bottom: 20px;
+    margin-left: 1px;
 }
 
 .formElements__element_fifth {
     @include container($width: 320px, $height: 465px);
-    margin-right: 102px;
-    margin-top: 37px;
-    @include isFlex($direction: column, $align: flex-start);
+    //margin-right: 102px;
+    margin-right: 69px;
+    margin-top: 3px;
+    @include isFlex($direction: column, $align: flex-start, $justify: flex-start);
+}
+
+.formElements__element_fifth > div:nth-of-type(2){
+    margin-top: 257px;
 }
 
 .formElements__element_sixth {
     @include container($width: 320px, $height: 467px);
-    @include isFlex($direction: column, $align: flex-start);
+    margin-top: 3px;
+    @include isFlex($direction: column, $align: flex-start, $justify: flex-start);
+}
+
+.formElements__element_sixth > div:nth-of-type(2) {
+    margin-top: 255px;
 }
 
 .formElements__element_seventh {
-    @include container($width: 291px, $height: 158px);
-    margin-right: 156px;
+    @include container($width: 291px, $height: 156px);
+    margin-right: 120px;
     @include isFlex($direction: column, $align: flex-start);
 }
 
@@ -93,6 +144,7 @@
     max-width: 711px;
     min-height: 133px;
     margin-top: 10px;
+    margin-right: 2px;
     @include isFlex($direction: column, $align: flex-start);
 }
 
@@ -202,15 +254,38 @@
     }
 
     &__container_first {
-        min-height: 322px;
+        justify-content: flex-start;
+        height: 322px;
         width: 320px;
     }
 
+    &__container_first > div:first-of-type{
+        margin-bottom: 20px;
+    }
+
+    &__container_first > div:nth-of-type(2){
+        margin-bottom: 22px;
+    }
+
+    &__container_first > div:nth-of-type(3){
+        margin-bottom: 21px;
+    }
+
     &__container_second {
+        justify-content: flex-start;
         min-height: 274px;
         width: 321px;
-        margin-top: 40px;
+        margin-top: 39px;
     }
+
+    &__container_second > div:first-of-type {
+        margin-bottom: 36px;
+    }
+
+    &__container_second > div:nth-of-type(2){
+        margin-bottom: 40px;
+    }
+
 
     &__container_third {
         width: 266px;
@@ -228,3 +303,15 @@
 /*
     Containers for components
 */
+
+.container_medium .label {
+    margin-bottom: 3px;
+    margin-top: 4px;
+}
+
+
+.container_medium > .label {
+    margin-bottom: 3px;
+    margin-top: 4px;
+    letter-spacing: 0.01em;
+}
