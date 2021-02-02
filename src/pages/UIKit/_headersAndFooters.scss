@@ -3,14 +3,14 @@
 */
 
 .headersAndFooters_outer {
-    @include container($width: 1440px, $height: 1853px, $mt: 50px, $mb: 50px, $ms: auto);
+    @include container($width: 1440px, $height: 1350px, $mt: 50px, $mb: 50px, $ms: auto);
     @include isFlex($direction: column);
     justify-content: flex-start;
     padding-top: 140px;
     padding-bottom: 140px;
     position: relative;
     overflow: auto; //to avoid margin-collapse
-    background: $light;
+    background: $background;
 }
 
 .headersAndFooters_outer>div:not(:last-of-type){
@@ -19,15 +19,7 @@
 
 
 .headersAndFooters_outer::before {
-    position: absolute;
-    top: 30px;
-    left: 30px;
-    content: "";
-    width: 30px;
-    height: 30px;
-    background-image: url(/assets/images/logo.svg);
-    background-size: 100%;
-    background-position: center;
+    @extend .formElements_outer::before;
 }
 
 /*

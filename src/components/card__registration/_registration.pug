@@ -1,20 +1,15 @@
 mixin cardRegistration()
     .card_registration
-        .card__text Регистрация аккаунта
-        .margin__top_10
-            +name()
+        h1.card__text Регистрация аккаунта
+        +name()
         +surname()
         +buttonsRadio("gender-man", true, "gender-woman", false)
-        .margin__top_10
-            +birthdayContainer("Дата рождения", "")
-        .margin__top_10
-            +loginContainer("Данные для входа в сервис", "")
+        +birthdayContainer("Дата рождения", "")
+        +loginContainer("Данные для входа в сервис", "")
         +buttonToggleItem("special offers", false)
-        .margin__top_10
-            +buttonFormSubmit("Перейти к оплате")
-        .margin__top_20
-            .card__text_row
-                .card__subline Уже есть аккаунт на Toxin
-                +buttonFormLink("Войти", "/login")
+        +buttonFormSubmit("Перейти к оплате")
+        .card__text_row
+            .card__subline Уже есть аккаунт на Toxin
+            +buttonFormLink("Войти", "/login")
 
 

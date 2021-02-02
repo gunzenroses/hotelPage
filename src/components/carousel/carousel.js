@@ -5,51 +5,55 @@ let carousels = document.querySelectorAll(".carousel");
 // do the following code for every carousel
 for (let carousel of carousels){
     let carouselInputs = carousel.getElementsByClassName("carousel__radio")[0];
-    let carouselNext = carousel.querySelector(".carousel__btn_next");
-    let carouselPrev = carousel.querySelector(".carousel__btn_prev");
     let carouselPictures = carousel.querySelector(".carousel__pictures");
     let leftValue = carouselPictures.style.left;
     carouselInputs.querySelectorAll(".carousel__radio_real")[0].checked = true;
     carouselPictures.style.left = 0;
     
-    carouselPrev.addEventListener("click", () => {
-        leftValue += 100;
-        switch(leftValue){
-            case 0:  
-                    carouselInputs.querySelectorAll(".carousel__radio_real")[0].checked = true;
-                    carouselPictures.style.left = leftValue + "%";
-                    break;
-            case -100: carouselInputs.querySelectorAll(".carousel__radio_real")[1].checked = true;
-                        carouselPictures.style.left = leftValue + "%";
-                        break;
-            case -200: carouselInputs.querySelectorAll(".carousel__radio_real")[2].checked = true;
-                        carouselPictures.style.left = leftValue + "%";
-                        break;
-            case 100: leftValue = -300;
-                    carouselInputs.querySelectorAll(".carousel__radio_real")[3].checked = true;
-                    carouselPictures.style.left = leftValue + "%";            
-                    break;
-        }
-    });
-
-    carouselNext.addEventListener("click", () => {
-        leftValue -= 100;
-        switch(leftValue){
-            case -400:  leftValue = 0;
+    if (carousel.querySelector(".carousel__btn_prev")){
+        let carouselPrev = carousel.querySelector(".carousel__btn_prev");
+        carouselPrev.addEventListener("click", () => {
+            leftValue += 100;
+            switch(leftValue){
+                case 0:  
                         carouselInputs.querySelectorAll(".carousel__radio_real")[0].checked = true;
                         carouselPictures.style.left = leftValue + "%";
                         break;
-            case -100: carouselInputs.querySelectorAll(".carousel__radio_real")[1].checked = true;
-                        carouselPictures.style.left = leftValue + "%";
-                        break;
-            case -200: carouselInputs.querySelectorAll(".carousel__radio_real")[2].checked = true;
-                        carouselPictures.style.left = leftValue + "%";
-                        break;
-            case -300: carouselInputs.querySelectorAll(".carousel__radio_real")[3].checked = true;
+                case -100: carouselInputs.querySelectorAll(".carousel__radio_real")[1].checked = true;
+                            carouselPictures.style.left = leftValue + "%";
+                            break;
+                case -200: carouselInputs.querySelectorAll(".carousel__radio_real")[2].checked = true;
+                            carouselPictures.style.left = leftValue + "%";
+                            break;
+                case 100: leftValue = -300;
+                        carouselInputs.querySelectorAll(".carousel__radio_real")[3].checked = true;
                         carouselPictures.style.left = leftValue + "%";            
                         break;
-        }
-    });
+            }
+        })
+    };
+
+    if (carousel.querySelector(".carousel__btn_next")){
+        let carouselNext = carousel.querySelector(".carousel__btn_next");
+        carouselNext.addEventListener("click", () => {
+            leftValue -= 100;
+            switch(leftValue){
+                case -400:  leftValue = 0;
+                            carouselInputs.querySelectorAll(".carousel__radio_real")[0].checked = true;
+                            carouselPictures.style.left = leftValue + "%";
+                            break;
+                case -100: carouselInputs.querySelectorAll(".carousel__radio_real")[1].checked = true;
+                            carouselPictures.style.left = leftValue + "%";
+                            break;
+                case -200: carouselInputs.querySelectorAll(".carousel__radio_real")[2].checked = true;
+                            carouselPictures.style.left = leftValue + "%";
+                            break;
+                case -300: carouselInputs.querySelectorAll(".carousel__radio_real")[3].checked = true;
+                            carouselPictures.style.left = leftValue + "%";            
+                            break;
+            }
+        })
+    };
     
     carouselInputs.addEventListener("click", event => {
         switch(event.target.value){

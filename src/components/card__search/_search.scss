@@ -1,15 +1,20 @@
 .card_search {
     @include containerShadowed();
-    @include isFlex($direction: column);
+    @include isFlex($direction: column, $justify: flex-start);
     width: 380px;
     height: 374px;
-    // padding: 40px 30px 30px;
+    padding-top: 39px;
+    padding-left: 29px;
 }
 
-.card_search > div + .card_search > div {
+.card_search > div:first-of-type {
+    margin-top: 52px;
+}
+
+.card_search > div:nth-of-type(2) {
     margin-top: 20px;
 }
 
-.card_search > div + .card_search > button {
+.card_search > button {
     margin-top: 30px;
 }

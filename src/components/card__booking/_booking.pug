@@ -38,9 +38,7 @@ mixin bookingText(rowSize, bookingNumber, bookingType, bookingPrice)
         .booking__row_big
             .booking__text_left
                 span.booking__text_sign №
-                span &nbsp;
                 span.booking__text_number!= bookingNumber  
-                span &nbsp;
                 span.booking__text_type!= bookingType
             .booking__text_right
                 span.booking__text_price!= bookingPrice + "₽"
@@ -48,10 +46,8 @@ mixin bookingText(rowSize, bookingNumber, bookingType, bookingPrice)
     else
         .booking__row_small
             .booking__text_left
-                span.booking__text_sign № 
-                span &nbsp;
-                span.booking__text_sign!= bookingNumber 
-                span &nbsp;
+                span.booking__text_sign №
+                span.booking__text_number!= bookingNumber
                 span.booking__text_type!= bookingType 
             .booking__text_right
                 span.booking__text_price!= bookingPrice + "₽"

@@ -1,11 +1,22 @@
 include ../carousel/_carousel.pug
 
-//- - var room888 = {src: ["../../assets/images/room.jpg", "../../assets/images/room.jpg", "../../assets/images/room.jpg", "../../assets/images/room.jpg"], bookingNumber: "888", bookingType: "Люкс", bookingPrice: "9 900", starIds: ["star3-5", "star3-4", "star3-3", "star3-2", "star3-1"], starName: "rating3", starRate: [fasle, true], reviewAmount: "65"}
+//- - var room888 = {src: ["../../assets/images/room.jpg", "../../assets/images/room.jpg", "../../assets/images/room.jpg", "../../assets/images/room.jpg"], bookingNumber: "888", bookingType: "Люкс", bookingPrice: "9 990", starIds: ["star3-5", "star3-4", "star3-3", "star3-2", "star3-1"], starName: "rating3", starRate: [fasle, true], reviewAmount: "65"}
 
 mixin room(roomOptions)
     - var {src = [], bookingNumber = "999", bookingType = false, bookingPrice = 0, starIds = [], starName = inputName, starRate = [], reviewAmount = 0} = roomOptions
     .card__room
-        +carousel(src)
+        +carousel(src, nameForPictures="room " + bookingNumber)
+        .room__info
+            +bookingText("small", bookingNumber, bookingType, bookingPrice)
+            .room__line
+            .booking__row_small
+                +buttonRate(...starIds, starName, ...starRate)
+                +review(reviewAmount)
+
+mixin roomLight(roomOptions)
+    - var {src = [], bookingNumber = "999", bookingType = false, bookingPrice = 0, starIds = [], starName = inputName, starRate = [], reviewAmount = 0} = roomOptions
+    .card__room
+        +carouselLight(src, nameForPictures="room " + bookingNumber)
         .room__info
             +bookingText("small", bookingNumber, bookingType, bookingPrice)
             .room__line

@@ -24,8 +24,12 @@
 
 .date__range {
     @extend .dropdown__button;
+    padding-left: 12px;
 }
 
+.date__range input::placeholder {
+    color: $darkShadeMore;
+}
 
 .dropdown__show ~ .container__dataRange .date__range::before {
     transform: rotate(180deg);

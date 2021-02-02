@@ -1,6 +1,39 @@
 .card_registration {
     @include containerShadowed();
-    @include isFlex($direction: column);
+    @include isFlex($direction: column, $justify: flex-start);
+    padding-left: 29px;
+    padding-right: 29px;
+    padding-top: 39px;
     width: 380px;
     height: 646px;
+}
+
+.card_registration > .textfield:first-of-type {
+    margin-top: 20px;
+}
+
+.card_registration > .textfield:nth-of-type(3) {
+    margin-top: 11px;
+}
+
+.card_registration > .radio_row {
+    margin-top: 11px;
+}
+
+.card_registration > .widget {
+    margin-top: 20px;
+}
+
+.card_registration > .toggle_element {
+    margin-top: 10px;
+}
+
+.card_registration > .button_submit {
+    margin-top: 20px;
+    padding: 15px 20px;
+}
+
+.card_registration > .card__text_row {
+    //margin-top: 30px;
+    letter-spacing: 0.005em;
 }

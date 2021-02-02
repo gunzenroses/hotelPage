@@ -11,15 +11,7 @@
 }
 
 .cards_outer::before {
-    position: absolute;
-    top: 30px;
-    left: 30px;
-    content: "";
-    width: 30px;
-    height: 30px;
-    background-image: url(/assets/images/logo.svg);
-    background-size: 100%;
-    background-position: center;
+    @extend .formElements_outer::before;
 }
 
 /*
@@ -38,18 +30,24 @@
 */
 
 .cards_inner {
-    @include container($width: 1160px, $height: 1060px, $mt: 150px, $ms: auto, $mb: 140px);
+    @include container($width: 1200px, $height: 1061px, $mt: 149px, $ms: auto, $mb: 141px);
     @include isFlex($direction: column, $wrap: wrap, $justify: flex-start);
+    margin-left: 139px;
+    
     background: transparent;
 }
 
 .cards_inner > div:not(:first-of-type){
-    margin-top: 40px;
+    margin-top: 41px;
 }
 
 .cards_inner > div:nth-of-type(3), 
 .cards_inner > div:nth-of-type(5) {
     margin-top: 0;
+}
+
+.cards_inner > div:last-of-type{
+    margin-top: 39px;
 }
 
 
@@ -118,20 +116,27 @@
 .card__text {
     width: 320px;
     min-height: 30px;
-    font-size: 24px;
-    line-height: 30px;
-    font-family: $Montserrat;
-    font-weight: 700;
+    letter-spacing: .0005em;
     text-align: left;
+    line-height: 29px;
 }
 
 .card__subline {
     font-size: 14px;
+    font-weight: 400;
     line-height: 44px;
+    color: $darkShadeMost;
 }
 
 .card__text_row {
     width: 320px;
     height: 44px;
+    margin-top: 29px;
+    letter-spacing: 0.005em;
     @include isFlex();
+}
+
+
+.card__text_row > .button_filled {
+    margin-top: 1px;
 }

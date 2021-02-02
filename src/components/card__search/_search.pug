@@ -1,6 +1,6 @@
 mixin cardSearch()
     .card_search
-        .card__text Найдём номера под ваши пожелания
+        h1.card__text Найдём номера под ваши пожелания
         +dateDropdownRangeContainer("dataRange_3", "Прибытие", "", "Выезд", "", "", "calendar_3")
         +dropdownGuestsLabeled("Гости", "", "dropdown_guests_3", "", "dropdownGuestsInput_3")
         +buttonFormSubmit("Подобрать номер")

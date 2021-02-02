@@ -1,9 +1,11 @@
 .card__booking {
     @include containerShadowed();
-    @include isFlex($direction: column);
+    @include isFlex($direction: column, $justify: flex-start);
     width: 380px;
     height: 511px;
-    // padding: 30px 40px 40px;
+    padding-top: 48px;
+    padding-left: 29px;
+    padding-right: 31px;
 }
 
 
@@ -16,9 +18,28 @@
     @include isFlex();
 }
 
-.card__booking .booking__row_big {
-    margin-bottom: 20px;
+.card__booking > div:nth-of-type(2) {
+    margin-top: 13px;
 }
+
+.card__booking > div:nth-of-type(3) {
+    margin-top: 20px;
+}
+
+.card__booking > div:nth-of-type(4) {
+    margin-top: 18px;
+}
+
+.card__booking > div:nth-of-type(7) {
+    margin-top: 21px;
+    width: 330px;
+}
+
+.card__booking > button {
+    margin-top: 21px;
+}
+
+
 
 .booking__row_small {
     @extend .booking__row_big;
@@ -34,22 +55,29 @@
 .booking__text_sign {
     font-size: 14px;
     display: inline-block;
+    padding-right: 4px;
 }
 
+
 .booking__text_number {
-    font-size: 24px;
+    font-size: 19px;
     display: inline-block;
+    letter-spacing: 0.01em;
+    padding-right: 2px;
 }
 
 .booking__text_type {
-    font-size: 12px;
+    font-size: 11.5px;
     color: $purple;
+    letter-spacing: .02em;
     text-transform: uppercase;
     display: inline-block;
 }
 
 .booking__text_right {
     color: $darkShadeMiddle;
+    letter-spacing: 0.01em;
+    line-height: 26px;
 }
 
 .booking__text_price {
@@ -75,11 +103,14 @@
     font-weight: 400;
     line-height: 18px;
     color: $darkShadeMore;
+    letter-spacing: 0.005em;
+    margin-bottom: 10px;
+    margin-left: 1px;
 }
 
 .booking__info_description {
     display: inline-block;
-    width: 215px;
+    width: 220px;
     text-align: left;
 }
 
@@ -90,6 +121,8 @@
     border-radius: 50%;
     border: 1px solid $darkShadeLess;
     position: relative;
+    margin-left: -5px;
+    margin-top: -1px;
 }
 
 .booking__info_sign::before {
@@ -99,7 +132,7 @@
     font-size: 12px;
     line-height: 14px;
     top: 2px;
-    left: 8px;
+    left: 7px;
     color: $darkShadeLess;
 }
 
@@ -112,18 +145,21 @@
 
 
 .booking__total_row {
+    width: 320px;
     @include isFlex();
     color: $darkShadeMost;
     font-size: 19px;
     line-height: 24px;
     font-weight: 700;
     position: relative;
+    letter-spacing: 0.01em;
+    margin-left: 1px;
 }
 
 .booking__total_line {
     display: flex;
     align-items: flex-end;
-    width: 180px;
-    height: 18px;
-    border-bottom: 1px dashed $darkShadeLess;
+    width: 190px;
+    height: 19px;
+    border-bottom: 1px dotted $darkShadeLess;
 }

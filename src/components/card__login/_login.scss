@@ -1,19 +1,17 @@
 .card__login {
     @include containerShadowed();
-    @include isFlex($direction: column);
+    @include isFlex($direction: column, $justify: flex-start);
     width: 380px;
     height: 360px;
-}
-
-.card__login > button,
-.card__login > div {
-    margin-top: 20px;
+    padding-left: 29px;
+    padding-right: 29px;
+    padding-top: 39px;
 }
 
 .card__login > div:first-of-type {
-    margin-top: 0;
+    margin-top: 20px;
 }
 
-.card__login > div:last-of-type {
-    margin-top: 30px;
+.card__login > button {
+    margin-top: 20px;
 }

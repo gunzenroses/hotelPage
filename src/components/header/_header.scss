@@ -58,7 +58,12 @@
 .header__navbar {
     width: 447px;
     height: 21px;
-    @include isFlex($align: center);
+    @include isFlex($align: center, $justify: flex-start);
+    margin-right: 20px;
+}
+
+.header__navbar > a,
+.header__navbar > div:not(:last-of-type) {
     margin-right: 20px;
 }
 
@@ -85,7 +90,7 @@
 }
 
 .header__buttons .button_link_big::before {
-    content: "Зарегестрироваться";
+    content: "Зарегистрироваться";
 }
 
 /*
@@ -136,6 +141,7 @@
     height: 18px;
     line-height: 18px;
     @include isFlex($direction: column);
+    letter-spacing: 0.01em;
 }
 
 .dropdown_navlink {

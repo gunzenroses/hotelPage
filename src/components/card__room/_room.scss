@@ -1,6 +1,6 @@
 .card__room {
     @include containerDimed();
-    @include isFlex($direction: column);
+    @include isFlex($direction: column, $justify: flex-start);
     width: 270px;
     height: 258px;
     position: relative;
@@ -9,16 +9,22 @@
 
 .room__info {
     width: 233px;
-    height: 67px;
+    height: 64px;
     @include isFlex($direction: column);
-    margin: 20px 17px 19px 20px;
+    margin: 20px 19px 19px 21px;
+}
+
+.room__info .booking__row_small:last-of-type{
+    padding-right: 3px;
+    font-size: 13px;
 }
 
 .room__line {
     width: 100%;
     height: 10px;
     border-bottom: 1px solid $darkShadeFew;
-    margin-bottom: 8px;
+    margin-bottom: 7px;
+    margin-top: 10px;
 }
 
 .room__row {
