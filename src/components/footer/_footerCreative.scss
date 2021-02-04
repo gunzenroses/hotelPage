@@ -7,16 +7,17 @@
 
 .footer__creative_inner {
     @include container($width: 560px, $height: 127px, $mt: 120px, $ms: 104px, $mb: 120px);
-    @include isFlex($direction: column, $align: center);
+    @include isFlex($direction: column, $justify: flex-start, $align: center);
     position: relative;
 }
 
-.footer__creative_inner a{
-    margin-bottom: 20px;
+.footer__creative_inner > div:first-of-type {
+    margin-top: 22px;
 }
 
-.footer__creative_inner .copyright__text {
-    margin-bottom:git  25px;
+.footer__creative_inner > div:last-of-type {
+    margin-top: 28px;
+    margin-left: 3px;
 }
 
 @media (max-width: 800px){
@@ -44,5 +45,3 @@
         min-width: 320px;
     }
 }
-
-
