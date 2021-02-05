@@ -1,0 +1,16 @@
+.landing_page {
+    @include container($width: 1440px, $height: 1343px, $mt: 50px, $mb: 50px, $ms: auto);
+    @include isFlex($justify: flex-start);
+    position: relative;
+    display: block;
+    overflow: auto; //to avoid margin-collapse
+    background: $light;
+}
+
+@media (max-width: 1440px){
+    .landing_page {
+        width: 100vw;
+        height: auto;
+        min-width: 320px;
+    }
+}
