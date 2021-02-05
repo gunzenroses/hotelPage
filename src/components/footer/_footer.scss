@@ -6,6 +6,7 @@
     @include isFlex($direction: column, $align: center);
     width: 1440px;
     height: 443px;
+    margin: 0 auto;
 }
 
 .footer__navbar_outer {
@@ -235,7 +236,7 @@
     .footer_outer,
     .footer__navbar_outer,
     .footer__navbar_inner {
-        min-width: 360px;
+        min-width: 320px;
     }
 
     .footer__links .dropdown__content {
@@ -286,6 +287,9 @@
         position: relative;
     }
 
+    .footer__info_subscribe > .textfield {
+        width: 260px;
+    }
 }
 
 
@@ -395,23 +399,31 @@
         @include container($width: 85%, $height: 36px, $mt: 20px, $ms: auto, $mb: 20px);
     }
 
-    .footer__copyright_outer .copyright__text {
+    .footer__copyright_inner > .copyright__text {
         width: 230px;
         line-height: 18px;
+    }
+
+    .footer__copyright_inner > .copyright__social {
+        height: 36px;
     }
 }
 
 @media (max-width: 400px) {
     .footer__copyright_outer {
-        min-width: 360px;
+        min-width: 320px;
     }
 
     .footer__copyright_inner {
         width: 90%,
     }
 
-    .footer__copyright_outer .copyright__text {
+    .footer__copyright_inner > .copyright__text {
         width: 200px;
         font-size: 12px;
+    }
+
+    .footer__copyright_inner > .copyright__social {
+        width: 100px;
     }
 }

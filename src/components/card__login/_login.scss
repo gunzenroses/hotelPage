@@ -1,4 +1,4 @@
-.card__login {
+.card_login {
     @include containerShadowed();
     @include isFlex($direction: column, $justify: flex-start);
     width: 380px;
@@ -8,10 +8,18 @@
     padding-top: 39px;
 }
 
-.card__login > div:first-of-type {
+.card_login > div:first-of-type {
     margin-top: 20px;
 }
 
-.card__login > button {
+.card_login > button {
     margin-top: 20px;
+}
+
+@media (max-width: 400px){
+    .card_login {
+        padding: 25px 20px;
+        min-width: 320px;
+        width: 100vw;
+    }
 }

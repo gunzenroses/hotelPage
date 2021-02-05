@@ -41,6 +41,8 @@
 @import "./components/footer/footerCreative";
 @import "./components/dropdowns/dropdowns";
 
+@import "./components/carousel_background/carousel_background";
+
 /*
     Cards
 */
@@ -56,3 +58,5 @@
 @import "./pages/UIKit/form-elements";
 @import "./pages/UIKit/cards";
 @import "./pages/UIKit/headersAndFooters";
+
+@import "./pages/landing_page.scss";

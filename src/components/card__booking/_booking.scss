@@ -1,4 +1,4 @@
-.card__booking {
+.card_booking {
     @include containerShadowed();
     @include isFlex($direction: column, $justify: flex-start);
     width: 380px;
@@ -18,31 +18,33 @@
     @include isFlex();
 }
 
-.card__booking > div:nth-of-type(2) {
+.card_booking > div:nth-of-type(2) {
     margin-top: 13px;
 }
 
-.card__booking > div:nth-of-type(3) {
+.card_booking > div:nth-of-type(3) {
     margin-top: 20px;
 }
 
-.card__booking > div:nth-of-type(4) {
+.card_booking > div:nth-of-type(4) {
     margin-top: 18px;
 }
 
-.card__booking > div:nth-of-type(7) {
+.card_booking > div:nth-of-type(7) {
     margin-top: 21px;
     width: 330px;
 }
 
-.card__booking > button {
+.card_booking > button {
     margin-top: 21px;
 }
 
 
 
 .booking__row_small {
-    @extend .booking__row_big;
+    font-weight: 700;
+    position: relative;
+    @include isFlex();
     width: 233px;
     height: 24px;
     line-height: 24px;
@@ -162,4 +164,34 @@
     width: 190px;
     height: 19px;
     border-bottom: 1px dotted $darkShadeLess;
+}
+
+@media (max-width: 450px){
+    .card_booking {
+        padding: 25px 20px;
+        min-width: 320px;
+        width: 100vw;
+    }
+
+    .booking__info_row {
+        width: 280px;
+        margin: 18px auto 0;
+    }
+
+    .booking__row_big {
+        max-width: 280px;
+    }
+
+    .booking__row_small {
+
+    }
+
+    .card_booking>div:nth-of-type(7) {
+        margin: 21px auto 0;
+        width: 280px;
+    }
+
+    .booking__total_line {
+        width: 120px;
+    }
 }

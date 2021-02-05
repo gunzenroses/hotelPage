@@ -37,3 +37,11 @@
     //margin-top: 30px;
     letter-spacing: 0.005em;
 }
+
+@media (max-width: 400px){
+    .card_registration {
+        padding: 25px 30px;
+        min-width: 320px;
+        width: 100vw;
+    }
+}

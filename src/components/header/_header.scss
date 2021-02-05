@@ -5,6 +5,7 @@
     padding: 15px 140px;
     width: 1440px;
     height: 70px;
+    margin: 0 auto;
 }
 
 
@@ -242,11 +243,15 @@
     .header {
         width: 100vw;
         padding: 15px 5%;
-        min-width: 360px;
+        min-width: 320px;
     }
 }
 
 @media (max-width: 550px) {
+    .header {
+        padding: 15px 2%;
+    }
+
     .header .logo__link {
         width: 40px;
     }
@@ -260,8 +265,9 @@
     }
 
     .header__menu {
-        width: calc(90% - 106px);
-        min-width: 275px;
+        width: 70%;
+        min-width: 260px;
+        margin-left: 10px;
     }
 
     .button_link {
@@ -274,7 +280,7 @@
         font-weight: 400;
     }
 
-    .button_link_big {
+    .header__buttons > .button_link_big {
         position: relative;
         width: 136px;
         font-size: 8px;
@@ -283,6 +289,10 @@
 
     .header__buttons .button_link_big::before {
         content: "Регистрация";
+    }
+
+    .burger__menu {
+        margin: 0 10px;
     }
 }
 

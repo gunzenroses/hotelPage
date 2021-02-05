@@ -250,3 +250,9 @@
 .calendar__input {
     text-transform: uppercase;
 }
+
+@media (max-width: 400px){
+    .calendar {
+        max-width: 280px;
+    }
+}

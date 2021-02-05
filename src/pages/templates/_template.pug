@@ -1,7 +1,9 @@
 //- variables help us to change some info in dependance with page
 block variables
-
-//- we can include mixinsa as well
+  - var title = "";
+  - var description = "";
+  - var keywords = "";
+//- we can include mixins as well
 //- include ../mixing.pug?
 
 //- _template layout
@@ -24,17 +26,17 @@ html(lang='ru')
     block title
       title #{title}
 
-    block links
-      link(href='')
+    //- //- block links
+    //- //-   link(href='')
 
     block manifestBrowserconfig
       link(rel='manifest', href='../../../manifest.json')
       link(rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico")
 
-    //- Fonts
-    block fonts
-      //- font-awesome
-      link(src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css")
+    //- //- Fonts
+    //- block fonts
+    //-   //- font-awesome
+    //-   link(src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css")
 
   body
     

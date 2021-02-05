@@ -235,3 +235,11 @@
 .dropdown__rooms > .dropdown__expandedItem:last-of-type {
     margin-bottom: 3px;
 }
+
+
+@media (max-width: 400px){
+    .dropdown__container {
+        width: 280px;
+        margin: 0 auto;
+    }
+}

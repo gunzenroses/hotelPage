@@ -68,6 +68,11 @@ li {
   list-style: none;
 }
 
+img {
+  border: none;
+  display: block;
+}
+
 .purple-text {
   color: $purple;
 }
@@ -189,4 +194,19 @@ fieldset {
 
 .width-and-heigh_266 > div {
   margin-bottom: 19px;
+}
+
+@media (max-width: 400px){
+  .container_small {
+    width: 130px;
+  }
+
+  .container_medium {
+    margin: 0 auto;
+  }
+
+  .widget {
+    width: 100%;
+    margin: 0 auto;
+  }
 }

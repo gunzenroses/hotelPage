@@ -92,13 +92,13 @@
 @media (max-width: 970px) {
     .cards {
         &_outer {
-            min-width: 390px;
+            min-width: 380px;
         }
 
         &_inner {
             width: 85%;
-            min-width: 450px;
-            margin: 5% auto 5%;
+            min-width: 380px;
+            margin: 5% auto;
             height: auto;
         }
     }
@@ -131,7 +131,7 @@
 .card__text_row {
     width: 320px;
     height: 44px;
-    margin-top: 29px;
+    margin: 29px auto 0;
     letter-spacing: 0.005em;
     @include isFlex();
 }
@@ -139,4 +139,21 @@
 
 .card__text_row > .button_filled {
     margin-top: 1px;
+}
+
+
+/*
+    Media queries for Cards styles
+*/
+
+@media (max-width: 450px) {
+    .card__text,
+    .card__text_row {
+        width: 270px;
+    }
+
+    .card__text {
+        font-size: 19px;
+        margin: 0 auto;
+    }
 }

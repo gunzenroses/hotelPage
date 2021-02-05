@@ -13,13 +13,12 @@
     background: $background;
 }
 
-.headersAndFooters_outer>div:not(:last-of-type){
-    margin-bottom: 40px;
-}
-
-
 .headersAndFooters_outer::before {
     @extend .formElements_outer::before;
+}
+
+.headersAndFooters_outer>div:not(:last-of-type){
+    margin-bottom: 40px;
 }
 
 /*

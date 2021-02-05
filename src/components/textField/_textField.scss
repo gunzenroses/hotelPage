@@ -57,3 +57,10 @@
     -webkit-background-clip: text;
     background-clip: text;
 }
+
+@media (max-width: 400px){
+    .textfield_login,
+    .textfield {
+        margin: 0 auto;
+    }
+}
