@@ -1,0 +1,15 @@
+include ../../../components/header/_header.pug
+include ../../../components/footer/_footer.pug
+
+block variables
+    - var title = "UIKit";
+    - var description = "UIKit";
+    - var keywords = "UIKit";
+
+block content
+    .headersAndFooters_outer
+        +header()
+        +header("Юлий Цезарь")
+        +footer()
+        +footerCreative()
+

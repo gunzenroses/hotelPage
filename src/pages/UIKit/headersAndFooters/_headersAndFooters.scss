@@ -1,0 +1,70 @@
+/*
+    Base
+*/
+@import "../../assets/styles/base/fonts";
+@import "../../assets/styles/base/normalize.scss";
+/*
+    Utils
+*/
+@import "../../assets/styles/mixins/mixins";
+@import "../../assets/styles/utils/dimensions";
+@import "../../assets/styles/utils/colors";
+@import "../../assets/styles/utils/keyframes";
+
+/*
+    Layout
+*/
+@import "../../assets/styles/common/general";
+@import "../../assets/styles/common/select";
+
+
+/*
+    Main container
+*/
+
+.headersAndFooters_outer {
+    @include container($width: 1440px, $height: 1350px, $mt: 50px, $mb: 50px, $ms: auto);
+    @include isFlex($direction: column);
+    justify-content: flex-start;
+    padding-top: 140px;
+    padding-bottom: 140px;
+    position: relative;
+    overflow: auto; //to avoid margin-collapse
+    background: $background;
+}
+
+.headersAndFooters_outer::before {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    content: "";
+    width: 48px;
+    height: 48px;
+    background-image: url(/assets/images/logo.svg);
+    background-size: 100%;
+    background-position: center;
+}
+
+.headersAndFooters_outer>div:not(:last-of-type){
+    margin-bottom: 40px;
+}
+
+/*
+    Media query for Main container
+*/
+@media (max-width: 1440px) {
+    .headersAndFooters_outer {
+        width: 100vw;
+        height: auto;
+    }
+}
+
+@media (max-width: 750px) {
+    .headersAndFooters_outer {
+    min-width: 360px;
+    &::before {
+                top: 10px;
+                left: 10px;
+            }
+    }
+}
