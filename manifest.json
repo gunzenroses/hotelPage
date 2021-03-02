@@ -1,6 +1,8 @@
 {
-  "name": "",
-  "short_name": "",
+  "lang": "ru",
+  "dir":"ltr",
+  "name": "Room booking page",
+  "short_name": "Booking",
   "icons": [
     // {
     //   "src": "assets/images/android-chrome-192x192.png",
