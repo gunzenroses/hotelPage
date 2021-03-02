@@ -8,7 +8,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 
 // Files
-const utils = require("./utils");
+//const utils = require("./utils");
 const plugins = require("../postcss.config");
 
 // Configuration
@@ -17,13 +17,11 @@ module.exports = (env) => {
     context: path.resolve(__dirname, "../src"),
     entry: {
       app: "./app.js",
+      UIKit: "./pages/UIKit/UIKit.js"
+      // cards: "./pages/cards/cards.js",
+      // formElements: "./pages/formElements/formElements.js",
+      // haf: "./pages/headersAndFooters/haf.js",
     },
-
-    // entry: [
-    //   "webpack-dev-server/client?http://127.0.0.0:8080/",
-    //   "webpack/hot/only-dev-server",
-    //   "./app.js"
-    // ],
 
     output: {
       path: path.resolve(__dirname, "../dist"),
@@ -33,7 +31,7 @@ module.exports = (env) => {
     
     devServer: {
       contentBase: path.resolve(__dirname, "../src"),
-      inline:true,
+      inline: true,
       port: 8080,
     },
 
@@ -114,11 +112,10 @@ module.exports = (env) => {
           },
         },
         {
-          test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
-          loader: "url-loader",
+          test: /\.(woff2?|eot|ttf|otf|svg)(\?.*)?$/,
+          loader: "file-loader",
           options: {
-            limit: 5000,
-            name: "assets/fonts/[name].[hash:7].[ext]",
+            name: "assets/fonts/[name].[ext]",
           },
         },
         {
@@ -157,20 +154,12 @@ module.exports = (env) => {
 
     plugins: [
       new CopyWebpackPlugin([
-        { from: "../manifest.json", to: "manifest.json" },
-        { from: "../browserconfig.xml", to: "browserconfig.xml" },
-        // {
-        //   from: "assets/images/svg/logo.svg",
-        //   to: "assets/images/svg/logo.svg",
-        // },
+        {from: "assets/images", to: "assets/images"},
+        {from: "assets/fonts", to: "assets/fonts"},
         {
           from: "assets/images/favicon.ico",
           to: "assets/images/favicon.ico",
         },
-        // {
-        //   from: "assets/images/favicons/mstile-150x150.png",
-        //   to: "assets/images/mstile-150x150.png",
-        // },
       ]),
       new MiniCssExtractPlugin({
         filename: "assets/css/[name].[hash:7].bundle.css",
@@ -180,16 +169,21 @@ module.exports = (env) => {
       /*
         Pages
       */
-
-      // Desktop page
+    
       new HtmlWebpackPlugin({
         filename: "index.html",
-        template: "./index.pug",
+        template: path.resolve(__dirname, "../src/index.pug"),
+        chunks: ["app"],
         inject: true,
       }),
 
-      ...utils.pages(env),
-      // ...utils.pages(env, "blog"),
+      //replace one day with utils.pages(env)
+
+      new HtmlWebpackPlugin({
+        filename: "UIKit",
+        template: path.resolve(__dirname, "../src/pages/UIkit/UIKit.pug"),
+        chunks: ["UIKit"]
+      }),
 
       new webpack.ProvidePlugin({
         $: "jquery",
@@ -197,6 +191,7 @@ module.exports = (env) => {
         "window.$": "jquery",
         "window.jQuery": "jquery",
       }),
+
       new WebpackNotifierPlugin({
         title: "Your project",
       }),
