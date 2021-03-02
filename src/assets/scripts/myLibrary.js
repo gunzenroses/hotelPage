@@ -957,4 +957,4 @@ class renderCalendar {
     }
 }
 
-export { ButtonPagination, DropdownGuests, DropdownRooms, Range, likeButtons, renderCalendar}
+export { ButtonPagination, DropdownGuests, DropdownRooms, Range, likeButtons, renderCalendar }
