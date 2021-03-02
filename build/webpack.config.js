@@ -18,9 +18,6 @@ module.exports = (env) => {
     entry: {
       app: "./app.js",
       UIKit: "./pages/UIKit/UIKit.js"
-      // cards: "./pages/cards/cards.js",
-      // formElements: "./pages/formElements/formElements.js",
-      // haf: "./pages/headersAndFooters/haf.js",
     },
 
     output: {
@@ -136,20 +133,20 @@ module.exports = (env) => {
           sourceMap: true,
         }),
       ],
-      splitChunks: {
-        cacheGroups: {
-          default: false,
-          vendors: false,
-          // vendor chunk
-          vendor: {
-            filename: "assets/js/vendor.[hash:7].bundle.js",
-            // sync + async chunks
-            chunks: "all",
-            // import file path containing node_modules
-            test: /node_modules/,
-          },
-        },
-      },
+      // splitChunks: {
+      //   cacheGroups: {
+      //     default: false,
+      //     vendors: false,
+      //     // vendor chunk
+      //     vendor: {
+      //       filename: "assets/js/vendor.[hash:7].bundle.js",
+      //       // sync + async chunks
+      //       chunks: "all",
+      //       // import file path containing node_modules
+      //       test: /node_modules/,
+      //     },
+      //   },
+      // },
     },
 
     plugins: [
@@ -172,9 +169,10 @@ module.exports = (env) => {
     
       new HtmlWebpackPlugin({
         filename: "index.html",
+        minify: true,
         template: path.resolve(__dirname, "../src/index.pug"),
         chunks: ["app"],
-        inject: true,
+        inject: 'body',
       }),
 
       //replace one day with utils.pages(env)
@@ -182,7 +180,8 @@ module.exports = (env) => {
       new HtmlWebpackPlugin({
         filename: "UIKit",
         template: path.resolve(__dirname, "../src/pages/UIkit/UIKit.pug"),
-        chunks: ["UIKit"]
+        chunks: ["UIKit"],
+        inject: 'body',
       }),
 
       new webpack.ProvidePlugin({
