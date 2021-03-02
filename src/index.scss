@@ -40,7 +40,6 @@
 @import "./components/footer/footer";
 @import "./components/footer/footerCreative";
 @import "./components/dropdowns/dropdowns";
-
 @import "./components/carousel_background/carousel_background";
 
 /*
@@ -52,11 +51,17 @@
 @import "./components/card__login/login";
 @import "./components/card__room/room";
 
-/*
-    Pages
-*/
-@import "./pages/UIKit/form-elements";
-@import "./pages/UIKit/cards";
-@import "./pages/UIKit/headersAndFooters";
 
-@import "./pages/landing_page.scss";
+// /*
+//     Pages
+// */
+// @import "./pages/cards/cards";
+// @import "./pages/formElements/form-elements";
+// @import "./pages/headersAndFooters/headersAndFooters";
+
+
+// @import "./pages/UIKit/form-elements";
+// @import "./pages/UIKit/cards";
+// @import "./pages/UIKit/headersAndFooters";
+//@import "./pages/UIKit/landing_page";
+//@import "./pages/UIKit/landing_page";
