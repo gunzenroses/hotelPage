@@ -16,7 +16,8 @@ module.exports = (env) => {
     context: path.resolve(__dirname, "../src"),
     entry: {
       app: "./app.js",
-      UIKit: "./pages/UIKit/UIKit.js"
+      UIKit: "./pages/UIKit/UIKit.js",
+      landing_page: "./pages/landing_page/landing_page.js"
     },
 
     output: {
@@ -180,6 +181,14 @@ module.exports = (env) => {
         filename: "UIKit",
         template: path.resolve(__dirname, "../src/pages/UIkit/UIKit.pug"),
         chunks: ["UIKit"],
+        inject: 'body',
+      }),
+
+      new HtmlWebpackPlugin({
+        filename: "landing_page",
+        minify: true,
+        template: path.resolve(__dirname, "../src/pages/landing_page/landing_page.pug"),
+        chunks: ["landing_page"],
         inject: 'body',
       }),
 
