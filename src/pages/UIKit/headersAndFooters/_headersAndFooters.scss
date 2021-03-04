@@ -45,7 +45,11 @@
     background-position: center;
 }
 
-.headersAndFooters_outer>div:not(:last-of-type){
+.headersAndFooters_outer > div:not(:last-of-type){
+    margin-bottom: 40px;
+}
+
+.headersAndFooters_outer > nav {
     margin-bottom: 40px;
 }
 
