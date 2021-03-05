@@ -77,11 +77,11 @@
 .header__navbar span:hover {
     font-weight: 700;
     color: $darkShadeMore;
-    margin-right: -1px;
 }
 
-.header__signed .button_navlink:hover {
-    margin-right: -4px;
+.button_navlink:active {
+    font-weight: 700;
+    color: $darkShadeMore;
 }
 
 .header__buttons {
