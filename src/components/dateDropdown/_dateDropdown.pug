@@ -1,3 +1,5 @@
+include ../calendar/_calendar.pug
+
 mixin dateDropdownRangeContainer(containerId, labelText_1, inputValue_1, labelText_2, inputValue_2, dropdownClassShow, calendarId)
     div(class="dateRangeSelector" id=containerId)
         div(class="dropdown__calendar dropdown__content" + dropdownClassShow)
@@ -34,10 +36,10 @@ mixin dateDropdownSmall(labelText, inputName, inputValue, dateDataType)
 
 
 
-mixin dateDropdownRange(containerId, labelText, inputValue, dropdownClassShow)
+mixin dateDropdownRange(containerId, calendarId, labelText, inputValue, dropdownClassShow)
     div(class="dateRangeSelector" id=containerId)
         div(class="dropdown__calendar dropdown__content" + dropdownClassShow)
-            +calendar("calendar_2")
+            +calendar(calendarId)
         .container_medium.dropdown__init
             h3.label!= labelText
             .date__range
