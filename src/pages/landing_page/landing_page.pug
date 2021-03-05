@@ -17,6 +17,7 @@ block content
         .landingPage__carousel
             +carouselBackground(pics)
             .landingPage__search
-                +cardSearch()
+                form(method="get" action="/search_room")
+                    +cardSearch()
             .landingPage__text Лучшие номера для вашей работы, отдыха и просто вдохновения
         +footer()
