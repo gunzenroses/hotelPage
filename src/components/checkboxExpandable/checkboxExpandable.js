@@ -15,10 +15,10 @@ for (let dropdownWatch of dropdownWatchs){
             for (let m=0;m<dropdownWatchedParents.length;m++){
                 dropdownWatchedExpands.push(dropdownWatchedParents[m].querySelector(".dropdown__content"));
             }
-        
+
         // if you click on dropdownExpanded
         if (event.target.closest(".dropdown__show")){
-
+            console.log(event.target.parentElement);
             // and want to expand its item
             if (event.target.closest(".dropdown__init")){
 
@@ -27,7 +27,7 @@ for (let dropdownWatch of dropdownWatchs){
                 //then toggle
                 innerExpand.classList.toggle("dropdown__show");
             }
-        } else {
+        } else if (event.target.closest(".dropdown__init")){
             for (let n=0;n<dropdownWatchedExpands.length;n++){
                 if (event.target.closest(".dropdown__init") != dropdownWatchedInits[n]){
                     dropdownWatchedExpands[n].classList.remove("dropdown__show");
@@ -35,6 +35,8 @@ for (let dropdownWatch of dropdownWatchs){
                     dropdownWatchedExpands[n].classList.toggle("dropdown__show");
                 }
             }
+        } else {
+            return;
         }
     })
 }
