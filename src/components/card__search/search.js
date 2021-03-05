@@ -1,3 +1,5 @@
+// this exemplar will work for all pages
+
 import { renderCalendar, DropdownGuests } from "../../assets/scripts/myLibrary"
 import { guestsData_3 } from "../../assets/scripts/myData"
 
