@@ -17,7 +17,8 @@ module.exports = (env) => {
     entry: {
       app: "./app.js",
       UIKit: "./pages/UIKit/UIKit.js",
-      landing_page: "./pages/landing_page/landing_page.js"
+      landing_page: "./pages/landing_page/landing_page.js",
+      search_room: "./pages/search_room/search_room.js"
     },
 
     output: {
@@ -172,7 +173,7 @@ module.exports = (env) => {
         minify: true,
         template: path.resolve(__dirname, "../src/index.pug"),
         chunks: ["app"],
-        inject: 'body',
+        inject: "body",
       }),
 
       //replace one day with utils.pages(env)
@@ -181,7 +182,7 @@ module.exports = (env) => {
         filename: "UIKit",
         template: path.resolve(__dirname, "../src/pages/UIkit/UIKit.pug"),
         chunks: ["UIKit"],
-        inject: 'body',
+        inject: "body",
       }),
 
       new HtmlWebpackPlugin({
@@ -189,7 +190,15 @@ module.exports = (env) => {
         minify: true,
         template: path.resolve(__dirname, "../src/pages/landing_page/landing_page.pug"),
         chunks: ["landing_page"],
-        inject: 'body',
+        inject: "body",
+      }),
+
+      new HtmlWebpackPlugin({
+        filename: "search_room",
+        minify: true,
+        template: path.resolve(__dirname, "../src/pages/search_room/search_room.pug"),
+        chunks: ["search_room"],
+        inject: "body",
       }),
 
       new webpack.ProvidePlugin({

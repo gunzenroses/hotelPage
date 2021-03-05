@@ -1,0 +1,23 @@
+@import "../../index.scss";
+
+/*
+    Main container
+*/
+
+.searchRoom {
+    @include container($width: 1440px, $height: 1880px, $mt: 0, $mb: 0, $ms: auto);
+    @include isFlex($justify: flex-start);
+    position: relative;
+    display: block;
+    overflow: auto; //to avoid margin-collapse
+    background: $light;
+}
+
+.searchRoom__content {
+    @include container($width: 1160px, $height: 1256px, $mt: 30px, $mb: 70px, $ms: 140px);
+    @include isFlex($justify: flex-start);
+    position: relative;
+    display: block;
+    overflow: auto; //to avoid margin-collapse
+    background: $light;
+}
