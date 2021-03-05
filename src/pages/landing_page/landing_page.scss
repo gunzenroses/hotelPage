@@ -5,7 +5,7 @@
 */
 
 .landingPage {
-    @include container($width: 1440px, $height: 1343px, $mt: 50px, $mb: 50px, $ms: auto);
+    @include container($width: 1440px, $height: 1343px, $mt: 0, $mb: 0, $ms: auto);
     @include isFlex($justify: flex-start);
     position: relative;
     display: block;
