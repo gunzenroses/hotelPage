@@ -51,17 +51,10 @@
 @import "./components/card__login/login";
 @import "./components/card__room/room";
 
+/*
+    UIkit
+*/
 
-// /*
-//     Pages
-// */
-// @import "./pages/cards/cards";
-// @import "./pages/formElements/form-elements";
-// @import "./pages/headersAndFooters/headersAndFooters";
-
-
-// @import "./pages/UIKit/form-elements";
-// @import "./pages/UIKit/cards";
-// @import "./pages/UIKit/headersAndFooters";
-//@import "./pages/UIKit/landing_page";
-//@import "./pages/UIKit/landing_page";
+@import "./pages/UIKit/cards/cards";
+@import "./pages/UIKit/formElements/form-elements";
+@import "./pages/UIKit/headersAndFooters/headersAndFooters";
