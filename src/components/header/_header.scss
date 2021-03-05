@@ -143,6 +143,7 @@
     line-height: 18px;
     @include isFlex($direction: column);
     letter-spacing: 0.01em;
+    cursor: pointer;
 }
 
 .dropdown_navlink {
