@@ -1,4 +1,4 @@
-// form a list of class "dropdown__watch";
+add// form a list of class "dropdown__watch";
 let dropdownWatchs = document.querySelectorAll(".dropdown__watch");
 
 //for all dropdownWatchs add eventlistener
@@ -18,7 +18,6 @@ for (let dropdownWatch of dropdownWatchs){
 
         // if you click on dropdownExpanded
         if (event.target.closest(".dropdown__show")){
-            console.log(event.target.parentElement);
             // and want to expand its item
             if (event.target.closest(".dropdown__init")){
 
@@ -27,6 +26,7 @@ for (let dropdownWatch of dropdownWatchs){
                 //then toggle
                 innerExpand.classList.toggle("dropdown__show");
             }
+         // if you click on the same "init" element, its "dropdown" should toggle
         } else if (event.target.closest(".dropdown__init")){
             for (let n=0;n<dropdownWatchedExpands.length;n++){
                 if (event.target.closest(".dropdown__init") != dropdownWatchedInits[n]){
@@ -35,7 +35,13 @@ for (let dropdownWatch of dropdownWatchs){
                     dropdownWatchedExpands[n].classList.toggle("dropdown__show");
                 }
             }
+        // if you click somewhere else, all watched dropdowns should close
+        } else if (event.target.parentElement){
+            for (let z=0;z<dropdownWatchedExpands.length;z++){
+                dropdownWatchedExpands[z].classList.remove("dropdown__show");
+            }
         } else {
+            // for dropdowns which are supposed to be independant
             return;
         }
     })
