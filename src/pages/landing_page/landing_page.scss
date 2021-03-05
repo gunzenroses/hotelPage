@@ -13,6 +13,29 @@
     background: $light;
 }
 
+.landingPage__carousel {
+    position: relative;
+    min-width: 320px;
+}
+
+.landingPage__text {
+    position: absolute;
+    text-align: right;
+    line-height: 24px;
+    width: 270px;
+    height: 48px;
+    right: 134px;
+    bottom: 18px;
+    z-index: 2;
+}
+
+.landingPage__search {
+    position: absolute;
+    top: 70px;
+    left: 140px;
+    z-index: 2;
+}
+
 /*
     Flex for adaptive design
 */
@@ -24,3 +47,39 @@
         min-width: 320px;
     }
 } 
+
+@media (max-width: 970px){
+    .landingPage__text {
+        display: none;
+    }
+
+    .landingPage__search {
+        top: 0;
+        margin-top: calc(((830/1440 * 100vw) - 380px)/2);
+        left: 50%;
+        margin-left: -190px;
+    }
+}
+
+@media (max-width: 690px){
+    .landingPage__carousel {
+        min-height: calc(420px + (830/1440 * 100vw));
+        background: $purpleLess;
+    }
+
+    .landingPage__search {
+        margin-top: calc(830/1440 * 100vw + 20px);
+    }
+}
+
+@media (max-width: 380px){
+    .landingPage__carousel {
+        min-height: calc(374px + (830/1440 * 100vw));
+    }
+
+    .landingPage__search {
+        top: calc(830/1440 * 100vw);
+        left: 0;
+        margin: 0;
+    }
+}
