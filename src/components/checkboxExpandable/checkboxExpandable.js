@@ -1,4 +1,4 @@
-add// form a list of class "dropdown__watch";
+// form a list of class "dropdown__watch";
 let dropdownWatchs = document.querySelectorAll(".dropdown__watch");
 
 //for all dropdownWatchs add eventlistener
