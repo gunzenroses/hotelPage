@@ -162,31 +162,22 @@ class DropdownGuests {
     }
 
     enableHandlers(){
-        this.toggleHandler = this.toggleExpanded.bind(this);
-        //this.closeExpandedHandler = this.closeExpanded.bind(this);
+        // this.toggleHandler = this.toggleExpanded.bind(this);
         this.plusAndMinusHandler = this.plusAndMinus.bind(this);
         this.resetGuestsHandler = this.resetGuests.bind(this);
         this.submitGuestsHandler = this.submitGuests.bind(this);
     }
 
     enableEventListeners(){
-        this.info.addEventListener("click", this.toggleHandler);
-        //document.addEventListener("click", this.closeExpandedHandler);
+        // this.info.addEventListener("click", this.toggleHandler);
         this.dropdownExpanded.addEventListener("click", this.plusAndMinusHandler);
         this.resetButton.addEventListener("click", this.resetGuestsHandler);
         this.submitButton.addEventListener("click", this.submitGuestsHandler);
         return this;
     }
 
-    toggleExpanded(){
-        this.dropdownExpanded.classList.toggle("dropdown__show");
-        return this;
-    }
-
-    // closeExpanded(){
-    //     if (!event.target.closest(this.containerClassExpanded)){
-    //         this.dropdownExpanded.classList.remove("dropdown__show");
-    //     }
+    // toggleExpanded(){
+    //     this.dropdownExpanded.classList.toggle("dropdown__show");
     //     return this;
     // }
 
@@ -333,14 +324,14 @@ class DropdownRooms {
     }
 
     enableHandlers(){
-        this.toggleHandler = this.toggleExpanded.bind(this);
+        //this.toggleHandler = this.toggleExpanded.bind(this);
         this.minusOneHandler = this.minusOne.bind(this);
         this.plusOneHandler = this.plusOne.bind(this);
         return this;
     }
 
     enableEventListeners(){
-        this.info.addEventListener("click", this.toggleHandler);
+        //this.info.addEventListener("click", this.toggleHandler);
 
         for (let i=0;i<3;i++){
             this.dropdownMinuses[i].addEventListener("click", this.minusOneHandler);
@@ -351,10 +342,10 @@ class DropdownRooms {
         return this;
     }
 
-    toggleExpanded(){
-        this.dropdownExpanded.classList.toggle("dropdown__show");
-        return this;
-    }
+    // toggleExpanded(){
+    //     this.dropdownExpanded.classList.toggle("dropdown__show");
+    //     return this;
+    // }
 
     minusOne(){
         let orderInData = parseInt(event.target.nextElementSibling.dataset.order);
