@@ -5,8 +5,8 @@ include ../button/_button.pug
 mixin cardSearch()
     .card_search
         h1.card__text Найдём номера под ваши пожелания
-        +dateDropdownRangeContainer("dataRange_3", "Прибытие", "", "Выезд", "", "", "calendar_3")
-        +dropdownGuestsLabeled("Гости", "", "dropdown_guests_3", "", "dropdownGuestsInput_3")
+        +dateDropdownRangeContainer("calendar_search", "Прибытие", "", "Выезд", "", "")
+        +dropdownGuestsLabeled("Гости", "", "dropdown_guests_search", "", "dropdownGuestsInput_3")
         +buttonFormSubmit("Подобрать номер")
 
 

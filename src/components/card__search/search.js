@@ -1,7 +1,8 @@
 // this exemplar will work for all pages
 
 import { renderCalendar, DropdownGuests } from "../../assets/scripts/myLibrary"
-import { guestsData_3 } from "../../assets/scripts/myData"
+import { guestsData_search } from "../../assets/scripts/myData"
 
-let guestsHandler_3 = new DropdownGuests("dropdown_guests_3", ".dropdown__guests", guestsData_3);
-let renderCalendar_3 = new renderCalendar("calendar_3");
+
+let guestsHandler_search = new DropdownGuests("dropdown_guests_search", ".dropdown__guests", guestsData_search);
+let calendar_search = new renderCalendar("calendar_search");
