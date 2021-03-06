@@ -10,14 +10,14 @@ mixin dropdownGuestsLabeled(labelText, labelRightText, dropdownContainerId, drop
 
 mixin dropdownGuestsItems(dropdownContainerId, dropdownClassShow, inputId)
     div(class="dropdown" id=dropdownContainerId)
-        div(class="dropdown__guests " + dropdownClassShow)
+        div(class="dropdown__content dropdown__guests " + dropdownClassShow)
             +dropdownItem("grownups", "Взрослые", 0)
             +dropdownItem("kids", "Дети", 1)
             +dropdownItem("infants", "Младенцы", 2)
             .dropdown__buttons
                 button.dropdown__button_submit.button__show(type='submit') Применить
                 button.dropdown__button_reset(type='reset') Очистить
-        .dropdown__info
+        .dropdown__info.dropdown__init
             input.dropdown__input(readonly='' type='text' placeholder='Сколько гостей' name="guests" value='' id=inputId)
 
 
@@ -32,11 +32,11 @@ mixin dropdownRoomsLabeled(labelText, labelRightText, dropdownContainerId, dropd
 
 mixin dropdownRoomsItems(dropdownContainerId, dropdownClassShow, inputId)
     div(class="dropdown" id=dropdownContainerId)
-        div(class="dropdown__rooms " + dropdownClassShow)
+        div(class="dropdown__content dropdown__rooms " + dropdownClassShow)
             +dropdownItem("bedrooms", "Спальни", 0)
             +dropdownItem("beds", "Кровати", 1)
             +dropdownItem("bathrooms", "Ванные комнаты", 2)
-        .dropdown__info
+        .dropdown__info.dropdown__init
             input.dropdown__input(readonly='' type='text' placeholder='Выберите условия' value='' name="rooms" id=inputId)
 
 
