@@ -1,6 +1,7 @@
 // this exemplar will work for all pages
 
-import { renderCalendar, DropdownGuests } from "../../assets/scripts/myLibrary"
+import { renderCalendar } from "../../components/calendar/calendar"
+import { DropdownGuests } from "../../components/dropdownGuests/dropdownGuests"
 import { guestsData_search } from "../../assets/scripts/myData"
 
 

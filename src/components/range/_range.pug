@@ -1,9 +1,8 @@
-mixin range (rangeId)
-
-    .range_container
+mixin range (rangeId, range__info = "none")
+    .range__container
         h3.label Range slider
         h3.label_right 5 000₽ - 10 000₽
-        div(class="range-slider" id=rangeId)
+        div(class="range__slider" id=rangeId)
             input.input_range.left_range(type='range' min='0' max='100' value='33')
             input.input_range.right_range(type='range' min='0' max='100' value='67')
             .slider
@@ -11,16 +10,4 @@ mixin range (rangeId)
                 .range
                 .thumb.thumb_left
                 .thumb.thumb_right
-
-
-//- .range_container
-//-     h3.label Range slider
-//-     h3.label_right 5 000₽ - 10 000₽
-//-     .range-slider
-//-         input#left-range.input_range(type='range' min='0' max='100' value='25')
-//-         input#right-range.input_range(type='range' min='0' max='100' value='75')
-//-         .slider
-//-             .track
-//-             .range
-//-             .thumb.thumb_left
-//-             .thumb.thumb_right
+        h3(class= range__info) Стоимость за сутки пребывания в номере
