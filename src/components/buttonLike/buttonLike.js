@@ -1,25 +1,48 @@
-import { likeButtons } from "../../assets/scripts/myLibrary.js"
+class likeButtons {
+    constructor(containerId, data){
+        this.likeButton = document.getElementById(containerId)
+        this.data = parseInt(data,10)
+        this.init()
+    }
 
-let likeButton_1 = new likeButtons("buttonLike_1", 2);
-let likeButton_2 = new likeButtons("buttonLike_2", 12);
+    init(){
+        this.createChildren();
+        this.render();
+        this.enableHandlers();
+        this.enableEventListeners();
+        return this;
+    }
 
+    createChildren(){
+        this.number = this.likeButton.querySelector('.buttonLike__number');
+        this.heart = this.likeButton.querySelector('.buttonLike__heart');
+        return this;
+    }
+    
+    enableHandlers(){
+        this.buttonLikeIncreaseHandler = this.buttonLikeIncrease.bind(this);
+        return this;
+    }
 
+    enableEventListeners(){
+        this.likeButton.addEventListener('click', this.buttonLikeIncreaseHandler)
+        return this;
+    }
 
-let likeButtons_3 = new likeButtons("likes_author_1", 12);
+    buttonLikeIncrease(){
+        this.data++;
+        this.render();
+        return this;
+    }
 
+    render(){
+        this.number.textContent = this.data;
+        if (parseInt(this.number.textContent) > 9){
+            this.likeButton.classList.add("buttonLike_popular");
+            this.heart.classList.add("buttonLike__heart_popular");
+        }
+        return this;
+    }
+}
 
-// let likeButtons = document.querySelectorAll('.buttonLike');
-
-// if (likeButtons){
-//     for (let likeButton of likeButtons){
-//         let number = likeButton.querySelector('.buttonLike__number');
-//         let heart = likeButton.querySelector('.buttonLike__heart');
-//         likeButton.addEventListener('click', ()=>{
-//             number.textContent = parseInt(number.textContent, 10) + 1;
-//             if (parseInt(number.textContent) > 9){
-//                 likeButton.classList.add("buttonLike_popular");
-//                 heart.classList.add("buttonLike__heart_popular");
-//             }
-//         })
-//     }
-// }
+export { likeButtons }
