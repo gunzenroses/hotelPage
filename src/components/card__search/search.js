@@ -5,5 +5,5 @@ import { DropdownGuests } from "../../components/dropdownGuests/dropdownGuests"
 import { guestsData_search } from "../../assets/scripts/myData"
 
 
-let guestsHandler_search = new DropdownGuests("dropdown_guests_search", ".dropdown__guests", guestsData_search);
+let guestsHandler_search = new DropdownGuests("dropdown_guests_search", guestsData_search);
 let calendar_search = new renderCalendar("calendar_search");

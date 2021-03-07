@@ -1,8 +1,8 @@
 class DropdownRooms {
-    constructor(containerId, expandedClass, data){
+    constructor(containerId, data){
         this.container = document.getElementById(containerId)
         this.containerClass = this.container.classList.value
-        this.dropdownExpanded = this.container.querySelector(expandedClass)
+        this.dropdownExpanded = this.container.querySelector(".dropdown__rooms")
         this.data = [...data]
         this.init()
     }
