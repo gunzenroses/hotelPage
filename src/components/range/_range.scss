@@ -1,16 +1,28 @@
-.range_container {
+.range__container {
     position: relative;
     width: 265px;
-    height: 49px;
+    //height: 49px;
+    height: 72px;
     margin-left: -1px;
     margin-top: 1px;
-    @include isFlex($direction: column);
+    @include isFlex($direction: column, $justify: flex-start);
 }
 
-.range-slider {
-    top: 20px;
+.range__container > .range__slider {
+    margin-top: 20px;
+}
+
+.range__slider {
     height: 12px;
     width: 100%;
+}
+
+.range__info {
+    margin-top: 13px;
+    font-weight: 400;
+    color: $darkShadeMiddle;
+    text-transform: none;
+    letter-spacing: -0.001em;
 }
 
 .slider {
