@@ -1,44 +1,17 @@
-include ../carousel/_carousel.pug
+include ../roomCarousel/_roomCarousel.pug
 include ../card__booking/_booking.pug
 include ../buttonRate/_buttonRate.pug
-
-//- - var room888 = {src: ["../../assets/images/room.jpg", "../../assets/images/room.jpg", "../../assets/images/room.jpg", "../../assets/images/room.jpg"], bookingNumber: "888", bookingType: "Люкс", bookingPrice: "9 990", starIds: ["star3-5", "star3-4", "star3-3", "star3-2", "star3-1"], starName: "rating3", starRate: [fasle, true], reviewAmount: "65"}
 
 mixin room(roomOptions)
     - var {src = [], bookingNumber = "999", bookingType = false, bookingPrice = 0, starIds = [], starName = inputName, starRate = [], reviewAmount = 0} = roomOptions
     .card__room
-        +carousel(src, nameForPictures="room " + bookingNumber)
+        +roomCarousel(src, nameForPictures="room " + bookingNumber)
         .room__info
             +bookingText("small", bookingNumber, bookingType, bookingPrice)
             .room__line
             .booking__row_small
                 +buttonRate(...starIds, starName, ...starRate)
                 +review(reviewAmount)
-
-mixin roomLight(roomOptions)
-    - var {src = [], bookingNumber = "999", bookingType = false, bookingPrice = 0, starIds = [], starName = inputName, starRate = [], reviewAmount = 0} = roomOptions
-    .card__room
-        +carouselLight(src, nameForPictures="room " + bookingNumber)
-        .room__info
-            +bookingText("small", bookingNumber, bookingType, bookingPrice)
-            .room__line
-            .booking__row_small
-                +buttonRate(...starIds, starName, ...starRate)
-                +review(reviewAmount)
-
-
-
-//- mixin room(roomOptions)
-//-     .card__room
-//-         +carousel(["../../assets/images/room.jpg", "../../assets/images/room.jpg", "../../assets/images/room.jpg", "../../assets/images/room.jpg"])
-//-         .room__info
-//-             +bookingText("small", "888", "Люкс", "9 990")
-//-             .room__line
-//-             .booking__row_small
-//-                 +buttonRate("star3-5", "star3-4", "star3-3", "star3-2", "star3-1", "rating3", true)
-//-                 +review("65")
-
-
 
 mixin review(reviewAmount)
     .booking__text_right
