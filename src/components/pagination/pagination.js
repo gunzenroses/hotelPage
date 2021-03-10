@@ -1,7 +1,7 @@
 class ButtonPagination {
     constructor(data, containerId){
         this.data = data
-        this.paginationContainer = containerId
+        this.paginationContainer = document.getElementById(containerId)
             this.pageButtons = document.createElement("div")
             this.pageButtons.classList.add("pagination__buttons")
         this.paginationContainer.prepend(this.pageButtons)
