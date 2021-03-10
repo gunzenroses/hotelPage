@@ -84,6 +84,12 @@
     color: $darkShadeMore;
 }
 
+.dropdown__icon:hover ~ .button_navlink,
+.dropdown__icon:active ~ .button_navlink {
+    font-weight: 700;
+    color: $darkShadeMore;
+}
+
 .header__buttons {
     width: 303px;
     height: 34px;
@@ -152,7 +158,7 @@
     color: $darkShadeMiddle;
     height: 18px;
     line-height: 18px;
-    @include isFlex();
+    @include isFlex($direction: row-reverse);
 }
 
 .dropdown__icon {
@@ -296,4 +302,3 @@
         margin: 0 10px;
     }
 }
-
