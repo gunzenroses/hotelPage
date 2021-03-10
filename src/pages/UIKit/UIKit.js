@@ -18,14 +18,14 @@ import { renderCalendar } from "../../components/calendar/calendar"
 window.onload = function () {
     require("../../components/textField/datasetHandler");
     require("../../components/checkboxExpandable/checkboxExpandable");
-    require("../../components/carousel/carousel");
+    require("../../components/roomCarousel/roomCarousel");
     
     //for formElements
     let likeButton_1 = new likeButtons("buttonLike_1", 2);
     let likeButton_2 = new likeButtons("buttonLike_2", 12);
     let likeButtons_3 = new likeButtons("likes_author_1", 12);
     let range_1 = new Range("range_1");
-    let pagination_formElements = new ButtonPagination(paginationData_1, pagination_bar_1);
+    let pagination_formElements = new ButtonPagination(paginationData_1, "pagination_bar_1");
     
     let guestsHandler_0 = new DropdownGuests("dropdown_guests_0", );
     let guestsHandler_1 = new DropdownGuests("dropdown_guests_1", guestsData_1);
