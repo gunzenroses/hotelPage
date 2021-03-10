@@ -1,15 +1,40 @@
-extends ../../assets/templates/_template.pug
+gextends ../../assets/templates/_template.pug
 
 include ../../components/header/_header.pug
+include ../../components/textField/_textField.pug
+include ../../components/dateDropdown/_dateDropdown.pug
+include ../../components/dropdownGuests/_dropdownGuests.pug
+include ../../components/dropdownRooms/_dropdownRooms.pug
+include ../../components/range/_range.pug
+include ../../components/buttonsCheckbox/_buttonsCheckbox.pug
+include ../../components/checkboxExpandable/_checkboxExpandable.pug
+include ../../components/pagination/_pagination.pug
 include ../../components/footer/_footer.pug
 
 block variables
     - var title = "room_search";
     - var description = "room search";
     - var keywords = "search, room";
+    - var roomOptions = {src: ["../../assets/images/room.jpg", "../../assets/images/room.jpg", "../../assets/images/room.jpg", "../../assets/images/room.jpg"], bookingNumber: "888", bookingType: "Люкс", bookingPrice: "9 990", starIds: ["star3-5", "star3-4", "star3-3", "star3-2", "star3-1"], starName: "rating3", starRate: [fasle, true], reviewAmount: "65"}
+
 
 block content
-    .searchRoom
+    .searchRoom.dropdown__watch
         +header()
         .searchRoom__content
+            .searchRoom__filter
+                form(class="searchRoom__form")
+                    +dateDropdownRange("calendar_search", "даты пребывания в отеле", "19 авг - 23 авг", "")
+                    +dropdownGuestsLabeled("гости", "", "dropdown_guests_search", "", "dropdownGuestsInput_3")
+                    +range("range_search", "range__info")
+                    +checkboxButtons("Правила дома")
+                    +richCheckboxButtons("accessibility", "Удобства номера")
+                    +dropdownRoomsLabeled("dropdown", "default", "dropdown_rooms_1", "", "dropdownRoomsInput_1")
+                    +dropdownCheckbox("Дополнительные удобства", "")
+            .searchRoom__rooms
+                .searchRoom__text Номера, которые мы для вас подобрали
+                .searchRoom__result
+
+                .searchRoom__pagination 
+                    +pagination("pagination_search")
         +footer()
