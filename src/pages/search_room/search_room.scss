@@ -6,18 +6,79 @@
 
 .searchRoom {
     @include container($width: 1440px, $height: 1880px, $mt: 0, $mb: 0, $ms: auto);
-    @include isFlex($justify: flex-start);
+    @include isFlex($direction: column, $justify: flex-start);
     position: relative;
-    display: block;
     overflow: auto; //to avoid margin-collapse
     background: $light;
 }
 
 .searchRoom__content {
     @include container($width: 1160px, $height: 1256px, $mt: 30px, $mb: 70px, $ms: 140px);
-    @include isFlex($justify: flex-start);
+    @include isFlex($justify: space-between);
     position: relative;
-    display: block;
     overflow: auto; //to avoid margin-collapse
     background: $light;
 }
+
+.searchRoom__filter {
+    width: 266px;
+    min-height: 739px;
+    @include isFlex($direction: column, $justify: flex-start);
+    background: grey;
+}
+
+.searchRoom__form {
+    width: 100%;
+}
+
+.searchRoom__form > div:nth-of-type(2){
+    margin-top: 20px;
+}
+
+.searchRoom__form > div:nth-of-type(3),
+.searchRoom__form > div:nth-of-type(4),
+.searchRoom__form > div:nth-of-type(5),
+.searchRoom__form > div:nth-of-type(6) {
+    margin-top: 30px;
+}
+
+.searchRoom__form > div:last-of-type {
+    margin-top: 15px;
+}
+
+.searchRoom__rooms {
+    width: 835px;
+    height: 1256px;
+    @include isFlex($direction: column, $justify: flex-start);
+    background: grey;
+}
+
+.searchRoom__text {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    color: $darkShadeMost;
+}
+
+.searchRoom__result {
+    width: 834px;
+    height: 1091px;
+    @include isFlex($wrap: wrap);
+    margin-top: 20px;
+}
+
+.searchRoom__pagination {
+    margin: 40px auto 0;
+}
+
+@media (max-width: 1440px){
+    .searchRoom {
+        width: 100vw;
+        height: auto;
+        min-width: 320px;
+    }
+
+    .searchRoom__content {
+        
+    }
+} 
