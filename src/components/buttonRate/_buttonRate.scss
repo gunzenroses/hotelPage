@@ -42,13 +42,13 @@
 // }
 
 .buttonRate {
-    display: block;
-    text-align: center;
+    display: flex;
+    flex-direction: row-reverse;
     width: 120px;
     height: 24px;
     margin: 0;
     font-size: 29px;
-    direction: rtl;
+    line-height: 29px;
     cursor: pointer;
 }
 
@@ -68,6 +68,8 @@
 }
 
 .input_label::before {
+    width: 24px;
+    height: 24px;
     content: '☆';
 }
 
