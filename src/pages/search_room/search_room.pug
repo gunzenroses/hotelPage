@@ -1,4 +1,4 @@
-gextends ../../assets/templates/_template.pug
+extends ../../assets/templates/_template.pug
 
 include ../../components/header/_header.pug
 include ../../components/textField/_textField.pug
@@ -8,6 +8,7 @@ include ../../components/dropdownRooms/_dropdownRooms.pug
 include ../../components/range/_range.pug
 include ../../components/buttonsCheckbox/_buttonsCheckbox.pug
 include ../../components/checkboxExpandable/_checkboxExpandable.pug
+include ../../components/card__room/_room.pug
 include ../../components/pagination/_pagination.pug
 include ../../components/footer/_footer.pug
 
@@ -16,7 +17,21 @@ block variables
     - var description = "room search";
     - var keywords = "search, room";
     - var roomOptions = {src: ["../../assets/images/room.jpg", "../../assets/images/room.jpg", "../../assets/images/room.jpg", "../../assets/images/room.jpg"], bookingNumber: "888", bookingType: "Люкс", bookingPrice: "9 990", starIds: ["star3-5", "star3-4", "star3-3", "star3-2", "star3-1"], starName: "rating3", starRate: [fasle, true], reviewAmount: "65"}
-
+    - 
+        var roomsList = [
+                            {src: ["../../assets/images/room.jpg", "../../assets/images/room.jpg", "../../assets/images/room.jpg", "../../assets/images/room.jpg"], bookingNumber: "888", bookingType: "Люкс", bookingPrice: "9 990", starIds: ["star1-5", "star1-4", "star1-3", "star1-2", "star1-1"], starName: "rating1", starRate: [true], reviewAmount: "145"},
+                            {src: ["../../assets/images/room2.jpg", "../../assets/images/room2.jpg", "../../assets/images/room2.jpg", "../../assets/images/room2.jpg"], bookingNumber: "840", bookingType: "", bookingPrice: "9 900", starIds: ["star2-5", "star2-4", "star2-3", "star2-2", "star2-1"], starName: "rating2", starRate: [false, true], reviewAmount: "65"},
+                            {src: ["../../assets/images/room3.jpg", "../../assets/images/room3.jpg", "../../assets/images/room2.jpg", "../../assets/images/room3.jpg"], bookingNumber: "980", bookingType: "Люкс", bookingPrice: "8 500", starIds: ["star3-5", "star3-4", "star3-3", "star3-2", "star3-1"], starName: "rating3", starRate: [false, false, true], reviewAmount: "35"},
+                            {src: ["../../assets/images/room4.jpg", "../../assets/images/room4.jpg", "../../assets/images/room4.jpg", "../../assets/images/room4.jpg"], bookingNumber: "856", bookingType: "", bookingPrice: "7 300", starIds: ["star4-5", "star4-4", "star4-3", "star4-2", "star4-1"], starName: "rating4", starRate: [true], reviewAmount: "19"},
+                            {src: ["../../assets/images/room5.jpg", "../../assets/images/room5.jpg", "../../assets/images/room5.jpg", "../../assets/images/room5.jpg"], bookingNumber: "740", bookingType: "", bookingPrice: "6 000", starIds: ["star5-5", "star5-4", "star5-3", "star5-2", "star5-1"], starName: "rating5", starRate: [false, true], reviewAmount: "44"},
+                            {src: ["../../assets/images/room6.jpg", "../../assets/images/room6.jpg", "../../assets/images/room6.jpg", "../../assets/images/room6.jpg"], bookingNumber: "982", bookingType: "", bookingPrice: "5 800", starIds: ["star6-5", "star6-4", "star6-3", "star6-2", "star6-1"], starName: "rating6", starRate: [false, false, true], reviewAmount: "56"},
+                            {src: ["../../assets/images/room7.jpg", "../../assets/images/room7.jpg", "../../assets/images/room7.jpg", "../../assets/images/room7.jpg"], bookingNumber: "678", bookingType: "", bookingPrice: "5 500", starIds: ["star7-5", "star7-4", "star7-3", "star7-2", "star7-1"], starName: "rating7", starRate: [true], reviewAmount: "45"},
+                            {src: ["../../assets/images/room8.jpg", "../../assets/images/room8.jpg", "../../assets/images/room8.jpg", "../../assets/images/room8.jpg"], bookingNumber: "450", bookingType: "", bookingPrice: "5 300", starIds: ["star8-5", "star8-4", "star8-3", "star8-2", "star8-1"], starName: "rating8", starRate: [false, true], reviewAmount: "39"},
+                            {src: ["../../assets/images/room9.jpg", "../../assets/images/room9.jpg", "../../assets/images/room9.jpg", "../../assets/images/room9.jpg"], bookingNumber: "350", bookingType: "", bookingPrice: "5 000", starIds: ["star9-5", "star9-4", "star9-3", "star9-2", "star9-1"], starName: "rating9", starRate: [false, false, true], reviewAmount: "77"},
+                            {src: ["../../assets/images/room10.jpg", "../../assets/images/room10.jpg", "../../assets/images/room10.jpg", "../../assets/images/room10.jpg"], bookingNumber: "666", bookingType: "", bookingPrice: "5 000", starIds: ["star10-5", "star10-4", "star10-3", "star10-2", "star10-1"], starName: "rating10", starRate: [true], reviewAmount: "25"},
+                            {src: ["../../assets/images/room11.jpg", "../../assets/images/room11.jpg", "../../assets/images/room11.jpg", "../../assets/images/room11.jpg"], bookingNumber: "444", bookingType: "", bookingPrice: "5 000", starIds: ["star11-5", "star11-4", "star11-3", "star11-2", "star11-1"], starName: "rating11", starRate: [false, false, true], reviewAmount: "15"},
+                            {src: ["../../assets/images/room12.jpg", "../../assets/images/room12.jpg", "../../assets/images/room12.jpg", "../../assets/images/room12.jpg"], bookingNumber: "352", bookingType: "", bookingPrice: "5 000", starIds: ["star12-5", "star12-4", "star12-3", "star12-2", "star12-1"], starName: "rating12", starRate: [false, false, true], reviewAmount: "55"}
+                        ];
 
 block content
     .searchRoom.dropdown__watch
@@ -34,7 +49,8 @@ block content
             .searchRoom__rooms
                 .searchRoom__text Номера, которые мы для вас подобрали
                 .searchRoom__result
-
+                    for room in roomsList 
+                        +room(room)
                 .searchRoom__pagination 
                     +pagination("pagination_search")
         +footer()
