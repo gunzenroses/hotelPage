@@ -12,6 +12,7 @@
     height: 64px;
     @include isFlex($direction: column);
     margin: 20px 19px 19px 21px;
+    pointer-events: none;
 }
 
 .room__info .booking__row_small:last-of-type{
