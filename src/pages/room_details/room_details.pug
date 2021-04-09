@@ -4,7 +4,7 @@ include ../../components/header/_header.pug
 include ../../components/badge/_badge.pug
 include ../../components/card__booking/_booking.pug
 include ../../components/footer/_footer.pug
-include ../../components/pieChart/pieChart.pug
+include ../../components/chart_donut/chart_donut.pug
 
 block variables
     - var title = "room details";
@@ -32,7 +32,7 @@ block content
                         .roomDetails__roomImpression
                             .roomDetails__text Впечателния от номера
                                 //canvas(id="canvas1" width="120" height="120")
-                                +doughnutChart()
+                                +donutChart({exellent: 50, good: 25, satisfied: 25, dissapointed: 0})
                         .roomDetails__reviews
                             .roomDetails__text Отзывы посетителей номера
                             
