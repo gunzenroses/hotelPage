@@ -1,0 +1,74 @@
+.donut {
+    display: flex;
+    flex-direction: row;
+    width: 311px;
+    height: 126px;
+}
+
+.donut__content {
+    width: 120px;
+    height: 120px;
+    position: relative;
+    display: block;
+}
+
+.donut__img {
+    position: absolute;
+}
+
+.donut__text {
+    color: rgba(188,156,255,1);
+    font-weight: 700;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.donut__number {
+    font-size: 24px;
+    line-height: 29.26px;
+}
+
+.donut__label {
+    font-size: 12px;
+    line-height: 14.63px;
+}
+
+.li_circle {
+    display: inline-block;
+    vertical-align: middle;
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+    border-radius: 50%;
+    background: chartreuse;
+}
+
+.donut__caption {
+    width: 165px;
+    height: 96px;
+    margin-top: 30px;
+    margin-left: 30px;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.exellent {
+    background: linear-gradient(180deg, #FFE39C 0%,#FFBA9C);
+}
+
+.good {
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+}
+
+.satisfied {
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+
+.disappointed {
+    background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
+}
