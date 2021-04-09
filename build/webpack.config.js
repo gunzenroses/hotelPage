@@ -18,7 +18,8 @@ module.exports = (env) => {
       app: "./app.js",
       UIKit: "./pages/UIKit/UIKit.js",
       landing_page: "./pages/landing_page/landing_page.js",
-      search_room: "./pages/search_room/search_room.js"
+      search_room: "./pages/search_room/search_room.js",
+      room_details: "./pages/room_details/room_details.js",
     },
 
     output: {
@@ -198,6 +199,14 @@ module.exports = (env) => {
         minify: true,
         template: path.resolve(__dirname, "../src/pages/search_room/search_room.pug"),
         chunks: ["search_room"],
+        inject: "body",
+      }),
+
+      new HtmlWebpackPlugin({
+        filename: "room_details",
+        minify: true,
+        template: path.resolve(__dirname, "../src/pages/room_details/room_details.pug"),
+        chunks: ["room_details"],
         inject: "body",
       }),
 
