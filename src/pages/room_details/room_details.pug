@@ -1,0 +1,45 @@
+extends ../../assets/templates/_template.pug
+
+include ../../components/header/_header.pug
+include ../../components/badge/_badge.pug
+include ../../components/card__booking/_booking.pug
+include ../../components/footer/_footer.pug
+include ../../components/pieChart/pieChart.pug
+
+block variables
+    - var title = "room details";
+    - var description = "room details";
+    - var keywords = "room details";
+    - var room888 = {src: ["../../assets/images/room.jpg", "../../assets/images/room.jpg", "../../assets/images/room.jpg", "../../assets/images/room.jpg"], bookingNumber: "888", bookingType: "Люкс", bookingPrice: "9 990", starIds: ["star3-5", "star3-4", "star3-3", "star3-2", "star3-1"], starName: "rating3", starRate: [true], reviewAmount: "145"};
+
+block content
+    .roomDetails.dropdown__watch
+        +header()
+        .roomDetails__content
+            .roomDetails__view
+                img(src="../../assets/images/room_details.jpg" alt="room picture 1").roomDetails__view_main
+                .roomDetails__view_minor
+                    img(src="../../assets/images/room_details2.jpg" alt="room picture 2")
+                    img(src="../../assets/images/room_details3.jpg" alt="room picture 3")
+            .roomDetails__info_outer
+                .roomDetails__info_inner
+                    .roomDetails__description
+                        .roomDetails__roomInfo
+                            .roomDetails__text Сведения о номере
+                            +badgeItem("insert_emoticon", "Комфорт", "Шумопоглощающие стены")
+                            +badgeItem("location_city", "Удобство", "Окно в каждой из спален")
+                            +badgeItem("whatshot", "Уют", "Номер оснащён камином")
+                        .roomDetails__roomImpression
+                            .roomDetails__text Впечателния от номера
+                                //canvas(id="canvas1" width="120" height="120")
+                                +doughnutChart()
+                        .roomDetails__reviews
+                            .roomDetails__text Отзывы посетителей номера
+                            
+                        .roomDetails__rules
+                            .roomDetails__text Правила
+                        .roomDetails__cancellation
+                            .roomDetails__text Отмена
+                    .roomDetails__booking
+                        +cardBooking()
+        +footer()

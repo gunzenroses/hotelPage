@@ -1,0 +1,95 @@
+@import "../../index.scss";
+@import "../../components/pieChart/pieChart.scss";
+
+/*
+    Main container
+*/
+
+.roomDetails {
+    @include container($width: 1440px, $height: 1937px, $mt: 0, $mb: 0, $ms: auto);
+    @include isFlex($direction: column, $justify: flex-start);
+    position: relative;
+    overflow: auto; //to avoid margin-collapse
+    background: $light;
+}
+
+.roomDetails__view {
+    width: 100%;
+    height: 485px;
+    background: $purple;
+    @include isFlex($justify: flex-start);
+}
+
+.roomDetails__view_main {
+    width: 981px;
+    height: 100%;
+    background: grey;
+}
+
+.roomDetails__view_minor {
+    width: 459px;
+    height: 100%;
+    background: yellow;
+}
+
+.roomDetails__info_outer {
+    width: 100%;
+    height: 939px;
+    padding: 70px 140px;
+    background: green;
+}
+
+.roomDetails__info_inner {
+    width: 100%;
+    height: 100%;
+    @include isFlex();
+    background: orange;
+}
+
+.roomDetails__description {
+    width: 712px;
+    height: 799px;
+    @include isFlex($justify: flex-start, $wrap: wrap);
+    background: blue;
+}
+
+.roomDetails__roomInfo {
+    width: 273px;
+    height: 291px;
+    @include isFlex($direction: column);
+    margin-right: 70px;
+    background: white;
+}
+
+.roomDetails__roomImpression {
+    width: 311px;
+    height: 170px;
+    background: white;
+}
+
+.roomDetails__reviews {
+    width: 712px;
+    height: 306px;
+    background: white;
+}
+
+.roomDetails__rules {
+    width: 292px;
+    height: 160px;
+    margin-right: 70px;
+    background: white;
+}
+
+.roomDetails__cancellation {
+    width: 341px;
+    height: 140px;
+    background: white;
+}
+
+.roomDetails__text {
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 24px;
+    color: $darkShadeMost;
+    margin-bottom: 20px;
+}
