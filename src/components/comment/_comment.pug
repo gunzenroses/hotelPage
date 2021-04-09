@@ -1,6 +1,7 @@
-//-include ../buttonLike/_buttonLike.pug
+include ../buttonLike/_buttonLike.pug
 
-mixin comment(authorPic, authorName, commentTime, buttonLikeId, buttonNumber, commentText)
+mixin comment(commentData)
+    - var {authorPic="", authorName="Anonymous", commentTime=Data().getDay(), buttonLikeId, buttonNumber=0, commentText="none"} = commentData
     .widget
         .comment
             .comment__head
@@ -12,4 +13,4 @@ mixin comment(authorPic, authorName, commentTime, buttonLikeId, buttonNumber, co
             .comment__body
                 .comment__likes
                     +buttonLikeItem(buttonLikeId, buttonNumber)
-                div(class="comment__text")= commentText
+                .comment__text!= commentText

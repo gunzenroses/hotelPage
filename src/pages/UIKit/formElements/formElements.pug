@@ -20,6 +20,16 @@ block variables
     - var title = "UIKit";
     - var description = "UIKit";
     - var keywords = "UIKit";
+    - var checkboxList = [ "Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00" ];
+    - 
+        var comment1 = { 
+            authorPic: "../../assets/images/avatar.jpg", 
+            authorName: "Мурад Сарафанов", 
+            commentTime: "5 дней назад", 
+            buttonLikeId: "likes_author_1", 
+            buttonNumber: 12, 
+            commentText: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. \u00A0 И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей." 
+        };
 
 block content
     .formElements_outer
@@ -63,11 +73,11 @@ block content
 
             .formElements__element_sixth
                 +dropdownGuestsLabeled("dropdown", "", "dropdown_guests_2", "dropdown__show", "dropdownGuestsInput_2")
-                +bulletCheckboxList("bullet list")
+                +bulletCheckboxContainer("bullet list", checkboxList)
 
             .formElements__element_seventh
                 +badgeItem("insert_emoticon", "Комфорт", "Шумопоглощающие стены")
                 +badgeItem("location_city", "Удобство", "Окно в каждой из спален")
                 
             .formElements__element_eighth
-                +comment("../../assets/images/avatar.jpg", "Мурад Сарафанов", "5 дней назад", "likes_author_1", 12, "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. \u00A0 И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.")
+                +comment(comment1)
