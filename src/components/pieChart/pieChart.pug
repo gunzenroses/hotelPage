@@ -1,6 +1,11 @@
 
-mixin doughnutChart(cWidth, cHeight, cData)
-    //- var {exellent=0, good=0, satisfied=0, dissapointed=0} = cData
+mixin donutChart(cData={})
+    - var {exellent=0, good=0, satisfied=0, dissapointed=0} = cData
+    - var donutData = {dissapointed, satisfied, good, exellent} 
+    - var counter = 1;
+    - var dashOffsetValue = parseInt(25);
+    - var prevArraySumm = 0;
+
     figure.donut
       .donut__content
         svg.donut__img(width="100%" height="100%" viewbox="0 0 33 33" aria-labelledby="impression-title" role="img")
@@ -18,15 +23,19 @@ mixin doughnutChart(cWidth, cHeight, cData)
               stop(stop-color="#FFBA9C" offset="0%")
               stop(stop-color="#FFE39C" offset="100%")
           title#impression-title Впечатлeния от номера
+          
           // img starts
-          circle.donut-ring(cx="50%" cy="50%" r="15.91549430918954" fill="transparent" stroke="#fff" stroke-width="1" role="presentation")
-          circle.donut-segment(cx="50%" cy="50%" r="15.91549430918954" fill="transparent" stroke="url(#gradient_satisfied)" stroke-width="1" stroke-dasharray="24 76" stroke-dashoffset="24" aria-labelledby="donut-segment-1-title")
-          title#donut-segment-1-title Удовлетворительно
-          circle.donut-segment(cx="50%" cy="50%" r="15.91549430918954" fill="transparent" stroke="url(#gradient_good)" stroke-width="1" stroke-dasharray="24 76" stroke-dashoffset="99" aria-labelledby="donut-segment-2-title")
-          title#donut-segment-2-title Хорошо
-          circle.donut-segment(cx="50%" cy="50%" r="15.91549430918954" fill="transparent" stroke="url(#gradient_exellent)" stroke-width="1" stroke-dasharray="49 51" stroke-dashoffset="74" aria-labelledby="donut-segment-3-title")
-          title#donut-segment-3-title Великолепно
+          circle.donut__ring(cx="50%" cy="50%" r="15.91549430918954" fill="transparent" stroke="#fff" stroke-width="1" role="presentation")
+          each percent, mark in donutData
+            if (percent>2)
+              - var dashValue = parseInt(percent) - 1;
+              - var dashLeft = 100 - dashValue;
+              circle.donut__segment(cx="50%" cy="50%" r="15.91549430918954" fill="transparent" stroke=`url(#gradient_${mark})` stroke-width="1" stroke-dasharray=`${dashValue} ${dashLeft}` stroke-dashoffset=`${dashOffsetValue}` aria-labelledby=`donut-segment-${counter}-title`)
+              title(id=`donut_segment-${counter++}-title` data-some= `${prevArraySumm}`)!= mark
+              - prevArraySumm += dashOffsetValue;
+              - dashOffsetValue = 100 - prevArraySumm + dashOffsetValue;
           // img end
+
         p.donut__text
           text.donut__number 260
           text.donut__label голосов
