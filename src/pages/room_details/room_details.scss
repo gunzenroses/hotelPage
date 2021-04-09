@@ -93,3 +93,13 @@
     color: $darkShadeMost;
     margin-bottom: 20px;
 }
+
+.roomDetails__cancellation_info {
+    width: 341px;
+    height: 96px;
+    font-size: 14px;
+    line-height: 21;
+    color: $darkShadeMore;
+    overflow:hidden;
+    float:left;
+}
