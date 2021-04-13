@@ -37,3 +37,10 @@
 }
 
 //@extend checkbox from checkboxExpandable.scss
+
+@media (max-width: 450px){
+    .bullet__container {
+        width: 280px;
+        margin: 0 auto;
+    }
+}

@@ -237,9 +237,14 @@
 }
 
 
-@media (max-width: 400px){
+@media (max-width: 450px){
     .dropdown__container {
         width: 280px;
         margin: 0 auto;
+    }
+
+    .dropdown__content,
+    .dropdown__info {
+        width: 280px;
     }
 }

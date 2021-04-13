@@ -193,4 +193,13 @@
         line-height: 40px;
     }
     
+    .button-row,
+    .button-container {
+        margin: 0 auto;
+        width: 280px;
+    }
+
+    .button-row:last-child {
+        width: 280px;
+    }
 }

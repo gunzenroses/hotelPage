@@ -42,4 +42,14 @@
     font-weight: 400;
     width: 90%;
 }
-                
+
+@media (max-width: 450px){
+    .comment {
+        min-width: 280px;
+        width: 100%;
+    }
+
+    .comment__text {
+        //width: 70%;
+    }
+}

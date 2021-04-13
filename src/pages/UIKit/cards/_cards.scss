@@ -100,13 +100,20 @@
 @media (max-width: 970px) {
     .cards {
         &_outer {
-            min-width: 380px;
+            min-width: 320px;
         }
 
         &_inner {
-            width: 85%;
-            min-width: 380px;
-            margin: 5% auto;
+            width: 100%;
+            min-width: 320px;
+            margin: 7% auto;
+        }
+    }
+}
+
+@media (max-width: 850px){
+    .cards {
+        &_inner {
             height: auto;
         }
     }
@@ -157,7 +164,7 @@
 @media (max-width: 450px) {
     .card__text,
     .card__text_row {
-        width: 270px;
+        width: 280px;
     }
 
     .card__text {

@@ -74,3 +74,9 @@
 .checkbox_button > .checkbox__fake {
 
 }
+
+@media (max-width: 450px){
+    .richcheckbox__container{
+        margin: 0 auto;
+    }
+}

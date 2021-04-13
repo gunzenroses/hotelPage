@@ -40,7 +40,7 @@
 }
 
 
-@media (max-width: 400px){
+@media (max-width: 450px){
     .container__dataRange,
     .dateRangeSelector,
     .dropdown__calendar {
@@ -48,4 +48,7 @@
         margin: 0 auto;
     }
 
+    .container__dataRange {
+        width: 280px;
+    }
 }

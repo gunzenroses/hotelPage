@@ -40,6 +40,7 @@
 .formElements_inner {
     @include container($width: 1159px, $height: 1580px, $mt: 143px, $ms: auto, $mb: 130px);
     @include isFlex($wrap: wrap);
+    min-width: 320px;
     background: white;
 }
 
@@ -207,7 +208,8 @@
         }
 
         &_eighth {
-            width: 320px;;
+            width: 90%;
+            height: auto;
         }
         }
     }
@@ -216,8 +218,9 @@
 @media (max-width: 970px) {
     .formElements {
         &_inner {
-        width: 85%;
-        margin: 5% auto 5%;
+            width: 85%;
+            margin: 5% auto 5%;
+            justify-content: space-between;
         }
     }
 }
@@ -225,12 +228,12 @@
 @media (max-width: 750px) {
     .formElements {
         &_outer {
-        min-width: 390px;
+            min-width: 320px;
         }
 
         &_inner {
             max-width: 575px;
-            min-width: 330px;
+            justify-content: center;
         }
 
         &__element {

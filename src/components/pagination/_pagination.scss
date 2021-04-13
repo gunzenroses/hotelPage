@@ -183,3 +183,9 @@ button {
     text-align: left;
     letter-spacing: 0.01em;
 }
+
+@media (max-width: 450px){
+    .pagination_contaner {
+        margin: 0 auto;
+    }
+}

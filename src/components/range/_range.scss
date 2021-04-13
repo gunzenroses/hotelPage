@@ -114,3 +114,9 @@ input[type='range'] {
 	&::-webkit-slider-thumb { @include thumb }
 	&::-moz-range-thumb { @include thumb }
 }
+
+@media (max-width: 450px){
+    .range__container {
+        margin: 0 auto;
+    }
+}

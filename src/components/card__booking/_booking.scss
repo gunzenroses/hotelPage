@@ -180,6 +180,7 @@
 
     .booking__row_big {
         max-width: 280px;
+        margin: 0 auto;
     }
 
     .booking__row_small {
@@ -193,5 +194,10 @@
 
     .booking__total_line {
         width: 120px;
+    }
+    
+    .richcheckbox__container
+    .bullet__container, {
+        margin: 0 auto;
     }
 }

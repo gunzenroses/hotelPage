@@ -65,10 +65,10 @@
 
 @media (max-width: 750px) {
     .headersAndFooters_outer {
-    min-width: 360px;
-    &::before {
-                top: 10px;
-                left: 10px;
-            }
+        min-width: 320px;
+        &::before {
+            top: 10px;
+            left: 10px;
+        }
     }
 }
