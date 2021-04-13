@@ -38,20 +38,21 @@ block content
         .roomDetails__content
             .roomDetails__view
                 img(src="../../assets/images/room_details.jpg" alt="room picture 1").roomDetails__view_main
-                .roomDetails__view_minor
-                    img(src="../../assets/images/room_details2.jpg" alt="room picture 2")
-                    img(src="../../assets/images/room_details3.jpg" alt="room picture 3")
+                .roomDetails__view_miniature
+                    img(src="../../assets/images/room_details2.jpg" alt="room picture 2").roomDetails__view_mini
+                    img(src="../../assets/images/room_details3.jpg" alt="room picture 3").roomDetails__view_mini
             .roomDetails__info_outer
                 .roomDetails__info_inner
                     .roomDetails__description
-                        .roomDetails__roomInfo
-                            .roomDetails__text Сведения о номере
-                            +badgeItem("insert_emoticon", "Комфорт", "Шумопоглощающие стены")
-                            +badgeItem("location_city", "Удобство", "Окно в каждой из спален")
-                            +badgeItem("whatshot", "Уют", "Номер оснащён камином")
-                        .roomDetails__roomImpression
-                            .roomDetails__text Впечателния от номера
-                            +donutChart({exellent: 50, good: 25, satisfied: 25, dissapointed: 0})
+                        .roomDetails__roomData
+                            .roomDetails__roomInfo
+                                .roomDetails__text Сведения о номере
+                                +badgeItem("insert_emoticon", "Комфорт", "Шумопоглощающие стены")
+                                +badgeItem("location_city", "Удобство", "Окно в каждой из спален")
+                                +badgeItem("whatshot", "Уют", "Номер оснащён камином")
+                            .roomDetails__roomImpression
+                                .roomDetails__text Впечателния от номера
+                                +donutChart({exellent: 50, good: 25, satisfied: 25, dissapointed: 0})
                         .roomDetails__reviews
                             .roomDetails__text Отзывы посетителей номера
                             +comment(comment1)
