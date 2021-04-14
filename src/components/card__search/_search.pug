@@ -1,11 +1,11 @@
-include ../dateDropdown/_dateDropdown.pug
+include ../dateRangeDropdown/_dateRangeDropdown.pug
 include ../dropdownGuests/_dropdownGuests.pug
 include ../button/_button.pug
 
 mixin cardSearch()
     .card_search
         h1.card__text Найдём номера под ваши пожелания
-        +dateDropdownRangeContainer("calendar_search", "Прибытие", "", "Выезд", "", "")
+        +dateRangeSeparate("calendar_search", "Прибытие", "", "Выезд", "", "")
         +dropdownGuestsLabeled("Гости", "", "dropdown_guests_search", "", "dropdownGuestsInput_3")
         +buttonFormSubmit("Подобрать номер")
 
