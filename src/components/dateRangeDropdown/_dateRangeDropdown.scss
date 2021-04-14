@@ -1,13 +1,18 @@
-.dateRangeSelector {
+.dateRange__selector {
     position: relative;
-    width: 320px;
+    width: 100%;
     height: 65px;
 }
 
-.container__dataRange {
+.dataRange__container {
     @include isFlex();
-    width: 320px;
+    width: 100%;
     height: 65px;
+}
+
+.dataRange__container_common {
+    @extend .dataRange__container;
+    flex-direction: column;
 }
 
 .dropdown__calendar {
@@ -31,7 +36,7 @@
     color: $darkShadeMore;
 }
 
-.dropdown__show ~ .container__dataRange .date__range::before {
+.dropdown__show ~ .dataRange__container .date__range::before {
     transform: rotate(180deg);
 }
 
@@ -41,14 +46,11 @@
 
 
 @media (max-width: 450px){
-    .container__dataRange,
+    .dataRange__container,
     .dateRangeSelector,
     .dropdown__calendar {
-        width: 280px;
+        width: 100%;
+        min-width: 280px;
         margin: 0 auto;
-    }
-
-    .container__dataRange {
-        width: 280px;
     }
 }
