@@ -71,6 +71,8 @@ li {
 img {
   border: none;
   display: block;
+  width: 100%;
+  height: auto;
 }
 
 figure {
@@ -206,11 +208,13 @@ fieldset {
   }
 
   .container_medium {
+    width: 280px;
     margin: 0 auto;
   }
 
   .widget {
-    width: 280px;
+    width: 100%;
+    min-width: 280px;
     margin: 0 auto;
   }
 }
