@@ -1,6 +1,6 @@
 include ../calendar/_calendar.pug
 
-mixin dateDropdownRangeContainer(calendarId, labelText_1, inputValue_1, labelText_2, inputValue_2, dropdownClassShow = "")
+mixin dateRangeSeparate(calendarId, labelText_1, inputValue_1, labelText_2, inputValue_2, dropdownClassShow = "")
     div(class="dateRangeSelector")
         div(class="dropdown__calendar dropdown__content" + dropdownClassShow)
             +calendar(calendarId)
@@ -36,7 +36,7 @@ mixin dateDropdownSmall(labelText, inputName, inputValue, dateDataType)
 
 
 
-mixin dateDropdownRange(calendarId, labelText, inputValue, dropdownClassShow)
+mixin dateRangeCommon(calendarId, labelText, inputValue, dropdownClassShow)
     div(class="dateRangeSelector")
         div(class="dropdown__calendar dropdown__content" + dropdownClassShow)
             +calendar(calendarId)
