@@ -2,7 +2,7 @@ extends ../../assets/templates/_template.pug
 
 include ../../components/header/_header.pug
 include ../../components/textField/_textField.pug
-include ../../components/dateDropdown/_dateDropdown.pug
+include ../../components/dateRangeDropdown/_dateRangeDropdown.pug
 include ../../components/dropdownGuests/_dropdownGuests.pug
 include ../../components/dropdownRooms/_dropdownRooms.pug
 include ../../components/range/_range.pug
@@ -39,13 +39,15 @@ block content
         .searchRoom__content
             .searchRoom__filter
                 form(class="searchRoom__form")
-                    +dateDropdownRange("calendar_search", "даты пребывания в отеле", "19 авг - 23 авг", "")
-                    +dropdownGuestsLabeled("гости", "", "dropdown_guests_search", "", "dropdownGuestsInput_3")
-                    +range("range_search", "range__info")
-                    +checkboxButtons("Правила дома")
-                    +richCheckboxButtons("accessibility", "Удобства номера")
-                    +dropdownRoomsLabeled("dropdown", "default", "dropdown_rooms_1", "", "dropdownRoomsInput_1")
-                    +dropdownCheckbox("Дополнительные удобства", "")
+                    .filter-group
+                        +dateRangeCommon("calendar_search", "даты пребывания в отеле", "19 авг - 23 авг", "")
+                        +dropdownGuestsLabeled("гости", "", "dropdown_guests_search", "", "dropdownGuestsInput_3")
+                        +range("range_search", "range__info")
+                        +checkboxButtons("Правила дома")
+                    .filter-group
+                        +richCheckboxButtons("accessibility", "Удобства номера")
+                        +dropdownRoomsLabeled("dropdown", "default", "dropdown_rooms_1", "", "dropdownRoomsInput_1")
+                        +dropdownCheckbox("Дополнительные удобства", "")
             .searchRoom__rooms
                 .searchRoom__text Номера, которые мы для вас подобрали
                 .searchRoom__result
