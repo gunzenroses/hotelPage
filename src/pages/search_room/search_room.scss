@@ -15,6 +15,7 @@
 .searchRoom__content {
     @include container($width: 1160px, $height: 1256px, $mt: 30px, $mb: 70px, $ms: 140px);
     @include isFlex($justify: space-between);
+    min-width: 320px;
     position: relative;
     overflow: auto; //to avoid margin-collapse
     background: $light;
@@ -22,9 +23,8 @@
 
 .searchRoom__filter {
     width: 266px;
-    min-height: 739px;
+    height: 739px;
     @include isFlex($direction: column, $justify: flex-start);
-    background: grey;
 }
 
 .searchRoom__form {
@@ -50,7 +50,6 @@
     width: 835px;
     height: 1256px;
     @include isFlex($direction: column, $justify: flex-start);
-    background: grey;
 }
 
 .searchRoom__text {
@@ -61,7 +60,7 @@
 }
 
 .searchRoom__result {
-    width: 834px;
+    width: 100%;
     height: 1091px;
     @include isFlex($wrap: wrap);
     margin-top: 20px;
@@ -79,6 +78,109 @@
     }
 
     .searchRoom__content {
+        margin: 30px auto 70px;
+    }
+}
+
+@media (max-width: 1250px){
+    .searchRoom__content {
+        width: 980px;
+        height: auto;
+    }
+
+    .searchRoom__rooms {
+        width: 637px;
+        height: auto;
+    }
+
+    .searchRoom__filter {
+        margin-left: 25px
+    }
+
+    .searchRoom__result {
+        height: auto;
+        justify-content: space-around;
+    }
+
+    .searchRoom__result > div {
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width: 1070px){
+    .searchRoom__content {
+        flex-direction: column;
+        width: 100vw;
+    }
+
+    .searchRoom__filter,
+    .searchRoom__form,
+    .searchRoom__result {
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .searchRoom__filter {
+        width: 637px;
+        margin: 0 auto 30px;
+    }
+    .searchRoom__form {
+        @include isFlex($direction: row, $wrap: wrap);
+    }
+
+    .searchRoom__form > div {
+        width: 266px;
+        margin-top: 0;
+    }
+
+    .filter-group > div {
+        margin-top: 30px;
+    }
+
+    .searchRoom__rooms,
+    .searchRoom__text {
+        margin: 20px auto;
+    }
+}
+
+@media (max-width: 700px){
+    .searchRoom__filter,
+    .searchRoom__result {
+        width: 100%;
+    }
+
+
+    .searchRoom__form,
+    .searchRoom__rooms {
+        flex-direction: column;
+        width: 380px;
         
     }
-} 
+
+    .searchRoom__form>div {
+        width: 100%;
+    }
+}
+
+@media (max-width: 450px){
+    .searchRoom__form {
+        width: 85%;
+        min-width: 280px;
+        max-width: 320px;
+        justify-content: center;
+    }
+
+    .searchRoom__result {
+        width: 85vw;
+        min-width: 320px
+    }
+
+    .searchRoom__rooms {
+        width: 100%;
+        min-width: 320px;
+    }
+
+    .searchRoom__text {
+        width: 85%;
+    }
+}
