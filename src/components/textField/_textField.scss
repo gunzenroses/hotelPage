@@ -1,7 +1,6 @@
 .textfield {
     position: relative;
     width: 100%;
-    max-width: 320px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -58,10 +57,11 @@
     background-clip: text;
 }
 
-@media (max-width: 400px){
+@media (max-width: 450px){
     .textfield_login,
     .textfield {
         margin: 0 auto;
-        max-width: 280px;
+        width: 100%;
+        min-width: 280px;
     }
 }

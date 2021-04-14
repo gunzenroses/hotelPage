@@ -77,6 +77,8 @@
 
 @media (max-width: 450px){
     .richcheckbox__container{
+        width: 100%;
+        min-width: 266px;
         margin: 0 auto;
     }
 }

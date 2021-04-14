@@ -79,3 +79,9 @@
     @extend .radio__title;
     color: $darkShadeMore;
 }
+
+@media (max-width: 450px){
+    .radio_row {
+        margin: 0 auto;
+    }
+}

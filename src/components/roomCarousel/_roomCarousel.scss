@@ -1,7 +1,6 @@
 .roomCarousel {
-    width: 270px;
-    height: 152px;
-    background: $purple;
+    width: 100%;
+    height: calc(152/270 * 100%);
     position: relative;
     overflow: hidden;
 }
@@ -119,4 +118,19 @@
     z-index: 1;
     top: 53.5px;
     left: 0;
+}
+
+@media (max-width: 700px){
+    .roomCarousel {
+        height: 211px;
+    }
+}
+
+@media (max-width: 450px){
+    .roomCarousel {
+        width: 85vw;
+        height: 47vw;
+        min-width: 258px;
+        min-height: 145px;
+    }
 }
