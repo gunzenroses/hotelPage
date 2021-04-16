@@ -14,10 +14,10 @@ block variables
 block content
     .landingPage.dropdown__watch
         +header()
-        .landingPage__carousel
+        .landingPage__content
             +carouselLanding(pics)
-            .landingPage__search
+            .landingPage__text Лучшие номера для вашей работы, отдыха и просто вдохновения
+            .landingPage__card_search
                 form(method="get" action="/search_room")
                     +cardSearch()
-            .landingPage__text Лучшие номера для вашей работы, отдыха и просто вдохновения
         +footer()
