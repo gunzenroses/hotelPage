@@ -204,7 +204,8 @@ fieldset {
 
 @media (max-width: 450px){
   .container_small {
-    width: 130px;
+    width: calc(150/320*100%);
+    min-width: 130px;
   }
 
   .container_medium {
