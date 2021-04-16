@@ -5,16 +5,19 @@
 */
 
 .landingPage {
-    @include container($width: 1440px, $height: 1343px, $mt: 0, $mb: 0, $ms: auto);
-    @include isFlex($justify: flex-start);
+    @include container($width: 1440px, $height: auto, $mt: 0, $mb: 0, $ms: auto);
+    @include isFlex($justify: flex-start, $direction: column);
+    min-width: 320px;
     position: relative;
-    display: block;
-    overflow: auto; //to avoid margin-collapse
     background: $light;
 }
 
-.landingPage__carousel {
+.landingPage__content {
+    @include isFlex($justify: flex-start, $direction: column);
     position: relative;
+    width: 100%;
+    height: calc(830/1440 *100%);
+    margin: 0 auto;
     min-width: 320px;
 }
 
@@ -29,7 +32,7 @@
     z-index: 2;
 }
 
-.landingPage__search {
+.landingPage__card_search {
     position: absolute;
     top: 70px;
     left: 140px;
@@ -44,42 +47,53 @@
     .landingPage {
         width: 100vw;
         height: auto;
-        min-width: 320px;
+    }
+
+    .landingPage__content {
+        height: calc(830/1440 *100vw);
     }
 } 
 
 @media (max-width: 970px){
-    .landingPage__text {
-        display: none;
-    }
-
-    .landingPage__search {
-        top: 0;
-        margin-top: calc(((830/1440 * 100vw) - 380px)/2);
+    .landingPage__card_search {
         left: 50%;
-        margin-left: -190px;
+        transform: translateX(-50%);
+    }
+
+    .landingPage__content img,
+    .landingPage__content {
+        width: 100%;
+        height: calc(830/1440 * 970px);
     }
 }
 
-@media (max-width: 690px){
-    .landingPage__carousel {
-        min-height: calc(420px + (830/1440 * 100vw));
-        background: $purpleLess;
+@media (max-width: 500px){
+    .landingPage__content {
+        width: 100%;
+        // carousel + card_search + text + initial top
+        height: calc(830/1440 * 100vw + 374px + 48px + 40px);
+        min-height: calc(683/1440 * 320px + 374px + 48px + 40px);
     }
 
-    .landingPage__search {
-        margin-top: calc(830/1440 * 100vw + 20px);
-    }
-}
-
-@media (max-width: 380px){
-    .landingPage__carousel {
-        min-height: calc(374px + (830/1440 * 100vw));
+    .landingPage__text {
+        position: relative;
+        text-align: center;
+        margin: 20px auto;
+        right: 0;
+        bottom: 0;
     }
 
-    .landingPage__search {
-        top: calc(830/1440 * 100vw);
+    .landingPage__card_search {
+        width: fit-content;
+        min-width: 320px;
+        position: relative;
+        margin: 0 auto;
+        top: 0;
         left: 0;
-        margin: 0;
+        transform: none;
+    }
+
+    .landingPage__content img {
+        height: auto;
     }
 }
