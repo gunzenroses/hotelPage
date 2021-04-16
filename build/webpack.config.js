@@ -20,6 +20,7 @@ module.exports = (env) => {
       landing_page: "./pages/landing_page/landing_page.js",
       search_room: "./pages/search_room/search_room.js",
       room_details: "./pages/room_details/room_details.js",
+      registration: "./pages/registration/registration.js"
     },
 
     output: {
@@ -207,6 +208,14 @@ module.exports = (env) => {
         minify: true,
         template: path.resolve(__dirname, "../src/pages/room_details/room_details.pug"),
         chunks: ["room_details"],
+        inject: "body",
+      }),
+
+      new HtmlWebpackPlugin({
+        filename: "registration",
+        minify: true,
+        template: path.resolve(__dirname, "../src/pages/registration/registration.pug"),
+        chunks: ["registration"],
         inject: "body",
       }),
 
