@@ -7,20 +7,16 @@
 .carousel__background_inner {
     @include isFlex($justify: flex-start);
     width: 300%;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
     animation: carousel_background 30s ease-in infinite;
 }
 
-// .background__element {
-//     width: calc(100%/3);
-// }
-
 .carousel__element > img {
-    width: 100vw;
-    max-width: 1440px;
-    min-width: 360px;
+    width: 100%;
+    min-width: 320px;
     height: auto;
     object-fit: cover;
 }
@@ -55,12 +51,12 @@
     }
 }
 
-@media (max-width: 1440px){
+@media (max-width: 500px){
     .carousel__background_outer {
-        width: 100vw;
+        width: 100%;
         min-width: 320px;
         height: calc(830/1440 * 100vw);
-        min-height: 184px;
+        min-height: calc(830/1440 * 320px);
     }
 }
 
