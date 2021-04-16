@@ -1,0 +1,65 @@
+@import "../../index.scss";
+
+/*
+    Main container
+*/
+
+.registration {
+    @include container($width: 1440px, $height: 1197px, $mt: 0, $mb: 0, $ms: auto);
+    @include isFlex($direction: column, $justify: flex-start);
+    position: relative;
+    overflow: auto; //to avoid margin-collapse
+    background: $light;
+}
+
+.registration__content {
+    height: 683px;
+    width: 100%;
+    @include isFlex($direction: column, $justify: space-between);
+    margin: 0 auto;
+    position: relative;
+}
+
+.registration__card_registration {
+    position: absolute;
+    top: 19px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media (max-width: 1440px){
+    .registration {
+        width: 100vw;
+        height: auto;
+    }
+
+    .registration__content {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 500px){
+    .registration__content {
+        width: 100vw;
+        // carousel_background height + card_registration height + initial top
+        height: calc(683/1440 * 100vw + 646px + 40px);
+    }
+
+    .registration__card_registration {
+        width: fit-content;
+        min-width: 320px;
+        position: relative;
+        margin: 0 auto;
+        top: 0;
+        left: 0;
+        transform: none;
+    }
+}
+
+@media (max-width: 380px){
+    .registration__content {
+        height: calc(683/1440 * 100vw  + 646px);
+        min-height: calc(683/1440 * 320px + 646px);
+    }
+}
