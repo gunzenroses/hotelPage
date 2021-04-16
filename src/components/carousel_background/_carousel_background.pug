@@ -1,6 +1,13 @@
-mixin carouselBackground(backgroundPicture)
+mixin carouselLanding(backgroundPicture)
     .carousel__background_outer
         .carousel__background_inner
             for picture in backgroundPicture
-                .background__element
+                .carousel__element
+                    img(src= picture alt="background pictures")
+
+mixin carouselRegistration(backgroundPicture)
+    .carouselRegistration__background_outer
+        .carouselRegistration__background_inner
+            for picture in backgroundPicture
+                .carouselRegistration__element
                     img(src= picture alt="background pictures")
