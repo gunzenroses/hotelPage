@@ -194,7 +194,7 @@
     }
 }
 
-@media (max-width: 1070px) {
+@media (max-width: 1250px) {
     .formElements {
         &_inner {
             max-width: 890px;
@@ -220,12 +220,12 @@
         &_inner {
             width: 85%;
             margin: 5% auto 5%;
-            justify-content: space-between;
+            justify-content: space-around;
         }
     }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 850px) {
     .formElements {
         &_outer {
             min-width: 320px;
