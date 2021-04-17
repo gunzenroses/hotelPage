@@ -23,6 +23,7 @@
     margin-right: auto;
     position: relative;
     @include isFlex($direction: column);
+    border-bottom: 1px solid $darkShadeLess;
 }
 
 .roomDetails__view {
@@ -169,19 +170,28 @@
 }
 
 @media (max-width: 1250px){
-    .roomDetails__description {
-        width: 60%;
-        height: auto;
-        justify-content: space-between;
+    .roomDetails__roomData {
+        flex-direction: column;
     }
 
-    .roomDetails__description > div {
+    .roomDetails__roomData > div {
         margin-bottom: 25px;
     }
 
     .roomDetails__info_inner {
         margin: 3% auto;
         width: 95%;
+    }
+
+    .roomDetails__description {
+        height: auto;
+        width: 100%;
+        padding: 0 calc((100% - 760px)/2);
+        justify-content: space-between;
+    }
+
+    .roomDetails__description > div {
+        margin-bottom: 25px;
     }
 
     .roomDetails__roomInfo,
@@ -193,22 +203,6 @@
         width: calc(100% - 292px - 20px);
         height: auto;
     }
-}
-
-@media (max-width: 1070px){
-    .roomDetails__roomData {
-        flex-direction: column;
-    }
-
-    .roomDetails__roomData > div {
-        margin-bottom: 25px;
-    }
-
-    .roomDetails__description {
-        height: auto;
-        width: 100%;
-        padding: 0 calc((100% - 760px)/2);
-    }
 
     .roomDetails__booking {
         position: absolute;
@@ -217,7 +211,7 @@
     }
 }
 
-@media (max-width: 870px){
+@media (max-width: 970px){
     .roomDetails__info_inner {
         flex-direction: column-reverse;
     }
@@ -298,6 +292,10 @@
 
     .roomDetails__description>div {
         width: 100%;
+    }
+
+    .roomDetails__info_inner {
+        margin: 0 auto;
     }
 
     .roomDetails__booking {
