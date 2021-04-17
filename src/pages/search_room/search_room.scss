@@ -12,6 +12,12 @@
     background: $light;
 }
 
+.searchRoom__content_outer {
+    width: 100%;
+    height: fit-content;
+    border-bottom: 1px solid $darkShadeLess;
+}
+
 .searchRoom__content {
     @include container($width: 1160px, $height: 1256px, $mt: 30px, $mb: 70px, $ms: 140px);
     @include isFlex($justify: space-between);
