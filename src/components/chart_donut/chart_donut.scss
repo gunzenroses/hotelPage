@@ -72,3 +72,14 @@
 .disappointed {
     background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
 }
+
+@media (max-width: 380px){
+    .donut__content {
+        width: 100px;
+    }
+
+    .donut__caption {
+        margin-left: 15px;
+        margin-top: 15px;
+    }
+}
