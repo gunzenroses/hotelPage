@@ -6,7 +6,7 @@ import { roomsData_1 } from "../../assets/scripts/myData"
 import { paginationData_1 } from "../../assets/scripts/myData"
 import { ButtonPagination } from "../../components/pagination/pagination"
 
-window.onload = function () {
+window.onload = function(){
     require("../../components/textField/datasetHandler");
     require("../../components/checkboxExpandable/checkboxExpandable");
 
