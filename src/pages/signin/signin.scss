@@ -1,0 +1,37 @@
+@import "../../index.scss";
+@import "../registration/registration.scss";
+
+.signIn.dropdown__watch {
+    @extend .registration;
+}
+
+.signIn__content {
+    @extend .registration__content;
+}
+.signIn__card_signin {
+    @extend .registration__card_registration;
+    top: 153px;
+}
+
+@media (max-width: 500px){
+    .signIn__content {
+        // carouselSignin + card_signin + initial top
+        height: calc(683/1440 * 100vw + 360px + 40px);
+    }
+
+    .signIn__content img {
+        height: auto;
+    }
+
+    .signIn__card_signin {
+        top: 0;
+    }
+}
+
+@media (max-width: 380px){
+    .signIn__content {
+        // carouselSignin + card_signin + initial top
+        height: calc(683/1440 * 100vw  + 360px);
+        min-height: calc(683/1440 * 320px + 360px);
+    }
+}

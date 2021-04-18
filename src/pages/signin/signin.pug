@@ -1,0 +1,18 @@
+extend ../../assets/templates/_template.pug
+
+include ../../components/header/_header.pug
+include ../../components/card_singin/_card_signin.pug
+include ../../components/carousel_background/_carousel_background.pug
+include ../../components/footer/_footer.pug
+
+block variables
+    - var pics = ["../../assets/images/registration_1.jpg", "../../assets/images/registration_2.jpg"];
+
+block content
+    .signIn.dropdown__watch
+        +header()
+        .signIn__content
+            +carouselRegistration(pics)
+            .signIn__card_signin
+                +cardSignin()
+        +footer()
