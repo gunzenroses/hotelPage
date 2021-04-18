@@ -4,9 +4,15 @@
   box-sizing: border-box;
   outline: none;
 }
+
+$fs_base: 14px;   //1rem
+$fs_h1: 1.714rem; //24px
+$fs_h2: 1.357rem; //19px
+$fs_h3: 0.857rem; //12px
+
 html,
 body {
-  font-size: 14px;
+  font-size: $fs_base;
   line-height: 14.63px;
   letter-spacing: -0.05em;
   font-family: $Montserrat;
@@ -28,19 +34,19 @@ h6 {
 }
 
 h1 {
-  font-size: 24px;
+  font-size: $fs_h1;
   line-height: 30px;
   font-weight: 700;
 }
 
 h2 {
-  font-size: 19px;
+  font-size: $fs_h2;
   line-height: 23,75px;
   font-weight: 700;
 }
 
 h3 {
-  font-size: 12px;
+  font-size: $fs_h3;
   font-weight: 700;
   line-height: 14.63px;
   text-transform: uppercase;
@@ -53,9 +59,9 @@ a {
 
 p {
   margin: 0;
-  font-size: 14px;
+  font-size: $fs_base;
   font-weight: 400;
-  line-height: 24px;
+  line-height: $fs_h1;
   color: $darkShadeMore;
 }
 
@@ -138,11 +144,10 @@ input {
 .label {
   display: inline-block;
   height: 15px;
-  line-height: 12px;
-  font-size: 12px;
+  line-height: $fs_h3;
+  font-size: $fs_h3;
   font-weight: 700;
   margin-bottom: 3px;
-  //margin-top: 2px;
   margin-left: 1px;
   text-transform: uppercase;
   letter-spacing: -.005em;;
@@ -186,11 +191,6 @@ fieldset {
   margin-top: 20px;
   width: 100%;
 }
-
-// .margin__left_30 {
-//   margin-left: 30px;
-//   width: 100%;
-// }
 
 .width-and-heigh_266 {
   width: 266px;
