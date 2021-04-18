@@ -1,5 +1,5 @@
 
-import "./room_details.scss"
+import "./roomDetails.scss"
 import { likeButtons } from "../../components/buttonLike/buttonLike"
 
 window.onload = function () {

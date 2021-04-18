@@ -1,4 +1,4 @@
-import "./search_room.scss"
+import "./searchRoom.scss"
 import { Range } from "../../components/range/range"
 import { DropdownRooms } from "../../components/dropdownRooms/dropdownRooms"
 import { roomsData_1 } from "../../assets/scripts/myData"

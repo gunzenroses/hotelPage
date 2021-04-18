@@ -1,4 +1,4 @@
-import "./landing_page.scss"
+import "./landingPage.scss"
 
 window.onload = function () {
     require("../../components/checkboxExpandable/checkboxExpandable");

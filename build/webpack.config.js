@@ -17,9 +17,9 @@ module.exports = (env) => {
     entry: {
       app: "./app.js",
       UIKit: "./pages/UIKit/UIKit.js",
-      landing_page: "./pages/landing_page/landing_page.js",
-      search_room: "./pages/search_room/search_room.js",
-      room_details: "./pages/room_details/room_details.js",
+      landing_page: "./pages/landingPage/landingPage.js",
+      search_room: "./pages/searchRoom/searchRoom.js",
+      room_details: "./pages/roomDetails/roomDetails.js",
       registration: "./pages/registration/registration.js",
       signin: "./pages/signin/signin.js",
     },
@@ -191,7 +191,7 @@ module.exports = (env) => {
       new HtmlWebpackPlugin({
         filename: "landing_page",
         minify: true,
-        template: path.resolve(__dirname, "../src/pages/landing_page/landing_page.pug"),
+        template: path.resolve(__dirname, "../src/pages/landingPage/landingPage.pug"),
         chunks: ["landing_page"],
         inject: "body",
       }),
@@ -199,7 +199,7 @@ module.exports = (env) => {
       new HtmlWebpackPlugin({
         filename: "search_room",
         minify: true,
-        template: path.resolve(__dirname, "../src/pages/search_room/search_room.pug"),
+        template: path.resolve(__dirname, "../src/pages/searchRoom/searchRoom.pug"),
         chunks: ["search_room"],
         inject: "body",
       }),
@@ -207,7 +207,7 @@ module.exports = (env) => {
       new HtmlWebpackPlugin({
         filename: "room_details",
         minify: true,
-        template: path.resolve(__dirname, "../src/pages/room_details/room_details.pug"),
+        template: path.resolve(__dirname, "../src/pages/roomDetails/roomDetails.pug"),
         chunks: ["room_details"],
         inject: "body",
       }),
