@@ -38,8 +38,7 @@ window.onload = function () {
     let calendar_2 = new renderCalendar("calendar_2");
     
     // for cards
-    require("../../components/card__search/search");
-    require("../../components/card__booking/booking");
+    require("../../components/card_search/card_search");
+    require("../../components/card_booking/card_booking");
     let calendar_simple = new renderCalendar("calendar_simple")
-    
 }

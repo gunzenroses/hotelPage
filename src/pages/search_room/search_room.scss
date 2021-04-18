@@ -37,18 +37,17 @@
     width: 100%;
 }
 
-.searchRoom__form > div:nth-of-type(2){
+.filter-group > .dropdown__container {
     margin-top: 20px;
 }
 
-.searchRoom__form > div:nth-of-type(3),
-.searchRoom__form > div:nth-of-type(4),
-.searchRoom__form > div:nth-of-type(5),
-.searchRoom__form > div:nth-of-type(6) {
+.filter-group > .range__container,
+.filter-group > .widget,
+.filter-group > .richcheckbox__container {
     margin-top: 30px;
 }
 
-.searchRoom__form > div:last-of-type {
+.filter-group > .container_medium {
     margin-top: 15px;
 }
 

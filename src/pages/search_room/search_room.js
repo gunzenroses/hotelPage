@@ -10,7 +10,7 @@ window.onload = function(){
     require("../../components/textField/datasetHandler");
     require("../../components/checkboxExpandable/checkboxExpandable");
 
-    require("../../components/card__search/search");
+    require("../../components/card_search/card_search");
     let range_search = new Range("range_search");
     let dropdownRooms_search = new DropdownRooms("dropdown_rooms_1", roomsData_1);
 
