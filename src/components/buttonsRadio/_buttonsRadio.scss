@@ -1,5 +1,5 @@
 .radio_box {
-    height: 53px;
+    height: 54px;
     width: 220px;
     line-height: normal;
     @include isFlex($direction: column);
@@ -25,7 +25,7 @@
 }
 
 .radio__element + .radio__element {
-    margin-left: 16px;
+    margin-left: 14px;
 }
 
 .radio__real {

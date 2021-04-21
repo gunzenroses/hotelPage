@@ -74,6 +74,10 @@
     @extend .toggle__fake::before;
 }
 
+.toggle__container > .label {
+    margin-left: -2px;
+}
+
 @media (max-width: 450px){
     .toggle_element {
         margin: 0 auto;

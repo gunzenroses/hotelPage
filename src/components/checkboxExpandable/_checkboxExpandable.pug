@@ -1,8 +1,8 @@
 mixin dropdownCheckbox(dropdownTitleName, dropdownClassShow)
     .widget.container_medium
-        div(class="dropdown reverse")
+        .dropdown.reverse
             div(class="dropdown__content " + dropdownClassShow)
-                div(class="checkbox__content")
+                .checkbox__content
                     +checkboxExpandList()
             .dropdown__button_transparent.dropdown__init
                 span.dropdown__title!= dropdownTitleName
@@ -14,8 +14,6 @@ mixin checkboxExpandList()
     +checkboxExpandItem("baby bed", true, "Кроватка")
     +checkboxExpandItem("TV", false, "Телевизор")
     +checkboxExpandItem("shampoo", false, "Шампунь")
-    +checkboxExpandItem("TV", false, "Телевизор")
-    +checkboxExpandItem("shampoo 2", false, "Шампунь")
 
 mixin checkboxExpandItem(checkboxName, ifChecked, checkboxTitle)
     label.checkbox

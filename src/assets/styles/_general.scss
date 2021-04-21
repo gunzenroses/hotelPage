@@ -12,6 +12,7 @@ $fs_h3: 0.857rem; //12px
 
 html,
 body {
+  -webkit-text-size-adjust: 100%; 
   font-size: $fs_base;
   line-height: 14.63px;
   letter-spacing: -0.05em;
@@ -35,20 +36,20 @@ h6 {
 
 h1 {
   font-size: $fs_h1;
-  line-height: 30px;
+  line-height: 2.142rem;
   font-weight: 700;
 }
 
 h2 {
   font-size: $fs_h2;
-  line-height: 23,75px;
+  line-height: 16.963rem;
   font-weight: 700;
 }
 
 h3 {
   font-size: $fs_h3;
   font-weight: 700;
-  line-height: 14.63px;
+  line-height: 1.045rem;
   text-transform: uppercase;
   letter-spacing: 0.01em;
 }
@@ -99,7 +100,11 @@ button {
 
 .container_small {
   @include isFlex($direction: column);
-  width: 150px;
+  width: 151px;
+}
+
+.container_small > .label {
+  margin-bottom: 4px;
 }
 
 .container_medium {
@@ -150,16 +155,15 @@ input {
   margin-bottom: 3px;
   margin-left: 1px;
   text-transform: uppercase;
-  letter-spacing: -.005em;;
+  letter-spacing: -.003em;;
 
   &_right {
     @extend .label;
-    margin-bottom: 3px;
-    margin-top: 2px;
     font-weight: 400;
     color: $darkShadeMiddle;
     position: absolute;
     right: 0;
+    margin-top: 3px;
   }
 }
 
@@ -199,7 +203,7 @@ fieldset {
 }
 
 .width-and-heigh_266 > div {
-  margin-bottom: 19px;
+  margin-bottom: 20px;
 }
 
 @media (max-width: 450px){
