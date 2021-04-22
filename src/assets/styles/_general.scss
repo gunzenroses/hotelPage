@@ -3,6 +3,7 @@
 * {
   box-sizing: border-box;
   outline: none;
+  flex-shrink: 0;
 }
 
 $fs_base: 14px;   //1rem
@@ -100,7 +101,7 @@ button {
 
 .container_small {
   @include isFlex($direction: column);
-  width: 151px;
+  width: 150px;
 }
 
 .container_small > .label {
@@ -153,7 +154,7 @@ input {
   font-size: $fs_h3;
   font-weight: 700;
   margin-bottom: 3px;
-  margin-left: 1px;
+  //margin-left: 1px;
   text-transform: uppercase;
   letter-spacing: -.003em;;
 

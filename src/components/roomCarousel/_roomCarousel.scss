@@ -1,6 +1,7 @@
 .roomCarousel {
     width: 100%;
     height: calc(152/270 * 100%);
+    min-height: 151.5px;
     position: relative;
     overflow: hidden;
 }
@@ -24,7 +25,7 @@
     position: absolute;
     width: 42px;
     height: 7.5px;
-    bottom: 16px;
+    bottom: 15px;
     right: 15px;
     @include isFlex();
 }

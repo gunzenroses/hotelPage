@@ -41,7 +41,7 @@
 */
 .footer__info {
     width: 260px;
-    height: 130px;
+    height: 129px;
     @include isFlex($direction: column);
     letter-spacing: 0.001em;
 }
@@ -107,12 +107,13 @@
 }
 
 .footer__info_subscribe > p {
-    margin-top: 16px;
+    margin-top: 14px;
     letter-spacing: 0.005em;
 }
 
 .footer__info_subscribe > form {
-    margin-top: 23px;
+    margin-top: 22px;
+    width: 100%;
 }
 
 
@@ -318,10 +319,11 @@
 }
 
 .copyright__social {
-    width: 116px;
+    width: 115px;
     height: 26px;
     font-size: 24px;
     @include isFlex($align: center);
+    margin-right: 1px;
 }
 
 .fa-twitter, 

@@ -7,7 +7,7 @@ let paginationData_1 = {
 
 let guestsData_1 = [0, 0, 0];
 let guestsData_booking = [2, 1, 0];
-let guestsData_search = [2, 1, 1];
+let guestsData_search = [0, 0, 0];
 
 let roomsData_1 = [2, 2, 0];
 let roomsData_2 = [2, 2, 0];

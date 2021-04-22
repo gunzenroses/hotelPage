@@ -8,7 +8,7 @@
 }
 
 .card_search > div:first-of-type {
-    margin-top: 52px;
+    margin-top: 23px;
 }
 
 .card_search > div:nth-of-type(2) {
@@ -17,6 +17,8 @@
 
 .card_search > button {
     margin-top: 30px;
+    padding-top: 2px;
+    padding-right: 4px;
 }
 
 @media (max-width: 400px){

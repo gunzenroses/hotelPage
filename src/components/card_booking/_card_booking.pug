@@ -5,7 +5,7 @@ include ../button/_button.pug
 mixin cardBooking()
     .card_booking
         +bookingText("big", "888", "Люкс", "9 990")
-        +dateRangeSeparate("calendar_booking", "Прибытие", "19.08.2019", "Выезд", "24.08.2019", "")
+        +dateRangeSeparate("calendar_booking", "Прибытие", "19.08.2019", "Выезд", "23.08.2019", "")
         +dropdownGuestsLabeled("Гости", "", "dropdown_guests_booking", "", "dropdownGuestsInput_4")
         +bookingInfoItem("9 990₽ х 4 суток", "39 960")
         +bookingInfoItem("Сбор за услуги: скидка 2 179₽", "0", true)
@@ -46,11 +46,11 @@ mixin bookingText(rowSize, bookingNumber, bookingType, bookingPrice)
                 span.booking__text_price!= bookingPrice + "₽"
                 span.booking__text_period &nbsp;в сутки
     else
-        .booking__row_small
-            .booking__text_left
-                span.booking__text_sign №
-                span.booking__text_number!= bookingNumber
-                span.booking__text_type!= bookingType 
-            .booking__text_right
-                span.booking__text_price!= bookingPrice + "₽"
-                span.booking__text_period &nbsp;в сутки
+        .card__row_small
+            .card__text_left
+                span.card__text_sign №
+                span.card__text_number!= bookingNumber
+                span.card__text_type!= bookingType 
+            .card__text_right
+                span.card__text_price!= bookingPrice + "₽"
+                span.card__text_period &nbsp;в сутки

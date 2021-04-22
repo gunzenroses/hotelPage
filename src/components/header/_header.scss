@@ -3,7 +3,7 @@
     @include isFlex($align: center);
     position: relative;
     padding: 15px 140px;
-    width: 1440px;
+    width: 100%;
     height: 70px;
     margin: 0 auto;
 }
@@ -31,8 +31,8 @@
 
 .logo__name {
     position: relative;
-    width: 53px;
-    height: 13.5px;
+    width: 54px;
+    height: 14px;
     background: url(/assets/images/logo__name.svg);
     background-position: center;
     background-size: initial;

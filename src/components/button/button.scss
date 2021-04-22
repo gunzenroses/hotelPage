@@ -113,7 +113,7 @@
 .button_link_inner {
     @extend .button_filled_inner;
     width: 83px;
-    height: 30px;
+    height: 29px;
     line-height: 30px;
     letter-spacing: 0.01em;
 }
@@ -154,6 +154,7 @@
     font-size: $fs_h3;
     letter-spacing: -0.01em;
     padding-bottom: 2px;
+    flex-shrink: 0;
     //padding: 14px 22px 15px 18px;
     &::before {
         font-family: $MaterialIcons;
