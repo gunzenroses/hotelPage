@@ -8,6 +8,7 @@ let paginationData_1 = {
 let guestsData_1 = [0, 0, 0];
 let guestsData_booking = [2, 1, 0];
 let guestsData_search = [0, 0, 0];
+let guestsData_searchRoom = [2, 1, 1];
 
 let roomsData_1 = [2, 2, 0];
 let roomsData_2 = [2, 2, 0];
@@ -43,4 +44,4 @@ let room840 = {
 
 
 
-export { paginationData_1, guestsData_1, guestsData_booking, guestsData_search, roomsData_1, roomsData_2, room888, room840}
+export { paginationData_1, guestsData_1, guestsData_booking, guestsData_search, guestsData_searchRoom, roomsData_1, roomsData_2, room888, room840}

@@ -33,6 +33,11 @@
     padding-bottom: 2px;
 }
 
+.date__range > input {
+    //letter-spacing: .02em;
+    line-height: 13.5px;
+}
+
 .date__range input::placeholder {
     color: $darkShadeMore;
 }

@@ -23,16 +23,21 @@
 
 .roomCarousel__radio {
     position: absolute;
-    width: 42px;
-    height: 7.5px;
-    bottom: 15px;
+    // width: 42px;
+    // height: 7.5px;
+    // bottom: 15px;
+    // right: 15px;
+    // width: 40px;
+    width: 41px;
+    height: auto;
+    bottom: 15.5px;
     right: 15px;
     @include isFlex();
 }
 
 .roomCarousel__element {
-    width: 7.5px;
-    height: 7.5px;
+    width: auto;
+    height: auto;
     z-index: 1;
 }
 

@@ -38,9 +38,9 @@
 */
 
 .cards_inner {
-    @include container($width: 1200px, $height: 1061px, $mt: 149px, $ms: auto, $mb: 140px);
+    @include container($width: 1200px, $height: 1061px, $mt: 150px, $ms: auto, $mb: 139px);
     @include isFlex($direction: column, $wrap: wrap, $justify: flex-start);
-    margin-left: 139px;
+    margin-left: 141px;
     
     background: transparent;
 }
@@ -50,16 +50,23 @@
 }
 
 .cards_inner > div:nth-of-type(3){
-    margin-top: 0;
+    margin-top: 1px;
 }
 
 .cards_inner > div:nth-of-type(5){
     margin-top: -1px;
 }
 
+.cards_inner > div:nth-of-type(6) {
+    margin-left: -0.5px;
+    margin-top: 41px;
+}
+
 .cards_inner > div:last-of-type{
+    margin-left: -.5px;
     margin-top: 39px;
 }
+
 
 
 /*
@@ -132,7 +139,7 @@
 */
 
 .card__text {
-    width: 320px;
+    width: 100%;
     min-height: 30px;
     letter-spacing: .0005em;
     text-align: left;
@@ -144,13 +151,13 @@
     font-weight: 400;
     line-height: 44px;
     color: $darkShadeMost;
-    letter-spacing: 0.002em;
+    letter-spacing: 0.001em;
 }
 
 .card__text_row {
     width: 320px;
     height: 44px;
-    margin: 29px auto 0;
+    margin: 30px auto 0;
     letter-spacing: 0.005em;
     @include isFlex();
 }

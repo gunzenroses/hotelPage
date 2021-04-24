@@ -38,7 +38,7 @@
 }
 
 .checkbox__title_description + .checkbox__subtitle_description {
-    margin-top: 7px;
+    margin-top: 6px;
 }
 
 .checkbox__subtitle_description {
@@ -58,8 +58,8 @@
     @include isFlex($direction: column, $justify: flex-start);
 }
 
-.richcheckbox__container > .checkbox_button:first-of-type {
-    margin-top: 10px;
+.richcheckbox__container > .label {
+    margin-bottom: 14px;
 }
 
 .checkbox__description > .checkbox__title_description{
@@ -71,9 +71,90 @@
     letter-spacing: 0.003em;
 }
 
-.checkbox_button > .checkbox__fake {
 
+/*rename*/
+
+.checkbox__fake_expand {
+    position: relative;
+    margin-right: 10px;
+    //margin-top: 1px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid $darkShadeLess;
+    border-radius: 4px;
+    background-color: transparent;
+    display: inline-block;
 }
+
+.checkbox__real:checked ~ .checkbox__fake_expand {
+    @extend .checkbox__fake_expand;
+    border-color: $purple;
+}
+
+.checkbox__real:checked + .checkbox__fake_expand::before {
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    content: "";
+    transform: translate(-50%,-50%);
+    display: block;
+    width: 4px;
+    height: 6px;
+    color: none;
+    transform: rotate(45deg);
+    border-image: linear-gradient(#BC9CFF, #8BA4F9);
+    border-image-slice: 1;
+    border-right: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+}
+
+.checkbox__title_expand {
+    display: inline-block;
+    width: 192px;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0.003em;
+    line-height: 20px;
+    color: $darkShadeMiddle;
+    vertical-align: auto;
+}
+
+.buttonsCheckbox .checkbox__title_expand {
+    margin-top: 2px;
+}
+
+.checkbox__content_expand .checkbox__title_expand {
+    line-height: 20px;
+}
+
+/*end of rename*/
+/*rename*/
+
+.checkbox_expand {
+    @include isFlex($justify: flex-start);
+    font-family: $Montserrat;
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: none;
+}
+
+.checkbox_expand:hover {
+    cursor: pointer;
+}
+
+.checkbox_expand + .checkbox_expand {
+    margin-top: 10px;
+}
+
+.checkbox__real {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    appearance: none;
+}
+
 
 @media (max-width: 450px){
     .richcheckbox__container{

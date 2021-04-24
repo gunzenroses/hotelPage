@@ -37,7 +37,7 @@
 
 .dropdown__input {
     width: calc(100% - 44px - 15px);
-    margin: 0 44px 0 13px;
+    margin: 0 44px 0 12px;
     height: 24px;
     line-height: 24px;
     border: none;
@@ -106,7 +106,7 @@
 }
 
 .dropdown__text {
-    width: calc(100% + 1px - 30px - 30px - 32px);
+    width: calc(100% - 30px - 30px - 32px);
     font-weight: 700;
     margin-top: 6px;
     letter-spacing: -0.01em;
@@ -120,7 +120,7 @@
     border: 1px solid $darkShadeMiddle;
     border-radius: 50%;
     text-align: center;
-    line-height: 30px;
+    line-height: 27px;
     font-size: 18px;
     cursor: pointer;
     margin-top: -1px;

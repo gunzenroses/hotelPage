@@ -17,7 +17,7 @@
 }
 
 .card_booking > div:nth-of-type(2) {
-    margin-top: 13px;
+    margin-top: 12px;
 }
 
 .card_booking > div:nth-of-type(3) {
@@ -25,18 +25,19 @@
 }
 
 .card_booking > div:nth-of-type(4) {
-    margin-top: 18px;
+    margin-top: 19px;
 }
 
 .card_booking > div:nth-of-type(7) {
-    margin-top: 21px;
-    width: 330px;
+    margin-top: 20px;
+    width: 100%;
 }
 
 .card_booking > button {
-    margin-top: 19px;
+    //margin-top: 19px;
+    margin-top: 20px;
     padding-right: 5px;
-    padding-top: 2px;
+    padding-bottom: 2px;
 }
 
 .booking__text_left {
@@ -54,13 +55,13 @@
     font-size: 24px;
     display: inline-block;
     letter-spacing: 0.01em;
-    padding-right: 2px;
+    padding-right: 1px;
 }
 
 .booking__text_type {
-    font-size: 11px;
+    font-size: 12px;
     color: $purple;
-    letter-spacing: .02em;
+    letter-spacing: -.02em;
     text-transform: uppercase;
     display: inline-block;
 }
@@ -88,13 +89,13 @@
 
 .booking__info_row {
     @include isFlex();
-    width: 320px;
+    width: 318px;
     min-height: 24px;
     font-size: 14px;
     font-weight: 400;
     line-height: 18px;
     color: $darkShadeMore;
-    letter-spacing: 0.005em;
+    //letter-spacing: 0.005em;
     margin-bottom: 10px;
     margin-left: 1px;
 }
@@ -103,6 +104,7 @@
     display: inline-block;
     width: 220px;
     text-align: left;
+    letter-spacing: .0001em;
 }
 
 .booking__info_sign {
@@ -131,6 +133,7 @@
     display: inline-block;
     width: 75px;
     text-align: right;
+    letter-spacing: .005em
 }
 
 

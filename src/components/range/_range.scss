@@ -7,8 +7,13 @@
     @include isFlex($direction: column, $justify: flex-start);
 }
 
+// .range__label_right {
+//     @extend .label_right;
+//     margin-bottom: 1px;
+// }
+
 .range__container > .range__slider {
-    margin-top: 18px;
+    margin-top: 19px;
 }
 
 .range__slider {
