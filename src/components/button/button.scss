@@ -107,6 +107,9 @@
 
 .button_link {
     @extend .button_filled;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 87px;
     height: 34px;
 }
