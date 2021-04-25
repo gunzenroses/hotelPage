@@ -1,5 +1,6 @@
 .radio_box {
-    height: 54px;
+    //height: 54px;
+    height: 53px;
     width: 220px;
     line-height: normal;
     @include isFlex($direction: column);
@@ -22,6 +23,7 @@
     font-weight: 400;
     font-size: 14px;
     text-transform: none;
+        letter-spacing: -.002em;
 }
 
 .radio__element + .radio__element {

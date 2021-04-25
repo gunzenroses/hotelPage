@@ -141,7 +141,7 @@ input {
   appearance: none;
   background: transparent;
   border: none;
-  padding-top: 3px;
+  // padding-top: 3px;
 }
 
 ::placeholder { /* Most modern browsers support this now. */
@@ -154,8 +154,8 @@ input {
   line-height: $fs_h3;
   font-size: $fs_h3;
   font-weight: 700;
-  margin-bottom: 3px;
-  //margin-left: 1px;
+  //margin-bottom: 3px;
+  margin-bottom: 3.5px;
   text-transform: uppercase;
   letter-spacing: -.003em;;
 
@@ -205,7 +205,7 @@ fieldset {
 }
 
 .width-and-heigh_266 > div {
-  margin-bottom: 20px;
+  margin-bottom: 19px;
 }
 
 @media (max-width: 450px){

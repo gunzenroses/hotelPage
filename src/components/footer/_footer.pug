@@ -45,7 +45,7 @@ mixin footer(footerText = "Бронирование номеров в лучше
                             for support in supports
                                 +buttonNavbar(support, buttonOnclick="#")
                 .footer__info_subscribe
-                    h3.label Подписка
+                    h3 Подписка
                     p Получайте специальные предложения и новости сервиса
                     form(action="/registration" method="get")
                         +emailSubscribe()

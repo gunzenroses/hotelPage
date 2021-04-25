@@ -35,13 +35,14 @@
 
 .card_booking > button {
     //margin-top: 19px;
-    margin-top: 20px;
+    margin-top: 19.5px;
     padding-right: 5px;
     padding-bottom: 2px;
 }
 
 .booking__text_left {
     color: $darkShadeMost;
+    line-height: 11px;
 }
 
 .booking__text_sign {
@@ -69,7 +70,7 @@
 .booking__text_right {
     color: $darkShadeMiddle;
     letter-spacing: 0.01em;
-    line-height: 21px;
+    line-height: 20px;
 }
 
 .booking__text_price {
