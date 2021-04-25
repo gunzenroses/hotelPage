@@ -27,7 +27,8 @@
     line-height: 24px;
     width: 270px;
     height: 48px;
-    right: 134px;
+    //right: 134px;
+    right: 133px;
     bottom: 20px;
     z-index: 2;
     letter-spacing: 0.002em;
@@ -36,8 +37,13 @@
 .landingPage__card_search {
     position: absolute;
     top: 70px;
-    left: 140px;
+    //left: 140px;
+    left: 141px;
     z-index: 2;
+}
+
+.landingPage  > .footer_outer {
+    margin-top: -1px
 }
 
 /*
