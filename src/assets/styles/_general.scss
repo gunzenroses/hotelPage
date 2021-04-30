@@ -1,5 +1,7 @@
 /* src/assets/styles/common/_general.scss  */
 
+@import "./normalize";
+
 * {
   box-sizing: border-box;
   outline: none;
@@ -20,7 +22,6 @@ body {
   font-family: $Montserrat;
   font-weight: 400;
   color: $darkShadeMore;
-  background: darkkhaki;
   margin: 0 auto;
   padding: 0;
 }
