@@ -7,10 +7,12 @@
 
 .signIn__content {
     @extend .registration__content;
+    height: 702px;
 }
 .signIn__card_signin {
     @extend .registration__card_registration;
-    top: 153px;
+    top: 173px;
+    transform: translateX(-50%);
 }
 
 @media (max-width: 500px){
