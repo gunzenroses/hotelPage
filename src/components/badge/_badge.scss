@@ -9,8 +9,12 @@
 }
 
 .badge__info {
-    height: 51px;
+    height: 50px;
     @include isFlex($justify: start);
+}
+
+.badge__info > .info__description {
+    margin-top: -1px;
 }
 
 .badge__info > .maretialIcon {
@@ -42,13 +46,14 @@
 }
 
 .info__description {
-    height: 48px;
+    height: 47px;
     width: 200px;
 }
 .info__main {
     font-family: $Montserrat;
     font-size: 14px;
-    line-height: 24.5px;
+    //line-height: 24.5px;
+    line-height: 25px;
     font-weight: 700;
     letter-spacing: .001em;
 }
@@ -56,9 +61,11 @@
 .info__additional {
     font-family: $Montserrat;
     font-size: 14px;
-    line-height: 24.5px;
+    //line-height: 24.5px;
+    line-height: 22px;
     font-weight: 400;
     letter-spacing: 0.001em;
+    margin-top: 0.5px;
 }
 
 .badge__underline {

@@ -167,8 +167,9 @@
     }
 
     .booking__info_row {
-        width: 280px;
-        margin: 18px auto 0;
+        min-width: 280px;
+        width: 100%;
+        margin: 9px 0;
     }
 
     .booking__row_big {
@@ -178,15 +179,21 @@
 
     .card_booking>div:nth-of-type(7) {
         margin: 21px auto 0;
-        width: 280px;
+        min-width: 280px;
+        width: 100%;
     }
 
     .booking__total_line {
-        width: 120px;
+        width: calc(100% - 140px);
     }
     
     .richcheckbox__container,
     .bullet__container {
         margin: 0 auto;
+    }
+
+    .booking__info_description {
+        width: calc(100% - 120px);
+        max-width: 170px;
     }
 }
