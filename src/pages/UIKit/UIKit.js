@@ -1,7 +1,7 @@
 import "./UIkit.scss"
 import "./UIKit.pug"
 import { likeButtons } from "../../components/buttonLike/buttonLike"
-import { Range } from "../../components/range/range"
+//import { Range } from "../../components/range/range"
 import { paginationData_1 } from "../../assets/scripts/myData"
 import { ButtonPagination } from "../../components/pagination/pagination"
 
@@ -24,7 +24,26 @@ window.onload = function () {
     let likeButton_1 = new likeButtons("buttonLike_1", 2);
     let likeButton_2 = new likeButtons("buttonLike_2", 12);
     let likeButtons_3 = new likeButtons("likes_author_1", 12);
-    let range_1 = new Range("range_1");
+    //let range_1 = new Range("range_1");
+
+    require('webpack-jquery-ui/slider');
+    
+    $( function() {
+        $("#range_1" ).slider({
+            range: true,
+            min: 0,
+            max: 15000,
+            values: [ 5000, 10000 ],
+            animate: "fast",
+            slide: function( event, ui ) {
+                $( "#amount" ).val(ui.values[ 0 ] + "₽ - " + ui.values[ 1 ] + "₽" );
+            }
+            });
+        $( "#amount" ).val( $( "#range_1" ).slider( "values", 0 ) +
+            "₽ - " + $( "#range_1" ).slider( "values", 1 ) + "₽");
+        } );
+
+
     let pagination_formElements = new ButtonPagination(paginationData_1, "pagination_bar_1");
     
     let guestsHandler_0 = new DropdownGuests("dropdown_guests_0", );
