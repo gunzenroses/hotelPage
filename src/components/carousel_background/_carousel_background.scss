@@ -1,12 +1,12 @@
-.carousel__background_outer {
-    @include container($width: 100%, $height: 830px);
+.carouselLanding__background_outer {
+    @include container($width: 100%, $height: 100%);
     min-width: 320px;
     min-height: calc(830/1440 * 320px);
     position: relative;
     overflow: hidden;
 }
 
-.carousel__background_inner {
+.carouselLanding__background_inner {
     @include isFlex($justify: flex-start);
     width: 300%;
     height: 100%;
@@ -16,10 +16,14 @@
     animation: carousel_background 30s ease-in infinite;
 }
 
-.carousel__element > img {
+.carouselLanding__element {
+    width: calc(100%/3);
+    height: 100%;
+}
+
+.carouselLanding__element > img {
     width: 100%;
-    min-width: 320px;
-    height: auto;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -54,41 +58,47 @@
 }
 
 @media (max-width: 500px){
-    .carousel__background_outer {
+    .carouselLanding__background_outer {
         width: 100%;
         height: calc(830/1440 * 100vw);
     }
 }
 
 /*
-    CarouselRegistration
+    CarouselBackground
 */
 
-.carouselRegistration__background_outer {
-    @include container($width: 100%, $height: 683px);
+.carousel__background_outer {
+    @include container($width: 100%, $height: 100%);
     min-width: 320px;
-    min-height: 151px;
+    min-height: calc(683/1440 * 320px);
     position: relative;
     overflow: hidden;
 }
 
-.carouselRegistration__background_inner {
+.carousel__background_inner {
     @include isFlex($justify: flex-start);
     width: 200%;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    animation: carousel_registration 15s ease-in infinite;
+    animation: carouselBackground 15s ease-in infinite;
 }
 
-.carouselRegistration__element > img {
+.carousel__element {
+    width: 50%;
+    height: 100%;
+}
+
+.carousel__element > img {
     width: 100%;
+    height: 100%;
     min-width: 320px;
-    height: 683px;
     object-fit: cover;
 }
 
-@keyframes carousel_registration {
+@keyframes carouselBackground {
     from {
         left: 0;
     }
@@ -111,7 +121,7 @@
 }
 
 @media (max-width: 500px){
-    .carouselRegistration__background_outer {
+    .carousel__background_outer {
         width: 100%;
         height: calc(683/1440 * 100vw);
     }
