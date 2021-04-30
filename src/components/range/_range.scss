@@ -1,8 +1,7 @@
 .range__container {
     position: relative;
     width: 100%;
-    height: 72px;
-    margin-left: -1px;
+    height: auto; //72px;
     margin-top: 1px;
     @include isFlex($direction: column, $justify: flex-start);
 }
@@ -14,6 +13,11 @@
 
 .range__container > .range__slider {
     margin-top: 19px;
+}
+
+.range__container > .label {
+    margin-bottom: 2.5px;
+    margin-top: 6px;
 }
 
 .range__slider {
