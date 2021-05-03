@@ -1,20 +1,34 @@
-# Webpack 4 project starter with Pug, Sass/Stylus, jQuery, VanillaJS, Babel and Yarn
+## Webpack 4 project with Pug, Sass/Stylus, jQuery, VanillaJS, Babel and Yarn
 
-The purpose if this Webpack Starter is to allow people to create websites without frameworks/libraries like React only using simple but powerful technologies to build quality websites.
+The purpose of this project is to create a websites without frameworks/libraries like React only using simple but powerful technologies to build quality websites.
 
-## Technologies used
+## Used technologies and libraries
 
 - Templating: `Pug`
-- Styling: `Sass`
+- Styling: `Scss`
 - Scripting: `VanillaJS`
 - JS Compiler: `Babel ES6`
+- jQuery: `jQueryUI (range-slider)`
 
-## Features
+## How to
 
-- Well organized folder structure for view, styles and assets.
-- Webpack notifier on every compilation.
-- Compatibility with `manifest`, `browserconfig` and other external files you wish to include.
-- `Babel module resolver` configured to use alias and simplify the paths you need to import.
-- `Editorconfig`
-- Yarn instead NPM
-- PostCSS
+Clone repository
+>```git clone https://github.com/gunzenroses/hotelPage.git```
+
+Install dependancies
+>```npm i```
+
+Run development mode (devServer on localhost:8080)
+>```npm run dev```
+
+Run production mode
+>```npm run build```
+
+## Links to pages
+
+### [UIKit](https://gunzenroses.github.io/hotelPage/UIKit.html)
+### [Landing page](https://gunzenroses.github.io/hotelPage/landing_page.html)
+### [Search room](https://gunzenroses.github.io/hotelPage/search_room.html)
+### [Registration](https://gunzenroses.github.io/hotelPage/registration.html)
+### [Sign in](https://gunzenroses.github.io/hotelPage/signin.html)
+### [Room details](https://gunzenroses.github.io/hotelPage/room_details.html)
