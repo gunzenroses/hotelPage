@@ -1,23 +1,19 @@
 // Libraries
 const path = require("path");
 const webpack = require("webpack");
+//const { CleanWebpackPlugin} = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const WebpackNotifierPlugin = require("webpack-notifier");
-const TerserPlugin = require("terser-webpack-plugin");
 
 // Files
 const plugins = require("./postcss.config");
-
-// Configuration
-//-module.exports = (env, options) => {
-//-    return {
 
 module.exports = {
         context: path.resolve(__dirname, "./src"),
         node: {
             __filename: true,
-            __dirname: true
+            __dirname: true,
         },
         entry: {
             UIKit: "./pages/UIKit/UIKit.js",
@@ -27,13 +23,6 @@ module.exports = {
             registration: "./pages/registration/registration.js",
             signin: "./pages/signin/signin.js",
         },
-
-        // output: {
-        //     path: path.resolve(__dirname, "./dist"),
-        //     publicPath: "/",
-        //     filename: "assets/js/[name].[hash:7].bundle.js",
-        // },
-
         resolve: {
             extensions: [".js"],
             alias: {
@@ -42,7 +31,6 @@ module.exports = {
                 fonts: path.resolve(__dirname, "./src/assets/fonts"), // Relative path of fonts
             },
         },
-
         /*
             Loaders with configurations
         */
@@ -81,28 +69,11 @@ module.exports = {
                         name: "assets/fonts/[name].[ext]",
                     },
                 },
-                {
-                    test: /\.(mp4)(\?.*)?$/,
-                    loader: "url-loader",
-                    options: {
-                        limit: 10000,
-                        name: "assets/videos/[name].[hash:7].[ext]",
-                    },
-                },
             ],
         },
             
-        optimization: {
-            minimizer: [
-                new TerserPlugin({
-                    cache: true,
-                    parallel: true,
-                    sourceMap: true,
-                }),
-            ],
-        },
-
         plugins: [
+            //new CleanWebpackPlugin(),
             new CopyWebpackPlugin([
                 {from: "assets/images", to: "assets/images"},
                 {from: "assets/fonts", to: "assets/fonts"},
@@ -127,14 +98,14 @@ module.exports = {
             //replace one day with utils.pages(env)
 
             new HtmlWebpackPlugin({
-                filename: "UIKit",
+                filename: "UIKit.html",
                 template: path.resolve(__dirname, "./src/pages/UIkit/UIKit.pug"),
                 chunks: ["UIKit"],
                 inject: "body",
             }),
 
             new HtmlWebpackPlugin({
-                filename: "landing_page",
+                filename: "landing_page.html",
                 minify: true,
                 template: path.resolve(__dirname, "./src/pages/landingPage/landingPage.pug"),
                 chunks: ["landing_page"],
@@ -142,7 +113,7 @@ module.exports = {
             }),
 
             new HtmlWebpackPlugin({
-                filename: "search_room",
+                filename: "search_room.html",
                 minify: true,
                 template: path.resolve(__dirname, "./src/pages/searchRoom/searchRoom.pug"),
                 chunks: ["search_room"],
@@ -150,7 +121,7 @@ module.exports = {
             }),
 
             new HtmlWebpackPlugin({
-                filename: "room_details",
+                filename: "room_details.html",
                 minify: true,
                 template: path.resolve(__dirname, "./src/pages/roomDetails/roomDetails.pug"),
                 chunks: ["room_details"],
@@ -158,7 +129,7 @@ module.exports = {
             }),
 
             new HtmlWebpackPlugin({
-                filename: "registration",
+                filename: "registration.html",
                 minify: true,
                 template: path.resolve(__dirname, "./src/pages/registration/registration.pug"),
                 chunks: ["registration"],
@@ -166,7 +137,7 @@ module.exports = {
             }),
 
             new HtmlWebpackPlugin({
-                filename: "signin",
+                filename: "signin.html",
                 minify: true,
                 template: path.resolve(__dirname, "./src/pages/signin/signin.pug"),
                 chunks: ["signin"],
@@ -188,5 +159,4 @@ module.exports = {
                 title: "Your project",
             }),
         ],
-    //-};
 };
