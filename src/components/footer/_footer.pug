@@ -47,8 +47,8 @@ mixin footer(footerText = "Бронирование номеров в лучше
                 .footer__info_subscribe
                     h3 Подписка
                     p Получайте специальные предложения и новости сервиса
-                    form(action="/registration" method="get")
-                        +emailSubscribe()
+                    form(method="get")
+                        +emailSubscribe("registration.html")
         .footer__copyright_outer
             .footer__copyright_inner
                 .copyright__text Copyright © 2018 Toxin отель. Все права защищены.
