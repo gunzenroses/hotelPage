@@ -2,12 +2,13 @@ const path = require("path");
 const common = require("./webpack.common");
 const { merge } = require("webpack-merge");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = merge(common, {
     mode: "production",
     output: {
         path: path.resolve(__dirname, "./dist"),
-        publicPath: "/",
+        publicPath: "https://gunzenroses.github.io/hotelPage/",
         filename: "assets/js/[name].[hash:7].bundle.js",
     },
     module: {
@@ -46,6 +47,16 @@ module.exports = merge(common, {
             },
         ]
     },
+
+    optimization: {
+        minimizer: [
+            new TerserPlugin({
+                parallel: true,
+                sourceMap: true,
+            }),
+        ],
+    },
+
     plugins: [
         new MiniCssExtractPlugin({
             filename: "assets/css/[name].[hash:7].bundle.css",
