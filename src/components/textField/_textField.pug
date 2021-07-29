@@ -20,10 +20,10 @@ mixin emailContainer(labelText, labelRightText)
         +label(labelText, labelRightText)
         +email()
 
-mixin emailSubscribeContainer(labelText, labelRightText)
+mixin emailSubscribeContainer(labelText, labelRightText, newhref)
     .widget
         +label(labelText, labelRightText)
-        +emailSubscribe()
+        +emailSubscribe(newhref)
 
 mixin loginContainer(labelText, labelRightText)
     .widget
@@ -53,8 +53,8 @@ mixin birthday()
 mixin email()
     +text("textfield", "Email", "", "email", "30", autofocus=false)
 
-mixin emailSubscribe()
-    +text("textfield_email", "Email", "", "email", "30", autofocus=false)
+mixin emailSubscribe(newhref)
+    +text("textfield_email", "Email", "", "email", "30", href= newhref, autofocus=false)
 
 mixin password()
     +text("textfield", "Пароль", "", "password", "30", autofocus=false)

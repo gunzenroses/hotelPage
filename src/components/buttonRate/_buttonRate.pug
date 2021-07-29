@@ -6,7 +6,7 @@ mixin buttonRateContainer(labelText)
         +buttonRate("star2-5", "star2-4", "star2-3", "star2-2", "star2-1", "rating2", true)
 
 mixin buttonRate(inputId_5, inputId_4, inputId_3, inputId_2, inputId_1, inputName, ifChecked_5, ifChecked_4, ifChecked_3, ifChecked_2, ifChecked_1) 
-    .buttonRate
+    button-rate
         +buttonRateItem(inputId_5, inputName, 5, ifChecked_5)
         +buttonRateItem(inputId_4, inputName, 4, ifChecked_4)
         +buttonRateItem(inputId_3, inputName, 3, ifChecked_3)
@@ -20,7 +20,7 @@ mixin buttonRateItem(inputId, inputName, inputValue, ifChecked=false)
 //- .container_buttonRate
 //-     h3.label Rate button
 //-     .row
-//-         .buttonRate
+//-         button-rate
 //-             input(type="radio" id="star-5" name="rating" value="5").input_rate
 //-             label(for="star-5").input_label
 //-             input(type="radio" id="star-4" name="rating" value="4").input_rate
@@ -32,7 +32,7 @@ mixin buttonRateItem(inputId, inputName, inputValue, ifChecked=false)
 //-             input(type="radio" id="star-1" name="rating" value="1").input_rate
 //-             label(for="star-1").input_label
 
-//-         .buttonRate
+//-         button-rate
 //-             input(type="radio" id="star-5-2" name="rating2" value="5").input_rate
 //-             label(for="star-5-2").input_label
 //-             input(type="radio" id="star-4-2" name="rating2" value="4").input_rate

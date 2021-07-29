@@ -4,7 +4,7 @@
     Main container
 */
 
-.searchRoom {
+.search-room {
     @include container($width: 1440px, $height: 1880px, $mt: 0, $mb: 0, $ms: auto);
     @include isFlex($direction: column, $justify: flex-start);
     position: relative;
@@ -12,13 +12,13 @@
     background: $light;
 }
 
-.searchRoom__content_outer {
+.search-room__content_outer {
     width: 100%;
     height: fit-content;
     border-bottom: 1px solid $darkShadeLess;
 }
 
-.searchRoom__content {
+.search-room__content {
     @include container($width: 1160px, $height: 1257px, $mt: 30px, $mb: 69px, $ms: 140px);
     margin-left: 141px;
     @include isFlex($justify: space-between);
@@ -28,13 +28,13 @@
     background: $light;
 }
 
-.searchRoom__filter {
+.search-room__filter {
     width: 265px;
     height: 739px;
     @include isFlex($direction: column, $justify: flex-start);
 }
 
-.searchRoom__form {
+.search-room__form {
     width: 100%;
 }
 
@@ -64,13 +64,13 @@
     margin-top: 15px;
 }
 
-.searchRoom__rooms {
+.search-room__rooms {
     width: 834px;
     height: auto;
     @include isFlex($direction: column, $justify: flex-start);
 }
 
-.searchRoom__text {
+.search-room__text {
     font-weight: 700;
     font-size: 24px;
     line-height: 30px;
@@ -79,84 +79,84 @@
     margin-left: -1px;
 }
 
-.searchRoom__result {
+.search-room__result {
     width: 100%;
     height: 1111px; //1091px;
     @include isFlex($wrap: wrap);
     margin-top: .5px;
 }
 
-.searchRoom__result > .card__room {
+.search-room__result > .card__room {
     margin-top: 20px;
 }
 
-.searchRoom__pagination {
+.search-room__pagination {
     margin: 41px 304px 0 289px;
 }
 
 @media (max-width: 1440px){
-    .searchRoom {
+    .search-room {
         width: 100vw;
         height: auto;
         min-width: 320px;
     }
 
-    .searchRoom__content {
+    .search-room__content {
         margin: 30px auto 70px;
     }
 
-    .searchRoom__pagination {
+    .search-room__pagination {
         margin: 41px auto 0;
     }
 }
 
 @media (max-width: 1250px){
-    .searchRoom__content {
+    .search-room__content {
         width: 980px;
         height: auto;
     }
 
-    .searchRoom__rooms {
+    .search-room__rooms {
         width: 637px;
         height: auto;
     }
 
-    .searchRoom__filter {
+    .search-room__filter {
         margin-left: 25px
     }
 
-    .searchRoom__result {
+    .search-room__result {
         height: auto;
         justify-content: space-around;
     }
 
-    .searchRoom__result > div {
+    .search-room__result > div {
         margin-bottom: 25px;
     }
 }
 
 @media (max-width: 1070px){
-    .searchRoom__content {
+    .search-room__content {
         flex-direction: column;
         width: 100vw;
     }
 
-    .searchRoom__filter,
-    .searchRoom__form,
-    .searchRoom__result {
+    .search-room__filter,
+    .search-room__form,
+    .search-room__result {
         height: auto;
         margin: 0 auto;
     }
 
-    .searchRoom__filter {
+    .search-room__filter {
         width: 637px;
         margin: 0 auto 30px;
     }
-    .searchRoom__form {
+    .search-room__form {
         @include isFlex($direction: row, $wrap: wrap);
     }
 
-    .searchRoom__form > div {
+    .search-room__form > div {
         width: 266px;
         margin-top: 0;
     }
@@ -165,50 +165,50 @@
         margin-top: 30px;
     }
 
-    .searchRoom__rooms,
-    .searchRoom__text {
+    .search-room__rooms,
+    .search-room__text {
         margin: 20px auto;
     }
 }
 
 @media (max-width: 700px){
-    .searchRoom__filter,
-    .searchRoom__result {
+    .search-room__filter,
+    .search-room__result {
         width: 100%;
     }
 
 
-    .searchRoom__form,
-    .searchRoom__rooms {
+    .search-room__form,
+    .search-room__rooms {
         flex-direction: column;
         width: 380px;
         
     }
 
-    .searchRoom__form>div {
+    .search-room__form>div {
         width: 100%;
     }
 }
 
 @media (max-width: 450px){
-    .searchRoom__form {
+    .search-room__form {
         width: 85%;
         min-width: 280px;
         max-width: 320px;
         justify-content: center;
     }
 
-    .searchRoom__result {
+    .search-room__result {
         width: 85vw;
         min-width: 320px
     }
 
-    .searchRoom__rooms {
+    .search-room__rooms {
         width: 100%;
         min-width: 320px;
     }
 
-    .searchRoom__text {
+    .search-room__text {
         width: 85%;
     }
 }

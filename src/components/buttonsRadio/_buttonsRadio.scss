@@ -1,4 +1,4 @@
-.radio_box {
+.radio__box {
     //height: 54px;
     height: 53px;
     width: 220px;
@@ -6,11 +6,11 @@
     @include isFlex($direction: column);
 }
 
-.radio_box .label {
+.radio__box .label {
     letter-spacing: -.01em;
 }
 
-.radio_row {
+.radio__row {
     @include isFlex($justify: flex-start);
     width: 220px;
     height: 24px;

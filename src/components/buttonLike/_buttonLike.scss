@@ -1,10 +1,10 @@
-.container_buttonLike {
+.container_button-like {
     width: 90px;
     height: 50px;
     @include isFlex($direction: column);
 }
 
-.buttonLike {
+.button-like {
     position: relative;
     display: block;
     width: 40px;
@@ -16,8 +16,8 @@
     background: $darkShadeLess;
 }
 
-.buttonLike::before {
-    @extend .buttonLike;
+.button-like::before {
+    @extend .button-like;
     content: "";
     position: absolute;
     width: 38px;
@@ -26,15 +26,15 @@
     background: $light;
 }
 
-.buttonLike_popular {
-    @extend .buttonLike;
+.button-like_popular {
+    @extend .button-like;
     color: $darkShadeLess;
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     
 }
 
-.buttonLike_popular::before {
-    @extend .buttonLike_popular;
+.button-like_popular::before {
+    @extend .button-like_popular;
     content: "";
     color: $purple;
     position: absolute;
@@ -44,7 +44,7 @@
     background: $light;
 }
 
-.buttonLike__number {
+.button-like__number {
     position: absolute;
     font-size: 0.8em;
     line-height: 100%;
@@ -53,13 +53,13 @@
     right: 35%;
 }
 
-.buttonLike__number_popular {
-    @extend .buttonLike__number;
+.button-like__number_popular {
+    @extend .button-like__number;
     //right: 27%;
     right: 29%;
 }
 
-.buttonLike__heart {
+.button-like__heart {
     position: absolute;
     width: 20px;
     height: 20px;
@@ -71,8 +71,8 @@
     background-repeat: no-repeat;
 }
 
-.buttonLike__heart_popular {
-    @extend .buttonLike__heart;
+.button-like__heart_popular {
+    @extend .button-like__heart;
     background: url(/assets/images/heart_active.svg);
     background-position: center;
     background-size: initial;

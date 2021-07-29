@@ -68,7 +68,7 @@
     vertical-align: auto;
 }
 
-.buttonsCheckbox .checkbox__title {
+.buttons-checkbox .checkbox__title {
     margin-top: 2px;
 }
 
@@ -76,16 +76,16 @@
     line-height: 20px;
 }
 
-.buttonsCheckbox {
+.buttons-checkbox {
     margin-top: 11px;
     @include isFlex($direction: column);
     width: 224px;
 }
 
-.buttonsCheckbox .checkbox__fake {
+.buttons-checkbox .checkbox__fake {
     margin-right: 9px;
 }
 
-.buttonsCheckbox > .checkbox:not(:first-of-type) {
+.buttons-checkbox > .checkbox:not(:first-of-type) {
     margin-top: 11px;
 }

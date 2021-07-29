@@ -4,7 +4,7 @@
     Main container
 */
 
-.landingPage {
+.landing-page {
     @include container($width: 1440px, $height: auto, $mt: 0, $mb: 0, $ms: auto);
     @include isFlex($justify: flex-start, $direction: column);
     min-width: 320px;
@@ -12,7 +12,7 @@
     background: $light;
 }
 
-.landingPage__content {
+.landing-page__content {
     @include isFlex($justify: flex-start, $direction: column);
     position: relative;
     width: 100%;
@@ -21,7 +21,7 @@
     min-width: 320px;
 }
 
-.landingPage__text {
+.landing-page__text {
     position: absolute;
     text-align: right;
     line-height: 24px;
@@ -34,7 +34,7 @@
     letter-spacing: 0.002em;
 }
 
-.landingPage__card_search {
+.landing-page__card_search {
     position: absolute;
     top: 70px;
     //left: 140px;
@@ -42,7 +42,7 @@
     z-index: 2;
 }
 
-.landingPage  > .footer_outer {
+.landing-page  > .footer_outer {
     margin-top: -1px
 }
 
@@ -51,38 +51,38 @@
 */
 
 @media (max-width: 1440px){
-    .landingPage {
+    .landing-page {
         width: 100vw;
         height: auto;
     }
 
-    .landingPage__content {
+    .landing-page__content {
         height: calc(830/1440 *100vw);
     }
 } 
 
 @media (max-width: 970px){
-    .landingPage__card_search {
+    .landing-page__card_search {
         left: 50%;
         transform: translateX(-50%);
     }
 
-    .landingPage__content img,
-    .landingPage__content {
+    .landing-page__content img,
+    .landing-page__content {
         width: 100%;
         height: calc(830/1440 * 970px);
     }
 }
 
 @media (max-width: 500px){
-    .landingPage__content {
+    .landing-page__content {
         width: 100%;
         // carousel + card_search + text + initial top
         height: calc(830/1440 * 100vw + 374px + 48px + 40px);
         min-height: calc(683/1440 * 320px + 374px + 48px + 40px);
     }
 
-    .landingPage__text {
+    .landing-page__text {
         position: relative;
         text-align: center;
         margin: 20px auto;
@@ -90,7 +90,7 @@
         bottom: 0;
     }
 
-    .landingPage__card_search {
+    .landing-page__card_search {
         width: fit-content;
         min-width: 320px;
         position: relative;
@@ -100,7 +100,7 @@
         transform: none;
     }
 
-    .landingPage__content img {
+    .landing-page__content img {
         height: auto;
     }
 }

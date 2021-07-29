@@ -9,15 +9,15 @@ block variables
     - var title = "landing_page";
     - var description = "landing page";
     - var keywords = "landing page";
-    - var pics = ["../../assets/images/landing_3.jpg", "../../assets/images/landing_2.jpg", "../../assets/images/landing_1.jpg"]
+    - var pics = ["./assets/images/landing_3.jpg", "./assets/images/landing_2.jpg", "./assets/images/landing_1.jpg"]
 
 block content
-    .landingPage.dropdown__watch
+    .landing-page.dropdown__watch
         +header()
-        .landingPage__content
+        .landing-page__content
             +carouselLanding(pics)
-            .landingPage__text Лучшие номера для вашей работы, отдыха и просто вдохновения
-            .landingPage__card_search
+            .landing-page__text Лучшие номера для вашей работы, отдыха и просто вдохновения
+            .landing-page__card_search
                 form(method="get" action="/search_room")
                     +cardSearch()
         +footer()

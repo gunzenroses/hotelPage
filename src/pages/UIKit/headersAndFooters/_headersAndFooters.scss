@@ -2,7 +2,7 @@
     Main container
 */
 
-.headersAndFooters_outer {
+.headers-n-footers_outer {
     @include container($width: 1440px, $height: 1350px, $mt: 50px, $mb: 50px, $ms: auto);
     @include isFlex($direction: column);
     justify-content: flex-start;
@@ -13,7 +13,7 @@
     background: $background;
 }
 
-.headersAndFooters_outer::before {
+.headers-n-footers_outer::before {
     position: absolute;
     top: 30px;
     left: 30px;
@@ -25,11 +25,11 @@
     background-position: center;
 }
 
-.headersAndFooters_outer > div:not(:last-of-type){
+.headers-n-footers_outer > div:not(:last-of-type){
     margin-bottom: 40px;
 }
 
-.headersAndFooters_outer > nav {
+.headers-n-footers_outer > nav {
     margin-bottom: 40px;
 }
 
@@ -37,14 +37,14 @@
     Media query for Main container
 */
 @media (max-width: 1440px) {
-    .headersAndFooters_outer {
+    .headers-n-footers_outer {
         width: 100vw;
         height: auto;
     }
 }
 
 @media (max-width: 750px) {
-    .headersAndFooters_outer {
+    .headers-n-footers_outer {
         min-width: 320px;
         &::before {
             top: 10px;

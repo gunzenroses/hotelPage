@@ -1,4 +1,4 @@
-.dateRange__selector {
+.date-range__selector {
     position: relative;
     width: 100%;
     height: 65px;
@@ -54,7 +54,7 @@
 
 @media (max-width: 450px){
     .dataRange__container,
-    .dateRange__selector,
+    .date-range__selector,
     .dropdown__calendar {
         width: 100%;
         min-width: 280px;

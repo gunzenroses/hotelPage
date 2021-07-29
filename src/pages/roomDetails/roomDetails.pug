@@ -12,10 +12,9 @@ block variables
     - var title = "room details";
     - var description = "room details";
     - var keywords = "room details";
-    //-//- - var room888 = {src: ["../../assets/images/room.jpg", "../../assets/images/room.jpg", "../../assets/images/room.jpg", "../../assets/images/room.jpg"], bookingNumber: "888", bookingType: "Люкс", bookingPrice: "9 990", starIds: ["star3-5", "star3-4", "star3-3", "star3-2", "star3-1"], starName: "rating3", starRate: [true], reviewAmount: "145"};
     - 
         var comment1 = { 
-            authorPic: "../../assets/images/avatar.jpg", 
+            authorPic: "./assets/images/avatar.jpg", 
             authorName: "Мурад Сарафанов", 
             commentTime: "5 дней назад", 
             buttonLikeId: "likes_author_1", 
@@ -23,7 +22,7 @@ block variables
             commentText: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."};
     - 
         var comment2 = {
-            authorPic: "../../assets/images/avatar2.jpg", 
+            authorPic: "./assets/images/avatar2.jpg", 
             authorName: "Патрисия Стёклышкова", 
             commentTime: "Неделю назад", 
             buttonLikeId: "likes_author_2", 
@@ -33,37 +32,37 @@ block variables
     - var cancellationRools = "Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги."
 
 block content
-    .roomDetails.dropdown__watch
+    .room-details.dropdown__watch
         +header()
-        .roomDetails__content
-            .roomDetails__view
-                img(src="../../assets/images/room_details.jpg" alt="room picture 1").roomDetails__view_main
-                .roomDetails__view_miniature
-                    img(src="../../assets/images/room_details2.jpg" alt="room picture 2").roomDetails__view_mini
-                    img(src="../../assets/images/room_details3.jpg" alt="room picture 3").roomDetails__view_mini
-            .roomDetails__info_outer
-                .roomDetails__info_inner
-                    .roomDetails__description
-                        .roomDetails__roomData
-                            .roomDetails__roomInfo
-                                .roomDetails__text Сведения о номере
+        .room-details__content
+            .room-details__view
+                img(src="./assets/images/room_details.jpg" alt="room picture 1").room-details__view_main
+                .room-details__view_miniature
+                    img(src="./assets/images/room_details2.jpg" alt="room picture 2").room-details__view_mini
+                    img(src="./assets/images/room_details3.jpg" alt="room picture 3").room-details__view_mini
+            .room-details__info_outer
+                .room-details__info_inner
+                    .room-details__description
+                        .room-details__roomData
+                            .room-details__roomInfo
+                                .room-details__text Сведения о номере
                                 +badgeItem("insert_emoticon", "Комфорт", "Шумопоглощающие стены")
                                 +badgeItem("location_city", "Удобство", "Окно в каждой из спален")
                                 +badgeItem("whatshot", "Уют", "Номер оснащён камином")
-                            .roomDetails__roomImpression
-                                .roomDetails__text Впечатления от номера
+                            .room-details__roomImpression
+                                .room-details__text Впечатления от номера
                                 +donutChart({exellent: 50, good: 25, satisfied: 25, dissapointed: 0})
-                        .roomDetails__reviews
-                            .roomDetails__text Отзывы посетителей номера
+                        .room-details__reviews
+                            .room-details__text Отзывы посетителей номера
                             +comment(comment1)
                             +comment(comment2)
-                        .roomDetails__rules
-                            .roomDetails__text Правила
+                        .room-details__rules
+                            .room-details__text Правила
                             +bulletCheckboxList(checkboxList)
-                        .roomDetails__cancellation
-                            .roomDetails__text Отмена
-                            .roomDetails__cancellation_info
+                        .room-details__cancellation
+                            .room-details__text Отмена
+                            .room-details__cancellation_info
                                 p!= cancellationRools
-                    .roomDetails__booking
+                    .room-details__booking
                         +cardBooking()
         +footer()

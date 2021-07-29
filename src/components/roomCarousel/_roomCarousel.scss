@@ -1,4 +1,4 @@
-.roomCarousel {
+.room-carousel {
     width: 100%;
     height: calc(152/270 * 100%);
     min-height: 151.5px;
@@ -6,7 +6,7 @@
     overflow: hidden;
 }
 
-.roomCarousel__pictures {
+.room-carousel__pictures {
     width: 400%;
     height: 100%;
     @include isFlex();
@@ -15,13 +15,13 @@
     transition: 2s;
 }
 
-.roomCarousel__pic {
+.room-carousel__pic {
     width: 25%;
     height: 100%;
     transition: 2s;
 }
 
-.roomCarousel__radio {
+.room-carousel__radio {
     position: absolute;
     // width: 42px;
     // height: 7.5px;
@@ -35,17 +35,17 @@
     @include isFlex();
 }
 
-.roomCarousel__element {
+.room-carousel__element {
     width: auto;
     height: auto;
     z-index: 1;
 }
 
-.roomCarousel__element:not(:last-of-type){
+.room-carousel__element:not(:last-of-type){
     margin-right: 3.75px;
 }
 
-.roomCarousel__radio_real {
+.room-carousel__radio_real {
     width: 7.5px;
     height: 7.5px;
     position: absolute;
@@ -53,7 +53,7 @@
     appearance: none;
 }
 
-.roomCarousel__radio_fake {
+.room-carousel__radio_fake {
     position: relative;
     width: 7.5px;
     height: 7.5px;
@@ -62,13 +62,13 @@
     background: transparent;
 }
 
-.roomCarousel__radio_real:checked ~ .roomCarousel__radio_fake {
+.room-carousel__radio_real:checked ~ .room-carousel__radio_fake {
     background: $light;
 }
 
 
 
-.roomCarousel__btn {
+.room-carousel__btn {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -76,11 +76,11 @@
     display: none;
 }
 
-.roomCarousel:hover .roomCarousel__btn {
+.room-carousel:hover .room-carousel__btn {
     display: flex;
 }
 
-.roomCarousel__btn_prev {
+.room-carousel__btn_prev {
     position: relative;
     height: 100%;
     width: 42px;
@@ -88,7 +88,7 @@
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
 }
 
-.roomCarousel__btn_prev::before {
+.room-carousel__btn_prev::before {
     font-family: $MaterialIcons;
     content: "\e5cb";
     position: absolute;
@@ -103,7 +103,7 @@
     left: 0;
 }
 
-.roomCarousel__btn_next {
+.room-carousel__btn_next {
     position: relative;
     height: 100%;
     width: 42px;
@@ -111,7 +111,7 @@
     transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
-.roomCarousel__btn_next::before {
+.room-carousel__btn_next::before {
     font-family: $MaterialIcons;
     content: "\e5cb";
     position: absolute;
@@ -127,13 +127,13 @@
 }
 
 @media (max-width: 700px){
-    .roomCarousel {
+    .room-carousel {
         height: 211px;
     }
 }
 
 @media (max-width: 450px){
-    .roomCarousel {
+    .room-carousel {
         width: 85vw;
         height: 47vw;
         min-width: 258px;

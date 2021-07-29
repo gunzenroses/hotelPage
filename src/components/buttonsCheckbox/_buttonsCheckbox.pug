@@ -1,7 +1,7 @@
 mixin checkboxButtons (labelText, checkboxName="house-rules")
     .widget
         h3(class="label")= labelText 
-        .buttonsCheckbox
+        .buttons-checkbox
             +checkboxItem("smoking_allowed", checkboxName, false, "Можно курить")
             +checkboxItem("pets_allowed", checkboxName, true, "Можно с питомцами")
             +checkboxItem("guests_allowed", checkboxName, true, "Можно пригласить гостей (до 10 человек)")
@@ -16,7 +16,7 @@ mixin checkboxItem(valueText, inputName, ifChecked, checkboxTitle)
 
 //- .widget
 //-     legend(for="rooms").label Сheckbox buttons
-//-     .buttonsCheckbox
+//-     .buttons-checkbox
 //-         label(for="smoking_allowed").checkbox 
 //-             input(type="checkbox" id="smoking_allowed" name="smoking" value="smoking_allowed").checkbox__real
 //-             span.checkbox__fake
