@@ -2,7 +2,7 @@
     Main container
 */
 
-.formElements_outer {
+.form-elements_outer {
     @include container($width: 1440px, $height: 1853px, $mt: 50px, $mb: 50px, $ms: auto);
     position: relative;
     display: block;
@@ -10,7 +10,7 @@
     background: $light;
 }
 
-.formElements_outer::before {
+.form-elements_outer::before {
     position: absolute;
     top: 30px;
     left: 30px;
@@ -27,7 +27,7 @@
 */
 
 @media (max-width: 750px) {
-    .formElements_outer::before {
+    .form-elements_outer::before {
         top: 10px;
         left: 10px;
     }
@@ -37,7 +37,7 @@
     Flex for adaptive design
 */
 
-.formElements_inner {
+.form-elements_inner {
     @include container($width: 1159px, $height: 1580px, $mt: 143px, $ms: auto, $mb: 130px);
         height: 1582px;
         margin-bottom: 128px;
@@ -46,63 +46,63 @@
     background: white;
 }
 
-.formElements__element_first {
+.form-elements__element_first {
     @include container($width: 320px, $height: 636px, $mt: 0, $mb: 93px);
     margin-right: 124px;
 }
 
-.formElements__element_second {
+.form-elements__element_second {
     @include container($width: 260px, $height: 537px);
     margin-right: 127px;
     @include isFlex($direction: column, $justify: flex-start, $align: flex-start);
 }
 
-.formElements__element_second > div:first-of-type {
+.form-elements__element_second > div:first-of-type {
     margin-bottom: 43px; //40px;
     margin-left: -1px;
 }
 
-.formElements__element_second > div:nth-of-type(2) {
+.form-elements__element_second > div:nth-of-type(2) {
     //margin-bottom: 39px;
     margin-bottom: 37.5px;
     margin-left: -1px;
 }
 
-.formElements__element_second > div:nth-of-type(3) {
+.form-elements__element_second > div:nth-of-type(3) {
     margin-bottom: 42px;
 }
 
-.formElements__element_second > div:nth-of-type(4) {
+.form-elements__element_second > div:nth-of-type(4) {
     margin-bottom: 41px;
     margin-left: -1px;
 }
 
-.formElements__element_second > div:last-of-type {
+.form-elements__element_second > div:last-of-type {
     margin-top: 12px;
 }
 
-.formElements__element_third {
+.form-elements__element_third {
     @include container($width: 320px, $height: 503px);
     @include isFlex($direction: column, $align: flex-start, $justify: flex-start);
     margin-right: 2px;
 }
 
-.formElements__element_third > div:first-of-type {
+.form-elements__element_third > div:first-of-type {
     margin-top: -4px;
     margin-bottom: 3.5px;
 }
 
-.formElements__element_third > div:nth-of-type(2) {
+.form-elements__element_third > div:nth-of-type(2) {
     margin-top: 42px;
 }
 
-.formElements__element_third > div:nth-of-type(3) {
+.form-elements__element_third > div:nth-of-type(3) {
     margin-top: 40px;
     margin-left: 2px;
 }
 
 
-.formElements__element_forth {
+.form-elements__element_forth {
     width: 267px;
     min-height: 647px;
     margin-right: 176px;
@@ -111,16 +111,16 @@
     @include isFlex($direction: column, $justify: flex-start, $align: flex-start);
 }
 
-.formElements__element_forth > div:first-of-type {
+.form-elements__element_forth > div:first-of-type {
     margin-bottom: 39.5px;
 }
 
-.formElements__element_forth > div:nth-of-type(2) {
+.form-elements__element_forth > div:nth-of-type(2) {
     margin-bottom: 20px;
     margin-left: 1px;
 }
 
-.formElements__element_fifth {
+.form-elements__element_fifth {
     @include container($width: 320px, $height: 465px);
     //margin-right: 102px;
     margin-right: 69px;
@@ -128,22 +128,22 @@
     @include isFlex($direction: column, $align: flex-start, $justify: flex-start);
 }
 
-.formElements__element_fifth > div:nth-of-type(2){
+.form-elements__element_fifth > div:nth-of-type(2){
     margin-top: 256px;
 }
 
-.formElements__element_sixth {
+.form-elements__element_sixth {
     @include container($width: 320px, $height: 467px);
     margin-top: 2px;
     @include isFlex($direction: column, $align: flex-start, $justify: flex-start);
 }
 
-.formElements__element_sixth > div:nth-of-type(2) {
+.form-elements__element_sixth > div:nth-of-type(2) {
     margin-top: 254px;
     margin-left: -1px;
 }
 
-.formElements__element_seventh {
+.form-elements__element_seventh {
     @include container($width: 291px, $height: 156px);
     margin-right: 120px;
     margin-top: 1px;
@@ -151,7 +151,7 @@
     @include isFlex($direction: column, $align: flex-start);
 }
 
-.formElements__element_eighth {
+.form-elements__element_eighth {
     max-width: 711px;
     min-height: 133px;
     margin-top: 10px;
@@ -163,7 +163,7 @@
     Media queries
 */
 @media (max-width: 1440px) {
-    .formElements {
+    .form-elements {
         &_outer {
         width: 100vw;
         height: auto;
@@ -205,7 +205,7 @@
 }
 
 @media (max-width: 1250px) {
-    .formElements {
+    .form-elements {
         &_inner {
             max-width: 890px;
             margin: 7% auto 7%;
@@ -226,7 +226,7 @@
 }
 
 @media (max-width: 970px) {
-    .formElements {
+    .form-elements {
         &_inner {
             width: 85%;
             margin: 5% auto 5%;
@@ -236,7 +236,7 @@
 }
 
 @media (max-width: 850px) {
-    .formElements {
+    .form-elements {
         &_outer {
             min-width: 320px;
         }
@@ -258,7 +258,7 @@
     Containers to group elements into columns
 */
 
-.formElements {
+.form-elements {
     &__container_first,
     &__container_second,
     &__container_third,
