@@ -4,3 +4,4 @@ node_modules
 dist
 .git
 HOW_TO.md
+package-lock.json
