@@ -29,8 +29,8 @@ mixin headerMenu(user="")
                 +buttonNavbar(user, buttonOnclick="#")
         else
             .header__buttons
-                +buttonLink("Войти", buttonOnclick="/signin")
-                +buttonBiglink("", buttonOnclick="/registration")
+                +buttonLink("Войти", buttonOnclick="signin.html")
+                +buttonBiglink("", buttonOnclick="registration.html")
         .header__navbar
             +buttonNavbar("О нас", buttonOnclick="#")
             +buttonNavbarExpand("Услуги")
