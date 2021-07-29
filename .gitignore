@@ -5,3 +5,4 @@ dist
 .git
 HOW_TO.md
 package-lock.json
+.gitignore
