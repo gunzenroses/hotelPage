@@ -1,10 +1,6 @@
-// Libraries
 const path = require("path");
-const webpack = require("webpack");
-//const { CleanWebpackPlugin} = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const WebpackNotifierPlugin = require("webpack-notifier");
 
 // Files
 const plugins = require("./postcss.config");
@@ -26,9 +22,9 @@ module.exports = {
         resolve: {
             extensions: [".js"],
             alias: {
-                source: path.resolve(__dirname, "./src"), // Relative path of src
+                src: path.resolve(__dirname, "./src"),                  // Relative path of src
                 images: path.resolve(__dirname, "./src/assets/images"), // Relative path of images
-                fonts: path.resolve(__dirname, "./src/assets/fonts"), // Relative path of fonts
+                fonts: path.resolve(__dirname, "./src/assets/fonts"),   // Relative path of fonts
             },
         },
         /*
@@ -59,7 +55,7 @@ module.exports = {
                     loader: "url-loader",
                     options: {
                         limit: 3000,
-                        name: "assets/images/[name].[hash:7].[ext]",
+                        name: "assets/images/[name].[ext]",
                     },
                 },
                 {
@@ -77,10 +73,6 @@ module.exports = {
             new CopyWebpackPlugin([
                 {from: "assets/images", to: "assets/images"},
                 {from: "assets/fonts", to: "assets/fonts"},
-                {
-                    from: "assets/images/favicon.ico",
-                    to: "assets/images/favicon.ico",
-                },
             ]),
 
             /*
@@ -88,7 +80,7 @@ module.exports = {
             */
             
             new HtmlWebpackPlugin({
-                filename: "index.html",
+                filename: "index",
                 minify: true,
                 template: path.resolve(__dirname, "./src/index.pug"),
                 chunks: ["app"],
@@ -98,14 +90,14 @@ module.exports = {
             //replace one day with utils.pages(env)
 
             new HtmlWebpackPlugin({
-                filename: "UIKit.html",
+                filename: "UIKit",
                 template: path.resolve(__dirname, "./src/pages/UIkit/UIKit.pug"),
                 chunks: ["UIKit"],
                 inject: "body",
             }),
 
             new HtmlWebpackPlugin({
-                filename: "landing_page.html",
+                filename: "landing_page",
                 minify: true,
                 template: path.resolve(__dirname, "./src/pages/landingPage/landingPage.pug"),
                 chunks: ["landing_page"],
@@ -113,7 +105,7 @@ module.exports = {
             }),
 
             new HtmlWebpackPlugin({
-                filename: "search_room.html",
+                filename: "search_room",
                 minify: true,
                 template: path.resolve(__dirname, "./src/pages/searchRoom/searchRoom.pug"),
                 chunks: ["search_room"],
@@ -121,7 +113,7 @@ module.exports = {
             }),
 
             new HtmlWebpackPlugin({
-                filename: "room_details.html",
+                filename: "room_details",
                 minify: true,
                 template: path.resolve(__dirname, "./src/pages/roomDetails/roomDetails.pug"),
                 chunks: ["room_details"],
@@ -129,7 +121,7 @@ module.exports = {
             }),
 
             new HtmlWebpackPlugin({
-                filename: "registration.html",
+                filename: "registration",
                 minify: true,
                 template: path.resolve(__dirname, "./src/pages/registration/registration.pug"),
                 chunks: ["registration"],
@@ -137,26 +129,11 @@ module.exports = {
             }),
 
             new HtmlWebpackPlugin({
-                filename: "signin.html",
+                filename: "signin",
                 minify: true,
                 template: path.resolve(__dirname, "./src/pages/signin/signin.pug"),
                 chunks: ["signin"],
                 inject: "body",
-            }),
-
-            /* 
-                jQuery
-            */
-
-            new webpack.ProvidePlugin({
-                $: "jquery",
-                jQuery: "jquery",
-                "window.$": "jquery",
-                "window.jQuery": "jquery",
-            }),
-
-            new WebpackNotifierPlugin({
-                title: "Your project",
             }),
         ],
 };
