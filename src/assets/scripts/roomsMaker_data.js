@@ -3,10 +3,10 @@ let roomsMaker_data = [
         number: 888,
         type: "Люкс",
         src: {
-            1: "../../assets/images/room.jpg",
-            2: "../../assets/images/room.jpg",
-            3: "../../assets/images/room.jpg",
-            4: "../../assets/images/room.jpg"
+            1: "../../assets/images/rooms/room.jpg",
+            2: "../../assets/images/rooms/room.jpg",
+            3: "../../assets/images/rooms/room.jpg",
+            4: "../../assets/images/rooms/room.jpg"
         },
         price: "9 900",
         rating: ["checked"],
@@ -16,10 +16,10 @@ let roomsMaker_data = [
         number: 840,
         type: "",
         src: {
-            1: "../../assets/images/room2.jpg",
-            2: "../../assets/images/room2.jpg",
-            3: "../../assets/images/room2.jpg",
-            4: "../../assets/images/room2.jpg"
+            1: "../../assets/images/rooms/room2.jpg",
+            2: "../../assets/images/rooms/room2.jpg",
+            3: "../../assets/images/rooms/room2.jpg",
+            4: "../../assets/images/rooms/room2.jpg"
         },
         price: "9 900",
         rating: [false, true, false, false, false],
@@ -29,10 +29,10 @@ let roomsMaker_data = [
         number: 980,
         type: "Люкс",
         src: {
-            1: "../../assets/images/room3.jpg",
-            2: "../../assets/images/room3.jpg",
-            3: "../../assets/images/room3.jpg",
-            4: "../../assets/images/room3.jpg"
+            1: "../../assets/images/rooms/room3.jpg",
+            2: "../../assets/images/rooms/room3.jpg",
+            3: "../../assets/images/rooms/room3.jpg",
+            4: "../../assets/images/rooms/room3.jpg"
         },
         price: "8 500",
         rating: [false, false, true, false, false],
@@ -42,10 +42,10 @@ let roomsMaker_data = [
         number: 856,
         type: "",
         src: {
-            1: "../../assets/images/room4.jpg",
-            2: "../../assets/images/room4.jpg",
-            3: "../../assets/images/room4.jpg",
-            4: "../../assets/images/room4.jpg"
+            1: "../../assets/images/rooms/room4.jpg",
+            2: "../../assets/images/rooms/room4.jpg",
+            3: "../../assets/images/rooms/room4.jpg",
+            4: "../../assets/images/rooms/room4.jpg"
         },
         price: "7 300",
         rating: [true, false, false, false, false],
@@ -55,10 +55,10 @@ let roomsMaker_data = [
         number: 740,
         type: "",
         src: {
-            1: "../../assets/images/room5.jpg",
-            2: "../../assets/images/room5.jpg",
-            3: "../../assets/images/room5.jpg",
-            4: "../../assets/images/room5.jpg"
+            1: "../../assets/images/rooms/room5.jpg",
+            2: "../../assets/images/rooms/room5.jpg",
+            3: "../../assets/images/rooms/room5.jpg",
+            4: "../../assets/images/rooms/room5.jpg"
         },
         price: "6 000",
         rating: [false, true, false, false, false],
@@ -68,10 +68,10 @@ let roomsMaker_data = [
         number: 982,
         type: "",
         src: {
-            1: "../../assets/images/room6.jpg",
-            2: "../../assets/images/room6.jpg",
-            3: "../../assets/images/room6.jpg",
-            4: "../../assets/images/room6.jpg"
+            1: "../../assets/images/rooms/room6.jpg",
+            2: "../../assets/images/rooms/room6.jpg",
+            3: "../../assets/images/rooms/room6.jpg",
+            4: "../../assets/images/rooms/room6.jpg"
         },
         price: "5 800",
         rating: [false, false, true, false, false],
@@ -81,10 +81,10 @@ let roomsMaker_data = [
         number: 678,
         type: "",
         src: {
-            1: "../../assets/images/room7.jpg",
-            2: "../../assets/images/room7.jpg",
-            3: "../../assets/images/room7.jpg",
-            4: "../../assets/images/room7.jpg"
+            1: "../../assets/images/rooms/room7.jpg",
+            2: "../../assets/images/rooms/room7.jpg",
+            3: "../../assets/images/rooms/room7.jpg",
+            4: "../../assets/images/rooms/room7.jpg"
         },
         price: "5 500",
         rating: [true, false, false, false, false],
@@ -94,10 +94,10 @@ let roomsMaker_data = [
         number: 450,
         type: "",
         src: {
-            1: "../../assets/images/room8.jpg",
-            2: "../../assets/images/room8.jpg",
-            3: "../../assets/images/room8.jpg",
-            4: "../../assets/images/room8.jpg"
+            1: "../../assets/images/rooms/room8.jpg",
+            2: "../../assets/images/rooms/room8.jpg",
+            3: "../../assets/images/rooms/room8.jpg",
+            4: "../../assets/images/rooms/room8.jpg"
         },
         price: "5 300",
         rating: [false, true, false, false, false],
@@ -107,10 +107,10 @@ let roomsMaker_data = [
         number: 350,
         type: "",
         src: {
-            1: "../../assets/images/room9.jpg",
-            2: "../../assets/images/room9.jpg",
-            3: "../../assets/images/room9.jpg",
-            4: "../../assets/images/room9.jpg"
+            1: "../../assets/images/rooms/room9.jpg",
+            2: "../../assets/images/rooms/room9.jpg",
+            3: "../../assets/images/rooms/room9.jpg",
+            4: "../../assets/images/rooms/room9.jpg"
         },
         price: "5 000",
         rating: [false, false, true, false, false],
@@ -120,10 +120,10 @@ let roomsMaker_data = [
         number: 666,
         type: "",
         src: {
-            1: "../../assets/images/room10.jpg",
-            2: "../../assets/images/room10.jpg",
-            3: "../../assets/images/room10.jpg",
-            4: "../../assets/images/room10.jpg"
+            1: "../../assets/images/rooms/room10.jpg",
+            2: "../../assets/images/rooms/room10.jpg",
+            3: "../../assets/images/rooms/room10.jpg",
+            4: "../../assets/images/rooms/room10.jpg"
         },
         price: "5 000",
         rating: [true, false, false, false, false],
@@ -133,10 +133,10 @@ let roomsMaker_data = [
         number: 444,
         type: "",
         src: {
-            1: "../../assets/images/room11.jpg",
-            2: "../../assets/images/room11.jpg",
-            3: "../../assets/images/room11.jpg",
-            4: "../../assets/images/room11.jpg"
+            1: "../../assets/images/rooms/room11.jpg",
+            2: "../../assets/images/rooms/room11.jpg",
+            3: "../../assets/images/rooms/room11.jpg",
+            4: "../../assets/images/rooms/room11.jpg"
         },
         price: "5 000",
         rating: [false, false, true, false, false],
@@ -146,10 +146,10 @@ let roomsMaker_data = [
         number: 352,
         type: "",
         src: {
-            1: "../../assets/images/room12.jpg",
-            2: "../../assets/images/room12.jpg",
-            3: "../../assets/images/room12.jpg",
-            4: "../../assets/images/room12.jpg"
+            1: "../../assets/images/rooms/room12.jpg",
+            2: "../../assets/images/rooms/room12.jpg",
+            3: "../../assets/images/rooms/room12.jpg",
+            4: "../../assets/images/rooms/room12.jpg"
         },
         price: "5 000",
         rating: [false, false, true, false, false],
@@ -159,10 +159,10 @@ let roomsMaker_data = [
         number: 888,
         type: "Люкс",
         src: {
-            1: "../../assets/images/room.jpg",
-            2: "../../assets/images/room.jpg",
-            3: "../../assets/images/room.jpg",
-            4: "../../assets/images/room.jpg"
+            1: "../../assets/images/rooms/room.jpg",
+            2: "../../assets/images/rooms/room.jpg",
+            3: "../../assets/images/rooms/room.jpg",
+            4: "../../assets/images/rooms/room.jpg"
         },
         price: "9 900",
         rating: [true, false, false, false, false],
@@ -172,10 +172,10 @@ let roomsMaker_data = [
         number: 840,
         type: "",
         src: {
-            1: "../../assets/images/room2.jpg",
-            2: "../../assets/images/room2.jpg",
-            3: "../../assets/images/room2.jpg",
-            4: "../../assets/images/room2.jpg"
+            1: "../../assets/images/rooms/room2.jpg",
+            2: "../../assets/images/rooms/room2.jpg",
+            3: "../../assets/images/rooms/room2.jpg",
+            4: "../../assets/images/rooms/room2.jpg"
         },
         price: "9 900",
         rating: [false, true, false, false, false],
@@ -185,10 +185,10 @@ let roomsMaker_data = [
         number: 980,
         type: "Люкс",
         src: {
-            1: "../../assets/images/room3.jpg",
-            2: "../../assets/images/room3.jpg",
-            3: "../../assets/images/room3.jpg",
-            4: "../../assets/images/room3.jpg"
+            1: "../../assets/images/rooms/room3.jpg",
+            2: "../../assets/images/rooms/room3.jpg",
+            3: "../../assets/images/rooms/room3.jpg",
+            4: "../../assets/images/rooms/room3.jpg"
         },
         price: "8 500",
         rating: [false, false, true, false, false],
@@ -198,10 +198,10 @@ let roomsMaker_data = [
         number: 856,
         type: "",
         src: {
-            1: "../../assets/images/room4.jpg",
-            2: "../../assets/images/room4.jpg",
-            3: "../../assets/images/room4.jpg",
-            4: "../../assets/images/room4.jpg"
+            1: "../../assets/images/rooms/room4.jpg",
+            2: "../../assets/images/rooms/room4.jpg",
+            3: "../../assets/images/rooms/room4.jpg",
+            4: "../../assets/images/rooms/room4.jpg"
         },
         price: "7 300",
         rating: [true, false, false, false, false],
@@ -211,10 +211,10 @@ let roomsMaker_data = [
         number: 740,
         type: "",
         src: {
-            1: "../../assets/images/room5.jpg",
-            2: "../../assets/images/room5.jpg",
-            3: "../../assets/images/room5.jpg",
-            4: "../../assets/images/room5.jpg"
+            1: "../../assets/images/rooms/room5.jpg",
+            2: "../../assets/images/rooms/room5.jpg",
+            3: "../../assets/images/rooms/room5.jpg",
+            4: "../../assets/images/rooms/room5.jpg"
         },
         price: "6 000",
         rating: [false, true, false, false, false],
@@ -224,10 +224,10 @@ let roomsMaker_data = [
         number: 982,
         type: "",
         src: {
-            1: "../../assets/images/room6.jpg",
-            2: "../../assets/images/room6.jpg",
-            3: "../../assets/images/room6.jpg",
-            4: "../../assets/images/room6.jpg"
+            1: "../../assets/images/rooms/room6.jpg",
+            2: "../../assets/images/rooms/room6.jpg",
+            3: "../../assets/images/rooms/room6.jpg",
+            4: "../../assets/images/rooms/room6.jpg"
         },
         price: "5 800",
         rating: [false, false, true, false, false],
@@ -237,10 +237,10 @@ let roomsMaker_data = [
         number: 678,
         type: "",
         src: {
-            1: "../../assets/images/room7.jpg",
-            2: "../../assets/images/room7.jpg",
-            3: "../../assets/images/room7.jpg",
-            4: "../../assets/images/room7.jpg"
+            1: "../../assets/images/rooms/room7.jpg",
+            2: "../../assets/images/rooms/room7.jpg",
+            3: "../../assets/images/rooms/room7.jpg",
+            4: "../../assets/images/rooms/room7.jpg"
         },
         price: "5 500",
         rating: [true, false, false, false, false],
@@ -250,10 +250,10 @@ let roomsMaker_data = [
         number: 450,
         type: "",
         src: {
-            1: "../../assets/images/room8.jpg",
-            2: "../../assets/images/room8.jpg",
-            3: "../../assets/images/room8.jpg",
-            4: "../../assets/images/room8.jpg"
+            1: "../../assets/images/rooms/room8.jpg",
+            2: "../../assets/images/rooms/room8.jpg",
+            3: "../../assets/images/rooms/room8.jpg",
+            4: "../../assets/images/rooms/room8.jpg"
         },
         price: "5 300",
         rating: [false, true, false, false, false],
@@ -263,10 +263,10 @@ let roomsMaker_data = [
         number: 350,
         type: "",
         src: {
-            1: "../../assets/images/room9.jpg",
-            2: "../../assets/images/room9.jpg",
-            3: "../../assets/images/room9.jpg",
-            4: "../../assets/images/room9.jpg"
+            1: "../../assets/images/rooms/room9.jpg",
+            2: "../../assets/images/rooms/room9.jpg",
+            3: "../../assets/images/rooms/room9.jpg",
+            4: "../../assets/images/rooms/room9.jpg"
         },
         price: "5 000",
         rating: [false, false, true, false, false],
@@ -276,10 +276,10 @@ let roomsMaker_data = [
         number: 666,
         type: "",
         src: {
-            1: "../../assets/images/room10.jpg",
-            2: "../../assets/images/room10.jpg",
-            3: "../../assets/images/room10.jpg",
-            4: "../../assets/images/room10.jpg"
+            1: "../../assets/images/rooms/room10.jpg",
+            2: "../../assets/images/rooms/room10.jpg",
+            3: "../../assets/images/rooms/room10.jpg",
+            4: "../../assets/images/rooms/room10.jpg"
         },
         price: "5 000",
         rating: [true, false, false, false, false],
@@ -289,10 +289,10 @@ let roomsMaker_data = [
         number: 444,
         type: "",
         src: {
-            1: "../../assets/images/room11.jpg",
-            2: "../../assets/images/room11.jpg",
-            3: "../../assets/images/room11.jpg",
-            4: "../../assets/images/room11.jpg"
+            1: "../../assets/images/rooms/room11.jpg",
+            2: "../../assets/images/rooms/room11.jpg",
+            3: "../../assets/images/rooms/room11.jpg",
+            4: "../../assets/images/rooms/room11.jpg"
         },
         price: "5 000",
         rating: [false, false, true, false, false],
@@ -302,10 +302,10 @@ let roomsMaker_data = [
         number: 352,
         type: "",
         src: {
-            1: "../../assets/images/room12.jpg",
-            2: "../../assets/images/room12.jpg",
-            3: "../../assets/images/room12.jpg",
-            4: "../../assets/images/room12.jpg"
+            1: "../../assets/images/rooms/room12.jpg",
+            2: "../../assets/images/rooms/room12.jpg",
+            3: "../../assets/images/rooms/room12.jpg",
+            4: "../../assets/images/rooms/room12.jpg"
         },
         price: "5 000",
         rating: [false, false, true, false, false],
@@ -315,10 +315,10 @@ let roomsMaker_data = [
         number: 888,
         type: "Люкс",
         src: {
-            1: "../../assets/images/room.jpg",
-            2: "../../assets/images/room.jpg",
-            3: "../../assets/images/room.jpg",
-            4: "../../assets/images/room.jpg"
+            1: "../../assets/images/rooms/room.jpg",
+            2: "../../assets/images/rooms/room.jpg",
+            3: "../../assets/images/rooms/room.jpg",
+            4: "../../assets/images/rooms/room.jpg"
         },
         price: "9 900",
         rating: [true, false, false, false, false],
@@ -328,10 +328,10 @@ let roomsMaker_data = [
         number: 840,
         type: "",
         src: {
-            1: "../../assets/images/room2.jpg",
-            2: "../../assets/images/room2.jpg",
-            3: "../../assets/images/room2.jpg",
-            4: "../../assets/images/room2.jpg"
+            1: "../../assets/images/rooms/room2.jpg",
+            2: "../../assets/images/rooms/room2.jpg",
+            3: "../../assets/images/rooms/room2.jpg",
+            4: "../../assets/images/rooms/room2.jpg"
         },
         price: "9 900",
         rating: [false, true, false, false, false],
@@ -341,10 +341,10 @@ let roomsMaker_data = [
         number: 980,
         type: "Люкс",
         src: {
-            1: "../../assets/images/room3.jpg",
-            2: "../../assets/images/room3.jpg",
-            3: "../../assets/images/room3.jpg",
-            4: "../../assets/images/room3.jpg"
+            1: "../../assets/images/rooms/room3.jpg",
+            2: "../../assets/images/rooms/room3.jpg",
+            3: "../../assets/images/rooms/room3.jpg",
+            4: "../../assets/images/rooms/room3.jpg"
         },
         price: "8 500",
         rating: [false, false, true, false, false],
@@ -354,10 +354,10 @@ let roomsMaker_data = [
         number: 856,
         type: "",
         src: {
-            1: "../../assets/images/room4.jpg",
-            2: "../../assets/images/room4.jpg",
-            3: "../../assets/images/room4.jpg",
-            4: "../../assets/images/room4.jpg"
+            1: "../../assets/images/rooms/room4.jpg",
+            2: "../../assets/images/rooms/room4.jpg",
+            3: "../../assets/images/rooms/room4.jpg",
+            4: "../../assets/images/rooms/room4.jpg"
         },
         price: "7 300",
         rating: [true, false, false, false, false],
@@ -367,10 +367,10 @@ let roomsMaker_data = [
         number: 740,
         type: "",
         src: {
-            1: "../../assets/images/room5.jpg",
-            2: "../../assets/images/room5.jpg",
-            3: "../../assets/images/room5.jpg",
-            4: "../../assets/images/room5.jpg"
+            1: "../../assets/images/rooms/room5.jpg",
+            2: "../../assets/images/rooms/room5.jpg",
+            3: "../../assets/images/rooms/room5.jpg",
+            4: "../../assets/images/rooms/room5.jpg"
         },
         price: "6 000",
         rating: [false, true, false, false, false],
@@ -380,10 +380,10 @@ let roomsMaker_data = [
         number: 982,
         type: "",
         src: {
-            1: "../../assets/images/room6.jpg",
-            2: "../../assets/images/room6.jpg",
-            3: "../../assets/images/room6.jpg",
-            4: "../../assets/images/room6.jpg"
+            1: "../../assets/images/rooms/room6.jpg",
+            2: "../../assets/images/rooms/room6.jpg",
+            3: "../../assets/images/rooms/room6.jpg",
+            4: "../../assets/images/rooms/room6.jpg"
         },
         price: "5 800",
         rating: [false, false, true, false, false],
@@ -393,10 +393,10 @@ let roomsMaker_data = [
         number: 678,
         type: "",
         src: {
-            1: "../../assets/images/room7.jpg",
-            2: "../../assets/images/room7.jpg",
-            3: "../../assets/images/room7.jpg",
-            4: "../../assets/images/room7.jpg"
+            1: "../../assets/images/rooms/room7.jpg",
+            2: "../../assets/images/rooms/room7.jpg",
+            3: "../../assets/images/rooms/room7.jpg",
+            4: "../../assets/images/rooms/room7.jpg"
         },
         price: "5 500",
         rating: [true, false, false, false, false],
@@ -406,10 +406,10 @@ let roomsMaker_data = [
         number: 450,
         type: "",
         src: {
-            1: "../../assets/images/room8.jpg",
-            2: "../../assets/images/room8.jpg",
-            3: "../../assets/images/room8.jpg",
-            4: "../../assets/images/room8.jpg"
+            1: "../../assets/images/rooms/room8.jpg",
+            2: "../../assets/images/rooms/room8.jpg",
+            3: "../../assets/images/rooms/room8.jpg",
+            4: "../../assets/images/rooms/room8.jpg"
         },
         price: "5 300",
         rating: [false, true, false, false, false],
@@ -419,10 +419,10 @@ let roomsMaker_data = [
         number: 350,
         type: "",
         src: {
-            1: "../../assets/images/room9.jpg",
-            2: "../../assets/images/room9.jpg",
-            3: "../../assets/images/room9.jpg",
-            4: "../../assets/images/room9.jpg"
+            1: "../../assets/images/rooms/room9.jpg",
+            2: "../../assets/images/rooms/room9.jpg",
+            3: "../../assets/images/rooms/room9.jpg",
+            4: "../../assets/images/rooms/room9.jpg"
         },
         price: "5 000",
         rating: [false, false, true, false, false],
@@ -432,10 +432,10 @@ let roomsMaker_data = [
         number: 666,
         type: "",
         src: {
-            1: "../../assets/images/room10.jpg",
-            2: "../../assets/images/room10.jpg",
-            3: "../../assets/images/room10.jpg",
-            4: "../../assets/images/room10.jpg"
+            1: "../../assets/images/rooms/room10.jpg",
+            2: "../../assets/images/rooms/room10.jpg",
+            3: "../../assets/images/rooms/room10.jpg",
+            4: "../../assets/images/rooms/room10.jpg"
         },
         price: "5 000",
         rating: [true, false, false, false, false],
@@ -445,10 +445,10 @@ let roomsMaker_data = [
         number: 444,
         type: "",
         src: {
-            1: "../../assets/images/room11.jpg",
-            2: "../../assets/images/room11.jpg",
-            3: "../../assets/images/room11.jpg",
-            4: "../../assets/images/room11.jpg"
+            1: "../../assets/images/rooms/room11.jpg",
+            2: "../../assets/images/rooms/room11.jpg",
+            3: "../../assets/images/rooms/room11.jpg",
+            4: "../../assets/images/rooms/room11.jpg"
         },
         price: "5 000",
         rating: [false, false, true, false, false],
@@ -458,10 +458,10 @@ let roomsMaker_data = [
         number: 352,
         type: "",
         src: {
-            1: "../../assets/images/room12.jpg",
-            2: "../../assets/images/room12.jpg",
-            3: "../../assets/images/room12.jpg",
-            4: "../../assets/images/room12.jpg"
+            1: "../../assets/images/rooms/room12.jpg",
+            2: "../../assets/images/rooms/room12.jpg",
+            3: "../../assets/images/rooms/room12.jpg",
+            4: "../../assets/images/rooms/room12.jpg"
         },
         price: "5 000",
         rating: [false, false, true, false, false],
@@ -471,10 +471,10 @@ let roomsMaker_data = [
         number: 888,
         type: "Люкс",
         src: {
-            1: "../../assets/images/room.jpg",
-            2: "../../assets/images/room.jpg",
-            3: "../../assets/images/room.jpg",
-            4: "../../assets/images/room.jpg"
+            1: "../../assets/images/rooms/room.jpg",
+            2: "../../assets/images/rooms/room.jpg",
+            3: "../../assets/images/rooms/room.jpg",
+            4: "../../assets/images/rooms/room.jpg"
         },
         price: "9 900",
         rating: [true, false, false, false, false],
@@ -484,10 +484,10 @@ let roomsMaker_data = [
         number: 840,
         type: "",
         src: {
-            1: "../../assets/images/room2.jpg",
-            2: "../../assets/images/room2.jpg",
-            3: "../../assets/images/room2.jpg",
-            4: "../../assets/images/room2.jpg"
+            1: "../../assets/images/rooms/room2.jpg",
+            2: "../../assets/images/rooms/room2.jpg",
+            3: "../../assets/images/rooms/room2.jpg",
+            4: "../../assets/images/rooms/room2.jpg"
         },
         price: "9 900",
         rating: [false, true, false, false, false],
@@ -497,10 +497,10 @@ let roomsMaker_data = [
         number: 980,
         type: "Люкс",
         src: {
-            1: "../../assets/images/room3.jpg",
-            2: "../../assets/images/room3.jpg",
-            3: "../../assets/images/room3.jpg",
-            4: "../../assets/images/room3.jpg"
+            1: "../../assets/images/rooms/room3.jpg",
+            2: "../../assets/images/rooms/room3.jpg",
+            3: "../../assets/images/rooms/room3.jpg",
+            4: "../../assets/images/rooms/room3.jpg"
         },
         price: "8 500",
         rating: [false, false, true, false, false],
@@ -510,10 +510,10 @@ let roomsMaker_data = [
         number: 856,
         type: "",
         src: {
-            1: "../../assets/images/room4.jpg",
-            2: "../../assets/images/room4.jpg",
-            3: "../../assets/images/room4.jpg",
-            4: "../../assets/images/room4.jpg"
+            1: "../../assets/images/rooms/room4.jpg",
+            2: "../../assets/images/rooms/room4.jpg",
+            3: "../../assets/images/rooms/room4.jpg",
+            4: "../../assets/images/rooms/room4.jpg"
         },
         price: "7 300",
         rating: [true, false, false, false, false],
@@ -523,10 +523,10 @@ let roomsMaker_data = [
         number: 740,
         type: "",
         src: {
-            1: "../../assets/images/room5.jpg",
-            2: "../../assets/images/room5.jpg",
-            3: "../../assets/images/room5.jpg",
-            4: "../../assets/images/room5.jpg"
+            1: "../../assets/images/rooms/room5.jpg",
+            2: "../../assets/images/rooms/room5.jpg",
+            3: "../../assets/images/rooms/room5.jpg",
+            4: "../../assets/images/rooms/room5.jpg"
         },
         price: "6 000",
         rating: [false, true, false, false, false],
@@ -536,10 +536,10 @@ let roomsMaker_data = [
         number: 982,
         type: "",
         src: {
-            1: "../../assets/images/room6.jpg",
-            2: "../../assets/images/room6.jpg",
-            3: "../../assets/images/room6.jpg",
-            4: "../../assets/images/room6.jpg"
+            1: "../../assets/images/rooms/room6.jpg",
+            2: "../../assets/images/rooms/room6.jpg",
+            3: "../../assets/images/rooms/room6.jpg",
+            4: "../../assets/images/rooms/room6.jpg"
         },
         price: "5 800",
         rating: [false, false, true, false, false],
@@ -549,10 +549,10 @@ let roomsMaker_data = [
         number: 678,
         type: "",
         src: {
-            1: "../../assets/images/room7.jpg",
-            2: "../../assets/images/room7.jpg",
-            3: "../../assets/images/room7.jpg",
-            4: "../../assets/images/room7.jpg"
+            1: "../../assets/images/rooms/room7.jpg",
+            2: "../../assets/images/rooms/room7.jpg",
+            3: "../../assets/images/rooms/room7.jpg",
+            4: "../../assets/images/rooms/room7.jpg"
         },
         price: "5 500",
         rating: [true, false, false, false, false],
@@ -562,10 +562,10 @@ let roomsMaker_data = [
         number: 450,
         type: "",
         src: {
-            1: "../../assets/images/room8.jpg",
-            2: "../../assets/images/room8.jpg",
-            3: "../../assets/images/room8.jpg",
-            4: "../../assets/images/room8.jpg"
+            1: "../../assets/images/rooms/room8.jpg",
+            2: "../../assets/images/rooms/room8.jpg",
+            3: "../../assets/images/rooms/room8.jpg",
+            4: "../../assets/images/rooms/room8.jpg"
         },
         price: "5 300",
         rating: [false, true, false, false, false],
@@ -575,10 +575,10 @@ let roomsMaker_data = [
         number: 350,
         type: "",
         src: {
-            1: "../../assets/images/room9.jpg",
-            2: "../../assets/images/room9.jpg",
-            3: "../../assets/images/room9.jpg",
-            4: "../../assets/images/room9.jpg"
+            1: "../../assets/images/rooms/room9.jpg",
+            2: "../../assets/images/rooms/room9.jpg",
+            3: "../../assets/images/rooms/room9.jpg",
+            4: "../../assets/images/rooms/room9.jpg"
         },
         price: "5 000",
         rating: [false, false, true, false, false],
@@ -588,10 +588,10 @@ let roomsMaker_data = [
         number: 666,
         type: "",
         src: {
-            1: "../../assets/images/room10.jpg",
-            2: "../../assets/images/room10.jpg",
-            3: "../../assets/images/room10.jpg",
-            4: "../../assets/images/room10.jpg"
+            1: "../../assets/images/rooms/room10.jpg",
+            2: "../../assets/images/rooms/room10.jpg",
+            3: "../../assets/images/rooms/room10.jpg",
+            4: "../../assets/images/rooms/room10.jpg"
         },
         price: "5 000",
         rating: [true, false, false, false, false],
@@ -601,10 +601,10 @@ let roomsMaker_data = [
         number: 444,
         type: "",
         src: {
-            1: "../../assets/images/room11.jpg",
-            2: "../../assets/images/room11.jpg",
-            3: "../../assets/images/room11.jpg",
-            4: "../../assets/images/room11.jpg"
+            1: "../../assets/images/rooms/room11.jpg",
+            2: "../../assets/images/rooms/room11.jpg",
+            3: "../../assets/images/rooms/room11.jpg",
+            4: "../../assets/images/rooms/room11.jpg"
         },
         price: "5 000",
         rating: [false, false, true, false, false],
@@ -614,10 +614,10 @@ let roomsMaker_data = [
         number: 352,
         type: "",
         src: {
-            1: "../../assets/images/room12.jpg",
-            2: "../../assets/images/room12.jpg",
-            3: "../../assets/images/room12.jpg",
-            4: "../../assets/images/room12.jpg"
+            1: "../../assets/images/rooms/room12.jpg",
+            2: "../../assets/images/rooms/room12.jpg",
+            3: "../../assets/images/rooms/room12.jpg",
+            4: "../../assets/images/rooms/room12.jpg"
         },
         price: "5 000",
         rating: [false, false, true, false, false],
@@ -627,10 +627,10 @@ let roomsMaker_data = [
         number: 888,
         type: "Люкс",
         src: {
-            1: "../../assets/images/room.jpg",
-            2: "../../assets/images/room.jpg",
-            3: "../../assets/images/room.jpg",
-            4: "../../assets/images/room.jpg"
+            1: "../../assets/images/rooms/room.jpg",
+            2: "../../assets/images/rooms/room.jpg",
+            3: "../../assets/images/rooms/room.jpg",
+            4: "../../assets/images/rooms/room.jpg"
         },
         price: "9 900",
         rating: [true, false, false, false, false],
@@ -640,10 +640,10 @@ let roomsMaker_data = [
         number: 840,
         type: "",
         src: {
-            1: "../../assets/images/room2.jpg",
-            2: "../../assets/images/room2.jpg",
-            3: "../../assets/images/room2.jpg",
-            4: "../../assets/images/room2.jpg"
+            1: "../../assets/images/rooms/room2.jpg",
+            2: "../../assets/images/rooms/room2.jpg",
+            3: "../../assets/images/rooms/room2.jpg",
+            4: "../../assets/images/rooms/room2.jpg"
         },
         price: "9 900",
         rating: [false, true, false, false, false],
@@ -653,10 +653,10 @@ let roomsMaker_data = [
         number: 980,
         type: "Люкс",
         src: {
-            1: "../../assets/images/room3.jpg",
-            2: "../../assets/images/room3.jpg",
-            3: "../../assets/images/room3.jpg",
-            4: "../../assets/images/room3.jpg"
+            1: "../../assets/images/rooms/room3.jpg",
+            2: "../../assets/images/rooms/room3.jpg",
+            3: "../../assets/images/rooms/room3.jpg",
+            4: "../../assets/images/rooms/room3.jpg"
         },
         price: "8 500",
         rating: [false, false, true, false, false],
@@ -666,10 +666,10 @@ let roomsMaker_data = [
         number: 856,
         type: "",
         src: {
-            1: "../../assets/images/room4.jpg",
-            2: "../../assets/images/room4.jpg",
-            3: "../../assets/images/room4.jpg",
-            4: "../../assets/images/room4.jpg"
+            1: "../../assets/images/rooms/room4.jpg",
+            2: "../../assets/images/rooms/room4.jpg",
+            3: "../../assets/images/rooms/room4.jpg",
+            4: "../../assets/images/rooms/room4.jpg"
         },
         price: "7 300",
         rating: [true, false, false, false, false],
@@ -679,10 +679,10 @@ let roomsMaker_data = [
         number: 740,
         type: "",
         src: {
-            1: "../../assets/images/room5.jpg",
-            2: "../../assets/images/room5.jpg",
-            3: "../../assets/images/room5.jpg",
-            4: "../../assets/images/room5.jpg"
+            1: "../../assets/images/rooms/room5.jpg",
+            2: "../../assets/images/rooms/room5.jpg",
+            3: "../../assets/images/rooms/room5.jpg",
+            4: "../../assets/images/rooms/room5.jpg"
         },
         price: "6 000",
         rating: [false, true, false, false, false],
@@ -692,10 +692,10 @@ let roomsMaker_data = [
         number: 982,
         type: "",
         src: {
-            1: "../../assets/images/room6.jpg",
-            2: "../../assets/images/room6.jpg",
-            3: "../../assets/images/room6.jpg",
-            4: "../../assets/images/room6.jpg"
+            1: "../../assets/images/rooms/room6.jpg",
+            2: "../../assets/images/rooms/room6.jpg",
+            3: "../../assets/images/rooms/room6.jpg",
+            4: "../../assets/images/rooms/room6.jpg"
         },
         price: "5 800",
         rating: [false, false, true, false, false],
@@ -705,10 +705,10 @@ let roomsMaker_data = [
         number: 678,
         type: "",
         src: {
-            1: "../../assets/images/room7.jpg",
-            2: "../../assets/images/room7.jpg",
-            3: "../../assets/images/room7.jpg",
-            4: "../../assets/images/room7.jpg"
+            1: "../../assets/images/rooms/room7.jpg",
+            2: "../../assets/images/rooms/room7.jpg",
+            3: "../../assets/images/rooms/room7.jpg",
+            4: "../../assets/images/rooms/room7.jpg"
         },
         price: "5 500",
         rating: [true, false, false, false, false],
@@ -718,10 +718,10 @@ let roomsMaker_data = [
         number: 450,
         type: "",
         src: {
-            1: "../../assets/images/room8.jpg",
-            2: "../../assets/images/room8.jpg",
-            3: "../../assets/images/room8.jpg",
-            4: "../../assets/images/room8.jpg"
+            1: "../../assets/images/rooms/room8.jpg",
+            2: "../../assets/images/rooms/room8.jpg",
+            3: "../../assets/images/rooms/room8.jpg",
+            4: "../../assets/images/rooms/room8.jpg"
         },
         price: "5 300",
         rating: [false, true, false, false, false],
@@ -731,10 +731,10 @@ let roomsMaker_data = [
         number: 350,
         type: "",
         src: {
-            1: "../../assets/images/room9.jpg",
-            2: "../../assets/images/room9.jpg",
-            3: "../../assets/images/room9.jpg",
-            4: "../../assets/images/room9.jpg"
+            1: "../../assets/images/rooms/room9.jpg",
+            2: "../../assets/images/rooms/room9.jpg",
+            3: "../../assets/images/rooms/room9.jpg",
+            4: "../../assets/images/rooms/room9.jpg"
         },
         price: "5 000",
         rating: [false, false, true, false, false],
@@ -744,10 +744,10 @@ let roomsMaker_data = [
         number: 666,
         type: "",
         src: {
-            1: "../../assets/images/room10.jpg",
-            2: "../../assets/images/room10.jpg",
-            3: "../../assets/images/room10.jpg",
-            4: "../../assets/images/room10.jpg"
+            1: "../../assets/images/rooms/room10.jpg",
+            2: "../../assets/images/rooms/room10.jpg",
+            3: "../../assets/images/rooms/room10.jpg",
+            4: "../../assets/images/rooms/room10.jpg"
         },
         price: "5 000",
         rating: [true, false, false, false, false],
@@ -757,10 +757,10 @@ let roomsMaker_data = [
         number: 444,
         type: "",
         src: {
-            1: "../../assets/images/room11.jpg",
-            2: "../../assets/images/room11.jpg",
-            3: "../../assets/images/room11.jpg",
-            4: "../../assets/images/room11.jpg"
+            1: "../../assets/images/rooms/room11.jpg",
+            2: "../../assets/images/rooms/room11.jpg",
+            3: "../../assets/images/rooms/room11.jpg",
+            4: "../../assets/images/rooms/room11.jpg"
         },
         price: "5 000",
         rating: [false, false, true, false, false],
@@ -770,10 +770,10 @@ let roomsMaker_data = [
         number: 352,
         type: "",
         src: {
-            1: "../../assets/images/room12.jpg",
-            2: "../../assets/images/room12.jpg",
-            3: "../../assets/images/room12.jpg",
-            4: "../../assets/images/room12.jpg"
+            1: "../../assets/images/rooms/room12.jpg",
+            2: "../../assets/images/rooms/room12.jpg",
+            3: "../../assets/images/rooms/room12.jpg",
+            4: "../../assets/images/rooms/room12.jpg"
         },
         price: "5 000",
         rating: [false, false, true, false, false],
@@ -783,10 +783,10 @@ let roomsMaker_data = [
         number: 888,
         type: "Люкс",
         src: {
-            1: "../../assets/images/room.jpg",
-            2: "../../assets/images/room.jpg",
-            3: "../../assets/images/room.jpg",
-            4: "../../assets/images/room.jpg"
+            1: "../../assets/images/rooms/room.jpg",
+            2: "../../assets/images/rooms/room.jpg",
+            3: "../../assets/images/rooms/room.jpg",
+            4: "../../assets/images/rooms/room.jpg"
         },
         price: "9 900",
         rating: [true, false, false, false, false],
@@ -796,10 +796,10 @@ let roomsMaker_data = [
         number: 840,
         type: "",
         src: {
-            1: "../../assets/images/room2.jpg",
-            2: "../../assets/images/room2.jpg",
-            3: "../../assets/images/room2.jpg",
-            4: "../../assets/images/room2.jpg"
+            1: "../../assets/images/rooms/room2.jpg",
+            2: "../../assets/images/rooms/room2.jpg",
+            3: "../../assets/images/rooms/room2.jpg",
+            4: "../../assets/images/rooms/room2.jpg"
         },
         price: "9 900",
         rating: [false, true, false, false, false],
@@ -809,10 +809,10 @@ let roomsMaker_data = [
         number: 980,
         type: "Люкс",
         src: {
-            1: "../../assets/images/room3.jpg",
-            2: "../../assets/images/room3.jpg",
-            3: "../../assets/images/room3.jpg",
-            4: "../../assets/images/room3.jpg"
+            1: "../../assets/images/rooms/room3.jpg",
+            2: "../../assets/images/rooms/room3.jpg",
+            3: "../../assets/images/rooms/room3.jpg",
+            4: "../../assets/images/rooms/room3.jpg"
         },
         price: "8 500",
         rating: [false, false, true, false, false],
@@ -822,10 +822,10 @@ let roomsMaker_data = [
         number: 856,
         type: "",
         src: {
-            1: "../../assets/images/room4.jpg",
-            2: "../../assets/images/room4.jpg",
-            3: "../../assets/images/room4.jpg",
-            4: "../../assets/images/room4.jpg"
+            1: "../../assets/images/rooms/room4.jpg",
+            2: "../../assets/images/rooms/room4.jpg",
+            3: "../../assets/images/rooms/room4.jpg",
+            4: "../../assets/images/rooms/room4.jpg"
         },
         price: "7 300",
         rating: [true, false, false, false, false],
@@ -835,10 +835,10 @@ let roomsMaker_data = [
         number: 740,
         type: "",
         src: {
-            1: "../../assets/images/room5.jpg",
-            2: "../../assets/images/room5.jpg",
-            3: "../../assets/images/room5.jpg",
-            4: "../../assets/images/room5.jpg"
+            1: "../../assets/images/rooms/room5.jpg",
+            2: "../../assets/images/rooms/room5.jpg",
+            3: "../../assets/images/rooms/room5.jpg",
+            4: "../../assets/images/rooms/room5.jpg"
         },
         price: "6 000",
         rating: [false, true, false, false, false],
@@ -848,10 +848,10 @@ let roomsMaker_data = [
         number: 982,
         type: "",
         src: {
-            1: "../../assets/images/room6.jpg",
-            2: "../../assets/images/room6.jpg",
-            3: "../../assets/images/room6.jpg",
-            4: "../../assets/images/room6.jpg"
+            1: "../../assets/images/rooms/room6.jpg",
+            2: "../../assets/images/rooms/room6.jpg",
+            3: "../../assets/images/rooms/room6.jpg",
+            4: "../../assets/images/rooms/room6.jpg"
         },
         price: "5 800",
         rating: [false, false, true, false, false],
@@ -861,10 +861,10 @@ let roomsMaker_data = [
         number: 678,
         type: "",
         src: {
-            1: "../../assets/images/room7.jpg",
-            2: "../../assets/images/room7.jpg",
-            3: "../../assets/images/room7.jpg",
-            4: "../../assets/images/room7.jpg"
+            1: "../../assets/images/rooms/room7.jpg",
+            2: "../../assets/images/rooms/room7.jpg",
+            3: "../../assets/images/rooms/room7.jpg",
+            4: "../../assets/images/rooms/room7.jpg"
         },
         price: "5 500",
         rating: [true, false, false, false, false],
@@ -874,10 +874,10 @@ let roomsMaker_data = [
         number: 450,
         type: "",
         src: {
-            1: "../../assets/images/room8.jpg",
-            2: "../../assets/images/room8.jpg",
-            3: "../../assets/images/room8.jpg",
-            4: "../../assets/images/room8.jpg"
+            1: "../../assets/images/rooms/room8.jpg",
+            2: "../../assets/images/rooms/room8.jpg",
+            3: "../../assets/images/rooms/room8.jpg",
+            4: "../../assets/images/rooms/room8.jpg"
         },
         price: "5 300",
         rating: [false, true, false, false, false],
@@ -887,10 +887,10 @@ let roomsMaker_data = [
         number: 350,
         type: "",
         src: {
-            1: "../../assets/images/room9.jpg",
-            2: "../../assets/images/room9.jpg",
-            3: "../../assets/images/room9.jpg",
-            4: "../../assets/images/room9.jpg"
+            1: "../../assets/images/rooms/room9.jpg",
+            2: "../../assets/images/rooms/room9.jpg",
+            3: "../../assets/images/rooms/room9.jpg",
+            4: "../../assets/images/rooms/room9.jpg"
         },
         price: "5 000",
         rating: [false, false, true, false, false],
@@ -900,10 +900,10 @@ let roomsMaker_data = [
         number: 666,
         type: "",
         src: {
-            1: "../../assets/images/room10.jpg",
-            2: "../../assets/images/room10.jpg",
-            3: "../../assets/images/room10.jpg",
-            4: "../../assets/images/room10.jpg"
+            1: "../../assets/images/rooms/room10.jpg",
+            2: "../../assets/images/rooms/room10.jpg",
+            3: "../../assets/images/rooms/room10.jpg",
+            4: "../../assets/images/rooms/room10.jpg"
         },
         price: "5 000",
         rating: [true, false, false, false, false],
@@ -913,10 +913,10 @@ let roomsMaker_data = [
         number: 444,
         type: "",
         src: {
-            1: "../../assets/images/room11.jpg",
-            2: "../../assets/images/room11.jpg",
-            3: "../../assets/images/room11.jpg",
-            4: "../../assets/images/room11.jpg"
+            1: "../../assets/images/rooms/room11.jpg",
+            2: "../../assets/images/rooms/room11.jpg",
+            3: "../../assets/images/rooms/room11.jpg",
+            4: "../../assets/images/rooms/room11.jpg"
         },
         price: "5 000",
         rating: [false, false, true, false, false],
@@ -926,10 +926,10 @@ let roomsMaker_data = [
         number: 352,
         type: "",
         src: {
-            1: "../../assets/images/room12.jpg",
-            2: "../../assets/images/room12.jpg",
-            3: "../../assets/images/room12.jpg",
-            4: "../../assets/images/room12.jpg"
+            1: "../../assets/images/rooms/room12.jpg",
+            2: "../../assets/images/rooms/room12.jpg",
+            3: "../../assets/images/rooms/room12.jpg",
+            4: "../../assets/images/rooms/room12.jpg"
         },
         price: "5 000",
         rating: [false, false, true, false, false],
@@ -939,10 +939,10 @@ let roomsMaker_data = [
         number: 888,
         type: "Люкс",
         src: {
-            1: "../../assets/images/room.jpg",
-            2: "../../assets/images/room.jpg",
-            3: "../../assets/images/room.jpg",
-            4: "../../assets/images/room.jpg"
+            1: "../../assets/images/rooms/room.jpg",
+            2: "../../assets/images/rooms/room.jpg",
+            3: "../../assets/images/rooms/room.jpg",
+            4: "../../assets/images/rooms/room.jpg"
         },
         price: "9 900",
         rating: [true, false, false, false, false],
@@ -952,10 +952,10 @@ let roomsMaker_data = [
         number: 840,
         type: "",
         src: {
-            1: "../../assets/images/room2.jpg",
-            2: "../../assets/images/room2.jpg",
-            3: "../../assets/images/room2.jpg",
-            4: "../../assets/images/room2.jpg"
+            1: "../../assets/images/rooms/room2.jpg",
+            2: "../../assets/images/rooms/room2.jpg",
+            3: "../../assets/images/rooms/room2.jpg",
+            4: "../../assets/images/rooms/room2.jpg"
         },
         price: "9 900",
         rating: [false, true, false, false, false],
@@ -965,10 +965,10 @@ let roomsMaker_data = [
         number: 980,
         type: "Люкс",
         src: {
-            1: "../../assets/images/room3.jpg",
-            2: "../../assets/images/room3.jpg",
-            3: "../../assets/images/room3.jpg",
-            4: "../../assets/images/room3.jpg"
+            1: "../../assets/images/rooms/room3.jpg",
+            2: "../../assets/images/rooms/room3.jpg",
+            3: "../../assets/images/rooms/room3.jpg",
+            4: "../../assets/images/rooms/room3.jpg"
         },
         price: "8 500",
         rating: [false, false, true, false, false],
@@ -978,10 +978,10 @@ let roomsMaker_data = [
         number: 856,
         type: "",
         src: {
-            1: "../../assets/images/room4.jpg",
-            2: "../../assets/images/room4.jpg",
-            3: "../../assets/images/room4.jpg",
-            4: "../../assets/images/room4.jpg"
+            1: "../../assets/images/rooms/room4.jpg",
+            2: "../../assets/images/rooms/room4.jpg",
+            3: "../../assets/images/rooms/room4.jpg",
+            4: "../../assets/images/rooms/room4.jpg"
         },
         price: "7 300",
         rating: [true, false, false, false, false],
@@ -991,10 +991,10 @@ let roomsMaker_data = [
         number: 740,
         type: "",
         src: {
-            1: "../../assets/images/room5.jpg",
-            2: "../../assets/images/room5.jpg",
-            3: "../../assets/images/room5.jpg",
-            4: "../../assets/images/room5.jpg"
+            1: "../../assets/images/rooms/room5.jpg",
+            2: "../../assets/images/rooms/room5.jpg",
+            3: "../../assets/images/rooms/room5.jpg",
+            4: "../../assets/images/rooms/room5.jpg"
         },
         price: "6 000",
         rating: [false, true, false, false, false],
@@ -1004,10 +1004,10 @@ let roomsMaker_data = [
         number: 982,
         type: "",
         src: {
-            1: "../../assets/images/room6.jpg",
-            2: "../../assets/images/room6.jpg",
-            3: "../../assets/images/room6.jpg",
-            4: "../../assets/images/room6.jpg"
+            1: "../../assets/images/rooms/room6.jpg",
+            2: "../../assets/images/rooms/room6.jpg",
+            3: "../../assets/images/rooms/room6.jpg",
+            4: "../../assets/images/rooms/room6.jpg"
         },
         price: "5 800",
         rating: [false, false, true, false, false],
@@ -1017,10 +1017,10 @@ let roomsMaker_data = [
         number: 678,
         type: "",
         src: {
-            1: "../../assets/images/room7.jpg",
-            2: "../../assets/images/room7.jpg",
-            3: "../../assets/images/room7.jpg",
-            4: "../../assets/images/room7.jpg"
+            1: "../../assets/images/rooms/room7.jpg",
+            2: "../../assets/images/rooms/room7.jpg",
+            3: "../../assets/images/rooms/room7.jpg",
+            4: "../../assets/images/rooms/room7.jpg"
         },
         price: "5 500",
         rating: [true, false, false, false, false],
@@ -1030,10 +1030,10 @@ let roomsMaker_data = [
         number: 450,
         type: "",
         src: {
-            1: "../../assets/images/room8.jpg",
-            2: "../../assets/images/room8.jpg",
-            3: "../../assets/images/room8.jpg",
-            4: "../../assets/images/room8.jpg"
+            1: "../../assets/images/rooms/room8.jpg",
+            2: "../../assets/images/rooms/room8.jpg",
+            3: "../../assets/images/rooms/room8.jpg",
+            4: "../../assets/images/rooms/room8.jpg"
         },
         price: "5 300",
         rating: [false, true, false, false, false],
@@ -1043,10 +1043,10 @@ let roomsMaker_data = [
         number: 350,
         type: "",
         src: {
-            1: "../../assets/images/room9.jpg",
-            2: "../../assets/images/room9.jpg",
-            3: "../../assets/images/room9.jpg",
-            4: "../../assets/images/room9.jpg"
+            1: "../../assets/images/rooms/room9.jpg",
+            2: "../../assets/images/rooms/room9.jpg",
+            3: "../../assets/images/rooms/room9.jpg",
+            4: "../../assets/images/rooms/room9.jpg"
         },
         price: "5 000",
         rating: [false, false, true, false, false],
@@ -1056,10 +1056,10 @@ let roomsMaker_data = [
         number: 666,
         type: "",
         src: {
-            1: "../../assets/images/room10.jpg",
-            2: "../../assets/images/room10.jpg",
-            3: "../../assets/images/room10.jpg",
-            4: "../../assets/images/room10.jpg"
+            1: "../../assets/images/rooms/room10.jpg",
+            2: "../../assets/images/rooms/room10.jpg",
+            3: "../../assets/images/rooms/room10.jpg",
+            4: "../../assets/images/rooms/room10.jpg"
         },
         price: "5 000",
         rating: [true, false, false, false, false],
@@ -1069,10 +1069,10 @@ let roomsMaker_data = [
         number: 444,
         type: "",
         src: {
-            1: "../../assets/images/room11.jpg",
-            2: "../../assets/images/room11.jpg",
-            3: "../../assets/images/room11.jpg",
-            4: "../../assets/images/room11.jpg"
+            1: "../../assets/images/rooms/room11.jpg",
+            2: "../../assets/images/rooms/room11.jpg",
+            3: "../../assets/images/rooms/room11.jpg",
+            4: "../../assets/images/rooms/room11.jpg"
         },
         price: "5 000",
         rating: [false, false, true, false, false],
@@ -1082,10 +1082,10 @@ let roomsMaker_data = [
         number: 352,
         type: "",
         src: {
-            1: "../../assets/images/room12.jpg",
-            2: "../../assets/images/room12.jpg",
-            3: "../../assets/images/room12.jpg",
-            4: "../../assets/images/room12.jpg"
+            1: "../../assets/images/rooms/room12.jpg",
+            2: "../../assets/images/rooms/room12.jpg",
+            3: "../../assets/images/rooms/room12.jpg",
+            4: "../../assets/images/rooms/room12.jpg"
         },
         price: "5 000",
         rating: [false, false, true, false, false],
@@ -1095,10 +1095,10 @@ let roomsMaker_data = [
         number: 888,
         type: "Люкс",
         src: {
-            1: "../../assets/images/room.jpg",
-            2: "../../assets/images/room.jpg",
-            3: "../../assets/images/room.jpg",
-            4: "../../assets/images/room.jpg"
+            1: "../../assets/images/rooms/room.jpg",
+            2: "../../assets/images/rooms/room.jpg",
+            3: "../../assets/images/rooms/room.jpg",
+            4: "../../assets/images/rooms/room.jpg"
         },
         price: "9 900",
         rating: [true, false, false, false, false],
@@ -1108,10 +1108,10 @@ let roomsMaker_data = [
         number: 840,
         type: "",
         src: {
-            1: "../../assets/images/room2.jpg",
-            2: "../../assets/images/room2.jpg",
-            3: "../../assets/images/room2.jpg",
-            4: "../../assets/images/room2.jpg"
+            1: "../../assets/images/rooms/room2.jpg",
+            2: "../../assets/images/rooms/room2.jpg",
+            3: "../../assets/images/rooms/room2.jpg",
+            4: "../../assets/images/rooms/room2.jpg"
         },
         price: "9 900",
         rating: [false, true, false, false, false],
@@ -1121,10 +1121,10 @@ let roomsMaker_data = [
         number: 980,
         type: "Люкс",
         src: {
-            1: "../../assets/images/room3.jpg",
-            2: "../../assets/images/room3.jpg",
-            3: "../../assets/images/room3.jpg",
-            4: "../../assets/images/room3.jpg"
+            1: "../../assets/images/rooms/room3.jpg",
+            2: "../../assets/images/rooms/room3.jpg",
+            3: "../../assets/images/rooms/room3.jpg",
+            4: "../../assets/images/rooms/room3.jpg"
         },
         price: "8 500",
         rating: [false, false, true, false, false],
@@ -1134,10 +1134,10 @@ let roomsMaker_data = [
         number: 856,
         type: "",
         src: {
-            1: "../../assets/images/room4.jpg",
-            2: "../../assets/images/room4.jpg",
-            3: "../../assets/images/room4.jpg",
-            4: "../../assets/images/room4.jpg"
+            1: "../../assets/images/rooms/room4.jpg",
+            2: "../../assets/images/rooms/room4.jpg",
+            3: "../../assets/images/rooms/room4.jpg",
+            4: "../../assets/images/rooms/room4.jpg"
         },
         price: "7 300",
         rating: [true, false, false, false, false],
@@ -1147,10 +1147,10 @@ let roomsMaker_data = [
         number: 740,
         type: "",
         src: {
-            1: "../../assets/images/room5.jpg",
-            2: "../../assets/images/room5.jpg",
-            3: "../../assets/images/room5.jpg",
-            4: "../../assets/images/room5.jpg"
+            1: "../../assets/images/rooms/room5.jpg",
+            2: "../../assets/images/rooms/room5.jpg",
+            3: "../../assets/images/rooms/room5.jpg",
+            4: "../../assets/images/rooms/room5.jpg"
         },
         price: "6 000",
         rating: [false, true, false, false, false],
@@ -1160,10 +1160,10 @@ let roomsMaker_data = [
         number: 982,
         type: "",
         src: {
-            1: "../../assets/images/room6.jpg",
-            2: "../../assets/images/room6.jpg",
-            3: "../../assets/images/room6.jpg",
-            4: "../../assets/images/room6.jpg"
+            1: "../../assets/images/rooms/room6.jpg",
+            2: "../../assets/images/rooms/room6.jpg",
+            3: "../../assets/images/rooms/room6.jpg",
+            4: "../../assets/images/rooms/room6.jpg"
         },
         price: "5 800",
         rating: [false, false, true, false, false],
@@ -1173,10 +1173,10 @@ let roomsMaker_data = [
         number: 678,
         type: "",
         src: {
-            1: "../../assets/images/room7.jpg",
-            2: "../../assets/images/room7.jpg",
-            3: "../../assets/images/room7.jpg",
-            4: "../../assets/images/room7.jpg"
+            1: "../../assets/images/rooms/room7.jpg",
+            2: "../../assets/images/rooms/room7.jpg",
+            3: "../../assets/images/rooms/room7.jpg",
+            4: "../../assets/images/rooms/room7.jpg"
         },
         price: "5 500",
         rating: [true, false, false, false, false],
@@ -1186,10 +1186,10 @@ let roomsMaker_data = [
         number: 450,
         type: "",
         src: {
-            1: "../../assets/images/room8.jpg",
-            2: "../../assets/images/room8.jpg",
-            3: "../../assets/images/room8.jpg",
-            4: "../../assets/images/room8.jpg"
+            1: "../../assets/images/rooms/room8.jpg",
+            2: "../../assets/images/rooms/room8.jpg",
+            3: "../../assets/images/rooms/room8.jpg",
+            4: "../../assets/images/rooms/room8.jpg"
         },
         price: "5 300",
         rating: [false, true, false, false, false],
@@ -1199,10 +1199,10 @@ let roomsMaker_data = [
         number: 350,
         type: "",
         src: {
-            1: "../../assets/images/room9.jpg",
-            2: "../../assets/images/room9.jpg",
-            3: "../../assets/images/room9.jpg",
-            4: "../../assets/images/room9.jpg"
+            1: "../../assets/images/rooms/room9.jpg",
+            2: "../../assets/images/rooms/room9.jpg",
+            3: "../../assets/images/rooms/room9.jpg",
+            4: "../../assets/images/rooms/room9.jpg"
         },
         price: "5 000",
         rating: [false, false, true, false, false],
@@ -1212,10 +1212,10 @@ let roomsMaker_data = [
         number: 666,
         type: "",
         src: {
-            1: "../../assets/images/room10.jpg",
-            2: "../../assets/images/room10.jpg",
-            3: "../../assets/images/room10.jpg",
-            4: "../../assets/images/room10.jpg"
+            1: "../../assets/images/rooms/room10.jpg",
+            2: "../../assets/images/rooms/room10.jpg",
+            3: "../../assets/images/rooms/room10.jpg",
+            4: "../../assets/images/rooms/room10.jpg"
         },
         price: "5 000",
         rating: [true, false, false, false, false],
@@ -1225,10 +1225,10 @@ let roomsMaker_data = [
         number: 444,
         type: "",
         src: {
-            1: "../../assets/images/room11.jpg",
-            2: "../../assets/images/room11.jpg",
-            3: "../../assets/images/room11.jpg",
-            4: "../../assets/images/room11.jpg"
+            1: "../../assets/images/rooms/room11.jpg",
+            2: "../../assets/images/rooms/room11.jpg",
+            3: "../../assets/images/rooms/room11.jpg",
+            4: "../../assets/images/rooms/room11.jpg"
         },
         price: "5 000",
         rating: [false, false, true, false, false],
@@ -1238,10 +1238,10 @@ let roomsMaker_data = [
         number: 352,
         type: "",
         src: {
-            1: "../../assets/images/room12.jpg",
-            2: "../../assets/images/room12.jpg",
-            3: "../../assets/images/room12.jpg",
-            4: "../../assets/images/room12.jpg"
+            1: "../../assets/images/rooms/room12.jpg",
+            2: "../../assets/images/rooms/room12.jpg",
+            3: "../../assets/images/rooms/room12.jpg",
+            4: "../../assets/images/rooms/room12.jpg"
         },
         price: "5 000",
         rating: [false, false, true, false, false],
@@ -1251,10 +1251,10 @@ let roomsMaker_data = [
         number: 888,
         type: "Люкс",
         src: {
-            1: "../../assets/images/room.jpg",
-            2: "../../assets/images/room.jpg",
-            3: "../../assets/images/room.jpg",
-            4: "../../assets/images/room.jpg"
+            1: "../../assets/images/rooms/room.jpg",
+            2: "../../assets/images/rooms/room.jpg",
+            3: "../../assets/images/rooms/room.jpg",
+            4: "../../assets/images/rooms/room.jpg"
         },
         price: "9 900",
         rating: [true, false, false, false, false],
@@ -1264,10 +1264,10 @@ let roomsMaker_data = [
         number: 840,
         type: "",
         src: {
-            1: "../../assets/images/room2.jpg",
-            2: "../../assets/images/room2.jpg",
-            3: "../../assets/images/room2.jpg",
-            4: "../../assets/images/room2.jpg"
+            1: "../../assets/images/rooms/room2.jpg",
+            2: "../../assets/images/rooms/room2.jpg",
+            3: "../../assets/images/rooms/room2.jpg",
+            4: "../../assets/images/rooms/room2.jpg"
         },
         price: "9 900",
         rating: [false, true, false, false, false],
@@ -1277,10 +1277,10 @@ let roomsMaker_data = [
         number: 980,
         type: "Люкс",
         src: {
-            1: "../../assets/images/room3.jpg",
-            2: "../../assets/images/room3.jpg",
-            3: "../../assets/images/room3.jpg",
-            4: "../../assets/images/room3.jpg"
+            1: "../../assets/images/rooms/room3.jpg",
+            2: "../../assets/images/rooms/room3.jpg",
+            3: "../../assets/images/rooms/room3.jpg",
+            4: "../../assets/images/rooms/room3.jpg"
         },
         price: "8 500",
         rating: [false, false, true, false, false],
@@ -1290,10 +1290,10 @@ let roomsMaker_data = [
         number: 856,
         type: "",
         src: {
-            1: "../../assets/images/room4.jpg",
-            2: "../../assets/images/room4.jpg",
-            3: "../../assets/images/room4.jpg",
-            4: "../../assets/images/room4.jpg"
+            1: "../../assets/images/rooms/room4.jpg",
+            2: "../../assets/images/rooms/room4.jpg",
+            3: "../../assets/images/rooms/room4.jpg",
+            4: "../../assets/images/rooms/room4.jpg"
         },
         price: "7 300",
         rating: [true, false, false, false, false],
@@ -1303,10 +1303,10 @@ let roomsMaker_data = [
         number: 740,
         type: "",
         src: {
-            1: "../../assets/images/room5.jpg",
-            2: "../../assets/images/room5.jpg",
-            3: "../../assets/images/room5.jpg",
-            4: "../../assets/images/room5.jpg"
+            1: "../../assets/images/rooms/room5.jpg",
+            2: "../../assets/images/rooms/room5.jpg",
+            3: "../../assets/images/rooms/room5.jpg",
+            4: "../../assets/images/rooms/room5.jpg"
         },
         price: "6 000",
         rating: [false, true, false, false, false],
@@ -1316,10 +1316,10 @@ let roomsMaker_data = [
         number: 982,
         type: "",
         src: {
-            1: "../../assets/images/room6.jpg",
-            2: "../../assets/images/room6.jpg",
-            3: "../../assets/images/room6.jpg",
-            4: "../../assets/images/room6.jpg"
+            1: "../../assets/images/rooms/room6.jpg",
+            2: "../../assets/images/rooms/room6.jpg",
+            3: "../../assets/images/rooms/room6.jpg",
+            4: "../../assets/images/rooms/room6.jpg"
         },
         price: "5 800",
         rating: [false, false, true, false, false],
@@ -1329,10 +1329,10 @@ let roomsMaker_data = [
         number: 678,
         type: "",
         src: {
-            1: "../../assets/images/room7.jpg",
-            2: "../../assets/images/room7.jpg",
-            3: "../../assets/images/room7.jpg",
-            4: "../../assets/images/room7.jpg"
+            1: "../../assets/images/rooms/room7.jpg",
+            2: "../../assets/images/rooms/room7.jpg",
+            3: "../../assets/images/rooms/room7.jpg",
+            4: "../../assets/images/rooms/room7.jpg"
         },
         price: "5 500",
         rating: [true, false, false, false, false],
@@ -1342,10 +1342,10 @@ let roomsMaker_data = [
         number: 450,
         type: "",
         src: {
-            1: "../../assets/images/room8.jpg",
-            2: "../../assets/images/room8.jpg",
-            3: "../../assets/images/room8.jpg",
-            4: "../../assets/images/room8.jpg"
+            1: "../../assets/images/rooms/room8.jpg",
+            2: "../../assets/images/rooms/room8.jpg",
+            3: "../../assets/images/rooms/room8.jpg",
+            4: "../../assets/images/rooms/room8.jpg"
         },
         price: "5 300",
         rating: [false, true, false, false, false],
@@ -1355,10 +1355,10 @@ let roomsMaker_data = [
         number: 350,
         type: "",
         src: {
-            1: "../../assets/images/room9.jpg",
-            2: "../../assets/images/room9.jpg",
-            3: "../../assets/images/room9.jpg",
-            4: "../../assets/images/room9.jpg"
+            1: "../../assets/images/rooms/room9.jpg",
+            2: "../../assets/images/rooms/room9.jpg",
+            3: "../../assets/images/rooms/room9.jpg",
+            4: "../../assets/images/rooms/room9.jpg"
         },
         price: "5 000",
         rating: [false, false, true, false, false],
@@ -1368,10 +1368,10 @@ let roomsMaker_data = [
         number: 666,
         type: "",
         src: {
-            1: "../../assets/images/room10.jpg",
-            2: "../../assets/images/room10.jpg",
-            3: "../../assets/images/room10.jpg",
-            4: "../../assets/images/room10.jpg"
+            1: "../../assets/images/rooms/room10.jpg",
+            2: "../../assets/images/rooms/room10.jpg",
+            3: "../../assets/images/rooms/room10.jpg",
+            4: "../../assets/images/rooms/room10.jpg"
         },
         price: "5 000",
         rating: [true, false, false, false, false],
@@ -1381,10 +1381,10 @@ let roomsMaker_data = [
         number: 444,
         type: "",
         src: {
-            1: "../../assets/images/room11.jpg",
-            2: "../../assets/images/room11.jpg",
-            3: "../../assets/images/room11.jpg",
-            4: "../../assets/images/room11.jpg"
+            1: "../../assets/images/rooms/room11.jpg",
+            2: "../../assets/images/rooms/room11.jpg",
+            3: "../../assets/images/rooms/room11.jpg",
+            4: "../../assets/images/rooms/room11.jpg"
         },
         price: "5 000",
         rating: [false, false, true, false, false],
@@ -1394,10 +1394,10 @@ let roomsMaker_data = [
         number: 352,
         type: "",
         src: {
-            1: "../../assets/images/room12.jpg",
-            2: "../../assets/images/room12.jpg",
-            3: "../../assets/images/room12.jpg",
-            4: "../../assets/images/room12.jpg"
+            1: "../../assets/images/rooms/room12.jpg",
+            2: "../../assets/images/rooms/room12.jpg",
+            3: "../../assets/images/rooms/room12.jpg",
+            4: "../../assets/images/rooms/room12.jpg"
         },
         price: "5 000",
         rating: [false, false, true, false, false],
@@ -1407,10 +1407,10 @@ let roomsMaker_data = [
         number: 888,
         type: "Люкс",
         src: {
-            1: "../../assets/images/room.jpg",
-            2: "../../assets/images/room.jpg",
-            3: "../../assets/images/room.jpg",
-            4: "../../assets/images/room.jpg"
+            1: "../../assets/images/rooms/room.jpg",
+            2: "../../assets/images/rooms/room.jpg",
+            3: "../../assets/images/rooms/room.jpg",
+            4: "../../assets/images/rooms/room.jpg"
         },
         price: "9 900",
         rating: [true, false, false, false, false],
@@ -1420,10 +1420,10 @@ let roomsMaker_data = [
         number: 840,
         type: "",
         src: {
-            1: "../../assets/images/room2.jpg",
-            2: "../../assets/images/room2.jpg",
-            3: "../../assets/images/room2.jpg",
-            4: "../../assets/images/room2.jpg"
+            1: "../../assets/images/rooms/room2.jpg",
+            2: "../../assets/images/rooms/room2.jpg",
+            3: "../../assets/images/rooms/room2.jpg",
+            4: "../../assets/images/rooms/room2.jpg"
         },
         price: "9 900",
         rating: [false, true, false, false, false],
@@ -1433,10 +1433,10 @@ let roomsMaker_data = [
         number: 980,
         type: "Люкс",
         src: {
-            1: "../../assets/images/room3.jpg",
-            2: "../../assets/images/room3.jpg",
-            3: "../../assets/images/room3.jpg",
-            4: "../../assets/images/room3.jpg"
+            1: "../../assets/images/rooms/room3.jpg",
+            2: "../../assets/images/rooms/room3.jpg",
+            3: "../../assets/images/rooms/room3.jpg",
+            4: "../../assets/images/rooms/room3.jpg"
         },
         price: "8 500",
         rating: [false, false, true, false, false],
@@ -1446,10 +1446,10 @@ let roomsMaker_data = [
         number: 856,
         type: "",
         src: {
-            1: "../../assets/images/room4.jpg",
-            2: "../../assets/images/room4.jpg",
-            3: "../../assets/images/room4.jpg",
-            4: "../../assets/images/room4.jpg"
+            1: "../../assets/images/rooms/room4.jpg",
+            2: "../../assets/images/rooms/room4.jpg",
+            3: "../../assets/images/rooms/room4.jpg",
+            4: "../../assets/images/rooms/room4.jpg"
         },
         price: "7 300",
         rating: [true, false, false, false, false],
@@ -1459,10 +1459,10 @@ let roomsMaker_data = [
         number: 740,
         type: "",
         src: {
-            1: "../../assets/images/room5.jpg",
-            2: "../../assets/images/room5.jpg",
-            3: "../../assets/images/room5.jpg",
-            4: "../../assets/images/room5.jpg"
+            1: "../../assets/images/rooms/room5.jpg",
+            2: "../../assets/images/rooms/room5.jpg",
+            3: "../../assets/images/rooms/room5.jpg",
+            4: "../../assets/images/rooms/room5.jpg"
         },
         price: "6 000",
         rating: [false, true, false, false, false],
@@ -1472,10 +1472,10 @@ let roomsMaker_data = [
         number: 982,
         type: "",
         src: {
-            1: "../../assets/images/room6.jpg",
-            2: "../../assets/images/room6.jpg",
-            3: "../../assets/images/room6.jpg",
-            4: "../../assets/images/room6.jpg"
+            1: "../../assets/images/rooms/room6.jpg",
+            2: "../../assets/images/rooms/room6.jpg",
+            3: "../../assets/images/rooms/room6.jpg",
+            4: "../../assets/images/rooms/room6.jpg"
         },
         price: "5 800",
         rating: [false, false, true, false, false],
@@ -1485,10 +1485,10 @@ let roomsMaker_data = [
         number: 678,
         type: "",
         src: {
-            1: "../../assets/images/room7.jpg",
-            2: "../../assets/images/room7.jpg",
-            3: "../../assets/images/room7.jpg",
-            4: "../../assets/images/room7.jpg"
+            1: "../../assets/images/rooms/room7.jpg",
+            2: "../../assets/images/rooms/room7.jpg",
+            3: "../../assets/images/rooms/room7.jpg",
+            4: "../../assets/images/rooms/room7.jpg"
         },
         price: "5 500",
         rating: [true, false, false, false, false],
@@ -1498,10 +1498,10 @@ let roomsMaker_data = [
         number: 450,
         type: "",
         src: {
-            1: "../../assets/images/room8.jpg",
-            2: "../../assets/images/room8.jpg",
-            3: "../../assets/images/room8.jpg",
-            4: "../../assets/images/room8.jpg"
+            1: "../../assets/images/rooms/room8.jpg",
+            2: "../../assets/images/rooms/room8.jpg",
+            3: "../../assets/images/rooms/room8.jpg",
+            4: "../../assets/images/rooms/room8.jpg"
         },
         price: "5 300",
         rating: [false, true, false, false, false],
@@ -1511,10 +1511,10 @@ let roomsMaker_data = [
         number: 350,
         type: "",
         src: {
-            1: "../../assets/images/room9.jpg",
-            2: "../../assets/images/room9.jpg",
-            3: "../../assets/images/room9.jpg",
-            4: "../../assets/images/room9.jpg"
+            1: "../../assets/images/rooms/room9.jpg",
+            2: "../../assets/images/rooms/room9.jpg",
+            3: "../../assets/images/rooms/room9.jpg",
+            4: "../../assets/images/rooms/room9.jpg"
         },
         price: "5 000",
         rating: [false, false, true, false, false],
@@ -1524,10 +1524,10 @@ let roomsMaker_data = [
         number: 666,
         type: "",
         src: {
-            1: "../../assets/images/room10.jpg",
-            2: "../../assets/images/room10.jpg",
-            3: "../../assets/images/room10.jpg",
-            4: "../../assets/images/room10.jpg"
+            1: "../../assets/images/rooms/room10.jpg",
+            2: "../../assets/images/rooms/room10.jpg",
+            3: "../../assets/images/rooms/room10.jpg",
+            4: "../../assets/images/rooms/room10.jpg"
         },
         price: "5 000",
         rating: [true, false, false, false, false],
@@ -1537,10 +1537,10 @@ let roomsMaker_data = [
         number: 444,
         type: "",
         src: {
-            1: "../../assets/images/room11.jpg",
-            2: "../../assets/images/room11.jpg",
-            3: "../../assets/images/room11.jpg",
-            4: "../../assets/images/room11.jpg"
+            1: "../../assets/images/rooms/room11.jpg",
+            2: "../../assets/images/rooms/room11.jpg",
+            3: "../../assets/images/rooms/room11.jpg",
+            4: "../../assets/images/rooms/room11.jpg"
         },
         price: "5 000",
         rating: [false, false, true, false, false],
@@ -1550,10 +1550,10 @@ let roomsMaker_data = [
         number: 352,
         type: "",
         src: {
-            1: "../../assets/images/room12.jpg",
-            2: "../../assets/images/room12.jpg",
-            3: "../../assets/images/room12.jpg",
-            4: "../../assets/images/room12.jpg"
+            1: "../../assets/images/rooms/room12.jpg",
+            2: "../../assets/images/rooms/room12.jpg",
+            3: "../../assets/images/rooms/room12.jpg",
+            4: "../../assets/images/rooms/room12.jpg"
         },
         price: "5 000",
         rating: [false, false, true, false, false],
@@ -1563,10 +1563,10 @@ let roomsMaker_data = [
         number: 888,
         type: "Люкс",
         src: {
-            1: "../../assets/images/room.jpg",
-            2: "../../assets/images/room.jpg",
-            3: "../../assets/images/room.jpg",
-            4: "../../assets/images/room.jpg"
+            1: "../../assets/images/rooms/room.jpg",
+            2: "../../assets/images/rooms/room.jpg",
+            3: "../../assets/images/rooms/room.jpg",
+            4: "../../assets/images/rooms/room.jpg"
         },
         price: "9 900",
         rating: [true, false, false, false, false],
@@ -1576,10 +1576,10 @@ let roomsMaker_data = [
         number: 840,
         type: "",
         src: {
-            1: "../../assets/images/room2.jpg",
-            2: "../../assets/images/room2.jpg",
-            3: "../../assets/images/room2.jpg",
-            4: "../../assets/images/room2.jpg"
+            1: "../../assets/images/rooms/room2.jpg",
+            2: "../../assets/images/rooms/room2.jpg",
+            3: "../../assets/images/rooms/room2.jpg",
+            4: "../../assets/images/rooms/room2.jpg"
         },
         price: "9 900",
         rating: [false, true, false, false, false],
@@ -1589,10 +1589,10 @@ let roomsMaker_data = [
         number: 980,
         type: "Люкс",
         src: {
-            1: "../../assets/images/room3.jpg",
-            2: "../../assets/images/room3.jpg",
-            3: "../../assets/images/room3.jpg",
-            4: "../../assets/images/room3.jpg"
+            1: "../../assets/images/rooms/room3.jpg",
+            2: "../../assets/images/rooms/room3.jpg",
+            3: "../../assets/images/rooms/room3.jpg",
+            4: "../../assets/images/rooms/room3.jpg"
         },
         price: "8 500",
         rating: [false, false, true, false, false],
@@ -1602,10 +1602,10 @@ let roomsMaker_data = [
         number: 856,
         type: "",
         src: {
-            1: "../../assets/images/room4.jpg",
-            2: "../../assets/images/room4.jpg",
-            3: "../../assets/images/room4.jpg",
-            4: "../../assets/images/room4.jpg"
+            1: "../../assets/images/rooms/room4.jpg",
+            2: "../../assets/images/rooms/room4.jpg",
+            3: "../../assets/images/rooms/room4.jpg",
+            4: "../../assets/images/rooms/room4.jpg"
         },
         price: "7 300",
         rating: [true, false, false, false, false],
@@ -1615,10 +1615,10 @@ let roomsMaker_data = [
         number: 740,
         type: "",
         src: {
-            1: "../../assets/images/room5.jpg",
-            2: "../../assets/images/room5.jpg",
-            3: "../../assets/images/room5.jpg",
-            4: "../../assets/images/room5.jpg"
+            1: "../../assets/images/rooms/room5.jpg",
+            2: "../../assets/images/rooms/room5.jpg",
+            3: "../../assets/images/rooms/room5.jpg",
+            4: "../../assets/images/rooms/room5.jpg"
         },
         price: "6 000",
         rating: [false, true, false, false, false],
@@ -1628,10 +1628,10 @@ let roomsMaker_data = [
         number: 982,
         type: "",
         src: {
-            1: "../../assets/images/room6.jpg",
-            2: "../../assets/images/room6.jpg",
-            3: "../../assets/images/room6.jpg",
-            4: "../../assets/images/room6.jpg"
+            1: "../../assets/images/rooms/room6.jpg",
+            2: "../../assets/images/rooms/room6.jpg",
+            3: "../../assets/images/rooms/room6.jpg",
+            4: "../../assets/images/rooms/room6.jpg"
         },
         price: "5 800",
         rating: [false, false, true, false, false],
@@ -1641,10 +1641,10 @@ let roomsMaker_data = [
         number: 678,
         type: "",
         src: {
-            1: "../../assets/images/room7.jpg",
-            2: "../../assets/images/room7.jpg",
-            3: "../../assets/images/room7.jpg",
-            4: "../../assets/images/room7.jpg"
+            1: "../../assets/images/rooms/room7.jpg",
+            2: "../../assets/images/rooms/room7.jpg",
+            3: "../../assets/images/rooms/room7.jpg",
+            4: "../../assets/images/rooms/room7.jpg"
         },
         price: "5 500",
         rating: [true, false, false, false, false],
@@ -1654,10 +1654,10 @@ let roomsMaker_data = [
         number: 450,
         type: "",
         src: {
-            1: "../../assets/images/room8.jpg",
-            2: "../../assets/images/room8.jpg",
-            3: "../../assets/images/room8.jpg",
-            4: "../../assets/images/room8.jpg"
+            1: "../../assets/images/rooms/room8.jpg",
+            2: "../../assets/images/rooms/room8.jpg",
+            3: "../../assets/images/rooms/room8.jpg",
+            4: "../../assets/images/rooms/room8.jpg"
         },
         price: "5 300",
         rating: [false, true, false, false, false],
@@ -1667,10 +1667,10 @@ let roomsMaker_data = [
         number: 350,
         type: "",
         src: {
-            1: "../../assets/images/room9.jpg",
-            2: "../../assets/images/room9.jpg",
-            3: "../../assets/images/room9.jpg",
-            4: "../../assets/images/room9.jpg"
+            1: "../../assets/images/rooms/room9.jpg",
+            2: "../../assets/images/rooms/room9.jpg",
+            3: "../../assets/images/rooms/room9.jpg",
+            4: "../../assets/images/rooms/room9.jpg"
         },
         price: "5 000",
         rating: [false, false, true, false, false],
@@ -1680,10 +1680,10 @@ let roomsMaker_data = [
         number: 666,
         type: "",
         src: {
-            1: "../../assets/images/room10.jpg",
-            2: "../../assets/images/room10.jpg",
-            3: "../../assets/images/room10.jpg",
-            4: "../../assets/images/room10.jpg"
+            1: "../../assets/images/rooms/room10.jpg",
+            2: "../../assets/images/rooms/room10.jpg",
+            3: "../../assets/images/rooms/room10.jpg",
+            4: "../../assets/images/rooms/room10.jpg"
         },
         price: "5 000",
         rating: [true, false, false, false, false],
@@ -1693,10 +1693,10 @@ let roomsMaker_data = [
         number: 444,
         type: "",
         src: {
-            1: "../../assets/images/room11.jpg",
-            2: "../../assets/images/room11.jpg",
-            3: "../../assets/images/room11.jpg",
-            4: "../../assets/images/room11.jpg"
+            1: "../../assets/images/rooms/room11.jpg",
+            2: "../../assets/images/rooms/room11.jpg",
+            3: "../../assets/images/rooms/room11.jpg",
+            4: "../../assets/images/rooms/room11.jpg"
         },
         price: "5 000",
         rating: [false, false, true, false, false],
@@ -1706,10 +1706,10 @@ let roomsMaker_data = [
         number: 352,
         type: "",
         src: {
-            1: "../../assets/images/room12.jpg",
-            2: "../../assets/images/room12.jpg",
-            3: "../../assets/images/room12.jpg",
-            4: "../../assets/images/room12.jpg"
+            1: "../../assets/images/rooms/room12.jpg",
+            2: "../../assets/images/rooms/room12.jpg",
+            3: "../../assets/images/rooms/room12.jpg",
+            4: "../../assets/images/rooms/room12.jpg"
         },
         price: "5 000",
         rating: [false, false, true, false, false],
@@ -1719,10 +1719,10 @@ let roomsMaker_data = [
         number: 888,
         type: "Люкс",
         src: {
-            1: "../../assets/images/room.jpg",
-            2: "../../assets/images/room.jpg",
-            3: "../../assets/images/room.jpg",
-            4: "../../assets/images/room.jpg"
+            1: "../../assets/images/rooms/room.jpg",
+            2: "../../assets/images/rooms/room.jpg",
+            3: "../../assets/images/rooms/room.jpg",
+            4: "../../assets/images/rooms/room.jpg"
         },
         price: "9 900",
         rating: [true, false, false, false, false],
@@ -1732,10 +1732,10 @@ let roomsMaker_data = [
         number: 840,
         type: "",
         src: {
-            1: "../../assets/images/room2.jpg",
-            2: "../../assets/images/room2.jpg",
-            3: "../../assets/images/room2.jpg",
-            4: "../../assets/images/room2.jpg"
+            1: "../../assets/images/rooms/room2.jpg",
+            2: "../../assets/images/rooms/room2.jpg",
+            3: "../../assets/images/rooms/room2.jpg",
+            4: "../../assets/images/rooms/room2.jpg"
         },
         price: "9 900",
         rating: [false, true, false, false, false],
@@ -1745,10 +1745,10 @@ let roomsMaker_data = [
         number: 980,
         type: "Люкс",
         src: {
-            1: "../../assets/images/room3.jpg",
-            2: "../../assets/images/room3.jpg",
-            3: "../../assets/images/room3.jpg",
-            4: "../../assets/images/room3.jpg"
+            1: "../../assets/images/rooms/room3.jpg",
+            2: "../../assets/images/rooms/room3.jpg",
+            3: "../../assets/images/rooms/room3.jpg",
+            4: "../../assets/images/rooms/room3.jpg"
         },
         price: "8 500",
         rating: [false, false, true, false, false],
@@ -1758,10 +1758,10 @@ let roomsMaker_data = [
         number: 856,
         type: "",
         src: {
-            1: "../../assets/images/room4.jpg",
-            2: "../../assets/images/room4.jpg",
-            3: "../../assets/images/room4.jpg",
-            4: "../../assets/images/room4.jpg"
+            1: "../../assets/images/rooms/room4.jpg",
+            2: "../../assets/images/rooms/room4.jpg",
+            3: "../../assets/images/rooms/room4.jpg",
+            4: "../../assets/images/rooms/room4.jpg"
         },
         price: "7 300",
         rating: [true, false, false, false, false],
@@ -1771,10 +1771,10 @@ let roomsMaker_data = [
         number: 740,
         type: "",
         src: {
-            1: "../../assets/images/room5.jpg",
-            2: "../../assets/images/room5.jpg",
-            3: "../../assets/images/room5.jpg",
-            4: "../../assets/images/room5.jpg"
+            1: "../../assets/images/rooms/room5.jpg",
+            2: "../../assets/images/rooms/room5.jpg",
+            3: "../../assets/images/rooms/room5.jpg",
+            4: "../../assets/images/rooms/room5.jpg"
         },
         price: "6 000",
         rating: [false, true, false, false, false],
@@ -1784,10 +1784,10 @@ let roomsMaker_data = [
         number: 982,
         type: "",
         src: {
-            1: "../../assets/images/room6.jpg",
-            2: "../../assets/images/room6.jpg",
-            3: "../../assets/images/room6.jpg",
-            4: "../../assets/images/room6.jpg"
+            1: "../../assets/images/rooms/room6.jpg",
+            2: "../../assets/images/rooms/room6.jpg",
+            3: "../../assets/images/rooms/room6.jpg",
+            4: "../../assets/images/rooms/room6.jpg"
         },
         price: "5 800",
         rating: [false, false, true, false, false],
@@ -1797,10 +1797,10 @@ let roomsMaker_data = [
         number: 678,
         type: "",
         src: {
-            1: "../../assets/images/room7.jpg",
-            2: "../../assets/images/room7.jpg",
-            3: "../../assets/images/room7.jpg",
-            4: "../../assets/images/room7.jpg"
+            1: "../../assets/images/rooms/room7.jpg",
+            2: "../../assets/images/rooms/room7.jpg",
+            3: "../../assets/images/rooms/room7.jpg",
+            4: "../../assets/images/rooms/room7.jpg"
         },
         price: "5 500",
         rating: [true, false, false, false, false],
@@ -1810,10 +1810,10 @@ let roomsMaker_data = [
         number: 450,
         type: "",
         src: {
-            1: "../../assets/images/room8.jpg",
-            2: "../../assets/images/room8.jpg",
-            3: "../../assets/images/room8.jpg",
-            4: "../../assets/images/room8.jpg"
+            1: "../../assets/images/rooms/room8.jpg",
+            2: "../../assets/images/rooms/room8.jpg",
+            3: "../../assets/images/rooms/room8.jpg",
+            4: "../../assets/images/rooms/room8.jpg"
         },
         price: "5 300",
         rating: [false, true, false, false, false],
@@ -1823,10 +1823,10 @@ let roomsMaker_data = [
         number: 350,
         type: "",
         src: {
-            1: "../../assets/images/room9.jpg",
-            2: "../../assets/images/room9.jpg",
-            3: "../../assets/images/room9.jpg",
-            4: "../../assets/images/room9.jpg"
+            1: "../../assets/images/rooms/room9.jpg",
+            2: "../../assets/images/rooms/room9.jpg",
+            3: "../../assets/images/rooms/room9.jpg",
+            4: "../../assets/images/rooms/room9.jpg"
         },
         price: "5 000",
         rating: [false, false, true, false, false],
@@ -1836,10 +1836,10 @@ let roomsMaker_data = [
         number: 666,
         type: "",
         src: {
-            1: "../../assets/images/room10.jpg",
-            2: "../../assets/images/room10.jpg",
-            3: "../../assets/images/room10.jpg",
-            4: "../../assets/images/room10.jpg"
+            1: "../../assets/images/rooms/room10.jpg",
+            2: "../../assets/images/rooms/room10.jpg",
+            3: "../../assets/images/rooms/room10.jpg",
+            4: "../../assets/images/rooms/room10.jpg"
         },
         price: "5 000",
         rating: [true, false, false, false, false],
@@ -1849,10 +1849,10 @@ let roomsMaker_data = [
         number: 444,
         type: "",
         src: {
-            1: "../../assets/images/room11.jpg",
-            2: "../../assets/images/room11.jpg",
-            3: "../../assets/images/room11.jpg",
-            4: "../../assets/images/room11.jpg"
+            1: "../../assets/images/rooms/room11.jpg",
+            2: "../../assets/images/rooms/room11.jpg",
+            3: "../../assets/images/rooms/room11.jpg",
+            4: "../../assets/images/rooms/room11.jpg"
         },
         price: "5 000",
         rating: [false, false, true, false, false],
@@ -1862,10 +1862,10 @@ let roomsMaker_data = [
         number: 352,
         type: "",
         src: {
-            1: "../../assets/images/room12.jpg",
-            2: "../../assets/images/room12.jpg",
-            3: "../../assets/images/room12.jpg",
-            4: "../../assets/images/room12.jpg"
+            1: "../../assets/images/rooms/room12.jpg",
+            2: "../../assets/images/rooms/room12.jpg",
+            3: "../../assets/images/rooms/room12.jpg",
+            4: "../../assets/images/rooms/room12.jpg"
         },
         price: "5 000",
         rating: [false, false, true, false, false],
@@ -1875,10 +1875,10 @@ let roomsMaker_data = [
         number: 888,
         type: "Люкс",
         src: {
-            1: "../../assets/images/room.jpg",
-            2: "../../assets/images/room.jpg",
-            3: "../../assets/images/room.jpg",
-            4: "../../assets/images/room.jpg"
+            1: "../../assets/images/rooms/room.jpg",
+            2: "../../assets/images/rooms/room.jpg",
+            3: "../../assets/images/rooms/room.jpg",
+            4: "../../assets/images/rooms/room.jpg"
         },
         price: "9 900",
         rating: [true, false, false, false, false],
@@ -1888,10 +1888,10 @@ let roomsMaker_data = [
         number: 840,
         type: "",
         src: {
-            1: "../../assets/images/room2.jpg",
-            2: "../../assets/images/room2.jpg",
-            3: "../../assets/images/room2.jpg",
-            4: "../../assets/images/room2.jpg"
+            1: "../../assets/images/rooms/room2.jpg",
+            2: "../../assets/images/rooms/room2.jpg",
+            3: "../../assets/images/rooms/room2.jpg",
+            4: "../../assets/images/rooms/room2.jpg"
         },
         price: "9 900",
         rating: [false, true, false, false, false],
@@ -1901,10 +1901,10 @@ let roomsMaker_data = [
         number: 980,
         type: "Люкс",
         src: {
-            1: "../../assets/images/room3.jpg",
-            2: "../../assets/images/room3.jpg",
-            3: "../../assets/images/room3.jpg",
-            4: "../../assets/images/room3.jpg"
+            1: "../../assets/images/rooms/room3.jpg",
+            2: "../../assets/images/rooms/room3.jpg",
+            3: "../../assets/images/rooms/room3.jpg",
+            4: "../../assets/images/rooms/room3.jpg"
         },
         price: "8 500",
         rating: [false, false, true, false, false],
@@ -1914,10 +1914,10 @@ let roomsMaker_data = [
         number: 856,
         type: "",
         src: {
-            1: "../../assets/images/room4.jpg",
-            2: "../../assets/images/room4.jpg",
-            3: "../../assets/images/room4.jpg",
-            4: "../../assets/images/room4.jpg"
+            1: "../../assets/images/rooms/room4.jpg",
+            2: "../../assets/images/rooms/room4.jpg",
+            3: "../../assets/images/rooms/room4.jpg",
+            4: "../../assets/images/rooms/room4.jpg"
         },
         price: "7 300",
         rating: [true, false, false, false, false],
@@ -1927,10 +1927,10 @@ let roomsMaker_data = [
         number: 740,
         type: "",
         src: {
-            1: "../../assets/images/room5.jpg",
-            2: "../../assets/images/room5.jpg",
-            3: "../../assets/images/room5.jpg",
-            4: "../../assets/images/room5.jpg"
+            1: "../../assets/images/rooms/room5.jpg",
+            2: "../../assets/images/rooms/room5.jpg",
+            3: "../../assets/images/rooms/room5.jpg",
+            4: "../../assets/images/rooms/room5.jpg"
         },
         price: "6 000",
         rating: [false, true, false, false, false],
@@ -1940,10 +1940,10 @@ let roomsMaker_data = [
         number: 982,
         type: "",
         src: {
-            1: "../../assets/images/room6.jpg",
-            2: "../../assets/images/room6.jpg",
-            3: "../../assets/images/room6.jpg",
-            4: "../../assets/images/room6.jpg"
+            1: "../../assets/images/rooms/room6.jpg",
+            2: "../../assets/images/rooms/room6.jpg",
+            3: "../../assets/images/rooms/room6.jpg",
+            4: "../../assets/images/rooms/room6.jpg"
         },
         price: "5 800",
         rating: [false, false, true, false, false],
@@ -1953,10 +1953,10 @@ let roomsMaker_data = [
         number: 678,
         type: "",
         src: {
-            1: "../../assets/images/room7.jpg",
-            2: "../../assets/images/room7.jpg",
-            3: "../../assets/images/room7.jpg",
-            4: "../../assets/images/room7.jpg"
+            1: "../../assets/images/rooms/room7.jpg",
+            2: "../../assets/images/rooms/room7.jpg",
+            3: "../../assets/images/rooms/room7.jpg",
+            4: "../../assets/images/rooms/room7.jpg"
         },
         price: "5 500",
         rating: [true, false, false, false, false],
@@ -1966,10 +1966,10 @@ let roomsMaker_data = [
         number: 450,
         type: "",
         src: {
-            1: "../../assets/images/room8.jpg",
-            2: "../../assets/images/room8.jpg",
-            3: "../../assets/images/room8.jpg",
-            4: "../../assets/images/room8.jpg"
+            1: "../../assets/images/rooms/room8.jpg",
+            2: "../../assets/images/rooms/room8.jpg",
+            3: "../../assets/images/rooms/room8.jpg",
+            4: "../../assets/images/rooms/room8.jpg"
         },
         price: "5 300",
         rating: [false, true, false, false, false],
@@ -1979,10 +1979,10 @@ let roomsMaker_data = [
         number: 350,
         type: "",
         src: {
-            1: "../../assets/images/room9.jpg",
-            2: "../../assets/images/room9.jpg",
-            3: "../../assets/images/room9.jpg",
-            4: "../../assets/images/room9.jpg"
+            1: "../../assets/images/rooms/room9.jpg",
+            2: "../../assets/images/rooms/room9.jpg",
+            3: "../../assets/images/rooms/room9.jpg",
+            4: "../../assets/images/rooms/room9.jpg"
         },
         price: "5 000",
         rating: [false, false, true, false, false],
@@ -1992,10 +1992,10 @@ let roomsMaker_data = [
         number: 666,
         type: "",
         src: {
-            1: "../../assets/images/room10.jpg",
-            2: "../../assets/images/room10.jpg",
-            3: "../../assets/images/room10.jpg",
-            4: "../../assets/images/room10.jpg"
+            1: "../../assets/images/rooms/room10.jpg",
+            2: "../../assets/images/rooms/room10.jpg",
+            3: "../../assets/images/rooms/room10.jpg",
+            4: "../../assets/images/rooms/room10.jpg"
         },
         price: "5 000",
         rating: [true, false, false, false, false],
@@ -2005,10 +2005,10 @@ let roomsMaker_data = [
         number: 444,
         type: "",
         src: {
-            1: "../../assets/images/room11.jpg",
-            2: "../../assets/images/room11.jpg",
-            3: "../../assets/images/room11.jpg",
-            4: "../../assets/images/room11.jpg"
+            1: "../../assets/images/rooms/room11.jpg",
+            2: "../../assets/images/rooms/room11.jpg",
+            3: "../../assets/images/rooms/room11.jpg",
+            4: "../../assets/images/rooms/room11.jpg"
         },
         price: "5 000",
         rating: [false, false, true, false, false],
@@ -2018,10 +2018,10 @@ let roomsMaker_data = [
         number: 352,
         type: "",
         src: {
-            1: "../../assets/images/room12.jpg",
-            2: "../../assets/images/room12.jpg",
-            3: "../../assets/images/room12.jpg",
-            4: "../../assets/images/room12.jpg"
+            1: "../../assets/images/rooms/room12.jpg",
+            2: "../../assets/images/rooms/room12.jpg",
+            3: "../../assets/images/rooms/room12.jpg",
+            4: "../../assets/images/rooms/room12.jpg"
         },
         price: "5 000",
         rating: [false, false, true, false, false],
@@ -2031,10 +2031,10 @@ let roomsMaker_data = [
         number: 888,
         type: "Люкс",
         src: {
-            1: "../../assets/images/room.jpg",
-            2: "../../assets/images/room.jpg",
-            3: "../../assets/images/room.jpg",
-            4: "../../assets/images/room.jpg"
+            1: "../../assets/images/rooms/room.jpg",
+            2: "../../assets/images/rooms/room.jpg",
+            3: "../../assets/images/rooms/room.jpg",
+            4: "../../assets/images/rooms/room.jpg"
         },
         price: "9 900",
         rating: [true, false, false, false, false],
@@ -2044,10 +2044,10 @@ let roomsMaker_data = [
         number: 840,
         type: "",
         src: {
-            1: "../../assets/images/room2.jpg",
-            2: "../../assets/images/room2.jpg",
-            3: "../../assets/images/room2.jpg",
-            4: "../../assets/images/room2.jpg"
+            1: "../../assets/images/rooms/room2.jpg",
+            2: "../../assets/images/rooms/room2.jpg",
+            3: "../../assets/images/rooms/room2.jpg",
+            4: "../../assets/images/rooms/room2.jpg"
         },
         price: "9 900",
         rating: [false, true, false, false, false],
@@ -2057,10 +2057,10 @@ let roomsMaker_data = [
         number: 980,
         type: "Люкс",
         src: {
-            1: "../../assets/images/room3.jpg",
-            2: "../../assets/images/room3.jpg",
-            3: "../../assets/images/room3.jpg",
-            4: "../../assets/images/room3.jpg"
+            1: "../../assets/images/rooms/room3.jpg",
+            2: "../../assets/images/rooms/room3.jpg",
+            3: "../../assets/images/rooms/room3.jpg",
+            4: "../../assets/images/rooms/room3.jpg"
         },
         price: "8 500",
         rating: [false, false, true, false, false],
@@ -2070,10 +2070,10 @@ let roomsMaker_data = [
         number: 856,
         type: "",
         src: {
-            1: "../../assets/images/room4.jpg",
-            2: "../../assets/images/room4.jpg",
-            3: "../../assets/images/room4.jpg",
-            4: "../../assets/images/room4.jpg"
+            1: "../../assets/images/rooms/room4.jpg",
+            2: "../../assets/images/rooms/room4.jpg",
+            3: "../../assets/images/rooms/room4.jpg",
+            4: "../../assets/images/rooms/room4.jpg"
         },
         price: "7 300",
         rating: [true, false, false, false, false],
@@ -2083,10 +2083,10 @@ let roomsMaker_data = [
         number: 740,
         type: "",
         src: {
-            1: "../../assets/images/room5.jpg",
-            2: "../../assets/images/room5.jpg",
-            3: "../../assets/images/room5.jpg",
-            4: "../../assets/images/room5.jpg"
+            1: "../../assets/images/rooms/room5.jpg",
+            2: "../../assets/images/rooms/room5.jpg",
+            3: "../../assets/images/rooms/room5.jpg",
+            4: "../../assets/images/rooms/room5.jpg"
         },
         price: "6 000",
         rating: [false, true, false, false, false],
@@ -2096,10 +2096,10 @@ let roomsMaker_data = [
         number: 982,
         type: "",
         src: {
-            1: "../../assets/images/room6.jpg",
-            2: "../../assets/images/room6.jpg",
-            3: "../../assets/images/room6.jpg",
-            4: "../../assets/images/room6.jpg"
+            1: "../../assets/images/rooms/room6.jpg",
+            2: "../../assets/images/rooms/room6.jpg",
+            3: "../../assets/images/rooms/room6.jpg",
+            4: "../../assets/images/rooms/room6.jpg"
         },
         price: "5 800",
         rating: [false, false, true, false, false],
@@ -2109,10 +2109,10 @@ let roomsMaker_data = [
         number: 678,
         type: "",
         src: {
-            1: "../../assets/images/room7.jpg",
-            2: "../../assets/images/room7.jpg",
-            3: "../../assets/images/room7.jpg",
-            4: "../../assets/images/room7.jpg"
+            1: "../../assets/images/rooms/room7.jpg",
+            2: "../../assets/images/rooms/room7.jpg",
+            3: "../../assets/images/rooms/room7.jpg",
+            4: "../../assets/images/rooms/room7.jpg"
         },
         price: "5 500",
         rating: [true, false, false, false, false],
@@ -2122,10 +2122,10 @@ let roomsMaker_data = [
         number: 450,
         type: "",
         src: {
-            1: "../../assets/images/room8.jpg",
-            2: "../../assets/images/room8.jpg",
-            3: "../../assets/images/room8.jpg",
-            4: "../../assets/images/room8.jpg"
+            1: "../../assets/images/rooms/room8.jpg",
+            2: "../../assets/images/rooms/room8.jpg",
+            3: "../../assets/images/rooms/room8.jpg",
+            4: "../../assets/images/rooms/room8.jpg"
         },
         price: "5 300",
         rating: [false, true, false, false, false],
@@ -2135,10 +2135,10 @@ let roomsMaker_data = [
         number: 350,
         type: "",
         src: {
-            1: "../../assets/images/room9.jpg",
-            2: "../../assets/images/room9.jpg",
-            3: "../../assets/images/room9.jpg",
-            4: "../../assets/images/room9.jpg"
+            1: "../../assets/images/rooms/room9.jpg",
+            2: "../../assets/images/rooms/room9.jpg",
+            3: "../../assets/images/rooms/room9.jpg",
+            4: "../../assets/images/rooms/room9.jpg"
         },
         price: "5 000",
         rating: [false, false, true, false, false],
@@ -2148,10 +2148,10 @@ let roomsMaker_data = [
         number: 666,
         type: "",
         src: {
-            1: "../../assets/images/room10.jpg",
-            2: "../../assets/images/room10.jpg",
-            3: "../../assets/images/room10.jpg",
-            4: "../../assets/images/room10.jpg"
+            1: "../../assets/images/rooms/room10.jpg",
+            2: "../../assets/images/rooms/room10.jpg",
+            3: "../../assets/images/rooms/room10.jpg",
+            4: "../../assets/images/rooms/room10.jpg"
         },
         price: "5 000",
         rating: [true, false, false, false, false],
@@ -2161,10 +2161,10 @@ let roomsMaker_data = [
         number: 444,
         type: "",
         src: {
-            1: "../../assets/images/room11.jpg",
-            2: "../../assets/images/room11.jpg",
-            3: "../../assets/images/room11.jpg",
-            4: "../../assets/images/room11.jpg"
+            1: "../../assets/images/rooms/room11.jpg",
+            2: "../../assets/images/rooms/room11.jpg",
+            3: "../../assets/images/rooms/room11.jpg",
+            4: "../../assets/images/rooms/room11.jpg"
         },
         price: "5 000",
         rating: [false, false, true, false, false],
@@ -2174,10 +2174,10 @@ let roomsMaker_data = [
         number: 352,
         type: "",
         src: {
-            1: "../../assets/images/room12.jpg",
-            2: "../../assets/images/room12.jpg",
-            3: "../../assets/images/room12.jpg",
-            4: "../../assets/images/room12.jpg"
+            1: "../../assets/images/rooms/room12.jpg",
+            2: "../../assets/images/rooms/room12.jpg",
+            3: "../../assets/images/rooms/room12.jpg",
+            4: "../../assets/images/rooms/room12.jpg"
         },
         price: "5 000",
         rating: [false, false, true, false, false],
@@ -2187,10 +2187,10 @@ let roomsMaker_data = [
         number: 888,
         type: "Люкс",
         src: {
-            1: "../../assets/images/room.jpg",
-            2: "../../assets/images/room.jpg",
-            3: "../../assets/images/room.jpg",
-            4: "../../assets/images/room.jpg"
+            1: "../../assets/images/rooms/room.jpg",
+            2: "../../assets/images/rooms/room.jpg",
+            3: "../../assets/images/rooms/room.jpg",
+            4: "../../assets/images/rooms/room.jpg"
         },
         price: "9 900",
         rating: [true, false, false, false, false],
@@ -2200,10 +2200,10 @@ let roomsMaker_data = [
         number: 840,
         type: "",
         src: {
-            1: "../../assets/images/room2.jpg",
-            2: "../../assets/images/room2.jpg",
-            3: "../../assets/images/room2.jpg",
-            4: "../../assets/images/room2.jpg"
+            1: "../../assets/images/rooms/room2.jpg",
+            2: "../../assets/images/rooms/room2.jpg",
+            3: "../../assets/images/rooms/room2.jpg",
+            4: "../../assets/images/rooms/room2.jpg"
         },
         price: "9 900",
         rating: [false, true, false, false, false],
@@ -2213,10 +2213,10 @@ let roomsMaker_data = [
         number: 980,
         type: "Люкс",
         src: {
-            1: "../../assets/images/room3.jpg",
-            2: "../../assets/images/room3.jpg",
-            3: "../../assets/images/room3.jpg",
-            4: "../../assets/images/room3.jpg"
+            1: "../../assets/images/rooms/room3.jpg",
+            2: "../../assets/images/rooms/room3.jpg",
+            3: "../../assets/images/rooms/room3.jpg",
+            4: "../../assets/images/rooms/room3.jpg"
         },
         price: "8 500",
         rating: [false, false, true, false, false],
@@ -2226,10 +2226,10 @@ let roomsMaker_data = [
         number: 856,
         type: "",
         src: {
-            1: "../../assets/images/room4.jpg",
-            2: "../../assets/images/room4.jpg",
-            3: "../../assets/images/room4.jpg",
-            4: "../../assets/images/room4.jpg"
+            1: "../../assets/images/rooms/room4.jpg",
+            2: "../../assets/images/rooms/room4.jpg",
+            3: "../../assets/images/rooms/room4.jpg",
+            4: "../../assets/images/rooms/room4.jpg"
         },
         price: "7 300",
         rating: [true, false, false, false, false],
@@ -2239,10 +2239,10 @@ let roomsMaker_data = [
         number: 740,
         type: "",
         src: {
-            1: "../../assets/images/room5.jpg",
-            2: "../../assets/images/room5.jpg",
-            3: "../../assets/images/room5.jpg",
-            4: "../../assets/images/room5.jpg"
+            1: "../../assets/images/rooms/room5.jpg",
+            2: "../../assets/images/rooms/room5.jpg",
+            3: "../../assets/images/rooms/room5.jpg",
+            4: "../../assets/images/rooms/room5.jpg"
         },
         price: "6 000",
         rating: [false, true, false, false, false],
@@ -2252,10 +2252,10 @@ let roomsMaker_data = [
         number: 982,
         type: "",
         src: {
-            1: "../../assets/images/room6.jpg",
-            2: "../../assets/images/room6.jpg",
-            3: "../../assets/images/room6.jpg",
-            4: "../../assets/images/room6.jpg"
+            1: "../../assets/images/rooms/room6.jpg",
+            2: "../../assets/images/rooms/room6.jpg",
+            3: "../../assets/images/rooms/room6.jpg",
+            4: "../../assets/images/rooms/room6.jpg"
         },
         price: "5 800",
         rating: [false, false, true, false, false],
@@ -2265,10 +2265,10 @@ let roomsMaker_data = [
         number: 678,
         type: "",
         src: {
-            1: "../../assets/images/room7.jpg",
-            2: "../../assets/images/room7.jpg",
-            3: "../../assets/images/room7.jpg",
-            4: "../../assets/images/room7.jpg"
+            1: "../../assets/images/rooms/room7.jpg",
+            2: "../../assets/images/rooms/room7.jpg",
+            3: "../../assets/images/rooms/room7.jpg",
+            4: "../../assets/images/rooms/room7.jpg"
         },
         price: "5 500",
         rating: [true, false, false, false, false],
@@ -2278,10 +2278,10 @@ let roomsMaker_data = [
         number: 450,
         type: "",
         src: {
-            1: "../../assets/images/room8.jpg",
-            2: "../../assets/images/room8.jpg",
-            3: "../../assets/images/room8.jpg",
-            4: "../../assets/images/room8.jpg"
+            1: "../../assets/images/rooms/room8.jpg",
+            2: "../../assets/images/rooms/room8.jpg",
+            3: "../../assets/images/rooms/room8.jpg",
+            4: "../../assets/images/rooms/room8.jpg"
         },
         price: "5 300",
         rating: [false, true, false, false, false],
@@ -2291,10 +2291,10 @@ let roomsMaker_data = [
         number: 350,
         type: "",
         src: {
-            1: "../../assets/images/room9.jpg",
-            2: "../../assets/images/room9.jpg",
-            3: "../../assets/images/room9.jpg",
-            4: "../../assets/images/room9.jpg"
+            1: "../../assets/images/rooms/room9.jpg",
+            2: "../../assets/images/rooms/room9.jpg",
+            3: "../../assets/images/rooms/room9.jpg",
+            4: "../../assets/images/rooms/room9.jpg"
         },
         price: "5 000",
         rating: [false, false, true, false, false],
@@ -2304,10 +2304,10 @@ let roomsMaker_data = [
         number: 666,
         type: "",
         src: {
-            1: "../../assets/images/room10.jpg",
-            2: "../../assets/images/room10.jpg",
-            3: "../../assets/images/room10.jpg",
-            4: "../../assets/images/room10.jpg"
+            1: "../../assets/images/rooms/room10.jpg",
+            2: "../../assets/images/rooms/room10.jpg",
+            3: "../../assets/images/rooms/room10.jpg",
+            4: "../../assets/images/rooms/room10.jpg"
         },
         price: "5 000",
         rating: [true, false, false, false, false],

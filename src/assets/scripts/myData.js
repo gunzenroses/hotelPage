@@ -18,10 +18,10 @@ let room888 = {
     number: 888,
     type: "Люкс",
     src: {
-        1: "src/assets/images/room.jpg",
-        2: "src/assets/images/room.jpg",
-        3: "src/assets/images/room.jpg",
-        4: "src/assets/images/room.jpg"
+        1: "src/assets/images/rooms/room.jpg",
+        2: "src/assets/images/rooms/room.jpg",
+        3: "src/assets/images/rooms/room.jpg",
+        4: "src/assets/images/rooms/room.jpg"
     },
     price: "9 900",
     rating: 5,
