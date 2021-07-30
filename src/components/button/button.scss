@@ -1,37 +1,51 @@
 .button-container {
-    width: 320px;
-    height: 269px;
-    top: 40.5px;
-    @include isFlex($direction: column, $justify: flex-start);
+  width: 320px;
+  height: 269px;
+  top: 40.5px;
+  @include isFlex($direction: column, $justify: flex-start);
+
+  @media (max-width: 450px) {
+    margin: 0 auto;
+    width: 280px;
+  }
 }
 
 .button-container > .label {
-    margin-bottom: 13px;
+  margin-bottom: 13px;
 }
 
 .button-row {
-    @include isFlex($direction: row);
-    margin-left: 1px;
+  @include isFlex($direction: row);
+  margin-left: 1px;
+
+  @media (max-width: 450px) {
+    margin: 0 auto;
+    width: 280px;
+  }
 }
 
 .button-row:nth-child(2) {
-    margin-top: 1px;
-    margin-bottom: 1px;
-    height: 148px;
-    width: 218px;
-    flex-wrap: wrap;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  height: 148px;
+  width: 218px;
+  flex-wrap: wrap;
 }
 
 .button-row:nth-child(3) {
-    height: 16px;
-    width: 147px;
-    margin-bottom: 29px;
-    margin-left: -1px;
+  height: 16px;
+  width: 147px;
+  margin-bottom: 29px;
+  margin-left: -1px;
 }
 
 .button-row:last-child {
-    width: 320px;
-    height: 44px;
+  width: 320px;
+  height: 44px;
+
+  @media (max-width: 450px) {
+    width: 280px;
+  }
 }
 
 /*
@@ -39,112 +53,130 @@
 */
 
 .button_filled {
-    position: relative;
-    font-size: $fs_h3;
-    //letter-spacing: -0.02em;
-    display: block;
+  position: relative;
+  font-size: $fs_h3;
+  //letter-spacing: -0.02em;
+  display: block;
+  font-weight: 700;
+  width: 99px;
+  height: 44px;
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  color: $light;
+  border-radius: 22px;
+  line-height: 44px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  @media (max-width: 450px) {
     font-weight: 700;
-    width: 99px;
+    width: 74px;
     height: 44px;
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    color: $light;
-    border-radius: 22px;
     line-height: 44px;
     text-align: center;
-    margin: 0;
-    padding: 0;
-    text-transform: uppercase;
-    cursor: pointer;
+  }
 }
 
 .button_filled:hover {
-    opacity: 0.5;
+  opacity: 0.5;
 }
 
 .button_filled_inner {
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    width: 95px;
-    height: 40px;
-    //line-height: 40px;
-    line-height: 38px;
-    border-radius: 22px;
-    background: $light;
-    color: $purple;
-}
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 95px;
+  height: 40px;
+  //line-height: 40px;
+  line-height: 38px;
+  border-radius: 22px;
+  background: $light;
+  color: $purple;
 
+  @media (max-width: 450px) {
+    width: 70px;
+    height: 40px;
+    line-height: 40px;
+  }
+}
 
 /*
     button_clear
 */
 
-
 .button_clear {
-    font-weight: 700;
-    font-size: $fs_h3;
-    color: $purple;
-    // min-width: 62px;
-    min-width: 66px;
-    height: 15px;
-    text-transform: uppercase;
+  font-weight: 700;
+  font-size: $fs_h3;
+  color: $purple;
+  // min-width: 62px;
+  min-width: 66px;
+  height: 15px;
+  text-transform: uppercase;
 }
 
 .button_clear:hover {
-    cursor: pointer;
-    color: $darkShadeMiddle;
+  cursor: pointer;
+  color: $darkShadeMiddle;
 }
 
 .button_clear + .button_clear {
-    margin-left: 14px;
+  margin-left: 14px;
 }
-
-
-
 
 /*
     buttonLink
 */
 
 .button_link {
-    @extend .button_filled;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 87px;
-    height: 34px;
+  @extend .button_filled;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 87px;
+  height: 34px;
+
+  @media (max-width: 550px) {
+    width: 56px;
+  }
 }
 
 .button_link_inner {
-    @extend .button_filled_inner;
-    width: 83px;
-    height: 30px;
-    line-height: 30px;
-    letter-spacing: 0.01em;
-}
+  @extend .button_filled_inner;
+  width: 83px;
+  height: 30px;
+  line-height: 30px;
+  letter-spacing: 0.01em;
 
+  @media (max-width: 550px) {
+    width: 52px;
+    font-size: 8px;
+    font-weight: 400;
+  }
+}
 
 /*
     buttonBiglink
 */
 
 .button_link_big {
-    position: relative;
-    width: 196px;
-    height: 34px;
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    color: $light;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 11.5px;
-    letter-spacing: 0.03em;
-    text-align: center;
-    line-height: 34px;
-    border-radius: 22px;
-    &:hover {
-        cursor: pointer;
-        opacity: 0.5;
-    }
+  position: relative;
+  width: 196px;
+  height: 34px;
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  color: $light;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 11.5px;
+  letter-spacing: 0.03em;
+  text-align: center;
+  line-height: 34px;
+  border-radius: 22px;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.5;
+  }
 }
 
 /*
@@ -152,64 +184,36 @@
 */
 
 .button_submit {
-    @extend .button_link_big;
-    width: 100%;
+  @extend .button_link_big;
+  width: 100%;
+  height: 44px;
+  line-height: 13px;
+  font-size: $fs_h3;
+  letter-spacing: -0.001em;
+  //padding-bottom: 2px;
+  flex-shrink: 0;
+  //padding: 14px 22px 15px 18px;
+  
+  &::before {
+    font-family: $MaterialIcons;
+    -webkit-font-feature-settings: "liga" 1;
+    -moz-font-feature-settings: "liga" 1;
+    font-feature-settings: "liga" 1;
+    top: 0;
+    right: 0;
+    position: absolute;
+    width: 44px;
     height: 44px;
-    line-height: 13px;
-    font-size: $fs_h3;
-    letter-spacing: -.001em;
-    //padding-bottom: 2px;
-    flex-shrink: 0;
-    //padding: 14px 22px 15px 18px;
-    &::before {
-        font-family: $MaterialIcons;
-        -webkit-font-feature-settings: 'liga' 1;
-        -moz-font-feature-settings: 'liga' 1;
-        font-feature-settings: 'liga' 1;
-        top: 0;
-        right: 0;
-        position: absolute;
-        width: 44px;
-        height: 44px;
-        content: "\e5c8";
-        line-height: 44px;
-        text-align: center;
-        font-size: 24px;
-        color: $light;
-    }
-}
+    content: "\e5c8";
+    line-height: 44px;
+    text-align: center;
+    font-size: 24px;
+    color: $light;
+  }
 
-@media (max-width: 450px){
-    .button_submit {
-        width: 100%;
-        max-width: 280px;
-        margin: 0 auto;
-    }
-
-    .button_filled {
-        font-weight: 700;
-        width: 74px;
-        height: 44px;
-        line-height: 44px;
-        text-align: center;
-    }
-    
-    .button_filled_inner {
-        position: absolute;
-        top: 2px;
-        left: 2px;
-        width: 70px;
-        height: 40px;
-        line-height: 40px;
-    }
-    
-    .button-row,
-    .button-container {
-        margin: 0 auto;
-        width: 280px;
-    }
-
-    .button-row:last-child {
-        width: 280px;
-    }
+  @media (max-width: 450px) {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
 }

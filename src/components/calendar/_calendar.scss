@@ -1,262 +1,257 @@
 .calendar {
-    @include containerDimed();
-    border: 1px solid rgba(31, 32, 65, 0.25);
-    width: 320px;
-    height: 369px;
-    background: $light;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    z-index: 3;
+  @include containerDimed();
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  width: 320px;
+  height: 369px;
+  background: $light;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  z-index: 3;
+
+  @media (max-width: 400px) {
+    max-width: 280px;
+  }
 }
 
 .calendar__date {
-    height: 64px;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    //padding: 19px;
-    box-sizing: border-box;
-    padding: 20px 20px 22px 19px;
+  height: 64px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  //padding: 19px;
+  box-sizing: border-box;
+  padding: 20px 20px 22px 19px;
 }
 
 .date__prev {
-    width: 24px;
-    height: 24px;
-    line-height: 18px;
-    position: relative;
-    border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  line-height: 18px;
+  position: relative;
+  border-radius: 50%;
 }
 
 .date__prev:hover {
-    background-color: grey;
+  background-color: grey;
 }
 
 .date__prev::before {
-    content: "\e5c4";
-    position: absolute;
-    font-family: $MaterialIcons;
-    font-size: 24px;
-    top: 4px;
-    color: $purple;
+  content: "\e5c4";
+  position: absolute;
+  font-family: $MaterialIcons;
+  font-size: 24px;
+  top: 4px;
+  color: $purple;
 }
 
 .date__next {
-    width: 24px;
-    height: 24px;
-    line-height: 18px;
-    position: relative;
-    border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  line-height: 18px;
+  position: relative;
+  border-radius: 50%;
 }
 
 .date__next:hover {
-    background-color: grey;
+  background-color: grey;
 }
 
 .date__next::before {
-    content: "\e5c8";
-    position: absolute;
-    font-family: $MaterialIcons;
-    font-size: 24px;
-    top: 4px;
-    color: $purple;
+  content: "\e5c8";
+  position: absolute;
+  font-family: $MaterialIcons;
+  font-size: 24px;
+  top: 4px;
+  color: $purple;
 }
 
 .date__month {
-    display: block;
-    margin: 0 auto;
-    font-family: $Montserrat;
-    font-weight: 700;
-    font-size: 19px;
-    line-height: 24px;
-    text-align: center;
-    letter-spacing: 0.0015em;
+  display: block;
+  margin: 0 auto;
+  font-family: $Montserrat;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.0015em;
 }
 
-
 .calendar__weeks {
-    width: 280px;
-    height: 240px;
-    margin: 9px auto 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  width: 280px;
+  height: 240px;
+  margin: 9px auto 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .weeks__weekdays {
-    width: 280px;
-    height: 40px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    color: $purple;
-    align-items: center;
-    font-weight: 700;
-    font-size: 12px;
-    letter-spacing: -0.01em;
+  width: 280px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: $purple;
+  align-items: center;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: -0.01em;
 }
 
 .weeks__days {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    font-family: Montserrat;
-    font-weight: 400;
-    font-size: 12px;
-    text-align: center;
-    line-height: 40px;
-    color: $darkShadeMiddle;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 12px;
+  text-align: center;
+  line-height: 40px;
+  color: $darkShadeMiddle;
 }
 
 .weeks__day {
-    width: 40px;
-    height: 40px;
+  width: 40px;
+  height: 40px;
 }
 .weeks__day:hover {
-    border-radius: 50%;
-    border-color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    border-width: 2px;
-    border-style: solid;
-    box-sizing: border-box;
+  border-radius: 50%;
+  border-color: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  border-width: 2px;
+  border-style: solid;
+  box-sizing: border-box;
 }
 
-.weeks__day_prev, 
+.weeks__day_prev,
 .weeks__day_next {
-    color: $darkShadeLess;
+  color: $darkShadeLess;
 }
 
 .weeks__day_prev_checkin,
 .weeks__day_next_checkin,
 .weeks__day_prev_checkout,
 .weeks__day_next_checkout {
-    color: $darkShadeLess;
-    border-radius: 50%;
-    background: $darkShadeFew;
-    position: relative;
+  color: $darkShadeLess;
+  border-radius: 50%;
+  background: $darkShadeFew;
+  position: relative;
 }
 
-.weeks__day_prev_checkin::before, 
+.weeks__day_prev_checkin::before,
 .weeks__day_next_checkin::before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: -1;
-    border-radius: 50% 0 0 50%;
-    background: $darkShadeFewer;
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  border-radius: 50% 0 0 50%;
+  background: $darkShadeFewer;
 }
 
-.weeks__day_prev_checkout::before, 
+.weeks__day_prev_checkout::before,
 .weeks__day_next_checkout::before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: 0 50% 50% 0;
-    background: $darkShadeFewer;
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 0 50% 50% 0;
+  background: $darkShadeFewer;
 }
-
-
-
-
-
 
 .weeks__day_today {
-    border-radius: 50%;
-    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-    color: #fff;
-    font-weight: 700;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+  color: #fff;
+  font-weight: 700;
 }
 
 .weeks__day_range {
-    background: linear-gradient(180deg, rgba(188,156,255,.15)  0%, rgba(139,164,249,.15) 100%);
-    position: relative;
+  background: linear-gradient(
+    180deg,
+    rgba(188, 156, 255, 0.15) 0%,
+    rgba(139, 164, 249, 0.15) 100%
+  );
+  position: relative;
 }
 
 .weeks__day_range_another {
-    background: $darkShadeFewer;
-    color: $darkShadeLess;
-    position: relative;
+  background: $darkShadeFewer;
+  color: $darkShadeLess;
+  position: relative;
 }
 
-
 .weeks__day_checkout {
-    border-radius: 50%;
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    color: #fff;
-    font-weight: 700;
-    z-index: 2;
-    position: relative;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  color: #fff;
+  font-weight: 700;
+  z-index: 2;
+  position: relative;
 }
 
 .weeks__day_checkout::after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    border-radius: 0 50% 50% 0;
-    opacity: 0.15;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  border-radius: 0 50% 50% 0;
+  opacity: 0.15;
 }
 
 .weeks__day_checkin {
-    border-radius: 50%;
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    color: #fff;
-    font-weight: 700;
-    z-index: 2;
-    position: relative;
-    isolation: isolate;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  color: #fff;
+  font-weight: 700;
+  z-index: 2;
+  position: relative;
+  isolation: isolate;
 }
 
-
 .weeks__day_checkin::after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    border-radius: 50% 0 0 50%;
-    opacity: 0.15;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  border-radius: 50% 0 0 50%;
+  opacity: 0.15;
 }
 
 .calendar__buttons {
-    box-sizing: border-box;
-    margin: 21px 19px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    color: $purple;
+  box-sizing: border-box;
+  margin: 21px 19px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: $purple;
 }
 
-.calendar__buttons_reset, .calendar__buttons_submit {
-    font-family: Montserrat;
-    font-weight: 700;
-    font-size: 12px;
-    text-transform: uppercase;
-    color: #BC9CFF;
+.calendar__buttons_reset,
+.calendar__buttons_submit {
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #bc9cff;
 }
 
 .calendar__input {
-    text-transform: uppercase;
-}
-
-@media (max-width: 400px){
-    .calendar {
-        max-width: 280px;
-    }
+  text-transform: uppercase;
 }

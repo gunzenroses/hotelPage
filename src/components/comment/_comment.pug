@@ -1,16 +1,16 @@
 include ../buttonLike/_buttonLike.pug
 
 mixin comment(commentData)
-    - var {authorPic="", authorName="Anonymous", commentTime=Data().getDay(), buttonLikeId, buttonNumber=0, commentText="none"} = commentData
-    .widget
-        .comment
-            .comment__head
-                .author__pic
-                    img(src=authorPic alt="profile picture")
-                .info__description
-                    div(class="info__main")= authorName
-                    div(class="info__additional")= commentTime
-            .comment__body
-                .comment__likes
-                    +buttonLikeItem(buttonLikeId, buttonNumber)
-                .comment__text!= commentText
+  - var {authorPic="", authorName="Anonymous", commentTime=Data().getDay(), buttonLikeId, buttonNumber=0, commentText="none"} = commentData
+  .widget
+    .comment
+      .comment__head
+        .author__pic
+          img(src=authorPic alt="profile picture")
+        .info__description
+          div(class="info__main")= authorName
+          div(class="info__additional")= commentTime
+      .comment__body
+        .comment__likes
+          +buttonLikeItem(buttonLikeId, buttonNumber)
+        .comment__text!= commentText

@@ -1,43 +1,66 @@
 .header {
-    @include containerDimed();
-    @include isFlex($align: center);
-    position: relative;
-    padding: 15px 140px;
-    width: 100%;
-    height: 70px;
-    margin: 0 auto;
-    //padding-right: 141px;
-}
+  @include containerDimed();
+  @include isFlex($align: center);
+  position: relative;
+  padding: 15px 140px;
+  width: 100%;
+  height: 70px;
+  margin: 0 auto;
+  //padding-right: 141px;
 
+  @media (max-width: 1440px) {
+      width: 100vw;
+      padding: 15px 7%;
+  }
+
+  @media (max-width: 750px) {
+      width: 100vw;
+      padding: 15px 5%;
+      min-width: 320px;
+  }
+
+  @media (max-width: 550px) {
+      padding: 15px 2%;
+    }
+  
+}
 
 /*
     logo
 */
 .logo__link {
-    width: 106px;
-    height: 40px;
-    line-height: 40px;
-    @include isFlex($align: center);
+  width: 106px;
+  height: 40px;
+  line-height: 40px;
+  @include isFlex($align: center);
+
+  @media (max-width: 550px) {
+    width: 40px;
+  }
 }
 
 .logo__pic {
-    position: relative;
-    width: 40px;
-    height: 40px;
-    background: url(/assets/images/logo/logo_colored.svg);
-    background-position: center;
-    background-size: initial;
-    background-repeat: no-repeat;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background: url(/assets/images/logo/logo_colored.svg);
+  background-position: center;
+  background-size: initial;
+  background-repeat: no-repeat;
 }
 
 .logo__name {
-    position: relative;
-    width: 54px;
-    height: 14px;
-    background: url(/assets/images/logo/logo__name.svg);
-    background-position: center;
-    background-size: initial;
-    background-repeat: no-repeat;
+  position: relative;
+  width: 54px;
+  height: 14px;
+  background: url(/assets/images/logo/logo__name.svg);
+  background-position: center;
+  background-size: initial;
+  background-repeat: no-repeat;
+
+  @media (max-width: 550px) {
+    display: none;
+  }
 }
 
 /*
@@ -45,12 +68,26 @@
 */
 
 .header__menu {
-    position: relative;
-    width: 770px;
-    height: 34px;
-    @include isFlex($direction: row-reverse, $justify: flex-start, $align: center);
-    margin-left: 20px;
-    color: $darkShadeMiddle;
+  position: relative;
+  width: 770px;
+  height: 34px;
+  @include isFlex(
+    $direction: row-reverse,
+    $justify: flex-start,
+    $align: center
+  );
+  margin-left: 20px;
+  color: $darkShadeMiddle;
+
+  @media (max-width: 1070px) {
+      width: 80%;
+    }
+  
+    @media (max-width: 550px) {
+        width: 70%;
+        min-width: 260px;
+        margin-left: 10px;
+      }
 }
 
 /*
@@ -58,15 +95,19 @@
 */
 
 .header__navbar {
-    width: 447px;
-    height: 21px;
-    @include isFlex($align: center, $justify: flex-end);
-    margin-right: 20px;
+  width: 447px;
+  height: 21px;
+  @include isFlex($align: center, $justify: flex-end);
+  margin-right: 20px;
+
+  @media (max-width: 1070px) {
+      display: none;
+  }
 }
 
 .header__navbar > a,
 .header__navbar > div:not(:last-of-type) {
-    margin-right: 20px;
+  margin-right: 20px;
 }
 
 /*
@@ -76,29 +117,37 @@
 .header__navbar a:hover,
 .header__navbar div:hover,
 .header__navbar span:hover {
-    font-weight: 700;
-    color: $darkShadeMore;
+  font-weight: 700;
+  color: $darkShadeMore;
 }
 
 .button_navlink:active {
-    font-weight: 700;
-    color: $darkShadeMore;
+  font-weight: 700;
+  color: $darkShadeMore;
 }
 
 .dropdown__icon:hover ~ .button_navlink,
 .dropdown__icon:active ~ .button_navlink {
-    font-weight: 700;
-    color: $darkShadeMore;
+  font-weight: 700;
+  color: $darkShadeMore;
 }
 
 .header__buttons {
-    width: 303px;
-    height: 34px;
-    @include isFlex($align: center);
+  width: 303px;
+  height: 34px;
+  @include isFlex($align: center);
+
+  @media (max-width: 550px) {
+      width: 200px;
+    }
 }
 
 .header__buttons .button_link_big::before {
-    content: "Зарегистрироваться";
+  content: "Зарегистрироваться";
+
+  @media (max-width: 550px) {
+      content: "Регистрация";
+    }
 }
 
 /*
@@ -106,20 +155,20 @@
 */
 
 .header__signed {
-    height: 30px;
-    color: $darkShadeMiddle;
-    font-size: 14px;
-    @include isFlex($align: center);
+  height: 30px;
+  color: $darkShadeMiddle;
+  font-size: 14px;
+  @include isFlex($align: center);
 }
 
 .header__line {
-    height: 100%;
-    width: 20px;
-    border-left: 1px solid $darkShadeFew;
+  height: 100%;
+  width: 20px;
+  border-left: 1px solid $darkShadeFew;
 }
 
 .header__user {
-    color: $darkShadeMiddle;
+  color: $darkShadeMiddle;
 }
 
 /*
@@ -127,182 +176,133 @@
 */
 
 .dropdown__navbar {
-    @include containerDimed();
-    position: absolute;
-    margin: 0 20px;
-    top: 50px;
-    //right: 90px;
-    width: 130px;
-    height: 130px;
-    padding: 5px 10px;
-    @include isFlex($direction: column, $align: flex-start);
-    z-index: 2;
+  @include containerDimed();
+  position: absolute;
+  margin: 0 20px;
+  top: 50px;
+  //right: 90px;
+  width: 130px;
+  height: 130px;
+  padding: 5px 10px;
+  @include isFlex($direction: column, $align: flex-start);
+  z-index: 2;
 }
 
 // dropdowns in navbar
 
 .button_navlink {
-    position: relative;
-    font-weight: 400;
-    font-size: 14px;
-    color: $darkShadeMiddle;
-    height: 18px;
-    //line-height: 18px;
-    line-height: 20px;
-    @include isFlex($direction: column);
-    //letter-spacing: 0.01em;
-    letter-spacing: .003em;
-    cursor: pointer;
+  position: relative;
+  font-weight: 400;
+  font-size: 14px;
+  color: $darkShadeMiddle;
+  height: 18px;
+  //line-height: 18px;
+  line-height: 20px;
+  @include isFlex($direction: column);
+  //letter-spacing: 0.01em;
+  letter-spacing: 0.003em;
+  cursor: pointer;
 }
 
 .dropdown_navlink {
-    font-weight: 400;
-    font-size: 14px;
-    color: $darkShadeMiddle;
-    height: 18px;
-    line-height: 18px;
-    @include isFlex($direction: row-reverse);
+  font-weight: 400;
+  font-size: 14px;
+  color: $darkShadeMiddle;
+  height: 18px;
+  line-height: 18px;
+  @include isFlex($direction: row-reverse);
 }
 
 .dropdown__icon {
-    position: relative;
-    width: 24px;
-    height: 18px;
-        line-height: 20px;
+  position: relative;
+  width: 24px;
+  height: 18px;
+  line-height: 20px;
 }
 
 .dropdown__icon::before {
-    position: absolute;
-    font-family: $MaterialIcons;
-    font-size: 24px;
-    color: $darkShadeMiddle;
-    content: "\e5cf";
+  position: absolute;
+  font-family: $MaterialIcons;
+  font-size: 24px;
+  color: $darkShadeMiddle;
+  content: "\e5cf";
 }
 
 .navbar__dropdown {
-    position: absolute;
-    top: 20px;
-    @include containerDimed();
-    width: 150px;
-    height: 60px;
-    z-index: 3;
+  position: absolute;
+  top: 20px;
+  @include containerDimed();
+  width: 150px;
+  height: 60px;
+  z-index: 3;
 }
-
 
 /*
     burger menu
 */
 
 .burger__menu {
-    position: relative;
-    width: 30px;
-    height: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-    display: none;
+  position: relative;
+  width: 30px;
+  height: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  display: none;
+
+  @media (max-width: 1070px) {
+      display: block;
+    }
+
+    @media (max-width: 550px) {
+        margin: 0 10px;
+      }
 }
 
 .burger__menu::before,
 .burger__menu::after,
 .burger__menu > span {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 2px;
-    left: 0;
-    background: $darkShadeMiddle;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  left: 0;
+  background: $darkShadeMiddle;
 }
 
 .burger__menu::before {
-    top: 0;
+  top: 0;
 }
 
 .burger__menu::after {
-    bottom: 0;
+  bottom: 0;
 }
 
 .burger__menu > span {
-    top: 9px;
+  top: 9px;
 }
 
 /*
     media-queries
 */
 
-@media (max-width: 1440px) {
-    .header {
-        width: 100vw;
-        padding: 15px 7%;
-    }
-}
 
-@media (max-width: 1070px) {
-    .burger__menu {
-        display: block;
-    }
 
-    .header__menu {
-        width: 80%;
-    }
 
-    .header__navbar {
-        display: none;
-    }
-}
-
-@media (max-width: 750px) {
-    .header {
-        width: 100vw;
-        padding: 15px 5%;
-        min-width: 320px;
-    }
-}
 
 @media (max-width: 550px) {
-    .header {
-        padding: 15px 2%;
-    }
+  // .header .logo__link {
+  //   width: 40px;
+  // }
 
-    .header .logo__link {
-        width: 40px;
-    }
-    
-    .header .logo__name {
-        display: none;
-    }
+  // .header .logo__name {
+  //   display: none;
+  // }
 
-    .header__buttons {
-        width: 200px;
-    }
-
-    .header__menu {
-        width: 70%;
-        min-width: 260px;
-        margin-left: 10px;
-    }
-
-    .button_link {
-        width: 56px;
-    }
-
-    .button_link_inner {
-        width: 52px;
-        font-size: 8px;
-        font-weight: 400;
-    }
-
-    .header__buttons > .button_link_big {
-        position: relative;
-        width: 136px;
-        font-size: 8px;
-        font-weight: 400;
-    }
-
-    .header__buttons .button_link_big::before {
-        content: "Регистрация";
-    }
-
-    .burger__menu {
-        margin: 0 10px;
-    }
+  //???
+  .header__buttons > .button_link_big {
+    position: relative;
+    width: 136px;
+    font-size: 8px;
+    font-weight: 400;
+  }
 }

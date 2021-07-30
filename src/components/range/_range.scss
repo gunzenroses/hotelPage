@@ -1,49 +1,49 @@
 .range__container {
-    position: relative;
-    width: 100%;
-    height: auto;
-    margin-top: 1px;
-    @include isFlex($direction: column, $justify: flex-start);
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-top: 1px;
+  @include isFlex($direction: column, $justify: flex-start);
 }
 
 .range__info {
-    font-size: .857rem;
-    line-height: 1.045rem;
-    margin-top: 13px;
-    font-weight: 400;
-    color: $darkShadeMiddle;
-    text-transform: none;
-    letter-spacing: -0.001em;
+  font-size: 0.857rem;
+  line-height: 1.045rem;
+  margin-top: 13px;
+  font-weight: 400;
+  color: $darkShadeMiddle;
+  text-transform: none;
+  letter-spacing: -0.001em;
 }
 
 .range__slider {
-    position: relative;
-    z-index: 1;
-    margin-top: 20px;
-    height: 6px;
-    width: 100%;
-    border-radius: 3px;
-    background-color: $light;
-    border: 1px solid $darkShadeLess;
+  position: relative;
+  z-index: 1;
+  margin-top: 20px;
+  height: 6px;
+  width: 100%;
+  border-radius: 3px;
+  background-color: $light;
+  border: 1px solid $darkShadeLess;
 }
 
 .range__container > .ui-slider-horizontal {
-    height: 6px;
+  height: 6px;
 }
 
 .range__slider > .ui-slider-range {
-    border-radius: 3px;
-    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  border-radius: 3px;
+  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
 }
 
 .range__slider > .ui-slider-handle {
-    position: absolute;
-    font-size: 13.3px;
-    z-index: 3;
-    top: -.5em;
-    width: 16px;
-    height: 16px;
-    border-radius: 10px;
-    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-    border: 2px solid $light;
+  position: absolute;
+  font-size: 13.3px;
+  z-index: 3;
+  top: -0.5em;
+  width: 16px;
+  height: 16px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+  border: 2px solid $light;
 }

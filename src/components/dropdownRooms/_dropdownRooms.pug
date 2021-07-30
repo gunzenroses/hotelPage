@@ -1,17 +1,17 @@
 include ../dropdownGuests/_dropdownGuests.pug
 
 mixin dropdownRoomsLabeled(labelText, labelRightText, dropdownContainerId, dropdownClassShow, inputId)
-    .widget
-        h3.label!= labelText
-        h3(class="label_right")= labelRightText
-        +dropdownRoomsItems(dropdownContainerId, dropdownClassShow, inputId)
+  .widget
+    h3.label!= labelText
+    h3(class="label_right")= labelRightText
+    +dropdownRoomsItems(dropdownContainerId, dropdownClassShow, inputId)
 
 
 mixin dropdownRoomsItems(dropdownContainerId, dropdownClassShow, inputId)
-    div(class="dropdown" id=dropdownContainerId)
-        div(class="dropdown__content dropdown__rooms " + dropdownClassShow)
-            +dropdownItem("bedrooms", "Спальни", 0)
-            +dropdownItem("beds", "Кровати", 1)
-            +dropdownItem("bathrooms", "Ванные комнаты", 2)
-        .dropdown__info.dropdown__init
-            input.dropdown__input(readonly='' type='text' placeholder='Выберите условия' value='' name="rooms" id=inputId)
+  div(class="dropdown" id=dropdownContainerId)
+    div(class="dropdown__content dropdown__rooms " + dropdownClassShow)
+      +dropdownItem("bedrooms", "Спальни", 0)
+      +dropdownItem("beds", "Кровати", 1)
+      +dropdownItem("bathrooms", "Ванные комнаты", 2)
+    .dropdown__info.dropdown__init
+      input.dropdown__input(readonly='' type='text' placeholder='Выберите условия' value='' name="rooms" id=inputId)

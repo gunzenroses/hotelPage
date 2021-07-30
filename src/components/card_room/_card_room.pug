@@ -3,18 +3,18 @@ include ../card_booking/_card_booking.pug
 include ../buttonRate/_buttonRate.pug
 
 mixin room(roomOptions)
-    - var {src = [], bookingNumber = "999", bookingType = false, bookingPrice = 0, starIds = [], starName = inputName, starRate = [], reviewAmount = 0} = roomOptions
-    .card__room
-        +roomCarousel(src, nameForPictures="room " + bookingNumber)
-        .room__info
-            +bookingText("small", bookingNumber, bookingType, bookingPrice)
-            .room__line
-            .room__row_small
-                +buttonRate(...starIds, starName, ...starRate)
-                +review(reviewAmount)
+  - var {src = [], bookingNumber = "999", bookingType = false, bookingPrice = 0, starIds = [], starName = inputName, starRate = [], reviewAmount = 0} = roomOptions
+  .card__room
+    +roomCarousel(src, nameForPictures="room " + bookingNumber)
+    .room__info
+      +bookingText("small", bookingNumber, bookingType, bookingPrice)
+      .room__line
+      .room__row_small
+        +buttonRate(...starIds, starName, ...starRate)
+        +review(reviewAmount)
 
 mixin review(reviewAmount)
-    .card__text_right
-        span.card__text_price!= reviewAmount
-        span &nbsp;
-        span.card__text_review Отзывов
+  .card__text_right
+    span.card__text_price!= reviewAmount
+    span &nbsp;
+    span.card__text_review Отзывов

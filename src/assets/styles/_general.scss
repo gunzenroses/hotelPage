@@ -103,6 +103,11 @@ button {
 .container_small {
   @include isFlex($direction: column);
   width: 150px;
+
+  @media (max-width: 450px){
+    width: calc(150/320*100%);
+    min-width: 130px;
+  }
 }
 
 .container_small > .label {
@@ -112,6 +117,11 @@ button {
 .container_medium {
   @include isFlex($direction: column);
   width: 266px;
+
+  @media (max-width: 450px){
+    width: 280px;
+    margin: 0 auto;
+  }
 }
 
 
@@ -126,6 +136,12 @@ select {
 .widget {
   position: relative;
   width: 100%;
+
+  @media (max-width: 450px){
+    width: 100%;
+    min-width: 280px;
+    margin: 0 auto;
+  }
 }
 
 .row_middle {
@@ -208,24 +224,6 @@ fieldset {
 
 .width-and-heigh_266 > div {
   margin-bottom: 19px;
-}
-
-@media (max-width: 450px){
-  .container_small {
-    width: calc(150/320*100%);
-    min-width: 130px;
-  }
-
-  .container_medium {
-    width: 280px;
-    margin: 0 auto;
-  }
-
-  .widget {
-    width: 100%;
-    min-width: 280px;
-    margin: 0 auto;
-  }
 }
 
 .none {

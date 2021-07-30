@@ -1,23 +1,23 @@
 mixin bulletCheckboxContainer(containerText, checkboxList)
-    .bullet__container
-        h3.label!= containerText
-        +bulletCheckboxList(checkboxList)
+  .bullet__container
+    h3.label!= containerText
+    +bulletCheckboxList(checkboxList)
 
 mixin bulletCheckboxList(checkboxList)
-    for item in checkboxList 
-        +bulletCheckboxItem(item)
+  for item in checkboxList 
+    +bulletCheckboxItem(item)
 
 mixin bulletCheckboxItem(bulletTitle)
-    label.bullet
-        span.bullet__icon
-        span.bullet__title!= bulletTitle
+  label.bullet
+    span.bullet__icon
+    span.bullet__title!= bulletTitle
 
 
 //- option 1
-    mixin bulletCheckboxList(containerText, items)
-        .widget
-            h3(class="label")= containerText
-                for {itemName, itemTitle} in items
-                    input(type="checkbox" name=itemName).bullet__real
-                    span.bullet__fake
-                    span(class="bullet__title")= itemTitle
+  mixin bulletCheckboxList(containerText, items)
+    .widget
+      h3(class="label")= containerText
+        for {itemName, itemTitle} in items
+          input(type="checkbox" name=itemName).bullet__real
+          span.bullet__fake
+          span(class="bullet__title")= itemTitle

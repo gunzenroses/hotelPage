@@ -1,119 +1,119 @@
 .pagination_contaner {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: nowrap;
-    flex-shrink: 0;
-    width: 241px;
-    height: 105px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  width: 241px;
+  height: 105px;
+
+  @media (max-width: 450px) {
+    margin: 0 auto;
+  }
 }
 
 .pagination_bar {
-    height: 75px;
-    width: 241px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: nowrap;
-    flex-shrink: 0;
+  height: 75px;
+  width: 241px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
 }
 
-
-
-
-
 button {
-    border: none;
+  border: none;
 }
 
 .pagination__buttons {
-    height: 40.4px;
-    width: 240px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: nowrap;
-    flex-shrink: 0;
-    font-size: 12px;
+  height: 40.4px;
+  width: 240px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  font-size: 12px;
 }
 
 .pagination__button_current {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin: 0;
-    padding: 0;
-    line-height: 40px;
-    text-align: center;
-    cursor: pointer;
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    color: #fff;
-    font-weight: 700;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0;
+  padding: 0;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  color: #fff;
+  font-weight: 700;
 }
 
 .pagination__items {
-    width: 120px;
-    height: 40px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: nowrap;
-    flex-shrink: 0;
+  width: 120px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
 }
 
 .pagination__item,
 .pagination__button_last,
 .pagination__button_first {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin: 0;
-    padding: 0;
-    line-height: 40px;
-    text-align: center;
-    cursor: pointer;
-    background: transparent;
-    color: rgba(31, 32, 65, 0.5);
-    font-weight: 400;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0;
+  padding: 0;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+  background: transparent;
+  color: rgba(31, 32, 65, 0.5);
+  font-weight: 400;
 }
 
 .pagination__item:hover {
-    background: #BC9CFF;
+  background: #bc9cff;
 }
 
 .pagination__button_next {
-    position: relative;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0;
+  padding: 0;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+
+  &::before {
+    font-family: $MaterialIcons;
+    -webkit-font-feature-settings: "liga" 1;
+    -moz-font-feature-settings: "liga" 1;
+    font-feature-settings: "liga" 1;
+    top: 0;
+    right: 0;
+    position: absolute;
     width: 40px;
     height: 40px;
-    border-radius: 50%;
-    margin: 0;
-    padding: 0;
+    content: "\e5c8";
     line-height: 40px;
     text-align: center;
-    cursor: pointer;
-    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-
-    &::before {
-        font-family: $MaterialIcons;
-        -webkit-font-feature-settings: 'liga' 1;
-        -moz-font-feature-settings: 'liga' 1;
-        font-feature-settings: 'liga' 1;
-        top: 0;
-        right: 0;
-        position: absolute;
-        width: 40px;
-        height: 40px;
-        content: "\e5c8";
-        line-height: 40px;
-        text-align: center;
-        font-size: 24px;
-        color: $light;
-        z-index: 2;
-    }
+    font-size: 24px;
+    color: $light;
+    z-index: 2;
+  }
 }
 
 // .pagination__button_next::before {
@@ -141,49 +141,43 @@ button {
 // }
 
 .pagination__button_prev {
-    position: relative;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0;
+  padding: 0;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+
+  &::before {
+    font-family: $MaterialIcons;
+    -webkit-font-feature-settings: "liga" 1;
+    -moz-font-feature-settings: "liga" 1;
+    font-feature-settings: "liga" 1;
+    top: 0;
+    right: 0;
+    position: absolute;
     width: 40px;
     height: 40px;
-    border-radius: 50%;
-    margin: 0;
-    padding: 0;
+    content: "\e5c4";
     line-height: 40px;
     text-align: center;
-    cursor: pointer;
-    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-
-    &::before {
-        font-family: $MaterialIcons;
-        -webkit-font-feature-settings: 'liga' 1;
-        -moz-font-feature-settings: 'liga' 1;
-        font-feature-settings: 'liga' 1;
-        top: 0;
-        right: 0;
-        position: absolute;
-        width: 40px;
-        height: 40px;
-        content: "\e5c4";
-        line-height: 40px;
-        text-align: center;
-        font-size: 24px;
-        color: $light;
-        z-index: 2;
-    }
+    font-size: 24px;
+    color: $light;
+    z-index: 2;
+  }
 }
 
 .pagination__info {
-    width: 260px;
-    height: 24px;
-    line-height: 18px;
-    font-size: $fs_base;
-    margin: 0 auto;
-    padding-left: 5px;
-    text-align: left;
-    letter-spacing: -.001em;
-}
-
-@media (max-width: 450px){
-    .pagination_contaner {
-        margin: 0 auto;
-    }
+  width: 260px;
+  height: 24px;
+  line-height: 18px;
+  font-size: $fs_base;
+  margin: 0 auto;
+  padding-left: 5px;
+  text-align: left;
+  letter-spacing: -0.001em;
 }

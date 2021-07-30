@@ -1,89 +1,87 @@
 .donut {
-    display: flex;
-    flex-direction: row;
-    width: 311px;
-    height: 126px;
+  display: flex;
+  flex-direction: row;
+  width: 311px;
+  height: 126px;
 }
 
 .donut__content {
-    width: 120px;
-    height: 120px;
-    position: relative;
-    display: block;
+  width: 120px;
+  height: 120px;
+  position: relative;
+  display: block;
+
+  @media (max-width: 380px) {
+    width: 100px;
+  }
 }
 
 .donut__img {
-    position: absolute;
+  position: absolute;
 }
 
 .donut__text {
-    color: rgba(188,156,255,1);
-    font-weight: 700;
-    position: absolute;
-    top: 29%;
-    left: 49%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  color: rgba(188, 156, 255, 1);
+  font-weight: 700;
+  position: absolute;
+  top: 29%;
+  left: 49%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .donut__number {
-    font-size: 25px;
-    line-height: 29.26px;
+  font-size: 25px;
+  line-height: 29.26px;
 }
 
 .donut__label {
-    font-size: 16px;
-    line-height: 14.63px;
+  font-size: 16px;
+  line-height: 14.63px;
 }
 
 .li_circle {
-    display: inline-block;
-    vertical-align: middle;
-    width: 10px;
-    height: 10px;
-    margin-right: 5px;
-    margin-bottom: 3px;
-    border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+  margin-bottom: 3px;
+  border-radius: 50%;
 }
 
 .donut__caption {
-    width: 165px;
-    height: 96px;
-    margin-top: 25px;
-    margin-left: 30px;
-    font-size: 14px;
-    line-height: 24.5px;
+  width: 165px;
+  height: 96px;
+  margin-top: 25px;
+  margin-left: 30px;
+  font-size: 14px;
+  line-height: 24.5px;
+
+  @media (max-width: 380px) {
+    margin-left: 15px;
+    margin-top: 15px;
+  }
 }
 
 .donut-key-list {
-    letter-spacing: .001em;
+  letter-spacing: 0.001em;
 }
 
 .exellent {
-    background: linear-gradient(180deg, #FFE39C 0%,#FFBA9C);
+  background: linear-gradient(180deg, #ffe39c 0%, #ffba9c);
 }
 
 .good {
-    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
 }
 
 .satisfied {
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
 }
 
 .disappointed {
-    background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
-}
-
-@media (max-width: 380px){
-    .donut__content {
-        width: 100px;
-    }
-
-    .donut__caption {
-        margin-left: 15px;
-        margin-top: 15px;
-    }
+  background: linear-gradient(180deg, #919191 0%, #3d4975 100%);
 }

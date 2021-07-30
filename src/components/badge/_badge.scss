@@ -1,76 +1,76 @@
 .badge {
-    width: 280px;
-    height: 69px;
-    @include isFlex($direction: column);
+  width: 280px;
+  height: 69px;
+  @include isFlex($direction: column);
 }
 
 .badge + .badge {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .badge__info {
-    height: 50px;
-    @include isFlex($justify: start);
+  height: 50px;
+  @include isFlex($justify: start);
 }
 
 .badge__info > .info__description {
-    margin-top: -1px;
+  margin-top: -1px;
 }
 
 .badge__info > .maretialIcon {
-    margin-top: -1px;
+  margin-top: -1px;
 }
 
 .maretialIcon {
-    font-family: $MaterialIcons;
-    position: relative;
-    width: 48px;
-    height: 48px;
-    font-size: 48px;
-    line-height: 48px;
-    margin-right: 10px;
-    align-items: center;
-    text-align: center;
-    background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-    /* Support for all WebKit browsers. */
-    -webkit-font-smoothing: antialiased;
-    /* Support for Safari and Chrome. */
-    text-rendering: optimizeLegibility;
-    /* Support for Firefox. */
-    -moz-osx-font-smoothing: grayscale;
-    /* Support for IE. */
-    font-feature-settings: 'liga';
+  font-family: $MaterialIcons;
+  position: relative;
+  width: 48px;
+  height: 48px;
+  font-size: 48px;
+  line-height: 48px;
+  margin-right: 10px;
+  align-items: center;
+  text-align: center;
+  background-image: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: "liga";
 }
 
 .info__description {
-    height: 47px;
-    width: 200px;
+  height: 47px;
+  width: 200px;
 }
 .info__main {
-    font-family: $Montserrat;
-    font-size: 14px;
-    //line-height: 24.5px;
-    line-height: 25px;
-    font-weight: 700;
-    letter-spacing: .001em;
+  font-family: $Montserrat;
+  font-size: 14px;
+  //line-height: 24.5px;
+  line-height: 25px;
+  font-weight: 700;
+  letter-spacing: 0.001em;
 }
 
 .info__additional {
-    font-family: $Montserrat;
-    font-size: 14px;
-    //line-height: 24.5px;
-    line-height: 22px;
-    font-weight: 400;
-    letter-spacing: 0.001em;
-    margin-top: 0.5px;
+  font-family: $Montserrat;
+  font-size: 14px;
+  //line-height: 24.5px;
+  line-height: 22px;
+  font-weight: 400;
+  letter-spacing: 0.001em;
+  margin-top: 0.5px;
 }
 
 .badge__underline {
-    height: 1px;
-    width: 280px;
-    background-color: $darkShadeFew;
+  height: 1px;
+  width: 280px;
+  background-color: $darkShadeFew;
 }
 

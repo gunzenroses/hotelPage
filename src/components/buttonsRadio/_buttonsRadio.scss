@@ -1,89 +1,86 @@
 .radio__box {
-    //height: 54px;
-    height: 53px;
-    width: 220px;
-    line-height: normal;
-    @include isFlex($direction: column);
+  //height: 54px;
+  height: 53px;
+  width: 220px;
+  line-height: normal;
+  @include isFlex($direction: column);
 }
 
 .radio__box .label {
-    letter-spacing: -.01em;
+  letter-spacing: -0.01em;
 }
 
 .radio__row {
-    @include isFlex($justify: flex-start);
-    width: 220px;
-    height: 24px;
+  @include isFlex($justify: flex-start);
+  width: 220px;
+  height: 24px;
+
+  @media (max-width: 450px) {
+    margin: 0 auto;
+  }
 }
 
 .radio__element {
-    width: 103px;
-    height: 24px;
-    @include isFlex;
-    font-weight: 400;
-    font-size: 14px;
-    text-transform: none;
-        letter-spacing: -.002em;
+  width: 103px;
+  height: 24px;
+  @include isFlex;
+  font-weight: 400;
+  font-size: 14px;
+  text-transform: none;
+  letter-spacing: -0.002em;
 }
 
 .radio__element + .radio__element {
-    margin-left: 15px;
+  margin-left: 15px;
 }
 
 .radio__real {
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    appearance: none;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  appearance: none;
 }
 
 .radio__fake {
-    position: relative;
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-    border: 1px solid $darkShadeLess;
-    border-radius: 50%;
-    background-color: transparent;
-
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border: 1px solid $darkShadeLess;
+  border-radius: 50%;
+  background-color: transparent;
 }
 
 .radio__title {
-    display: inline-block;
-    width: 73px;
-    line-height: 19px;
-    letter-spacing: 0.005em;
-    height: 100%;
-    color: $darkShadeMiddle;
-    //vertical-align: middle;
+  display: inline-block;
+  width: 73px;
+  line-height: 19px;
+  letter-spacing: 0.005em;
+  height: 100%;
+  color: $darkShadeMiddle;
+  //vertical-align: middle;
 }
 
 .radio__real:checked + .radio__fake::before {
-    content: "";
-    position: absolute;
-    display: block;
-    height: 12px;
-    width: 12px;
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    border-radius: 50%;
-    top: 3px;
-    left: 3px;
+  content: "";
+  position: absolute;
+  display: block;
+  height: 12px;
+  width: 12px;
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  border-radius: 50%;
+  top: 3px;
+  left: 3px;
 }
 
 .radio__real:checked ~ .radio__fake {
-    @extend .radio__fake;
-    border-color: $purple;
+  @extend .radio__fake;
+  border-color: $purple;
 }
 
 .radio__real:checked ~ .radio__title {
-    @extend .radio__title;
-    color: $darkShadeMore;
-}
-
-@media (max-width: 450px){
-    .radio_row {
-        margin: 0 auto;
-    }
+  @extend .radio__title;
+  color: $darkShadeMore;
 }

@@ -1,17 +1,17 @@
 mixin checkboxButtons (labelText, checkboxName="house-rules")
-    .widget
-        h3(class="label")= labelText 
-        .buttons-checkbox
-            +checkboxItem("smoking_allowed", checkboxName, false, "Можно курить")
-            +checkboxItem("pets_allowed", checkboxName, true, "Можно с питомцами")
-            +checkboxItem("guests_allowed", checkboxName, true, "Можно пригласить гостей (до 10 человек)")
+  .widget
+    h3(class="label")= labelText 
+    .buttons-checkbox
+      +checkboxItem("smoking_allowed", checkboxName, false, "Можно курить")
+      +checkboxItem("pets_allowed", checkboxName, true, "Можно с питомцами")
+      +checkboxItem("guests_allowed", checkboxName, true, "Можно пригласить гостей (до 10 человек)")
 
 
 mixin checkboxItem(valueText, inputName, ifChecked, checkboxTitle)
-    label.checkbox 
-        input(type="checkbox" value=valueText name=inputName checked=ifChecked).checkbox__real
-        span.checkbox__fake
-        span(class="checkbox__title")= checkboxTitle
+  label.checkbox 
+    input(type="checkbox" value=valueText name=inputName checked=ifChecked).checkbox__real
+    span.checkbox__fake
+    span(class="checkbox__title")= checkboxTitle
 
 
 //- .widget

@@ -1,70 +1,72 @@
 .textfield {
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    height: 44px;
-    border: 1px solid $darkShadeLess;
-    background: transparent;
-    border-radius: 4px;
-    padding: 0 1px 1px 12px;
-    color: $darkShadeMore;
-    letter-spacing: -0.01em;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 44px;
+  border: 1px solid $darkShadeLess;
+  background: transparent;
+  border-radius: 4px;
+  padding: 0 1px 1px 12px;
+  color: $darkShadeMore;
+  letter-spacing: -0.01em;
 
-    &:hover,
-    &:focus {
-        border: 1px solid $darkShadeMiddle;
-    }
+  &:hover,
+  &:focus {
+    border: 1px solid $darkShadeMiddle;
+  }
+
+  @media (max-width: 450px) {
+    margin: 0 auto;
+    width: 100%;
+    min-width: 280px;
+  }
 }
 
 .textfield > input {
-    letter-spacing: -0.01em;
+  letter-spacing: -0.01em;
 }
 
 .label_none {
-    display: none;
+  display: none;
 }
 
-
 .textfield_birthday {
-    @extend .textfield;
-    text-transform: uppercase;
-    white-space: nowrap;
-    &:hover,
-    &:focus {
-        border: 1px solid $darkShadeMiddle;
-    }
+  @extend .textfield;
+  text-transform: uppercase;
+  white-space: nowrap;
+  &:hover,
+  &:focus {
+    border: 1px solid $darkShadeMiddle;
+  }
 }
 
 .textfield_login {
+  width: 100%;
+  height: 98px;
+  @include isFlex($direction: column);
+
+  @media (max-width: 450px) {
+    margin: 0 auto;
     width: 100%;
-    height: 98px;
-    @include isFlex($direction: column)
+    min-width: 280px;
+  }
 }
 
 .arrow_submit {
-    width: 44px;
-    height: 44px;
-    border: none;
-    font-family: $MaterialIcons;
-    line-height: 44px;
-    text-align: center;
-    font-size: 24px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-}
-
-@media (max-width: 450px){
-    .textfield_login,
-    .textfield {
-        margin: 0 auto;
-        width: 100%;
-        min-width: 280px;
-    }
+  width: 44px;
+  height: 44px;
+  border: none;
+  font-family: $MaterialIcons;
+  line-height: 44px;
+  text-align: center;
+  font-size: 24px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-image: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
 }
