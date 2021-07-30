@@ -18,15 +18,15 @@ html(lang="ru")
       meta(name="description" content=description)
       meta(name="keywords", content=keywords)
       meta(name="author" content="gunzenroses")
+
+    block manifestBrowserconfig
+      //- link(rel="manifest" type="application/manifest+json" href="manifest.webmanifest" crossorigin="use-credentials")
+
+      //- fallback
+      meta(name="msapplication-config" content="browserconfig.xml")
       meta(name="msapplication-TileColor" content="#ffffff")
       meta(name="msapplication-TileImage" content="/ms-icon-144x144.png")
       meta(name="theme-color" content="#ffffff")
-    
-    //- Title
-    block title
-      title #{title}
-
-    block links
       link(rel="apple-touch-icon" sizes="57x57" href="/assets/images/favicons/apple-icon-57x57.png")
       link(rel="apple-touch-icon" sizes="60x60" href="/assets/images/favicons/apple-icon-60x60.png")
       link(rel="apple-touch-icon" sizes="72x72" href="/assets/images/favicons/apple-icon-72x72.png")
@@ -40,9 +40,10 @@ html(lang="ru")
       link(rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon-32x32.png")
       link(rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicons/favicon-96x96.png")
       link(rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicons/favicon-16x16.png")
-
-    block manifestBrowserconfig
-      link(rel="manifest" href="/manifest.json")
+      link(rel="icon" type="image/svg+xml" href="/src/assets/images/favicons/pinned-tab.svg")
+    //- Title
+    block title
+      title #{title}
 
   body
     
