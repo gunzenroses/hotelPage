@@ -18,7 +18,7 @@ class DropdownRooms {
     createChildren(){
         this.info = this.container.querySelector(".dropdown__info");
         this.infoInput = this.container.querySelector(".dropdown__input");
-        this.dropdownItems = this.container.querySelectorAll(".dropdown__expandedItem");
+        this.dropdownItems = this.container.querySelectorAll(".dropdown__item_expanded");
         this.dropdownPluses = this.container.querySelectorAll(".dropdown__plus");
         this.dropdownMinuses = this.container.querySelectorAll(".dropdown__minus");
         this.numbers = this.container.querySelectorAll(".dropdown__number");

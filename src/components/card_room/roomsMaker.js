@@ -1,8 +1,8 @@
 class roomsMaker{
     constructor(data){
         this.data = data
-        this.roomsContainer = document.querySelector(".searchRoom__result");
-        this.paginationContainer = this.roomsContainer.parentElement.querySelector(".searchRoom__pagination")
+        this.roomsContainer = document.querySelector(".search-room__result");
+        this.paginationContainer = this.roomsContainer.parentElement.querySelector(".search-room__pagination")
         this.currentData = []
         this.init()
     }
@@ -52,42 +52,42 @@ class roomsMaker{
                 this.roomsContainer.innerHTML += 
                 `
                     <li class="card__room">
-                        <article class="roomCarousel">
-                            <div class="roomCarousel__radio">
-                                <label class="roomCarousel__element">
-                                    <input class="roomCarousel__radio_real" type="radio" checked="checked" name="room ${data.number}" value="picture_1"/>
-                                    <div class="roomCarousel__radio_fake"></div>
+                        <article class="room-carousel">
+                            <div class="room-carousel__radio">
+                                <label class="room-carousel__element">
+                                    <input class="room-carousel__radio_real" type="radio" checked="checked" name="room ${data.number}" value="picture_1"/>
+                                    <div class="room-carousel__radio_fake"></div>
                                 </label>
-                                <label class="roomCarousel__element">
-                                    <input class="roomCarousel__radio_real" type="radio" name="room ${data.number}" value="picture_2"/>
-                                    <div class="roomCarousel__radio_fake"></div>
+                                <label class="room-carousel__element">
+                                    <input class="room-carousel__radio_real" type="radio" name="room ${data.number}" value="picture_2"/>
+                                    <div class="room-carousel__radio_fake"></div>
                                 </label>
-                                <label class="roomCarousel__element">
-                                    <input class="roomCarousel__radio_real" type="radio" name="room ${data.number}" value="picture_3"/>
-                                    <div class="roomCarousel__radio_fake"></div>
+                                <label class="room-carousel__element">
+                                    <input class="room-carousel__radio_real" type="radio" name="room ${data.number}" value="picture_3"/>
+                                    <div class="room-carousel__radio_fake"></div>
                                 </label>
-                                <label class="roomCarousel__element">
-                                    <input class="roomCarousel__radio_real" type="radio" name="room ${data.number}" value="picture_4"/>
-                                    <div class="roomCarousel__radio_fake"></div>
+                                <label class="room-carousel__element">
+                                    <input class="room-carousel__radio_real" type="radio" name="room ${data.number}" value="picture_4"/>
+                                    <div class="room-carousel__radio_fake"></div>
                                 </label>
                             </div>
-                            <div class="roomCarousel__pictures">
-                                <div class="roomCarousel__pic">
+                            <div class="room-carousel__pictures">
+                                <div class="room-carousel__pic">
                                     <img src=${data.src[1]} alt="room pictures">
                                 </div>
-                                <div class="roomCarousel__pic">
+                                <div class="room-carousel__pic">
                                     <img src=${data.src[2]} alt="room pictures">
                                 </div>
-                                <div class="roomCarousel__pic">
+                                <div class="room-carousel__pic">
                                     <img src=${data.src[3]} alt="room pictures">
                                 </div>
-                                <div class="roomCarousel__pic">
+                                <div class="room-carousel__pic">
                                     <img src=${data.src[4]} alt="room pictures">
                                 </div>
                             </div>
-                            <div class="roomCarousel__btn">
-                                <div class="roomCarousel__btn_prev"></div>
-                                <div class="roomCarousel__btn_next"></div>
+                            <div class="room-carousel__btn">
+                                <div class="room-carousel__btn_prev"></div>
+                                <div class="room-carousel__btn_next"></div>
                             </div>
                         </article>
                         <article class="room__info">
@@ -104,7 +104,7 @@ class roomsMaker{
                             </section>
                             <span class="room__line"></span>
                             <section class="booking__row_small">
-                                <div class="buttonRate">
+                                <div class="button-rate">
                                     <label class="input_label" for="star5-${data.number}"></label>
                                     <input class="input_rate" type="radio" id="star5-${data.number}" name="rating${data.number}" checked=${data.rating[0]} value="5">
                                     <label class="input_label" for="star4-${data.number}"></label>

@@ -23,7 +23,7 @@ class DropdownGuests {
     createChildren(){
         this.info = this.container.querySelector(".dropdown__info");
         this.infoInput = this.container.querySelector(".dropdown__input");
-        this.dropdownItems = this.container.querySelectorAll(".dropdown__expandedItem");
+        this.dropdownItems = this.container.querySelectorAll(".dropdown__item_expanded");
         this.dropdownMinuses = this.container.querySelectorAll(".dropdown__minus");
         this.containerClassExpanded = "." + this.containerClass;
         this.resetButton = this.dropdownExpanded.querySelector(".dropdown__button_reset");

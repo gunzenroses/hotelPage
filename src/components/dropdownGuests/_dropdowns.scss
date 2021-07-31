@@ -86,7 +86,7 @@
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
 }
 
-.dropdown__expandedItem {
+.dropdown__item_expanded {
   font-size: $fs_h3;
   text-transform: uppercase;
   display: flex;
@@ -109,7 +109,7 @@
   // padding-right: 6px;
   // padding-top: 3px;
   // height: 39px;
-  @extend .dropdown__expandedItem;
+  @extend .dropdown__item_expanded;
   flex-direction: row-reverse;
   justify-content: space-between;
   margin-top: 12px;
@@ -252,6 +252,6 @@
 
 // }
 
-.dropdown__rooms > .dropdown__expandedItem:last-of-type {
+.dropdown__rooms > .dropdown__item_expanded:last-of-type {
   margin-bottom: 3px;
 }

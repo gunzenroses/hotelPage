@@ -23,8 +23,8 @@ class renderCalendar {
     createChildren(){
             // this.daysList = this.daysOfMonth.querySelectorAll(".weeks__day");
             // this.listOfDays = Array.prototype.slice.call(this.daysList);
-        if (this.calendarContainer.closest(".dateRange__selector")){
-            this.mainContainer = this.calendarContainer.closest(".dateRange__selector");
+        if (this.calendarContainer.closest(".date-range__selector")){
+            this.mainContainer = this.calendarContainer.closest(".date-range__selector");
         } else {
             this.mainContainer = this.calendarContainer;
         }
