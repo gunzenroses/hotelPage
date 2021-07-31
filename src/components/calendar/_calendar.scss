@@ -2,7 +2,7 @@
   @include containerDimed();
   border: 1px solid rgba(31, 32, 65, 0.25);
   width: 320px;
-  height: 369px;
+  min-height: 369px;
   background: $light;
   display: flex;
   flex-direction: column;
@@ -81,7 +81,7 @@
 
 .calendar__weeks {
   width: 280px;
-  height: 240px;
+  min-height: 240px;
   margin: 9px auto 0;
   display: flex;
   flex-direction: column;
