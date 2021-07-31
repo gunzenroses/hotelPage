@@ -1,5 +1,4 @@
-let dataValitadion = function (elm) {
-
+export default dataValitadion = function (elm) {
     elm.addEventListener('blur', function(e){
         let inputContainer = elm.parentNode;  // to get from input to its div container
         let rule = elm.name;
@@ -24,7 +23,6 @@ let dataValitadion = function (elm) {
                 message = "Введите валидный пароль";
             break;
         }
-
         if (!check && value!="") {
             inputContainer.nextElementSibling.textContent = message;
         }
@@ -33,5 +31,3 @@ let dataValitadion = function (elm) {
         }
     })
 }
-
-module.exports = dataValitadion

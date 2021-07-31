@@ -18,34 +18,34 @@
 /*
     FormElements
 */
-@import "./components/textField/textField";
-@import "./components/checkboxExpandable/checkboxExpandable";
-@import "./components/dateRangeDropdown/dateRangeDropdown";
-@import "./components/calendar/calendar";
-@import "./components/buttonsCheckbox/buttonsCheckbox";
-@import "./components/buttonsRadio/buttonsRadio";
-@import "./components/buttonToggle/buttonToggle";
-@import "./components/buttonLike/buttonLike";
-@import "./components/buttonRate/buttonRate";
-@import "./components/range/range.scss";
-@import "./components//button/button.scss";
-@import "./components/pagination/pagination.scss";
-@import "./components/bulletCheckbox/bulletCheckbox";
-@import "./components/badge/badge";
-@import "./components/comment/comment";
-@import "./components/roomCarousel/roomCarousel";
-@import "./components/header/header";
-@import "./components/footer/footer";
-@import "./components/footer/footerCreative";
-@import "./components/dropdownGuests/dropdowns";
-@import "./components/carousel_background/carousel_background";
+@import "Components/textField/textField";
+@import "Components/checkboxExpandable/checkboxExpandable";
+@import "Components/dateRangeDropdown/dateRangeDropdown";
+@import "Components/calendar/calendar";
+@import "Components/buttonsCheckbox/buttonsCheckbox";
+@import "Components/buttonsRadio/buttonsRadio";
+@import "Components/buttonToggle/buttonToggle";
+@import "Components/buttonLike/buttonLike";
+@import "Components/buttonRate/buttonRate";
+@import "Components/range/range.scss";
+@import "Components/button/button.scss";
+@import "Components/pagination/pagination.scss";
+@import "Components/bulletCheckbox/bulletCheckbox";
+@import "Components/badge/badge";
+@import "Components/comment/comment";
+@import "Components/roomCarousel/roomCarousel";
+@import "Components/header/header";
+@import "Components/footer/footer";
+@import "Components/footer/footerCreative";
+@import "Components/dropdownGuests/dropdowns";
+@import "Components/carousel_background/carousel_background";
 
 /*
     Cards
 */
-@import "./components/card_search/card_search";
-@import "./components/card_registration/card_registration";
-@import "./components/card_booking/card_booking";
-@import "./components/card_singin/card_signin";
-@import "./components/card_room/card_room";
-@import "./pages/UIKit/cards/cards";
+@import "Components/card_search/card_search";
+@import "Components/card_registration/card_registration";
+@import "Components/card_booking/card_booking";
+@import "Components/card_singin/card_signin";
+@import "Components/card_room/card_room";
+@import "Pages/UIKit/cards/cards";

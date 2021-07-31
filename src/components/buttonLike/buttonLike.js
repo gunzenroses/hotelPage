@@ -1,4 +1,4 @@
-class likeButtons {
+export default class likeButtons {
     constructor(containerId, data){
         this.likeButton = document.getElementById(containerId)
         this.data = parseInt(data,10)
@@ -44,5 +44,3 @@ class likeButtons {
         return this;
     }
 }
-
-export { likeButtons }

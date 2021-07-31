@@ -1,5 +1,5 @@
-let maskDate = require('./datasetMaskDate')
-let dataValitadion = require('./datasetValidation')
+import maskDate from 'Components/textField/datasetMaskDate'
+import dataValitadion  from 'Components/textField/datasetValidation'
 
 let inputToValidate = document.querySelectorAll('input[data-rule]');
 

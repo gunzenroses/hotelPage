@@ -1,29 +1,28 @@
 import "./UIkit.scss"
 import "./UIKit.pug"
-import { likeButtons } from "../../components/buttonLike/buttonLike"
-import { paginationData_1 } from "../../assets/scripts/myData"
-import { ButtonPagination } from "../../components/pagination/pagination"
+import likeButtons from "Components/buttonLike/buttonLike"
+import paginationData_1 from "Scripts/myData"
+import ButtonPagination from "Components/pagination/pagination"
 
-import { DropdownGuests } from "../../components/dropdownGuests/dropdownGuests"
-import { guestsData_1, guestsData_booking } from "../../assets/scripts/myData"
+import DropdownGuests from "Components/dropdownGuests/dropdownGuests"
+import { guestsData_1, guestsData_booking } from "Scripts/myData"
 
-import { DropdownRooms } from "../../components/dropdownRooms/dropdownRooms"
-import { roomsData_1, roomsData_2 } from "../../assets/scripts/myData"
-
-import { renderCalendar } from "../../components/calendar/calendar"
+import DropdownRooms from "Components/dropdownRooms/dropdownRooms"
+import { roomsData_1, roomsData_2 } from "Scripts/myData"
+import renderCalendar from "Components/calendar/calendar"
 
 
 
 window.onload = function () {
-    require("../../components/textField/datasetHandler");
-    require("../../components/checkboxExpandable/checkboxExpandable");
-    require("../../components/roomCarousel/roomCarousel");
+    require("Components/textField/datasetHandler");
+    require("Components/checkboxExpandable/checkboxExpandable");
+    require("Components/roomCarousel/roomCarousel");
     
     //for formElements
     let likeButton_1 = new likeButtons("buttonLike_1", 2);
     let likeButton_2 = new likeButtons("buttonLike_2", 12);
     let likeButtons_3 = new likeButtons("likes_author_1", 12);
-    require("../../components/range/range");
+    require("Components/range/range");
 
     let pagination_formElements = new ButtonPagination(paginationData_1, "pagination_bar_1");
     
@@ -38,7 +37,7 @@ window.onload = function () {
     let calendar_2 = new renderCalendar("calendar_2");
     
     // for cards
-    require("../../components/card_search/card_search");
-    require("../../components/card_booking/card_booking");
+    require("Components/card_search/card_search");
+    require("Components/card_booking/card_booking");
     let calendar_simple = new renderCalendar("calendar_simple")
 }

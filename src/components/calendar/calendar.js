@@ -1,4 +1,4 @@
-class renderCalendar {
+export default class renderCalendar {
     constructor(calendarId){
         this.calendarContainer = document.getElementById(calendarId)
         this.date = new Date()
@@ -385,5 +385,3 @@ class renderCalendar {
         return this;
     }
 }
-
-export { renderCalendar }

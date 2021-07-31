@@ -1,4 +1,4 @@
-class roomsMaker{
+export default class roomsMaker{
     constructor(data){
         this.data = data
         this.roomsContainer = document.querySelector(".search-room__result");
@@ -127,9 +127,5 @@ class roomsMaker{
                 `
             )
         })
-
-
     }
 }
-
-export { roomsMaker }

@@ -1,4 +1,4 @@
-class DropdownGuests {
+export default class DropdownGuests {
     constructor(containerId, data){
         this.container = document.getElementById(containerId)
         this.containerClass = this.container.classList.value
@@ -163,5 +163,3 @@ class DropdownGuests {
         return this;
     }
 }
-
-export { DropdownGuests }

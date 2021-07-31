@@ -1,4 +1,4 @@
-class ButtonPagination {
+export default class ButtonPagination {
     constructor(data, containerId){
         this.data = data
         this.paginationContainer = document.getElementById(containerId)
@@ -126,5 +126,3 @@ class ButtonPagination {
         return this;
     }
 }
-
-export { ButtonPagination }

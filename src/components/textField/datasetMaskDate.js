@@ -1,5 +1,4 @@
-let maskDate = function (elm) {
-
+export default maskDate = function (elm) {
     elm.addEventListener('keypress', function(e) {
         //keyCodes for numbers only
         if(e.keyCode < 47 || e.keyCode > 57) {
@@ -27,5 +26,3 @@ let maskDate = function (elm) {
         }
     })
 }
-
-module.exports = maskDate;
