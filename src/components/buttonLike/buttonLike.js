@@ -14,8 +14,8 @@ class likeButtons {
     }
 
     createChildren(){
-        this.number = this.likeButton.querySelector('.buttonLike__number');
-        this.heart = this.likeButton.querySelector('.buttonLike__heart');
+        this.number = this.likeButton.querySelector('.button-like__number');
+        this.heart = this.likeButton.querySelector('.button-like__heart');
         return this;
     }
     
@@ -38,8 +38,8 @@ class likeButtons {
     render(){
         this.number.textContent = this.data;
         if (parseInt(this.number.textContent) > 9){
-            this.likeButton.classList.add("buttonLike_popular");
-            this.heart.classList.add("buttonLike__heart_popular");
+            this.likeButton.classList.add("button-like_popular");
+            this.heart.classList.add("button-like__heart_popular");
         }
         return this;
     }
