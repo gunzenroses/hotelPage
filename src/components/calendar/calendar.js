@@ -236,7 +236,7 @@ class renderCalendar {
         this.prevMonthDays = (this.dayOfWeekFirst === 0) ? 6 : (this.dayOfWeekFirst - 1);
         this.dayOfWeekLast = new Date(this.year, parseInt(this.month) + 1, 0).getDay();
         this.nextMonthDay = (this.dayOfWeekLast === 0) ? 6 : (this.dayOfWeekLast - 1);
-        this.daysLeft = 7 - this.dayOfWeekLast;
+        this.daysLeft = (this.dayOfWeekLast === 0) ? 0 : (7 - this.dayOfWeekLast);
         this.dateInCalendar.textContent = `${this.months[this.month]} ${this.year}`;
 
         
