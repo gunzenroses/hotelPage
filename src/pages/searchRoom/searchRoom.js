@@ -1,5 +1,6 @@
 import "./searchRoom.scss"
 //import { Range } from "../../components/range/range"
+import { renderCalendar } from "../../components/calendar/calendar";
 import { DropdownRooms } from "../../components/dropdownRooms/dropdownRooms"
 import { roomsData_1 } from "../../assets/scripts/myData"
 
@@ -13,6 +14,9 @@ window.onload = function(){
     require("../../components/textField/datasetHandler");
     require("../../components/checkboxExpandable/checkboxExpandable");
     require("../../components/range/range");
+
+
+    let calendar_booking = new renderCalendar("calendar_search");
 
     // require("../../components/card_search/card_search");
     let guests_searchRoom = new DropdownGuests("dropdown_guests_search", guestsData_searchRoom);
