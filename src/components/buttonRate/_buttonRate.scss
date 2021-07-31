@@ -1,44 +1,8 @@
-.container_button-rate {
-  width: 260px;
-  height: 55px;
-  @include isFlex($direction: column);
-  margin-top: 40px;
-}
-
-// .button-rate {
-//     display: block;
-//     width: 120px;
-//     height: 24px;
-//     //- size of starts depend on font-size
-//     font-size: 24px;
-//     direction: rtl;
-// }
-
-// .input_rate {
-//     display: none;
-// }
-
-// .input_label {
-//     width: 24px;
-//     height: 24px;
-//     color: #BC9CFF;
-//     background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-//     color: transparent;
-//     background-clip: text;
-// }
-
-// .button-rate > .input_label:before {
-//     content: "\2606";
-// }
-
-// .button-rate > .input_rate:checked ~ .input_label:before,
-// .button-rate > .input_rate:checked + .input_label:before {
-//     content: "\2605";
-// }
-
-// .button-rate > .input_rate:hover ~ .input_label:before,
-// .button-rate > .input_rate:hover + .input_label:before {
-//     content: "\2605";
+// .container_button-rate {
+//   width: 260px;
+//   height: 55px;
+//   @include isFlex($direction: column);
+//   margin-top: 40px;
 // }
 
 .button-rate {
@@ -66,12 +30,12 @@
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
-}
 
-.input_label::before {
-  width: 24px;
-  height: 24px;
-  content: "☆";
+  &::before {
+    width: 24px;
+    height: 24px;
+    content: "☆";
+  }
 }
 
 input:checked ~ .input_label::before,

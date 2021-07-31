@@ -21,8 +21,6 @@ export default class renderCalendar {
     }
 
     createChildren(){
-            // this.daysList = this.daysOfMonth.querySelectorAll(".weeks__day");
-            // this.listOfDays = Array.prototype.slice.call(this.daysList);
         if (this.calendarContainer.closest(".date-range__selector")){
             this.mainContainer = this.calendarContainer.closest(".date-range__selector");
         } else {
@@ -88,13 +86,6 @@ export default class renderCalendar {
                 {
                     this.checkin = "";
                     this.checkout = "";
-                                            // if (this.daysOfMonth.querySelector(".weeks__day_checkin")){
-                                            //     this.daysOfMonth.querySelector(".weeks__day_checkin").classList.remove("weeks__day_checkin");
-                                            // }
-                                            // if (this.daysOfMonth.querySelector(".weeks__day_checkout")){
-                                            //     this.daysOfMonth.querySelector(".weeks__day_checkout").classList.remove("weeks__day_checkout");
-                                            // }
-                                            // event.target.classList.add("weeks__day_checkin");
                     this.checkin = new Date(this.year, this.month, +event.target.innerText);
                     this.render()
                 } 
@@ -116,10 +107,6 @@ export default class renderCalendar {
                     )
                 {
                     this.checkin = "";
-                                            // if (this.daysOfMonth.querySelector(".weeks__day_checkin")){
-                                            //     this.daysOfMonth.querySelector(".weeks__day_checkin").classList.remove("weeks__day_checkin");
-                                            // }
-                                            // event.target.classList.add("weeks__day_checkin");
                     this.checkin = new Date(this.year, this.month, +event.target.innerText);
                     this.render()
                 } 
@@ -138,7 +125,6 @@ export default class renderCalendar {
                                 )
                         )
                 {
-                    // event.target.classList.add("weeks__day_checkout");
                     this.checkout = new Date(this.year, this.month, +event.target.innerText);
                     this.render()
                 } 
@@ -147,7 +133,6 @@ export default class renderCalendar {
                             !this.checkin && !this.checkout
                         )
                 {
-                                            // event.target.classList.add("weeks__day_checkin");
                     this.checkin = new Date(this.year, this.month, +event.target.innerText);
                     this.render()
                 }
@@ -249,13 +234,13 @@ export default class renderCalendar {
                 && this.checkin.getMonth() === (this.month - 1)
                 && this.checkin.getDate() === (this.lastDayPrev-p+1) 
                 ){
-                this.days+=`<div class="weeks__day weeks__day_prev weeks__day_prev_checkin ">${this.lastDayPrev-p+1}</div>`
+                this.days+=`<div class="weeks__day weeks__day_prev weeks__day_prev_checkedin ">${this.lastDayPrev-p+1}</div>`
             } else if (
                     this.checkout 
                     && this.checkout.getMonth() === (this.month - 1)
                     && this.checkout.getDate() === (this.lastDayPrev-p+1)  
                 ){
-                this.days+=`<div class="weeks__day weeks__day_prev weeks__day_prev_checkout ">${this.lastDayPrev-p+1}</div>`
+                this.days+=`<div class="weeks__day weeks__day_prev weeks__day_prev_checkedout ">${this.lastDayPrev-p+1}</div>`
             } else if 
                     (
                         (
@@ -276,7 +261,7 @@ export default class renderCalendar {
                             && this.checkout.getMonth() > (this.month - 1)
                         )
                     ){
-                this.days+=`<div class="weeks__day weeks__day_prev weeks__day_range_another">${this.lastDayPrev-p+1}</div>`
+                this.days+=`<div class="weeks__day weeks__day_prev weeks__day_ranged_another">${this.lastDayPrev-p+1}</div>`
             } else {
                 this.days+=`<div class="weeks__day weeks__day_prev">${this.lastDayPrev-p+1}</div>`
             }
@@ -291,21 +276,21 @@ export default class renderCalendar {
                 && this.checkin.getMonth() === this.month 
                 && this.checkin.getDate() === i
             ){
-                this.days += `<div class="weeks__day weeks__day_today weeks__day_checkin">${i}</div>`;
+                this.days += `<div class="weeks__day weeks__day_today weeks__day_checkedin">${i}</div>`;
             } else if (
                         this.checkin 
                         && this.month === this.checkin.getMonth()
                         && i === this.checkin.getDate()
                         )
             {
-                this.days += `<div class="weeks__day weeks__day_checkin">${i}</div>`;
+                this.days += `<div class="weeks__day weeks__day_checkedin">${i}</div>`;
             } else if (
                     this.checkout 
                     && this.month === this.checkout.getMonth()
                     && i === this.checkout.getDate()
                     )
             {   
-                this.days += `<div class="weeks__day weeks__day_checkout">${i}</div>`;
+                this.days += `<div class="weeks__day weeks__day_checkedout">${i}</div>`;
             } 
             else if (
                 i === new Date().getDate() 
@@ -348,7 +333,7 @@ export default class renderCalendar {
                         )
                 )
             {
-                this.days += `<div class="weeks__day weeks__day_range">${i}</div>`;
+                this.days += `<div class="weeks__day weeks__day_ranged">${i}</div>`;
             }
                 
             else {
@@ -359,24 +344,24 @@ export default class renderCalendar {
         // add days from next month
         for (let n=1;n<this.daysLeft+1;n++){
             if (
-                    this.checkin
+                    this.checkedin
                     && this.checkin.getMonth() === this.month + 1 
                     && this.checkin.getDate() === n
                 ){
-                    this.days += `<div class="weeks__day weeks__day_next weeks__day_next_checkin">${n}</div>`;
+                    this.days += `<div class="weeks__day weeks__day_next weeks__day_next_checkedin">${n}</div>`;
             } else if (
                 this.checkout
                 && this.checkout.getMonth() === this.month + 1 
                 && this.checkout.getDate() === n
                 ){
-                    this.days += `<div class="weeks__day weeks__day_next weeks__day_next_checkout">${n}</div>`;
+                    this.days += `<div class="weeks__day weeks__day_next weeks__day_next_checkedout">${n}</div>`;
             } else if 
                     (
                         this.checkin && this.checkout 
                         && (this.month + 1) > this.checkin.getMonth()
                         && (this.month + 1) <= this.checkout.getMonth()
                     ){
-                    this.days +=`<div class="weeks__day weeks__day_next weeks__day_range_another">${n}</div>`
+                    this.days +=`<div class="weeks__day weeks__day_next weeks__day_ranged_another">${n}</div>`
             } else {
                 this.days += `<div class="weeks__day weeks__day_next">${n}</div>`;
             }

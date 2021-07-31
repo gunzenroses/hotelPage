@@ -12,18 +12,18 @@
   @media (max-width: 400px) {
     max-width: 280px;
   }
-}
 
-.calendar__date {
-  height: 64px;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  //padding: 19px;
-  box-sizing: border-box;
-  padding: 20px 20px 22px 19px;
+  &__date {
+    height: 64px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    //padding: 19px;
+    box-sizing: border-box;
+    padding: 20px 20px 22px 19px;
+  }
 }
 
 .date__prev {
@@ -32,19 +32,19 @@
   line-height: 18px;
   position: relative;
   border-radius: 50%;
-}
 
-.date__prev:hover {
-  background-color: grey;
-}
+  &:hover {
+    background-color: grey;
+  }
 
-.date__prev::before {
-  content: "\e5c4";
-  position: absolute;
-  font-family: $MaterialIcons;
-  font-size: 24px;
-  top: 4px;
-  color: $purple;
+  &::before {
+    content: "\e5c4";
+    position: absolute;
+    font-family: $MaterialIcons;
+    font-size: 24px;
+    top: 4px;
+    color: $purple;
+  }
 }
 
 .date__next {
@@ -53,19 +53,19 @@
   line-height: 18px;
   position: relative;
   border-radius: 50%;
-}
 
-.date__next:hover {
-  background-color: grey;
-}
+  &:hover {
+    background-color: grey;
+  }
 
-.date__next::before {
-  content: "\e5c8";
-  position: absolute;
-  font-family: $MaterialIcons;
-  font-size: 24px;
-  top: 4px;
-  color: $purple;
+  &::before {
+    content: "\e5c8";
+    position: absolute;
+    font-family: $MaterialIcons;
+    font-size: 24px;
+    top: 4px;
+    color: $purple;
+  }
 }
 
 .date__month {
@@ -88,83 +88,85 @@
   justify-content: space-between;
 }
 
-.weeks__weekdays {
-  width: 280px;
-  height: 40px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  color: $purple;
-  align-items: center;
-  font-weight: 700;
-  font-size: 12px;
-  letter-spacing: -0.01em;
+.weeks {
+  &__weekdays {
+    width: 280px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: $purple;
+    align-items: center;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: -0.01em;
+  }
+
+  &__days {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 12px;
+    text-align: center;
+    line-height: 40px;
+    color: $darkShadeMiddle;
+  }
+
+  &__day {
+    width: 40px;
+    height: 40px;
+
+    &:hover {
+      border-radius: 50%;
+      border-color: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+      border-width: 2px;
+      border-style: solid;
+      box-sizing: border-box;
+    }
+
+    &_prev,
+    &_next {
+      color: $darkShadeLess;
+    }
+  }
 }
 
-.weeks__days {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  font-family: Montserrat;
-  font-weight: 400;
-  font-size: 12px;
-  text-align: center;
-  line-height: 40px;
-  color: $darkShadeMiddle;
-}
-
-.weeks__day {
-  width: 40px;
-  height: 40px;
-}
-.weeks__day:hover {
-  border-radius: 50%;
-  border-color: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-  border-width: 2px;
-  border-style: solid;
-  box-sizing: border-box;
-}
-
-.weeks__day_prev,
-.weeks__day_next {
-  color: $darkShadeLess;
-}
-
-.weeks__day_prev_checkin,
-.weeks__day_next_checkin,
-.weeks__day_prev_checkout,
-.weeks__day_next_checkout {
+.weeks__day_prev_checkedin,
+.weeks__day_next_checkedin,
+.weeks__day_prev_checkedout,
+.weeks__day_next_checkedout {
   color: $darkShadeLess;
   border-radius: 50%;
   background: $darkShadeFew;
   position: relative;
 }
 
-.weeks__day_prev_checkin::before,
-.weeks__day_next_checkin::before {
+.weeks__day_prev_checkedin::before,
+.weeks__day_next_checkedin::before,
+.weeks__day_prev_checkedout::before,
+.weeks__day_next_checkedout::before {
   content: "";
   width: 100%;
   height: 100%;
   display: block;
   position: absolute;
   top: 0;
-  right: 0;
-  z-index: -1;
-  border-radius: 50% 0 0 50%;
   background: $darkShadeFewer;
 }
 
-.weeks__day_prev_checkout::before,
-.weeks__day_next_checkout::before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  display: block;
-  position: absolute;
-  top: 0;
+.weeks__day_prev_checkedin::before,
+.weeks__day_next_checkedin::before {
+  right: 0;
+  z-index: -1;
+  border-radius: 50% 0 0 50%;
+}
+
+.weeks__day_prev_checkedout::before,
+.weeks__day_next_checkedout::before {
   left: 0;
   border-radius: 0 50% 50% 0;
-  background: $darkShadeFewer;
 }
 
 .weeks__day_today {
@@ -174,44 +176,44 @@
   font-weight: 700;
 }
 
-.weeks__day_range {
+.weeks__day_ranged {
   background: linear-gradient(
     180deg,
     rgba(188, 156, 255, 0.15) 0%,
     rgba(139, 164, 249, 0.15) 100%
   );
   position: relative;
+
+  &_another {
+    background: $darkShadeFewer;
+    color: $darkShadeLess;
+    position: relative;
+  }
 }
 
-.weeks__day_range_another {
-  background: $darkShadeFewer;
-  color: $darkShadeLess;
-  position: relative;
-}
-
-.weeks__day_checkout {
+.weeks__day_checkedout {
   border-radius: 50%;
   background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
   color: #fff;
   font-weight: 700;
   z-index: 2;
   position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    border-radius: 0 50% 50% 0;
+    opacity: 0.15;
+  }
 }
 
-.weeks__day_checkout::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-  border-radius: 0 50% 50% 0;
-  opacity: 0.15;
-}
-
-.weeks__day_checkin {
+.weeks__day_checkedin {
   border-radius: 50%;
   background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
   color: #fff;
@@ -219,19 +221,19 @@
   z-index: 2;
   position: relative;
   isolation: isolate;
-}
 
-.weeks__day_checkin::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-  border-radius: 50% 0 0 50%;
-  opacity: 0.15;
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    border-radius: 50% 0 0 50%;
+    opacity: 0.15;
+  }
 }
 
 .calendar__buttons {
@@ -241,15 +243,15 @@
   flex-direction: row;
   justify-content: space-between;
   color: $purple;
-}
 
-.calendar__buttons_reset,
-.calendar__buttons_submit {
-  font-family: Montserrat;
-  font-weight: 700;
-  font-size: 12px;
-  text-transform: uppercase;
-  color: #bc9cff;
+  &_reset,
+  &_submit {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #bc9cff;
+  }
 }
 
 .calendar__input {

@@ -1,5 +1,5 @@
 mixin calendar(calendarId)
-  - var weekdaysName = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"]
+  - var weekdaysNames = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"]
   div(class="calendar" id=calendarId)
     .calendar__date
       .date__prev
@@ -7,7 +7,7 @@ mixin calendar(calendarId)
       .date__next
     .calendar__weeks
       .weeks__weekdays
-        for day in weekdaysName
+        for day in weekdaysNames
           +weekdays(day)
       .weeks__days
     .calendar__buttons

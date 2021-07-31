@@ -1,5 +1,5 @@
 mixin buttonLikeContainer()
-  .container_button-like
+  .container__button-like
     h3.label like button
     .row
       +buttonLikeItem("buttonLike_1", 2)
@@ -14,28 +14,3 @@ mixin buttonLikeItem(buttonId, buttonNumber)
     .button-like(id=buttonId)
       .button-like__heart.button-like__heart_popular
       .button-like__number.button-like__number_popular!= buttonNumber
-
-
-//- option 2
-//- mixin buttonLikeItem(buttonId, buttonNumber)
-//-     .buttonLike(id=buttonId) 
-//-         .buttonLike__heart
-//-         .buttonLike__number!= buttonNumber
-//- mixin buttonLikePopularItem(buttonId, buttonNumber)
-//-     .buttonLike.buttonLike_popular(id=buttonId) 
-//-         .buttonLike__heart.buttonLike__heart_popular
-//-         .buttonLike__number.buttonLike__number_popular!= buttonNumber
-
-//- option 1
-//- .container_buttonLike
-//-     h3.label like button
-//-     .row
-//-         .buttonLike#buttonLike_1
-//-             .buttonLike__heart
-//-             .buttonLike__number
-//- .container_buttonLike
-//-     h3.label like button
-//-     .row
-//-         .buttonLike.buttonLike_popular#buttonLike_2
-//-             .buttonLike__heart.buttonLike__heart_popular
-//-             .buttonLike__number.buttonLike__number_popular

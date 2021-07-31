@@ -2,15 +2,21 @@
   width: 280px;
   height: 69px;
   @include isFlex($direction: column);
+
+  &__info {
+    height: 50px;
+    @include isFlex($justify: start);
+  }
+
+  &__underline {
+    height: 1px;
+    width: 280px;
+    background-color: $darkShadeFew;
+  }
 }
 
 .badge + .badge {
   margin-top: 20px;
-}
-
-.badge__info {
-  height: 50px;
-  @include isFlex($justify: start);
 }
 
 .badge__info > .info__description {
@@ -45,32 +51,28 @@
   font-feature-settings: "liga";
 }
 
-.info__description {
-  height: 47px;
-  width: 200px;
-}
-.info__main {
-  font-family: $Montserrat;
-  font-size: 14px;
-  //line-height: 24.5px;
-  line-height: 25px;
-  font-weight: 700;
-  letter-spacing: 0.001em;
-}
+.info {
+  &__description {
+    height: 47px;
+    width: 200px;
+  }
+  
+  &__main {
+    font-family: $Montserrat;
+    font-size: 14px;
+    //line-height: 24.5px;
+    line-height: 25px;
+    font-weight: 700;
+    letter-spacing: 0.001em;
+  }
 
-.info__additional {
-  font-family: $Montserrat;
-  font-size: 14px;
-  //line-height: 24.5px;
-  line-height: 22px;
-  font-weight: 400;
-  letter-spacing: 0.001em;
-  margin-top: 0.5px;
+  &__additional {
+    font-family: $Montserrat;
+    font-size: 14px;
+    //line-height: 24.5px;
+    line-height: 22px;
+    font-weight: 400;
+    letter-spacing: 0.001em;
+    margin-top: 0.5px;
+  }
 }
-
-.badge__underline {
-  height: 1px;
-  width: 280px;
-  background-color: $darkShadeFew;
-}
-

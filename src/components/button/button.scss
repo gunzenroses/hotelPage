@@ -70,6 +70,10 @@
   text-transform: uppercase;
   cursor: pointer;
 
+  &:hover {
+    opacity: 0.5;
+  }
+
   @media (max-width: 450px) {
     font-weight: 700;
     width: 74px;
@@ -77,28 +81,24 @@
     line-height: 44px;
     text-align: center;
   }
-}
 
-.button_filled:hover {
-  opacity: 0.5;
-}
-
-.button_filled_inner {
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  width: 95px;
-  height: 40px;
-  //line-height: 40px;
-  line-height: 38px;
-  border-radius: 22px;
-  background: $light;
-  color: $purple;
-
-  @media (max-width: 450px) {
-    width: 70px;
+  &_inner {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 95px;
     height: 40px;
-    line-height: 40px;
+    //line-height: 40px;
+    line-height: 38px;
+    border-radius: 22px;
+    background: $light;
+    color: $purple;
+
+    @media (max-width: 450px) {
+      width: 70px;
+      height: 40px;
+      line-height: 40px;
+    }
   }
 }
 
@@ -114,11 +114,11 @@
   min-width: 66px;
   height: 15px;
   text-transform: uppercase;
-}
 
-.button_clear:hover {
-  cursor: pointer;
-  color: $darkShadeMiddle;
+  &:hover {
+    cursor: pointer;
+    color: $darkShadeMiddle;
+  }
 }
 
 .button_clear + .button_clear {
@@ -140,19 +140,19 @@
   @media (max-width: 550px) {
     width: 56px;
   }
-}
 
-.button_link_inner {
-  @extend .button_filled_inner;
-  width: 83px;
-  height: 30px;
-  line-height: 30px;
-  letter-spacing: 0.01em;
+  &_inner {
+    @extend .button_filled_inner;
+    width: 83px;
+    height: 30px;
+    line-height: 30px;
+    letter-spacing: 0.01em;
 
-  @media (max-width: 550px) {
-    width: 52px;
-    font-size: 8px;
-    font-weight: 400;
+    @media (max-width: 550px) {
+      width: 52px;
+      font-size: 8px;
+      font-weight: 400;
+    }
   }
 }
 
@@ -173,6 +173,7 @@
   text-align: center;
   line-height: 34px;
   border-radius: 22px;
+  
   &:hover {
     cursor: pointer;
     opacity: 0.5;
@@ -193,7 +194,7 @@
   //padding-bottom: 2px;
   flex-shrink: 0;
   //padding: 14px 22px 15px 18px;
-  
+
   &::before {
     font-family: $MaterialIcons;
     -webkit-font-feature-settings: "liga" 1;
