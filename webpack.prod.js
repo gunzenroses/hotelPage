@@ -16,7 +16,7 @@ module.exports = merge(common, {
             {
                 test: /\.css$/,
                 use: [
-                    MiniCssExtractPlugin.loader,
+                    MiniCssExtractPlugin.loader,   // for parallel loading of CSS/JS resources later on
                     {
                         loader: "css-loader",
                         options: {
