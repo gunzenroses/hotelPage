@@ -30,6 +30,7 @@
   min-height: 51px;
   @include isFlex($justify: start);
   width: 100%;
+  pointer-events: none;
 }
 
 .comment__text {
