@@ -1,4 +1,5 @@
-import "./searchRoom.scss"
+import "./search-room.scss"
+
 //import { Range } from "Components/range/range"
 import renderCalendar from "Components/calendar/calendar";
 import DropdownRooms from "Components/dropdownRooms/dropdownRooms"
