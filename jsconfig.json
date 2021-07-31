@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "baseUrl": "./",
+    "paths": {
+      "Main/*": ["src/*"],
+      "Images/*": ["src/assets/images/*"],
+      "Fonts/*": ["src/assets/fonts/*"],
+      "Components/*": ["src/components/*"],
+      "Pages/*": ["src/pages/*"],
+      "Scripts/*": ["src/assets/scripts/*"],
+    }
+  },
+  "include": ["./src"],
+  "exclude": ["node_modules"]
+}

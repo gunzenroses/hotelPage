@@ -6,26 +6,30 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const plugins = require("./postcss.config");
 
 module.exports = {
-        context: path.resolve(__dirname, "./src"),
+        context: path.resolve(__dirname, ""),
         node: {
             __filename: true,
             __dirname: true,
         },
         entry: {
-            UIKit: "./pages/UIKit/UIKit.js",
-            landing_page: "./pages/landingPage/landingPage.js",
-            search_room: "./pages/searchRoom/searchRoom.js",
-            room_details: "./pages/roomDetails/roomDetails.js",
-            registration: "./pages/registration/registration.js",
-            signin: "./pages/signin/signin.js",
+            UIKit: "./src/pages/UIKit/UIKit.js",
+            landing_page: "./src/pages/landingPage/landingPage.js",
+            search_room: "./src/pages/searchRoom/searchRoom.js",
+            room_details: "./src/pages/roomDetails/roomDetails.js",
+            registration: "./src/pages/registration/registration.js",
+            signin: "./src/pages/signin/signin.js",
         },
         resolve: {
-            extensions: [".js"],
+            extensions: [".scss", ".sass", ".js"],
             alias: {
-                src: path.resolve(__dirname, "./src"),                  // Relative path of src
-                images: path.resolve(__dirname, "./src/assets/images"), // Relative path of images
-                fonts: path.resolve(__dirname, "./src/assets/fonts"),   // Relative path of fonts
+                Main: path.resolve(__dirname, "src"),
+                Images: path.resolve(__dirname, "src/assets/images/"), // Relative path of images
+                Fonts: path.resolve(__dirname, "src/assets/fonts/"),   // Relative path of fonts
+                Components: path.resolve(__dirname, "src/components/"),
+                Pages: path.resolve(__dirname, "src/pages/"),
+                Scripts: path.resolve(__dirname, "src/assets/scripts/"),
             },
+            modules: [path.resolve(__dirname, 'src'), 'node_modules'],
         },
         /*
             Loaders with configurations
@@ -71,8 +75,8 @@ module.exports = {
         plugins: [
             //new CleanWebpackPlugin(),
             new CopyWebpackPlugin([
-                {from: "assets/images", to: "assets/images"},
-                {from: "assets/fonts", to: "assets/fonts"},
+                {from: "src/assets/images", to: "assets/images"},
+                {from: "src/assets/fonts", to: "assets/fonts"},
             ]),
 
             /*

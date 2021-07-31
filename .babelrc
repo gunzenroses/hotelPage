@@ -7,11 +7,12 @@
       "module-resolver",
       {
         "alias": {
-          "src": "./src",
-          "styles": "./src/assets/styles",
-          "images": "./src/assets/images",
-          "videos": "./src/assets/videos",
-          "scripts": "./src/assets/scripts"
+          "Main": "./src/",
+          "Images": "./src/assets/images/",
+          "Fonts": "./src/assets/fonts/",
+          "Components": "./src/components/",
+          "Pages": ".src/pages/",
+          "Scripts": "./src/assets/scripts/"
         }
       }
     ]
