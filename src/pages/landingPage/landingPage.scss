@@ -5,102 +5,87 @@
 */
 
 .landing-page {
-    @include container($width: 1440px, $height: auto, $mt: 0, $mb: 0, $ms: auto);
-    @include isFlex($justify: flex-start, $direction: column);
-    min-width: 320px;
-    position: relative;
-    background: $light;
+  @include container($width: 1440px, $height: auto, $mt: 0, $mb: 0, $ms: auto);
+  @include isFlex($justify: flex-start, $direction: column);
+  min-width: 320px;
+  position: relative;
+  background: $light;
+
+  @media (max-width: 1440px) {
+    width: 100vw;
+    height: auto;
+  }
 }
 
 .landing-page__content {
-    @include isFlex($justify: flex-start, $direction: column);
-    position: relative;
+  @include isFlex($justify: flex-start, $direction: column);
+  position: relative;
+  width: 100%;
+  height: 830px;
+  margin: 0 auto;
+  min-width: 320px;
+
+  @media (max-width: 1440px) {
+    height: calc(830 / 1440 * 100vw);
+  }
+
+  @media (max-width: 970px) {
     width: 100%;
-    height: 830px;
-    margin: 0 auto;
-    min-width: 320px;
+    height: calc(830 / 1440 * 970px);
+  }
+
+  @media (max-width: 500px) {
+    width: 100%;
+    // carousel + card_search + text + initial top
+    height: calc(830 / 1440 * 100vw + 374px + 48px + 40px);
+    min-height: calc(683 / 1440 * 320px + 374px + 48px + 40px);
+  }
 }
 
 .landing-page__text {
-    position: absolute;
-    text-align: right;
-    line-height: 24px;
-    width: 270px;
-    height: 48px;
-    //right: 134px;
-    right: 133px;
-    bottom: 20px;
-    z-index: 2;
-    letter-spacing: 0.002em;
+  position: absolute;
+  text-align: right;
+  line-height: 24px;
+  width: 270px;
+  height: 48px;
+  //right: 134px;
+  right: 133px;
+  bottom: 20px;
+  z-index: 2;
+  letter-spacing: 0.002em;
+
+  @media (max-width: 500px) {
+    position: relative;
+    text-align: center;
+    margin: 20px auto;
+    right: 0;
+    bottom: 0;
+  }
 }
 
 .landing-page__card_search {
-    position: absolute;
-    top: 70px;
-    //left: 140px;
-    left: 141px;
-    z-index: 2;
+  position: absolute;
+  top: 70px;
+  //left: 140px;
+  left: 141px;
+  z-index: 2;
+
+  @media (max-width: 970px) {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @media (max-width: 500px) {
+    width: fit-content;
+    min-width: 320px;
+    position: relative;
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
 }
 
-.landing-page  > .footer_outer {
-    margin-top: -1px
-}
-
-/*
-    Flex for adaptive design
-*/
-
-@media (max-width: 1440px){
-    .landing-page {
-        width: 100vw;
-        height: auto;
-    }
-
-    .landing-page__content {
-        height: calc(830/1440 *100vw);
-    }
-} 
-
-@media (max-width: 970px){
-    .landing-page__card_search {
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .landing-page__content img,
-    .landing-page__content {
-        width: 100%;
-        height: calc(830/1440 * 970px);
-    }
-}
-
-@media (max-width: 500px){
-    .landing-page__content {
-        width: 100%;
-        // carousel + card_search + text + initial top
-        height: calc(830/1440 * 100vw + 374px + 48px + 40px);
-        min-height: calc(683/1440 * 320px + 374px + 48px + 40px);
-    }
-
-    .landing-page__text {
-        position: relative;
-        text-align: center;
-        margin: 20px auto;
-        right: 0;
-        bottom: 0;
-    }
-
-    .landing-page__card_search {
-        width: fit-content;
-        min-width: 320px;
-        position: relative;
-        margin: 0 auto;
-        top: 0;
-        left: 0;
-        transform: none;
-    }
-
-    .landing-page__content img {
-        height: auto;
-    }
+.landing-page > .footer_outer {
+  margin-top: -1px;
 }

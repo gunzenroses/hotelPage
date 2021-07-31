@@ -8,6 +8,16 @@
     display: block;
     overflow: auto; //to avoid margin-collapse
     background: $light;
+
+    @media (max-width: 1440px) {
+    width: 100vw;
+    height: auto;
+    }
+
+
+    @media (max-width: 850px) {
+              min-width: 320px;
+    }
 }
 
 .form-elements_outer::before {
@@ -20,18 +30,13 @@
     background-image: url(/assets/images/logo/logo.svg);
     background-size: 100%;
     background-position: center;
-}
 
-/*
-    Media query for Main container
-*/
-
-@media (max-width: 750px) {
-    .form-elements_outer::before {
-        top: 10px;
-        left: 10px;
+    @media (max-width: 750px) {
+          top: 10px;
+          left: 10px;
     }
 }
+
 
 /*
     Flex for adaptive design
@@ -44,17 +49,55 @@
     @include isFlex($wrap: wrap);
     min-width: 320px;
     background: white;
+
+    @media (max-width: 1440px) {
+    width: 85%;
+    max-width: 1160px;
+    margin: 9% auto 9%;
+    height: auto;
+    }
+
+    @media (max-width: 1250px) {
+              max-width: 890px;
+              margin: 7% auto 7%;
+              justify-content: space-evenly;
+    }
+
+    @media (max-width: 970px) {
+              width: 85%;
+              margin: 5% auto 5%;
+              justify-content: space-around;
+  }
+
+  @media (max-width: 850px) {
+            max-width: 575px;
+            justify-content: center;
+  }
+
+  
 }
 
 .form-elements__element_first {
     @include container($width: 320px, $height: 636px, $mt: 0, $mb: 93px);
     margin-right: 124px;
+
+    @media (max-width: 1440px) {
+      margin: 0;
+    }
+
+    @media (max-width: 850px) {
+          margin-bottom: 40px;
+    }
 }
 
 .form-elements__element_second {
     @include container($width: 260px, $height: 537px);
     margin-right: 127px;
     @include isFlex($direction: column, $justify: flex-start, $align: flex-start);
+
+    @media (max-width: 1440px) {
+      margin: 0;
+    }
 }
 
 .form-elements__element_second > div:first-of-type {
@@ -85,6 +128,14 @@
     @include container($width: 320px, $height: 503px);
     @include isFlex($direction: column, $align: flex-start, $justify: flex-start);
     margin-right: 2px;
+
+    @media (max-width: 1440px) {
+      margin: 0;
+    }
+
+    @media (max-width: 1250px) {
+        margin-top: 40px;
+    }
 }
 
 .form-elements__element_third > div:first-of-type {
@@ -109,6 +160,11 @@
     margin-left: -1px;
     margin-bottom: 36px;
     @include isFlex($direction: column, $justify: flex-start, $align: flex-start);
+
+    @media (max-width: 1440px) {
+      margin: 0;
+      margin-top: 40px;
+    }
 }
 
 .form-elements__element_forth > div:first-of-type {
@@ -126,6 +182,11 @@
     margin-right: 69px;
     margin-top: 2px;
     @include isFlex($direction: column, $align: flex-start, $justify: flex-start);
+
+    @media (max-width: 1440px) {
+      margin: 0;
+      margin-top: 40px;
+    }
 }
 
 .form-elements__element_fifth > div:nth-of-type(2){
@@ -136,6 +197,11 @@
     @include container($width: 320px, $height: 467px);
     margin-top: 2px;
     @include isFlex($direction: column, $align: flex-start, $justify: flex-start);
+
+    @media (max-width: 1440px) {
+      margin: 0;
+      margin-top: 40px;
+    }
 }
 
 .form-elements__element_sixth > div:nth-of-type(2) {
@@ -149,6 +215,11 @@
     margin-top: 1px;
     margin-left: -1px;
     @include isFlex($direction: column, $align: flex-start);
+
+    @media (max-width: 1440px) {
+      margin: 0;
+      margin-top: 40px;
+    }
 }
 
 .form-elements__element_eighth {
@@ -157,101 +228,18 @@
     margin-top: 10px;
     margin-right: 2px;
     @include isFlex($direction: column, $align: flex-start);
-}
 
-/*
-    Media queries
-*/
-@media (max-width: 1440px) {
-    .form-elements {
-        &_outer {
-        width: 100vw;
-        height: auto;
-        }
-
-        &_inner {
-        width: 85%;
-        max-width: 1160px;
-        margin: 9% auto 9%;
-        height: auto;
-        }
-
-        &__element {
-        &_eighth {
-            width: 55vw;
-            max-width: 711px;
-        }
-
-        &_first, 
-        &_second, 
-        &_third,
-        &_forth, 
-        &_fifth, 
-        &_sixth, 
-        &_seventh, 
-        &_eighth {
-            margin: 0;
-        }
-
-        &_forth,
-        &_fifth, 
-        &_sixth, 
-        &_seventh, 
-        &_eighth {
-            margin-top: 40px;
-        }
-        }
+    @media (max-width: 1440px) {
+              width: 55vw;
+              max-width: 711px;
+              margin: 0;
+              margin-top: 40px;
     }
-}
 
-@media (max-width: 1250px) {
-    .form-elements {
-        &_inner {
-            max-width: 890px;
-            margin: 7% auto 7%;
-            justify-content: space-evenly;
-        }
-
-        &__element {
-        &_third {
-            margin-top: 40px;
-        }
-
-        &_eighth {
-            width: 90%;
-            height: auto;
-        }
-        }
-    }
-}
-
-@media (max-width: 970px) {
-    .form-elements {
-        &_inner {
-            width: 85%;
-            margin: 5% auto 5%;
-            justify-content: space-around;
-        }
-    }
-}
-
-@media (max-width: 850px) {
-    .form-elements {
-        &_outer {
-            min-width: 320px;
-        }
-
-        &_inner {
-            max-width: 575px;
-            justify-content: center;
-        }
-
-        &__element {
-            &_first {
-                margin-bottom: 40px;
-            }
-        }
-    }
+    @media (max-width: 1250px) {
+              width: 90%;
+              height: auto;
+  }
 }
 
 /*

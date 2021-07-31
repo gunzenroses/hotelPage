@@ -6,13 +6,13 @@ include ../../components/carousel_background/_carousel_background.pug
 include ../../components/footer/_footer.pug
 
 block variables
-    - var pics = ["./assets/images/signin_1.jpg", "./assets/images/signin_2.jpg"];
+  - var pics = ["./assets/images/signin_1.jpg", "./assets/images/signin_2.jpg"];
 
 block content
-    .sign-in.dropdown__watch
-        +header()
-        .sign-in__content
-            +carouselBackground(pics)
-            .sign-in__card_signin
-                +cardSignin()
-        +footer()
+  .sign-in.dropdown__watch
+    +header()
+    .sign-in__content
+      +carouselBackground(pics)
+      .sign-in__card_signin
+        +cardSignin()
+    +footer()

@@ -2,39 +2,32 @@
 @import "../registration/registration.scss";
 
 .sign-in.dropdown__watch {
-    @extend .registration;
+  @extend .registration;
 }
 
 .sign-in__content {
-    @extend .registration__content;
-    height: 702px;
+  @extend .registration__content;
+  height: 702px;
+
+  @media (max-width: 500px) {
+    // carouselSignin + card_signin + initial top
+    height: calc(683 / 1440 * 100vw + 360px + 40px);
+  }
+
+  @media (max-width: 380px) {
+    // carouselSignin + card_signin + initial top
+    height: calc(683 / 1440 * 100vw + 360px);
+    min-height: calc(683 / 1440 * 320px + 360px);
+  }
 }
+
 .sign-in__card_signin {
-    @extend .registration__card_registration;
-    top: 173px;
-    transform: translateX(-50%);
-}
+  @extend .registration__card_registration;
+  top: 173px;
+  transform: translateX(-50%);
 
-@media (max-width: 500px){
-    .sign-in__content {
-        // carouselSignin + card_signin + initial top
-        height: calc(683/1440 * 100vw + 360px + 40px);
-    }
-
-    .sign-in__content img {
-        height: auto;
-    }
-
-    .sign-in__card_signin {
-        top: 0;
-        transform: none;
-    }
-}
-
-@media (max-width: 380px){
-    .sign-in__content {
-        // carouselSignin + card_signin + initial top
-        height: calc(683/1440 * 100vw  + 360px);
-        min-height: calc(683/1440 * 320px + 360px);
-    }
+  @media (max-width: 500px) {
+    top: 0;
+    transform: none;
+  }
 }

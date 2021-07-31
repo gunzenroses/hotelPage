@@ -3,7 +3,7 @@ mixin carouselLanding(backgroundPicture)
     .carousel-landing__background_inner
       for picture in backgroundPicture
         .carousel-landing__element
-          img(src= picture alt="background pictures")
+          img(class="carousel-landing__img" src= picture alt="background pictures")
 
   //- heigh adapts to the height of outer container, therefore this mixin fits for Registration and Signin pages
 mixin carouselBackground(backgroundPicture)
@@ -11,4 +11,4 @@ mixin carouselBackground(backgroundPicture)
     .carousel__background_inner
       for picture in backgroundPicture
         .carousel__element
-          img(src= picture alt="background pictures")
+          img(class="carousel__img" src= picture alt="background pictures")

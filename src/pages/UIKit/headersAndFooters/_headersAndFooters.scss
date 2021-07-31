@@ -3,52 +3,51 @@
 */
 
 .headers-n-footers_outer {
-    @include container($width: 1440px, $height: 1350px, $mt: 50px, $mb: 50px, $ms: auto);
-    @include isFlex($direction: column);
-    justify-content: flex-start;
-    padding-top: 140px;
-    padding-bottom: 140px;
-    position: relative;
-    overflow: auto; //to avoid margin-collapse
-    background: $background;
+  @include container(
+    $width: 1440px,
+    $height: 1350px,
+    $mt: 50px,
+    $mb: 50px,
+    $ms: auto
+  );
+  @include isFlex($direction: column);
+  justify-content: flex-start;
+  padding-top: 140px;
+  padding-bottom: 140px;
+  position: relative;
+  overflow: auto; //to avoid margin-collapse
+  background: $background;
+
+  @media (max-width: 1440px) {
+    width: 100vw;
+    height: auto;
+  }
+
+  @media (max-width: 750px) {
+    min-width: 320px;
+    &::before {
+      top: 10px;
+      left: 10px;
+    }
+  }
 }
 
 .headers-n-footers_outer::before {
-    position: absolute;
-    top: 30px;
-    left: 30px;
-    content: "";
-    width: 48px;
-    height: 48px;
-    background-image: url(/assets/images/logo/logo.svg);
-    background-size: 100%;
-    background-position: center;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  content: "";
+  width: 48px;
+  height: 48px;
+  background-image: url(/assets/images/logo/logo.svg);
+  background-size: 100%;
+  background-position: center;
 }
 
-.headers-n-footers_outer > div:not(:last-of-type){
-    margin-bottom: 40px;
+.headers-n-footers_outer > div:not(:last-of-type) {
+  margin-bottom: 40px;
 }
 
 .headers-n-footers_outer > nav {
-    margin-bottom: 40px;
-}
-
-/*
-    Media query for Main container
-*/
-@media (max-width: 1440px) {
-    .headers-n-footers_outer {
-        width: 100vw;
-        height: auto;
-    }
-}
-
-@media (max-width: 750px) {
-    .headers-n-footers_outer {
-        min-width: 320px;
-        &::before {
-            top: 10px;
-            left: 10px;
-        }
-    }
+  margin-bottom: 40px;
 }

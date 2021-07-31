@@ -5,210 +5,235 @@
 */
 
 .search-room {
-    @include container($width: 1440px, $height: 1880px, $mt: 0, $mb: 0, $ms: auto);
-    @include isFlex($direction: column, $justify: flex-start);
-    position: relative;
-    overflow: auto; //to avoid margin-collapse
-    background: $light;
+  @include container(
+    $width: 1440px,
+    $height: 1880px,
+    $mt: 0,
+    $mb: 0,
+    $ms: auto
+  );
+  @include isFlex($direction: column, $justify: flex-start);
+  position: relative;
+  overflow: auto; //to avoid margin-collapse
+  background: $light;
+
+  @media (max-width: 1440px) {
+    width: 100vw;
+    height: auto;
+    min-width: 320px;
+  }
 }
 
 .search-room__content_outer {
-    width: 100%;
-    height: fit-content;
-    border-bottom: 1px solid $darkShadeLess;
+  width: 100%;
+  height: fit-content;
+  border-bottom: 1px solid $darkShadeLess;
 }
 
 .search-room__content {
-    @include container($width: 1160px, $height: 1257px, $mt: 30px, $mb: 69px, $ms: 140px);
-    margin-left: 141px;
-    @include isFlex($justify: space-between);
-    min-width: 320px;
-    position: relative;
-    overflow: auto; //to avoid margin-collapse
-    background: $light;
+  @include container(
+    $width: 1160px,
+    $height: 1257px,
+    $mt: 30px,
+    $mb: 69px,
+    $ms: 140px
+  );
+  margin-left: 141px;
+  @include isFlex($justify: space-between);
+  min-width: 320px;
+  position: relative;
+  overflow: auto; //to avoid margin-collapse
+  background: $light;
+
+  @media (max-width: 1440px) {
+    margin: 30px auto 70px;
+  }
+
+  @media (max-width: 1250px) {
+    width: 980px;
+    height: auto;
+  }
+
+  @media (max-width: 1070px) {
+    flex-direction: column;
+    width: 100vw;
+  }
 }
 
 .search-room__filter {
-    width: 265px;
-    height: 739px;
-    @include isFlex($direction: column, $justify: flex-start);
+  width: 265px;
+  height: 739px;
+  @include isFlex($direction: column, $justify: flex-start);
+
+  @media (max-width: 1250px) {
+    margin-left: 25px;
+  }
+
+  @media (max-width: 1070px) {
+    height: auto;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 1070px) {
+    width: 637px;
+    margin: 0 auto 30px;
+  }
+
+  @media (max-width: 700px) {
+    width: 100%;
+  }
 }
 
 .search-room__form {
-    width: 100%;
+  width: 100%;
+
+  @media (max-width: 1070px) {
+    height: auto;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 1070px) {
+    @include isFlex($direction: row, $wrap: wrap);
+  }
+
+  @media (max-width: 700px) {
+    flex-direction: column;
+    width: 380px;
+  }
+
+  @media (max-width: 450px) {
+    width: 85%;
+    min-width: 280px;
+    max-width: 320px;
+    justify-content: center;
+  }
 }
 
 .filter-group > .dropdown__container {
-    margin-top: 21px;
+  margin-top: 21px;
 }
 
 .filter-group > .range__container {
-    //margin-top: 31px;
-    margin-top: 24px;
+  //margin-top: 31px;
+  margin-top: 24px;
 }
 
 .filter-group > .widget {
-    //margin-top: 26px;
-    margin-top: 29px;
+  //margin-top: 26px;
+  margin-top: 29px;
 }
 
 .filter-group > .richcheckbox__container {
-    margin-top: 34px;
+  margin-top: 34px;
 }
 
 .richcheckbox__container + .widget {
-    margin-top: 28px;
+  margin-top: 28px;
 }
 
 .filter-group > .container_medium {
-    margin-top: 15px;
+  margin-top: 15px;
 }
 
 .search-room__rooms {
-    width: 834px;
+  width: 834px;
+  height: auto;
+  @include isFlex($direction: column, $justify: flex-start);
+
+  @media (max-width: 1250px) {
+    width: 637px;
     height: auto;
-    @include isFlex($direction: column, $justify: flex-start);
+  }
+
+  @media (max-width: 1070px) {
+    margin: 20px auto;
+  }
+
+  @media (max-width: 700px) {
+    flex-direction: column;
+    width: 380px;
+  }
+
+  @media (max-width: 450px) {
+    width: 100%;
+    min-width: 320px;
+  }
 }
 
 .search-room__text {
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 30px;
-    color: $darkShadeMost;
-    letter-spacing: .0001em;
-    margin-left: -1px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: $darkShadeMost;
+  letter-spacing: 0.0001em;
+  margin-left: -1px;
+
+  @media (max-width: 1070px) {
+    margin: 20px auto;
+  }
+
+  @media (max-width: 450px) {
+    width: 85%;
+  }
 }
 
 .search-room__result {
+  width: 100%;
+  height: 1111px; //1091px;
+  @include isFlex($wrap: wrap);
+  margin-top: 0.5px;
+
+  @media (max-width: 1250px) {
+    height: auto;
+    justify-content: space-around;
+  }
+
+  @media (max-width: 1070px) {
+    height: auto;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 700px) {
     width: 100%;
-    height: 1111px; //1091px;
-    @include isFlex($wrap: wrap);
-    margin-top: .5px;
+  }
+
+  @media (max-width: 450px) {
+    width: 85vw;
+    min-width: 320px;
+  }
 }
 
 .search-room__result > .card__room {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .search-room__pagination {
-    margin: 41px 304px 0 289px;
+  margin: 41px 304px 0 289px;
+
+  @media (max-width: 1440px) {
+    margin: 41px auto 0;
+  }
 }
 
-@media (max-width: 1440px){
-    .search-room {
-        width: 100vw;
-        height: auto;
-        min-width: 320px;
-    }
-
-    .search-room__content {
-        margin: 30px auto 70px;
-    }
-
-    .search-room__pagination {
-        margin: 41px auto 0;
-    }
+@media (max-width: 1250px) {
+  .search-room__result > div {
+    margin-bottom: 25px;
+  }
 }
 
-@media (max-width: 1250px){
-    .search-room__content {
-        width: 980px;
-        height: auto;
-    }
-
-    .search-room__rooms {
-        width: 637px;
-        height: auto;
-    }
-
-    .search-room__filter {
-        margin-left: 25px
-    }
-
-    .search-room__result {
-        height: auto;
-        justify-content: space-around;
-    }
-
-    .search-room__result > div {
-        margin-bottom: 25px;
-    }
+.filter-group > div {
+  @media (max-width: 1070px) {
+    margin-top: 30px;
+  }
 }
 
-@media (max-width: 1070px){
-    .search-room__content {
-        flex-direction: column;
-        width: 100vw;
-    }
+.search-room__form > div {
+  @media (max-width: 700px) {
+    width: 100%;
+  }
 
-    .search-room__filter,
-    .search-room__form,
-    .search-room__result {
-        height: auto;
-        margin: 0 auto;
-    }
-
-    .search-room__filter {
-        width: 637px;
-        margin: 0 auto 30px;
-    }
-    .search-room__form {
-        @include isFlex($direction: row, $wrap: wrap);
-    }
-
-    .search-room__form > div {
-        width: 266px;
-        margin-top: 0;
-    }
-
-    .filter-group > div {
-        margin-top: 30px;
-    }
-
-    .search-room__rooms,
-    .search-room__text {
-        margin: 20px auto;
-    }
-}
-
-@media (max-width: 700px){
-    .search-room__filter,
-    .search-room__result {
-        width: 100%;
-    }
-
-
-    .search-room__form,
-    .search-room__rooms {
-        flex-direction: column;
-        width: 380px;
-        
-    }
-
-    .search-room__form>div {
-        width: 100%;
-    }
-}
-
-@media (max-width: 450px){
-    .search-room__form {
-        width: 85%;
-        min-width: 280px;
-        max-width: 320px;
-        justify-content: center;
-    }
-
-    .search-room__result {
-        width: 85vw;
-        min-width: 320px
-    }
-
-    .search-room__rooms {
-        width: 100%;
-        min-width: 320px;
-    }
-
-    .search-room__text {
-        width: 85%;
-    }
+  @media (max-width: 1070px) {
+    width: 266px;
+    margin-top: 0;
+  }
 }

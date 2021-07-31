@@ -6,18 +6,18 @@ include ../../components/card_search/_card_search.pug
 include ../../components/footer/_footer.pug
 
 block variables
-    - var title = "landing_page";
-    - var description = "landing page";
-    - var keywords = "landing page";
-    - var pics = ["/assets/images/landing_3.jpg", "/assets/images/landing_2.jpg", "/assets/images/landing_1.jpg"]
+  - var title = "landing_page";
+  - var description = "landing page";
+  - var keywords = "landing page";
+  - var pics = ["/assets/images/landing_3.jpg", "/assets/images/landing_2.jpg", "/assets/images/landing_1.jpg"]
 
 block content
-    .landing-page.dropdown__watch
-        +header()
-        .landing-page__content
-            +carouselLanding(pics)
-            .landing-page__text Лучшие номера для вашей работы, отдыха и просто вдохновения
-            .landing-page__card_search
-                form(method="get" action="/search_room")
-                    +cardSearch()
-        +footer()
+  .landing-page.dropdown__watch
+    +header()
+    .landing-page__content
+      +carouselLanding(pics)
+      .landing-page__text Лучшие номера для вашей работы, отдыха и просто вдохновения
+      .landing-page__card_search
+        form(method="get" action="/search_room")
+          +cardSearch()
+    +footer()

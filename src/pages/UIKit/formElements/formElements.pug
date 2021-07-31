@@ -17,68 +17,68 @@ include ../../../components/badge/_badge.pug
 include ../../../components/comment/_comment.pug
 
 block variables
-    - var title = "UIKit";
-    - var description = "UIKit";
-    - var keywords = "UIKit";
-    - var checkboxList = [ "Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00" ];
-    - 
-        var comment1 = { 
-            authorPic: "./assets/images/avatar/avatar.jpg", 
-            authorName: "Мурад Сарафанов", 
-            commentTime: "5 дней назад", 
-            buttonLikeId: "likes_author_1", 
-            buttonNumber: 12, 
-            commentText: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий.\u00A0 И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей." 
-        };
+  - var title = "UIKit";
+  - var description = "UIKit";
+  - var keywords = "UIKit";
+  - var checkboxList = [ "Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00" ];
+  - 
+    var comment1 = { 
+      authorPic: "./assets/images/avatar/avatar.jpg", 
+      authorName: "Мурад Сарафанов", 
+      commentTime: "5 дней назад", 
+      buttonLikeId: "likes_author_1", 
+      buttonNumber: 12, 
+      commentText: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий.\u00A0 И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей." 
+    };
 
 block content
-    .form-elements_outer
-        .form-elements_inner
-            .form-elements__element_first
-                .form-elements__container_first 
-                    +emailContainer("Text field", "default")
-                    +nameContainer("Text field", "hover / focus", "This is pretty awesome")
-                    +dropdownGuestsLabeled("dropdown", "", "dropdown_guests_0", "", "dropdownGuestsInput_0")
-                    +birthdayContainer("Masked text field", "")
+  .form-elements_outer
+    .form-elements_inner
+      .form-elements__element_first
+        .form-elements__container_first 
+          +emailContainer("Text field", "default")
+          +nameContainer("Text field", "hover / focus", "This is pretty awesome")
+          +dropdownGuestsLabeled("dropdown", "", "dropdown_guests_0", "", "dropdownGuestsInput_0")
+          +birthdayContainer("Masked text field", "")
 
-                .form-elements__container_second
-                    +dateRangeSeparate("calendar_1", "Date dropdown", "", "Date dropdown", "19.08.2019", "")
-                    .container_medium
-                        +dateRangeCommon("calendar_2", "filter rate dropdown", "19 авг - 23 авг", "")
-                    .container_medium
-                        +emailSubscribeContainer("Subscription text field", "", "registration.html")
+        .form-elements__container_second
+          +dateRangeSeparate("calendar_1", "Date dropdown", "", "Date dropdown", "19.08.2019", "")
+          .container_medium
+            +dateRangeCommon("calendar_2", "filter rate dropdown", "19 авг - 23 авг", "")
+          .container_medium
+            +emailSubscribeContainer("Subscription text field", "", "registration")
 
-            .form-elements__element_second
-                +checkboxButtons("Сheckbox buttons")
-                +buttonsRadioContainer("Radio buttons", "man", true, "woman", false)
-                +buttonToggleContainer
-                +buttonLikeContainer
-                +buttonRateContainer("Rate button")
+      .form-elements__element_second
+        +checkboxButtons("Сheckbox buttons")
+        +buttonsRadioContainer("Radio buttons", "man", true, "woman", false)
+        +buttonToggleContainer
+        +buttonLikeContainer
+        +buttonRateContainer("Rate button")
 
-            .form-elements__element_third
-                .container_medium
-                    +range("range_1", "amount")
-                +buttonContainer()
-                +paginationContainer("pagination", "pagination_bar_1")
+      .form-elements__element_third
+        .container_medium
+          +range("range_1", "amount")
+        +buttonContainer()
+        +paginationContainer("pagination", "pagination_bar_1")
 
-            .form-elements__element_forth
-                .width-and-heigh_266
-                    +dropdownRoomsLabeled("dropdown", "default", "dropdown_rooms_1", "", "dropdownRoomsInput_1")
-                    +dropdownRoomsLabeled("dropdown", "expanded", "dropdown_rooms_2", "dropdown__show", "dropdownRoomsInput_2")
-                +dropdownCheckbox("Expandable checkbox list", "")
-                +dropdownCheckbox("Expandable checkbox list", "dropdown__show")
-                
-            .form-elements__element_fifth
-                +dropdownGuestsLabeled("dropdown", "", "dropdown_guests_1", "dropdown__show", "dropdownGuestsInput_1")
-                +richCheckboxButtons("accessibility", "Rich Checkbox Buttons")
+      .form-elements__element_forth
+        .width-and-heigh_266
+          +dropdownRoomsLabeled("dropdown", "default", "dropdown_rooms_1", "", "dropdownRoomsInput_1")
+          +dropdownRoomsLabeled("dropdown", "expanded", "dropdown_rooms_2", "dropdown__show", "dropdownRoomsInput_2")
+        +dropdownCheckbox("Expandable checkbox list", "")
+        +dropdownCheckbox("Expandable checkbox list", "dropdown__show")
 
-            .form-elements__element_sixth
-                +dropdownGuestsLabeled("dropdown", "", "dropdown_guests_2", "dropdown__show", "dropdownGuestsInput_2")
-                +bulletCheckboxContainer("bullet list", checkboxList)
+      .form-elements__element_fifth
+        +dropdownGuestsLabeled("dropdown", "", "dropdown_guests_1", "dropdown__show", "dropdownGuestsInput_1")
+        +richCheckboxButtons("accessibility", "Rich Checkbox Buttons")
 
-            .form-elements__element_seventh
-                +badgeItem("insert_emoticon", "Комфорт", "Шумопоглощающие стены")
-                +badgeItem("location_city", "Удобство", "Окно в каждой из спален")
-                
-            .form-elements__element_eighth
-                +comment(comment1)
+      .form-elements__element_sixth
+        +dropdownGuestsLabeled("dropdown", "", "dropdown_guests_2", "dropdown__show", "dropdownGuestsInput_2")
+        +bulletCheckboxContainer("bullet list", checkboxList)
+
+      .form-elements__element_seventh
+        +badgeItem("insert_emoticon", "Комфорт", "Шумопоглощающие стены")
+        +badgeItem("location_city", "Удобство", "Окно в каждой из спален")
+
+      .form-elements__element_eighth
+        +comment(comment1)
