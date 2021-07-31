@@ -1,9 +1,17 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const fs = require("fs");
 
-// Files
-const plugins = require("./postcss.config");
+const PATHS = {
+  src: path.resolve(__dirname, "./src"),
+  dist: path.resolve(__dirname, "./dist"),
+  pages: "pages/"
+}
+const PAGES_DIR = `${PATHS.src}/${PATHS.pages}`
+const PAGES = fs.readdirSync(PAGES_DIR);
+
+//const plugins = require("./postcss.config");
 
 module.exports = {
         context: path.resolve(__dirname, ""),
@@ -12,12 +20,12 @@ module.exports = {
             __dirname: true,
         },
         entry: {
-            UIKit: "./src/pages/UIKit/UIKit.js",
-            landing_page: "./src/pages/landingPage/landingPage.js",
-            search_room: "./src/pages/searchRoom/searchRoom.js",
-            room_details: "./src/pages/roomDetails/roomDetails.js",
-            registration: "./src/pages/registration/registration.js",
-            signin: "./src/pages/signin/signin.js",
+            "UIKit": "./src/pages/UIKit/UIKit.js",
+            "landing-page": "./src/pages/landing-page/landing-page.js",
+            "search-room": "./src/pages/search-room/search-room.js",
+            "room-details": "./src/pages/room-details/room-details.js",
+            "registration": "./src/pages/registration/registration.js",
+            "signin": "./src/pages/signin/signin.js",
         },
         resolve: {
             extensions: [".scss", ".sass", ".js"],
@@ -91,53 +99,58 @@ module.exports = {
                 inject: "body",
             }),
 
-            //replace one day with utils.pages(env)
+            ...PAGES.map(page => new HtmlWebpackPlugin({
+              filename: `${page}`,
+              template: `${PAGES_DIR}/${page}/${page}.pug`,
+              chunks: [`${page}`],
+              inject: "body",
+            }))
 
-            new HtmlWebpackPlugin({
-                filename: "UIKit",
-                template: path.resolve(__dirname, "./src/pages/UIkit/UIKit.pug"),
-                chunks: ["UIKit"],
-                inject: "body",
-            }),
+            // new HtmlWebpackPlugin({
+            //     filename: "UIKit",
+            //     template: path.resolve(__dirname, "./src/pages/UIkit/UIKit.pug"),
+            //     chunks: ["UIKit"],
+            //     inject: "body",
+            // }),
 
-            new HtmlWebpackPlugin({
-                filename: "landing_page",
-                minify: true,
-                template: path.resolve(__dirname, "./src/pages/landingPage/landingPage.pug"),
-                chunks: ["landing_page"],
-                inject: "body",
-            }),
+            // new HtmlWebpackPlugin({
+            //     filename: "landing_page",
+            //     minify: true,
+            //     template: path.resolve(__dirname, "./src/pages/landingPage/landingPage.pug"),
+            //     chunks: ["landing_page"],
+            //     inject: "body",
+            // }),
 
-            new HtmlWebpackPlugin({
-                filename: "search_room",
-                minify: true,
-                template: path.resolve(__dirname, "./src/pages/searchRoom/searchRoom.pug"),
-                chunks: ["search_room"],
-                inject: "body",
-            }),
+            // new HtmlWebpackPlugin({
+            //     filename: "search_room",
+            //     minify: true,
+            //     template: path.resolve(__dirname, "./src/pages/searchRoom/searchRoom.pug"),
+            //     chunks: ["search_room"],
+            //     inject: "body",
+            // }),
 
-            new HtmlWebpackPlugin({
-                filename: "room_details",
-                minify: true,
-                template: path.resolve(__dirname, "./src/pages/roomDetails/roomDetails.pug"),
-                chunks: ["room_details"],
-                inject: "body",
-            }),
+            // new HtmlWebpackPlugin({
+            //     filename: "room_details",
+            //     minify: true,
+            //     template: path.resolve(__dirname, "./src/pages/roomDetails/roomDetails.pug"),
+            //     chunks: ["room_details"],
+            //     inject: "body",
+            // }),
 
-            new HtmlWebpackPlugin({
-                filename: "registration",
-                minify: true,
-                template: path.resolve(__dirname, "./src/pages/registration/registration.pug"),
-                chunks: ["registration"],
-                inject: "body",
-            }),
+            // new HtmlWebpackPlugin({
+            //     filename: "registration",
+            //     minify: true,
+            //     template: path.resolve(__dirname, "./src/pages/registration/registration.pug"),
+            //     chunks: ["registration"],
+            //     inject: "body",
+            // }),
 
-            new HtmlWebpackPlugin({
-                filename: "signin",
-                minify: true,
-                template: path.resolve(__dirname, "./src/pages/signin/signin.pug"),
-                chunks: ["signin"],
-                inject: "body",
-            }),
+            // new HtmlWebpackPlugin({
+            //     filename: "signin",
+            //     minify: true,
+            //     template: path.resolve(__dirname, "./src/pages/signin/signin.pug"),
+            //     chunks: ["signin"],
+            //     inject: "body",
+            // }),
         ],
 };
