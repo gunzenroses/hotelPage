@@ -1,5 +1,5 @@
 import "./signin.scss";
 
 window.onload = function(){
-    require("Components/checkboxExpandable/checkboxExpandable");
+    require("Main/components/checkbox-expandable/checkboxExpandable");
 }

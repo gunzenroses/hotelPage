@@ -1,4 +1,4 @@
-.card_registration {
+.card-registration {
   @include containerShadowed();
   @include isFlex($direction: column, $justify: flex-start);
   padding-left: 29px;

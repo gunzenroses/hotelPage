@@ -105,52 +105,5 @@ module.exports = {
               chunks: [`${page}`],
               inject: "body",
             }))
-
-            // new HtmlWebpackPlugin({
-            //     filename: "UIKit",
-            //     template: path.resolve(__dirname, "./src/pages/UIkit/UIKit.pug"),
-            //     chunks: ["UIKit"],
-            //     inject: "body",
-            // }),
-
-            // new HtmlWebpackPlugin({
-            //     filename: "landing_page",
-            //     minify: true,
-            //     template: path.resolve(__dirname, "./src/pages/landingPage/landingPage.pug"),
-            //     chunks: ["landing_page"],
-            //     inject: "body",
-            // }),
-
-            // new HtmlWebpackPlugin({
-            //     filename: "search_room",
-            //     minify: true,
-            //     template: path.resolve(__dirname, "./src/pages/searchRoom/searchRoom.pug"),
-            //     chunks: ["search_room"],
-            //     inject: "body",
-            // }),
-
-            // new HtmlWebpackPlugin({
-            //     filename: "room_details",
-            //     minify: true,
-            //     template: path.resolve(__dirname, "./src/pages/roomDetails/roomDetails.pug"),
-            //     chunks: ["room_details"],
-            //     inject: "body",
-            // }),
-
-            // new HtmlWebpackPlugin({
-            //     filename: "registration",
-            //     minify: true,
-            //     template: path.resolve(__dirname, "./src/pages/registration/registration.pug"),
-            //     chunks: ["registration"],
-            //     inject: "body",
-            // }),
-
-            // new HtmlWebpackPlugin({
-            //     filename: "signin",
-            //     minify: true,
-            //     template: path.resolve(__dirname, "./src/pages/signin/signin.pug"),
-            //     chunks: ["signin"],
-            //     inject: "body",
-            // }),
         ],
 };

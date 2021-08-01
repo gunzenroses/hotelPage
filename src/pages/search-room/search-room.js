@@ -2,18 +2,18 @@ import "./search-room.scss"
 
 //import { Range } from "Components/range/range"
 import renderCalendar from "Components/calendar/calendar";
-import DropdownRooms from "Components/dropdownRooms/dropdownRooms"
+import DropdownRooms from "Main/components/dropdown-rooms/dropdownRooms"
 import { roomsData_1 } from "Scripts/myData"
 
-import DropdownGuests from "Components/dropdownGuests/dropdownGuests"
+import DropdownGuests from "Main/components/dropdown-guests/dropdownGuests"
 import guestsData_searchRoom from "Scripts/myData"
 
 import paginationData_1 from "Scripts/myData"
 import ButtonPagination from "Components/pagination/pagination"
 
 window.onload = function(){
-    require("Components/textField/datasetHandler");
-    require("Components/checkboxExpandable/checkboxExpandable");
+    require("Main/components/text-field/datasetHandler");
+    require("Main/components/checkbox-expandable/checkboxExpandable");
     require("Components/range/range");
 
 
@@ -27,5 +27,5 @@ window.onload = function(){
 
     let pagination_search = new ButtonPagination(paginationData_1, "pagination_search")
 
-    require("Components/roomCarousel/roomCarousel");
+    require("Main/components/room-carousel/roomCarousel");
 }

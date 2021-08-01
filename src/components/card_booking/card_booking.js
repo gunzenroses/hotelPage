@@ -1,5 +1,5 @@
 import renderCalendar from "Components/calendar/calendar"
-import DropdownGuests from "Components/dropdownGuests/dropdownGuests"
+import DropdownGuests from "Main/components/dropdown-guests/dropdownGuests"
 import guestsData_booking from "Scripts/myData"
 
 let calendar_booking = new renderCalendar("calendar_booking");

@@ -1,6 +1,6 @@
 // this exemplar will work for all pages
 import renderCalendar from "Components/calendar/calendar"
-import DropdownGuests from "Components/dropdownGuests/dropdownGuests"
+import DropdownGuests from "Main/components/dropdown-guests/dropdownGuests"
 import guestsData_search from "Scripts/myData"
 
 

@@ -1,5 +1,5 @@
 @import "Main/index";
-@import "Components/chart_donut/chart_donut";
+@import "Components/chart-donut/chart-donut";
 
 /*
     Main container
@@ -289,7 +289,7 @@
   margin-left: 8px;
 }
 
-.room-details__booking .booking__total_line {
+.room-details__booking .booking-total_line {
   width: 180px;
 
   @media (max-width: 450px) {

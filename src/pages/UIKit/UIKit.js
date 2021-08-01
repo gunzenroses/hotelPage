@@ -1,22 +1,22 @@
 import "./UIkit.scss"
 import "./UIKit.pug"
-import likeButtons from "Components/buttonLike/buttonLike"
+import likeButtons from "Main/components/button-like/buttonLike"
 import paginationData_1 from "Scripts/myData"
 import ButtonPagination from "Components/pagination/pagination"
 
-import DropdownGuests from "Components/dropdownGuests/dropdownGuests"
+import DropdownGuests from "Main/components/dropdown-guests/dropdownGuests"
 import { guestsData_1, guestsData_booking } from "Scripts/myData"
 
-import DropdownRooms from "Components/dropdownRooms/dropdownRooms"
+import DropdownRooms from "Main/components/dropdown-rooms/dropdownRooms"
 import { roomsData_1, roomsData_2 } from "Scripts/myData"
 import renderCalendar from "Components/calendar/calendar"
 
 
 
 window.onload = function () {
-    require("Components/textField/datasetHandler");
-    require("Components/checkboxExpandable/checkboxExpandable");
-    require("Components/roomCarousel/roomCarousel");
+    require("Main/components/text-field/datasetHandler");
+    require("Main/components/checkbox-expandable/checkboxExpandable");
+    require("Main/components/room-carousel/roomCarousel");
     
     //for formElements
     let likeButton_1 = new likeButtons("buttonLike_1", 2);

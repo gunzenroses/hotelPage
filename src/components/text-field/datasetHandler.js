@@ -1,5 +1,5 @@
-import maskDate from 'Components/textField/datasetMaskDate'
-import dataValitadion  from 'Components/textField/datasetValidation'
+import maskDate from 'Main/components/text-field/datasetMaskDate'
+import dataValitadion  from 'Main/components/text-field/datasetValidation'
 
 let inputToValidate = document.querySelectorAll('input[data-rule]');
 
