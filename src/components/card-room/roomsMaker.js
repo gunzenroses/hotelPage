@@ -1,56 +1,56 @@
-export default class roomsMaker{
-    constructor(data){
-        this.data = data
-        this.roomsContainer = document.querySelector(".search-room__result");
-        this.paginationContainer = this.roomsContainer.parentElement.querySelector(".search-room__pagination")
-        this.currentData = []
-        this.init()
-    }
+export default class RoomsMaker {
+  constructor(data) {
+    this.data = data
+    this.roomsContainer = document.querySelector(".search-room__result");
+    this.paginationContainer = this.roomsContainer.parentElement.querySelector(".search-room__pagination")
+    this.currentData = []
+    this.init()
+  }
 
-    init(){
-        //this.render()
-        this.createChildren()
-        this.enableHandlers()
-        this.addEventListener()
-        this.render(1)
-        return this;
-    }
+  init() {
+    //this.render()
+    this.createChildren()
+    this.enableHandlers()
+    this.addEventListener()
+    this.render(1)
+    return this;
+  }
 
-    createChildren(){
-        this.btns = this.paginationContainer.querySelector(".pagination__buttons");
-        return this;
-    }
+  createChildren() {
+    this.btns = this.paginationContainer.querySelector(".pagination__buttons");
+    return this;
+  }
 
-    enableHandlers(){
-        this.countCurrentNumHandler = this.countCurrentNum.bind(this);
-        return this;
-    }
+  enableHandlers() {
+    this.countCurrentNumHandler = this.countCurrentNum.bind(this);
+    return this;
+  }
 
-    addEventListener(){
-        this.btns.addEventListener("click", this.countCurrentNumHandler);
-        return this;
-    }
+  addEventListener() {
+    this.btns.addEventListener("click", this.countCurrentNumHandler);
+    return this;
+  }
 
-    countCurrentNum(){
-        this.currentBtn = this.paginationContainer.querySelector(".pagination__button_current");
-        this.currentNum = parseInt(this.currentBtn.innerText) - 1;
-        this.render(this.currentNum);
-        // найти чему равна текущая страница
-        // найти this.currentData = ... this.data.split[]
-        //инициировать рендеринг
-        return this;
-    }
+  countCurrentNum() {
+    this.currentBtn = this.paginationContainer.querySelector(".pagination__button_current");
+    this.currentNum = parseInt(this.currentBtn.innerText) - 1;
+    this.render(this.currentNum);
+    // найти чему равна текущая страница
+    // найти this.currentData = ... this.data.split[]
+    //инициировать рендеринг
+    return this;
+  }
 
-    render(currentNum){
-        this.roomsContainer.innerHTML = ""; 
-        let startNum = parseInt(currentNum)*12;
-        let endNum = parseInt(startNum) + 12;
-        let renderedData = this.data.slice(startNum, endNum)
-        
-        renderedData.map(data => {
-            return (
-                this.roomsContainer.innerHTML += 
-                `
+  render(currentNum) {
+    this.roomsContainer.innerHTML = "";
+    let startNum = parseInt(currentNum) * 12;
+    let endNum = parseInt(startNum) + 12;
+    let renderedData = this.data.slice(startNum, endNum)
+
+    renderedData.map(data => {
+      return (
+        this.roomsContainer.innerHTML +=
+        `
                     <li class="card__room">
                         <article class="room-carousel">
                             <div class="room-carousel__radio">
@@ -125,7 +125,7 @@ export default class roomsMaker{
                         </article>
                     </li>
                 `
-            )
-        })
-    }
+      )
+    })
+  }
 }

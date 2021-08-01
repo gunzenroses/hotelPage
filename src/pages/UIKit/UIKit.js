@@ -1,15 +1,15 @@
 import "./UIkit.scss"
 import "./UIKit.pug"
-import likeButtons from "Main/components/button-like/buttonLike"
+import ButtonLike from "Main/components/button-like/buttonLike"
 import paginationData_1 from "Scripts/myData"
-import ButtonPagination from "Components/pagination/pagination"
+import { ButtonPagination } from "Components/pagination/pagination"
 
 import DropdownGuests from "Main/components/dropdown-guests/dropdownGuests"
 import { guestsData_1, guestsData_booking } from "Scripts/myData"
 
 import DropdownRooms from "Main/components/dropdown-rooms/dropdownRooms"
 import { roomsData_1, roomsData_2 } from "Scripts/myData"
-import renderCalendar from "Components/calendar/calendar"
+import Calendar from "Components/calendar/calendar"
 
 
 
@@ -33,11 +33,11 @@ window.onload = function () {
     let roomsHandler = new DropdownRooms ("dropdown_rooms_1", roomsData_1);
     let roomsHandler_2 = new DropdownRooms ("dropdown_rooms_2", roomsData_2);
 
-    let calendar_1 = new renderCalendar("calendar_1");
-    let calendar_2 = new renderCalendar("calendar_2");
+    let calendar_1 = new Calendar("calendar_1");
+    let calendar_2 = new Calendar("calendar_2");
     
     // for cards
-    require("Components/card_search/card_search");
-    require("Components/card_booking/card_booking");
-    let calendar_simple = new renderCalendar("calendar_simple")
+    require("Main/components/card-search/cardSearch");
+    require("Main/components/card-booking/cardBooking");
+    let calendar_simple = new Calendar("calendar_simple")
 }

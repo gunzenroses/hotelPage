@@ -7,7 +7,7 @@ mixin header(user)
     +headerMenu(user)
 
 mixin logo()
-  a(href="/landing_page").logo__link
+  a(href="/landing-page").logo__link
     .logo__pic
     .logo__name
 
@@ -17,25 +17,25 @@ mixin headerMenu(user="")
     .burger__menu.dropdown__init
       span
     .dropdown__navbar.dropdown__content
-      +buttonNavbar("О нас", buttonOnclick="#")
+      +buttonNavbar("О нас", buttonOnclick="/some-adress")
       +buttonNavbarExpand("Услуги")
-      +buttonNavbar("Вакансии", buttonOnclick="#")
-      +buttonNavbar("Новости", buttonOnclick="#")
+      +buttonNavbar("Вакансии", buttonOnclick="/some-adress")
+      +buttonNavbar("Новости", buttonOnclick="/some-adress")
       +buttonNavbarExpand("Соглашения")
     if user
       .header__signed
         p.header__line
         //p.header__user!= user
-        +buttonNavbar(user, buttonOnclick="#")
+        +buttonNavbar(user, buttonOnclick="/some-adress")
     else
       .header__buttons
         +buttonLink("Войти", buttonOnclick="signin")
         +buttonBiglink("", buttonOnclick="registration")
     .header__navbar
-      +buttonNavbar("О нас", buttonOnclick="#")
+      +buttonNavbar("О нас", buttonOnclick="/some-adress")
       +buttonNavbarExpand("Услуги")
-      +buttonNavbar("Вакансии", buttonOnclick="#")
-      +buttonNavbar("Новости", buttonOnclick="#")
+      +buttonNavbar("Вакансии", buttonOnclick="/some-adress")
+      +buttonNavbar("Новости", buttonOnclick="/some-adress")
       +buttonNavbarExpand("Соглашения")
 
 
@@ -45,7 +45,7 @@ mixin headerMenu(user="")
 
 //- mixins for navbar buttons
 
-mixin buttonNavbar(buttonText, buttonOnclick="#")
+mixin buttonNavbar(buttonText, buttonOnclick="/some-adress")
   a(class="button_navlink", href= buttonOnclick)= buttonText
 
 mixin buttonNavbarExpand(buttonText)

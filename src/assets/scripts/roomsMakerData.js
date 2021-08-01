@@ -1,4 +1,4 @@
-let roomsMaker_data = [
+let roomsMakerData = [
     {
         number: 888,
         type: "Люкс",
@@ -2315,4 +2315,4 @@ let roomsMaker_data = [
     },
 ]
 
-export { roomsMaker_data }
+export { roomsMakerData }
