@@ -1,5 +1,5 @@
 import maskDate from 'Main/components/text-field/datasetMaskDate'
-import dataValitadion from 'Main/components/text-field/datasetValidation'
+import dataValidation from 'Main/components/text-field/datasetValidation'
 
 let inputToValidate = document.querySelectorAll('input[data-rule]');
 
@@ -9,7 +9,7 @@ if (inputToValidate) {
     if (rule == "birthday") {
       maskDate(inputField);
     }
-    dataValitadion(inputField);
+    dataValidation(inputField);
   }
 }
 

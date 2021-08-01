@@ -1,4 +1,4 @@
-export default function dataValitadion(elm) {
+export default function dataValidation(elm) {
   elm.addEventListener('blur', function (e) {
     let inputContainer = elm.parentNode;  // to get from input to its div container
     let rule = elm.name;
