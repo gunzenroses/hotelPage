@@ -8,6 +8,7 @@ import Calendar from "Components/calendar/calendar"
 import CheckboxExpandable from "Main/components/checkbox-expandable/expandItems"
 import DropdownGuests from "Main/components/dropdown-guests/dropdownGuests"
 import DropdownRooms from "Main/components/dropdown-rooms/dropdownRooms"
+import makeCarousels from "Main/components/room-carousel/roomCarousel"
 
 import { paginationData_1 } from "Scripts/myData"
 import { guestsData_1, guestsData_booking } from "Scripts/myData"
@@ -16,9 +17,9 @@ import { roomsData_1, roomsData_2 } from "Scripts/myData"
 window.onload = function () {
     require("Components/range/range");
     require("Main/components/text-field/datasetHandler");
-    require("Main/components/room-carousel/roomCarousel");
     require("Main/components/card-search/cardSearch");
     require("Main/components/card-booking/cardBooking");
+    makeCarousels();
     
     let likeButton_1 = new ButtonLike("buttonLike_1", 2);
     let likeButton_2 = new ButtonLike("buttonLike_2", 12);

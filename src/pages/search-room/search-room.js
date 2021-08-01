@@ -5,6 +5,7 @@ import Calendar from "Components/calendar/calendar";
 import DropdownRooms from "Main/components/dropdown-rooms/dropdownRooms"
 import DropdownGuests from "Main/components/dropdown-guests/dropdownGuests"
 import ExpandItems from "Main/components/checkbox-expandable/expandItems"
+import makeCarousels from "Main/components/room-carousel/roomCarousel";
 
 import guestsData_searchRoom from "Scripts/myData"
 import { roomsData_1 } from "Scripts/myData"
@@ -13,7 +14,7 @@ import { paginationData_1 } from "Scripts/myData"
 window.onload = function(){
     require("Main/components/text-field/datasetHandler");
     require("Components/range/range");
-    require("Main/components/room-carousel/roomCarousel");
+    makeCarousels();
 
     let pagination_search = new ButtonPagination(paginationData_1, "pagination_search")
     let calendar_booking = new Calendar("calendar_search");
