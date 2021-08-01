@@ -1,5 +1,6 @@
 import "./registration.scss";
+import ExpandItems from "Main/components/checkbox-expandable/expandItems"
 
 window.onload = function () {
-    require("Main/components/checkbox-expandable/checkboxExpandable");
+    let activateExpand = new ExpandItems();
 }
