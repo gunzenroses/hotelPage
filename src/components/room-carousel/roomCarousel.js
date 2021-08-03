@@ -12,7 +12,6 @@ class Carousel {
     this.carouselInputs.querySelectorAll(".room-carousel__radio_real")[0].checked = true;
     this.carouselPictures = this.carousel.querySelector(".room-carousel__pictures");
     this.carouselPictures.style.left = 0;
-    this.leftValue = parseInt(this.carouselPictures.style.left);
     this.init();
   }
 
@@ -23,12 +22,17 @@ class Carousel {
   }
 
   creatChildren() {
+    this.leftValue = parseInt(this.carouselPictures.style.left);
     this.carouselPrev = this.carousel.querySelector(".room-carousel__btn_prev")
       ? this.carousel.querySelector(".room-carousel__btn_prev")
       : null;
     this.carouselNext = (this.carousel.querySelector(".room-carousel__btn_next"))
       ? this.carousel.querySelector(".room-carousel__btn_next")
       : null;
+    this.firstPic = this.carouselInputs.querySelectorAll(".room-carousel__radio_real")[0];
+    this.secondPic = this.carouselInputs.querySelectorAll(".room-carousel__radio_real")[1];
+    this.thirdPic = this.carouselInputs.querySelectorAll(".room-carousel__radio_real")[2];
+    this.forthPic = this.carouselInputs.querySelectorAll(".room-carousel__radio_real")[3];
   }
 
   setupHandlers() {
@@ -47,17 +51,18 @@ class Carousel {
     this.leftValue += 100;
     switch (this.leftValue) {
       case 0:
-        this.carouselInputs.querySelectorAll(".room-carousel__radio_real")[0].checked = true;
+        this.firstPic.checked = true;
         this.carouselPictures.style.left = this.leftValue + "%";
         break;
-      case -100: this.carouselInputs.querySelectorAll(".room-carousel__radio_real")[1].checked = true;
+      case -100: this.secondPic.checked = true;
         this.carouselPictures.style.left = this.leftValue + "%";
         break;
-      case -200: this.carouselInputs.querySelectorAll(".room-carousel__radio_real")[2].checked = true;
+      case -200: this.thirdPic.checked = true;
         this.carouselPictures.style.left = this.leftValue + "%";
         break;
-      case 100: this.leftValue = -300;
-        this.carouselInputs.querySelectorAll(".room-carousel__radio_real")[3].checked = true;
+      case 100: 
+        this.leftValue = -300;
+        this.forthPic.checked = true;
         this.carouselPictures.style.left = this.leftValue + "%";
         break;
     }
@@ -66,17 +71,21 @@ class Carousel {
   nextImage() {
     this.leftValue -= 100;
     switch (this.leftValue) {
-      case -400: this.leftValue = 0;
-        this.carouselInputs.querySelectorAll(".room-carousel__radio_real")[0].checked = true;
+      case -400: 
+        this.leftValue = 0;
+        this.firstPic.checked = true;
         this.carouselPictures.style.left = this.leftValue + "%";
         break;
-      case -100: this.carouselInputs.querySelectorAll(".room-carousel__radio_real")[1].checked = true;
+      case -100: 
+        this.secondPic.checked = true;
         this.carouselPictures.style.left = this.leftValue + "%";
         break;
-      case -200: this.carouselInputs.querySelectorAll(".room-carousel__radio_real")[2].checked = true;
+      case -200: 
+        this.thirdPic.checked = true;
         this.carouselPictures.style.left = this.leftValue + "%";
         break;
-      case -300: this.carouselInputs.querySelectorAll(".room-carousel__radio_real")[3].checked = true;
+      case -300: 
+        this.forthPic.checked = true;
         this.carouselPictures.style.left = this.leftValue + "%";
         break;
     }
