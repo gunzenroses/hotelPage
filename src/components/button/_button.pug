@@ -12,10 +12,9 @@ mixin buttonContainer()
       +buttonItem("button_clear", "Click me")
     .button-row
       +buttonFormSubmit("Перейти к оплате")
-            
+
 
 //- mixins for form-buttons
-
 mixin buttonFormLink(buttonText, buttonOnclick="/some-adress")
   div(class="button_filled")
     a(class="button_filled_inner" href= buttonOnclick)= buttonText
@@ -25,7 +24,6 @@ mixin buttonFormSubmit(buttonText, buttonOnclick="/some-adress")
 
 
 //- mixins for link-buttons
-
 mixin buttonLink(buttonText="", buttonOnclick="/some-adress")
   div(class="button_link")
     a(class="button_link_inner" href= buttonOnclick)= buttonText
@@ -38,9 +36,5 @@ mixin buttonNavLink(buttonText="", buttonOnclick="/some-adress")
 
 
 //- basic mixin for buttons
-
 mixin buttonItem(buttonClass, buttonText)
   button(class="" + buttonClass)= buttonText
-
-
-

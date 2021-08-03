@@ -48,9 +48,7 @@
   }
 }
 
-/*
-    buttomItem()
-*/
+/* buttomItem */
 
 .button_filled {
   position: relative;
@@ -102,9 +100,7 @@
   }
 }
 
-/*
-    button_clear
-*/
+/* button_clear */
 
 .button_clear {
   font-weight: 700;
@@ -125,9 +121,7 @@
   margin-left: 14px;
 }
 
-/*
-    buttonLink
-*/
+/* buttonLink */
 
 .button_link {
   @extend .button_filled;
@@ -156,9 +150,7 @@
   }
 }
 
-/*
-    buttonBiglink
-*/
+/* buttonBiglink */
 
 .button_link_big {
   position: relative;
@@ -180,9 +172,7 @@
   }
 }
 
-/*
-    buttonFormSubmit
-*/
+/* buttonFormSubmit */
 
 .button_submit {
   @extend .button_link_big;
