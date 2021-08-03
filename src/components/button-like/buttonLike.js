@@ -32,9 +32,11 @@ export default class ButtonLike {
 
   render() {
     this.number.textContent = this.data;
-    if (parseInt(this.number.textContent) > 9) {
-      this.likeButton.classList.add("button-like_popular");
-      this.heart.classList.add("button-like__heart_popular");
-    }
+    if (parseInt(this.number.textContent) > 9) this.makePopularClass();
+  }
+
+  makePopularClass(){
+    this.likeButton.classList.add("button-like_popular");
+    this.heart.classList.add("button-like__heart_popular");
   }
 }
