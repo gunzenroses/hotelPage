@@ -42,6 +42,4 @@ let room840 = {
     review: 65,
 }
 
-
-
 export { paginationData_1, guestsData_1, guestsData_booking, guestsData_search, guestsData_searchRoom, roomsData_1, roomsData_2, room888, room840}
