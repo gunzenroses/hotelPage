@@ -9,7 +9,7 @@ export default class Calendar {
     this.buttonNext = this.calendarContainer.querySelector(".date__next");
     this.dateInCalendar = this.calendarContainer.querySelector(".date__month");
     this.daysOfMonth = this.calendarContainer.querySelector(".weeks__days");
-    this.init()
+    this.init();
   }
 
   init() {
@@ -71,59 +71,58 @@ export default class Calendar {
     }
   }
 
+  examineCheckinCheckout() {
+    this.existCheckinCheckout = this.checkin && this.checkout;
+    this.existCheckinOnly = this.checkin && !this.checkout;
+  }
+
   //----------------------------start chooseRange--------------------------------//
 
-  chooseRange(event) {
-    let hasPrevDays = event.target.classList.contains("weeks__day_prev");
-    let hasNextDays = event.target.classList.contains("weeks__day_next");
-    let hasDays = event.target.classList.contains(".weeks__days");
-    let afterToday = (new Date(this.year, this.month, +event.target.innerText) > new Date());
+  chooseRange(e) {
+    let hasPrevDays = e.target.classList.contains("weeks__day_prev");
+    let hasNextDays = e.target.classList.contains("weeks__day_next");
+    let hasDays = e.target.classList.contains(".weeks__days");
+    let afterToday = (new Date(this.year, this.month, +e.target.innerText) > new Date());
     this.examineCheckinCheckout();
     let dayBeforeExistingCheckin = (this.existCheckinOnly)
-          ? (
-              (+this.month < +this.checkin.getMonth()) 
-            ||  
-              (+this.month === +this.checkin.getMonth() &&
-              +event.target.innerText < +this.checkin.getDate())  )
-          : false;
+      ? (
+        (+this.month < +this.checkin.getMonth())
+        ||
+        (+this.month === +this.checkin.getMonth() &&
+          +e.target.innerText < +this.checkin.getDate()))
+      : false;
 
     let dayAfterExistingCheckin = this.existCheckinOnly
-            ? ( +this.month > +this.checkin.getMonth()
-                ||
-                (+this.month === +this.checkin.getMonth() &&
-                +event.target.innerText > +this.checkin.getDate())
-              )
-            : false;
+      ? (+this.month > +this.checkin.getMonth()
+        ||
+        (+this.month === +this.checkin.getMonth() &&
+          +e.target.innerText > +this.checkin.getDate())
+      )
+      : false;
+
     if (!hasPrevDays && !hasNextDays && !hasDays && afterToday) {
       if (this.existCheckinCheckout) this.makeCheckin();
       else if (dayBeforeExistingCheckin) this.makeCheckin();
       else if (dayAfterExistingCheckin) this.makeCheckout();
       else if (!this.checkin && !this.checkout) this.makeCheckin();
     }
-    return this;
-  }
-
-  examineCheckinCheckout(){
-    this.existCheckinCheckout = this.checkin && this.checkout;
-    this.existCheckinOnly = this.checkin && !this.checkout;
   }
 
   makeCheckin() {
-    this.checkin = "";
     this.checkout = "";
-    this.checkin = new Date(this.year, this.month, +event.target.innerText);
+    this.checkin = new Date(this.year, this.month, +e.target.innerText);
     this.render();
   }
 
   makeCheckout() {
-    this.checkout = new Date(this.year, this.month, +event.target.innerText);
+    this.checkout = new Date(this.year, this.month, +e.target.innerText);
     this.render();
   }
 
   //----------------------------end chooseRange--------------------------------//
 
-  applyRange(event) {
-    event.preventDefault();
+  applyRange(e) {
+    e.preDefault();
     if (this.existCheckinCheckout) {
       this.rangeSpanStartMonth = this.months[this.checkin.getMonth()].slice(0, 3);
       this.rangeSpanEndMonth = this.months[this.checkout.getMonth()].slice(0, 3);
@@ -132,12 +131,11 @@ export default class Calendar {
       this.rangeSpan.value = this.rangeSpanText;
     }
     this.calendar.classList.remove("dropdown__show");
-    return this;
   }
 
   //----------------------------end applyStartOrEnd--------------------------------//
-  applyStartOrEnd(event) {
-    event.preventDefault();
+  applyStartOrEnd(e) {
+    e.preDefault();
     this.rangeStart.value = (this.checkin)
       ? this.applyStart()
       : "";
@@ -165,8 +163,8 @@ export default class Calendar {
 
   //----------------------------end applyStartOrEnd--------------------------------//
 
-  resetInput(event) {
-    event.preventDefault();
+  resetInput(e) {
+    e.preDefault();
     let rangeInput = this.rangeSpan;
     let separateInput = this.rangeStart && this.rangeEnd;
     this.checkin = "";
@@ -185,13 +183,11 @@ export default class Calendar {
   showPrevMonth() {
     this.date.setMonth(this.date.getMonth() - 1);
     this.render();
-    return this;
   }
 
   showNextMonth() {
     this.date.setMonth(this.date.getMonth() + 1);
     this.render();
-    return this;
   }
 
   //----------------------------start render--------------------------------//
@@ -201,7 +197,7 @@ export default class Calendar {
     this.month = this.date.getMonth();
     this.day = this.date.getDate();
 
-    //for setting month days in calendar
+    //for setting month's days in calendar
     this.lastDay = new Date(this.year, parseInt(this.month) + 1, 0).getDate();
     this.lastDayPrev = new Date(this.year, parseInt(this.month), 0).getDate();
     this.dayOfWeekFirst = new Date(this.year, parseInt(this.month), 1).getDay();
@@ -211,19 +207,18 @@ export default class Calendar {
     this.daysLeft = (this.dayOfWeekLast === 0) ? 0 : (7 - this.dayOfWeekLast);
     this.dateInCalendar.textContent = `${this.months[this.month]} ${this.year}`;
 
-    this.daysOfMonth.innerHTML = this.renderPrevMonth() +
-      this.renderCurrentMonth() +
-      this.renderNextMonth();
-    return this;
+    this.daysOfMonth.innerHTML = this.renderPrevMonth()
+      + this.renderCurrentMonth()
+      + this.renderNextMonth();
   }
 
   renderPrevMonth() {
     let prevDays = "";
     for (let p = this.prevMonthDays; p > 0; p--) {
       let chechedInPrevMonth = (this.checkin)
-          ? (this.checkin.getMonth() === (this.month - 1) &&
-            this.checkin.getDate() === (this.lastDayPrev - p + 1))
-          : false;
+        ? (this.checkin.getMonth() === (this.month - 1) &&
+          this.checkin.getDate() === (this.lastDayPrev - p + 1))
+        : false;
 
       let checkedOutPrevMonth = (this.checkout)
         ? (this.checkout.getMonth() === (this.month - 1) &&
@@ -231,14 +226,14 @@ export default class Calendar {
         : false;
 
       let checkedInOrOutPrevMonth = (this.checkin && this.checkout)
-        ? ( ( this.checkin.getMonth() === (this.month - 1) && 
-              this.checkin.getDate() < (this.lastDayPrev - p + 1))
-            ||
-            ( this.checkout.getMonth() === (this.month - 1) && 
-              this.checkout.getDate() > (this.lastDayPrev - p + 1))
-            ||
-            ( this.checkin.getMonth() < (this.month - 1) && 
-              this.checkout.getMonth() > (this.month - 1)) ) 
+        ? ((this.checkin.getMonth() === (this.month - 1) &&
+          this.checkin.getDate() < (this.lastDayPrev - p + 1))
+          ||
+          (this.checkout.getMonth() === (this.month - 1) &&
+            this.checkout.getDate() > (this.lastDayPrev - p + 1))
+          ||
+          (this.checkin.getMonth() < (this.month - 1) &&
+            this.checkout.getMonth() > (this.month - 1)))
         : false;
 
       if (chechedInPrevMonth) prevDays += `<div class="weeks__day weeks__day_prev weeks__day_prev_checkedin ">${this.lastDayPrev - p + 1}</div>`;
@@ -262,7 +257,7 @@ export default class Calendar {
           i === this.checkin.getDate())
         : false;
       let checkedOutCurrMonth = (this.checkout)
-        ? ( this.month === this.checkout.getMonth() &&
+        ? (this.month === this.checkout.getMonth() &&
           i === this.checkout.getDate())
         : false;
       let today = (i === new Date().getDate() &&
@@ -271,9 +266,9 @@ export default class Calendar {
 
       let checkedRangeCurrMonth = (this.checkin && this.checkout)
         ? ((this.month === this.checkin.getMonth() &&
-            this.month === this.checkout.getMonth() &&
-            i > this.checkin.getDate() &&
-            i < this.checkout.getDate())
+          this.month === this.checkout.getMonth() &&
+          i > this.checkin.getDate() &&
+          i < this.checkout.getDate())
           ||
           (this.month === this.checkin.getMonth() &&
             this.month < this.checkout.getMonth() &&
@@ -300,7 +295,7 @@ export default class Calendar {
   renderNextMonth() {
     let nextDays = "";
     for (let n = 1; n < this.daysLeft + 1; n++) {
-      let chechedInNextMonth = this.checkedin 
+      let chechedInNextMonth = this.checkedin
         ? (this.checkin.getMonth() === this.month + 1 &&
           this.checkin.getDate() === n)
         : false;
