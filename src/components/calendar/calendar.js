@@ -1,10 +1,10 @@
 export default class Calendar {
   constructor(calendarId) {
-    this.calendarContainer = document.getElementById(calendarId)
-    this.date = new Date()
+    this.calendarContainer = document.getElementById(calendarId);
+    this.date = new Date();
     this.months = ["Январь", "Февраль", "Март", "Апрель",
       "Май", "Июнь", "Июль", "Август",
-      "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"]
+      "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
     this.buttonPrev = this.calendarContainer.querySelector(".date__prev");
     this.buttonNext = this.calendarContainer.querySelector(".date__next");
     this.dateInCalendar = this.calendarContainer.querySelector(".date__month");
@@ -13,11 +13,10 @@ export default class Calendar {
   }
 
   init() {
-    this.render()
-    this.createChildren()
-    this.enableHandlers()
-    this.addEventListener()
-    return this;
+    this.render();
+    this.createChildren();
+    this.enableHandlers();
+    this.addEventListener();
   }
 
   createChildren() {
@@ -27,28 +26,25 @@ export default class Calendar {
       this.mainContainer = this.calendarContainer;
     }
 
-    this.btnApply = this.mainContainer.querySelector(".calendar__buttons_submit")
-    this.btnReset = this.mainContainer.querySelector(".calendar__buttons_reset")
-
     if (this.mainContainer.querySelector("input[name=checkin-checkout]")) {
-      this.rangeSpan = this.mainContainer.querySelector("input[name=checkin-checkout]")
+      this.rangeSpan = this.mainContainer.querySelector("input[name=checkin-checkout]");
     }
     if (this.mainContainer.querySelector("input[name=checkin]")) {
-      this.rangeStart = this.mainContainer.querySelector("input[name=checkin]")
+      this.rangeStart = this.mainContainer.querySelector("input[name=checkin]");
     }
     if (this.mainContainer.querySelector("input[name=checkout]")) {
-      this.rangeEnd = this.mainContainer.querySelector("input[name=checkout]")
+      this.rangeEnd = this.mainContainer.querySelector("input[name=checkout]");
     }
 
     if (this.mainContainer.querySelector(".dropdown__calendar ")) {
       this.calendar = this.mainContainer.querySelector(".dropdown__calendar ");
     }
+
+    this.btnApply = this.mainContainer.querySelector(".calendar__buttons_submit");
+    this.btnReset = this.mainContainer.querySelector(".calendar__buttons_reset");
     this.checkin;
     this.checkout;
-
-    this.existCheckinCheckout = this.checkin && this.checkout;
-    this.existCheckinOnly = this.checkin && !this.checkout;
-    return this;
+    this.examineCheckinCheckout();
   }
 
   enableHandlers() {
@@ -58,7 +54,6 @@ export default class Calendar {
     this.applyRangeHandler = this.applyRange.bind(this);
     this.applyStartOrEndHandler = this.applyStartOrEnd.bind(this);
     this.resetInputHandler = this.resetInput.bind(this);
-    return this;
   }
 
   addEventListener() {
@@ -72,9 +67,8 @@ export default class Calendar {
       this.btnApply.addEventListener("click", this.applyRangeHandler);
     }
     if (this.rangeStart && this.rangeEnd) {
-      this.btnApply.addEventListener("click", this.applyStartOrEndHandler)
+      this.btnApply.addEventListener("click", this.applyStartOrEndHandler);
     }
-    return this;
   }
 
   //----------------------------start chooseRange--------------------------------//
@@ -118,7 +112,7 @@ export default class Calendar {
     this.checkin = "";
     this.checkout = "";
     this.checkin = new Date(this.year, this.month, +event.target.innerText);
-    this.render()
+    this.render();
   }
 
   makeCheckout() {
@@ -151,7 +145,6 @@ export default class Calendar {
       ? this.applyEnd()
       : "";
     this.calendar.classList.remove("dropdown__show");
-    return this;
   }
 
   applyStart() {
@@ -249,8 +242,8 @@ export default class Calendar {
         : false;
 
       if (chechedInPrevMonth) prevDays += `<div class="weeks__day weeks__day_prev weeks__day_prev_checkedin ">${this.lastDayPrev - p + 1}</div>`;
-      else if (checkedOutPrevMonth) prevDays += `<div class="weeks__day weeks__day_prev weeks__day_prev_checkedout ">${this.lastDayPrev - p + 1}</div>`
-      else if (checkedInOrOutPrevMonth) prevDays += `<div class="weeks__day weeks__day_prev weeks__day_ranged_another">${this.lastDayPrev - p + 1}</div>`
+      else if (checkedOutPrevMonth) prevDays += `<div class="weeks__day weeks__day_prev weeks__day_prev_checkedout ">${this.lastDayPrev - p + 1}</div>`;
+      else if (checkedInOrOutPrevMonth) prevDays += `<div class="weeks__day weeks__day_prev weeks__day_ranged_another">${this.lastDayPrev - p + 1}</div>`;
       else prevDays += `<div class="weeks__day weeks__day_prev">${this.lastDayPrev - p + 1}</div>`;
     }
     return prevDays;
@@ -322,7 +315,7 @@ export default class Calendar {
 
       if (chechedInNextMonth) nextDays += `<div class="weeks__day weeks__day_next weeks__day_next_checkedin">${n}</div>`;
       else if (checkedOutNextMonth) nextDays += `<div class="weeks__day weeks__day_next weeks__day_next_checkedout">${n}</div>`;
-      else if (checkedRangeNextMonth) nextDays += `<div class="weeks__day weeks__day_next weeks__day_ranged_another">${n}</div>`
+      else if (checkedRangeNextMonth) nextDays += `<div class="weeks__day weeks__day_next weeks__day_ranged_another">${n}</div>`;
       else nextDays += `<div class="weeks__day weeks__day_next">${n}</div>`;
     }
     return nextDays;
