@@ -10,29 +10,24 @@ export default class ButtonLike {
     this.render();
     this.enableHandlers();
     this.enableEventListeners();
-    return this;
   }
 
   createChildren() {
     this.number = this.likeButton.querySelector('.button-like__number');
     this.heart = this.likeButton.querySelector('.button-like__heart');
-    return this;
   }
 
   enableHandlers() {
     this.buttonLikeIncreaseHandler = this.buttonLikeIncrease.bind(this);
-    return this;
   }
 
   enableEventListeners() {
     this.likeButton.addEventListener('click', this.buttonLikeIncreaseHandler)
-    return this;
   }
 
   buttonLikeIncrease() {
     this.data++;
     this.render();
-    return this;
   }
 
   render() {
@@ -41,6 +36,5 @@ export default class ButtonLike {
       this.likeButton.classList.add("button-like_popular");
       this.heart.classList.add("button-like__heart_popular");
     }
-    return this;
   }
 }
