@@ -69,9 +69,8 @@
     left: 0;
   }
 }
-/*
-    CarouselBackground
-*/
+
+/* CarouselBackground */
 
 .carousel__background_outer {
   @include container($width: 100%, $height: 100%);

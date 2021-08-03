@@ -1,6 +1,4 @@
-/*
-    outer container
-*/
+/* outer container */
 .footer_outer {
   @include containerDimed();
   @include isFlex($direction: column, $align: center);
@@ -33,9 +31,7 @@
   }
 }
 
-/*
-    inner container
-*/
+/* inner container */
 
 .footer__navbar_inner {
   @include container(
@@ -109,9 +105,7 @@
   letter-spacing: 0.0001em;
 }
 
-/*
-    inner container > .footer__info
-*/
+/* inner container > .footer__info */
 
 .footer__info {
   width: 260px;
@@ -140,9 +134,7 @@
   }
 }
 
-/*
-    inner container > .footer__info_more
-*/
+/* inner container > .footer__info_more */
 
 .footer__info_more {
   height: 168px;
@@ -256,9 +248,7 @@
   }
 }
 
-/*
-    inner container > .footer__info_more
-*/
+/* inner container > .footer__info_more */
 
 .footer__info_subscribe {
   width: 260px;
@@ -347,9 +337,7 @@
   }
 }
 
-/*
-    footer__copyright component
-*/
+/* footer__copyright component */
 .footer__copyright {
   @media (max-width: 1440px) {
     width: 100%;

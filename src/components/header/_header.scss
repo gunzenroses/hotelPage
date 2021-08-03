@@ -25,9 +25,7 @@
   
 }
 
-/*
-    logo
-*/
+/* logo */
 .logo__link {
   width: 106px;
   height: 40px;
@@ -63,9 +61,7 @@
   }
 }
 
-/*
-    header__menu
-*/
+/* header__menu */
 
 .header__menu {
   position: relative;
@@ -90,9 +86,7 @@
       }
 }
 
-/*
-    .header__menu > .header__navbar
-*/
+/* .header__menu > .header__navbar */
 
 .header__navbar {
   width: 447px;
@@ -110,9 +104,7 @@
   margin-right: 20px;
 }
 
-/*
-    .header__menu > .header__buttons
-*/
+/* .header__menu > .header__buttons */
 .header__signed .button_navlink:hover,
 .header__navbar a:hover,
 .header__navbar div:hover,
@@ -150,9 +142,7 @@
     }
 }
 
-/*
-    .header__menu > .header__user
-*/
+/* .header__menu > .header__user */
 
 .header__signed {
   height: 30px;
@@ -171,9 +161,7 @@
   color: $darkShadeMiddle;
 }
 
-/*
-    .header__menu > .dropdown__navbar
-*/
+/* .header__menu > .dropdown__navbar */
 
 .dropdown__navbar {
   @include containerDimed();
@@ -188,7 +176,7 @@
   z-index: 2;
 }
 
-// dropdowns in navbar
+/* dropdowns in navbar */
 
 .button_navlink {
   position: relative;
@@ -237,9 +225,7 @@
   z-index: 3;
 }
 
-/*
-    burger menu
-*/
+/* burger menu */
 
 .burger__menu {
   position: relative;
@@ -281,13 +267,7 @@
   top: 9px;
 }
 
-/*
-    media-queries
-*/
-
-
-
-
+/* media-queries */
 
 @media (max-width: 550px) {
   // .header .logo__link {

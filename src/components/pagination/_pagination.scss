@@ -13,7 +13,7 @@
   }
 }
 
-.pagination_bar {
+.pagination__bar {
   height: 75px;
   width: 241px;
   display: flex;
@@ -115,30 +115,6 @@ button {
     z-index: 2;
   }
 }
-
-// .pagination__button_next::before {
-//         position: absolute;
-//         content: "";
-//         background: #fff;
-//         width: 16px;
-//         height: 2px;
-//         top: 19px;
-//         right: 9px;
-//         z-index: 2;
-// }
-
-// .pagination__button_next::after {
-//     position: absolute;
-//     content: "";
-//     top: 14px;
-//     right: 10px;
-//     width: 10px;
-//     height: 10px;
-//     border-color: #fff;
-//     border-style: solid;
-//     border-width: 2px 2px 0 0;
-//     transform: rotate(45deg);
-// }
 
 .pagination__button_prev {
   position: relative;

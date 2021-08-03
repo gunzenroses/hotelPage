@@ -1,9 +1,6 @@
 @import "Main/index";
 
-/*
-    Main container
-*/
-
+/* Main container */
 .search-room {
   @include container(
     $width: 1440px,

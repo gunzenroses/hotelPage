@@ -8,7 +8,6 @@ mixin dateRangeSeparate(calendarId, labelText_1, inputValue_1, labelText_2, inpu
       +dateDropdownSmall(labelText_1, "checkin", inputValue_1, "checkin")
       +dateDropdownSmall(labelText_2, "checkout", inputValue_2, "checkout")
 
-
 mixin dateDropdownSmall(labelText, inputName, inputValue, dateDataType)
   .container_small
     h3.label!= labelText
@@ -16,25 +15,6 @@ mixin dateDropdownSmall(labelText, inputName, inputValue, dateDataType)
       input(type="text" value=inputValue 
       name=inputName placeholder="ДД.ММ.ГГГГ"
       maxlength="10" data-range=dateDataType readonly)
-
-
-//- mixin dateDropdownContainer(inputId_1, labelText_1, inputName_1, inputValue_1, inputId_2, labelText_2, inputName_2, inputValue_2)
-//-     .date__container
-//-         +dateDropdownSmall(inputId_1, labelText_1, inputName_1, inputValue_1)
-//-         +dateDropdownSmall(inputId_2, labelText_2, inputName_2, inputValue_2)
-
-
-//- mixin dateDropdownSmall(inputId, labelText, inputName, inputValue)
-//-     .container_small
-//-         .widget
-//-             label.label(for=inputId)= labelText
-//-             .dropdown__date_masked
-//-                 input(type="text" id=inputId value=inputValue 
-//-                 name=inputName placeholder="ДД.ММ.ГГГГ"
-//-                 maxlength="10" data-rule="date")
-//-             .error
-
-
 
 mixin dateRangeCommon(calendarId, labelText, inputValue, dropdownClassShow)
   div(class="date-range__selector")
@@ -46,37 +26,3 @@ mixin dateRangeCommon(calendarId, labelText, inputValue, dropdownClassShow)
         input(type="text" value=inputValue 
         name="checkin-checkout" placeholder="ДД.ММ - ДД.ММ"
         maxlength="15" data-range="date-range" readonly)
-
-
-
-
-//-dropdownDateFiltered
-  .date__container_medium
-    .widget
-      label(for="date_range_1").label Dropdown
-      .dropdown__date_masked
-        input(type="text" id="date_range_1" value="19 авг - 23 авг"
-        name="dateRange_1" placeholder="ДД.ММ - ДД.ММ"
-        maxlength="15" data-rule="date-range")
-      .error
-
-//-dropdownDate
-  .date__container_small
-    .widget
-      label(for="dropdown_date").label Date dropdown
-      .dropdown__date_masked
-        input(type="text" id="dropdown_date" value="" 
-        name="dateMasked" placeholder="ДД.ММ.ГГГГ" 
-        masked="true" 
-        maxlength="10" data-rule="date")
-      .error
-
-//-dropdownDateValued
-  .date__container_small
-    .widget
-      label(for="dropdown_date").label Date dropdown
-      .dropdown__date_masked
-        input(type="text" id="dropdown_date" value="19.08.2019" 
-        name="dateMasked" placeholder="ДД.ММ.ГГГГ" 
-        maxlength="10" data-rule="date")
-      .error

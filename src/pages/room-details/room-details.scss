@@ -1,9 +1,7 @@
 @import "Main/index";
 @import "Components/chart-donut/chart-donut";
 
-/*
-    Main container
-*/
+/* Main container */
 
 .room-details {
   @include container($width: 1440px, $height: 1937px, $mt: 0, $mb: 0, $ms: auto);
@@ -333,12 +331,7 @@
   }
 }
 
-
-
-
-
 /* Media queries */
-
 @media (max-width: 1250px) {
   .room-details__roomData > div {
     margin-bottom: 25px;

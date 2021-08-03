@@ -6,7 +6,6 @@ mixin dropdownRoomsLabeled(labelText, labelRightText, dropdownContainerId, dropd
     h3(class="label_right")= labelRightText
     +dropdownRoomsItems(dropdownContainerId, dropdownClassShow, inputId)
 
-
 mixin dropdownRoomsItems(dropdownContainerId, dropdownClassShow, inputId)
   div(class="dropdown" id=dropdownContainerId)
     div(class="dropdown__content dropdown__rooms " + dropdownClassShow)

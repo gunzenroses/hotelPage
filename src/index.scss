@@ -1,23 +1,16 @@
-/*
-    Base
-*/
+/* Base */
 @import "./assets/styles/fonts";
 @import "./assets/styles/normalize.scss";
-/*
-    Utils
-*/
+
+/* Utils */
 @import "./assets/styles/mixins";
 @import "./assets/styles/colors";
 
-/*
-    Layout
-*/
+/* Layout */
 @import "./assets/styles/general";
 @import "./assets/styles/select";
 
-/*
-    FormElements
-*/
+/* FormElements */
 @import "Components/text-field/text-field";
 @import "Components/checkbox-expandable/checkbox-expandable";
 @import "Components/date-range-dropdown/date-range-dropdown";
@@ -40,9 +33,7 @@
 @import "Components/dropdown-guests/dropdowns";
 @import "Components/carousel-background/carousel-background";
 
-/*
-    Cards
-*/
+/* Cards */
 @import "Components/card-search/card-search";
 @import "Components/card-registration/card-registration";
 @import "Components/card-booking/card-booking";

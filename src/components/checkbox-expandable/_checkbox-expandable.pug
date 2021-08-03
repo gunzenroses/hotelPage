@@ -21,14 +21,11 @@ mixin checkboxExpandItem(checkboxName, ifChecked, checkboxTitle)
     span.checkbox__fake_expand
     span(class="checkbox__title_expand")= checkboxTitle
 
-
-
 mixin richCheckboxButtons(checkboxName, containerText)
   .richcheckbox__container
     h3.label!= containerText
     +richCheckboxButtonItem(checkboxName, "wide corridor", "Широкий коридор", "Ширина коридоров в номере <br> не менее 91 см.")
     +richCheckboxButtonItem(checkboxName, "help for disabled", "Помощник для инвалидов", "На 1 этаже вас встретит специалист <br> и проводит до номера.")
-
 
 mixin richCheckboxButtonItem(checkboxName, checkboxValue, checkboxTitle, checkboxSubtitle, checkboxSubtitle2)
   label.checkbox_button
