@@ -14,11 +14,11 @@ export default class ExpandItems {
   }
 
   createChildren() {
-    this.dropdownWatchedInits.map(item => {
+    this.dropdownWatchedInits.forEach(item => {
       this.dropdownWatchedParents.push(item.parentElement);
     });
 
-    this.dropdownWatchedParents.map(item => {
+    this.dropdownWatchedParents.forEach(item => {
       this.dropdownWatchedExpands.push(item.querySelector(".dropdown__content"));
     })
   }
@@ -49,7 +49,7 @@ export default class ExpandItems {
   }
 
   expandInner(element){
-    this.dropdownWatchedExpands.map((item, index) => {
+    this.dropdownWatchedExpands.forEach((item, index) => {
       (element.closest(".dropdown__init") != this.dropdownWatchedInits[index])
         ? item.classList.remove("dropdown__show")
         : item.classList.toggle("dropdown__show");
@@ -57,7 +57,7 @@ export default class ExpandItems {
   }
 
   hideElements(){
-    this.dropdownWatchedExpands.map(item => {
+    this.dropdownWatchedExpands.forEach(item => {
       item.classList.remove("dropdown__show");
     })
   }
