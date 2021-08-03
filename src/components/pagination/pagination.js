@@ -62,13 +62,13 @@ export default class ButtonPagination {
     this.leftDif = this.data.visibleNum - parseInt(Math.floor(this.data.visibleNum / 2)) - 1;
     this.max = (parseInt(this.num) + this.leftDif);
 
-    if (this.min < 1){
-      this.min = 1
+    if (this.min < 1) {
+      this.min = 1;
       this.max = this.data.visibleNum;
     }
 
-    if (this.max > this.data.totalNum){
-      this.max = this.data.totalNum
+    if (this.max > this.data.totalNum) {
+      this.max = this.data.totalNum;
       this.min = this.max - (this.data.visibleNum - 1);
     }
   }
@@ -78,7 +78,7 @@ export default class ButtonPagination {
 
     (this.num === 1)
       ? (starting = 1, ending = 3)
-      : (starting = this.min, ending = this.max)
+      : (starting = this.min, ending = this.max);
 
     for (let i = starting; i <= ending; i++) {
       this.pageButtons.appendChild(this.addButton(i));
@@ -98,31 +98,31 @@ export default class ButtonPagination {
   makeNavigationButtons() {
     if (this.num === 1) this.addRestButton();
     if (this.num <= 3) this.addLastButton();
-    (this.num < this.max) 
+    (this.num < this.max)
       ? this.addNextButton()
       : this.addFirstButton();
     if (this.num > 3) this.addPrevButton();
   }
 
-  addRestButton(){
-    this.pageButtons.innerHTML = this.pageButtons.innerHTML + `<button value="4" class="pagination__item">...</button>`
+  addRestButton() {
+    this.pageButtons.innerHTML = this.pageButtons.innerHTML + `<button value="4" class="pagination__item">...</button>`;
   }
 
-  addLastButton(){
-    this.pageButtons.innerHTML = 
-      this.pageButtons.innerHTML + `<button class="pagination__button_last">15</button>`
+  addLastButton() {
+    this.pageButtons.innerHTML =
+      this.pageButtons.innerHTML + `<button class="pagination__button_last">15</button>`;
   }
 
-  addPrevButton(){
+  addPrevButton() {
     this.pageButtons.innerHTML =
       `<button class="pagination__button_prev"></button>` + this.pageButtons.innerHTML;
   }
 
-  addNextButton(){
-    this.pageButtons.innerHTML = this.pageButtons.innerHTML + `<button class="pagination__button_next"></button>`
+  addNextButton() {
+    this.pageButtons.innerHTML = this.pageButtons.innerHTML + `<button class="pagination__button_next"></button>`;
   }
 
-  addFirstButton(){
+  addFirstButton() {
     this.pageButtons.innerHTML = `<button class="pagination__button_first">1</button>` + this.pageButtons.innerHTML;
   }
 
