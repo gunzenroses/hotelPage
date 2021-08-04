@@ -6,6 +6,14 @@ export default function dataValidation(elm) {
     let check;
     let message;
     switch (rule) {
+      case "name":
+        check = /^[a-zA-Z]{2,}$/.test(value);
+        message = "Введите настоящее имя";
+        break;
+      case "surname":
+        check = /^[a-zA-Z]{1,}'?-?[a-zA-Z]{2,}\s?([a-zA-Z]{1,}?)$/.test(value);
+        message = "Введите настоящую фамилию";
+        break;
       case "date":
         check = /^(0[1-9]|[12][0-9]|3[01])[-/.](0[1-9]|1[012])[-/.](20)[2-9][0-9]$/.test(value);
         message = "Введите валидную дату";
