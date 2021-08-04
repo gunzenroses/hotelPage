@@ -14,7 +14,6 @@ mixin cardBooking()
     +buttonFormSubmit("Забронировать")
 
 
-
 mixin bookingTotalPrice(totalPrice)
   .booking-total__row
     .booking-total__text Итого
@@ -34,7 +33,6 @@ mixin bookingInfoItem(infoDesctiption, infoPrice, infoSign = false)
       .booking-info__price!= infoPrice + "₽"
 
 
-
 mixin bookingText(rowSize, bookingNumber, bookingType, bookingPrice)
   if rowSize === "big"
     .booking-text__row
@@ -46,11 +44,11 @@ mixin bookingText(rowSize, bookingNumber, bookingType, bookingPrice)
         span.booking-text__price!= bookingPrice + "₽"
         span.booking-text__period &nbsp;в сутки
   else
-    .card__row_small
-      .card__row_left
-        span.card__sign №
-        span.card__number!= bookingNumber
-        span.card__type!= bookingType 
-      .card__row_right
-        span.card__price!= bookingPrice + "₽"
-        span.card__period &nbsp;в сутки
+    .card-text__row_small
+      .card-text__row_left
+        span.card-text__sign №
+        span.card-text__number!= bookingNumber
+        span.card-text__type!= bookingType 
+      .card-text__row_right
+        span.card-text__price!= bookingPrice + "₽"
+        span.card-text__period &nbsp;в сутки
