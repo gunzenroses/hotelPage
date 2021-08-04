@@ -20,10 +20,10 @@ mixin emailContainer(labelText, labelRightText)
     +label(labelText, labelRightText)
     +email()
 
-mixin emailSubscribeContainer(labelText, labelRightText, newhref)
+mixin emailSubscribeContainer(labelText, labelRightText)
   .widget
     +label(labelText, labelRightText)
-    +emailSubscribe(newhref)
+    +emailSubscribe()
 
 mixin loginContainer(labelText, labelRightText)
   .widget
@@ -50,9 +50,8 @@ mixin birthday()
 mixin email()
   +text("textfield", "Email", "", "email", "30", autofocus=false)
 
-mixin emailSubscribe(newhref)
-  form(method="get" target="_parent" action= newhref)
-    +text("textfield_email", "Email", "", "email", "30", autofocus=false)
+mixin emailSubscribe()
+  +text("textfield_email", "Email", "", "email", "30", autofocus=false)
 
 mixin password()
   +text("textfield", "Пароль", "", "password", "30", autofocus=false)
@@ -71,7 +70,7 @@ mixin text(inputClass, placeholder, valueText, nameText, maxText, autofocus=fals
       input(type="text" placeholder=placeholder, 
         value=valueText name=nameText data-rule=nameText, 
         maxlength=maxText autofocus=autofocus)
-      button(class="arrow_submit") arrow_forward
+      button(type="submit" class="arrow_submit") arrow_forward
     .error
   else
     div(class="" + inputClass)
