@@ -19,8 +19,8 @@ mixin buttonFormLink(buttonText, buttonOnclick="/some-address")
     a(class="button_filled_inner" href= buttonOnclick)= buttonText
 
 
-mixin buttonFormSubmit(buttonText, buttonOnclick="/some-address")
-  button(class="button_submit" type="submit" href= buttonOnclick)= buttonText
+mixin buttonFormSubmit(buttonText)
+  button(class="button_submit" type="submit")= buttonText
 
 
 //- mixins for link-buttons
