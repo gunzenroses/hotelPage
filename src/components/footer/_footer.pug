@@ -16,34 +16,34 @@ mixin footer(footerText = "Бронирование номеров в лучше
                         h3 Навигация
                         .footer__links
                             for navigation in navigations
-                                    +buttonNavbar(navigation, buttonOnclick="#")
+                                    +buttonNavbar(navigation, buttonOnclick="/some-address")
                     .footer__about
                         h3 О нас
                         .footer__links
                             for about in abouts
-                                +buttonNavbar(about, buttonOnclick="#")
+                                +buttonNavbar(about, buttonOnclick="/some-address")
                     .footer__support
                         h3 Служба поддержки
                         .footer__links
                             for support in supports
-                                +buttonNavbar(support, buttonOnclick="#")
+                                +buttonNavbar(support, buttonOnclick="/some-address")
                 //- that's initially hidden
                 .footer__info_hidden
                     .footer__navigation
                         h3.dropdown__init Навигация
                         .footer__navigation_dropdown.dropdown__content
                             for navigation in navigations
-                                +buttonNavbar(navigation, buttonOnclick="#")
+                                +buttonNavbar(navigation, buttonOnclick="/some-address")
                     .footer__about
                         h3.dropdown__init О нас
                         .footer__about_dropdown.dropdown__content
                             for about in abouts
-                                +buttonNavbar(about, buttonOnclick="#")
+                                +buttonNavbar(about, buttonOnclick="/some-address")
                     .footer__support
                         h3.dropdown__init Служба поддержки
                         .footer__support_dropdown.dropdown__content
                             for support in supports
-                                +buttonNavbar(support, buttonOnclick="#")
+                                +buttonNavbar(support, buttonOnclick="/some-address")
                 .footer__info_subscribe
                     h3 Подписка
                     p Получайте специальные предложения и новости сервиса
