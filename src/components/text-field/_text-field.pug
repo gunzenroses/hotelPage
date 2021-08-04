@@ -54,7 +54,8 @@ mixin email()
   +text("textfield", "Email", "", "email", "30", autofocus=false)
 
 mixin emailSubscribe(newhref)
-  +text("textfield_email", "Email", "", "email", "30", href= newhref, autofocus=false)
+  form(method="get" target="_parent" action= newhref)
+    +text("textfield_email", "Email", "", "email", "30", autofocus=false)
 
 mixin password()
   +text("textfield", "Пароль", "", "password", "30", autofocus=false)
@@ -73,7 +74,7 @@ mixin text(inputClass, placeholder, valueText, nameText, maxText, autofocus=fals
       input(type="text" placeholder=placeholder, 
         value=valueText name=nameText data-rule=nameText, 
         maxlength=maxText autofocus=autofocus)
-      button(type="submit" class="arrow_submit") arrow_forward
+      button(class="arrow_submit") arrow_forward
     .error
   else
     div(class="" + inputClass)
@@ -81,54 +82,3 @@ mixin text(inputClass, placeholder, valueText, nameText, maxText, autofocus=fals
         value=valueText name=nameText data-rule=nameText, 
         maxlength=maxText autofocus=autofocus)
     .error
-
-
-
-//- mixin textInput (inputId, labelText, labelRightClass, labelRightText, inputClass, placeholder, rule, autofocus=false, maxlength)
-//-     .widget
-//-         h3.label!= labelText
-//-         span(class="" + labelRightClass)= labelRightText
-//-         div(class="" + inputClass)
-//-             input(type="text" placeholder=placeholder, 
-//-                 value="" name=inputId data-rule=rule autofocus=autofocus,
-//-                 maxlength=maxlength)
-//-         .error
-
-
-//- .widget
-//-     label(for="text").label Text field
-//-     h3.label_right default
-//-     .textField
-//-         input(type="text" id="text" placeholder="Email" 
-//-             value="" name="textField" data-rule="email")
-//-     .error
-
-
-//- textFieldSubscription
-//- .widget
-//-     h3(for="email").label SUBSCRIPTION TEXT FIELD
-//-     .input_email
-//-         input(type="email" placeholder="Email" value="" 
-//-                 name="email" data-rule="email")
-//-     .error
-
-
-//- textFieldMasked
-//- .widget
-//-     label(for="birthday").label Masked text field
-//-     .textField_masked
-//-         input(type="text" value="" id="birthday" 
-//-         name="birthday" placeholder="ДД.ММ.ГГГГ" 
-//-         masked="true" maxlength="10" 
-//-         data-rule="birthday")
-//-     .error
-
-
-//- textFieldFocused
-//- .widget
-//-     label(for="textFieldFocused").label Text field
-//-     h3.label_right hover / focused
-//-     .textField
-//-         input(type="text" id="textFieldFocused" 
-//-         placeholder="This is awesome" 
-//-         value="" name="textFieldFocused" autofocus)
