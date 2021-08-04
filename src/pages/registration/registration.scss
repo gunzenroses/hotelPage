@@ -13,6 +13,7 @@
   @include isFlex($direction: column, $justify: flex-start);
   position: relative;
   background: $light;
+  user-select: none;
 
   @media (max-width: 1440px) {
     width: 100vw;

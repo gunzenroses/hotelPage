@@ -13,6 +13,7 @@
   position: relative;
   overflow: auto; //to avoid margin-collapse
   background: $light;
+  user-select: none;
 
   @media (max-width: 1440px) {
     width: 100vw;

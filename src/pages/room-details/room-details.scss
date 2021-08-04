@@ -9,6 +9,7 @@
   min-width: 320px;
   position: relative;
   background: $light;
+  user-select: none;
 
   @media (max-width: 1440px) {
     width: 100vw;
