@@ -4,7 +4,7 @@ include ../buttons-radio/_buttons-radio.pug
 include ../button-toggle/_button-toggle.pug
 
 mixin cardRegistration()
-  .card-registration
+  form.card-registration(method="get", target="_parent", action="/registration" )
     h1.card__text Регистрация аккаунта
     +name()
     +surname()
@@ -12,7 +12,7 @@ mixin cardRegistration()
     +birthdayContainer("Дата рождения", "")
     +loginContainer("Данные для входа в сервис", "")
     +buttonToggleItem("special offers", false)
-    +buttonFormSubmit("Зарегистрироваться", "registration")
+    +buttonFormSubmit("Зарегистрироваться")
     .card__text_row
       .card__subline Уже есть аккаунт на Toxin
       +buttonFormLink("Войти", "signin")

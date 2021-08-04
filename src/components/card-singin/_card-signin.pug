@@ -2,7 +2,7 @@ include ../text-field/_text-field.pug
 include ../button/_button.pug
 
 mixin cardSignin()
-  .card_signin
+  form.card_signin(method="get", target="_parent", action="/signin")
     h1.card__text Войти
     +login()
     +buttonFormSubmit("Войти")
