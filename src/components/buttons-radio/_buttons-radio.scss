@@ -1,66 +1,68 @@
-.radio__box {
-  //height: 54px;
-  height: 53px;
-  width: 220px;
-  line-height: normal;
-  @include isFlex($direction: column);
+.radio {
+  &__box {
+    //height: 54px;
+    height: 53px;
+    width: 220px;
+    line-height: normal;
+    @include isFlex($direction: column);
+  }
+
+  &__row {
+    @include isFlex($justify: flex-start);
+    width: 220px;
+    height: 24px;
+
+    @media (max-width: 450px) {
+      margin: 0 auto;
+    }
+  }
+
+  &__element {
+    width: 103px;
+    height: 24px;
+    @include isFlex;
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: none;
+    letter-spacing: -0.002em;
+  }
+
+  &__real {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    appearance: none;
+  }
+
+  &__fake {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border: 1px solid $darkShadeLess;
+    border-radius: 50%;
+    background-color: transparent;
+  }
+
+  &__title {
+    display: inline-block;
+    width: 73px;
+    line-height: 19px;
+    letter-spacing: 0.005em;
+    height: 100%;
+    color: $darkShadeMiddle;
+    //vertical-align: middle;
+  }
 }
 
 .radio__box .label {
   letter-spacing: -0.01em;
 }
 
-.radio__row {
-  @include isFlex($justify: flex-start);
-  width: 220px;
-  height: 24px;
-
-  @media (max-width: 450px) {
-    margin: 0 auto;
-  }
-}
-
-.radio__element {
-  width: 103px;
-  height: 24px;
-  @include isFlex;
-  font-weight: 400;
-  font-size: 14px;
-  text-transform: none;
-  letter-spacing: -0.002em;
-}
-
 .radio__element + .radio__element {
   margin-left: 15px;
-}
-
-.radio__real {
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  appearance: none;
-}
-
-.radio__fake {
-  position: relative;
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-  border: 1px solid $darkShadeLess;
-  border-radius: 50%;
-  background-color: transparent;
-}
-
-.radio__title {
-  display: inline-block;
-  width: 73px;
-  line-height: 19px;
-  letter-spacing: 0.005em;
-  height: 100%;
-  color: $darkShadeMiddle;
-  //vertical-align: middle;
 }
 
 .radio__real:checked + .radio__fake::before {
