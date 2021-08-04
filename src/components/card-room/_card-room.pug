@@ -1,0 +1,20 @@
+include ../room-carousel/_room-carousel.pug
+include ../card-booking/_card-booking.pug
+include ../button-rate/_button-rate.pug
+
+mixin room(roomOptions)
+  - var {src = [], bookingNumber = "999", bookingType = false, bookingPrice = 0, starIds = [], starName = inputName, starRate = [], reviewAmount = 0} = roomOptions
+  .card-room
+    +roomCarousel(src, nameForPictures="room " + bookingNumber)
+    .room__info
+      +bookingText("small", bookingNumber, bookingType, bookingPrice)
+      .room__line
+      .card__row_small.p_r_2
+        +buttonRate(...starIds, starName, ...starRate)
+        +review(reviewAmount)
+
+mixin review(reviewAmount)
+  .card__row_right
+    span.card__text-price!= reviewAmount
+    span &nbsp;
+    span.card__text-review Отзывов
