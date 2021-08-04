@@ -1,7 +1,7 @@
+import ButtonLike from "Main/components/button-like/buttonLike";
+import ExpandItems from "Main/components/checkbox-expandable/expandItems";
 
-import "./room-details.scss"
-import ButtonLike from "Main/components/button-like/buttonLike"
-import ExpandItems from "Main/components/checkbox-expandable/expandItems"
+import "./room-details.scss";
 
 window.onload = function () {
     require("Main/components/card-booking/cardBooking");

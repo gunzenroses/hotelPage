@@ -1,7 +1,3 @@
-import "./UIkit.scss"
-import "./UIKit.pug"
-
-
 import ButtonLike from "Main/components/button-like/buttonLike"
 import ButtonPagination from "Components/pagination/pagination"
 import Calendar from "Components/calendar/calendar"
@@ -9,10 +5,12 @@ import DropdownGuests from "Main/components/dropdown-guests/dropdownGuests"
 import DropdownRooms from "Main/components/dropdown-rooms/dropdownRooms"
 import ExpandItems from "Main/components/checkbox-expandable/expandItems"
 import makeCarousels from "Main/components/room-carousel/roomCarousel"
-
 import { paginationData_1 } from "Scripts/myData"
 import { guestsData_1, guestsData_booking } from "Scripts/myData"
 import { roomsData_1, roomsData_2 } from "Scripts/myData"
+
+import "./UIkit.scss"
+import "./UIKit.pug"
 
 window.onload = function () {
     require("Components/range/range");
