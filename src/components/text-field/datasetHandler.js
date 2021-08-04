@@ -1,7 +1,7 @@
 import maskDate from 'Main/components/text-field/datasetMaskDate'
 import dataValidation from 'Main/components/text-field/datasetValidation'
 
-let inputToValidate = document.querySelectorAll('input[data-rule]');
+const inputToValidate = document.querySelectorAll('input[data-rule]');
 
 if (inputToValidate) {
   for (let inputField of inputToValidate) {
