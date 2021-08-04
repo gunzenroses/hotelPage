@@ -29,12 +29,9 @@ mixin loginContainer(labelText, labelRightText)
   .widget
     +label(labelText, labelRightText)
     +login()
-    //- +email()
-    //- .margin__top_10
-    //- +password()
 
 
-//-mixins without labels
+//- mixins without labels
 mixin login()
   .textfield_login
     +email()
@@ -62,7 +59,7 @@ mixin password()
 
 
 
-//-mixins basic
+//- mixins basic
 
 mixin label(labelText, labelRightText)
   h3.label!= labelText
