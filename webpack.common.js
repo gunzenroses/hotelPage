@@ -81,7 +81,6 @@ module.exports = {
         },
             
         plugins: [
-            //new CleanWebpackPlugin(),
             new CopyWebpackPlugin([
                 {from: "src/assets/images", to: "assets/images"},
                 {from: "src/assets/fonts", to: "assets/fonts"},
@@ -104,6 +103,7 @@ module.exports = {
               template: `${PAGES_DIR}/${page}/${page}.pug`,
               chunks: [`${page}`],
               inject: "body",
+              cache: false,
             }))
         ],
 };
