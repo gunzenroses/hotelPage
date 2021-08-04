@@ -101,20 +101,20 @@ export default class Calendar {
       : false;
 
     if (!hasPrevDays && !hasNextDays && !hasDays && afterToday) {
-      if (this.existCheckinCheckout) this.makeCheckin();
-      else if (dayBeforeExistingCheckin) this.makeCheckin();
-      else if (dayAfterExistingCheckin) this.makeCheckout();
-      else if (!this.checkin && !this.checkout) this.makeCheckin();
+      if (this.existCheckinCheckout) this.makeCheckin(e);
+      else if (dayBeforeExistingCheckin) this.makeCheckin(e);
+      else if (dayAfterExistingCheckin) this.makeCheckout(e);
+      else if (!this.checkin && !this.checkout) this.makeCheckin(e);
     }
   }
 
-  makeCheckin() {
+  makeCheckin(e) {
     this.checkout = "";
     this.checkin = new Date(this.year, this.month, +e.target.innerText);
     this.render();
   }
 
-  makeCheckout() {
+  makeCheckout(e) {
     this.checkout = new Date(this.year, this.month, +e.target.innerText);
     this.render();
   }
@@ -122,7 +122,7 @@ export default class Calendar {
   //----------------------------end chooseRange--------------------------------//
 
   applyRange(e) {
-    e.preDefault();
+    e.preventDefault();
     if (this.existCheckinCheckout) {
       this.rangeSpanStartMonth = this.months[this.checkin.getMonth()].slice(0, 3);
       this.rangeSpanEndMonth = this.months[this.checkout.getMonth()].slice(0, 3);
@@ -135,7 +135,7 @@ export default class Calendar {
 
   //----------------------------end applyStartOrEnd--------------------------------//
   applyStartOrEnd(e) {
-    e.preDefault();
+    e.preventDefault();
     this.rangeStart.value = (this.checkin)
       ? this.applyStart()
       : "";
@@ -164,7 +164,7 @@ export default class Calendar {
   //----------------------------end applyStartOrEnd--------------------------------//
 
   resetInput(e) {
-    e.preDefault();
+    e.preventDefault();
     let rangeInput = this.rangeSpan;
     let separateInput = this.rangeStart && this.rangeEnd;
     this.checkin = "";
