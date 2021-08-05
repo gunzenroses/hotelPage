@@ -31,11 +31,12 @@ module.exports = {
             extensions: [".scss", ".sass", ".js"],
             alias: {
                 Main: path.resolve(__dirname, "src"),
-                Images: path.resolve(__dirname, "src/assets/images/"), // Relative path of images
-                Fonts: path.resolve(__dirname, "src/assets/fonts/"),   // Relative path of fonts
+                Fonts: path.resolve(__dirname, "src/assets/fonts/"),
+                Images: path.resolve(__dirname, "src/assets/images/"),
+                Scripts: path.resolve(__dirname, "src/assets/scripts/"),
+                Styles: path.resolve(__dirname, "src/assets/styles/"),
                 Components: path.resolve(__dirname, "src/components/"),
                 Pages: path.resolve(__dirname, "src/pages/"),
-                Scripts: path.resolve(__dirname, "src/assets/scripts/"),
             },
             modules: [path.resolve(__dirname, 'src'), 'node_modules'],
         },
@@ -89,15 +90,6 @@ module.exports = {
             /*
                 Pages
             */
-            
-            new HtmlWebpackPlugin({
-                filename: "index",
-                minify: true,
-                template: path.resolve(__dirname, "./src/index.pug"),
-                chunks: ["app"],
-                inject: "body",
-            }),
-
             ...PAGES.map(page => new HtmlWebpackPlugin({
               filename: `${page}`,
               template: `${PAGES_DIR}/${page}/${page}.pug`,

@@ -4,11 +4,12 @@
     "baseUrl": "./",
     "paths": {
       "Main/*": ["src/*"],
-      "Images/*": ["src/assets/images/*"],
       "Fonts/*": ["src/assets/fonts/*"],
+      "Images/*": ["src/assets/images/*"],
+      "Scripts/*": ["src/assets/scripts/*"],
+      "Styles/*": ["src/assets/styles/*"],
       "Components/*": ["src/components/*"],
       "Pages/*": ["src/pages/*"],
-      "Scripts/*": ["src/assets/scripts/*"],
     }
   },
   "include": ["./src"],
