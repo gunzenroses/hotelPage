@@ -10,7 +10,6 @@ export default class DropdownGuests {
   }
 
   init() {
-    console.log(1)
     this.createChildren();
     this.dropdownItems.map((_, i) => { this.showItemNumber(i) });
     this.totalGuestsCount();
