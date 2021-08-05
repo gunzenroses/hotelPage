@@ -1,17 +1,19 @@
-require("webpack-jquery-ui/slider");
+require("ion-rangeslider");
 
-$(function () {
-  $("#range_1").slider({
-    range: true,
-    min: 0,
-    max: 15000,
-    values: [5000, 10000],
-    animate: "fast",
-    slide: function (event, ui) {
-      $("#amount").val(ui.values[0] + "₽ - " + ui.values[1] + "₽");
-    }
-  });
+$("#range_1").ionRangeSlider({
+  type: "double",
+  min: 0,
+  max: 15000,
+  from: 5000,
+  to: 10000,
+  hide_min_max: true,
+  hide_from_to: true,
+  step: 100,
+  onStart: changeValue,
+  onChange: changeValue,
+})
 
-  $("#amount").val($("#range_1").slider("values", 0) +
-    "₽ - " + $("#range_1").slider("values", 1) + "₽");
-});
+function changeValue(data){
+  const rangeValue = $(data.input).siblings(".range-slider__value");
+  rangeValue.val(`${data.from_pretty}₽ - ${data.to_pretty}₽`);
+}
