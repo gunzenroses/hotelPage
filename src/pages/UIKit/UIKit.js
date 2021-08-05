@@ -19,7 +19,11 @@ window.onload = function () {
     require("Main/components/card-booking/cardBooking");
     makeCarousels();
 
-    let activateExpand = new ExpandItems();
+    let dropdownWatches = Array.from(document.querySelectorAll(".dropdown__watch"));
+    dropdownWatches.forEach(item => {
+      new ExpandItems(item);
+    })
+    
     let likeButton_1 = new ButtonLike("buttonLike_1", 2);
     let likeButton_2 = new ButtonLike("buttonLike_2", 12);
     let likeButtons_3 = new ButtonLike("likes_author_1", 12);
