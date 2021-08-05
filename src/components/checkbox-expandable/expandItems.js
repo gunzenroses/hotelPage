@@ -1,6 +1,8 @@
 export default class ExpandItems {
-  constructor() {
-    this.dropdownWatch = document.querySelector(".dropdown__watch");
+  constructor(dropdownWatch) {
+    this.dropdownWatch = dropdownWatch
+      ? dropdownWatch
+      : document.querySelector(".dropdown__watch");
     this.dropdownWatchedInits = Array.from(this.dropdownWatch.querySelectorAll(".dropdown__init"));
     this.dropdownWatchedParents = [];
     this.dropdownWatchedExpands = [];
