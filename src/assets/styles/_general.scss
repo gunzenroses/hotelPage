@@ -103,7 +103,7 @@ button {
 
 .container_small {
   @include isFlex($direction: column);
-  width: 150px;
+  width: 151px;
 
   @media (max-width: 450px){
     width: calc(150/320*100%);
