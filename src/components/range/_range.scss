@@ -6,6 +6,18 @@
   @include isFlex($direction: column, $justify: flex-start);
 }
 
+.range__container > .label {
+  margin-top: 2px;
+}
+
+.range__container > .label_right {
+  margin-top: 0px;
+}
+
+.range-slider__value {
+  margin-right: -2px;
+}
+
 .range__info {
   font-size: 0.857rem;
   line-height: 1.045rem;
@@ -22,6 +34,7 @@
   height: 16px;
   display: block;
   user-select: none;
+  top: -1px;
 }
 
 .irs-line {

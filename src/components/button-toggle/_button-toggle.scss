@@ -9,7 +9,9 @@
     width: 100%;
     height: 58px;
     margin-top: 11px;
-    margin-left: -1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   &__element {
@@ -57,7 +59,7 @@
   &__title {
     display: inline-block;
     color: $darkShadeMore;
-    letter-spacing: 0.001em;
+    letter-spacing: .005em;
     line-height: 20px;
   }
 }
@@ -82,5 +84,6 @@
 }
 
 .toggle__container > .label {
-  margin-left: -2px;
+  margin-left: -1px;
+  letter-spacing: -0.02em;
 }

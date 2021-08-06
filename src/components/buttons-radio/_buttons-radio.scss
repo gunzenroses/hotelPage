@@ -1,7 +1,6 @@
 .radio {
   &__box {
-    //height: 54px;
-    height: 53px;
+    height: 54px;
     width: 220px;
     line-height: normal;
     @include isFlex($direction: column);
@@ -18,9 +17,10 @@
   }
 
   &__element {
-    width: 103px;
+    width: 104px;
     height: 24px;
     @include isFlex;
+    justify-content: flex-start;
     font-weight: 400;
     font-size: 14px;
     text-transform: none;
@@ -58,7 +58,7 @@
 }
 
 .radio__box .label {
-  letter-spacing: -0.01em;
+  letter-spacing: 0.01em;
 }
 
 .radio__element + .radio__element {

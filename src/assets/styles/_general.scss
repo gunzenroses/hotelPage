@@ -24,6 +24,7 @@ body {
   color: $darkShadeMore;
   margin: 0 auto;
   padding: 0;
+  background-color: deeppink;
 }
 
 h1,
@@ -189,11 +190,10 @@ input {
 
 .error {
   font-size: 12px;
-  position: absolute;
+  position: relative;
   display: block;
   color: red;
-  bottom: -20px;
-  left: 0;
+  height: fit-content;
 }
 
 fieldset {
@@ -247,7 +247,11 @@ fieldset {
 }
 
 .width-and-heigh_266 > div {
-  margin-bottom: 19px;
+  margin-bottom: 20px;
+}
+
+.width-and-heigh_266 .label_right {
+  margin-top: 2px;
 }
 
 .p_r_2 {

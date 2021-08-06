@@ -1,18 +1,10 @@
-// .container_button-rate {
-//   width: 260px;
-//   height: 55px;
-//   @include isFlex($direction: column);
-//   margin-top: 40px;
-// }
-
 .button-rate {
   display: flex;
   flex-direction: row-reverse;
-  //width: 119px;
   width: 120px;
   height: 24px;
   margin: 0;
-  font-size: 27px;
+  font-size: 29px;
   line-height: 21px;
   cursor: pointer;
 }

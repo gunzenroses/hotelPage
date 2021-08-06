@@ -4,8 +4,8 @@
   padding-left: 29px;
   padding-right: 29px;
   padding-top: 39px;
-  width: 380px;
-  height: 646px;
+  width: 382px;
+  height: 650px;
 
   @media (max-width: 400px) {
     padding: 25px 30px;
@@ -16,28 +16,27 @@
 }
 
 .card-registration > .textfield:first-of-type {
-  //margin-top: 20.5px;
-  margin-top: 19.5px;
+  margin-top: 21px;
 }
 
 .card-registration > .textfield:nth-of-type(3) {
   margin-top: 10px;
 }
 
-.card-registration > .radio_row {
+.card-registration > .radio__row {
   margin-top: 10px;
 }
 
 .card-registration > div:nth-of-type(6) {
-  margin-top: 19px;
+  margin-top: 21px;
 }
 
 .card-registration > div:nth-of-type(7) {
   margin-top: 20px;
 }
 
-.card-registration > .toggle_element {
-  margin-top: 10px;
+.card-registration > .toggle__element {
+  margin-top: 6px;
 }
 
 .card-registration > .button_submit {
@@ -48,4 +47,8 @@
 .card-registration > .card__text_row {
   //margin-top: 30px;
   letter-spacing: 0.005em;
+}
+
+.card-registration .label {
+  letter-spacing: .006em;
 }

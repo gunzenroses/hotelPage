@@ -3,8 +3,8 @@
 .card-booking {
   @include containerShadowed();
   @include isFlex($direction: column, $justify: flex-start);
-  width: 380px;
-  height: 511px;
+  width: 382px;
+  height: 513px;
   padding-top: 48px;
   padding-left: 29px;
   padding-right: 29px;
@@ -17,19 +17,19 @@
 }
 
 .card-booking > div:nth-of-type(2) {
-  margin-top: 12px;
+  margin-top: 8px;
 }
 
 .card-booking > div:nth-of-type(3) {
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 .card-booking > div:nth-of-type(4) {
-  margin-top: 19px;
+  margin-top: 20px;
 }
 
 .card-booking > div:nth-of-type(7) {
-  margin-top: 20px;
+  margin-top: 21px;
   width: 100%;
 
   @media (max-width: 450px) {
@@ -40,15 +40,14 @@
 }
 
 .card-booking > button {
-  //margin-top: 19px;
-  margin-top: 19.5px;
+  margin-top: 21.5px;
   padding-right: 5px;
   padding-bottom: 2px;
 }
 
 .booking-text {
   &__row {
-    width: 320px;
+    width: 321px;
     height: 30px;
     font-weight: 700;
     position: relative;
@@ -110,7 +109,7 @@
 .booking-info {
   &__row {
     @include isFlex();
-    width: 318px;
+    width: 320px;
     min-height: 24px;
     font-size: 14px;
     font-weight: 400;
@@ -165,7 +164,7 @@
     display: inline-block;
     width: 75px;
     text-align: right;
-    letter-spacing: 0.005em;
+    letter-spacing: .002em;
   }
 }
 
@@ -185,7 +184,7 @@
   &__line {
     display: flex;
     align-items: flex-end;
-    width: 190px;
+    width: 191px;
     height: 19px;
     border-bottom: 1px dotted $darkShadeLess;
 
