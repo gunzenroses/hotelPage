@@ -10,8 +10,8 @@
   );
   @include isFlex($direction: column);
   justify-content: flex-start;
-  padding-top: 140px;
-  padding-bottom: 140px;
+  padding-top: 142px;
+  padding-bottom: 132px;
   position: relative;
   overflow: auto; //to avoid margin-collapse
   background: $background;

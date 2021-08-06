@@ -2,7 +2,7 @@
   @include containerDimed();
   @include isFlex($align: center);
   position: relative;
-  padding: 15px 140px;
+  padding: 14px 133px 15px 140px;
   width: 100%;
   height: 70px;
   margin: 0 auto;
@@ -49,8 +49,8 @@
 
 .logo__name {
   position: relative;
-  width: 54px;
-  height: 14px;
+  width: 52px;
+  height: 17px;
   background: url(/assets/images/logo/logo__name.svg);
   background-position: center;
   background-size: initial;
@@ -92,7 +92,7 @@
   width: 447px;
   height: 21px;
   @include isFlex($align: center, $justify: flex-end);
-  margin-right: 20px;
+  margin-right: 22px;
 
   @media (max-width: 1070px) {
       display: none;

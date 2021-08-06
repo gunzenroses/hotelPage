@@ -3,7 +3,7 @@
   @include containerDimed();
   @include isFlex($direction: column, $align: center);
   width: 100%;
-  height: 443px;
+  height: 445px;
   margin: 0 auto;
 
   @media (max-width: 1440px) {
@@ -19,7 +19,7 @@
 .footer__navbar_outer {
   width: 100%;
   //width: 1440px;
-  height: 372px;
+  height: 375px;
 
   @media (max-width: 1440px) {
     width: 100%;
@@ -35,12 +35,13 @@
 
 .footer__navbar_inner {
   @include container(
-    $width: 1160px,
+    $width: 1167px,
     $height: 172px,
-    $mt: 100px,
+    $mt: 101px,
     $ms: 140px,
-    $mb: 100px
+    $mb: 99px
   );
+  margin-right: 133px;
   @include isFlex($justify: space-between, $wrap: wrap);
   position: relative;
 
@@ -91,7 +92,7 @@
 }
 
 .footer__navbar_inner > div:nth-of-type(2) {
-  margin-right: 50px;
+  margin-right: 49px;
 
   @media (max-width: 1440px) {
     margin-right: 0;
@@ -102,14 +103,16 @@
 }
 
 .footer__navbar_inner p {
-  letter-spacing: 0.0001em;
+  letter-spacing: .0001em;
+  line-height: 1.76rem;
+  font-size: 14.1px;
 }
 
 /* inner container > .footer__info */
 
 .footer__info {
   width: 260px;
-  height: 130px;
+  height: 131px;
   @include isFlex($direction: column);
   letter-spacing: 0.001em;
 
@@ -169,7 +172,7 @@
 }
 
 .footer__about {
-  width: 200px;
+  width: 201px;
   height: 168px;
   @include isFlex($direction: column);
 
@@ -251,7 +254,7 @@
 /* inner container > .footer__info_more */
 
 .footer__info_subscribe {
-  width: 260px;
+  width: 261px;
   height: 148px;
   @include isFlex($direction: column, $justify: flex-start);
   padding-top: 4px; //6px
@@ -274,7 +277,7 @@
 }
 
 .footer__info_more .button_navlink {
-  letter-spacing: 0;
+  letter-spacing: .01em;
 }
 
 /* Media queries */
@@ -363,9 +366,9 @@
 
 .footer__copyright_inner {
   @include container(
-    $width: 1164px,
+    $width: 1172px,
     $height: 24px,
-    $mt: 24px,
+    $mt: 23px,
     $ms: 140px,
     $mb: 22px
   );
@@ -398,8 +401,9 @@
 
 .copyright__text {
   height: 18px;
-  letter-spacing: 0.0001em;
-  margin-top: 3px;
+  letter-spacing: .003em;
+  margin-top: 6px;
+  font-size: 14.03px;
 }
 
 .copyright__social {

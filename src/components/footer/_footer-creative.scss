@@ -1,8 +1,9 @@
 .footer__creative {
   @include containerDimed();
-  height: 367px;
-  width: 768px;
-  margin: 0 auto;
+  height: 371px;
+  width: 773px;
+  margin-left: 338px;
+  margin-top: 0;
 
   @media (max-width: 800px) {
     width: 100%;
@@ -19,10 +20,9 @@
   @include container(
     $width: 560px,
     $height: 127px,
-    $mt: 120px,
-    $ms: 104px,
-    $mb: 120px
+    $mt: 122px,
   );
+  margin-left: 106px;
   @include isFlex($direction: column, $justify: flex-start, $align: center);
   position: relative;
 
