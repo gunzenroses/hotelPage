@@ -9,12 +9,12 @@ mixin room(roomOptions)
     .room__info
       +bookingText("small", bookingNumber, bookingType, bookingPrice)
       .room__line
-      .card__row_small.p_r_2
+      .card-text__row_small.p_r_2
         +buttonRate(...starIds, starName, ...starRate)
         +review(reviewAmount)
 
 mixin review(reviewAmount)
-  .card__row_right
-    span.card__text-price!= reviewAmount
+  .card-text__row_right
+    span.card-text__price!= reviewAmount
     span &nbsp;
-    span.card__text-review Отзывов
+    span.card-text__review Отзывов
