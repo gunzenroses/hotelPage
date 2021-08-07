@@ -3,7 +3,7 @@
   @include containerDimed();
   @include isFlex($direction: column, $align: center);
   width: 100%;
-  height: 445px;
+  height: 444px;
   margin: 0 auto;
 
   @media (max-width: 1440px) {
@@ -18,8 +18,7 @@
 
 .footer__navbar_outer {
   width: 100%;
-  //width: 1440px;
-  height: 375px;
+  height: 374px;
 
   @media (max-width: 1440px) {
     width: 100%;
@@ -35,10 +34,10 @@
 
 .footer__navbar_inner {
   @include container(
-    $width: 1167px,
+    $width: 1166px,
     $height: 172px,
     $mt: 101px,
-    $ms: 140px,
+    $ms: 141px,
     $mb: 99px
   );
   margin-right: 133px;
@@ -75,8 +74,8 @@
   }
 }
 
-.footer__navbar_inner > div:first-of-type {
-  margin-right: 40px;
+.footer__navbar_inner > .footer__info {
+  margin-right: 39px;
 
   @media (max-width: 1440px) {
     margin-right: 20px;
@@ -91,8 +90,8 @@
   }
 }
 
-.footer__navbar_inner > div:nth-of-type(2) {
-  margin-right: 49px;
+.footer__navbar_inner > .footer__info_more {
+  margin-right: 51px;
 
   @media (max-width: 1440px) {
     margin-right: 0;
@@ -104,7 +103,7 @@
 
 .footer__navbar_inner p {
   letter-spacing: .0001em;
-  line-height: 1.76rem;
+  line-height: 1.8rem;
   font-size: 14.1px;
 }
 
@@ -112,7 +111,7 @@
 
 .footer__info {
   width: 260px;
-  height: 131px;
+  height: 130px;
   @include isFlex($direction: column);
   letter-spacing: 0.001em;
 
@@ -141,7 +140,7 @@
 
 .footer__info_more {
   height: 168px;
-  width: 550px;
+  width: 548px;
   @include isFlex($justify: flex-start);
   //padding-top: 5px;
   padding-top: 4px;
@@ -167,8 +166,9 @@
     .footer__info_more > divs
 */
 .footer__navbar_inner h3 {
-  letter-spacing: -0.01em;
-  font-size: 0.87rem;
+  letter-spacing: -.01em;
+  font-size: .874rem;
+  margin-top: 1px;
 }
 
 .footer__about {
@@ -206,7 +206,7 @@
 }
 
 .footer__navigation {
-  width: 200px;
+  width: 201px;
   height: 168px;
   @include isFlex($direction: column);
 
@@ -225,8 +225,7 @@
 .footer__links {
   width: 100%;
   height: 150px;
-  //margin-top: 21px;
-  margin-top: 22px;
+  margin-top: 20px;
   @include isFlex($direction: column, $align: flex-start, $justify: start);
 }
 
@@ -254,7 +253,7 @@
 /* inner container > .footer__info_more */
 
 .footer__info_subscribe {
-  width: 261px;
+  width: 260px;
   height: 148px;
   @include isFlex($direction: column, $justify: flex-start);
   padding-top: 4px; //6px
@@ -265,12 +264,10 @@
 }
 
 .footer__info_subscribe > p {
-  //margin-top: 14px;
-  margin-top: 19px;
+  margin-top: 18px;
 }
 
 .footer__form {
-  //margin-top: 22px;
   position: relative;
   margin-top: 22.5px;
   width: 100%;
@@ -369,9 +366,10 @@
     $width: 1172px,
     $height: 24px,
     $mt: 23px,
-    $ms: 140px,
+    $ms: 127px,
     $mb: 22px
   );
+  margin-left: 141px;
   @include isFlex($align: flex-start);
 
   @media (max-width: 1440px) {
