@@ -141,10 +141,6 @@
   }
 }
 
-.form-elements__element_third > div:first-of-type {
-  //
-}
-
 .form-elements__element_third > div:nth-of-type(2) {
   margin-top: 42px;
 }
@@ -277,10 +273,6 @@
     width: 100%;
   }
 
-  &__container_first > div:first-of-type {
-    // margin-bottom: 21px;
-  }
-
   &__container_first > div:nth-of-type(2) {
     margin-top: 21px;
   }
@@ -298,10 +290,6 @@
     min-height: 274px;
     width: 100%;
     margin-top: 37.5px;
-  }
-
-  &__container_second > div:first-of-type {
-    //
   }
 
   &__container_second > div:nth-of-type(2) {
