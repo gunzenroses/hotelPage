@@ -1,10 +1,9 @@
 .card_signin {
   @include containerShadowed();
   @include isFlex($direction: column, $justify: flex-start);
-  width: 381px;
-  //height: 360px;
-  height: 358px;
-  padding: 38px 30px 40px 29px;
+  width: 383px;
+  height: 360px;
+  padding: 38px 29px 40px 29px;
 
   @media (max-width: 400px) {
     padding: 25px 20px;
@@ -18,5 +17,5 @@
 }
 
 .card_signin > button {
-  margin-top: 15.5px;
+  margin-top: 16px;
 }
