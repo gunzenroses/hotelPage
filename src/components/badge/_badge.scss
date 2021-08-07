@@ -15,10 +15,6 @@
   }
 }
 
-.badge + .badge {
-  margin-top: 20px;
-}
-
 .badge__info > .info__description {
   margin-top: -1px;
 }
@@ -36,19 +32,17 @@
   &__main {
     font-family: $Montserrat;
     font-size: 14px;
-    //line-height: 24.5px;
-    line-height: 25px;
+    line-height: 24px;
     font-weight: 700;
-    letter-spacing: 0.001em;
+    letter-spacing: 0.01em;
   }
 
   &__additional {
     font-family: $Montserrat;
     font-size: 14px;
-    //line-height: 24.5px;
-    line-height: 22px;
+    line-height: 24px;
     font-weight: 400;
-    letter-spacing: 0.001em;
+    letter-spacing: 0.01em;
     margin-top: 0.5px;
   }
 }

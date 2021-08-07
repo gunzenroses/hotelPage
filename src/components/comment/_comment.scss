@@ -25,7 +25,7 @@
 }
 
 .comment__body {
-  margin-top: 9px;
+  margin-top: 7px;
   margin-left: 2px;
   min-height: 51px;
   @include isFlex($justify: start);
@@ -35,11 +35,10 @@
 
 .comment__text {
   margin-left: 14px;
-  margin-top: -1px;
   min-height: 72px;
   color: $darkShadeMore;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 25px;
   letter-spacing: .003em;
   font-family: $Montserrat;
   font-weight: 400;
@@ -54,6 +53,6 @@
 }
 
 .comment__likes {
-  margin-top: 0.5px;
+  margin-top: 2.5px;
   margin-left: 2px;
 }
