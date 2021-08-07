@@ -16,20 +16,18 @@
   }
 }
 
-.card-booking > div:nth-of-type(2) {
+.card-booking > .date-range__selector {
   margin-top: 8px;
 }
 
-.card-booking > div:nth-of-type(3) {
+.card-booking > .dropdown__container {
   margin-top: 25px;
+  margin-bottom: 10px;
+
 }
 
-.card-booking > div:nth-of-type(4) {
-  margin-top: 20px;
-}
-
-.card-booking > div:nth-of-type(7) {
-  margin-top: 21px;
+.card-booking > .booking-total__row {
+  margin-top: 32px;
   width: 100%;
 
   @media (max-width: 450px) {
@@ -115,8 +113,7 @@
     font-weight: 400;
     line-height: 18px;
     color: $darkShadeMore;
-    //letter-spacing: 0.005em;
-    margin-bottom: 10px;
+    margin-top: 10px;
     margin-left: 1px;
 
     @media (max-width: 450px) {
@@ -138,6 +135,17 @@
     }
   }
 
+  &__description_short {
+    @include isFlex();
+    width: 172px;
+    letter-spacing: 0.0001em;
+
+    @media (max-width: 450px) {
+      width: calc(100% - 120px);
+      max-width: 170px;
+    }
+  }
+
   &__sign {
     width: 20px;
     height: 20px;
@@ -145,7 +153,7 @@
     border-radius: 50%;
     border: 1px solid $darkShadeLess;
     position: relative;
-    margin-left: -5px;
+    margin-left: 2px;
     margin-top: -1px;
 
     &::before {
