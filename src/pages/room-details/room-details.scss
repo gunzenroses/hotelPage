@@ -10,6 +10,7 @@
   position: relative;
   background: $light;
   user-select: none;
+  overflow: hidden;
 
   @media (max-width: 1440px) {
     width: 100vw;
@@ -18,10 +19,8 @@
 }
 
 .room-details__content {
-  // width: 100%;
   min-width: 320px;
-  height: 1424px;
-  //max-height: 1424px;
+  height: 1433px;
   margin-left: auto;
   margin-right: auto;
   position: relative;
@@ -36,7 +35,7 @@
 
 .room-details__view {
   width: 100%;
-  height: 485px;
+  height: 489px;
   @include isFlex($justify: flex-start);
   overflow: hidden;
 
@@ -50,7 +49,7 @@
 }
 
 .room-details__view_main {
-  width: 981px;
+  width: 987px;
   height: 100%;
   overflow: hidden;
 
@@ -64,7 +63,7 @@
 }
 
 .room-details__view_miniature {
-  width: 459px;
+  width: 462px;
   height: 100%;
   overflow: hidden;
 
@@ -102,10 +101,8 @@
 
 .room-details__info_outer {
   width: 100%;
-  height: 939px;
-  padding: 70px 140px;
-  padding-left: 139px;
-  //background: rgb(152, 187, 152);
+  height: 944px;
+  padding: 70px 140px 70px 141px;
 
   @media (max-width: 1440px) {
     width: 100%;
@@ -115,11 +112,10 @@
 }
 
 .room-details__info_inner {
-  width: 1161px;
+  width: 1167px;
   height: 799px;
   @include isFlex();
   position: relative;
-  //background: orange;
 
   @media (max-width: 1440px) {
     margin: 5% auto;
@@ -148,9 +144,8 @@
 
 .room-details__description {
   width: 712px;
-  height: 799px; // 100%
+  height: 799px;
   @include isFlex($justify: flex-start, $wrap: wrap);
-  //background: blue;
 
   @media (max-width: 1250px) {
     height: auto;
@@ -169,8 +164,8 @@
 }
 
 .room-details__roomData {
-  width: 100%;
-  @include isFlex($justify: flex-start);
+  width: 675px;
+  @include isFlex;
 
   @media (max-width: 1250px) {
     flex-direction: column;
@@ -189,7 +184,7 @@
 
 .room-details__roomInfo {
   width: 273px;
-  height: 291px;
+  height: 295px;
   @include isFlex($direction: column);
   margin-right: 88px;
   background: white;
@@ -202,6 +197,7 @@
 .room-details__roomImpression {
   width: 311px;
   height: 170px;
+  @include isFlex($direction: column);
   background: white;
 
   @media (max-width: 450px) {
@@ -210,10 +206,12 @@
 }
 
 .room-details__reviews {
-  width: 710px;
-  height: 306px;
+  position: relative;
+  width: 100%;
+  height: 331px;
   background: white;
   margin-top: 10px;
+  @include isFlex($direction: column);
 
   @media (max-width: 970px) {
     width: 100%;
@@ -222,27 +220,36 @@
   }
 }
 
-.room-details__reviews > div:nth-of-type(3) {
-  margin-top: 20px;
+.reviews__info  {
+  @extend .info__additional;
+  position: absolute;
+  right: -2px;
+  top: 2px;
 }
 
 .room-details__rules {
+  @include isFlex($direction: column);
   width: 292px;
-  height: 160px;
+  height: 158px;
   margin-right: 70px;
   background: white;
-  margin-top: 30px;
+  margin-top: 7px;
 
   @media (max-width: 1250px) {
     margin-right: 0;
   }
 }
 
+.room-details__rules .room-details__text {
+  margin-left: 20px;
+}
+
 .room-details__cancellation {
+  @include isFlex($direction: column);
   width: 341px;
-  height: 140px;
+  height: 137px;
   background: white;
-  margin-top: 30px;
+  margin-top: 7px;
 
   @media (max-width: 1250px) {
     width: calc(100% - 292px - 20px);
@@ -258,42 +265,11 @@
   letter-spacing: -0.001em;
 }
 
-.room-details__roomInfo > .room-details__text,
-.room-details__roomImpression > .room-details__text,
-.room-details__reviews > .room-details__text {
-  margin-bottom: 21px;
-}
-
-.room-details__rules > .room-details__text,
-.room-details__cancellation > .room-details__text {
-  margin-bottom: 18px;
-}
-
-.room-details__rules > .room-details__text {
-  margin-left: 20px;
-}
-
 .room-details__cancellation_info {
   width: 100%;
   height: auto;
-  font-size: 14px;
-  line-height: 21;
   color: $darkShadeMore;
-  overflow: hidden;
-  float: left;
-  letter-spacing: 0.0001em;
-}
-
-.room-details__booking .booking__text_type {
-  margin-left: 8px;
-}
-
-.room-details__booking .booking-total_line {
-  width: 180px;
-
-  @media (max-width: 450px) {
-    width: calc(100% - 140px);
-  }
+  letter-spacing: .01em;
 }
 
 .footer__info_more .footer__links {
@@ -318,6 +294,26 @@
   }
 }
 
+.room-details__booking .booking-total__row {
+  margin-top: 42px;
+}
+
+.room-details__booking .booking-total__line {
+  width: 183px;
+}
+
+.room-details__booking .booking__text_type {
+  margin-left: 8px;
+}
+
+.room-details__booking .booking-total_line {
+  width: 180px;
+
+  @media (max-width: 450px) {
+    width: calc(100% - 140px);
+  }
+}
+
 .room-details__description > div {
   @media (max-width: 690px) {
     width: 90%;
@@ -335,6 +331,7 @@
 /* Media queries */
 @media (max-width: 1250px) {
   .room-details__roomData > div {
+    width: 100%;
     margin-bottom: 25px;
   }
 }
