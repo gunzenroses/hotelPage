@@ -6,7 +6,7 @@
   flex-wrap: nowrap;
   flex-shrink: 0;
   width: 241px;
-  height: 105px;
+  height: 106px;
 
   @media (max-width: 450px) {
     margin: 0 auto;
@@ -30,14 +30,14 @@ button {
 
 .pagination__buttons {
   height: 40.4px;
-  width: 240px;
+  width: 241px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: nowrap;
   flex-shrink: 0;
-  font-size: 12px;
+  font-size: 0.875em;
 }
 
 .pagination__button_current {
@@ -73,7 +73,7 @@ button {
   border-radius: 50%;
   margin: 0;
   padding: 0;
-  line-height: 40px;
+  line-height: 39px;
   text-align: center;
   cursor: pointer;
   background: transparent;
