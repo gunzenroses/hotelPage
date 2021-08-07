@@ -35,13 +35,13 @@
 .button-row:nth-child(3) {
   height: 16px;
   width: 147px;
-  margin-bottom: 29px;
   margin-left: -1px;
 }
 
 .button-row:last-child {
   width: 320px;
   height: 44px;
+  margin-top: 30px;
 
   @media (max-width: 450px) {
     width: 280px;
@@ -53,7 +53,7 @@
 .button_filled {
   position: relative;
   font-size: $fs_h3;
-  //letter-spacing: -0.02em;
+  letter-spacing: -.02em;
   display: block;
   font-weight: 700;
   width: 99px;
@@ -64,7 +64,7 @@
   line-height: 44px;
   text-align: center;
   margin: 0;
-  padding: 0;
+  padding-right: 2px;
   text-transform: uppercase;
   cursor: pointer;
 
@@ -87,6 +87,7 @@
     width: 95px;
     height: 40px;
     //line-height: 40px;
+    padding-top: 2px;
     line-height: 38px;
     border-radius: 22px;
     background: $light;
@@ -104,9 +105,9 @@
 
 .button_clear {
   font-weight: 700;
-  font-size: $fs_h3;
+  font-size: .875rem;
+  line-height: .84rem;
   color: $purple;
-  // min-width: 62px;
   min-width: 66px;
   height: 15px;
   text-transform: uppercase;
