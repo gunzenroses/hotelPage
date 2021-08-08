@@ -42,10 +42,14 @@
   background-position: center;
 }
 
-.headers-n-footers_outer > div:not(:last-of-type) {
-  margin-bottom: 40px;
+.headers-n-footers_outer > .footer_outer {
+  margin-top: 41px;
 }
 
-.headers-n-footers_outer > nav {
-  margin-bottom: 40px;
+.headers-n-footers_outer > .footer-creative {
+  margin-top: 41px;
+}
+
+.headers-n-footers_outer > nav:not(:first-of-type) {
+  margin-top: 40px;
 }

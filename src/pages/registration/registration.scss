@@ -5,7 +5,7 @@
 .registration {
   @include container(
     $width: 1440px,
-    $height: 1197px,
+    $height: fit-content,
     $mt: 0,
     $mb: 0,
     $ms: auto
@@ -23,7 +23,7 @@
 }
 
 .registration__content {
-  height: 683px;
+  height: 689px;
   width: 100%;
   @include isFlex($direction: column, $justify: space-between);
   margin: 0 auto;
@@ -43,9 +43,13 @@
 
 .registration__card_registration {
   position: absolute;
-  top: 19px;
-  left: 50%;
-  transform: translateX(-49.3%);
+  top: 20px;
+  left: 721px;
+  transform: translateX(-48.2%);
+
+  @media (max-width: 1440px) {
+    left: 50%;
+  }
 
   @media (max-width: 500px) {
     width: fit-content;
