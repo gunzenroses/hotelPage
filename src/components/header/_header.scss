@@ -1,36 +1,34 @@
 .header {
-  @include containerDimed();
   @include isFlex($align: center);
+  @include containerDimed();
   position: relative;
-  padding: 14px 133px 15px 142px;
   width: 100%;
   height: 70px;
   margin: 0 auto;
-  //padding-right: 141px;
+  padding: 14px 133px 15px 142px;
 
   @media (max-width: 1440px) {
-      width: 100vw;
-      padding: 15px 7%;
+    width: 100vw;
+    padding: 15px 7%;
   }
 
   @media (max-width: 750px) {
-      width: 100vw;
-      padding: 15px 5%;
-      min-width: 320px;
+    width: 100vw;
+    min-width: 320px;
+    padding: 15px 5%;
   }
 
   @media (max-width: 550px) {
-      padding: 15px 2%;
-    }
-  
+    padding: 15px 2%;
+  }
 }
 
 /* logo */
 .logo__link {
+  @include isFlex($align: center);
   width: 107px;
   height: 40px;
   line-height: 40px;
-  @include isFlex($align: center);
 
   @media (max-width: 550px) {
     width: 40px;
@@ -38,9 +36,8 @@
 }
 
 .logo__pic {
+  @include containerSize(40px);
   position: relative;
-  width: 40px;
-  height: 40px;
   background: url(/assets/images/logo/logo_colored.svg);
   background-position: center;
   background-size: initial;
@@ -65,38 +62,38 @@
 /* header__menu */
 
 .header__menu {
-  position: relative;
-  width: 770px;
-  height: 34px;
   @include isFlex(
     $direction: row-reverse,
     $justify: flex-start,
     $align: center
   );
+  position: relative;
+  width: 770px;
+  height: 34px;
   margin-left: 20px;
   color: $darkShadeMiddle;
 
   @media (max-width: 1070px) {
-      width: 80%;
-    }
-  
-    @media (max-width: 550px) {
-        width: 70%;
-        min-width: 260px;
-        margin-left: 10px;
-      }
+    width: 80%;
+  }
+
+  @media (max-width: 550px) {
+    width: 70%;
+    min-width: 260px;
+    margin-left: 10px;
+  }
 }
 
 /* .header__menu > .header__navbar */
 
 .header__navbar {
+  @include isFlex($align: center, $justify: flex-end);
   width: 447px;
   height: 21px;
-  @include isFlex($align: center, $justify: flex-end);
   margin-right: 22px;
 
   @media (max-width: 1070px) {
-      display: none;
+    display: none;
   }
 }
 
@@ -106,6 +103,7 @@
 }
 
 /* .header__menu > .header__buttons */
+
 .header__signed .button_navlink:hover,
 .header__navbar a:hover,
 .header__navbar div:hover,
@@ -126,81 +124,88 @@
 }
 
 .header__buttons {
+  @include isFlex($align: center);
   width: 303px;
   height: 34px;
   margin-top: 1px;
-  @include isFlex($align: center);
 
   @media (max-width: 550px) {
-      width: 200px;
-    }
+    width: 200px;
+  }
 }
 
 .header__buttons .button_link_big::before {
   content: "Зарегистрироваться";
 
   @media (max-width: 550px) {
-      content: "Регистрация";
-    }
+    content: "Регистрация";
+  }
+}
+
+.header__buttons > .button_link_big {
+  @media (max-width: 550px) {
+    position: relative;
+    width: 136px;
+    font-size: 8px;
+    font-weight: 400;
+  }
 }
 
 /* .header__menu > .header__user */
 
-.header__signed {
-  height: 30px;
-  color: $darkShadeMiddle;
-  font-size: 14px;
-  @include isFlex($align: center);
-}
+.header {
+  &__signed {
+    @include isFlex($align: center);
+    height: 30px;
+    color: $darkShadeMiddle;
+    font-size: 14px;
+  }
 
-.header__line {
-  height: 100%;
-  width: 20px;
-  border-left: 1px solid $darkShadeFew;
-}
+  &__line {
+    height: 100%;
+    width: 20px;
+    border-left: 1px solid $darkShadeFew;
+  }
 
-.header__user {
-  color: $darkShadeMiddle;
+  &__user {
+    color: $darkShadeMiddle;
+  }
 }
 
 /* .header__menu > .dropdown__navbar */
 
 .dropdown__navbar {
+  @include isFlex($direction: column, $align: flex-start);
   @include containerDimed();
-  position: absolute;
-  margin: 0 20px;
-  top: 50px;
-  //right: 90px;
+  @include absoluteTopRight(50px);
   width: 130px;
   height: 130px;
+  margin: 0 20px;
   padding: 5px 10px;
-  @include isFlex($direction: column, $align: flex-start);
   z-index: 2;
 }
 
 /* dropdowns in navbar */
 
 .button_navlink {
-  position: relative;
-  font-weight: 400;
-  font-size: 14px;
-  color: $darkShadeMiddle;
-  height: 18px;
-  //line-height: 18px;
-  line-height: 20px;
   @include isFlex($direction: column);
-  //letter-spacing: 0.01em;
+  position: relative;
+  height: 18px;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  color: $darkShadeMiddle;
   letter-spacing: 0.003em;
   cursor: pointer;
 }
 
 .dropdown_navlink {
-  font-weight: 400;
-  font-size: 14px;
-  color: $darkShadeMiddle;
+  @include isFlex($direction: row-reverse);
   height: 18px;
   line-height: 18px;
-  @include isFlex($direction: row-reverse);
+  font-size: 14px;
+  font-weight: 400;
+  color: $darkShadeMiddle;
 }
 
 .dropdown__icon {
@@ -212,16 +217,16 @@
 
 .dropdown__icon::before {
   position: absolute;
-  font-family: $MaterialIcons;
-  font-size: 24px;
-  color: $darkShadeMiddle;
   content: "\e5cf";
+  font-size: 24px;
+  font-family: $MaterialIcons;
+  color: $darkShadeMiddle;
 }
 
 .navbar__dropdown {
+  @include containerDimed();
   position: absolute;
   top: 20px;
-  @include containerDimed();
   width: 150px;
   height: 60px;
   z-index: 3;
@@ -238,22 +243,22 @@
   display: none;
 
   @media (max-width: 1070px) {
-      display: block;
-    }
+    display: block;
+  }
 
-    @media (max-width: 550px) {
-        margin: 0 10px;
-      }
+  @media (max-width: 550px) {
+    margin: 0 10px;
+  }
 }
 
 .burger__menu::before,
 .burger__menu::after,
 .burger__menu > span {
   position: absolute;
+  left: 0;
   content: "";
   width: 100%;
   height: 2px;
-  left: 0;
   background: $darkShadeMiddle;
 }
 
@@ -267,24 +272,4 @@
 
 .burger__menu > span {
   top: 9px;
-}
-
-/* media-queries */
-
-@media (max-width: 550px) {
-  // .header .logo__link {
-  //   width: 40px;
-  // }
-
-  // .header .logo__name {
-  //   display: none;
-  // }
-
-  //???
-  .header__buttons > .button_link_big {
-    position: relative;
-    width: 136px;
-    font-size: 8px;
-    font-weight: 400;
-  }
 }

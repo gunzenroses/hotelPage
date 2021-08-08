@@ -9,16 +9,16 @@
   cursor: pointer;
 }
 
-.input_rate {
+.input__rate {
   display: none;
   appearance: none;
 }
 
-.input_label {
+.input__label {
   width: 24px;
   height: 24px;
   color: purple;
-  background-image: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  background-image: $linearGradientFirst;
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
@@ -30,12 +30,12 @@
   }
 }
 
-input:checked ~ .input_label::before,
-input:checked + .input_label::before {
+input:checked ~ .input__label::before,
+input:checked + .input__label::before {
   content: "★";
 }
 
-.input_rate:hover ~ .input_label:before,
-.input_rate:hover + .input_label:before {
+.input__rate:hover ~ .input__label:before,
+.input__rate:hover + .input__label:before {
   content: "★";
 }

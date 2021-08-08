@@ -113,7 +113,7 @@ input {
 select {
   //background-image: url('../../images/svg/arrowSelect.svg');
   background-repeat: no-repeat;
-  background-color: #fff;
+  background-color: $light;
   background-position: right 13px center;
   padding-right: 30px;
 }
@@ -121,6 +121,10 @@ select {
 ::placeholder {
   /* Most modern browsers support this now. */
   color: $darkShadeLess;
+}
+
+.button_disabled {
+  border: 1px solid $darkShadeLess;
 }
 
 .container_small {
@@ -187,7 +191,7 @@ select {
   margin-right: 10px;
   align-items: center;
   text-align: center;
-  background-image: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  background-image: $linearGradientFirst;
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
@@ -211,6 +215,11 @@ select {
 
 .purple-text {
   color: $purple;
+}
+
+.reverse {
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 .row {

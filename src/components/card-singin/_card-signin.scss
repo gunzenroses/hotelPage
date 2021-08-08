@@ -6,9 +6,9 @@
   padding: 38px 29px 40px 29px;
 
   @media (max-width: 400px) {
-    padding: 25px 20px;
-    min-width: 320px;
     width: 100vw;
+    min-width: 320px;
+    padding: 25px 20px;
   }
 }
 

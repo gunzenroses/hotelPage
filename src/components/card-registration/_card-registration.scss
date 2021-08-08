@@ -1,17 +1,17 @@
 .card-registration {
   @include containerShadowed();
   @include isFlex($direction: column, $justify: flex-start);
-  padding-left: 29px;
-  padding-right: 29px;
-  padding-top: 39px;
   width: 383px;
   height: 650px;
+  padding-right: 29px;
+  padding-top: 39px;
+  padding-left: 29px;
 
   @media (max-width: 400px) {
-    padding: 25px 30px;
-    margin: 0 auto;
-    min-width: 320px;
     width: 100vw;
+    min-width: 320px;
+    margin: 0 auto;
+    padding: 25px 30px;
   }
 }
 
@@ -45,7 +45,6 @@
 }
 
 .card-registration > .card__text_row {
-  //margin-top: 30px;
   letter-spacing: 0.005em;
 }
 

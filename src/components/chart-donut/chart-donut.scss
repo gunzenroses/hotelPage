@@ -21,15 +21,11 @@
 }
 
 .donut__text {
+  @include isFlex($direction: column, $align: center);
+  @include absoluteTopLeft(29%, 49%);
   color: rgba(188, 156, 255, 1);
   font-weight: 700;
-  position: absolute;
-  top: 29%;
-  left: 49%;
   transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .donut__number {
@@ -71,17 +67,17 @@
 }
 
 .exellent {
-  background: linear-gradient(180deg, #ffe39c 0%, #ffba9c);
+  background: $linearGradientCitrus;
 }
 
 .good {
-  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+  background: $linearGradientTurquoise;
 }
 
 .satisfied {
-  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  background: $linearGradientFirst;
 }
 
 .disappointed {
-  background: linear-gradient(180deg, #919191 0%, #3d4975 100%);
+  background: $linearGradientPurple;
 }

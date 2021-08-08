@@ -1,10 +1,10 @@
 .calendar {
   @include containerDimed();
-  border: 1px solid rgba(31, 32, 65, 0.25);
+  @include isFlex($direction: column, $justify: flex-start);
   width: 320px;
   min-height: 369px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
   background: $light;
-  @include isFlex($direction: column, $justify: flex-start);
   z-index: 3;
 
   @media (max-width: 400px) {
@@ -12,18 +12,17 @@
   }
 
   &__date {
+    @include isFlex($align: center);
     height: 64px;
     width: 100%;
-    @include isFlex($align: center);
     padding: 20px 20px 22px 19px;
   }
 }
 
 .date__prev {
-  width: 24px;
-  height: 24px;
-  line-height: 18px;
   position: relative;
+  @include containerSize(24px);
+  line-height: 18px; 
   border-radius: 50%;
 
   &:hover {
@@ -32,18 +31,20 @@
 
   &::before {
     content: "\e5c4";
+
     position: absolute;
-    font-family: $MaterialIcons;
-    font-size: 24px;
     top: 4px;
+
+    font-size: 24px;
+    font-family: $MaterialIcons;
     color: $purple;
   }
 }
 
 .date__next {
-  @include Container24();
-  line-height: 18px;
+  @include containerSize(24px);
   position: relative;
+  line-height: 18px;
   border-radius: 50%;
 
   &:hover {
@@ -53,68 +54,62 @@
   &::before {
     content: "\e5c8";
     position: absolute;
+    top: 4px;
     font-family: $MaterialIcons;
     font-size: 24px;
-    top: 4px;
     color: $purple;
   }
 }
 
 .date__month {
   display: block;
-  margin: 0 auto;
-  font-family: $Montserrat;
-  font-weight: 700;
-  font-size: 19px;
   line-height: 24px;
+  margin: 0 auto;
+  font-size: 19px;
+  font-weight: 700;
+  font-family: $Montserrat;
   text-align: center;
   letter-spacing: 0.0015em;
 }
 
 .calendar__weeks {
+  @include isFlex($direction: column);
   width: 280px;
   min-height: 240px;
   margin: 9px auto 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .weeks {
   &__weekdays {
+    @include isFlex($justify: space-around);
     width: 280px;
     height: 40px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    font-size: 12px;
+    font-weight: 700;
     color: $purple;
     align-items: center;
-    font-weight: 700;
-    font-size: 12px;
     letter-spacing: -0.01em;
   }
 
   &__days {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    font-family: Montserrat;
-    font-weight: 400;
-    font-size: 12px;
-    text-align: center;
+    @include isFlex();
     line-height: 40px;
+    font-size: 12px;
+    font-weight: 400;
+    font-family: Montserrat;
+    text-align: center;
     color: $darkShadeMiddle;
   }
 
   &__day {
-    @include Container40();
+    @include containerSize(40px);
 
     &:hover {
       border-radius: 50%;
-      border-color: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+      border-color: $linearGradientFirst;
       border-width: 2px;
       border-style: solid;
-      box-sizing: border-box;
+      // box-sizing: border-box;
     }
 
     &_prev,
@@ -139,11 +134,10 @@
 .weeks__day_prev_checkedout::before,
 .weeks__day_next_checkedout::before {
   content: "";
-  width: 100%;
-  height: 100%;
-  display: block;
-  position: absolute;
-  top: 0;
+  @include containerBlock();
+  @include absoluteTopLeft();
+  // position: absolute;
+  // top: 0;
   background: $darkShadeFewer;
 }
 
@@ -162,82 +156,71 @@
 
 .weeks__day_today {
   border-radius: 50%;
-  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
-  color: #fff;
   font-weight: 700;
+  color: $light;
+  background: $linearGradientTurquoise;
 }
 
 .weeks__day_ranged {
-  background: linear-gradient(
-    180deg,
-    rgba(188, 156, 255, 0.15) 0%,
-    rgba(139, 164, 249, 0.15) 100%
-  );
   position: relative;
+  background: $linearGradientGrape;
+  
 
   &_another {
+    position: relative;
     background: $darkShadeFewer;
     color: $darkShadeLess;
-    position: relative;
   }
 }
 
 .weeks__day_checkedout {
-  border-radius: 50%;
-  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-  color: #fff;
-  font-weight: 700;
-  z-index: 2;
   position: relative;
+  font-weight: 700;
+  color: $light;
+  border-radius: 50%;
+  background: $linearGradientFirst;
+  z-index: 2;
 
   &::after {
     content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    @include absoluteTopLeft();
+    @include containerBlock();
+    background: $linearGradientFirst;
     border-radius: 0 50% 50% 0;
     opacity: 0.15;
   }
 }
 
 .weeks__day_checkedin {
-  border-radius: 50%;
-  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-  color: #fff;
-  font-weight: 700;
-  z-index: 2;
   position: relative;
+  font-weight: 700;
+  color: $light;
+  border-radius: 50%;
+  background: $linearGradientFirst;
+  z-index: 2;
   isolation: isolate;
 
   &::after {
     content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    @include absoluteTopLeft();
+    @include containerBlock();
+    background: $linearGradientFirst;
     border-radius: 50% 0 0 50%;
     opacity: 0.15;
   }
 }
 
 .calendar__buttons {
-  padding: 23px 19px 21px;
   @include isFlex();
-  color: $purple;
   width: 100%;
+  padding: 23px 19px 21px;
+  color: $purple;
 
   &_reset,
   &_submit {
-    font-family: Montserrat;
-    font-weight: 700;
     font-size: 12px;
+    font-weight: 700;
+    font-family: Montserrat;
     text-transform: uppercase;
     color: #bc9cff;
   }

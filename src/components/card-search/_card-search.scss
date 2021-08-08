@@ -8,9 +8,9 @@
   padding-right: 29px;
 
   @media (max-width: 400px) {
-    padding: 25px 20px;
-    min-width: 320px;
     width: 100vw;
+    min-width: 320px;
+    padding: 25px 20px;
   }
 }
 
@@ -23,9 +23,6 @@
 }
 
 .card_search > button {
-  // margin-top: 30px;
-  // padding-top: 2px;
-  // padding-right: 4px;
   margin-top: 29px;
   padding-right: 4px;
 }

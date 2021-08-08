@@ -1,8 +1,8 @@
 .room-carousel {
+  position: relative;
   width: 100%;
   height: calc(152 / 270 * 100%);
   min-height: 151.5px;
-  position: relative;
   overflow: hidden;
 
   @media (max-width: 700px) {
@@ -18,11 +18,13 @@
 }
 
 .room-carousel__pictures {
-  width: 400%;
-  height: 100%;
   @include isFlex();
+
   position: absolute;
   left: 0;
+
+  width: 400%;
+  height: 100%;
   transition: 2s;
 }
 
@@ -33,17 +35,12 @@
 }
 
 .room-carousel__radio {
+  @include isFlex();
   position: absolute;
-  // width: 42px;
-  // height: 7.5px;
-  // bottom: 15px;
-  // right: 15px;
-  // width: 40px;
-  width: 41px;
-  height: auto;
   bottom: 15.5px;
   right: 15px;
-  @include isFlex();
+  width: 41px;
+  height: auto;
 }
 
 .room-carousel__element {
@@ -57,9 +54,9 @@
 }
 
 .room-carousel__radio_real {
+  position: absolute;
   width: 7.5px;
   height: 7.5px;
-  position: absolute;
   cursor: pointer;
   appearance: none;
 }
@@ -78,11 +75,11 @@
 }
 
 .room-carousel__btn {
+  @include isFlex();
+  display: none;
   position: absolute;
   width: 100%;
   height: 100%;
-  @include isFlex();
-  display: none;
 }
 
 .room-carousel:hover .room-carousel__btn {
@@ -93,59 +90,25 @@
   position: relative;
   height: 100%;
   width: 42px;
-  background: linear-gradient(
-    90deg,
-    $darkShadeMiddle 0%,
-    $darkShade 99.99%,
-    $light 100%
-  );
-  background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 0.5) 0%,
-    rgba(0, 0, 0, 0) 99.99%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background: $linearGradientShadow;
 }
 
 .room-carousel__btn_prev::before {
-  font-family: $MaterialIcons;
   content: "\e5cb";
-  position: absolute;
-  width: 44px;
-  height: 44px;
-  line-height: 44px;
-  text-align: center;
-  font-size: 24px;
-  color: $light;
-  z-index: 1;
-  top: 53.5px;
-  left: 0;
+  @include carouselButton();
+  font-family: $MaterialIcons;
 }
 
 .room-carousel__btn_next {
   position: relative;
   height: 100%;
   width: 42px;
-  background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 0.5) 0%,
-    rgba(0, 0, 0, 0) 99.99%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background: $linearGradientShadow;
   transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
 .room-carousel__btn_next::before {
-  font-family: $MaterialIcons;
   content: "\e5cb";
-  position: absolute;
-  width: 44px;
-  height: 44px;
-  line-height: 44px;
-  text-align: center;
-  font-size: 24px;
-  color: $light;
-  z-index: 1;
-  top: 53.5px;
-  left: 0;
+  @include carouselButton();
+  font-family: $MaterialIcons;
 }

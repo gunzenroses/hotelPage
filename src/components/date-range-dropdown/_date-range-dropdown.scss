@@ -22,7 +22,6 @@
   }
 }
 
-//dataRange__container_common
 .date-range__selector .label {
   margin-bottom: 3.5px;
   margin-top: 5px;
@@ -35,14 +34,15 @@
 }
 
 .dropdown__calendar {
+  display: none;
   width: 320px;
   height: 369px;
   margin-top: 4px;
-  top: 65px;
+  @include absoluteTopLeft(65px);
+  // position: absolute;
+  // top: 65px;
   background: $light;
   z-index: 2;
-  position: absolute;
-  display: none;
 
   @media (max-width: 450px) {
     width: 100%;

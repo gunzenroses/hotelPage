@@ -9,43 +9,41 @@
 }
 
 .comment__head {
-  height: 51px;
   @include isFlex($justify: start);
+  height: 51px;
 }
 
 .author__pic {
+  @include isFlex($justify: center, $align: center);
   width: 48px;
   height: 48px;
   margin-right: 9px;
   border-radius: 50%;
-  box-sizing: border-box;
   filter: drop-shadow(0px 10px 20px rgba(31, 32, 65, 0.1));
-  @include isFlex($justify: center, $align: center);
   overflow: hidden;
 }
 
 .comment__body {
-  margin-top: 7px;
-  margin-left: 2px;
-  min-height: 51px;
   @include isFlex($justify: start);
   width: 100%;
+  min-height: 51px;
+  margin-top: 7px;
+  margin-left: 2px;
   pointer-events: none;
 }
 
 .comment__text {
-  margin-left: 14px;
+  width: calc(100% - 54px);
+  max-width: 92%;
   min-height: 72px;
-  color: $darkShadeMore;
+  margin-left: 14px;
   font-size: 14px;
   line-height: 25px;
   letter-spacing: .003em;
   font-family: $Montserrat;
+  color: $darkShadeMore;
   font-weight: 400;
   text-align: left;
-  //width: 92%;
-  width: calc(100% - 54px);
-  max-width: 92%;
 
   @media (max-width: 450px) {
     //width: 70%;

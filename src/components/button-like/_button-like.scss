@@ -1,7 +1,7 @@
 .container__button-like {
+  @include isFlex($direction: column);
   width: 90px;
   height: 50px;
-  @include isFlex($direction: column);
 }
 
 .button-like {
@@ -28,40 +28,37 @@
   &_popular {
     @extend .button-like;
     color: $darkShadeLess;
-    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    background: $linearGradientFirst;
 
     &::before {
       @extend .button-like_popular;
       content: "";
-      color: $purple;
       position: absolute;
       width: 38px;
       height: 18px;
       margin: 1px;
+      color: $purple;
       background: $light;
     }
   }
 
   &__number {
     position: absolute;
+    top: 50%;
+    right: 35%;
     font-size: 0.8em;
     line-height: 100%;
-    top: 50%;
     transform: translateY(-50%);
-    right: 35%;
 
     &_popular {
       @extend .button-like__number;
-      //right: 27%;
       right: 29%;
     }
   }
 
   &__heart {
+    @include containerSize(20px);
     position: absolute;
-    width: 20px;
-    height: 20px;
-    line-height: 20px;
     text-align: center;
     background: url(/assets/images/heart_disabled.svg);
     background-position: center;

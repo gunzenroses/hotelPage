@@ -1,81 +1,48 @@
-.pagination__container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: nowrap;
-  flex-shrink: 0;
-  width: 241px;
-  height: 106px;
+@import "./mixin_pagination.scss";
 
-  @media (max-width: 450px) {
-    margin: 0 auto;
+.pagination {
+  &__container {
+    @include isFlex($direction: column);
+    width: 241px;
+    height: 106px;
+
+    @media (max-width: 450px) {
+      margin: 0 auto;
+    }
   }
-}
 
-.pagination__bar {
-  height: 75px;
-  width: 241px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: nowrap;
-  flex-shrink: 0;
-}
+  &__bar {
+    @include isFlex($direction: column);
+    width: 241px;
+    height: 75px;
+  }
 
-button {
-  border: none;
-}
+  &__buttons {
+    @include isFlex();
+    width: 241px;
+    height: 40.4px;
+    font-size: 0.875em;
+  }
 
-.pagination__buttons {
-  height: 40.4px;
-  width: 241px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: nowrap;
-  flex-shrink: 0;
-  font-size: 0.875em;
-}
+  &__button_current {
+    @include paginationItem();
+    background: $linearGradientFirst;
+    color: $light;
+    font-weight: 700;
+  }
 
-.pagination__button_current {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  margin: 0;
-  padding: 0;
-  line-height: 40px;
-  text-align: center;
-  cursor: pointer;
-  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-  color: #fff;
-  font-weight: 700;
-}
-
-.pagination__items {
-  width: 120px;
-  height: 40px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: nowrap;
-  flex-shrink: 0;
+  &__items {
+    @include isFlex();
+    width: 120px;
+    height: 40px;
+  }
 }
 
 .pagination__item,
 .pagination__button_last,
 .pagination__button_first {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  margin: 0;
-  padding: 0;
+  @include paginationItem();
   line-height: 39px;
-  text-align: center;
-  cursor: pointer;
   background: transparent;
   color: rgba(31, 32, 65, 0.5);
   font-weight: 400;
@@ -86,64 +53,31 @@ button {
 }
 
 .pagination__button_next {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  margin: 0;
-  padding: 0;
-  line-height: 40px;
-  text-align: center;
-  cursor: pointer;
-  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+  @include paginationItem();
+  @include paginationNav();
 
   &::before {
     font-family: $MaterialIcons;
     -webkit-font-feature-settings: "liga" 1;
     -moz-font-feature-settings: "liga" 1;
     font-feature-settings: "liga" 1;
-    top: 0;
-    right: 0;
-    position: absolute;
-    width: 40px;
-    height: 40px;
+    @include paginationBefore();
     content: "\e5c8";
-    line-height: 40px;
-    text-align: center;
-    font-size: 24px;
-    color: $light;
-    z-index: 2;
   }
 }
 
 .pagination__button_prev {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  margin: 0;
-  padding: 0;
-  line-height: 40px;
-  text-align: center;
-  cursor: pointer;
-  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+  @include paginationItem();
+  @include paginationNav();
 
   &::before {
     font-family: $MaterialIcons;
     -webkit-font-feature-settings: "liga" 1;
     -moz-font-feature-settings: "liga" 1;
     font-feature-settings: "liga" 1;
-    top: 0;
-    right: 0;
-    position: absolute;
-    width: 40px;
-    height: 40px;
+    @include paginationBefore();
     content: "\e5c4";
-    line-height: 40px;
-    text-align: center;
-    font-size: 24px;
-    color: $light;
-    z-index: 2;
+
   }
 }
 

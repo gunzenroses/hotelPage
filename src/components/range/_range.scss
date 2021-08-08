@@ -19,9 +19,9 @@
 }
 
 .range__info {
+  margin-top: 22px;
   font-size: 0.857rem;
   line-height: 1.045rem;
-  margin-top: 22px;
   font-weight: 400;
   color: $darkShadeMiddle;
   text-transform: none;
@@ -29,20 +29,20 @@
 }
 
 .irs, .irs--flat, .js-irs-0 {
+  display: block;
   position: relative;
   width: 100%;
   height: 16px;
-  display: block;
   user-select: none;
   top: -1px;
 }
 
 .irs-line {
-  position: relative;
   display: block;
-  margin-top: 20px;
+  position: relative;
   height: 6px;
   width: 100%;
+  margin-top: 20px;
   border-radius: 3px;
   background-color: $light;
   border: 1px solid $darkShadeLess;
@@ -59,7 +59,7 @@
   height: 6px;
   border-radius: 3px;
   z-index: 1;
-  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+  background: $linearGradientTurquoise;
 }
 
 .irs-handle {
@@ -69,7 +69,7 @@
   width: 15px;
   height: 15px;
   border-radius: 10px;
-  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+  background: $linearGradientTurquoise;
   border: 2px solid $light;
   z-index: 2;
   top: 15px
