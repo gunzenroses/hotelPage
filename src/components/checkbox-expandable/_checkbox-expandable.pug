@@ -28,7 +28,7 @@ mixin richCheckboxButtons(checkboxName, containerText)
     +richCheckboxButtonItem(checkboxName, "help for disabled", "Помощник для инвалидов", "На 1 этаже вас встретит специалист <br> и проводит до номера.")
 
 mixin richCheckboxButtonItem(checkboxName, checkboxValue, checkboxTitle, checkboxSubtitle, checkboxSubtitle2)
-  label.checkbox_button
+  label.checkbox__button
     input(type="checkbox" name=checkboxName value=checkboxValue).checkbox__real
     span.checkbox__fake_expand
     div.checkbox__description
