@@ -1,13 +1,13 @@
 @import "Styles/main";
 @import "Pages/registration/registration.scss";
 
-.sign-in.dropdown__watch {
+.sign-in {
   @extend .registration;
 }
 
 .sign-in__content {
   @extend .registration__content;
-  height: 702px;
+  height: 707px;
 
   @media (max-width: 500px) {
     // carouselSignin + card_signin + initial top
@@ -23,8 +23,8 @@
 
 .sign-in__card_signin {
   @extend .registration__card_registration;
-  top: 173px;
-  transform: translateX(-50%);
+  top: 174px;
+  transform: translateX(-49%);
 
   @media (max-width: 500px) {
     top: 0;
