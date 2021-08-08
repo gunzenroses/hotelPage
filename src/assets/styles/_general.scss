@@ -8,14 +8,14 @@
   flex-shrink: 0;
 }
 
-$fs_base: 14px;   //1rem
+$fs_base: 14px; //1rem
 $fs_h1: 1.714rem; //24px
 $fs_h2: 1.357rem; //19px
 $fs_h3: 0.857rem; //12px
 
 html,
 body {
-  -webkit-text-size-adjust: 100%; 
+  -webkit-text-size-adjust: 100%;
   font-size: $fs_base;
   line-height: 14.63px;
   letter-spacing: -0.05em;
@@ -89,24 +89,46 @@ figure {
   margin: 0;
 }
 
-.purple-text {
-  color: $purple;
-}
-
 button {
-  border: 0;
   padding: 0;
+  border: none;
   outline: none;
   background-color: transparent;
 }
 
+fieldset {
+  border: none;
+  padding: 0;
+}
+
+input {
+  width: 95%;
+  height: 90%;
+  appearance: none;
+  background: transparent;
+  border: none;
+  // padding-top: 3px;
+}
+
+select {
+  //background-image: url('../../images/svg/arrowSelect.svg');
+  background-repeat: no-repeat;
+  background-color: #fff;
+  background-position: right 13px center;
+  padding-right: 30px;
+}
+
+::placeholder {
+  /* Most modern browsers support this now. */
+  color: $darkShadeLess;
+}
 
 .container_small {
   @include isFlex($direction: column);
   width: 151px;
 
-  @media (max-width: 450px){
-    width: calc(150/320*100%);
+  @media (max-width: 450px) {
+    width: calc(150 / 320 * 100%);
     min-width: 130px;
   }
 }
@@ -119,51 +141,10 @@ button {
   @include isFlex($direction: column);
   width: 266px;
 
-  @media (max-width: 450px){
+  @media (max-width: 450px) {
     width: 280px;
     margin: 0 auto;
   }
-}
-
-
-select {
-  //background-image: url('../../images/svg/arrowSelect.svg');
-  background-repeat: no-repeat;
-  background-color: #fff;
-  background-position: right 13px center;
-  padding-right: 30px;
-}
-
-.widget {
-  position: relative;
-  width: 100%;
-
-  @media (max-width: 450px){
-    width: 100%;
-    min-width: 280px;
-    margin: 0 auto;
-  }
-}
-
-.row_middle {
-  display: flex;
-  flex-direction: column;
-  width: 320px;
-  margin-left: 140px;
-  margin-top: 140px;
-}
-
-input {
-  width: 95%;
-  height: 90%;
-  appearance: none;
-  background: transparent;
-  border: none;
-  // padding-top: 3px;
-}
-
-::placeholder { /* Most modern browsers support this now. */
-  color:  $darkShadeLess;
 }
 
 .label {
@@ -175,7 +156,7 @@ input {
   //margin-bottom: 3px;
   margin-bottom: 3.5px;
   text-transform: uppercase;
-  letter-spacing: -.003em;;
+  letter-spacing: -0.003em;
 
   &_right {
     @extend .label;
@@ -194,16 +175,6 @@ input {
   display: block;
   color: red;
   height: fit-content;
-}
-
-fieldset {
-  border: none;
-  padding: 0;
-}
-
-.row {
-  @include isFlex;
-  width: 100%;
 }
 
 .maretial-icon {
@@ -230,24 +201,52 @@ fieldset {
   font-feature-settings: "liga";
 }
 
-.width-and-heigh_266 {
-  width: 266px;
-  height: 266px;
-  @include isFlex($direction: column, $justify: flex-start);
-}
-
-.width-and-heigh_266 > div {
-  margin-bottom: 20px;
-}
-
-.width-and-heigh_266 .label_right {
-  margin-top: 2px;
+.none {
+  display: none;
 }
 
 .pr2 {
   padding-right: 2px;
 }
 
-.none {
-  display: none;
+.purple-text {
+  color: $purple;
+}
+
+.row {
+  @include isFlex;
+  width: 100%;
+
+  &_middle {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    margin-left: 140px;
+    margin-top: 140px;
+  }
+}
+
+.widget {
+  position: relative;
+  width: 100%;
+
+  @media (max-width: 450px) {
+    width: 100%;
+    min-width: 280px;
+    margin: 0 auto;
+  }
+}
+
+.width-and-heigh_266 {
+  width: 266px;
+  height: 266px;
+  @include isFlex($direction: column, $justify: flex-start);
+
+  & > div {
+    margin-bottom: 20px;
+  }
+
+  & .label_right {
+    margin-top: 2px;
+  }
 }
