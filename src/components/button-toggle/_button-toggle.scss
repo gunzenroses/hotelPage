@@ -76,7 +76,7 @@
 .toggle__real:checked + .toggle__fake::before {
   @extend .toggle__fake::before;
   left: 23px;
-  background: $linearGradientFirst;
+  background: $linearGradientLilac;
 }
 
 .toggle__real:not(:checked) + .toggle__fake::before {

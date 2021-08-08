@@ -28,7 +28,7 @@
   &_popular {
     @extend .button-like;
     color: $darkShadeLess;
-    background: $linearGradientFirst;
+    background: $linearGradientLilac;
 
     &::before {
       @extend .button-like_popular;

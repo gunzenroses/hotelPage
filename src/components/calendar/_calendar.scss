@@ -106,7 +106,7 @@
 
     &:hover {
       border-radius: 50%;
-      border-color: $linearGradientFirst;
+      border-color: $linearGradientLilac;
       border-width: 2px;
       border-style: solid;
       // box-sizing: border-box;
@@ -178,14 +178,14 @@
   font-weight: 700;
   color: $light;
   border-radius: 50%;
-  background: $linearGradientFirst;
+  background: $linearGradientLilac;
   z-index: 2;
 
   &::after {
     content: "";
     @include absoluteTopLeft();
     @include containerBlock();
-    background: $linearGradientFirst;
+    background: $linearGradientLilac;
     border-radius: 0 50% 50% 0;
     opacity: 0.15;
   }
@@ -196,7 +196,7 @@
   font-weight: 700;
   color: $light;
   border-radius: 50%;
-  background: $linearGradientFirst;
+  background: $linearGradientLilac;
   z-index: 2;
   isolation: isolate;
 
@@ -204,7 +204,7 @@
     content: "";
     @include absoluteTopLeft();
     @include containerBlock();
-    background: $linearGradientFirst;
+    background: $linearGradientLilac;
     border-radius: 50% 0 0 50%;
     opacity: 0.15;
   }
