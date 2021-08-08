@@ -2,7 +2,7 @@
   @include containerDimed();
   @include isFlex($align: center);
   position: relative;
-  padding: 14px 133px 15px 140px;
+  padding: 14px 133px 15px 142px;
   width: 100%;
   height: 70px;
   margin: 0 auto;
@@ -27,7 +27,7 @@
 
 /* logo */
 .logo__link {
-  width: 106px;
+  width: 107px;
   height: 40px;
   line-height: 40px;
   @include isFlex($align: center);
@@ -49,8 +49,9 @@
 
 .logo__name {
   position: relative;
-  width: 52px;
-  height: 17px;
+  width: 55px;
+  height: 15px;
+  margin-top: 1px;
   background: url(/assets/images/logo/logo__name.svg);
   background-position: center;
   background-size: initial;
@@ -101,7 +102,7 @@
 
 .header__navbar > a,
 .header__navbar > div:not(:last-of-type) {
-  margin-right: 20px;
+  margin-right: 21px;
 }
 
 /* .header__menu > .header__buttons */
@@ -127,6 +128,7 @@
 .header__buttons {
   width: 303px;
   height: 34px;
+  margin-top: 1px;
   @include isFlex($align: center);
 
   @media (max-width: 550px) {
