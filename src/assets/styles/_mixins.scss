@@ -23,35 +23,83 @@
   padding: $pt $ps $pb;
 }
 
-@mixin min-container($width: 100%, $height: 100%, $mt: 0, $ms: 0, $mb: 0, $pt: 0, $ps: 0, $pb: 0) {
-  min-width: $width;
-  min-height: $height;
-  margin: $mt $ms $mb;
-  padding: $pt $ps $pb;
+@mixin containerSize($size: 20px) {
+  width: $size;
+  height: $size;
+  line-height: $size;
+}
+
+@mixin containerBlock($w: 100%, $h: 100%){
+  display: block;
+  width: $w;
+  height: $h;
 }
 
 @mixin isPaginated() {
-  width: 40px;
-  height: 40px;
+  @include containerSize(40px);
   border-radius: 50%;
   margin: 0;
   padding: 0;
-  line-height: 40px;
   text-align: center;
   cursor: pointer;
 }
 
 @mixin containerDimed() {
+  border-radius: 4px;
   background: $light;
   box-sizing: border-box;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
-  border-radius: 4px;
 }
 
 @mixin containerShadowed() {
-  background: $light;
   border: 1px solid rgba(0, 0, 0, 0.12);
-  box-sizing: border-box;
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  background: $light;
+  // box-sizing: border-box;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+}
+
+@mixin absoluteTopLeft($top: 0, $left: 0){
+  position: absolute;
+  top: $top;
+  left: $left;
+}
+
+@mixin absoluteTopRight($top: 0, $right: 0){
+  position: absolute;
+  top: $top;
+  right: $right;
+}
+
+@mixin fontButton {
+  font-size: 24px;
+  text-align: center;
+  color: $light;
+  z-index: 2;
+}
+
+@mixin paginationItem {
+  @include containerSize(40px);
+  border-radius: 50%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  cursor: pointer;
+}
+
+@mixin paginationBefore {
+  @include absoluteTopRight();
+  @include containerSize(40px);
+  @include fontButton;
+}
+
+@mixin paginationNav {
+  position: relative;
+  background: $linearGradientTurquoise;
+}
+
+@mixin carouselButton(){
+  @include absoluteTopLeft(53.5px);
+  @include containerSize(44px);
+  @include fontButton;
 }
