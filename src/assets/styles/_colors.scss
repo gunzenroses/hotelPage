@@ -1,27 +1,25 @@
 /* src/assets/styles/utils/_colors.scss  */
 
-$darkShadeMost: rgba(31, 32, 65, 1);
-$darkShadeMore: rgba(31, 32, 65, 0.75);
-$darkShadeMiddle: rgba(31, 32, 65, 0.5);
-$darkShadeLess: rgba(31, 32, 65, 0.25);
-$darkShadeFew: rgba(31, 32, 65, 0.1);
-$darkShadeFewer: rgba(31, 32, 65, 0.05);
-$darkShade: rgba(0, 0, 0, 0);
-$purple: rgba(188,156,255,1);
-$purpleLess: rgba(188, 156, 255, 0.25);
+$darkShadeMost: #1f2041;
+$darkShadeMore: #1f2041bf;
+$darkShadeMiddle: #1f204180;
+$darkShadeLess: #1f204140;
+$darkShadeFew: #1f20411a;
+$darkShadeFewer: #1f20410d;
+$darkShade: #00000000;
+$purple: #bc9cff;
+$purpleLess: #bc9cff40;
+$purpleLest: #bc9cff26;
 $green: #6fcf97;
 $blue: #66d2ea;
 $light: #fff;
-$background: #F4F4F6;
+$background: #f4f4f6;
 
 
-$linearGradientFirst: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-$linearGradientFirst: linear-gradient(#bc9cff, #8ba4f9);
-
-$linearGradientShadow: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+$linearGradientLilac: linear-gradient(180deg, $purple 0%, #8ba4f9 100%);
+$linearGradientShadow: linear-gradient(90deg, #00000080 0%, #00000000 99.99%, #ffffff00 100%);
 $linearGradientMetal: linear-gradient(90deg, $darkShadeMiddle 0%, $darkShade 99.99%, $light 100%);
-
 $linearGradientTurquoise: linear-gradient(180deg, $green 0%, $blue 100%);
-$linearGradientGrape: linear-gradient(180deg, rgba(188, 156, 255, 0.15) 0%, rgba(139, 164, 249, 0.15) 100%);
+$linearGradientGrape: linear-gradient(180deg, $purpleLest 0%, #8ba4f926 100%);
 $linearGradientCitrus: linear-gradient(180deg, #ffe39c 0%, #ffba9c);
 $linearGradientPurple: linear-gradient(180deg, #919191 0%, #3d4975 100%);
