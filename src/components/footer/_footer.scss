@@ -3,7 +3,7 @@
   @include containerDimed();
   @include isFlex($direction: column, $align: center);
   width: 100%;
-  height: 444px;
+  height: 445px;
   margin: 0 auto;
 
   @media (max-width: 1440px) {
@@ -348,7 +348,7 @@
 
 .footer__copyright_outer {
   width: 100%;
-  height: 70px;
+  height: 71px;
   border-top: 1px solid $darkShadeLess;
 
   @media (max-width: 1440px) {
@@ -405,7 +405,7 @@
 }
 
 .copyright__social {
-  width: 115px;
+  width: 117px;
   height: 26px;
   font-size: 24px;
   @include isFlex($align: center);
