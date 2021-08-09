@@ -13,7 +13,7 @@ mixin dropdownGuestsItems(dropdownContainerId, dropdownClassShow, inputId)
       .dropdown__buttons
         button.dropdown__button_submit.button__show(type='submit') Применить
         button.dropdown__button_reset(type='reset') Очистить
-    .dropdown__info.dropdown__init
+    .dropdown__info.js-dropdown__init
       input.dropdown__input(readonly='' type='text' placeholder='Сколько гостей' name="guests" value='' id=inputId)
 
 mixin dropdownItem (itemDataType, itemText, itemDataOrder)

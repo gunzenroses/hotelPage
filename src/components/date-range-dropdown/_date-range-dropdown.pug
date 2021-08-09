@@ -4,7 +4,7 @@ mixin dateRangeSeparate(calendarId, labelText_1, inputValue_1, labelText_2, inpu
   div(class="date-range__selector")
     div(class="dropdown__calendar dropdown__content" + dropdownClassShow)
       +calendar(calendarId)
-    .dataRange__container.dropdown__init
+    .dataRange__container.js-dropdown__init
       +dateDropdownSmall(labelText_1, "checkin", inputValue_1, "checkin")
       +dateDropdownSmall(labelText_2, "checkout", inputValue_2, "checkout")
 
@@ -20,7 +20,7 @@ mixin dateRangeCommon(calendarId, labelText, inputValue, dropdownClassShow)
   div(class="date-range__selector")
     div(class="dropdown__calendar dropdown__content" + dropdownClassShow)
       +calendar(calendarId)
-    .dataRange__container_common.dropdown__init
+    .dataRange__container_common.js-dropdown__init
       h3.label!= labelText
       .date__range
         input(type="text" value=inputValue 

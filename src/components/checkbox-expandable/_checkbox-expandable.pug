@@ -4,7 +4,7 @@ mixin dropdownCheckbox(dropdownTitleName, dropdownClassShow)
       div(class="dropdown__content " + dropdownClassShow)
         .checkbox__content
           +checkboxExpandList()
-      .dropdown__button_transparent.dropdown__init
+      .dropdown__button_transparent.js-dropdown__init
         span.dropdown__title!= dropdownTitleName
 
 mixin checkboxExpandList()
