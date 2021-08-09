@@ -15,7 +15,7 @@
   background: $light;
   user-select: none;
 
-  @media (max-width: 1440px) {
+  @media (max-width: 1920px) {
     width: 100vw;
     height: auto;
     border-bottom: 1px solid $darkShadeLess;
@@ -45,12 +45,17 @@
   @include absoluteTopLeft(20px, 721px);
   transform: translateX(-48.2%);
 
-  @media (max-width: 1440px) {
+  @media (min-width: 1480px) and (max-width: 1920px) {
+    left: 50%;
+  }
+
+  @media (max-width: 1400px) {
     left: 50%;
   }
 
   @media (max-width: 500px) {
     position: relative;
+    left: 0;
     width: fit-content;
     min-width: 320px;
     margin: 0 auto;
