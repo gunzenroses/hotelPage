@@ -9,7 +9,7 @@ mixin footer(footerText = "Бронирование номеров в лучше
             .footer__navbar_inner
                 .footer__info
                     +logo()
-                    p!= footerText
+                    .footer__text!= footerText
                 //- that's initially visible
                 .footer__info_more
                     .footer__navigation
@@ -46,7 +46,7 @@ mixin footer(footerText = "Бронирование номеров в лучше
                                 +buttonNavbar(support, buttonOnclick="/some-address")
                 .footer__info_subscribe
                     h3 Подписка
-                    p Получайте специальные предложения и новости сервиса
+                    .footer__text Получайте специальные предложения и новости сервиса
                     form.footer__form(method="get" action="/registration")
                         +emailSubscribe()
         .footer__copyright_outer

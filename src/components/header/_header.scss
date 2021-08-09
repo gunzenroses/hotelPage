@@ -7,6 +7,11 @@
   margin: 0 auto;
   padding: 14px 133px 15px 142px;
 
+  @media (min-width: 1650px){
+    width: 80%;
+    padding: 0;
+  }
+
   @media (max-width: 1440px) {
     width: 100vw;
     padding: 15px 7%;
@@ -73,6 +78,10 @@
   margin-left: 20px;
   color: $darkShadeMiddle;
 
+  @media (min-width: 1450px) and (max-width: 1920px){
+    width: fit-content;
+  }
+
   @media (max-width: 1070px) {
     width: 80%;
   }
@@ -91,6 +100,10 @@
   width: 447px;
   height: 21px;
   margin-right: 22px;
+
+  @media (min-width: 1450px) and (max-width: 1920px){
+    width: fit-content;
+  }
 
   @media (max-width: 1070px) {
     display: none;
@@ -197,6 +210,11 @@
   color: $darkShadeMiddle;
   letter-spacing: 0.003em;
   cursor: pointer;
+
+  @media (min-width: 1650px) and (max-width: 1920px){
+    width: fit-content;
+    font-size: $fs_h2;
+  }
 }
 
 .dropdown_navlink {
