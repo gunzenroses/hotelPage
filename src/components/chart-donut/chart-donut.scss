@@ -23,7 +23,7 @@
 .donut__text {
   @include isFlex($direction: column, $align: center);
   @include absoluteTopLeft(29%, 49%);
-  color: rgba(188, 156, 255, 1);
+  color: $purple;
   font-weight: 700;
   transform: translateX(-50%);
 }
