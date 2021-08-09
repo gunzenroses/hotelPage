@@ -1,6 +1,5 @@
 .button-rate {
-  display: flex;
-  flex-direction: row-reverse;
+  @include isFlex($direction: row-reverse);
   width: 120px;
   height: 24px;
   margin: 0;

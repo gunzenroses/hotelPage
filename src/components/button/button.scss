@@ -185,7 +185,7 @@
     @include containerSize(44);
     content: "\e5c8";
     text-align: center;
-    font-size: 24px;
+    font-size: $fs_h1;
     color: $light;
   }
 

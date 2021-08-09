@@ -22,7 +22,7 @@
   height: 44px;
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px 4px 0 0;
-  font-size: 14px;
+  font-size: $fs_base;
   line-height: 42px;
 
   @media (max-width: 450px) {
@@ -36,7 +36,7 @@
   @include containerSize(44px);
   display: block;
   content: "\e5cf";
-  font-size: 24px;
+  font-size: $fs_h1;
   font-family: $MaterialIcons;
   text-align: center;
 }
@@ -127,7 +127,7 @@
 .dropdown__button_reset,
 .dropdown__button_submit {
   display: none;
-  font-size: 12px;
+  font-size: $fs_h3;
   font-weight: 700;
   text-transform: uppercase;
   color: $purple;
@@ -143,7 +143,7 @@
 }
 
 .dropdown__title {
-  font-size: 12px;
+  font-size: $fs_h3;
   font-weight: 700;
   letter-spacing: -0.001em;
   text-transform: uppercase;
@@ -174,7 +174,7 @@
     line-height: 42px;
     display: block;
     content: "\e5cf";
-    font-size: 24px;
+    font-size: $fs_h1;
     font-family: $MaterialIcons;
     text-align: center;
   }

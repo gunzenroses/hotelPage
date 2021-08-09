@@ -56,7 +56,7 @@
 .arrow_submit {
   @include absoluteTopRight();
   @include containerSize(44px);
-  font-size: 24px;
+  font-size: $fs_h1;
   border: none;
   text-align: center;
   font-family: $MaterialIcons;

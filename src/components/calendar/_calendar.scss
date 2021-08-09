@@ -35,7 +35,7 @@
     position: absolute;
     top: 4px;
 
-    font-size: 24px;
+    font-size: $fs_h1;
     font-family: $MaterialIcons;
     color: $purple;
   }
@@ -56,7 +56,7 @@
     position: absolute;
     top: 4px;
     font-family: $MaterialIcons;
-    font-size: 24px;
+    font-size: $fs_h1;
     color: $purple;
   }
 }
@@ -65,7 +65,7 @@
   display: block;
   line-height: 24px;
   margin: 0 auto;
-  font-size: 19px;
+  font-size: $fs_h2;
   font-weight: 700;
   font-family: $Montserrat;
   text-align: center;
@@ -84,7 +84,7 @@
     @include isFlex($justify: space-around);
     width: 280px;
     height: 40px;
-    font-size: 12px;
+    font-size: $fs_h3;
     font-weight: 700;
     color: $purple;
     align-items: center;
@@ -94,7 +94,7 @@
   &__days {
     @include isFlex();
     line-height: 40px;
-    font-size: 12px;
+    font-size: $fs_h3;
     font-weight: 400;
     font-family: Montserrat;
     text-align: center;
@@ -218,7 +218,7 @@
 
   &_reset,
   &_submit {
-    font-size: 12px;
+    font-size: $fs_h3;
     font-weight: 700;
     font-family: Montserrat;
     text-transform: uppercase;

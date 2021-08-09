@@ -138,13 +138,13 @@
 
   @media (max-width: 450px) {
     width: 280px;
-    font-size: 19px;
+    font-size: $fs_h2;
     margin: 0 auto;
   }
 }
 
 .card__subline {
-  font-size: 14px;
+  font-size: $fs_base;
   font-weight: 400;
   line-height: 44px;
   color: $darkShadeMost;

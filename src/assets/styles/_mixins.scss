@@ -72,7 +72,7 @@
 }
 
 @mixin fontButton {
-  font-size: 24px;
+  font-size: $fs_h1;
   text-align: center;
   color: $light;
   z-index: 2;
