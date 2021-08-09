@@ -82,11 +82,9 @@
 }
 
 .checkbox__real:checked + .checkbox__fake_expand::before {
-  @include absoluteTopLeft(20%, 35%);
-  display: block;
-  width: 4px;
-  height: 6px;
   content: "";
+  @include absoluteTopLeft(40%, 50%);
+  @include containerBlock(4px, 6px);
   color: none;
   transform: translate(-50%, -50%) rotate(45deg);
   border-image: $linearGradientLilac;
@@ -107,9 +105,9 @@
 
 .richcheckbox {
   &__container {
+    @include isFlex($direction: column, $justify: flex-start);
     width: 266px;
     height: 145px;
-    @include isFlex($direction: column, $justify: flex-start);
 
     @media (max-width: 450px) {
       width: 100%;
@@ -127,9 +125,9 @@
 
 .checkbox_expand {
   @include isFlex($justify: flex-start);
+  font-size: $fs_base;
   font-family: $Montserrat;
   font-weight: 400;
-  font-size: $fs_base;
   text-transform: none;
 
   &:hover {

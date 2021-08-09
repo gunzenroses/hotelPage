@@ -24,10 +24,8 @@
 }
 
 .form-elements_outer::before {
-  position: absolute;
-  top: 30px;
-  left: 30px;
   content: "";
+  @include absoluteTopLeft(30px, 30px);
   width: 48px;
   height: 48px;
   background-image: url(/assets/images/logo/logo.svg);
@@ -62,20 +60,20 @@
   }
 
   @media (max-width: 1250px) {
+    justify-content: space-evenly;
     max-width: 890px;
     margin: 7% auto 7%;
-    justify-content: space-evenly;
   }
 
   @media (max-width: 970px) {
+    justify-content: space-around;
     width: 85%;
     margin: 5% auto 5%;
-    justify-content: space-around;
   }
 
   @media (max-width: 850px) {
-    max-width: 575px;
     justify-content: center;
+    max-width: 575px;
   }
 }
 
@@ -94,8 +92,8 @@
 
 .form-elements__element_second {
   @include container($width: 260px, $height: 537px);
-  margin-right: 129px;
   @include isFlex($direction: column, $justify: flex-start, $align: flex-start);
+  margin-right: 129px;
 
   @media (max-width: 1440px) {
     margin: 0;
@@ -148,16 +146,16 @@
 
 .form-elements__element_third > div:nth-of-type(3) {
   margin-top: 41px;
-  margin-left: 2px;
+  margin-left: 1px;
 }
 
 .form-elements__element_forth {
+  @include isFlex($direction: column, $justify: flex-start, $align: flex-start);
   width: 267px;
   min-height: 647px;
   margin-right: 176px;
   margin-left: -1px;
   margin-bottom: 47px;
-  @include isFlex($direction: column, $justify: flex-start, $align: flex-start);
 
   @media (max-width: 1440px) {
     margin: 0;
@@ -180,10 +178,9 @@
 
 .form-elements__element_fifth {
   @include container($width: 321px, $height: 465px);
-  //margin-right: 102px;
-  margin-right: 69px;
-  margin-top: 5px;
   @include isFlex($direction: column, $align: flex-start, $justify: flex-start);
+  margin-top: 5px;
+  margin-right: 69px;
 
   @media (max-width: 1440px) {
     margin: 0;
@@ -197,8 +194,8 @@
 
 .form-elements__element_sixth {
   @include container($width: 320px, $height: 467px);
-  margin-top: 5px;
   @include isFlex($direction: column, $align: flex-start, $justify: flex-start);
+  margin-top: 5px;
 
   @media (max-width: 1440px) {
     margin: 0;
@@ -217,10 +214,10 @@
 
 .form-elements__element_seventh {
   @include container($width: 291px, $height: 156px);
+  @include isFlex($direction: column, $align: flex-start);
   margin-right: 120px;
   margin-top: 1px;
   margin-left: -1px;
-  @include isFlex($direction: column, $align: flex-start);
 
   @media (max-width: 1440px) {
     margin: 0;
@@ -233,17 +230,16 @@
 }
 
 .form-elements__element_eighth {
+  @include isFlex($direction: column, $align: flex-start);
   max-width: 711px;
   min-height: 133px;
   margin-top: 10px;
   margin-right: 2px;
-  @include isFlex($direction: column, $align: flex-start);
 
   @media (max-width: 1440px) {
     width: 55vw;
     max-width: 711px;
-    margin: 0;
-    margin-top: 40px;
+    margin: 40px 0 0;
   }
 
   @media (max-width: 1250px) {

@@ -15,15 +15,15 @@ $fs_h3: 0.857rem; //12px
 
 html,
 body {
+  margin: 0 auto;
+  padding: 0;
+  line-height: 14.63px;
   -webkit-text-size-adjust: 100%;
   font-size: $fs_base;
-  line-height: 14.63px;
   letter-spacing: -0.05em;
   font-family: $Montserrat;
   font-weight: 400;
   color: $darkShadeMore;
-  margin: 0 auto;
-  padding: 0;
   background-color: deeppink;
 }
 
@@ -38,21 +38,21 @@ h6 {
 }
 
 h1 {
-  font-size: $fs_h1;
   line-height: 2.142rem;
+  font-size: $fs_h1;
   font-weight: 700;
 }
 
 h2 {
-  font-size: $fs_h2;
   line-height: 16.963rem;
+  font-size: $fs_h2;
   font-weight: 700;
 }
 
 h3 {
+  line-height: 1.045rem;
   font-size: $fs_h3;
   font-weight: 700;
-  line-height: 1.045rem;
   text-transform: uppercase;
   letter-spacing: 0.01em;
 }
@@ -79,10 +79,8 @@ li {
 }
 
 img {
+  @include containerBlock(100%, auto);
   border: none;
-  display: block;
-  width: 100%;
-  height: auto;
 }
 
 figure {
@@ -107,11 +105,9 @@ input {
   appearance: none;
   background: transparent;
   border: none;
-  // padding-top: 3px;
 }
 
 select {
-  //background-image: url('../../images/svg/arrowSelect.svg');
   background-repeat: no-repeat;
   background-color: $light;
   background-position: right 13px center;
@@ -154,42 +150,38 @@ select {
 .label {
   display: inline-block;
   height: 15px;
-  line-height: $fs_h3;
-  font-size: $fs_h3;
-  font-weight: 700;
-  //margin-bottom: 3px;
   margin-bottom: 3.5px;
+  line-height: $fs_h3;
+  font-size: .875rem;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: -0.003em;
 
   &_right {
     @extend .label;
-    font-weight: 400;
-    color: $darkShadeMiddle;
     position: absolute;
     right: 0;
+    font-weight: 400;
+    color: $darkShadeMiddle;
     text-align: right;
-    //margin-top: 3px;
   }
 }
 
 .error {
-  font-size: $fs_h3;
   position: relative;
   display: block;
-  color: red;
   height: fit-content;
+  font-size: $fs_h3;
+  color: red;
 }
 
 .maretial-icon {
   font-family: $MaterialIcons;
   position: relative;
-  width: 48px;
-  height: 48px;
-  font-size: 48px;
-  line-height: 48px;
+  @include containerSize(48px);
   margin-right: 10px;
   align-items: center;
+  font-size: 48px;
   text-align: center;
   background-image: $linearGradientLilac;
   color: transparent;
@@ -225,14 +217,6 @@ select {
 .row {
   @include isFlex;
   width: 100%;
-
-  &_middle {
-    display: flex;
-    flex-direction: column;
-    width: 320px;
-    margin-left: 140px;
-    margin-top: 140px;
-  }
 }
 
 .widget {
@@ -247,9 +231,9 @@ select {
 }
 
 .width-and-heigh_266 {
+  @include isFlex($direction: column, $justify: flex-start);
   width: 266px;
   height: 266px;
-  @include isFlex($direction: column, $justify: flex-start);
 
   & > div {
     margin-bottom: 20px;

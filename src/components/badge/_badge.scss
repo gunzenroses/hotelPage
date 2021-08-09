@@ -1,16 +1,16 @@
 .badge {
+  @include isFlex($direction: column);
   width: 280px;
   height: 69px;
-  @include isFlex($direction: column);
 
   &__info {
-    height: 50px;
     @include isFlex($justify: start);
+    height: 50px;
   }
 
   &__underline {
-    height: 1px;
     width: 280px;
+    height: 1px;
     background-color: $darkShadeFew;
   }
 }
@@ -38,11 +38,11 @@
   }
 
   &__additional {
-    font-family: $Montserrat;
-    font-size: $fs_base;
+    margin-top: 0.5px;
     line-height: 24px;
+    font-size: $fs_base;
+    font-family: $Montserrat;
     font-weight: 400;
     letter-spacing: 0.01em;
-    margin-top: 0.5px;
   }
 }

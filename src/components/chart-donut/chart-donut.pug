@@ -1,7 +1,7 @@
 
 mixin donutChart(cData={})
-  - var {exellent=0, good=0, satisfied=0, dissapointed=0} = cData
-  - var donutData = {dissapointed, satisfied, good, exellent} 
+  - var {excellent=0, good=0, satisfied=0, dissapointed=0} = cData
+  - var donutData = {dissapointed, satisfied, good, excellent} 
   - var counter = 1;
   - var dashOffsetValue = parseInt(25);
   - var prevArraySumm = 0;
@@ -19,7 +19,7 @@ mixin donutChart(cData={})
           lineargradient#gradient_good
             stop(stop-color="#6FCF97" offset="0%")
             stop(stop-color="#66D2EA" offset="100%")
-          lineargradient#gradient_exellent(x1="0" y1="1" x2="0" y2="0")
+          lineargradient#gradient_excellent(x1="0" y1="1" x2="0" y2="0")
             stop(stop-color="#FFBA9C" offset="0%")
             stop(stop-color="#FFE39C" offset="100%")
         title#impression-title Впечатлeния от номера
@@ -42,7 +42,7 @@ mixin donutChart(cData={})
     figcaption.donut__caption
       ul.donut-key-list(aria-hidden="true" role="presentation")
         li
-          span.li_circle.exellent
+          span.li_circle.excellent
           | Великолепно
         li
           span.li_circle.good

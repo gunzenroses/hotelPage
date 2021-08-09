@@ -1,6 +1,6 @@
 /* outer container */
 .footer_outer {
-  @include containerDimed();
+  @include containerDimed;
   @include isFlex($direction: column, $align: center);
   width: 100%;
   height: 445px;
@@ -40,9 +40,9 @@
     $ms: 141px,
     $mb: 99px
   );
-  margin-right: 133px;
   @include isFlex($justify: space-between, $wrap: wrap);
   position: relative;
+  margin-right: 133px;
 
   @media (max-width: 1440px) {
     @include container(
@@ -113,9 +113,9 @@
 /* footer info */
 
 .footer__info {
+  @include isFlex($direction: column);
   width: 260px;
   height: 130px;
-  @include isFlex($direction: column);
   letter-spacing: 0.001em;
 
   @media (max-width: 1440px) {
@@ -124,9 +124,7 @@
   }
 
   @media (max-width: 1170px) {
-    position: absolute;
-    right: 0;
-    top: -11px;
+    @include absoluteTopRight(-11px, 0);
     width: 106px;
     height: 40px;
   }
@@ -134,28 +132,28 @@
   @media (max-width: 800px) {
     position: relative;
     width: 60%;
-    align-items: center;
     margin-bottom: 20px;
+    align-items: center;
   }
 
   &_hidden {
     display: none;
 
     @media (max-width: 470px) {
+      @include isFlex($direction: column);
       min-width: 260px;
       width: 260px;
-      @include isFlex($direction: column);
-      font-weight: 400;
       height: auto;
       margin-bottom: 20px;
+      font-weight: 400;
     }
   }
 
   &_subscribe {
+    @include isFlex($direction: column, $justify: flex-start);
     width: 260px;
     height: 148px;
-    @include isFlex($direction: column, $justify: flex-start);
-    padding-top: 4px; //6px
+    padding-top: 4px;
 
     @media (max-width: 800px) {
       height: auto;
@@ -181,18 +179,13 @@
 
 @media (max-width: 470px) {
   .footer__info_hidden .dropdown__content {
-    @include containerDimed();
+    @include containerDimed;
     position: absolute;
+    top: 20px;
     width: 200px;
     padding: 10px 15px;
     line-height: 18px;
-    top: 20px;
     z-index: 2;
-  }
-
-  .footer__info_hidden .dropdown__init {
-    width: 170px;
-    min-width: 170px;
   }
 
   .footer__info_hidden h3 {
@@ -211,10 +204,9 @@
 /* footer__info_more */
 
 .footer__info_more {
+  @include isFlex($justify: flex-start);
   height: 168px;
   width: 548px;
-  @include isFlex($justify: flex-start);
-  //padding-top: 5px;
   padding-top: 4px;
 
   @media (max-width: 1440px) {
@@ -239,14 +231,14 @@
 
 .footer__form {
   position: relative;
-  margin-top: 22.5px;
   width: 100%;
+  margin-top: 22.5px;
 }
 
 .footer__about {
+  @include isFlex($direction: column);
   width: 201px;
   height: 168px;
-  @include isFlex($direction: column);
 
   @media (max-width: 1440px) {
     width: 135px;
@@ -254,16 +246,16 @@
   }
 
   @media (max-width: 470px) {
+    position: relative;
     width: 100%;
     height: 20px;
-    position: relative;
   }
 }
 
 .footer__support {
+  @include isFlex($direction: column);
   width: 200px;
   height: 130px;
-  @include isFlex($direction: column);
 
   @media (max-width: 1440px) {
     width: 120px;
@@ -271,16 +263,16 @@
   }
 
   @media (max-width: 470px) {
+    position: relative;
     width: 100%;
     height: 20px;
-    position: relative;
   }
 }
 
 .footer__navigation {
+  @include isFlex($direction: column);
   width: 201px;
   height: 168px;
-  @include isFlex($direction: column);
 
   @media (max-width: 1440px) {
     width: 150px;
@@ -288,19 +280,19 @@
   }
 
   @media (max-width: 470px) {
+    position: relative;
     width: 100%;
     height: 20px;
-    position: relative;
   }
 }
 
 /* footer links */
 
 .footer__links {
+  @include isFlex($direction: column, $align: flex-start, $justify: start);
   width: 100%;
   height: 150px;
   margin-top: 20px;
-  @include isFlex($direction: column, $align: flex-start, $justify: start);
 }
 
 .footer__links .dropdown__content { 
@@ -348,8 +340,8 @@
       $ms: 127px,
       $mb: 22px
     );
-    margin-left: 141px;
     @include isFlex($align: flex-start);
+    margin-left: 141px;
 
     @media (max-width: 1440px) {
       @include container(
@@ -403,17 +395,17 @@
 .copyright {
   &__text {
     height: 18px;
-    letter-spacing: 0.003em;
     margin-top: 6px;
+    letter-spacing: 0.003em;
     font-size: 14.03px;
   }
 
   &__social {
+    @include isFlex($align: center);
     width: 117px;
     height: 26px;
-    font-size: $fs_h1;
-    @include isFlex($align: center);
     margin-right: 1px;
+    font-size: $fs_h1;
   }
 }
 
@@ -430,13 +422,11 @@
 .copyright__social .fa-twitter::before,
 .copyright__social .fa-facebook-square::before,
 .copyright__social .fa-instagram::before {
-  position: absolute;
-  top: -1px;
-  left: 0;
-  font-family: $FontAwesome;
+  @include absoluteTopLeft(-1px);
+  width: 24px;
   line-height: 24px;
   font-size: $fs_h1;
-  width: 24px;
+  font-family: $FontAwesome;
   background-image: $linearGradientLilac;
   color: transparent;
   -webkit-background-clip: text;
@@ -456,10 +446,8 @@
 }
 
 .fab a {
+  @include absoluteTopLeft();
   display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
   height: 24px;
   width: 24px;
 }

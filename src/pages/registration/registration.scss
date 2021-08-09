@@ -23,11 +23,11 @@
 }
 
 .registration__content {
-  height: 689px;
-  width: 100%;
   @include isFlex($direction: column, $justify: space-between);
-  margin: 0 auto;
   position: relative;
+  width: 100%;
+  height: 689px;
+  margin: 0 auto;
 
   @media (max-width: 500px) {
     width: 100vw;
@@ -42,9 +42,7 @@
 }
 
 .registration__card_registration {
-  position: absolute;
-  top: 20px;
-  left: 721px;
+  @include absoluteTopLeft(20px, 721px);
   transform: translateX(-48.2%);
 
   @media (max-width: 1440px) {
@@ -52,12 +50,10 @@
   }
 
   @media (max-width: 500px) {
+    position: relative;
     width: fit-content;
     min-width: 320px;
-    position: relative;
     margin: 0 auto;
-    top: 0;
-    left: 0;
     transform: none;
   }
 }

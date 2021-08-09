@@ -19,10 +19,8 @@
 
 .room-carousel__pictures {
   @include isFlex();
-
   position: absolute;
   left: 0;
-
   width: 400%;
   height: 100%;
   transition: 2s;
@@ -36,9 +34,7 @@
 
 .room-carousel__radio {
   @include isFlex();
-  position: absolute;
-  bottom: 15.5px;
-  right: 15px;
+  @include absoluteBottomRight(15.5px, 15px);
   width: 41px;
   height: auto;
 }
@@ -76,8 +72,8 @@
 
 .room-carousel__btn {
   @include isFlex();
-  display: none;
   position: absolute;
+  display: none;
   width: 100%;
   height: 100%;
 }
@@ -95,7 +91,7 @@
 
 .room-carousel__btn_prev::before {
   content: "\e5cb";
-  @include carouselButton();
+  @include carouselButton;
   font-family: $MaterialIcons;
 }
 
@@ -109,6 +105,6 @@
 
 .room-carousel__btn_next::before {
   content: "\e5cb";
-  @include carouselButton();
+  @include carouselButton;
   font-family: $MaterialIcons;
 }

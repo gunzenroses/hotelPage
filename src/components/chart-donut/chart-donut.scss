@@ -1,15 +1,12 @@
 .donut {
-  display: flex;
-  flex-direction: row;
+  @include isFlex();
   width: 311px;
   height: 126px;
 }
 
 .donut__content {
-  width: 120px;
-  height: 120px;
+  @include containerBlock(120px, 120px);
   position: relative;
-  display: block;
 
   @media (max-width: 380px) {
     width: 100px;
@@ -22,27 +19,28 @@
 
 .donut__text {
   @include isFlex($direction: column, $align: center);
-  @include absoluteTopLeft(29%, 49%);
+  @include absoluteTopLeft(29%, 50%);
   color: $purple;
   font-weight: 700;
   transform: translateX(-50%);
 }
 
 .donut__number {
-  font-size: 25px;
   line-height: 29.26px;
+  font-size: 1.75rem;
+  letter-spacing: 0.005em;
 }
 
 .donut__label {
-  font-size: 16px;
   line-height: 14.63px;
+  font-size: 16px;
 }
 
 .li_circle {
   display: inline-block;
-  vertical-align: middle;
   width: 10px;
   height: 10px;
+  vertical-align: middle;
   margin-right: 5px;
   margin-bottom: 3px;
   border-radius: 50%;
@@ -51,10 +49,10 @@
 .donut__caption {
   width: 165px;
   height: 96px;
-  margin-top: 26px;
-  margin-left: 30px;
-  font-size: $fs_base;
   line-height: 24.5px;
+  margin-top: 24px;
+  margin-left: 31px;
+  font-size: $fs_base;
 
   @media (max-width: 380px) {
     margin-left: 15px;
@@ -66,7 +64,7 @@
   letter-spacing: 0.001em;
 }
 
-.exellent {
+.excellent {
   background: $linearGradientCitrus;
 }
 

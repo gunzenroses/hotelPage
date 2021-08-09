@@ -11,8 +11,8 @@
   );
   @include isFlex($direction: column, $justify: flex-start);
   position: relative;
-  overflow: auto; //to avoid margin-collapse
   background: $light;
+  overflow: auto;                //to avoid margin-collapse
   user-select: none;
 
   @media (max-width: 1440px) {
@@ -36,11 +36,11 @@
     $mb: 69px,
     $ms: 131px
   );
-  margin-left: 142px;
   @include isFlex($justify: space-between);
-  min-width: 320px;
   position: relative;
-  overflow: auto; //to avoid margin-collapse
+  min-width: 320px;
+  margin-left: 142px;
+  overflow: auto;        //to avoid margin-collapse
   background: $light;
 
   @media (max-width: 1440px) {
@@ -59,9 +59,9 @@
 }
 
 .search-room__filter {
+  @include isFlex($direction: column, $justify: flex-start);
   width: 267px;
   height: 739px;
-  @include isFlex($direction: column, $justify: flex-start);
 
   @media (max-width: 1250px) {
     margin-left: 25px;
@@ -100,10 +100,10 @@
   }
 
   @media (max-width: 450px) {
+    justify-content: center;
     width: 85%;
     min-width: 280px;
-    max-width: 320px;
-    justify-content: center;
+    max-width: 320px;    
   }
 }
 
@@ -116,7 +116,6 @@
 }
 
 .filter-group > .widget {
-  //margin-top: 26px;
   margin-top: 29px;
 }
 
@@ -133,9 +132,9 @@
 }
 
 .search-room__rooms {
+  @include isFlex($direction: column, $justify: flex-start);
   width: 839px;
   height: auto;
-  @include isFlex($direction: column, $justify: flex-start);
 
   @media (max-width: 1250px) {
     width: 637px;
@@ -158,12 +157,12 @@
 }
 
 .search-room__text {
-  font-weight: 700;
-  font-size: $fs_h1;
+  margin-left: -1px;
   line-height: 38px;
+  font-size: $fs_h1;
+  font-weight: 700;
   color: $darkShadeMost;
   letter-spacing: .005em;
-  margin-left: -1px;
 
   @media (max-width: 1070px) {
     margin: 20px auto;
@@ -175,9 +174,9 @@
 }
 
 .search-room__result {
+  @include isFlex($wrap: wrap);
   width: 100%;
   height: 1118px;
-  @include isFlex($wrap: wrap);
   margin-top: 18px;
 
   @media (max-width: 1250px) {

@@ -1,5 +1,5 @@
 .card_signin {
-  @include containerShadowed();
+  @include containerShadowed;
   @include isFlex($direction: column, $justify: flex-start);
   width: 383px;
   height: 360px;

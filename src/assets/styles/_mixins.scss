@@ -35,40 +35,18 @@
   height: $h;
 }
 
-@mixin isPaginated() {
-  @include containerSize(40px);
-  border-radius: 50%;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  cursor: pointer;
-}
-
-@mixin containerDimed() {
+@mixin containerDimed {
   border-radius: 4px;
   background: $light;
   box-sizing: border-box;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
 }
 
-@mixin containerShadowed() {
+@mixin containerShadowed {
   border: 1px solid rgba(0, 0, 0, 0.12);
   border-radius: 4px;
   background: $light;
-  // box-sizing: border-box;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-}
-
-@mixin absoluteTopLeft($top: 0, $left: 0){
-  position: absolute;
-  top: $top;
-  left: $left;
-}
-
-@mixin absoluteTopRight($top: 0, $right: 0){
-  position: absolute;
-  top: $top;
-  right: $right;
 }
 
 @mixin fontButton {
@@ -98,8 +76,26 @@
   background: $linearGradientTurquoise;
 }
 
-@mixin carouselButton(){
+@mixin carouselButton {
   @include absoluteTopLeft(53.5px);
   @include containerSize(44px);
   @include fontButton;
+}
+
+@mixin absoluteTopLeft($top: 0, $left: 0){
+  position: absolute;
+  top: $top;
+  left: $left;
+}
+
+@mixin absoluteTopRight($top: 0, $right: 0){
+  position: absolute;
+  top: $top;
+  right: $right;
+}
+
+@mixin absoluteBottomRight($bottom: 0, $right: 0){
+  position: absolute;
+  bottom: $bottom;
+  right: $right;
 }

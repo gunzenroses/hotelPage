@@ -1,6 +1,6 @@
 .header {
   @include isFlex($align: center);
-  @include containerDimed();
+  @include containerDimed;
   position: relative;
   width: 100%;
   height: 70px;
@@ -157,8 +157,8 @@
   &__signed {
     @include isFlex($align: center);
     height: 30px;
-    color: $darkShadeMiddle;
     font-size: $fs_base;
+    color: $darkShadeMiddle;
   }
 
   &__line {
@@ -176,7 +176,7 @@
 
 .dropdown__navbar {
   @include isFlex($direction: column, $align: flex-start);
-  @include containerDimed();
+  @include containerDimed;
   @include absoluteTopRight(50px);
   width: 130px;
   height: 130px;
@@ -216,15 +216,15 @@
 }
 
 .dropdown__icon::before {
-  position: absolute;
   content: "\e5cf";
+  position: absolute;
   font-size: $fs_h1;
   font-family: $MaterialIcons;
   color: $darkShadeMiddle;
 }
 
 .navbar__dropdown {
-  @include containerDimed();
+  @include containerDimed;
   position: absolute;
   top: 20px;
   width: 150px;
@@ -254,9 +254,9 @@
 .burger__menu::before,
 .burger__menu::after,
 .burger__menu > span {
+  content: "";
   position: absolute;
   left: 0;
-  content: "";
   width: 100%;
   height: 2px;
   background: $darkShadeMiddle;

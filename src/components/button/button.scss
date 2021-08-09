@@ -1,12 +1,11 @@
 .button-container {
+  @include isFlex($direction: column, $justify: flex-start);
   width: 320px;
   height: 269px;
-  top: 40.5px;
-  @include isFlex($direction: column, $justify: flex-start);
 
   @media (max-width: 450px) {
-    margin: 0 auto;
     width: 280px;
+    margin: 0 auto;
   }
 }
 
@@ -24,11 +23,11 @@
   }
 
   &:nth-child(2) {
-    margin-top: 1px;
-    margin-bottom: 1px;
+    flex-wrap: wrap;
     height: 148px;
     width: 218px;
-    flex-wrap: wrap;
+    margin-top: 1px;
+    margin-bottom: 1px;
   }
 
   &:nth-child(3) {
@@ -52,12 +51,10 @@
 
 .button_filled {
   position: relative;
-  display: block;
-  width: 99px;
-  height: 44px;
+  @include containerBlock(99px, 44px);
+  line-height: 44px;
   margin: 0;
   padding-right: 2px;
-  line-height: 44px;
   font-size: $fs_h3;
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -83,10 +80,11 @@
     @include absoluteTopLeft(2px, 2px);
     width: 95px;
     height: 40px;
-    line-height: 38px;
+    line-height: 40px;
     border-radius: 22px;
     background: $light;
     color: $purple;
+    letter-spacing: -.01em;
 
     @media (max-width: 450px) {
       width: 70px;
@@ -177,13 +175,13 @@
   letter-spacing: -0.001em;
 
   &::before {
+    content: "\e5c8";
+    @include absoluteTopRight();
+    @include containerSize(44px);
     font-family: $MaterialIcons;
     -webkit-font-feature-settings: "liga" 1;
     -moz-font-feature-settings: "liga" 1;
     font-feature-settings: "liga" 1;
-    @include absoluteTopRight();
-    @include containerSize(44);
-    content: "\e5c8";
     text-align: center;
     font-size: $fs_h1;
     color: $light;

@@ -1,5 +1,5 @@
 .card_search {
-  @include containerShadowed();
+  @include containerShadowed;
   @include isFlex($direction: column, $justify: flex-start);
   width: 382px;
   height: 376px;

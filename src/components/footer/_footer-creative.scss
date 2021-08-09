@@ -1,5 +1,5 @@
 .footer-creative {
-  @include containerDimed();
+  @include containerDimed;
   height: 369px;
   width: 773px;
   margin-left: 338px;
@@ -35,9 +35,9 @@
     $height: 127px,
     $mt: 120px,
   );
-  margin-left: 107px;
   @include isFlex($direction: column, $justify: flex-start, $align: center);
   position: relative;
+  margin-left: 107px;
 
   @media (max-width: 800px) {
     width: 85%;

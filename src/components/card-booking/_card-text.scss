@@ -56,8 +56,8 @@
   }
 
   &__row_small {
-    position: relative;
     @include isFlex();
+    position: relative;
     width: 100%;
     height: 24px;
     font-weight: 700;

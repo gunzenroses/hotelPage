@@ -34,13 +34,11 @@
 }
 
 .dropdown__calendar {
+  @include absoluteTopLeft(65px);
   display: none;
   width: 320px;
   height: 369px;
   margin-top: 4px;
-  @include absoluteTopLeft(65px);
-  // position: absolute;
-  // top: 65px;
   background: $light;
   z-index: 2;
 
@@ -62,9 +60,8 @@
 }
 
 .date__range > input {
-  //letter-spacing: .02em;
-  letter-spacing: 0;
   line-height: 13.5px;
+  letter-spacing: 0;
 }
 
 .date__range input::placeholder {

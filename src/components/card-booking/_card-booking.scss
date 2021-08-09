@@ -1,7 +1,7 @@
 @import "./card-text";
 
 .card-booking {
-  @include containerShadowed();
+  @include containerShadowed;
   @include isFlex($direction: column, $justify: flex-start);
   width: 382px;
   height: 513px;
@@ -145,10 +145,10 @@
   }
 
   &__sign {
+    @include containerSize(20px);
     position: relative;
     margin-left: 2px;
     margin-top: -1px;
-    @include containerSize(20px);
     background: $light;
     border-radius: 50%;
     border: 1px solid $darkShadeLess;

@@ -1,5 +1,4 @@
 /* Main container */
-
 .headers-n-footers_outer {
   @include container(
     $width: 1440px,
@@ -8,12 +7,11 @@
     $mb: 50px,
     $ms: auto
   );
-  @include isFlex($direction: column);
-  justify-content: flex-start;
+  @include isFlex($direction: column, $justify: flex-start);
+  position: relative;
   padding-top: 142px;
   padding-bottom: 132px;
-  position: relative;
-  overflow: auto; //to avoid margin-collapse
+  overflow: auto;                   //to avoid margin-collapse
   background: $background;
 
   @media (max-width: 1440px) {
@@ -23,6 +21,7 @@
 
   @media (max-width: 750px) {
     min-width: 320px;
+    
     &::before {
       top: 10px;
       left: 10px;
@@ -31,10 +30,8 @@
 }
 
 .headers-n-footers_outer::before {
-  position: absolute;
-  top: 30px;
-  left: 30px;
   content: "";
+  @include absoluteTopLeft(30px, 30px);
   width: 48px;
   height: 48px;
   background-image: url(/assets/images/logo/logo.svg);

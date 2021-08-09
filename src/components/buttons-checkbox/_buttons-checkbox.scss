@@ -52,7 +52,7 @@
 
 .checkbox__real:checked + .checkbox__fake::before {
   content: "";
-  @include absoluteTopLeft(25%, 35%);
+  @include absoluteTopLeft(40%, 50%);
   @include containerBlock(4px, 6px);
   color: none;
   transform: translate(-50%, -50%) rotate(45deg);

@@ -51,7 +51,7 @@ block content
                 +badgeItem("whatshot", "Уют", "Номер оснащён камином")
               .room-details__roomImpression
                 .room-details__text Впечатления от номера
-                +donutChart({exellent: 50, good: 25, satisfied: 25, dissapointed: 0})
+                +donutChart({excellent: 50, good: 25, satisfied: 25, dissapointed: 0})
             .room-details__reviews
               .room-details__text Отзывы посетителей номера
               .reviews__info 2 отзыва
@@ -64,7 +64,7 @@ block content
             .room-details__cancellation
               .room-details__text Отмена
               .room-details__cancellation_info
-                p!= cancellationRools
+                != cancellationRools
           .room-details__booking
             +cardBooking("Сбор за доп. услуги", "short")
     +footer()

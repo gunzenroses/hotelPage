@@ -12,8 +12,8 @@
 
 .dropdown {
   @include isFlex($direction: column-reverse);
-  width: inherit;
   position: relative;
+  width: inherit;
 }
 
 .dropdown__info {
@@ -32,10 +32,10 @@
 }
 
 .dropdown__info::before {
+  content: "\e5cf";
   @include absoluteTopRight();
   @include containerSize(44px);
   display: block;
-  content: "\e5cf";
   font-size: $fs_h1;
   font-family: $MaterialIcons;
   text-align: center;
@@ -109,12 +109,12 @@
 .dropdown__plus {
   @include containerSize(30px);
   line-height: 27px;
+  margin-top: -1px;
   border: 1px solid $darkShadeMiddle;
   border-radius: 50%;
   text-align: center;
   font-size: 18px;
   cursor: pointer;
-  margin-top: -1px;
 }
 
 .dropdown__number {
@@ -169,11 +169,11 @@
   }
 
   &::before {
+    content: "\e5cf";
     @include absoluteTopRight();
     @include containerSize(44px);
     line-height: 42px;
     display: block;
-    content: "\e5cf";
     font-size: $fs_h1;
     font-family: $MaterialIcons;
     text-align: center;
