@@ -37,6 +37,7 @@
     @media (min-width: 1650px) and (max-width: 1920px) {
       width: calc(100% - 20px);
       font-size: $fs_h2;
+      letter-spacing: 0;
     }
   }
 }
