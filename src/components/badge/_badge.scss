@@ -3,6 +3,10 @@
   width: 280px;
   height: 69px;
 
+  @media (min-width: 1650px) and (max-width: 1920px){
+    width: fit-content;
+  }
+
   &__info {
     @include isFlex($justify: start);
     height: 50px;
@@ -27,22 +31,24 @@
   &__description {
     height: 47px;
     width: 200px;
+    line-height: 24px;
+    font-size: $fs_base;
+    font-family: $Montserrat;
+    letter-spacing: 0.01em;
+
+    @media (min-width: 1650px) and (max-width: 1920px){
+      width: 300px;
+      margin-left: 14px;
+      font-size: $fs_h2;
+    }
   }
   
   &__main {
-    font-family: $Montserrat;
-    font-size: $fs_base;
-    line-height: 24px;
     font-weight: 700;
-    letter-spacing: 0.01em;
   }
 
   &__additional {
     margin-top: 0.5px;
-    line-height: 24px;
-    font-size: $fs_base;
-    font-family: $Montserrat;
     font-weight: 400;
-    letter-spacing: 0.01em;
   }
 }

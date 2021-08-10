@@ -42,6 +42,10 @@
   background: $light;
   z-index: 2;
 
+  @media (min-width: 1650px) and (max-width: 1920px) {
+    width: 100%;
+  }
+
   @media (max-width: 450px) {
     width: 100%;
     min-width: 260px;
@@ -53,6 +57,10 @@
   @extend .dropdown__button;
   padding-left: 12px;
   padding-bottom: 2px;
+
+  @media (min-width: 1650px) and (max-width: 1920px) {
+    font-size: $fs_h2;
+  }
 
   @media (max-width: 450px) {
     min-width: 100%;

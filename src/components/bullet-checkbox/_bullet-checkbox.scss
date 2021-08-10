@@ -20,7 +20,10 @@
     margin-right: 10px;
     border-radius: 50%;
     background-color: $darkShadeLess;
-    // top: 7px;
+
+    @media (min-width: 1650px) and (max-width: 1920px) {
+      top: 7px;
+    }
   }
   
   &__title {
@@ -30,6 +33,11 @@
     line-height: 24px;
     color: $darkShadeMore;
     letter-spacing: 0.001em;
+
+    @media (min-width: 1650px) and (max-width: 1920px) {
+      width: calc(100% - 20px);
+      font-size: $fs_h2;
+    }
   }
 }
 

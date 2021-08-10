@@ -5,7 +5,12 @@
   @include isFlex($direction: column, $justify: flex-start);
   width: 382px;
   height: 513px;
-  padding: 48px 29px 0;
+  padding: 48px 29px 28px;
+
+  @media (min-width: 1650px) and (max-width: 1920px) {
+    width: 100%;
+    height: fit-content;
+  }
 
   @media (max-width: 450px) {
     width: 100vw;
@@ -49,6 +54,11 @@
     height: 30px;
     font-weight: 700;
 
+    @media (min-width: 1650px) and (max-width: 1920px) {
+      width: 100%;
+      max-width: 490px;
+    }
+
     @media (max-width: 450px) {
       max-width: 280px;
       margin: 0 auto;
@@ -64,6 +74,10 @@
     display: inline-block;
     padding-right: 4px;
     font-size: $fs_base;
+
+    @media (min-width: 1650px) and (max-width: 1920px) {
+      font-size: $fs_h2;
+    }
   }
 
   &__number {
@@ -71,6 +85,10 @@
     padding-right: 1px;
     font-size: $fs_h1;
     letter-spacing: 0.01em;
+
+    @media (min-width: 1650px) and (max-width: 1920px) {
+      font-size: $fs_h1;
+    }
   }
 
   &__type {
@@ -79,6 +97,10 @@
     color: $purple;
     letter-spacing: -0.02em;
     text-transform: uppercase;
+
+    @media (min-width: 1650px) and (max-width: 1920px) {
+      font-size: $fs_h2;
+    }
   }
 
   &__right {
@@ -89,11 +111,19 @@
 
   &__price {
     font-size: $fs_base;
+
+    @media (min-width: 1650px) and (max-width: 1920px) {
+      font-size: $fs_h2;
+    }
   }
 
   &__period {
     font-weight: 400;
     font-size: $fs_h3;
+
+    @media (min-width: 1650px) and (max-width: 1920px) {
+      font-size: $fs_h2;
+    }
   }
 
   &__review {
@@ -114,6 +144,12 @@
     font-weight: 400;
     color: $darkShadeMore;
 
+    @media (min-width: 1650px) and (max-width: 1920px) {
+      width: 100%;
+      max-width: 490px;
+      font-size: $fs_h2;
+    }
+
     @media (max-width: 450px) {
       min-width: 260px;
       width: 100%;
@@ -127,6 +163,10 @@
     text-align: left;
     letter-spacing: 0.0001em;
 
+    @media (min-width: 1650px) and (max-width: 1920px){
+      width: 310px;
+    }
+
     @media (max-width: 450px) {
       width: calc(100% - 120px);
       max-width: 170px;
@@ -137,6 +177,10 @@
     @include isFlex();
     width: 172px;
     letter-spacing: 0.0001em;
+    
+    @media (min-width: 1650px) and (max-width: 1920px){
+      width: 240px;
+    }
 
     @media (max-width: 450px) {
       width: calc(100% - 120px);
@@ -168,6 +212,10 @@
     width: 75px;
     text-align: right;
     letter-spacing: .002em;
+
+    @media (min-width: 1650px) and (max-width: 1920px){
+      width: 90px;
+    }
   }
 }
 

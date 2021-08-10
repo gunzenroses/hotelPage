@@ -6,7 +6,7 @@
 
 .button-like {
   position: relative;
-  @include containerBlock(40px, 20px);
+  @include buttonLike;
   font-size: $fs_h3;
   color: $darkShadeLess;
   border-radius: 10px;
@@ -14,11 +14,9 @@
   background: $darkShadeLess;
 
   &::before {
-    @extend .button-like;
     content: "";
-    position: absolute;
-    width: 38px;
-    height: 18px;
+    @extend .button-like;
+    @include buttonLikeBefore;
     margin: 1px;
     background: $light;
   }
@@ -29,11 +27,9 @@
     background: $linearGradientLilac;
 
     &::before {
-      @extend .button-like_popular;
       content: "";
-      position: absolute;
-      width: 38px;
-      height: 18px;
+      @extend .button-like_popular;
+      @include buttonLikeBefore;
       margin: 1px;
       color: $purple;
       background: $light;
@@ -45,6 +41,10 @@
     font-size: 0.8em;
     line-height: 100%;
     transform: translateY(-50%);
+
+    @media (min-width: 1650px) and (max-width: 1920px) {
+      font-size: $fs_h2;
+    }
 
     &_popular {
       @extend .button-like__number;
@@ -61,12 +61,24 @@
     background-size: initial;
     background-repeat: no-repeat;
 
+    @media (min-width: 1650px) and (max-width: 1920px) {
+      background-size: contain;
+      top: 5px;
+      left: 5px;
+    }
+
     &_popular {
       @extend .button-like__heart;
       background: url(/assets/images/heart_active.svg);
       background-position: center;
       background-size: initial;
       background-repeat: no-repeat;
+
+      @media (min-width: 1650px) and (max-width: 1920px) {
+        background-size: contain;
+        top: 5px;
+        left: 5px;
+      }
     }
   }
 }

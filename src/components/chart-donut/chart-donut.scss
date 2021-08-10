@@ -2,11 +2,22 @@
   @include isFlex();
   width: 311px;
   height: 126px;
+
+  @media (min-width: 1650px) and (max-width: 1920px){
+    width: 100%;
+    height: fit-content;
+    margin-top: 30px;
+  }
 }
 
 .donut__content {
   @include containerBlock(120px, 120px);
   position: relative;
+
+  @media (min-width: 1650px) and (max-width: 1920px){
+    width: 167px;
+    height: 167px;
+  }
 
   @media (max-width: 380px) {
     width: 100px;
@@ -23,6 +34,10 @@
   color: $purple;
   font-weight: 700;
   transform: translateX(-50%);
+
+  @media (min-width: 1650px) and (max-width: 1920px) {
+    top: 35%;
+  }
 }
 
 .donut__number {
@@ -53,6 +68,11 @@
   margin-top: 24px;
   margin-left: 31px;
   font-size: $fs_base;
+
+  @media (min-width: 1650px) and (max-width: 1920px){
+    width: calc(100% - 167px);
+    font-size: $fs_h2;
+  }
 
   @media (max-width: 380px) {
     margin-left: 15px;

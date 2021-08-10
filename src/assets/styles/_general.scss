@@ -127,6 +127,11 @@ select {
   @include isFlex($direction: column);
   width: 151px;
 
+  @media (min-width: 1650px) and (max-width: 1920px) {
+    width: 48%;
+    max-width: 240px;
+  }
+
   @media (max-width: 450px) {
     width: calc(150 / 320 * 100%);
     min-width: 130px;
