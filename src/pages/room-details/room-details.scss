@@ -345,7 +345,7 @@
   font-weight: 700;
   font-size: $fs_h2;
   color: $darkShadeMost;
-  letter-spacing: -0.001em;
+  letter-spacing: -.001em;
 
   @media (min-width: 1650px) and (max-width: 1920px) {
     font-size: $fs_h1;
@@ -357,7 +357,7 @@
   height: auto;
   line-height: 1.75em;
   color: $darkShadeMore;
-  letter-spacing: 0.005em;
+  letter-spacing: .005em;
 
   @media (min-width: 1500px){
     width: 100%;

@@ -24,7 +24,7 @@
     font-weight: 400;
     font-size: $fs_base;
     text-transform: none;
-    letter-spacing: -0.002em;
+    letter-spacing: -.002em;
   }
 
   &__real {
@@ -50,14 +50,14 @@
     display: inline-block;
     width: 73px;
     line-height: 19px;
-    letter-spacing: 0.005em;
+    letter-spacing: .005em;
     height: 100%;
     color: $darkShadeMiddle;
   }
 }
 
 .radio__box .label {
-  letter-spacing: 0.01em;
+  letter-spacing: .01em;
 }
 
 .radio__element + .radio__element {

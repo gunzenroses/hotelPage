@@ -20,7 +20,7 @@ body {
   line-height: 14.63px;
   -webkit-text-size-adjust: 100%;
   font-size: $fs_base;
-  letter-spacing: -0.05em;
+  letter-spacing: -.05em;
   font-family: $Montserrat;
   font-weight: 400;
   color: $darkShadeMore;
@@ -54,7 +54,7 @@ h3 {
   font-size: $fs_h3;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.01em;
+  letter-spacing: .01em;
 }
 
 a {
@@ -157,10 +157,10 @@ select {
   height: 15px;
   margin-bottom: 3.5px;
   line-height: $fs_h3;
-  font-size: .875rem;
+  font-size: $fs_h3;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: -0.003em;
+  letter-spacing: -.003em;
 
   @media (min-width: 1650px) and (max-width: 1920px) {
     font-size: $fs_base;
@@ -173,6 +173,7 @@ select {
     font-weight: 400;
     color: $darkShadeMiddle;
     text-align: right;
+    letter-spacing: .003em;
   }
 }
 

@@ -83,7 +83,7 @@
     display: inline-block;
     padding-right: 1px;
     font-size: $fs_h1;
-    letter-spacing: 0.01em;
+    letter-spacing: .01em;
 
     @media (min-width: 1650px) and (max-width: 1920px) {
       font-size: $fs_h1;
@@ -94,7 +94,7 @@
     display: inline-block;
     font-size: $fs_h3;
     color: $purple;
-    letter-spacing: -0.02em;
+    letter-spacing: -.02em;
     text-transform: uppercase;
 
     @media (min-width: 1650px) and (max-width: 1920px) {
@@ -104,7 +104,7 @@
 
   &__right {
     color: $darkShadeMiddle;
-    letter-spacing: 0.01em;
+    letter-spacing: .01em;
     line-height: 20px;
   }
 
@@ -175,7 +175,7 @@
   &__description_short {
     @include isFlex();
     width: 172px;
-    letter-spacing: 0.0001em;
+    letter-spacing: .0001em;
 
     @media (min-width: 1650px) and (max-width: 1920px) {
       width: 240px;
@@ -226,7 +226,7 @@
     font-size: $fs_h2;
     color: $darkShadeMost;
     font-weight: 700;
-    letter-spacing: 0.01em;
+    letter-spacing: .01em;
   }
 
   &__line {

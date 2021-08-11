@@ -8,7 +8,7 @@
   border-radius: 4px;
   background: transparent;
   color: $darkShadeMore;
-  letter-spacing: -0.01em;
+  letter-spacing: -.01em;
 
   &:hover,
   &:focus {
@@ -23,7 +23,7 @@
 }
 
 .textfield > input {
-  letter-spacing: -0.01em;
+  letter-spacing: -.01em;
 }
 
 .label_none {

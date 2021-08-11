@@ -71,7 +71,7 @@
   font-weight: 700;
   font-family: $Montserrat;
   text-align: center;
-  letter-spacing: 0.0015em;
+  letter-spacing: .0015em;
 }
 
 .calendar__weeks {
@@ -94,7 +94,7 @@
     font-weight: 700;
     color: $purple;
     align-items: center;
-    letter-spacing: -0.01em;
+    letter-spacing: -.01em;
 
     @media (min-width: 1650px) and (max-width: 1920px) {
       font-size: $fs_h2;
@@ -199,7 +199,7 @@
     @include containerBlock();
     background: $linearGradientLilac;
     border-radius: 0 50% 50% 0;
-    opacity: 0.15;
+    opacity: .15;
   }
 }
 
@@ -218,7 +218,7 @@
     @include containerBlock();
     background: $linearGradientLilac;
     border-radius: 50% 0 0 50%;
-    opacity: 0.15;
+    opacity: .15;
   }
 }
 
