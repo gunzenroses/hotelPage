@@ -14,6 +14,26 @@
   flex-shrink: 0;
 }
 
+@mixin checkboxFake {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  border: 1px solid $darkShadeLess;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+@mixin checkboxFakeBefore {
+  content: "";
+  @include absoluteTopLeft(40%, 50%);
+  @include containerBlock(4px, 6px);
+  transform: translate(-50%, -50%) rotate(45deg);
+  border-image: $linearGradientLilac;
+  border-image-slice: 1;
+  border-right: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+}
+
 @mixin buttonLike {
   width: 40px;
   height: 20px;
