@@ -15,10 +15,15 @@ block variables
 block content
   .cards_outer.dropdown__watch
     .cards_inner
-      +cardSearch()
-      +cardRegistration("Перейти к оплате")
-      +cardBooking("Сбор за дополнительные услуги", "full")
-      +cardSignin()
-      +calendar("calendar_simple")
+      .cards__card-search
+        +cardSearch()
+      .cards__card-registration
+        +cardRegistration("Перейти к оплате")
+      .cards__card-booking
+        +cardBooking("Сбор за дополнительные услуги", "full")
+      .cards__card-signin
+        +cardSignin()
+      .cards__calendar
+        +calendar("calendar_simple")
       +room(room888)
       +room(room840)
