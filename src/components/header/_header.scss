@@ -7,7 +7,7 @@
   margin: 0 auto;
   padding: 14px 133px 15px 142px;
 
-  @media (min-width: 1650px){
+  @media (min-width: 1650px) and (max-width: 1920px) {
     width: 80%;
     padding: 0;
   }
