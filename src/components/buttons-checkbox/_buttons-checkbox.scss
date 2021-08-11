@@ -39,8 +39,8 @@
     width: 192px;
     font-weight: 400;
     font-size: $fs_base;
-    letter-spacing: 0.003em;
-    line-height: 18px;
+    letter-spacing: .003em;
+    line-height: 17px;
     color: $darkShadeMiddle;
 
     @media (min-width: 1650px) and (max-width: 1920px) {
