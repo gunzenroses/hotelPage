@@ -13,17 +13,14 @@
   position: relative;
 
   &__icon {
-    display: inline-block;
+    display: block;
+    top: 7px;
     position: relative;
     width: 10.43px;
     height: 10px;
     margin-right: 10px;
     border-radius: 50%;
     background-color: $darkShadeLess;
-
-    @media (min-width: 1650px) and (max-width: 1920px) {
-      top: 7px;
-    }
   }
   
   &__title {
