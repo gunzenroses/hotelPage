@@ -7,6 +7,10 @@
   height: 259px;
   position: relative;
 
+  @media (min-width: 1650px) and (max-width: 1920px) {
+    width: 32%;
+  }
+
   @media (max-width: 700px) {
     width: 380px;
     height: calc(152 / 270 * 380px + 106px);

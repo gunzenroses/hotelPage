@@ -5,28 +5,33 @@
   font-size: $fs_base;
   text-transform: none;
 
+  @media (min-width: 1650px) and (max-width: 1920px) {
+    width: 100%;
+  }
+
   &:hover {
     cursor: pointer;
   }
 
   &__real {
+    @include containerBlock(20px, 20px);
     position: absolute;
-    width: 20px;
-    height: 20px;
     opacity: 0;
     cursor: pointer;
     appearance: none;
+
+    @media (min-width: 1650px) and (max-width: 1920px) {
+      @include containerBlock(30px, 30px);
+    }
   }
 
   &__fake {
-    position: relative;
-    display: inline-block;
-    width: 20px;
-    height: 20px;
+    @include checkboxFake;
     margin-right: 10px;
-    border: 1px solid $darkShadeLess;
-    border-radius: 4px;
-    background-color: transparent;
+
+    @media (min-width: 1650px) and (max-width: 1920px) {
+      @include containerBlock(30px, 30px);
+    }
   }
 
   &__title {
@@ -37,7 +42,12 @@
     letter-spacing: 0.003em;
     line-height: 18px;
     color: $darkShadeMiddle;
-    vertical-align: auto;
+
+    @media (min-width: 1650px) and (max-width: 1920px) {
+      width: calc(100% - 50px);
+      max-width: 350px;
+      font-size: $fs_h2;
+    }
   }
 }
 
@@ -51,15 +61,11 @@
 }
 
 .checkbox__real:checked + .checkbox__fake::before {
-  content: "";
-  @include absoluteTopLeft(40%, 50%);
-  @include containerBlock(4px, 6px);
-  color: none;
-  transform: translate(-50%, -50%) rotate(45deg);
-  border-image: $linearGradientLilac;
-  border-image-slice: 1;
-  border-right: 2px solid transparent;
-  border-bottom: 2px solid transparent;
+  @include checkboxFakeBefore;
+
+  @media (min-width: 1650px) and (max-width: 1920px) {
+    @include containerBlock(9px, 15px);
+  }
 }
 
 .checkbox__content .checkbox__title {
@@ -76,6 +82,10 @@
   @include isFlex($direction: column);
   width: 224px;
   margin-top: 11px;
+
+  @media (min-width: 1650px) and (max-width: 1920px) {
+    width: 100%;
+  }
 }
 
 .buttons-checkbox .checkbox__fake {

@@ -12,10 +12,10 @@
   @include isFlex($direction: column, $justify: flex-start);
   position: relative;
   background: $light;
-  overflow: auto;                //to avoid margin-collapse
+  overflow: auto; //to avoid margin-collapse
   user-select: none;
 
-  @media (max-width: 1440px) {
+  @media (max-width: 1920px) {
     width: 100vw;
     height: auto;
     min-width: 320px;
@@ -40,10 +40,16 @@
   position: relative;
   min-width: 320px;
   margin-left: 142px;
-  overflow: auto;        //to avoid margin-collapse
+  overflow: auto; //to avoid margin-collapse
   background: $light;
 
+  @media (min-width: 1440px) and (max-width: 1920px) {
+    width: 80%;
+    margin: 27px 10%;
+  }
+
   @media (max-width: 1440px) {
+    height: fit-content;
     margin: 30px auto 70px;
   }
 
@@ -62,6 +68,12 @@
   @include isFlex($direction: column, $justify: flex-start);
   width: 267px;
   height: 739px;
+
+  @media (min-width: 1650px) and (max-width: 1920px) {
+    width: 30%;
+    max-width: 400px;
+    height: fit-content;
+  }
 
   @media (max-width: 1250px) {
     margin-left: 25px;
@@ -103,38 +115,18 @@
     justify-content: center;
     width: 85%;
     min-width: 260px;
-    max-width: 320px;    
+    max-width: 320px;
   }
-}
-
-.filter-group > .dropdown__container {
-  margin-top: 25px;
-}
-
-.filter-group > .range__container {
-  margin-top: 29px;
-}
-
-.filter-group > .widget {
-  margin-top: 29px;
-}
-
-.filter-group > .richcheckbox__container {
-  margin-top: 34px;
-}
-
-.richcheckbox__container + .widget {
-  margin-top: 29px;
-}
-
-.filter-group > .container_medium {
-  margin-top: 16px;
 }
 
 .search-room__rooms {
   @include isFlex($direction: column, $justify: flex-start);
   width: 839px;
   height: auto;
+
+  @media (min-width: 1650px) and (max-width: 1920px) {
+    width: 68%;
+  }
 
   @media (max-width: 1250px) {
     width: 637px;
@@ -162,7 +154,7 @@
   font-size: $fs_h1;
   font-weight: 700;
   color: $darkShadeMost;
-  letter-spacing: .005em;
+  letter-spacing: 0.005em;
 
   @media (max-width: 1070px) {
     margin: 20px auto;
@@ -211,15 +203,9 @@
   }
 }
 
-@media (max-width: 1250px) {
-  .search-room__result > div {
+.search-room__result > div {
+  @media (max-width: 1250px) {
     margin-bottom: 25px;
-  }
-}
-
-.filter-group > div {
-  @media (max-width: 1070px) {
-    margin-top: 30px;
   }
 }
 
@@ -231,5 +217,36 @@
   @media (max-width: 1070px) {
     width: 266px;
     margin-top: 0;
+  }
+}
+
+/* filter group inner containers */
+
+@media (min-width: 1070px) and (max-width: 1650px) {
+  .filter-group > .dropdown__container {
+    margin-top: 25px;
+  }
+
+  .filter-group > .widget,
+  .filter-group > .range__container {
+    margin-top: 29px;
+  }
+
+  .filter-group > .richcheckbox__container {
+    margin-top: 34px;
+  }
+
+  .filter-group > .container_medium {
+    margin-top: 16px;
+  }
+}
+
+.filter-group > div {
+  @media (min-width: 1650px) and (max-width: 1920px) {
+    margin-top: 40px;
+  }
+
+  @media (max-width: 1070px) {
+    margin-top: 30px;
   }
 }

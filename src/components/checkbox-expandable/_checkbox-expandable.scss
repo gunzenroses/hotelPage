@@ -3,22 +3,65 @@
     margin-top: 3px;
     height: 171px;
     width: 266px;
+
+    @media (min-width: 1650px) and (max-width: 1920px) {
+      width: 100%;
+    }
   }
 
   &__button {
     @include isFlex();
     width: 266px;
     height: 52px;
+
+    @media (min-width: 1650px) and (max-width: 1920px) {
+      width: 400px;
+      height: fit-content;
+    }
   }
 
+  &__fake_expand {
+    @include checkboxFake;
+    margin-right: 9px;
+
+    @media (min-width: 1650px) and (max-width: 1920px) {
+      @include containerBlock(30px, 30px);
+    }
+  }
+  
+  &__title_expand {
+    display: block;
+    width: 192px;
+    font-size: $fs_base;
+    line-height: 20px;
+    font-weight: 400;
+    letter-spacing: 0.003em;
+    color: $darkShadeMiddle;
+
+    @media (min-width: 1650px) and (max-width: 1920px) {
+      width: calc(100% - 50px);
+      max-width: 350px;
+      font-size: $fs_h2;
+    }
+  }
+}
+
+.checkbox {
   &__description {
     @include isFlex($direction: column);
     width: 236px;
+    font-size: $fs_base;
+
+    @media (min-width: 1650px) and (max-width: 1920px) {
+      width: calc(100% - 50px);
+      max-width: 350px;
+      height: fit-content;
+      font-size: $fs_h2;
+    }
   }
 
   &__title_description {
     height: 18px;
-    font-size: $fs_base;
     line-height: 18px;
     color: $darkShadeMore;
     font-weight: 700;
@@ -27,35 +70,16 @@
 
   &__subtitle_description {
     height: 14px;
-    font-weight: 400;
-    font-size: $fs_h3;
     line-height: 15px;
-    letter-spacing: -0.01em;
-    color: $darkShadeMiddle;
-    vertical-align: center;
     margin: 0;
-  }
-
-  &__fake_expand {
-    display: inline-block;
-    position: relative;
-    width: 20px;
-    height: 20px;
-    margin-right: 9px;
-    border: 1px solid $darkShadeLess;
-    border-radius: 4px;
-    background-color: transparent;
-  }
-  
-  &__title_expand {
-    display: inline-block;
-    width: 192px;
-    vertical-align: auto;
-    font-size: $fs_base;
-    line-height: 20px;
-    font-weight: 400;
-    letter-spacing: 0.003em;
     color: $darkShadeMiddle;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+
+    @media (min-width: 1650px) and (max-width: 1920px) {
+      height: fit-content;
+      line-height: $fs_h2;
+    }
   }
 }
 
@@ -82,15 +106,11 @@
 }
 
 .checkbox__real:checked + .checkbox__fake_expand::before {
-  content: "";
-  @include absoluteTopLeft(40%, 50%);
-  @include containerBlock(4px, 6px);
-  color: none;
-  transform: translate(-50%, -50%) rotate(45deg);
-  border-image: $linearGradientLilac;
-  border-image-slice: 1;
-  border-right: 2px solid transparent;
-  border-bottom: 2px solid transparent;
+  @include checkboxFakeBefore;
+
+  @media (min-width: 1650px) and (max-width: 1920px) {
+    @include containerBlock(9px, 15px);
+  }
 }
 
 .checkbox__content_expand .checkbox__title_expand {
@@ -108,6 +128,11 @@
     @include isFlex($direction: column, $justify: flex-start);
     width: 266px;
     height: 145px;
+
+    @media (min-width: 1650px) and (max-width: 1920px) {
+      width: 100%;
+      height: fit-content;
+    }
 
     @media (max-width: 450px) {
       width: 100%;
@@ -129,6 +154,10 @@
   font-family: $Montserrat;
   font-weight: 400;
   text-transform: none;
+
+  @media (min-width: 1650px) and (max-width: 1920px) {
+    width: 100%;
+  }
 
   &:hover {
     cursor: pointer;
