@@ -32,8 +32,8 @@
   @include container(
     $width: 1167px,
     $height: 1269px,
-    $mt: 27px,
-    $mb: 69px,
+    $mt: 28px,
+    $mb: 68px,
     $ms: 131px
   );
   @include isFlex($justify: space-between);
@@ -43,12 +43,12 @@
   overflow: auto; //to avoid margin-collapse
   background: $light;
 
-  @media (min-width: 1440px) and (max-width: 1920px) {
+  @media (min-width: 1500px) and (max-width: 1920px) {
     width: 80%;
     margin: 27px 10%;
   }
 
-  @media (max-width: 1440px) {
+  @media (max-width: 1400px) {
     height: fit-content;
     margin: 30px auto 70px;
   }
@@ -150,11 +150,11 @@
 
 .search-room__text {
   margin-left: -1px;
-  line-height: 38px;
+  line-height: 37px;
   font-size: $fs_h1;
   font-weight: 700;
   color: $darkShadeMost;
-  letter-spacing: 0.005em;
+  letter-spacing: .005em;
 
   @media (max-width: 1070px) {
     margin: 20px auto;
@@ -191,62 +191,58 @@
   }
 }
 
-.search-room__result > .card__room {
-  margin-top: 20px;
-}
-
-.search-room__pagination {
-  margin: 20px 302px 0 292px;
-
-  @media (max-width: 1440px) {
-    margin: 41px auto 0;
-  }
-}
-
 .search-room__result > div {
   @media (max-width: 1250px) {
     margin-bottom: 25px;
   }
 }
 
-.search-room__form > div {
-  @media (max-width: 700px) {
-    width: 100%;
-  }
+.search-room__result > .card__room {
+  margin-top: 20px;
+}
 
-  @media (max-width: 1070px) {
-    width: 266px;
-    margin-top: 0;
+.search-room__pagination {
+  margin: 20px 302px 0 290px;
+
+  @media (max-width: 1400px) {
+    margin: 41px auto 0;
   }
 }
 
 /* filter group inner containers */
 
-@media (min-width: 1070px) and (max-width: 1650px) {
-  .filter-group > .dropdown__container {
+.filter-group {
+  &__date-range {
+    @include formMargin;
+  }
+
+  &__guests {
+    @include formMargin;
     margin-top: 25px;
   }
 
-  .filter-group > .widget,
-  .filter-group > .range__container {
-    margin-top: 29px;
+  &__price-range {
+    @include formMargin;
+    margin-top: 28px;
   }
 
-  .filter-group > .richcheckbox__container {
-    margin-top: 34px;
+  &__accessibility {
+    @include formMargin;
+    margin-top: 33px;
   }
 
-  .filter-group > .container_medium {
-    margin-top: 16px;
-  }
-}
-
-.filter-group > div {
-  @media (min-width: 1650px) and (max-width: 1920px) {
-    margin-top: 40px;
-  }
-
-  @media (max-width: 1070px) {
+  &__rules {
+    @include formMargin;
     margin-top: 30px;
+  }
+
+  &__rooms {
+    @include formMargin;
+    margin-top: 30px;
+  }
+
+  &__extras {
+    @include formMargin;
+    margin-top: 16px;
   }
 }
