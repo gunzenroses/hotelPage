@@ -40,14 +40,21 @@ block content
         .search-room__filter
           form(class="search-room__form")
             .filter-group
-              +dateRangeCommon("calendar_search", "даты пребывания в отеле", "19 авг - 23 авг", "")
-              +dropdownGuestsLabeled("гости", "", "dropdown_guests_search", "", "dropdownGuestsInput_3")
-              +range("range_1", true, "Диапазон цены")
-              +checkboxButtons("Правила дома")
+              .filter-group__date-range
+                +dateRangeCommon("calendar_search", "даты пребывания в отеле", "19 авг - 23 авг", "")
+              .filter-group__guests
+                +dropdownGuestsLabeled("гости", "", "dropdown_guests_search", "", "dropdownGuestsInput_3")
+              .filter-group__price-range
+                +range("range_1", true, "Диапазон цены")
+              .filter-group__rules
+                +checkboxButtons("Правила дома")
             .filter-group
-              +richCheckboxButtons("accessibility", "Доступность")
-              +dropdownRoomsLabeled("Удобства номера", "", "dropdown_rooms_1", "", "dropdownRoomsInput_1")
-              +dropdownCheckbox("Дополнительные удобства", "")
+              .filter-group__accessibility
+                +richCheckboxButtons("accessibility", "Доступность")
+              .filter-group__rooms
+                +dropdownRoomsLabeled("Удобства номера", "", "dropdown_rooms_1", "", "dropdownRoomsInput_1")
+              .filter-group__extras
+                +dropdownCheckbox("Дополнительные удобства", "")
         .search-room__rooms
           .search-room__text Номера, которые мы для вас подобрали
           .search-room__result
