@@ -60,7 +60,7 @@
   overflow: hidden;
 
   @media (max-width: 1920px) {
-    width: 69%;
+    width: 68.6%;
   }
 
   @media (max-width: 970px) {
@@ -74,7 +74,7 @@
   overflow: hidden;
 
   @media (max-width: 1920px) {
-    width: 32.3%;
+    width: 32.1%;
   }
 
   @media (max-width: 970px) {
@@ -112,7 +112,7 @@
     height: auto;
   }
 
-  @media (max-width: 1440px) {
+  @media (max-width: 1400px) {
     height: auto;
     padding: 0%;
   }
@@ -129,17 +129,17 @@
     height: auto;
   }
 
-  @media (max-width: 1440px) {
+  @media (max-width: 1400px) {
     width: 80%;
     height: auto;
     margin: 70px 10%;
   }
 
-  @media (max-width: 1400px) {
-  //   margin: 70px auto;
-  // }
+  // @media (max-width: 1400px) {
+  // //   margin: 70px auto;
+  // // }
 
-  // @media (max-width: 1250px) {
+  @media (max-width: 1250px) {
     width: 95%;
     margin: 3% auto;
   }
@@ -274,7 +274,6 @@
   }
 
   @media (max-width: 1400px) {
-  //@media (max-width: 1250px) {
     margin-top: 20px;
   }
 }
@@ -285,6 +284,7 @@
 
   @media (min-width: 1650px) and (max-width: 1920px) {
     font-size: $fs_h2;
+    right: 10%;
   }
 
   @media (max-width: 970px) {
@@ -405,14 +405,6 @@
 
 .room-details__booking .booking-total__row {
   margin-top: 42px;
-}
-
-.room-details__booking .booking-total__line {
-  width: 183px;
-
-  @media (min-width: 1650px) and (max-width: 1920px) {
-    width: 70%;
-  }
 }
 
 .room-details__booking .booking__text_type {
