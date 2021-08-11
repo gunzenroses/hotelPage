@@ -26,7 +26,6 @@
 .card-booking > .dropdown__container {
   margin-top: 25px;
   margin-bottom: 10px;
-
 }
 
 .card-booking > .booking-total__row {
@@ -159,12 +158,12 @@
 
   &__description {
     display: inline-block;
-    width: 220px;
+    width: calc(100% - 100px);
     text-align: left;
-    letter-spacing: 0.0001em;
+    letter-spacing: .0001em;
 
-    @media (min-width: 1650px) and (max-width: 1920px){
-      width: 310px;
+    @media (min-width: 1650px) and (max-width: 1920px) {
+      width: calc(100% - 100px);
     }
 
     @media (max-width: 450px) {
@@ -177,8 +176,8 @@
     @include isFlex();
     width: 172px;
     letter-spacing: 0.0001em;
-    
-    @media (min-width: 1650px) and (max-width: 1920px){
+
+    @media (min-width: 1650px) and (max-width: 1920px) {
       width: 240px;
     }
 
@@ -191,8 +190,6 @@
   &__sign {
     @include containerSize(20px);
     position: relative;
-    margin-left: 2px;
-    margin-top: -1px;
     background: $light;
     border-radius: 50%;
     border: 1px solid $darkShadeLess;
@@ -208,12 +205,12 @@
   }
 
   &__price {
-    display: inline-block;
-    width: 75px;
+    @include isFlex($direction: row-reverse);
+    width: 100px;
     text-align: right;
     letter-spacing: .002em;
 
-    @media (min-width: 1650px) and (max-width: 1920px){
+    @media (min-width: 1650px) and (max-width: 1920px) {
       width: 90px;
     }
   }
@@ -237,6 +234,10 @@
     width: 191px;
     height: 19px;
     border-bottom: 1px dotted $darkShadeLess;
+
+    @media (min-width: 1650px) and (max-width: 1920px) {
+      width: calc(100% - 140px);
+    }
 
     @media (max-width: 450px) {
       width: calc(100% - 140px);
