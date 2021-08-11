@@ -21,11 +21,16 @@
 .range__info {
   margin-top: 22px;
   line-height: 1.045rem;
-  font-size: 0.857rem;
+  font-size: $fs_h3;
   font-weight: 400;
   color: $darkShadeMiddle;
   text-transform: none;
   letter-spacing: .002em;
+
+  @media (min-width: 1650px) and (max-width: 1920px) {
+    font-size: $fs_h2;
+    text-align: center;
+  }
 }
 
 .irs, .irs--flat, .js-irs-0 {
@@ -64,5 +69,5 @@
   border-radius: 10px;
   border: 2px solid $light;
   background: $linearGradientTurquoise;
-  z-index: 2;
+  z-index: 1;
 }
