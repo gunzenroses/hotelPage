@@ -8,6 +8,10 @@
     height: fit-content;
     margin-top: 30px;
   }
+
+  @media (max-width: 450px) {
+    width: 100%;
+  }
 }
 
 .donut__content {
