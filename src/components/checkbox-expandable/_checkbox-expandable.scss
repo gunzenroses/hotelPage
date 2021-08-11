@@ -35,7 +35,7 @@
     font-size: $fs_base;
     line-height: 20px;
     font-weight: 400;
-    letter-spacing: 0.003em;
+    letter-spacing: .003em;
     color: $darkShadeMiddle;
 
     @media (min-width: 1650px) and (max-width: 1920px) {
@@ -72,32 +72,34 @@
     height: 14px;
     line-height: 15px;
     margin: 0;
+    font-size: $fs_h3;
     color: $darkShadeMiddle;
     font-weight: 400;
-    letter-spacing: -0.01em;
+    letter-spacing: -.01em;
 
     @media (min-width: 1650px) and (max-width: 1920px) {
       height: fit-content;
       line-height: $fs_h2;
+      font-size: $fs_h2;
     }
   }
 }
 
 .checkbox__button + .checkbox__button {
-  margin-top: 10px;
+  margin-top: 11px;
 }
 
 .checkbox__title_description + .checkbox__subtitle_description {
-  margin-top: 5px;
+  margin-top: 6px;
 }
 
 .checkbox__description > .checkbox__title_description {
   margin-top: 1px;
-  letter-spacing: 0.0001em;
+  letter-spacing: .0001em;
 }
 
 .checkbox__description > .checkbox__subtitle_description {
-  letter-spacing: 0.002em;
+  letter-spacing: .002em;
 }
 
 .checkbox__real:checked ~ .checkbox__fake_expand {
