@@ -11,7 +11,7 @@
 
   &__bar {
     @include isFlex($direction: column);
-    width: 241px;
+    width: 243px;
     height: 75px;
   }
 
@@ -33,6 +33,17 @@
     @include isFlex();
     width: 120px;
     height: 40px;
+  }
+
+  &__info {
+    width: 261px;
+    height: 23px;
+    line-height: 18px;
+    margin: 0 auto;
+    padding-left: 5px;
+    font-size: $fs_base;
+    text-align: left;
+    letter-spacing: .005em;
   }
 }
 
@@ -76,15 +87,4 @@
     -moz-font-feature-settings: "liga" 1;
     font-feature-settings: "liga" 1;
   }
-}
-
-.pagination__info {
-  width: 261px;
-  height: 24px;
-  line-height: 18px;
-  margin: 0 auto;
-  padding-left: 5px;
-  font-size: $fs_base;
-  text-align: left;
-  letter-spacing: -0.001em;
 }
