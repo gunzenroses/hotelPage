@@ -10,7 +10,7 @@
   );
   position: relative;
   display: block;
-  overflow: auto;               //to avoid margin-collapse
+  overflow: auto; //to avoid margin-collapse
   background: $background;
 
   @media (max-width: 1440px) {
@@ -86,6 +86,10 @@
   width: 383px;
   height: fit-content;
   margin-top: 40px;
+
+  & .textfield_login {
+    height: 104px;
+  }
 }
 
 .cards__card-booking {
@@ -95,7 +99,7 @@
   margin-top: 1px;
 
   & .booking-total__line {
-	  width: 191px;
+    width: 191px;
   }
 
   & .dropdown__container {
@@ -105,9 +109,9 @@
 
 .cards__card-signin {
   @include cardsMargins;
-  width: 383px;
+  width: 381px;
   height: fit-content;
-  margin-top: 40px;
+  margin-top: 39px;
 
   @media (max-width: 1440px) {
     margin-top: 0;
@@ -127,22 +131,22 @@
 
 .cards_inner > .card-room {
   margin-left: -0.5px;
-  margin-top: 40px;
+  margin-top: 39px;
 }
 
 .cards_inner > .card-room:last-of-type {
-  margin-top: 39px;
+  margin-top: 40px;
 }
 
 /* Cards styles */
 .card__text {
   width: 100%;
   min-height: 30px;
-  letter-spacing: .004em;
+  letter-spacing: 0.004em;
   text-align: left;
   line-height: 29px;
   margin-left: 0px;
-  letter-spacing: -.003em;
+  letter-spacing: -0.003em;
   line-height: 30px;
   font-size: 1.74rem;
 
@@ -154,12 +158,11 @@
 }
 
 .card__subline {
-  margin-left: 1px;
   line-height: 44px;
   font-size: $fs_base;
   font-weight: 400;
   color: $darkShadeMost;
-  letter-spacing: .004em;
+  letter-spacing: 0.004em;
 }
 
 .card__text_row {
@@ -167,11 +170,9 @@
   width: 100%;
   height: 44px;
   margin: 30px auto 0;
-  letter-spacing: .005em;
+  letter-spacing: 0.005em;
 
   @media (max-width: 450px) {
     width: 280px;
   }
 }
-
-
