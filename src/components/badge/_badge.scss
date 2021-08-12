@@ -1,7 +1,11 @@
 .badge {
   @include isFlex($direction: column);
   width: 280px;
-  height: 69px;
+  height: 68px;
+
+  &:nth-of-type(4){
+    height: 69px;
+  }
 
   @media (min-width: 1650px) and (max-width: 1920px){
     width: fit-content;
@@ -50,5 +54,6 @@
   &__additional {
     margin-top: .5px;
     font-weight: 400;
+    letter-spacing: .005em;
   }
 }
