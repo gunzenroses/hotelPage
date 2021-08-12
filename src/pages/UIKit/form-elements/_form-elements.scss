@@ -13,7 +13,7 @@
   overflow: auto; //to avoid margin-collapse
   background: $light;
 
-  @media (max-width: 1440px) {
+  @media (max-width: 1400px) {
     width: 100vw;
     height: auto;
   }
@@ -52,7 +52,7 @@
   min-width: 320px;
   background: white;
 
-  @media (max-width: 1440px) {
+  @media (max-width: 1400px) {
     width: 85%;
     max-width: 1160px;
     margin: 9% auto 9%;
@@ -81,7 +81,7 @@
   @include container($width: 321px, $height: 636px, $mt: 0, $mb: 100px);
   margin-right: 120px;
 
-  @media (max-width: 1440px) {
+  @media (max-width: 1400px) {
     margin: 0;
   }
 
@@ -95,7 +95,7 @@
   @include isFlex($direction: column, $justify: flex-start, $align: flex-start);
   margin-right: 129px;
 
-  @media (max-width: 1440px) {
+  @media (max-width: 1400px) {
     margin: 0;
   }
 }
@@ -106,7 +106,7 @@
 }
 
 .form-elements__element_second > div:nth-of-type(2) {
-  margin-top: 43px;
+  margin-top: 42px;
 }
 
 .form-elements__element_second > div:nth-of-type(3) {
@@ -130,7 +130,7 @@
   @include isFlex($direction: column, $align: flex-start, $justify: flex-start);
   margin-right: 2px;
 
-  @media (max-width: 1440px) {
+  @media (max-width: 1400px) {
     margin: 0;
   }
 
@@ -146,7 +146,6 @@
 
 .form-elements__element_third > div:nth-of-type(3) {
   margin-top: 41px;
-  margin-left: 1px;
 }
 
 .form-elements__element_forth {
@@ -157,7 +156,7 @@
   margin-left: -1px;
   margin-bottom: 47px;
 
-  @media (max-width: 1440px) {
+  @media (max-width: 1400px) {
     margin: 0;
     margin-top: 40px;
   }
@@ -168,36 +167,36 @@
 }
 
 .form-elements__element_forth > div:nth-of-type(2) {
-  margin-top: 43px;
+  margin-top: 42px;
   margin-left: 1px;
 }
 
 .form-elements__element_forth > div:nth-of-type(3) {
-  margin-top: 20px;
+  margin-top: 21px;
 }
 
 .form-elements__element_fifth {
   @include container($width: 321px, $height: 465px);
   @include isFlex($direction: column, $align: flex-start, $justify: flex-start);
-  margin-top: 5px;
+  margin-top: 4px;
   margin-right: 69px;
 
-  @media (max-width: 1440px) {
+  @media (max-width: 1400px) {
     margin: 0;
     margin-top: 40px;
   }
 }
 
 .form-elements__element_fifth > div:nth-of-type(2) {
-  margin-top: 257px;
+  margin-top: 258px;
 }
 
 .form-elements__element_sixth {
   @include container($width: 320px, $height: 467px);
   @include isFlex($direction: column, $align: flex-start, $justify: flex-start);
-  margin-top: 5px;
+  margin-top: 4px;
 
-  @media (max-width: 1440px) {
+  @media (max-width: 1400px) {
     margin: 0;
     margin-top: 40px;
   }
@@ -208,18 +207,18 @@
 }
 
 .form-elements__element_sixth > div:nth-of-type(2) {
-  margin-top: 256px;
+  margin-top: 257px;
   margin-left: -2px;
 }
 
 .form-elements__element_seventh {
-  @include container($width: 291px, $height: 156px);
+  @include container($width: 291px, $height: 158px);
   @include isFlex($direction: column, $align: flex-start);
   margin-right: 120px;
   margin-top: 1px;
   margin-left: -1px;
 
-  @media (max-width: 1440px) {
+  @media (max-width: 1400px) {
     margin: 0;
     margin-top: 40px;
   }
@@ -233,10 +232,10 @@
   @include isFlex($direction: column, $align: flex-start);
   max-width: 711px;
   min-height: 133px;
-  margin-top: 10px;
+  margin-top: 11px;
   margin-right: 2px;
 
-  @media (max-width: 1440px) {
+  @media (max-width: 1400px) {
     width: 55vw;
     max-width: 711px;
     margin: 40px 0 0;
