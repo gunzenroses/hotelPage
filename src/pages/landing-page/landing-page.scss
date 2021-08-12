@@ -28,7 +28,7 @@
     height: 836px;
   }
 
-  @media (max-width: 1440px) {
+  @media (max-width: 1400px) {
     height: calc(830 / 1440 * 100vw);
   }
 
@@ -39,7 +39,7 @@
 
   @media (max-width: 500px) {
     width: 100%;
-    // carousel + card_search + text + initial top
+    // carousel + card-search + text + initial top
     height: calc(830 / 1440 * 100vw + 374px + 48px + 40px);
     min-height: calc(683 / 1440 * 320px + 374px + 48px + 40px);
   }
@@ -69,8 +69,8 @@
   }
 }
 
-.landing-page__card_search {
-  @include absoluteTopLeft(66px, 141px);
+.landing-page__card-search {
+  @include absoluteTopLeft(67px, 141px);
   z-index: 2;
 
   @media (max-width: 970px) {
