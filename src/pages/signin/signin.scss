@@ -10,19 +10,19 @@
   height: 707px;
 
   @media (max-width: 500px) {
-    // carouselSignin + card_signin + initial top
+    // carouselSignin + card-signin + initial top
     height: calc(683 / 1440 * 100vw + 360px + 40px);
   }
 
   @media (max-width: 380px) {
-    // carouselSignin + card_signin + initial top
+    // carouselSignin + card-signin + initial top
     height: calc(683 / 1440 * 100vw + 360px);
     min-height: calc(683 / 1440 * 320px + 360px);
   }
 }
 
-.sign-in__card_signin {
-  @extend .registration__card_registration;
+.sign-in__card-signin {
+  @extend .registration__card-registration;
   top: 174px;
   transform: translateX(-49%);
 
