@@ -66,44 +66,41 @@
 .dropdown__guests {
   @include absoluteTopLeft(44px);
   display: none;
+  width: 100%;
   margin-top: -1px;
   border: 1px solid rgba(31, 32, 65, 0.5);
   border-radius: 0 0 4px 4px;
   background: $light;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
   z-index: 2;
 }
 
 .dropdown__rooms {
-  width: 100%;
   height: 120px;
-  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  padding-top: 1px;
 }
 
 .dropdown__guests {
-  width: 100%;
   height: 159px;
-  margin-top: -2px;
+  padding-top: 1px;
+  margin-top: -1px;
   background: $light;
-  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
 }
 
 .dropdown__item_expanded {
-  @include isFlex();
-  justify-content: flex-start;
-  height: 30px;
-  width: 100%;
-  margin-top: 7px;
-  padding-left: 14px;
-  padding-right: 6px;
-  font-size: $fs_h3;
-  text-transform: uppercase;
+  @include dropdownItem;
+}
+
+.dropdown__item_expanded:nth-child(3) {
+  @extend .dropdown__item_expanded;
+  margin-top: 8px;
 }
 
 .dropdown__buttons {
-  @extend .dropdown__item_expanded;
+  @include dropdownItem;
   justify-content: space-between;
   flex-direction: row-reverse;
-  margin-top: 21px;
+  margin-top: 19px;
 }
 
 .dropdown__text {
@@ -121,8 +118,7 @@
 .dropdown__minus,
 .dropdown__plus {
   @include containerSize(30px);
-  line-height: 27px;
-  margin-top: -1px;
+  margin-top: -2px;
   border: 1px solid $darkShadeMiddle;
   border-radius: 50%;
   text-align: center;
@@ -135,6 +131,7 @@
   margin-top: 5px;
   font-weight: 700;
   text-align: center;
+  font-size: 1rem;
 
   @media (min-width: 1650px) and (max-width: 1920px) {
     font-size: $fs_base;
