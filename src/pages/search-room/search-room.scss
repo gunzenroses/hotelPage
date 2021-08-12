@@ -31,8 +31,8 @@
 .search-room__content {
   @include container(
     $width: 1167px,
-    $height: 1269px,
-    $mt: 28px,
+    $height: 1270px,
+    $mt: 27px,
     $mb: 68px,
     $ms: 131px
   );
@@ -66,7 +66,7 @@
 
 .search-room__filter {
   @include isFlex($direction: column, $justify: flex-start);
-  width: 267px;
+  width: 266px;
   height: 739px;
 
   @media (min-width: 1650px) and (max-width: 1920px) {
@@ -202,7 +202,7 @@
 }
 
 .search-room__pagination {
-  margin: 20px 302px 0 290px;
+  margin: 21px 302px 0 290px;
 
   @media (max-width: 1400px) {
     margin: 41px auto 0;
@@ -245,4 +245,8 @@
     @include formMargin;
     margin-top: 16px;
   }
+}
+
+.search-room .date__range {
+  padding-left: 10px;
 }
