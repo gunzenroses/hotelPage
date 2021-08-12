@@ -56,8 +56,8 @@ export default class DropdownRooms {
   }
 
   adjustData(i) {
-    this.data[i] = (this.data[i] < 1)
-      ? 1
+    this.data[i] = (this.data[i] < 0)
+      ? 0
       : ((this.data[i] > 10)
         ? 10
         : this.data[i]);
