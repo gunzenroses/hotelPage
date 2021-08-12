@@ -2,7 +2,7 @@
   &__container {
     @include isFlex($direction: column);
     width: 241px;
-    height: 106px;
+    height: 105px;
 
     @media (max-width: 450px) {
       margin: 0 auto;

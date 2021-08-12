@@ -69,7 +69,8 @@
 
 .date__range > input {
   line-height: 13.5px;
-  letter-spacing: 0;
+  letter-spacing: 0.03em;
+  font-size: 13.5px;
 }
 
 .date__range input::placeholder {
