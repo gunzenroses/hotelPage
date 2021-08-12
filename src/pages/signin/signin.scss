@@ -23,6 +23,7 @@
 
 .sign-in__card-signin {
   @extend .registration__card-registration;
+  width: 383px;
   top: 174px;
   transform: translateX(-49%);
 

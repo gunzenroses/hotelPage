@@ -55,7 +55,7 @@
   line-height: 44px;
   margin: 0;
   padding-right: 2px;
-  font-size: $fs_h3;
+  font-size: .875rem;
   font-weight: 700;
   letter-spacing: -.02em;
   text-align: center;
@@ -84,7 +84,8 @@
     border-radius: 22px;
     background: $light;
     color: $purple;
-    letter-spacing: -.01em;
+    letter-spacing: -.02em;
+    padding-right: 2px;
 
     @media (max-width: 450px) {
       width: 70px;
@@ -171,9 +172,9 @@
   width: 100%;
   height: 44px;
   line-height: 13px;
-  font-size: $fs_h3;
-  letter-spacing: -.001em;
-
+  font-size: .87rem;
+  letter-spacing: -.02em;
+  
   &::before {
     content: "\e5c8";
     @include absoluteTopRight();
