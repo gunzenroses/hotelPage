@@ -1,7 +1,7 @@
 mixin dropdownCheckbox(dropdownTitleName, dropdownClassShow)
   .widget.container_medium
     .dropdown.reverse
-      div(class="dropdown__content " + dropdownClassShow)
+      div(class="dropdown__content js-dropdown__content " + dropdownClassShow)
         .checkbox__content
           +checkboxExpandList()
       .dropdown__button_transparent.js-dropdown__init

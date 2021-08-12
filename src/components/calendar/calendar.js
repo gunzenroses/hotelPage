@@ -5,10 +5,10 @@ export default class Calendar {
     this.months = ["Январь", "Февраль", "Март", "Апрель",
       "Май", "Июнь", "Июль", "Август",
       "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
-    this.buttonPrev = this.calendarContainer.querySelector(".date__prev");
-    this.buttonNext = this.calendarContainer.querySelector(".date__next");
-    this.dateInCalendar = this.calendarContainer.querySelector(".date__month");
-    this.daysOfMonth = this.calendarContainer.querySelector(".weeks__days");
+    this.buttonPrev = this.calendarContainer.querySelector(".js-date__prev");
+    this.buttonNext = this.calendarContainer.querySelector(".js-date__next");
+    this.dateInCalendar = this.calendarContainer.querySelector(".js-date__month");
+    this.daysOfMonth = this.calendarContainer.querySelector(".js-weeks__days");
     this.init();
   }
 
@@ -20,8 +20,8 @@ export default class Calendar {
   }
 
   createChildren() {
-    if (this.calendarContainer.closest(".date-range__selector")) {
-      this.mainContainer = this.calendarContainer.closest(".date-range__selector");
+    if (this.calendarContainer.closest(".js-date-range__selector")) {
+      this.mainContainer = this.calendarContainer.closest(".js-date-range__selector");
     } else {
       this.mainContainer = this.calendarContainer;
     }
@@ -36,12 +36,12 @@ export default class Calendar {
       this.rangeEnd = this.mainContainer.querySelector("input[name=checkout]");
     }
 
-    if (this.mainContainer.querySelector(".dropdown__calendar ")) {
-      this.calendar = this.mainContainer.querySelector(".dropdown__calendar ");
+    if (this.mainContainer.querySelector(".js-dropdown__calendar")) {
+      this.calendar = this.mainContainer.querySelector(".js-dropdown__calendar");
     }
 
-    this.btnApply = this.mainContainer.querySelector(".calendar__buttons_submit");
-    this.btnReset = this.mainContainer.querySelector(".calendar__buttons_reset");
+    this.btnApply = this.mainContainer.querySelector(".js-calendar__buttons_submit");
+    this.btnReset = this.mainContainer.querySelector(".js-calendar__buttons_reset");
     this.checkin;
     this.checkout;
     this.examineCheckinCheckout();

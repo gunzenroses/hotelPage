@@ -19,7 +19,7 @@ window.onload = function () {
     require("Main/components/card-booking/cardBooking");
     makeCarousels();
 
-    let dropdownWatches = Array.from(document.querySelectorAll(".dropdown__watch"));
+    let dropdownWatches = Array.from(document.querySelectorAll(".js-dropdown__watch"));
     dropdownWatches.forEach(item => {
       new ExpandItems(item);
     })

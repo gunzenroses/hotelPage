@@ -2,7 +2,7 @@ export default class ExpandItems {
   constructor(dropdownWatch) {
     this.dropdownWatch = dropdownWatch
       ? dropdownWatch
-      : document.querySelector(".dropdown__watch");
+      : document.querySelector(".js-dropdown__watch");
     this.dropdownWatchedInits = Array.from(this.dropdownWatch.querySelectorAll(".js-dropdown__init"));
     this.dropdownWatchedParents = [];
     this.dropdownWatchedExpands = [];
@@ -21,7 +21,7 @@ export default class ExpandItems {
     });
 
     this.dropdownWatchedParents.forEach(item => {
-      this.dropdownWatchedExpands.push(item.querySelector(".dropdown__content"));
+      this.dropdownWatchedExpands.push(item.querySelector(".js-dropdown__content"));
     })
   }
 
@@ -46,7 +46,7 @@ export default class ExpandItems {
 
   expandElement(element){
     let innerParent = element.closest(".js-dropdown__init").parentElement;
-    let innerExpand = innerParent.querySelector(".dropdown__content");
+    let innerExpand = innerParent.querySelector(".dropdown__content.js-dropdown__content");
     innerExpand.classList.toggle("dropdown__show");
   }
 

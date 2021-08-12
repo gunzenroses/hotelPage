@@ -8,9 +8,9 @@ mixin buttonLikeContainer()
 mixin buttonLikeItem(buttonId, buttonNumber)
   if buttonNumber < 10 
     .button-like(id=buttonId)
-      .button-like__heart
-      .button-like__number!= buttonNumber
+      .button-like__heart.js-button-like__heart
+      .button-like__number.js-button-like__number!= buttonNumber
   else
     .button-like(id=buttonId)
-      .button-like__heart.button-like__heart_popular
-      .button-like__number.button-like__number_popular!= buttonNumber
+      .button-like__heart.js-button-like__heart.button-like__heart.js-button-like__heart_popular
+      .button-like__number.js-button-like__number.button-like__number.js-button-like__number_popular!= buttonNumber

@@ -6,7 +6,7 @@ mixin dropdownGuestsLabeled(labelText, labelRightText = "", dropdownContainerId,
 
 mixin dropdownGuestsItems(dropdownContainerId, dropdownClassShow, inputId)
   div(class="dropdown" id=dropdownContainerId)
-    div(class="dropdown__content dropdown__guests " + dropdownClassShow)
+    div(class="dropdown__content js-dropdown__content dropdown__guests js-dropdown__guests " + dropdownClassShow)
       +dropdownItem("grownups", "Взрослые", 0)
       +dropdownItem("kids", "Дети", 1)
       +dropdownItem("infants", "Младенцы", 2)

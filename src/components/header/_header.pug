@@ -16,7 +16,7 @@ mixin headerMenu(user="")
   .header__menu
     .burger__menu.js-dropdown__init
       span
-    .dropdown__navbar.dropdown__content
+    .dropdown__navbar.dropdown__content.js-dropdown__content
       +buttonNavbar("О нас", buttonOnclick="/some-address")
       +buttonNavbarExpand("Услуги")
       +buttonNavbar("Вакансии", buttonOnclick="/some-address")
@@ -50,7 +50,7 @@ mixin buttonNavbar(buttonText, buttonOnclick="/some-address")
 
 mixin buttonNavbarExpand(buttonText)
   div(class="button_navlink reverse")
-    .dropdown__content
+    .dropdown__content.js-dropdown__content
       .navbar__dropdown
     .dropdown_navlink.js-dropdown__init
       span(class="dropdown__icon")

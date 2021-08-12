@@ -1,5 +1,5 @@
 export default function makeCarousels() {
-  let carousels = document.querySelectorAll(".room-carousel");
+  let carousels = document.querySelectorAll(".js-room-carousel");
   for (let carousel of carousels) {
     new Carousel(carousel);
   }
@@ -8,9 +8,9 @@ export default function makeCarousels() {
 class Carousel {
   constructor(carousel) {
     this.carousel = carousel;
-    this.carouselInputs = this.carousel.getElementsByClassName("room-carousel__radio")[0];
-    this.carouselInputs.querySelectorAll(".room-carousel__radio_real")[0].checked = true;
-    this.carouselPictures = this.carousel.querySelector(".room-carousel__pictures");
+    this.carouselInputs = this.carousel.getElementsByClassName("js-room-carousel__radio")[0];
+    this.carouselInputs.querySelectorAll(".js-room-carousel__radio_real")[0].checked = true;
+    this.carouselPictures = this.carousel.querySelector(".js-room-carousel__pictures");
     this.carouselPictures.style.left = 0;
     this.init();
   }
@@ -23,16 +23,17 @@ class Carousel {
 
   creatChildren() {
     this.leftValue = parseInt(this.carouselPictures.style.left);
-    this.carouselPrev = this.carousel.querySelector(".room-carousel__btn_prev")
-      ? this.carousel.querySelector(".room-carousel__btn_prev")
+    this.carouselPrev = this.carousel.querySelector(".js-room-carousel__btn_prev")
+      ? this.carousel.querySelector(".js-room-carousel__btn_prev")
       : null;
-    this.carouselNext = (this.carousel.querySelector(".room-carousel__btn_next"))
-      ? this.carousel.querySelector(".room-carousel__btn_next")
+    this.carouselNext = (this.carousel.querySelector(".js-room-carousel__btn_next"))
+      ? this.carousel.querySelector(".js-room-carousel__btn_next")
       : null;
-    this.firstPic = this.carouselInputs.querySelectorAll(".room-carousel__radio_real")[0];
-    this.secondPic = this.carouselInputs.querySelectorAll(".room-carousel__radio_real")[1];
-    this.thirdPic = this.carouselInputs.querySelectorAll(".room-carousel__radio_real")[2];
-    this.forthPic = this.carouselInputs.querySelectorAll(".room-carousel__radio_real")[3];
+    let radioRow = this.carouselInputs.querySelectorAll(".js-room-carousel__radio_real");
+    this.firstPic = radioRow[0];
+    this.secondPic = radioRow[1];
+    this.thirdPic = radioRow[2];
+    this.forthPic = radioRow[3];
   }
 
   setupHandlers() {

@@ -8,7 +8,7 @@ mixin dropdownRoomsLabeled(labelText, labelRightText, dropdownContainerId, dropd
 
 mixin dropdownRoomsItems(dropdownContainerId, dropdownClassShow, inputId)
   div(class="dropdown" id=dropdownContainerId)
-    div(class="dropdown__content dropdown__rooms " + dropdownClassShow)
+    div(class="dropdown__content js-dropdown__content dropdown__rooms js-dropdown__rooms " + dropdownClassShow)
       +dropdownItem("bedrooms", "Спальни", 0)
       +dropdownItem("beds", "Кровати", 1)
       +dropdownItem("bathrooms", "Ванные комнаты", 2)
