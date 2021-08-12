@@ -4,7 +4,7 @@ import DropdownRooms from "Main/components/dropdown-rooms/dropdownRooms";
 import DropdownGuests from "Main/components/dropdown-guests/dropdownGuests";
 import ExpandItems from "Main/components/checkbox-expandable/expandItems";
 import makeCarousels from "Main/components/room-carousel/roomCarousel";
-import guestsData_searchRoom from "Scripts/myData";
+import { guestsData_searchRoom } from "Scripts/myData";
 import { roomsData_1 } from "Scripts/myData";
 import { paginationData_1 } from "Scripts/myData";
 
