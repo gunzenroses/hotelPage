@@ -119,10 +119,6 @@ select {
   color: $darkShadeLess;
 }
 
-.button_disabled {
-  border: 1px solid $darkShadeLess;
-}
-
 .container_small {
   @include isFlex($direction: column);
   width: 151px;
@@ -205,18 +201,6 @@ select {
   -moz-osx-font-smoothing: grayscale;
   /* Support for IE. */
   font-feature-settings: "liga";
-}
-
-.none {
-  display: none;
-}
-
-.pr2 {
-  padding-right: 2px;
-}
-
-.purple-text {
-  color: $purple;
 }
 
 .reverse {
