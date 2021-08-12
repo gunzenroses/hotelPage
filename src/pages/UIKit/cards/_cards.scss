@@ -93,13 +93,21 @@
   width: 382px;
   height: fit-content;
   margin-top: 1px;
+
+  & .booking-total__line {
+	  width: 191px;
+  }
+
+  & .dropdown__container {
+    margin-top: 24px;
+  }
 }
 
 .cards__card-signin {
   @include cardsMargins;
   width: 383px;
   height: fit-content;
-  margin-top: 41px;
+  margin-top: 40px;
 
   @media (max-width: 1440px) {
     margin-top: 0;
