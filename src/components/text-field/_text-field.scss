@@ -8,7 +8,7 @@
   border-radius: 4px;
   background: transparent;
   color: $darkShadeMore;
-  letter-spacing: -.01em;
+  letter-spacing: -0.01em;
 
   &:hover,
   &:focus {
@@ -20,10 +20,10 @@
     min-width: 260px;
     margin: 0 auto;
   }
-}
 
-.textfield > input {
-  letter-spacing: -.01em;
+  & > input {
+    letter-spacing: -0.01em;
+  }
 }
 
 .label_none {
@@ -34,10 +34,14 @@
   @extend .textfield;
   text-transform: uppercase;
   white-space: nowrap;
-  
+
   &:hover,
   &:focus {
     border: 1px solid $darkShadeMiddle;
+  }
+
+  & > input {
+    letter-spacing: 0.01em;
   }
 }
 
@@ -51,12 +55,16 @@
     min-width: 260px;
     margin: 0 auto;
   }
+
+  & > input {
+    letter-spacing: 0.01em;
+  }
 }
 
 .arrow_submit {
-  @include absoluteTopRight();
+  @include absoluteTopRight(-1px, -2px);
   @include containerSize(44px);
-  font-size: $fs_h1;
+  font-size: 1.8rem;
   border: none;
   text-align: center;
   font-family: $MaterialIcons;
