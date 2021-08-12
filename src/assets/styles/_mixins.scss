@@ -14,24 +14,22 @@
   flex-shrink: 0;
 }
 
-@mixin checkboxFake {
-  width: 20px;
-  height: 20px;
-  position: relative;
-  border: 1px solid $darkShadeLess;
-  border-radius: 4px;
-  background-color: transparent;
+@mixin absoluteTopLeft($top: 0, $left: 0) {
+  position: absolute;
+  top: $top;
+  left: $left;
 }
 
-@mixin checkboxFakeBefore {
-  content: "";
-  @include absoluteTopLeft(40%, 50%);
-  @include containerBlock(4px, 6px);
-  transform: translate(-50%, -50%) rotate(45deg);
-  border-image: $linearGradientLilac;
-  border-image-slice: 1;
-  border-right: 2px solid transparent;
-  border-bottom: 2px solid transparent;
+@mixin absoluteTopRight($top: 0, $right: 0) {
+  position: absolute;
+  top: $top;
+  right: $right;
+}
+
+@mixin absoluteBottomRight($bottom: 0, $right: 0) {
+  position: absolute;
+  bottom: $bottom;
+  right: $right;
 }
 
 @mixin buttonLike {
@@ -72,6 +70,32 @@
   @media (max-width: 850px) {
     margin-top: 30px;
   }
+}
+
+@mixin carouselButton {
+  @include absoluteTopLeft(53.5px);
+  @include containerSize(44px);
+  @include fontButton;
+}
+
+@mixin checkboxFake {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  border: 1px solid $darkShadeLess;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+@mixin checkboxFakeBefore {
+  content: "";
+  @include absoluteTopLeft(40%, 50%);
+  @include containerBlock(4px, 6px);
+  transform: translate(-50%, -50%) rotate(45deg);
+  border-image: $linearGradientLilac;
+  border-image-slice: 1;
+  border-right: 2px solid transparent;
+  border-bottom: 2px solid transparent;
 }
 
 @mixin container(
@@ -116,6 +140,18 @@
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
 }
 
+@mixin dropdownItem {
+  @include isFlex();
+  justify-content: flex-start;
+  height: 30px;
+  width: 100%;
+  margin-top: 7px;
+  padding-left: 14px;
+  padding-right: 6px;
+  font-size: 0.87rem;
+  text-transform: uppercase;
+}
+
 @mixin fontButton {
   font-size: $fs_h1;
   text-align: center;
@@ -151,28 +187,4 @@
 @mixin paginationNav {
   position: relative;
   background: $linearGradientTurquoise;
-}
-
-@mixin carouselButton {
-  @include absoluteTopLeft(53.5px);
-  @include containerSize(44px);
-  @include fontButton;
-}
-
-@mixin absoluteTopLeft($top: 0, $left: 0) {
-  position: absolute;
-  top: $top;
-  left: $left;
-}
-
-@mixin absoluteTopRight($top: 0, $right: 0) {
-  position: absolute;
-  top: $top;
-  right: $right;
-}
-
-@mixin absoluteBottomRight($bottom: 0, $right: 0) {
-  position: absolute;
-  bottom: $bottom;
-  right: $right;
 }
