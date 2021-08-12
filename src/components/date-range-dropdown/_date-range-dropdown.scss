@@ -58,7 +58,7 @@
   padding-left: 12px;
   padding-bottom: 2px;
 
-  @media (min-width: 1650px) and (max-width: 1920px) {
+  @media (min-width: 1750px) and (max-width: 1920px) {
     font-size: $fs_h2;
   }
 
@@ -71,6 +71,10 @@
   line-height: 13.5px;
   letter-spacing: 0.03em;
   font-size: 13.5px;
+
+  @media (min-width: 1750px) and (max-width: 1920px){
+    font-size: $fs_h2;
+  }
 }
 
 .date__range input::placeholder {

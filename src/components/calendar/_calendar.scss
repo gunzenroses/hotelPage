@@ -96,7 +96,7 @@
     align-items: center;
     letter-spacing: -.01em;
 
-    @media (min-width: 1650px) and (max-width: 1920px) {
+    @media (min-width: 1750px) and (max-width: 1920px) {
       font-size: $fs_h2;
     }
   }
@@ -115,7 +115,7 @@
   &__day {
     @include containerSize(40px);
 
-    @media (min-width: 1650px) and (max-width: 1920px) {
+    @media (min-width: 1750px) and (max-width: 1920px) {
       width: 14.28%;
       font-size: $fs_h2;
     }
@@ -236,7 +236,7 @@
     text-transform: uppercase;
     color: $purple;
 
-    @media (min-width: 1650px) and (max-width: 1920px) {
+    @media (min-width: 1750px) and (max-width: 1920px) {
       font-size: $fs_base;
     }
   }

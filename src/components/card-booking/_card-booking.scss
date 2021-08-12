@@ -74,7 +74,7 @@
     padding-right: 4px;
     font-size: $fs_base;
 
-    @media (min-width: 1650px) and (max-width: 1920px) {
+    @media (min-width: 1750px) and (max-width: 1920px) {
       font-size: $fs_h2;
     }
   }
@@ -85,7 +85,7 @@
     font-size: $fs_h1;
     letter-spacing: .01em;
 
-    @media (min-width: 1650px) and (max-width: 1920px) {
+    @media (min-width: 1750px) and (max-width: 1920px) {
       font-size: $fs_h1;
     }
   }
@@ -97,7 +97,7 @@
     letter-spacing: -.02em;
     text-transform: uppercase;
 
-    @media (min-width: 1650px) and (max-width: 1920px) {
+    @media (min-width: 1750px) and (max-width: 1920px) {
       font-size: $fs_h2;
     }
   }
@@ -111,7 +111,7 @@
   &__price {
     font-size: $fs_base;
 
-    @media (min-width: 1650px) and (max-width: 1920px) {
+    @media (min-width: 1750px) and (max-width: 1920px) {
       font-size: $fs_h2;
     }
   }
@@ -120,7 +120,7 @@
     font-weight: 400;
     font-size: $fs_h3;
 
-    @media (min-width: 1650px) and (max-width: 1920px) {
+    @media (min-width: 1750px) and (max-width: 1920px) {
       font-size: $fs_h2;
     }
   }
@@ -143,7 +143,7 @@
     font-weight: 400;
     color: $darkShadeMore;
 
-    @media (min-width: 1650px) and (max-width: 1920px) {
+    @media (min-width: 1750px) and (max-width: 1920px) {
       width: 100%;
       max-width: 490px;
       font-size: $fs_h2;

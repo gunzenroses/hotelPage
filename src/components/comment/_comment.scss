@@ -22,7 +22,7 @@
   filter: drop-shadow(0px 10px 20px rgba(31, 32, 65, 0.1));
   overflow: hidden;
 
-  @media (min-width: 1650px) and (max-width: 1920px) {
+  @media (min-width: 1750px) and (max-width: 1920px) {
     width: 48px;
     height: 48px;
   }
@@ -37,7 +37,7 @@
   font-size: $fs_base;
   pointer-events: none;
 
-  @media (min-width: 1650px) and (max-width: 1920px) {
+  @media (min-width: 1750px) and (max-width: 1920px) {
     font-size: $fs_h2;
   }
 

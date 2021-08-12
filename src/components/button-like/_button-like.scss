@@ -2,6 +2,10 @@
   @include isFlex($direction: column);
   width: 90px;
   height: 50px;
+
+  @media (min-width: 1750px) and (max-width: 1920px){
+    width: 130px;
+  }
 }
 
 .button-like {
@@ -42,7 +46,7 @@
     line-height: 100%;
     transform: translateY(-50%);
 
-    @media (min-width: 1650px) and (max-width: 1920px) {
+    @media (min-width: 1750px) and (max-width: 1920px) {
       font-size: $fs_h2;
     }
 
@@ -61,7 +65,7 @@
     background-size: initial;
     background-repeat: no-repeat;
 
-    @media (min-width: 1650px) and (max-width: 1920px) {
+    @media (min-width: 1750px) and (max-width: 1920px) {
       background-size: contain;
       top: 5px;
       left: 5px;
@@ -74,7 +78,7 @@
       background-size: initial;
       background-repeat: no-repeat;
 
-      @media (min-width: 1650px) and (max-width: 1920px) {
+      @media (min-width: 1750px) and (max-width: 1920px) {
         background-size: contain;
         top: 5px;
         left: 5px;

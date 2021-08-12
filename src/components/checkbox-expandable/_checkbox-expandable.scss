@@ -14,7 +14,7 @@
     width: 266px;
     height: 52px;
 
-    @media (min-width: 1650px) and (max-width: 1920px) {
+    @media (min-width: 1750px) and (max-width: 1920px) {
       width: 400px;
       height: fit-content;
     }
@@ -24,7 +24,7 @@
     @include checkboxFake;
     margin-right: 9px;
 
-    @media (min-width: 1650px) and (max-width: 1920px) {
+    @media (min-width: 1750px) and (max-width: 1920px) {
       @include containerBlock(30px, 30px);
     }
   }
@@ -38,7 +38,7 @@
     letter-spacing: .003em;
     color: $darkShadeMiddle;
 
-    @media (min-width: 1650px) and (max-width: 1920px) {
+    @media (min-width: 1750px) and (max-width: 1920px) {
       width: calc(100% - 50px);
       max-width: 350px;
       font-size: $fs_h2;
@@ -52,7 +52,7 @@
     width: 236px;
     font-size: $fs_base;
 
-    @media (min-width: 1650px) and (max-width: 1920px) {
+    @media (min-width: 1750px) and (max-width: 1920px) {
       width: calc(100% - 50px);
       max-width: 350px;
       height: fit-content;
@@ -77,7 +77,7 @@
     font-weight: 400;
     letter-spacing: -.01em;
 
-    @media (min-width: 1650px) and (max-width: 1920px) {
+    @media (min-width: 1750px) and (max-width: 1920px) {
       height: fit-content;
       line-height: $fs_h2;
       font-size: $fs_h2;

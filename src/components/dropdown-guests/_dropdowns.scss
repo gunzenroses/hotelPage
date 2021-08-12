@@ -106,7 +106,7 @@
   letter-spacing: -.01em;
   color: $darkShadeMost;
 
-  @media (min-width: 1650px) and (max-width: 1920px) {
+  @media (min-width: 1750px) and (max-width: 1920px) {
     font-size: $fs_base;
   }
 }
@@ -129,7 +129,7 @@
   text-align: center;
   font-size: 1rem;
 
-  @media (min-width: 1650px) and (max-width: 1920px) {
+  @media (min-width: 1750px) and (max-width: 1920px) {
     font-size: $fs_base;
   }
 }
@@ -142,7 +142,7 @@
   text-transform: uppercase;
   color: $purple;
 
-  @media (min-width: 1650px) and (max-width: 1920px) {
+  @media (min-width: 1750px) and (max-width: 1920px) {
     font-size: $fs_base;
   }
 }
@@ -163,7 +163,7 @@
   text-transform: uppercase;
   text-align: start;
 
-  @media (min-width: 1650px) and (max-width: 1920px) {
+  @media (min-width: 1750px) and (max-width: 1920px) {
     font-size: $fs_h2;
   }
 }
