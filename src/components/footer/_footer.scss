@@ -40,11 +40,12 @@
     $ms: 141px,
     $mb: 99px
   );
+
   @include isFlex($justify: space-between, $wrap: wrap);
   position: relative;
   margin-right: 133px;
 
-  @media (min-width: 1450px) and (max-width: 1920px) {
+  @media (min-width: 1500px) and (max-width: 1920px) {
     margin: 100px auto;
   }
 
@@ -101,7 +102,7 @@
 .footer__navbar_inner > .footer__info_more {
   margin-right: 51px;
 
-  @media (min-width: 1450px) and (max-width: 1920px){
+  @media (min-width: 1500px) and (max-width: 1920px){
       margin-right: 0;
   }
 
@@ -237,7 +238,7 @@
   width: 548px;
   padding-top: 4px;
 
-  @media (min-width: 1450px) and (max-width: 1920px) {
+  @media (min-width: 1500px) and (max-width: 1920px) {
     width: 50%;
     justify-content: space-between;
   }
@@ -376,7 +377,7 @@
     @include isFlex($align: flex-start);
     margin-left: 141px;
 
-    @media (min-width: 1450px) and (max-width: 1920px) {
+    @media (min-width: 1500px) and (max-width: 1920px) {
       margin: 23px auto;
     }
 
