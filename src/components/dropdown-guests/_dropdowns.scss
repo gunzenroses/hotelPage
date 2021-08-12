@@ -30,10 +30,6 @@
   font-size: $fs_base;
   line-height: 42px;
 
-  @media (min-width: 1650px) and (max-width: 1920px) {
-    font-size: $fs_h2;
-  }
-
   @media (max-width: 450px) {
     width: 100%;
     min-width: 260px;

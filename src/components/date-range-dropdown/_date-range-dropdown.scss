@@ -71,10 +71,6 @@
   line-height: 13.5px;
   letter-spacing: 0.03em;
   font-size: 13.5px;
-
-  @media (min-width: 1650px) and (max-width: 1920px){
-      font-size: 1.357rem;
-  }
 }
 
 .date__range input::placeholder {
