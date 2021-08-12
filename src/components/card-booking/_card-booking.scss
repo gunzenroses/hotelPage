@@ -4,8 +4,8 @@
   @include containerShadowed;
   @include isFlex($direction: column, $justify: flex-start);
   width: 382px;
-  height: 513px;
-  padding: 48px 29px 28px;
+  height: 514px;
+  padding: 49px 29px 28px;
 
   @media (min-width: 1650px) and (max-width: 1920px) {
     width: 100%;
@@ -24,13 +24,13 @@
 }
 
 .card-booking > .dropdown__container {
-  margin-top: 25px;
+  margin-top: 24px;
   margin-bottom: 10px;
 }
 
 .card-booking > .booking-total__row {
   width: 100%;
-  margin-top: 32px;
+  margin-top: 30px;
 
   @media (max-width: 450px) {
     width: 100%;
@@ -136,7 +136,7 @@
     @include isFlex();
     width: 320px;
     min-height: 24px;
-    line-height: 18px;
+    line-height: 19px;
     margin-top: 10px;
     margin-left: 1px;
     font-size: $fs_base;
@@ -231,16 +231,8 @@
 
   &__line {
     @include isFlex($align: flex-end);
-    width: 191px;
+    width: calc(100% - 139px);
     height: 19px;
     border-bottom: 1px dotted $darkShadeLess;
-
-    @media (min-width: 1650px) and (max-width: 1920px) {
-      width: calc(100% - 140px);
-    }
-
-    @media (max-width: 450px) {
-      width: calc(100% - 140px);
-    }
   }
 }
