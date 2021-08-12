@@ -31,7 +31,7 @@
 
   @media (max-width: 500px) {
     width: 100vw;
-    // carouselRegistration + card_registration + initial top
+    // carouselRegistration + card-registration + initial top
     height: calc(683 / 1440 * 100vw + 646px + 40px);
   }
 
@@ -41,7 +41,7 @@
   }
 }
 
-.registration__card_registration {
+.registration__card-registration {
   @include absoluteTopLeft(20px, 721px);
   transform: translateX(-48.2%);
 
