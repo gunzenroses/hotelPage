@@ -14,27 +14,36 @@
   }
 }
 
-.card-registration > .textfield:first-of-type {
+.c-r__name,
+.c-r__surname,
+.c-r__radio,
+.c-r__birthday,
+.c-r__login,
+.c-r__name {
+  width: 100%;
+}
+
+.c-r__name {
   margin-top: 21px;
 }
 
-.card-registration > .textfield:nth-of-type(3) {
+.c-r__surname {
   margin-top: 10px;
 }
 
-.card-registration > .radio__row {
+.c-r__radio {
   margin-top: 11px;
 }
 
-.card-registration > div:nth-of-type(6) {
+.c-r__birthday {
   margin-top: 19px;
 }
 
-.card-registration > div:nth-of-type(7) {
+.c-r__login {
   margin-top: 20px;
 }
 
-.card-registration > .toggle__element {
+.c-r__specials {
   margin-top: 6px;
 }
 
