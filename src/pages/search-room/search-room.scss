@@ -36,6 +36,7 @@
     $mb: 68px,
     $ms: 131px
   );
+
   @include isFlex($justify: space-between);
   position: relative;
   min-width: 320px;
@@ -60,7 +61,7 @@
 
   @media (max-width: 1070px) {
     flex-direction: column;
-    width: 100vw;
+    width: 100%;
   }
 }
 
