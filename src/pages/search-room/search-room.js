@@ -1,9 +1,9 @@
 import ButtonPagination from "Components/pagination/pagination";
 import Calendar from "Components/calendar/calendar";
-import DropdownRooms from "Main/components/dropdown-rooms/dropdownRooms";
-import DropdownGuests from "Main/components/dropdown-guests/dropdownGuests";
-import ExpandItems from "Main/components/checkbox-expandable/expandItems";
-import makeCarousels from "Main/components/room-carousel/roomCarousel";
+import DropdownRooms from "Components/dropdown-rooms/dropdownRooms";
+import DropdownGuests from "Components/dropdown-guests/dropdownGuests";
+import ExpandItems from "Components/checkbox-expandable/expandItems";
+import makeCarousels from "Components/room-carousel/roomCarousel";
 import { guestsData_searchRoom } from "Scripts/myData";
 import { roomsData_1 } from "Scripts/myData";
 import { paginationData_1 } from "Scripts/myData";
@@ -11,7 +11,7 @@ import { paginationData_1 } from "Scripts/myData";
 import "./search-room.scss";
 
 window.onload = function(){
-    require("Main/components/text-field/datasetHandler");
+    require("Components/text-field/datasetHandler");
     require("Components/range/range");
     makeCarousels();
 

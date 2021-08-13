@@ -1,8 +1,8 @@
-import ExpandItems from "Main/components/checkbox-expandable/expandItems";
+import ExpandItems from "Components/checkbox-expandable/expandItems";
 
 import "./landing-page.scss";
 
 window.onload = function () {
-  require("Main/components/card-search/cardSearch");
+  require("Components/card-search/cardSearch");
   let activateExpand = new ExpandItems();
 }
