@@ -46,7 +46,7 @@ export default class ExpandItems {
 
   expandElement(element){
     let innerParent = element.closest(".js-dropdown__init").parentElement;
-    let innerExpand = innerParent.querySelector(".dropdown__content.js-dropdown__content");
+    let innerExpand = innerParent.querySelector(".js-dropdown__content");
     innerExpand.classList.toggle("dropdown__show");
   }
 
