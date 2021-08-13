@@ -46,7 +46,7 @@
   position: absolute;
   width: 38px;
   height: 18px;
-  
+
   @media (min-width: 1750px) and (max-width: 1920px) {
     width: 58px;
     height: 28px;
@@ -187,4 +187,36 @@
 @mixin paginationNav {
   position: relative;
   background: $linearGradientTurquoise;
+}
+
+@mixin regularField {
+  @include isFlex($justify: flex-start, $align: center);
+  position: relative;
+  width: 100%;
+  height: 44px;
+  padding: 0 1px 1px 12px;
+  border: 1px solid $darkShadeLess;
+  border-radius: 4px;
+  background: transparent;
+  color: $darkShadeMore;
+  letter-spacing: -0.01em;
+
+  @media (max-width: 450px) {
+    width: 100%;
+    min-width: 260px;
+    margin: 0 auto;
+  }
+}
+
+@mixin textField{
+  @include regularField;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $darkShadeMiddle;
+  }
+
+  & > input {
+    letter-spacing: 0.01em;
+  }
 }
