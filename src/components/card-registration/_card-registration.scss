@@ -2,10 +2,9 @@
   @include containerShadowed;
   @include isFlex($direction: column, $justify: flex-start);
   width: 383px;
-  height: 650px;
-  padding-right: 29px;
-  padding-top: 39px;
-  padding-left: 29px;
+  height: fit-content;
+  min-height: 650px;
+  padding: 39px 29px 31px;
 
   @media (max-width: 400px) {
     width: 100vw;
