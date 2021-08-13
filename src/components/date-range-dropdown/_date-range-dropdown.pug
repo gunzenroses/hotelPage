@@ -1,7 +1,7 @@
 include ../calendar/_calendar.pug
 
 mixin dateRangeSeparate(calendarId, labelText_1, inputValue_1, labelText_2, inputValue_2, dropdownClassShow = "")
-  div(class="date-range__selector.js-date-range__selector")
+  div(class="date-range__selector js-date-range__selector")
     div(class="dropdown__calendar js-dropdown__calendar dropdown__content js-dropdown__content" + dropdownClassShow)
       +calendar(calendarId)
     .dataRange__container.js-dropdown__init
@@ -17,7 +17,7 @@ mixin dateDropdownSmall(labelText, inputName, inputValue, dateDataType)
       maxlength="10" data-range=dateDataType readonly)
 
 mixin dateRangeCommon(calendarId, labelText, inputValue, dropdownClassShow)
-  div(class="date-range__selector.js-date-range__selector")
+  div(class="date-range__selector js-date-range__selector")
     div(class="dropdown__calendar js-dropdown__calendar dropdown__content js-dropdown__content" + dropdownClassShow)
       +calendar(calendarId)
     .dataRange__container_common.js-dropdown__init
