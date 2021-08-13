@@ -12,6 +12,7 @@ import "./search-room.scss";
 
 window.onload = function(){
     require("Components/text-field/datasetHandler");
+    require("Components/text-field/inputMask");
     require("Components/range/range");
     makeCarousels();
 

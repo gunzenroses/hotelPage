@@ -4,5 +4,6 @@ import "./registration.scss";
 
 window.onload = function () {
   require("Components/text-field/datasetHandler");
+  require("Components/text-field/inputMask");
   let activateExpand = new ExpandItems();
 }

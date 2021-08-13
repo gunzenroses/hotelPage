@@ -5,6 +5,7 @@ import "./room-details.scss";
 
 window.onload = function () {
     require("Components/card-booking/cardBooking");
+    require("Components/text-field/inputMask");
     let likeButton_1 = new ButtonLike("likes_author_1", 12);
     let likeButton_2 = new ButtonLike("likes_author_2", 2);
     let activateExpand = new ExpandItems();
