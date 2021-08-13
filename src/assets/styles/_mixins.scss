@@ -203,13 +203,13 @@
 
   @media (max-width: 450px) {
     width: 100%;
-    min-width: 260px;
     margin: 0 auto;
   }
 }
 
 @mixin textField{
   @include regularField;
+  min-width: 260px;
 
   &:hover,
   &:focus {
