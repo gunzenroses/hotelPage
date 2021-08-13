@@ -12,6 +12,7 @@
   );
   @include isFlex($direction: column, $justify: flex-start);
   position: relative;
+  min-width: 320px;
   background: $light;
   user-select: none;
 
@@ -26,6 +27,7 @@
   @include isFlex($direction: column, $justify: space-between);
   position: relative;
   width: 100%;
+  min-width: 320px;
   height: 689px;
   margin: 0 auto;
 
