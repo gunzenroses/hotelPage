@@ -1,6 +1,5 @@
 import Inputmask from "inputmask";
 
-
 Inputmask({
   mask: "*{1,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{1,20}[.*{2,6}][.*{1,2}]",
   greedy: false,
@@ -18,7 +17,8 @@ Inputmask({
   
 }).mask($("input[name='email']"));
 
-Inputmask("datetime", { 
+Inputmask(
+  "datetime", { 
   placeholder: "ДД.ММ.ГГГГ",
   separator: ".", 
   alias: "dd.mm.yyyy",
