@@ -181,7 +181,7 @@
 }
 
 .dropdown__button {
-  @extend .textfield;
+  @include regularField;
   cursor: pointer;
   white-space: nowrap;
 
