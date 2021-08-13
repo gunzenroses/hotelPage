@@ -14,9 +14,10 @@ import "./UIKit.pug"
 
 window.onload = function () {
     require("Components/range/range");
-    require("Main/components/text-field/datasetHandler");
-    require("Main/components/card-search/cardSearch");
-    require("Main/components/card-booking/cardBooking");
+    require("Components/text-field/inputMask");
+    require("Components/text-field/datasetHandler");
+    require("Components/card-search/cardSearch");
+    require("Components/card-booking/cardBooking");
     makeCarousels();
 
     let dropdownWatches = Array.from(document.querySelectorAll(".js-dropdown__watch"));
