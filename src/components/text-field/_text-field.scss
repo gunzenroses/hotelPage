@@ -29,6 +29,10 @@
   }
 }
 
+.textfield_login > .textfield:not(:first-of-type) {
+  margin-top: 10px;
+}
+
 .arrow_submit {
   @include absoluteTopRight(-1px, -2px);
   @include containerSize(44px);
