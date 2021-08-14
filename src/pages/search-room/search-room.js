@@ -10,15 +10,15 @@ import { paginationData_1 } from "Scripts/myData";
 
 import "./search-room.scss";
 
-window.onload = function(){
-    require("Components/text-field/datasetHandler");
-    require("Components/text-field/inputMask");
-    require("Components/range/range");
-    makeCarousels();
+window.onload = function () {
+  require("Components/footer/validate-footer-form");
+  require("Components/range/range");
+  require("Scripts/inputMasks");
+  makeCarousels();
 
-    let pagination_search = new ButtonPagination(paginationData_1, "pagination_search")
-    let calendar_booking = new Calendar("calendar_search");
-    let guests_searchRoom = new DropdownGuests("dropdown_guests_search", guestsData_searchRoom);
-    let dropdownRooms_search = new DropdownRooms("dropdown_rooms_1", roomsData_1);
-    let activateExpand = new ExpandItems();
+  let pagination_search = new ButtonPagination(paginationData_1, "pagination_search")
+  let calendar_booking = new Calendar("calendar_search");
+  let guests_searchRoom = new DropdownGuests("dropdown_guests_search", guestsData_searchRoom);
+  let dropdownRooms_search = new DropdownRooms("dropdown_rooms_1", roomsData_1);
+  let activateExpand = new ExpandItems();
 }
