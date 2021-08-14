@@ -91,9 +91,9 @@
 }
 
 .form-elements__element_second {
-  @include container($width: 260px, $height: 537px);
+  @include containerSimple($w: 260px, $h: 537px);
   @include isFlex($direction: column, $justify: flex-start, $align: flex-start);
-  margin-right: 129px;
+  margin: 1px 129px 0 2px;
 
   @media (max-width: 1400px) {
     margin: 0;
@@ -110,7 +110,7 @@
 }
 
 .form-elements__element_second > div:nth-of-type(3) {
-  margin-top: 38px;
+  margin-top: 39px;
 }
 
 .form-elements__element_second > div:nth-of-type(4) {
@@ -122,7 +122,7 @@
 }
 
 .form-elements__element_second > div:last-of-type {
-  margin-top: 12px;
+  margin-top: 13px;
 }
 
 .form-elements__element_third {
