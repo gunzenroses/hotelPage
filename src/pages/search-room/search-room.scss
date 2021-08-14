@@ -29,32 +29,26 @@
 }
 
 .search-room__content {
-  @include container(
-    $width: 1167px,
-    $height: 1270px,
-    $mt: 27px,
-    $mb: 68px,
-    $ms: 131px
-  );
-
   @include isFlex($justify: space-between);
   position: relative;
+  height: 1270px;
+  width: calc(100% - 131px - 142px);
   min-width: 320px;
-  margin-left: 142px;
+  margin: 27px 131px 68px 142px;
   overflow: auto; //to avoid margin-collapse
   background: $light;
 
   @media (min-width: 1500px) and (max-width: 1920px) {
-    width: 80%;
-    margin: 27px 10%;
+    margin-bottom: 27px;
   }
 
   @media (max-width: 1400px) {
     height: fit-content;
-    margin: 30px auto 70px;
+    width: 1167px;
+    margin: 27px auto 68px;
   }
 
-  @media (max-width: 1250px) {
+  @media (max-width: 1300px) {
     width: 980px;
     height: auto;
   }
@@ -70,13 +64,13 @@
   width: 266px;
   height: 739px;
 
-  @media (min-width: 1650px) and (max-width: 1920px) {
+  @media (min-width: 1500px) and (max-width: 1920px) {
     width: 30%;
     max-width: 400px;
     height: fit-content;
   }
 
-  @media (max-width: 1250px) {
+  @media (max-width: 1300px) {
     margin-left: 25px;
   }
 
@@ -125,11 +119,11 @@
   width: 839px;
   height: auto;
 
-  @media (min-width: 1650px) and (max-width: 1920px) {
+  @media (min-width: 1500px) and (max-width: 1920px) {
     width: 68%;
   }
 
-  @media (max-width: 1250px) {
+  @media (max-width: 1300px) {
     width: 637px;
     height: auto;
   }
@@ -172,7 +166,7 @@
   height: 1118px;
   margin-top: 18px;
 
-  @media (max-width: 1250px) {
+  @media (max-width: 1300px) {
     height: auto;
     justify-content: space-around;
   }
@@ -193,7 +187,7 @@
 }
 
 .search-room__result > div {
-  @media (max-width: 1250px) {
+  @media (max-width: 1300px) {
     margin-bottom: 25px;
   }
 }
