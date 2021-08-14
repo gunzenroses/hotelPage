@@ -98,6 +98,14 @@
   border-bottom: 2px solid transparent;
 }
 
+@mixin containerSimple(
+  $w: 100%,
+  $h: 100%,
+) {
+  width: $w;
+  height: $h;
+}
+
 @mixin container(
   $width: 100%,
   $height: 100%,
