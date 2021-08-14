@@ -40,17 +40,11 @@
 
 /* Flex for adaptive design */
 .form-elements_inner {
-  @include container(
-    $width: 1165px,
-    $height: 1582px,
-    $mt: 143px,
-    $ms: 0,
-    $mb: 128px
-  );
+  @include containerSimple($w: 1165px, $h: 1582px);
   @include isFlex($wrap: wrap);
-  margin-left: 143px;
+  margin: 143px 0 128px 143px;
   min-width: 320px;
-  background: white;
+  background: $light;
 
   @media (max-width: 1400px) {
     width: 85%;
@@ -93,7 +87,8 @@
 .form-elements__element_second {
   @include containerSimple($w: 260px, $h: 537px);
   @include isFlex($direction: column, $justify: flex-start, $align: flex-start);
-  margin: 1px 129px 0 2px;
+  margin-right: 129px;
+  margin-left: 2px;
 
   @media (max-width: 1400px) {
     margin: 0;
@@ -267,6 +262,7 @@
     justify-content: flex-start;
     height: 322px;
     width: 100%;
+    margin-top: 3px;
   }
 
   &__container_first > div:nth-of-type(2) {
@@ -278,14 +274,14 @@
   }
 
   &__container_first > div:nth-of-type(4) {
-    margin-top: 21px;
+    margin-top: 23px;
   }
 
   &__container_second {
     justify-content: flex-start;
     min-height: 274px;
     width: 100%;
-    margin-top: 37.5px;
+    margin-top: 34.5px;
   }
 
   &__container_second > div:nth-of-type(2) {
@@ -307,4 +303,8 @@
     height: 341px;
     margin-top: 40px;
   }
+}
+
+.widget_textfield:nth-of-type(1) .label_right {
+  margin-top: -3px;
 }
