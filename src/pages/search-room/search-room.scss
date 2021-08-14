@@ -197,7 +197,12 @@
 }
 
 .search-room__pagination {
-  margin: 21px 302px 0 290px;
+  margin-top: 21px;
+  margin-left: 290px;
+
+  @media (min-width: 1500px) and (max-width: 1920px){
+    margin: 21px auto 0;
+  }
 
   @media (max-width: 1400px) {
     margin: 41px auto 0;
