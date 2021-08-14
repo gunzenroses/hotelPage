@@ -54,7 +54,7 @@ mixin emailSubscribe()
   +text("textfield_email", "Email", "", "email", "30", autofocus=false)
 
 mixin password()
-  +text("textfield", "Пароль", "", "password", "30", autofocus=false)
+  +text("password", "Пароль", "", "password", "30", autofocus=false)
 
 
 
@@ -71,10 +71,13 @@ mixin text(inputClass, placeholder, valueText, nameText, maxText, autofocus=fals
         value=valueText name=nameText data-rule=nameText, 
         maxlength=maxText autofocus=autofocus)
       button(type="submit" class="arrow_submit") arrow_forward
-    .error
+  else if inputClass === "password"
+    div(class="textfield")
+      input(type="password" placeholder=placeholder, 
+        value=valueText name=nameText data-rule=nameText, 
+        maxlength=maxText autofocus=autofocus)
   else
     div(class="" + inputClass)
       input(type="text" placeholder=placeholder, 
         value=valueText name=nameText data-rule=nameText, 
         maxlength=maxText autofocus=autofocus)
-    .error
