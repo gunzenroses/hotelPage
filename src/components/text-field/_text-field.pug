@@ -1,22 +1,22 @@
 //- mixins for formElements (with labels)
 
 mixin nameContainer(labelText, labelRightText, valueText)
-  .widget
+  .widget_textfield
     +label(labelText, labelRightText)
     +name(valueText)
 
 mixin surnameContainer(labelText, labelRightText, valueText)
-  .widget
+  .widget_textfield
     +label(labelText, labelRightText)
     +surname(valueText)
 
 mixin birthdayContainer(labelText, labelRightText)
-  .widget
+  .widget_textfield
     +label(labelText, labelRightText)
     +birthday()
 
 mixin emailContainer(labelText, labelRightText)
-  .widget
+  .widget_textfield
     +label(labelText, labelRightText)
     +email()
 
