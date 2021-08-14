@@ -44,7 +44,7 @@
     @include absoluteTopRight(50%, 35%);
     font-size: 0.8em;
     line-height: 100%;
-    transform: translateY(-50%);
+    transform: translate(30%, -50%);
 
     @media (min-width: 1750px) and (max-width: 1920px) {
       font-size: $fs_h2;
@@ -57,7 +57,7 @@
   }
 
   &__heart {
-    @include containerSize(20px);
+    @include containerSimple(20px, 19px);
     position: absolute;
     text-align: center;
     background: url(/assets/images/heart_disabled.svg);
