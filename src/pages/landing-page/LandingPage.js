@@ -1,10 +1,10 @@
 import ExpandItems from "Components/checkbox-expandable/ExpandItems";
 
-import "./registration.scss";
+import "./landing-page.scss";
 
 window.onload = function () {
   require("Main/components/footer/ValidateFooterForm");
-  require("Main/components/card-registration/ValidateRegistration");
+  require("Main/components/card-search/CardSearch");
   require("Scripts/InputMasks");
   let activateExpand = new ExpandItems();
 }

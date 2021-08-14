@@ -1,4 +1,4 @@
-import Inputmask from "Main/assets/scripts/inputMasks";
+import Inputmask from "inputmask";
 
 Inputmask({
   mask: "*{1,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{1,20}[.*{2,6}][.*{1,2}]",

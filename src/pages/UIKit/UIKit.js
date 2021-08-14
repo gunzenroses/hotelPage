@@ -1,25 +1,25 @@
-import ButtonLike from "Components/button-like/buttonLike"
-import ButtonPagination from "Components/pagination/pagination"
-import Calendar from "Components/calendar/calendar"
-import DropdownGuests from "Components/dropdown-guests/dropdownGuests"
-import DropdownRooms from "Components/dropdown-rooms/dropdownRooms"
-import ExpandItems from "Components/checkbox-expandable/expandItems"
-import makeCarousels from "Components/room-carousel/roomCarousel"
-import { paginationData_1 } from "Scripts/myData"
-import { guestsData_1, guestsData_booking } from "Scripts/myData"
-import { roomsData_1, roomsData_2 } from "Scripts/myData"
+import ButtonLike from "Components/button-like/ButtonLike";
+import ButtonPagination from "Components/pagination/Pagination";
+import Calendar from "Components/calendar/Calendar";
+import DropdownGuests from "Components/dropdown-guests/DropdownGuests";
+import DropdownRooms from "Components/dropdown-rooms/DropdownRooms";
+import ExpandItems from "Components/checkbox-expandable/ExpandItems";
+import makeCarousels from "Components/room-carousel/RoomCarousel";
+import { paginationData_1 } from "Scripts/MyData";
+import { guestsData_1, guestsData_booking } from "Scripts/MyData";
+import { roomsData_1, roomsData_2 } from "Scripts/MyData";
 
-import "./UIkit.scss"
-import "./UIKit.pug"
+import "./UIkit.scss";
+import "./UIKit.pug";
 
 window.onload = function () {
-  require("Components/footer/validate-footer-form");
-  require("Components/card-registration/validate-registration");
-  require("Components/card-singin/validate-signin");
-  require("Components/card-search/cardSearch");
-  require("Components/card-booking/cardBooking");
-  require("Components/range/range");
-  require("Scripts/inputMasks");
+  require("Main/components/footer/ValidateFooterForm");
+  require("Main/components/card-registration/ValidateRegistration");
+  require("Main/components/card-singin/ValidateSignin");
+  require("Main/components/card-search/CardSearch");
+  require("Main/components/card-booking/CardBooking");
+  require("Main/components/range/Range");
+  require("Scripts/InputMasks");
   makeCarousels();
 
   let dropdownWatches = Array.from(document.querySelectorAll(".js-dropdown__watch"));
