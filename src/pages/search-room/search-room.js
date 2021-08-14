@@ -13,7 +13,6 @@ import "./search-room.scss";
 window.onload = function () {
   require("Components/footer/validate-footer-form");
   require("Components/range/range");
-  require("Scripts/inputMasks");
   makeCarousels();
 
   let pagination_search = new ButtonPagination(paginationData_1, "pagination_search")
