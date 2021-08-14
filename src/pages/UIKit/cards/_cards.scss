@@ -41,15 +41,9 @@
 /* Flex for adaptive design */
 
 .cards_inner {
-  @include container(
-    $width: 1207px,
-    $height: 1068px,
-    $mt: 151px,
-    $ms: auto,
-    $mb: 135px
-  );
+  @include containerSimple($w: 1207px, $h: 1068px);
   @include isFlex($direction: column, $wrap: wrap, $justify: flex-start);
-  margin-left: 141px;
+  margin: 151px 0 134px 141px;
   background: transparent;
 
   @media (max-width: 1440px) {
@@ -84,11 +78,12 @@
 .cards__card-registration {
   @include cardsMargins;
   width: 383px;
-  height: fit-content;
+  height: 650px;
   margin-top: 40px;
 
   & .textfield_login {
-    height: 104px;
+    height: fit-content;
+    min-height: 104px;
   }
 }
 
@@ -110,7 +105,7 @@
 .cards__card-signin {
   @include cardsMargins;
   width: 381px;
-  height: fit-content;
+  height: 360px;
   margin-top: 39px;
 
   @media (max-width: 1440px) {
