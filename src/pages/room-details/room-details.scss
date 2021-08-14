@@ -106,7 +106,7 @@
 .room-details__info_outer {
   width: 100%;
   height: 944px;
-  padding: 71px 140px 70px 141px;
+  padding: 71px 132px 70px 141px;
 
   @media (min-width: 1450px) and (max-width: 1920px) {
     height: auto;
@@ -121,11 +121,11 @@
 .room-details__info_inner {
   @include isFlex();
   position: relative;
-  width: 1167px;
+  width: 100%;
+  min-width: 1167px;
   height: 799px;
 
   @media (min-width: 1450px) and (max-width: 1920px) {
-    width: 100%;
     height: auto;
   }
 
@@ -437,7 +437,6 @@
     width: 100%;
   }
 }
-
 
 .room-details__roomData > div {
   @media (max-width: 1400px) {
