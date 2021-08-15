@@ -26,8 +26,8 @@ Run production mode
 
 ## Links to pages
 - [UIKit](https://gunzenroses.github.io/hotelPage/UIKit.html)
-- [Landing page](https://gunzenroses.github.io/hotelPage/landing_page.html)
-- [Search room](https://gunzenroses.github.io/hotelPage/search_room.html)
+- [Landing page](https://gunzenroses.github.io/hotelPage/landing-page.html)
+- [Search room](https://gunzenroses.github.io/hotelPage/search-room.html)
 - [Registration](https://gunzenroses.github.io/hotelPage/registration.html)
 - [Sign in](https://gunzenroses.github.io/hotelPage/signin.html)
-- [Room details](https://gunzenroses.github.io/hotelPage/room_details.html)
+- [Room details](https://gunzenroses.github.io/hotelPage/room-details.html)
