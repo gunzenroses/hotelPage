@@ -20,6 +20,7 @@ module.exports = {
     __dirname: true,
   },
   entry: {
+    "index": "./src/index.js",
     "UIKit": "./src/pages/UIKit/UIKit.js",
     "landing-page": "./src/pages/landing-page/LandingPage.js",
     "search-room": "./src/pages/search-room/SearchRoom.js",
@@ -86,6 +87,12 @@ module.exports = {
       { from: "src/assets/images", to: "assets/images" },
       { from: "src/assets/fonts", to: "assets/fonts" },
     ]),
+    new HtmlWebpackPlugin({
+      filename: "index",
+      template: `${PATHS.src}/index.pug`,
+      chunks: ["index"],
+      inject: "body",
+    }),
 
     /*
         Pages
