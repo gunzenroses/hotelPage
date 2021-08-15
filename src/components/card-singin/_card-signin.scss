@@ -12,10 +12,12 @@
   }
 }
 
-.card-signin > div:first-of-type {
-  margin-top: 21px;
-}
+.card-signin {
+  & > .textfield_login {
+    margin-top: 20px;
+  }
 
-.card-signin > button {
-  margin-top: 15px;
+  & > button {
+    margin-top: 15px;
+  }
 }
