@@ -1,4 +1,4 @@
-## Webpack 4 project with Pug, Sass/Stylus, jQuery, VanillaJS, Babel and Yarn
+## Webpack 4 project with Pug, Sass/Stylus, jQuery, VanillaJS, Babel
 
 The purpose of this project is to create a websites without frameworks/libraries like React only using simple but powerful technologies to build quality websites.
 
@@ -8,7 +8,7 @@ The purpose of this project is to create a websites without frameworks/libraries
 - Styling: `Scss`
 - Scripting: `VanillaJS`
 - JS Compiler: `Babel ES6`
-- jQuery: `jQueryUI (range-slider)`
+- jQuery: `ion-rangeslider, jquery-validation, inputmask`
 
 ## How to
 
