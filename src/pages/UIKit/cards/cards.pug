@@ -1,24 +1,29 @@
-include ../../../components/card_search/_card_search.pug
-include ../../../components/card_registration/_card_registration.pug
-include ../../../components/card_booking/_card_booking.pug
-include ../../../components/card_singin/_card_signin.pug
+include ../../../components/card-search/_card-search.pug
+include ../../../components/card-registration/_card-registration.pug
+include ../../../components/card-booking/_card-booking.pug
+include ../../../components/card-singin/_card-signin.pug
 include ../../../components/calendar/_calendar.pug
-include ../../../components/card_room/_card_room.pug
+include ../../../components/card-room/_card-room.pug
 
 block variables
-    - var title = "UIKit";
-    - var description = "UIKit";
-    - var keywords = "UIKit";
-    - var room888 = {src: ["../../assets/images/room.jpg", "../../assets/images/room.jpg", "../../assets/images/room.jpg", "../../assets/images/room.jpg"], bookingNumber: "888", bookingType: "Люкс", bookingPrice: "9 990", starIds: ["star3-5", "star3-4", "star3-3", "star3-2", "star3-1"], starName: "rating3", starRate: [true], reviewAmount: "145"};
-    - var room840 = {src: ["../../assets/images/room2.jpg", "../../assets/images/room2.jpg", "../../assets/images/room2.jpg", "../../assets/images/room2.jpg"], bookingNumber: "840", bookingType: "", bookingPrice: "9 900", starIds: ["star4-5", "star4-4", "star4-3", "star4-2", "star4-1"], starName: "rating4", starRate: [false, true], reviewAmount: "65"};
+  - var title = "UIKit";
+  - var description = "UIKit";
+  - var keywords = "UIKit";
+  - var room888 = {src: ["./assets/images/rooms/room.jpg", "./assets/images/rooms/room.jpg", "./assets/images/rooms/room.jpg", "./assets/images/rooms/room.jpg"], bookingNumber: "888", bookingType: "Люкс", bookingPrice: "9 990", starIds: ["star3-5", "star3-4", "star3-3", "star3-2", "star3-1"], starName: "rating3", starRate: [true], reviewAmount: "145"};
+  - var room840 = {src: ["./assets/images/rooms/room2.jpg", "./assets/images/rooms/room2.jpg", "./assets/images/rooms/room2.jpg", "./assets/images/rooms/room2.jpg"], bookingNumber: "840", bookingType: "", bookingPrice: "9 900", starIds: ["star4-5", "star4-4", "star4-3", "star4-2", "star4-1"], starName: "rating4", starRate: [false, true], reviewAmount: "65"};
 
 block content
-    .cards_outer
-        .cards_inner
-            +cardSearch()
-            +cardRegistration(buttonOnclick)
-            +cardBooking()
-            +cardSignin()
-            +calendar("calendar_simple")
-            +room(room888)
-            +room(room840)
+  .cards_outer.js-dropdown__watch
+    .cards_inner
+      .cards__card-search
+        +cardSearch()
+      .cards__card-registration
+        +cardRegistration("Перейти к оплате")
+      .cards__card-booking
+        +cardBooking("Сбор за дополнительные услуги", "full")
+      .cards__card-signin
+        +cardSignin()
+      .cards__calendar
+        +calendar("calendar_simple")
+      +room(room888)
+      +room(room840)

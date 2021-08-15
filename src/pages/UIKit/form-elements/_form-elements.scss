@@ -1,0 +1,310 @@
+/* Main container */
+
+.form-elements_outer {
+  @include container(
+    $width: 1440px,
+    $height: 1853px,
+    $mt: 50px,
+    $mb: 50px,
+    $ms: auto
+  );
+  position: relative;
+  display: block;
+  overflow: auto; //to avoid margin-collapse
+  background: $light;
+
+  @media (max-width: 1400px) {
+    width: 100vw;
+    height: auto;
+  }
+
+  @media (max-width: 850px) {
+    min-width: 320px;
+  }
+}
+
+.form-elements_outer::before {
+  content: "";
+  @include absoluteTopLeft(30px, 30px);
+  width: 48px;
+  height: 48px;
+  background-image: url(/assets/images/logo/logo.svg);
+  background-size: 100%;
+  background-position: center;
+
+  @media (max-width: 750px) {
+    top: 10px;
+    left: 10px;
+  }
+}
+
+/* Flex for adaptive design */
+.form-elements_inner {
+  @include containerSimple($w: 1165px, $h: 1582px);
+  @include isFlex($wrap: wrap);
+  margin: 143px 0 128px 143px;
+  min-width: 320px;
+  background: $light;
+
+  @media (max-width: 1400px) {
+    width: 85%;
+    max-width: 1160px;
+    margin: 9% auto 9%;
+    height: auto;
+  }
+
+  @media (max-width: 1250px) {
+    justify-content: space-evenly;
+    max-width: 890px;
+    margin: 7% auto 7%;
+  }
+
+  @media (max-width: 970px) {
+    justify-content: space-around;
+    width: 85%;
+    margin: 5% auto 5%;
+  }
+
+  @media (max-width: 850px) {
+    justify-content: center;
+    max-width: 575px;
+  }
+}
+
+.form-elements__element_first {
+  @include container($width: 321px, $height: 636px, $mt: 0, $mb: 100px);
+  margin-right: 120px;
+
+  @media (max-width: 1400px) {
+    margin: 0;
+  }
+
+  @media (max-width: 850px) {
+    margin-bottom: 40px;
+  }
+}
+
+.form-elements__element_second {
+  @include containerSimple($w: 260px, $h: 537px);
+  @include isFlex($direction: column, $justify: flex-start, $align: flex-start);
+  margin-right: 129px;
+  margin-left: 2px;
+
+  @media (max-width: 1400px) {
+    margin: 0;
+  }
+}
+
+.form-elements__element_second > div:first-of-type {
+  margin-top: 1px;
+  letter-spacing: .05px;
+}
+
+.form-elements__element_second > div:nth-of-type(2) {
+  margin-top: 42px;
+}
+
+.form-elements__element_second > div:nth-of-type(3) {
+  margin-top: 39px;
+}
+
+.form-elements__element_second > div:nth-of-type(4) {
+  margin-top: 43px;
+}
+
+.form-elements__element_second > h3 {
+  margin-top: 42px;
+}
+
+.form-elements__element_second > div:last-of-type {
+  margin-top: 13px;
+}
+
+.form-elements__element_third {
+  @include container($width: 320px, $height: 503px);
+  @include isFlex($direction: column, $align: flex-start, $justify: flex-start);
+  margin-right: 2px;
+
+  @media (max-width: 1400px) {
+    margin: 0;
+  }
+
+  @media (max-width: 1250px) {
+    margin-top: 40px;
+  }
+}
+
+.form-elements__element_third > div:nth-of-type(2) {
+  margin-top: 32px;
+  margin-left: -1px;
+}
+
+.form-elements__element_third > div:nth-of-type(3) {
+  margin-top: 41px;
+}
+
+.form-elements__element_forth {
+  @include isFlex($direction: column, $justify: flex-start, $align: flex-start);
+  width: 267px;
+  min-height: 647px;
+  margin-right: 176px;
+  margin-left: -1px;
+  margin-bottom: 47px;
+
+  @media (max-width: 1400px) {
+    margin: 0;
+    margin-top: 40px;
+  }
+}
+
+.form-elements__element_forth > div:first-of-type {
+  margin-top: 2px;
+}
+
+.form-elements__element_forth > div:nth-of-type(2) {
+  margin-top: 42px;
+  margin-left: 1px;
+}
+
+.form-elements__element_forth > div:nth-of-type(3) {
+  margin-top: 21px;
+}
+
+.form-elements__element_fifth {
+  @include container($width: 321px, $height: 465px);
+  @include isFlex($direction: column, $align: flex-start, $justify: flex-start);
+  margin-top: 4px;
+  margin-right: 69px;
+
+  @media (max-width: 1400px) {
+    margin: 0;
+    margin-top: 40px;
+  }
+}
+
+.form-elements__element_fifth > div:nth-of-type(2) {
+  margin-top: 258px;
+}
+
+.form-elements__element_sixth {
+  @include container($width: 320px, $height: 467px);
+  @include isFlex($direction: column, $align: flex-start, $justify: flex-start);
+  margin-top: 4px;
+
+  @media (max-width: 1400px) {
+    margin: 0;
+    margin-top: 40px;
+  }
+}
+
+.form-elements__element_sixth > div:first-of-type {
+  margin-left: -2px;
+}
+
+.form-elements__element_sixth > div:nth-of-type(2) {
+  margin-top: 257px;
+  margin-left: -2px;
+}
+
+.form-elements__element_seventh {
+  @include container($width: 291px, $height: 158px);
+  @include isFlex($direction: column, $align: flex-start);
+  margin-right: 120px;
+  margin-top: 1px;
+  margin-left: -1px;
+
+  @media (max-width: 1400px) {
+    margin: 0;
+    margin-top: 40px;
+  }
+}
+
+.form-elements__element_seventh > div:nth-of-type(2) {
+  margin-top: 20px;
+}
+
+.form-elements__element_eighth {
+  @include isFlex($direction: column, $align: flex-start);
+  max-width: 711px;
+  min-height: 133px;
+  margin-top: 11px;
+  margin-right: 2px;
+
+  @media (max-width: 1400px) {
+    width: 55vw;
+    max-width: 711px;
+    margin: 40px 0 0;
+  }
+
+  @media (max-width: 1250px) {
+    width: 90%;
+    height: auto;
+  }
+
+}
+
+.form-elements__element_eighth > div:first-of-type  {
+  margin-top: -1px;
+  margin-left: -3px;
+}
+
+
+/* Containers to group elements into columns */
+.form-elements {
+  &__container_first,
+  &__container_second,
+  &__container_third,
+  &__container_forth {
+    @include isFlex($direction: column);
+  }
+
+  &__container_first {
+    justify-content: flex-start;
+    height: 322px;
+    width: 100%;
+    margin-top: 3px;
+  }
+
+  &__container_first > div:nth-of-type(2) {
+    margin-top: 21px;
+  }
+
+  &__container_first > div:nth-of-type(3) {
+    margin-top: 22px;
+  }
+
+  &__container_first > div:nth-of-type(4) {
+    margin-top: 23px;
+  }
+
+  &__container_second {
+    justify-content: flex-start;
+    min-height: 274px;
+    width: 100%;
+    margin-top: 34.5px;
+  }
+
+  &__container_second > div:nth-of-type(2) {
+    margin-top: 40px;
+  }
+
+  &__container_second > div:nth-of-type(3) {
+    margin-top: 44px;
+  }
+
+  &__container_third {
+    width: 266px;
+    height: 266px;
+    margin-top: 100px;
+  }
+
+  &__container_forth {
+    width: 267px;
+    height: 341px;
+    margin-top: 40px;
+  }
+}
+
+.widget_textfield:nth-of-type(1) .label_right {
+  margin-top: -3px;
+}

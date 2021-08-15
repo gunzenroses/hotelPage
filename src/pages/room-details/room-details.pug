@@ -1,0 +1,70 @@
+extends ../../assets/templates/_template.pug
+
+include ../../components/header/_header.pug
+include ../../components/badge/_badge.pug
+include ../../components/card-booking/_card-booking.pug
+include ../../components/chart-donut/chart-donut.pug
+include ../../components/comment/_comment.pug
+include ../../components/bullet-checkbox/_bullet-checkbox.pug
+include ../../components/footer/_footer.pug
+
+block variables
+  - var title = "room details";
+  - var description = "room details";
+  - var keywords = "room details";
+  - 
+    var comment1 = { 
+      authorPic: "./assets/images/avatar/avatar.jpg", 
+      authorName: "Мурад Сарафанов", 
+      commentTime: "5 дней назад", 
+      buttonLikeId: "likes_author_1", 
+      buttonNumber: 12, 
+      commentText: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."};
+  - 
+    var comment2 = {
+      authorPic: "./assets/images/avatar/avatar2.jpg", 
+      authorName: "Патрисия Стёклышкова", 
+      commentTime: "Неделю назад", 
+      buttonLikeId: "likes_author_2", 
+      buttonNumber: 2, 
+      commentText: "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент."};
+  - var checkboxList = [ "Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00" ];
+  - var cancellationRools = "Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги."
+
+block content
+  .room-details.js-dropdown__watch
+    +header()
+    .room-details__content
+      .room-details__view
+        img(src="./assets/images/room_details.jpg" alt="room picture 1").room-details__view_main
+        .room-details__view_miniature
+          img(src="./assets/images/room_details2.jpg" alt="room picture 2").room-details__view_mini
+          img(src="./assets/images/room_details3.jpg" alt="room picture 3").room-details__view_mini
+      .room-details__info_outer
+        .room-details__info_inner
+          .room-details__description
+            .room-details__roomData
+              .room-details__roomInfo
+                .room-details__text Сведения о номере
+                +badgeItem("insert_emoticon", "Комфорт", "Шумопоглощающие стены")
+                +badgeItem("location_city", "Удобство", "Окно в каждой из спален")
+                +badgeItem("whatshot", "Уют", "Номер оснащён камином")
+              .room-details__roomImpression
+                .room-details__text Впечатления от номера
+                +donutChart({excellent: 50, good: 25, satisfied: 25, dissapointed: 0})
+            .room-details__reviews
+              .room-details__text Отзывы посетителей номера
+              .reviews__info 2 отзыва
+              +comment(comment1)
+              +comment(comment2)
+            .room-details__rules
+              .room-details__text Правила
+              .room-details__checkbox-list
+                +bulletCheckboxList(checkboxList)
+            .room-details__cancellation
+              .room-details__text Отмена
+              .room-details__cancellation_info
+                != cancellationRools
+          .room-details__booking
+            +cardBooking("Сбор за доп. услуги", "short")
+    +footer()

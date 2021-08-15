@@ -1,0 +1,266 @@
+@import "Styles/main";
+
+/* Main container */
+.search-room {
+  @include container(
+    $width: 1440px,
+    $height: fit-content,
+    $mt: 0,
+    $mb: 0,
+    $ms: auto
+  );
+  @include isFlex($direction: column, $justify: flex-start);
+  position: relative;
+  background: $light;
+  overflow: auto; //to avoid margin-collapse
+  user-select: none;
+
+  @media (max-width: 1920px) {
+    width: 100vw;
+    height: auto;
+    min-width: 320px;
+  }
+}
+
+.search-room__content_outer {
+  width: 100%;
+  height: fit-content;
+  border-bottom: 1px solid $darkShadeLess;
+}
+
+.search-room__content {
+  @include isFlex($justify: space-between);
+  position: relative;
+  height: 1270px;
+  width: calc(100% - 131px - 142px);
+  min-width: 320px;
+  margin: 27px 131px 68px 142px;
+  overflow: auto; //to avoid margin-collapse
+  background: $light;
+
+  @media (min-width: 1500px) and (max-width: 1920px) {
+    margin-bottom: 27px;
+  }
+
+  @media (max-width: 1400px) {
+    height: fit-content;
+    width: 1167px;
+    margin: 27px auto 68px;
+  }
+
+  @media (max-width: 1300px) {
+    width: 980px;
+    height: auto;
+  }
+
+  @media (max-width: 1070px) {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.search-room__filter {
+  @include isFlex($direction: column, $justify: flex-start);
+  width: 266px;
+  height: 739px;
+
+  @media (min-width: 1500px) and (max-width: 1920px) {
+    width: 30%;
+    max-width: 400px;
+    height: fit-content;
+  }
+
+  @media (max-width: 1300px) {
+    margin-left: 25px;
+  }
+
+  @media (max-width: 1070px) {
+    height: auto;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 1070px) {
+    width: 637px;
+    margin: 0 auto 30px;
+  }
+
+  @media (max-width: 700px) {
+    width: 100%;
+  }
+}
+
+.search-room__form {
+  width: 100%;
+
+  @media (max-width: 1070px) {
+    height: auto;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 1070px) {
+    @include isFlex($direction: row, $wrap: wrap);
+  }
+
+  @media (max-width: 700px) {
+    flex-direction: column;
+    width: 380px;
+  }
+
+  @media (max-width: 450px) {
+    justify-content: center;
+    width: 85%;
+    min-width: 260px;
+    max-width: 320px;
+  }
+}
+
+.search-room__rooms {
+  @include isFlex($direction: column, $justify: flex-start);
+  width: 839px;
+  height: auto;
+
+  @media (min-width: 1500px) and (max-width: 1920px) {
+    width: 68%;
+  }
+
+  @media (max-width: 1300px) {
+    width: 637px;
+    height: auto;
+  }
+
+  @media (max-width: 1070px) {
+    margin: 20px auto;
+  }
+
+  @media (max-width: 700px) {
+    flex-direction: column;
+    width: 380px;
+  }
+
+  @media (max-width: 450px) {
+    width: 100%;
+    min-width: 320px;
+  }
+}
+
+.search-room__text {
+  margin-left: -1px;
+  line-height: 37px;
+  font-size: $fs_h1;
+  font-weight: 700;
+  color: $darkShadeMost;
+  letter-spacing: 0.005em;
+
+  @media (max-width: 1070px) {
+    margin: 20px auto;
+  }
+
+  @media (max-width: 450px) {
+    width: 85%;
+  }
+}
+
+.search-room__result {
+  @include isFlex($wrap: wrap);
+  width: 100%;
+  height: 1118px;
+  margin-top: 18px;
+
+  @media (max-width: 1300px) {
+    height: auto;
+    justify-content: space-around;
+  }
+
+  @media (max-width: 1070px) {
+    height: auto;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 700px) {
+    width: 100%;
+  }
+
+  @media (max-width: 450px) {
+    width: 85vw;
+    min-width: 320px;
+  }
+}
+
+.search-room__result > div {
+  @media (max-width: 1300px) {
+    margin-bottom: 25px;
+  }
+}
+
+.search-room__result > .card__room {
+  margin-top: 20px;
+}
+
+.search-room__pagination {
+  margin-top: 21px;
+  margin-left: 290px;
+
+  @media (min-width: 1500px) and (max-width: 1920px) {
+    margin: 21px auto 0;
+  }
+
+  @media (max-width: 1400px) {
+    margin: 41px auto 0;
+  }
+}
+
+/* filter group inner containers */
+
+.filter-group {
+  @media (max-width: 700px) {
+    width: 100%;
+  }
+
+  &__date-range {
+    @include formMargin;
+  }
+
+  &__guests {
+    @include formMargin;
+    margin-top: 25px;
+  }
+
+  &__price-range {
+    @include formMargin;
+    margin-top: 29px;
+  }
+
+  &__accessibility {
+    @include formMargin;
+    margin-top: 33px;
+  }
+
+  &__rules {
+    @include formMargin;
+    margin-top: 29px;
+  }
+
+  &__rooms {
+    @include formMargin;
+    margin-top: 30px;
+  }
+
+  &__extras {
+    @include formMargin;
+    margin-top: 16px;
+  }
+}
+
+.search-room {
+  & .date__range {
+    padding-left: 10px;
+  }
+
+  & .footer__info {
+    height: 130px;
+  }
+
+  & .footer__info_more {
+    margin-left: -1px;
+  }
+}

@@ -1,0 +1,171 @@
+.checkbox {
+  &__content {
+    margin-top: 3px;
+    height: 171px;
+    width: 266px;
+
+    @media (min-width: 1650px) and (max-width: 1920px) {
+      width: 100%;
+    }
+  }
+
+  &__button {
+    @include isFlex();
+    width: 266px;
+    height: 52px;
+
+    @media (min-width: 1750px) and (max-width: 1920px) {
+      width: 400px;
+      height: fit-content;
+    }
+  }
+
+  &__fake_expand {
+    @include checkboxFake;
+    margin-right: 9px;
+
+    @media (min-width: 1750px) and (max-width: 1920px) {
+      @include containerBlock(30px, 30px);
+    }
+  }
+  
+  &__title_expand {
+    display: block;
+    width: 192px;
+    font-size: $fs_base;
+    line-height: 20px;
+    font-weight: 400;
+    letter-spacing: .003em;
+    color: $darkShadeMiddle;
+
+    @media (min-width: 1750px) and (max-width: 1920px) {
+      width: calc(100% - 50px);
+      max-width: 350px;
+      font-size: $fs_h2;
+    }
+  }
+}
+
+.checkbox {
+  &__description {
+    @include isFlex($direction: column);
+    width: 236px;
+    font-size: $fs_base;
+
+    @media (min-width: 1750px) and (max-width: 1920px) {
+      width: calc(100% - 50px);
+      max-width: 350px;
+      height: fit-content;
+      font-size: $fs_h2;
+    }
+  }
+
+  &__title_description {
+    height: 18px;
+    line-height: 18px;
+    color: $darkShadeMore;
+    font-weight: 700;
+    text-align: start;
+  }
+
+  &__subtitle_description {
+    height: 14px;
+    line-height: 15px;
+    margin: 0;
+    font-size: $fs_h3;
+    color: $darkShadeMiddle;
+    font-weight: 400;
+    letter-spacing: -.01em;
+
+    @media (min-width: 1750px) and (max-width: 1920px) {
+      height: fit-content;
+      line-height: $fs_h2;
+      font-size: $fs_h2;
+    }
+  }
+}
+
+.checkbox__button + .checkbox__button {
+  margin-top: 11px;
+}
+
+.checkbox__title_description + .checkbox__subtitle_description {
+  margin-top: 5px;
+}
+
+.checkbox__description > .checkbox__title_description {
+  margin-top: 1px;
+  letter-spacing: .0001em;
+}
+
+.checkbox__description > .checkbox__subtitle_description {
+  letter-spacing: .002em;
+}
+
+.checkbox__real:checked ~ .checkbox__fake_expand {
+  @extend .checkbox__fake_expand;
+  border-color: $purple;
+}
+
+.checkbox__real:checked + .checkbox__fake_expand::before {
+  @include checkboxFakeBefore;
+
+  @media (min-width: 1650px) and (max-width: 1920px) {
+    @include containerBlock(9px, 15px);
+  }
+}
+
+.checkbox__content_expand .checkbox__title_expand {
+  line-height: 20px;
+}
+
+.buttons-checkbox .checkbox__title_expand {
+  margin-top: 2px;
+}
+
+/* richCheckBox */
+
+.richcheckbox {
+  &__container {
+    @include isFlex($direction: column, $justify: flex-start);
+    width: 266px;
+    height: 145px;
+
+    @media (min-width: 1650px) and (max-width: 1920px) {
+      width: 100%;
+      height: fit-content;
+    }
+
+    @media (max-width: 450px) {
+      width: 100%;
+      min-width: 266px;
+      margin: 0 auto;
+    }
+  }
+}
+
+.richcheckbox__container > .label {
+  margin-bottom: 15px;
+}
+
+/* checkbox_expand */
+
+.checkbox_expand {
+  @include isFlex($justify: flex-start);
+  font-size: $fs_base;
+  font-family: $Montserrat;
+  font-weight: 400;
+  text-transform: none;
+
+  @media (min-width: 1650px) and (max-width: 1920px) {
+    width: 100%;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.checkbox_expand + .checkbox_expand {
+  margin-top: 10.5px;
+}

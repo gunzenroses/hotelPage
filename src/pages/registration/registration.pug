@@ -1,18 +1,18 @@
 extends ../../assets/templates/_template.pug
 
 include ../../components/header/_header.pug
-include ../../components/card_registration/_card_registration.pug
-include ../../components/carousel_background/_carousel_background.pug
+include ../../components/card-registration/_card-registration.pug
+include ../../components/carousel-background/_carousel-background.pug
 include ../../components/footer/_footer.pug
 
 block variables
-    - var pics = ["../../assets/images/registration_1.jpg", "../../assets/images/registration_2.jpg"];
+  - var pics = ["./assets/images/registration_1.jpg", "./assets/images/registration_2.jpg"];
 
 block content
-    .registration.dropdown__watch
-        +header()
-        .registration__content
-            +carouselBackground(pics)
-            .registration__card_registration 
-                +cardRegistration()
-        +footer()
+  .registration.js-dropdown__watch
+    +header()
+    .registration__content
+      +carouselBackground(pics)
+      .registration__card-registration 
+        +cardRegistration("Зарегистрироваться")
+    +footer()

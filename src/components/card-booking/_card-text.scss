@@ -1,0 +1,91 @@
+.cards_inner .card-text__type {
+  margin-left: 0;
+}
+
+.card-text {
+  &__type {
+    display: inline-block;
+    margin-left: 7px;
+    font-size: .85rem;
+    color: $purple;
+    letter-spacing: -.01em;
+    text-transform: uppercase;
+
+    @media (min-width: 1750px) and (max-width: 1920px) {
+      font-size: $fs_base;
+    }
+  }
+
+  &__number {
+    display: inline-block;
+    padding-right: 2px;
+    font-size: 20.1px;
+    line-height: 15px;
+
+    @media (min-width: 1750px) and (max-width: 1920px) {
+      font-size: $fs_h1;
+    }
+  }
+
+  &__row_left {
+    color: $darkShadeMost;
+    height: 100%;
+    margin-top: -1px;
+  }
+
+  &__sign {
+    display: inline-block;
+    padding-right: 4px;
+    font-size: $fs_base;
+    line-height: 14px;
+
+    @media (min-width: 1750px) and (max-width: 1920px) {
+      font-size: $fs_h2;
+    }
+  }
+
+  &__row_right {
+    height: 100%;
+    line-height: 22px;
+    letter-spacing: .001em;
+    color: $darkShadeMiddle;
+  }
+
+  &__price {
+    font-size: 14.05px;
+    letter-spacing: -.01em;
+    margin-right: 2px;
+
+    @media (min-width: 1750px) and (max-width: 1920px) {
+      font-size: $fs_h2;
+    }
+  }
+
+  &__period {
+    font-size: $fs_h3;
+    font-weight: 400;
+
+    @media (min-width: 1750px) and (max-width: 1920px) {
+      font-size: $fs_base;
+    }
+  }
+
+  &__review {
+    font-weight: 400;
+    font-size: 13px;
+    letter-spacing: .05em;
+
+    @media (min-width: 1750px) and (max-width: 1920px) {
+      font-size: $fs_base;
+    }
+  }
+
+  &__row_small {
+    @include isFlex();
+    position: relative;
+    width: 100%;
+    height: 24px;
+    font-weight: 700;
+    line-height: 23px;
+  }
+}

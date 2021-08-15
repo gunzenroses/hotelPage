@@ -18,10 +18,10 @@ let room888 = {
     number: 888,
     type: "Люкс",
     src: {
-        1: "src/assets/images/room.jpg",
-        2: "src/assets/images/room.jpg",
-        3: "src/assets/images/room.jpg",
-        4: "src/assets/images/room.jpg"
+        1: "src/assets/images/rooms/room.jpg",
+        2: "src/assets/images/rooms/room.jpg",
+        3: "src/assets/images/rooms/room.jpg",
+        4: "src/assets/images/rooms/room.jpg"
     },
     price: "9 900",
     rating: 5,
@@ -41,7 +41,5 @@ let room840 = {
     rating: 4,
     review: 65,
 }
-
-
 
 export { paginationData_1, guestsData_1, guestsData_booking, guestsData_search, guestsData_searchRoom, roomsData_1, roomsData_2, room888, room840}

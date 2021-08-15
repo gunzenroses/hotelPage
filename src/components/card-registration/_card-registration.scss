@@ -1,0 +1,57 @@
+.card-registration {
+  @include containerShadowed;
+  @include isFlex($direction: column, $justify: flex-start);
+  width: 383px;
+  height: fit-content;
+  min-height: 650px;
+  padding: 39px 29px 29px;
+
+  @media (max-width: 400px) {
+    width: 100vw;
+    min-width: 320px;
+    margin: 0 auto;
+    padding: 25px 30px;
+  }
+}
+
+.c-r__name,
+.c-r__surname,
+.c-r__radio,
+.c-r__birthday,
+.c-r__login,
+.c-r__name {
+  width: 100%;
+}
+
+.c-r__name {
+  margin-top: 21px;
+}
+
+.c-r__surname {
+  margin-top: 10px;
+}
+
+.c-r__radio {
+  margin-top: 11px;
+}
+
+.c-r__birthday {
+  margin-top: 21px;
+}
+
+.c-r__login {
+  margin-top: 20px;
+}
+
+.c-r__specials {
+  margin-top: 5px;
+}
+
+.card-registration > .button_submit {
+  margin-top: 20px;
+  padding: 15px 20px;
+}
+
+.card-registration > .card__text_row {
+  letter-spacing: .005em;
+}

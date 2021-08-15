@@ -1,40 +1,43 @@
-@import "../../index.scss";
-@import "../registration/registration.scss";
+@import "Styles/main";
+@import "Pages/registration/registration.scss";
 
-.signIn.dropdown__watch {
-    @extend .registration;
+.sign-in {
+  @extend .registration;
+
+  & .footer__info {
+    height: 131px;
+  }
+
+  & .textfield_login {
+    margin-top: 20px;
+  }
 }
 
-.signIn__content {
-    @extend .registration__content;
-    height: 702px;
-}
-.signIn__card_signin {
-    @extend .registration__card_registration;
-    top: 173px;
-    transform: translateX(-50%);
-}
+.sign-in__content {
+  @extend .registration__content;
+  height: 707px;
 
-@media (max-width: 500px){
-    .signIn__content {
-        // carouselSignin + card_signin + initial top
-        height: calc(683/1440 * 100vw + 360px + 40px);
-    }
+  @media (max-width: 500px) {
+    // carouselSignin + card-signin + initial top
+    height: calc(683 / 1440 * 100vw + 360px + 40px);
+  }
 
-    .signIn__content img {
-        height: auto;
-    }
-
-    .signIn__card_signin {
-        top: 0;
-        transform: none;
-    }
+  @media (max-width: 380px) {
+    // carouselSignin + card-signin + initial top
+    height: calc(683 / 1440 * 100vw + 360px);
+    min-height: calc(683 / 1440 * 320px + 360px);
+  }
 }
 
-@media (max-width: 380px){
-    .signIn__content {
-        // carouselSignin + card_signin + initial top
-        height: calc(683/1440 * 100vw  + 360px);
-        min-height: calc(683/1440 * 320px + 360px);
-    }
+.sign-in__card-signin {
+  @extend .registration__card-registration;
+  width: 383px;
+  top: 174px;
+  transform: translateX(-49%);
+
+  @media (max-width: 500px) {
+    top: 0;
+    width: 100%;
+    transform: none;
+  }
 }

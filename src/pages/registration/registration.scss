@@ -1,64 +1,76 @@
-@import "../../index.scss";
+@import "Styles/main";
 
-/*
-    Main container
-*/
+/* Main container */
 
 .registration {
-    @include container($width: 1440px, $height: 1197px, $mt: 0, $mb: 0, $ms: auto);
-    @include isFlex($direction: column, $justify: flex-start);
-    position: relative;
-    background: $light;
+  @include container(
+    $width: 1440px,
+    $height: fit-content,
+    $mt: 0,
+    $mb: 0,
+    $ms: auto
+  );
+  @include isFlex($direction: column, $justify: flex-start);
+  position: relative;
+  min-width: 320px;
+  background: $light;
+  user-select: none;
+
+  @media (max-width: 1920px) {
+    width: 100vw;
+    height: auto;
+    border-bottom: 1px solid $darkShadeLess;
+  }
 }
 
 .registration__content {
-    height: 683px;
-    width: 100%;
-    @include isFlex($direction: column, $justify: space-between);
-    margin: 0 auto;
-    position: relative;
+  @include isFlex($direction: column, $justify: space-between);
+  position: relative;
+  width: 100%;
+  min-width: 320px;
+  height: 689px;
+  margin: 0 auto;
+
+  @media (max-width: 500px) {
+    width: 100vw;
+    // carouselRegistration + card-registration + initial top
+    height: calc(683 / 1440 * 100vw + 646px + 40px);
+  }
+
+  @media (max-width: 380px) {
+    height: calc(683 / 1440 * 100vw + 646px);
+    min-height: calc(683 / 1440 * 320px + 646px);
+  }
 }
 
-.registration__card_registration {
-    position: absolute;
-    top: 19px;
+.registration__card-registration {
+  @include absoluteTopLeft(20px, 721px);
+  transform: translateX(-48.2%);
+
+  @media (min-width: 1480px) and (max-width: 1920px) {
     left: 50%;
-    transform: translateX(-49.3%);
+  }
+
+  @media (max-width: 1400px) {
+    left: 50%;
+  }
+
+  @media (max-width: 500px) {
+    position: relative;
+    left: 0;
+    width: fit-content;
+    min-width: 320px;
+    margin: 0 auto;
+    transform: none;
+  }
 }
 
-@media (max-width: 1440px){
-    .registration {
-        width: 100vw;
-        height: auto;
-        border-bottom: 1px solid $darkShadeLess;
-    }
-}
+.registration {
+  & .footer__info {
+    height: 130px;
+  }
 
-@media (max-width: 500px){
-    .registration__content {
-        width: 100vw;
-        // carouselRegistration + card_registration + initial top
-        height: calc(683/1440 * 100vw + 646px + 40px);
-    }
-
-    .registration__card_registration {
-        width: fit-content;
-        min-width: 320px;
-        position: relative;
-        margin: 0 auto;
-        top: 0;
-        left: 0;
-        transform: none;
-    }
-
-    .registration__content img {
-        height: auto;
-    }
-}
-
-@media (max-width: 380px){
-    .registration__content {
-        height: calc(683/1440 * 100vw  + 646px);
-        min-height: calc(683/1440 * 320px + 646px);
-    }
+  & .footer__info_more {
+    margin-left: -2px;
+  }
 }

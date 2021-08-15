@@ -1,0 +1,47 @@
+@import "../card-booking/card-text";
+
+.card-room {
+  @include containerDimed;
+  @include isFlex($direction: column, $justify: flex-start);
+  width: 272px;
+  height: 259px;
+  position: relative;
+
+  @media (min-width: 1650px) and (max-width: 1920px) {
+    width: 32%;
+  }
+
+  @media (max-width: 700px) {
+    width: 380px;
+    height: calc(152 / 270 * 380px + 106px);
+  }
+
+  @media (max-width: 450px) {
+    width: 85vw;
+    height: calc(47vw + 106px);
+    min-width: 258px;
+    min-height: 270px;
+  }
+}
+
+.room {
+  &__info {
+    @include isFlex($direction: column, $justify: flex-start);
+    width: 100%;
+    height: 106px;
+    padding: 23px 18px 19px 20px;
+    pointer-events: none;
+  }
+
+  &__line {
+    width: 100%;
+    height: 8.5px;
+    border-bottom: 1px solid $darkShadeFew;
+    margin-bottom: 10px;
+  }
+}
+
+.room__info .booking__row_small:last-of-type {
+  padding-right: 3px;
+  font-size: 13px;
+}

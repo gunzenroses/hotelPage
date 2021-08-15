@@ -1,0 +1,237 @@
+@import "./card-text";
+
+.card-booking {
+  @include containerShadowed;
+  @include isFlex($direction: column, $justify: flex-start);
+  width: 382px;
+  height: fit-content;
+  padding: 49px 29px 28px;
+
+  @media (min-width: 1650px) and (max-width: 1920px) {
+    width: 100%;
+  }
+
+  @media (max-width: 450px) {
+    width: 100%;
+    padding: 25px;
+    min-width: 320px;
+  }
+}
+
+.card-booking > .date-range__selector {
+  margin-top: 7px;
+}
+
+.card-booking > .dropdown__container {
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.card-booking > .booking-total__row {
+  width: 100%;
+  margin-top: 30px;
+
+  @media (max-width: 450px) {
+    width: 100%;
+    min-width: 260px;
+    margin: 21px auto 0;
+  }
+}
+
+.card-booking > button {
+  margin-top: 21.5px;
+  padding-right: 5px;
+  padding-bottom: 2px;
+}
+
+.booking-text {
+  &__row {
+    @include isFlex();
+    position: relative;
+    width: 321px;
+    height: 30px;
+    font-weight: 700;
+
+    @media (min-width: 1650px) and (max-width: 1920px) {
+      width: 100%;
+      max-width: 490px;
+    }
+
+    @media (max-width: 450px) {
+      max-width: 280px;
+      margin: 0 auto;
+    }
+  }
+
+  &__left {
+    line-height: 11px;
+    color: $darkShadeMost;
+  }
+
+  &__sign {
+    display: inline-block;
+    padding-right: 4px;
+    font-size: $fs_base;
+
+    @media (min-width: 1750px) and (max-width: 1920px) {
+      font-size: $fs_h2;
+    }
+  }
+
+  &__number {
+    display: inline-block;
+    padding-right: 1px;
+    font-size: $fs_h1;
+    letter-spacing: .01em;
+
+    @media (min-width: 1750px) and (max-width: 1920px) {
+      font-size: $fs_h1;
+    }
+  }
+
+  &__type {
+    display: inline-block;
+    font-size: $fs_h3;
+    color: $purple;
+    letter-spacing: -.02em;
+    text-transform: uppercase;
+
+    @media (min-width: 1750px) and (max-width: 1920px) {
+      font-size: $fs_h2;
+    }
+  }
+
+  &__right {
+    color: $darkShadeMiddle;
+    letter-spacing: .01em;
+    line-height: 20px;
+  }
+
+  &__price {
+    font-size: $fs_base;
+
+    @media (min-width: 1750px) and (max-width: 1920px) {
+      font-size: $fs_h2;
+    }
+  }
+
+  &__period {
+    font-weight: 400;
+    font-size: $fs_h3;
+
+    @media (min-width: 1750px) and (max-width: 1920px) {
+      font-size: $fs_h2;
+    }
+  }
+
+  &__review {
+    font-weight: 400;
+    font-size: $fs_base;
+  }
+}
+
+.booking-info {
+  &__row {
+    @include isFlex();
+    width: 320px;
+    min-height: 24px;
+    line-height: 19px;
+    margin-top: 10px;
+    margin-left: 1px;
+    font-size: $fs_base;
+    font-weight: 400;
+    color: $darkShadeMore;
+
+    @media (min-width: 1750px) and (max-width: 1920px) {
+      width: 100%;
+      max-width: 490px;
+      font-size: $fs_h2;
+    }
+
+    @media (max-width: 450px) {
+      min-width: 260px;
+      width: 100%;
+      margin: 9px 0;
+    }
+  }
+
+  &__description {
+    display: inline-block;
+    width: calc(100% - 100px);
+    text-align: left;
+    letter-spacing: .0001em;
+
+    @media (min-width: 1650px) and (max-width: 1920px) {
+      width: calc(100% - 100px);
+    }
+
+    @media (max-width: 450px) {
+      width: calc(100% - 120px);
+      max-width: 170px;
+    }
+  }
+
+  &__description_short {
+    @include isFlex();
+    width: 172px;
+    letter-spacing: .0001em;
+
+    @media (min-width: 1650px) and (max-width: 1920px) {
+      width: 240px;
+    }
+
+    @media (max-width: 450px) {
+      width: calc(100% - 120px);
+      max-width: 170px;
+    }
+  }
+
+  &__sign {
+    @include containerSize(20px);
+    position: relative;
+    background: $light;
+    border-radius: 50%;
+    border: 1px solid $darkShadeLess;
+
+    &::before {
+      content: "i";
+      @include absoluteTopLeft(2px, 7px);
+      font-size: $fs_h3;
+      line-height: $fs_base;
+      font-weight: 700;
+      color: $darkShadeLess;
+    }
+  }
+
+  &__price {
+    @include isFlex($direction: row-reverse);
+    width: 100px;
+    text-align: right;
+    letter-spacing: .002em;
+
+    @media (min-width: 1650px) and (max-width: 1920px) {
+      width: 90px;
+    }
+  }
+}
+
+.booking-total {
+  &__row {
+    @include isFlex();
+    position: relative;
+    width: 320px;
+    margin-left: 1px;
+    line-height: 24px;
+    font-size: $fs_h2;
+    color: $darkShadeMost;
+    font-weight: 700;
+    letter-spacing: .01em;
+  }
+
+  &__line {
+    @include isFlex($align: flex-end);
+    width: calc(100% - 139px);
+    height: 19px;
+    border-bottom: 1px dotted $darkShadeLess;
+  }
+}

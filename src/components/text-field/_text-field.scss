@@ -1,0 +1,47 @@
+.textfield {
+  @include textField;
+}
+
+.label_none {
+  display: none;
+}
+
+.textfield_birthday {
+  @include textField;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.textfield_login {
+  @include isFlex($direction: column, $justify: flex-start);
+  width: 100%;
+  height: fit-content;
+  min-height: 103px;
+
+  @media (max-width: 450px) {
+    width: 100%;
+    min-width: 260px;
+    margin: 0 auto;
+  }
+
+  & > input {
+    letter-spacing: 0.01em;
+  }
+}
+
+.textfield_login > .textfield:not(:first-of-type) {
+  margin-top: 11px;
+}
+
+.arrow_submit {
+  @include absoluteTopRight(-1px, -2px);
+  @include containerSize(44px);
+  font-size: 1.8rem;
+  border: none;
+  text-align: center;
+  font-family: $MaterialIcons;
+  color: transparent;
+  background-image: $linearGradientLilac;
+  -webkit-background-clip: text;
+  background-clip: text;
+}

@@ -1,0 +1,24 @@
+include ../text-field/_text-field.pug
+include ../button/_button.pug
+include ../buttons-radio/_buttons-radio.pug
+include ../button-toggle/_button-toggle.pug
+
+mixin cardRegistration(submitText)
+  form.card-registration(method="get" action="/registration" )
+    h1.card__text Регистрация аккаунта
+    .c-r__name
+      +name()
+    .c-r__surname
+      +surname()
+    .c-r__radio
+      +buttonsRadio("gender-man", true, "gender-woman", false)
+    .c-r__birthday
+      +birthdayContainer("Дата рождения", "")
+    .c-r__login
+      +loginContainer("Данные для входа в сервис", "")
+    .c-r__specials
+      +buttonToggleItem("special offers", false)
+    +buttonFormSubmit(submitText)
+    .card__text_row
+      .card__subline Уже есть аккаунт на Toxin
+      +buttonFormLink("Войти", "signin")

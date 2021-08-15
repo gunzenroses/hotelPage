@@ -1,6 +1,9 @@
-mixin range (rangeId, inputId, range__info = "none", labelText = "Range slider")
-    .range__container
-        h3.label!= labelText 
-        input(class= "label_right" id= inputId)
-        div(class= "range__slider" id= rangeId)
-        .range__info Стоимость за сутки пребывания в номере
+mixin range (rangeId, infoText= false, labelText= "Range slider")
+  .range__container
+    h3.label!= labelText 
+    input(class= "label_right js-range-slider__value")
+    input(class= "range__slider" id= rangeId)
+    if infoText
+      .range__info Стоимость за сутки пребывания в номере
+    else
+      .range__info 

@@ -1,0 +1,40 @@
+.button-rate {
+  @include isFlex($direction: row-reverse);
+  width: 120px;
+  height: 24px;
+  margin-top: -2px;
+  font-size: 29px;
+  line-height: 21px;
+  cursor: pointer;
+}
+
+.input__rate {
+  display: none;
+  appearance: none;
+}
+
+.input__label {
+  width: 24px;
+  height: 24px;
+  color: purple;
+  background-image: $linearGradientLilac;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  &::before {
+    width: 24px;
+    height: 24px;
+    content: "☆";
+  }
+}
+
+input:checked ~ .input__label::before,
+input:checked + .input__label::before {
+  content: "★";
+}
+
+.input__rate:hover ~ .input__label:before,
+.input__rate:hover + .input__label:before {
+  content: "★";
+}

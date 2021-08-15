@@ -1,186 +1,169 @@
-/*
-    Main container
-*/
+/* Main container */
 
 .cards_outer {
-    @include container($width: 1440px, $height: 1350px, $mt: 50px, $mb: 50px, $ms: auto);
-    position: relative;
-    display: block;
-    overflow: auto; //to avoid margin-collapse
-    background: $background;
+  @include container(
+    $width: 1440px,
+    $height: 1353px,
+    $mt: 50px,
+    $mb: 50px,
+    $ms: auto
+  );
+  position: relative;
+  display: block;
+  overflow: auto; //to avoid margin-collapse
+  background: $background;
+
+  @media (max-width: 1440px) {
+    width: 100vw;
+    height: auto;
+  }
+
+  @media (max-width: 970px) {
+    min-width: 320px;
+  }
 }
 
 .cards_outer::before {
-    position: absolute;
-    top: 30px;
-    left: 30px;
-    content: "";
-    width: 48px;
-    height: 48px;
-    background-image: url(/assets/images/logo.svg);
-    background-size: 100%;
-    background-position: center;
+  content: "";
+  @include absoluteTopLeft(30px, 30px);
+  width: 48px;
+  height: 48px;
+  background-image: url(/assets/images/logo/logo.svg);
+  background-size: 100%;
+  background-position: center;
+
+  @media (max-width: 750px) {
+    top: 10px;
+    left: 10px;
+  }
 }
 
-/*
-    Media query for Main container
-*/
-
-@media (max-width: 750px) {
-    .cards_outer::before {
-        top: 10px;
-        left: 10px;
-    }
-}
-
-/*
-    Flex for adaptive design
-*/
+/* Flex for adaptive design */
 
 .cards_inner {
-    @include container($width: 1200px, $height: 1061px, $mt: 150px, $ms: auto, $mb: 139px);
-    @include isFlex($direction: column, $wrap: wrap, $justify: flex-start);
-    margin-left: 141px;
-    
-    background: transparent;
-}
+  @include containerSimple($w: 1207px, $h: 1068px);
+  @include isFlex($direction: column, $wrap: wrap, $justify: flex-start);
+  margin: 151px 0 134px 141px;
+  background: transparent;
 
-.cards_inner > div:not(:first-of-type){
-    margin-top: 40px;
-}
+  @media (max-width: 1400px) {
+    width: 85%;
+    max-width: 1160px;
+    height: 1600px;
+    margin: 9% auto 9%;
+    align-items: center;
+  }
 
-.cards_inner > div:nth-of-type(3){
-    margin-top: 1px;
-}
+  @media (max-width: 1070px) {
+    max-width: 890px;
+    margin: 7% auto 7%;
+  }
 
-.cards_inner > div:nth-of-type(5){
-    margin-top: -1px;
-}
-
-.cards_inner > div:nth-of-type(6) {
-    margin-left: -0.5px;
-    margin-top: 41px;
-}
-
-.cards_inner > div:last-of-type{
-    margin-left: -.5px;
-    margin-top: 39px;
-}
-
-
-
-/*
-    Media queries
-*/
-@media (max-width: 1440px) {
-    .cards {
-        &_outer {
-            width: 100vw;
-            height: auto;
-        }
-
-        &_inner {
-            width: 85%;
-            max-width: 1160px;
-            margin: 9% auto 9%;
-            height: 1600px;
-            align-items: center;
-        }
-    }
-
-    .cards_inner > div:not(:first-of-type){
-        margin-top: 20px;
-    }
-    
-    .cards_inner > div:nth-of-type(4) {
-        margin-top: 0;
-    }
-    
-}
-
-@media (max-width: 1070px) {
-    .cards {
-        &_inner {
-            max-width: 890px;
-            margin: 7% auto 7%;
-        }
-    }
-}
-
-@media (max-width: 970px) {
-    .cards {
-        &_outer {
-            min-width: 320px;
-        }
-
-        &_inner {
-            width: 100%;
-            min-width: 320px;
-            margin: 7% auto;
-        }
-    }
-}
-
-@media (max-width: 850px){
-    .cards {
-        &_inner {
-            height: auto;
-        }
-    }
-
-    .cards_inner > div:not(:first-of-type){
-        margin-top: 30px;
-    }
-}
-
-
-/*
-    Cards styles
-*/
-
-.card__text {
+  @media (max-width: 970px) {
     width: 100%;
-    min-height: 30px;
-    letter-spacing: .0005em;
-    text-align: left;
-    line-height: 29px;
-    margin-left: -1px;
+    min-width: 320px;
+    margin: 7% auto;
+  }
+
+  @media (max-width: 850px) {
+    height: auto;
+  }
+}
+
+.cards__card-search {
+  width: 382px;
+  height: fit-content;
+}
+
+.cards__card-registration {
+  @include cardsMargins;
+  width: 383px;
+  height: 650px;
+  margin-top: 40px;
+
+  & .textfield_login {
+    height: fit-content;
+    min-height: 104px;
+  }
+}
+
+.cards__card-booking {
+  @include cardsMargins;
+  width: 382px;
+  height: 513px;
+  margin-top: 1px;
+
+  & .booking-total__line {
+    width: 191px;
+  }
+}
+
+.cards__card-signin {
+  @include cardsMargins;
+  width: 381px;
+  height: 360px;
+  margin-top: 40px;
+
+  @media (max-width: 1400px) {
+    margin-top: 0;
+  }
+
+  @media (max-width: 850px) {
+    margin-top: 30px;
+  }
+}
+
+.cards__calendar {
+  @include cardsMargins;
+  width: 320px;
+  height: fit-content;
+  margin-top: -1px;
+}
+
+.cards_inner > .card-room {
+  margin-left: -0.5px;
+  margin-top: 39px;
+}
+
+.cards_inner > .card-room:last-of-type {
+  margin-top: 40px;
+}
+
+/* Cards styles */
+.card__text {
+  width: 100%;
+  min-height: 30px;
+  letter-spacing: 0.004em;
+  text-align: left;
+  line-height: 29px;
+  margin-left: 0px;
+  letter-spacing: -0.003em;
+  line-height: 30px;
+  font-size: 1.74rem;
+
+  @media (max-width: 450px) {
+    width: 280px;
+    margin: 0 auto;
+    font-size: $fs_h2;
+  }
 }
 
 .card__subline {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 44px;
-    color: $darkShadeMost;
-    letter-spacing: 0.001em;
+  line-height: 44px;
+  font-size: $fs_base;
+  font-weight: 400;
+  color: $darkShadeMost;
+  letter-spacing: 0.004em;
 }
 
 .card__text_row {
-    width: 100%;
-    height: 44px;
-    margin: 30px auto 0;
-    letter-spacing: 0.005em;
-    @include isFlex();
-}
+  @include isFlex();
+  width: 100%;
+  height: 44px;
+  margin: 31px auto 0;
+  letter-spacing: 0.005em;
 
-
-.card__text_row > .button_filled {
-    //margin-top: 1px;
-}
-
-
-/*
-    Media queries for Cards styles
-*/
-
-@media (max-width: 450px) {
-    .card__text,
-    .card__text_row {
-        width: 280px;
-    }
-
-    .card__text {
-        font-size: 19px;
-        margin: 0 auto;
-    }
+  @media (max-width: 450px) {
+    width: 280px;
+  }
 }

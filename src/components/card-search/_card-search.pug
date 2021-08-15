@@ -1,0 +1,10 @@
+include ../date-range-dropdown/_date-range-dropdown.pug
+include ../dropdown-guests/_dropdown-guests.pug
+include ../button/_button.pug
+
+mixin cardSearch()
+  form.card-search(method="get" action="/search-room")
+    h1.card__text Найдём номера под ваши пожелания
+    +dateRangeSeparate("calendar_search", "Прибытие", "", "Выезд", "", "")
+    +dropdownGuestsLabeled("Гости", "", "dropdown_guests_search", "", "dropdownGuestsInput_3")
+    +buttonFormSubmit("Подобрать номер", "room_search")

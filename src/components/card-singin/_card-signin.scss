@@ -1,0 +1,23 @@
+.card-signin {
+  @include containerShadowed;
+  @include isFlex($direction: column, $justify: flex-start);
+  width: 100%;
+  height: fit-content;
+  min-height: 360px;
+  padding: 39px 29px 33px;
+
+  @media (max-width: 400px) {
+    min-width: 320px;
+    padding: 25px 20px;
+  }
+}
+
+.card-signin {
+  & > .textfield_login {
+    margin-top: 20px;
+  }
+
+  & > button {
+    margin-top: 15px;
+  }
+}

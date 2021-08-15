@@ -1,0 +1,22 @@
+extends ../../assets/templates/_template.pug
+
+include ../../components/header/_header.pug
+include ../../components/carousel-background/_carousel-background.pug
+include ../../components/card-search/_card-search.pug
+include ../../components/footer/_footer.pug
+
+block variables
+  - var title = "landing page";
+  - var description = "landing page";
+  - var keywords = "landing page";
+  - var pics = ["/assets/images/landing_3.jpg", "/assets/images/landing_2.jpg", "/assets/images/landing_1.jpg"]
+
+block content
+  .landing-page.js-dropdown__watch
+    +header()
+    .landing-page__content
+      +carouselLanding(pics)
+      .landing-page__text Лучшие номера для вашей работы, отдыха и просто вдохновения
+      .landing-page__card-search
+        +cardSearch()
+    +footer()

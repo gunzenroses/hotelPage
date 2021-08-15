@@ -1,5 +1,10 @@
+import ExpandItems from "Components/checkbox-expandable/ExpandItems";
+
 import "./signin.scss";
 
 window.onload = function(){
-    require("../../components/checkboxExpandable/checkboxExpandable");
+  require("Components/footer/ValidateFooterForm");
+  require("Components/card-singin/ValidateSignin");
+  require("Scripts/InputMasks");
+  let activateExpand = new ExpandItems();
 }

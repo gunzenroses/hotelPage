@@ -1,0 +1,110 @@
+.room-carousel {
+  position: relative;
+  width: 100%;
+  height: calc(152 / 270 * 100%);
+  min-height: 153px;
+  overflow: hidden;
+
+  @media (max-width: 700px) {
+    height: 211px;
+  }
+
+  @media (max-width: 450px) {
+    width: 85vw;
+    height: 47vw;
+    min-width: 258px;
+    min-height: 145px;
+  }
+}
+
+.room-carousel__pictures {
+  @include isFlex();
+  position: absolute;
+  left: 0;
+  width: 400%;
+  height: 100%;
+  transition: 2s;
+}
+
+.room-carousel__pic {
+  width: 25%;
+  height: 100%;
+  transition: 2s;
+}
+
+.room-carousel__radio {
+  @include isFlex();
+  @include absoluteBottomRight(15.5px, 16px);
+  width: 41px;
+  height: auto;
+}
+
+.room-carousel__element {
+  width: auto;
+  height: auto;
+  z-index: 1;
+}
+
+.room-carousel__element:not(:last-of-type) {
+  margin-right: 3.75px;
+}
+
+.room-carousel__radio_real {
+  position: absolute;
+  width: 7.5px;
+  height: 7.5px;
+  cursor: pointer;
+  appearance: none;
+}
+
+.room-carousel__radio_fake {
+  position: relative;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  border: 1px solid $light;
+  background: transparent;
+}
+
+.room-carousel__radio_real:checked ~ .room-carousel__radio_fake {
+  background: $light;
+}
+
+.room-carousel__btn {
+  @include isFlex();
+  position: absolute;
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+.room-carousel:hover .room-carousel__btn {
+  display: flex;
+}
+
+.room-carousel__btn_prev {
+  position: relative;
+  height: 100%;
+  width: 42px;
+  background: $linearGradientShadow;
+}
+
+.room-carousel__btn_prev::before {
+  content: "\e5cb";
+  @include carouselButton;
+  font-family: $MaterialIcons;
+}
+
+.room-carousel__btn_next {
+  position: relative;
+  height: 100%;
+  width: 42px;
+  background: $linearGradientShadow;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.room-carousel__btn_next::before {
+  content: "\e5cb";
+  @include carouselButton;
+  font-family: $MaterialIcons;
+}

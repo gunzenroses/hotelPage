@@ -1,0 +1,105 @@
+.donut {
+  @include isFlex();
+  width: 311px;
+  height: 126px;
+
+  @media (min-width: 1650px) and (max-width: 1920px){
+    width: 100%;
+    height: fit-content;
+    margin-top: 30px;
+  }
+
+  @media (max-width: 450px) {
+    width: 100%;
+  }
+}
+
+.donut__content {
+  @include containerBlock(120px, 120px);
+  position: relative;
+
+  @media (min-width: 1650px) and (max-width: 1920px){
+    width: 167px;
+    height: 167px;
+  }
+
+  @media (max-width: 380px) {
+    width: 100px;
+  }
+}
+
+.donut__img {
+  position: absolute;
+}
+
+.donut__text {
+  @include isFlex($direction: column, $align: center);
+  @include absoluteTopLeft(29%, 50%);
+  color: $purple;
+  font-weight: 700;
+  transform: translateX(-50%);
+
+  @media (min-width: 1650px) and (max-width: 1920px) {
+    top: 35%;
+  }
+}
+
+.donut__number {
+  line-height: 29.26px;
+  font-size: 1.75rem;
+  letter-spacing: .005em;
+}
+
+.donut__label {
+  line-height: 14.63px;
+  font-size: 16px;
+}
+
+.li_circle {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  vertical-align: middle;
+  margin-right: 5px;
+  margin-bottom: 3px;
+  border-radius: 50%;
+}
+
+.donut__caption {
+  width: 165px;
+  height: 96px;
+  line-height: 24.5px;
+  margin-top: 25px;
+  margin-left: 31px;
+  font-size: $fs_base;
+
+  @media (min-width: 1750px) and (max-width: 1920px){
+    width: calc(100% - 167px);
+    font-size: $fs_h2;
+  }
+
+  @media (max-width: 380px) {
+    margin-left: 15px;
+    margin-top: 15px;
+  }
+}
+
+.donut-key-list {
+  letter-spacing: .001em;
+}
+
+.excellent {
+  background: $linearGradientCitrus;
+}
+
+.good {
+  background: $linearGradientTurquoise;
+}
+
+.satisfied {
+  background: $linearGradientLilac;
+}
+
+.disappointed {
+  background: $linearGradientPurple;
+}

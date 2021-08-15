@@ -1,0 +1,13 @@
+mixin buttonToggleContainer()
+  .widget
+    .toggle__container
+      legend(for="offer").label Toggle
+      .toggle__body
+        +buttonToggleItem("offer1", true)
+        +buttonToggleItem("offer2", false)
+
+mixin buttonToggleItem(inputName, ifChecked)
+  label.toggle__element
+    input(type="checkbox" name=inputName value="" checked=ifChecked).toggle__real
+    span.toggle__fake
+    span.toggle__title Получать спецпредложения

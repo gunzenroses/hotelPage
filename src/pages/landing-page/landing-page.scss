@@ -1,0 +1,94 @@
+@import "Styles/main";
+
+/* Main container */
+.landing-page {
+  @include container($width: 1440px, $height: auto, $mt: 0, $mb: 0, $ms: auto);
+  @include isFlex($justify: flex-start, $direction: column);
+  position: relative;
+  min-width: 320px;
+  background: $light;
+  user-select: none;
+
+  @media (max-width: 1920px) {
+    width: 100vw;
+    height: auto;
+  }
+}
+
+.landing-page__content {
+  @include isFlex($justify: flex-start, $direction: column);
+  position: relative;
+  width: 100%;
+  height: 836px;
+  margin: 0 auto;
+  min-width: 320px;
+
+  @media (max-width: 1920px) {
+    width: 100%;
+    height: 836px;
+  }
+
+  @media (max-width: 1400px) {
+    height: calc(830 / 1440 * 100vw);
+  }
+
+  @media (max-width: 970px) {
+    width: 100%;
+    height: calc(830 / 1440 * 970px);
+  }
+
+  @media (max-width: 500px) {
+    width: 100%;
+    // carousel + card-search + text + initial top
+    height: calc(830 / 1440 * 100vw + 374px + 48px + 40px);
+    min-height: calc(683 / 1440 * 320px + 374px + 48px + 40px);
+  }
+}
+
+.landing-page__text {
+  @include absoluteBottomRight(25px, 126px);
+  width: 270px;
+  height: 48px;
+  line-height: 24px;
+  text-align: right;
+  letter-spacing: .002em;
+  z-index: 2;
+
+  @media (min-width: 1750px) and (max-width: 1920px){
+    width: 400px;
+    line-height: $fs_h2;
+    font-size: $fs_h2;
+  }
+
+  @media (max-width: 500px) {
+    position: relative;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    margin: 20px auto;
+  }
+}
+
+.landing-page__card-search {
+  @include absoluteTopLeft(67px, 141px);
+  z-index: 2;
+
+  @media (max-width: 970px) {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @media (max-width: 500px) {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: fit-content;
+    min-width: 320px;
+    margin: 0 auto;
+    transform: none;
+  }
+}
+
+.landing-page > .footer_outer {
+  margin-top: -1px;
+}

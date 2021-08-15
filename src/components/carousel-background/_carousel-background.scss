@@ -1,0 +1,129 @@
+.carousel-landing__background_outer {
+  @include container($width: 100%, $height: 100%);
+  position: relative;
+  min-width: 320px;
+  min-height: calc(830 / 1440 * 320px);
+  overflow: hidden;
+
+  @media (max-width: 500px) {
+    width: 100%;
+    height: calc(830 / 1440 * 100vw);
+  }
+}
+
+.carousel-landing__background_inner {
+  @include isFlex($justify: flex-start);
+  @include absoluteTopLeft();
+  width: 300%;
+  height: 100%;
+  animation: carousel_background 30s ease-in infinite;
+}
+
+.carousel-landing__element {
+  width: calc(100% / 3);
+  height: 100%;
+}
+
+.carousel-landing__img {
+  @include container();
+  object-fit: cover;
+
+  @media (max-width: 970px) {
+    height: calc(830 / 1440 * 970px);
+  }
+
+  @media (max-width: 500px) {
+    height: auto;
+  }
+}
+
+@keyframes carousel_background {
+  from {
+    left: 0;
+  }
+
+  30% {
+    left: 0;
+  }
+
+  33% {
+    left: -100%;
+  }
+
+  62% {
+    left: -100%;
+  }
+
+  66% {
+    left: -200%;
+  }
+
+  96% {
+    left: -200%;
+  }
+
+  to {
+    left: 0;
+  }
+}
+
+/* CarouselBackground */
+
+.carousel__background_outer {
+  @include container($width: 100%, $height: 100%);
+  position: relative;
+  min-width: 320px;
+  min-height: calc(683 / 1440 * 320px);
+  overflow: hidden;
+
+  @media (max-width: 500px) {
+    width: 100%;
+    height: calc(683 / 1440 * 100vw);
+  }
+}
+
+.carousel__background_inner {
+  @include isFlex($justify: flex-start);
+  @include absoluteTopLeft();
+  width: 200%;
+  height: 100%;
+  animation: carouselBackground 15s ease-in infinite;
+}
+
+.carousel__element {
+  width: 50%;
+  height: 100%;
+}
+
+.carousel__img {
+  width: 100%;
+  height: 100%;
+  min-width: 320px;
+  object-fit: cover;
+
+  @media (max-width: 500px) {
+    height: auto;
+  }
+}
+
+@keyframes carouselBackground {
+  from {
+    left: 0;
+  }
+
+  44% {
+    left: 0;
+  }
+
+  50% {
+    left: -100%;
+  }
+
+  94% {
+    left: -100%;
+  }
+
+  to {
+    left: 0;
+  }
+}

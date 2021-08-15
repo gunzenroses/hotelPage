@@ -1,0 +1,96 @@
+.date-range__selector {
+  position: relative;
+  width: 100%;
+  height: 65px;
+
+  @media (max-width: 450px) {
+    width: 100%;
+    min-width: 260px;
+    margin: 0 auto;
+  }
+}
+
+.dataRange__container {
+  @include isFlex();
+  width: 100%;
+  height: 65px;
+
+  @media (max-width: 450px) {
+    width: 100%;
+    min-width: 260px;
+    margin: 0 auto;
+  }
+
+  & input {
+    font-size: 13.5px;
+    letter-spacing: .03em;
+  }
+}
+
+.date-range__selector .label {
+  margin-bottom: 3.5px;
+  margin-top: 5px;
+  letter-spacing: -.002em;
+}
+
+.dataRange__container_common {
+  @extend .dataRange__container;
+  flex-direction: column;
+
+  & input {
+    font-size: 13.5px;
+    letter-spacing: .02em;
+  }
+}
+
+.dropdown__calendar {
+  @include absoluteTopLeft(65px);
+  display: none;
+  width: 320px;
+  height: 369px;
+  margin-top: 4px;
+  background: $light;
+  z-index: 2;
+
+  @media (min-width: 1650px) and (max-width: 1920px) {
+    width: 100%;
+  }
+
+  @media (max-width: 450px) {
+    width: 100%;
+    min-width: 260px;
+    margin: 0 auto;
+  }
+}
+
+.date__range {
+  @extend .dropdown__button;
+  padding-left: 12px;
+  padding-bottom: 2px;
+
+  @media (min-width: 1750px) and (max-width: 1920px) {
+    font-size: $fs_h2;
+  }
+
+  @media (max-width: 450px) {
+    min-width: 100%;
+  }
+}
+
+.date__range > input {
+  @media (min-width: 1750px) and (max-width: 1920px){
+    font-size: $fs_h2;
+  }
+}
+
+.date__range input::placeholder {
+  color: $darkShadeMore;
+}
+
+.dropdown__show ~ .dataRange__container .date__range::before {
+  transform: rotate(180deg);
+}
+
+.dropdown__show ~ .container_medium .date__range::before {
+  transform: rotate(180deg);
+}

@@ -1,19 +1,7 @@
 mixin paginationContainer(labelText, containerId)
-    .pagination_contaner
-        h3(class="label")= labelText
-        +pagination(containerId)
-
+  .pagination__container
+    h3(class="label")= labelText
+    +pagination(containerId)
 
 mixin pagination(containerId)
-    .pagination_bar(id=containerId)
-
-
-            //- .pagination__scroll-bar
-            //-     .pagination__button_first 1
-            //-     .pagination__items
-            //-         .pagination__item 2
-            //-         .pagination__item 3
-            //-         .pagination__item 4
-            //-     .pagination__button_last ...15
-            //-     .pagination__button_next 
-            //- .pagination__info 1 – 12 из 100+ вариантов аренды
+  .pagination__bar(id=containerId)

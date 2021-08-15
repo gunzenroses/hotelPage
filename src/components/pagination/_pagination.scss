@@ -1,191 +1,89 @@
-
-
-.pagination_contaner {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: nowrap;
-    flex-shrink: 0;
+.pagination {
+  &__container {
+    @include isFlex($direction: column);
     width: 241px;
     height: 105px;
-}
 
-.pagination_bar {
+    @media (max-width: 450px) {
+      margin: 0 auto;
+    }
+  }
+
+  &__bar {
+    @include isFlex($direction: column);
+    width: fit-content;
     height: 75px;
-    width: 241px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: nowrap;
-    flex-shrink: 0;
-}
+  }
 
-
-
-
-
-button {
-    border: none;
-}
-
-.pagination__buttons {
+  &__buttons {
+    @include isFlex();
+    width: 242px;
     height: 40.4px;
-    width: 240px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: nowrap;
-    flex-shrink: 0;
-    font-size: 12px;
-}
+    font-size: 0.875em;
+  }
 
-.pagination__button_current {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin: 0;
-    padding: 0;
-    line-height: 40px;
-    text-align: center;
-    cursor: pointer;
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    color: #fff;
+  &__button_current {
+    @include paginationItem;
+    background: $linearGradientLilac;
+    color: $light;
     font-weight: 700;
-}
+  }
 
-.pagination__items {
+  &__items {
+    @include isFlex();
     width: 120px;
     height: 40px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: nowrap;
-    flex-shrink: 0;
+  }
+
+  &__info {
+    width: fit-content;
+    height: 23px;
+    line-height: 18px;
+    margin: 0 auto;
+    font-size: $fs_base;
+    text-align: left;
+    letter-spacing: .005em;
+  }
 }
 
 .pagination__item,
 .pagination__button_last,
 .pagination__button_first {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin: 0;
-    padding: 0;
-    line-height: 40px;
-    text-align: center;
-    cursor: pointer;
-    background: transparent;
-    color: rgba(31, 32, 65, 0.5);
-    font-weight: 400;
+  @include paginationItem;
+  line-height: 39px;
+  background: transparent;
+  color: $darkShadeMiddle;
+  font-weight: 400;
 }
 
 .pagination__item:hover {
-    background: #BC9CFF;
+  background: #bc9cff;
 }
 
 .pagination__button_next {
-    position: relative;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin: 0;
-    padding: 0;
-    line-height: 40px;
-    text-align: center;
-    cursor: pointer;
-    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  @include paginationItem;
+  @include paginationNav;
 
-    &::before {
-        font-family: $MaterialIcons;
-        -webkit-font-feature-settings: 'liga' 1;
-        -moz-font-feature-settings: 'liga' 1;
-        font-feature-settings: 'liga' 1;
-        top: 0;
-        right: 0;
-        position: absolute;
-        width: 40px;
-        height: 40px;
-        content: "\e5c8";
-        line-height: 40px;
-        text-align: center;
-        font-size: 24px;
-        color: $light;
-        z-index: 2;
-    }
+  &::before {
+    content: "\e5c8";
+    @include paginationBefore;
+    font-family: $MaterialIcons;
+    -webkit-font-feature-settings: "liga" 1;
+    -moz-font-feature-settings: "liga" 1;
+    font-feature-settings: "liga" 1;
+  }
 }
-
-// .pagination__button_next::before {
-//         position: absolute;
-//         content: "";
-//         background: #fff;
-//         width: 16px;
-//         height: 2px;
-//         top: 19px;
-//         right: 9px;
-//         z-index: 2;
-// }
-
-// .pagination__button_next::after {
-//     position: absolute;
-//     content: "";
-//     top: 14px;
-//     right: 10px;
-//     width: 10px;
-//     height: 10px;
-//     border-color: #fff;
-//     border-style: solid;
-//     border-width: 2px 2px 0 0;
-//     transform: rotate(45deg);
-// }
 
 .pagination__button_prev {
-    position: relative;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin: 0;
-    padding: 0;
-    line-height: 40px;
-    text-align: center;
-    cursor: pointer;
-    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  @include paginationItem;
+  @include paginationNav;
 
-    &::before {
-        font-family: $MaterialIcons;
-        -webkit-font-feature-settings: 'liga' 1;
-        -moz-font-feature-settings: 'liga' 1;
-        font-feature-settings: 'liga' 1;
-        top: 0;
-        right: 0;
-        position: absolute;
-        width: 40px;
-        height: 40px;
-        content: "\e5c4";
-        line-height: 40px;
-        text-align: center;
-        font-size: 24px;
-        color: $light;
-        z-index: 2;
-    }
-}
-
-.pagination__info {
-    width: 260px;
-    height: 24px;
-    line-height: 18px;
-    font-size: $fs_base;
-    margin: 0 auto;
-    padding-left: 5px;
-    text-align: left;
-    letter-spacing: -.001em;
-}
-
-@media (max-width: 450px){
-    .pagination_contaner {
-        margin: 0 auto;
-    }
+  &::before {
+    content: "\e5c4";
+    @include paginationBefore;
+    font-family: $MaterialIcons;
+    -webkit-font-feature-settings: "liga" 1;
+    -moz-font-feature-settings: "liga" 1;
+    font-feature-settings: "liga" 1;
+  }
 }

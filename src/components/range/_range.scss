@@ -1,49 +1,69 @@
 .range__container {
-    position: relative;
-    width: 100%;
-    height: auto;
-    margin-top: 1px;
-    @include isFlex($direction: column, $justify: flex-start);
+  @include isFlex($direction: column, $justify: flex-start);
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-top: 1px;
+}
+
+.range__container > .label {
+  margin-top: 2px;
+}
+
+.range__container > .label_right {
+  margin-top: 0px;
 }
 
 .range__info {
-    font-size: .857rem;
-    line-height: 1.045rem;
-    margin-top: 13px;
-    font-weight: 400;
-    color: $darkShadeMiddle;
-    text-transform: none;
-    letter-spacing: -0.001em;
+  margin-top: 22px;
+  line-height: 1.045rem;
+  font-size: $fs_h3;
+  font-weight: 400;
+  color: $darkShadeMiddle;
+  text-transform: none;
+  letter-spacing: .002em;
+
+  @media (min-width: 1750px) and (max-width: 1920px) {
+    font-size: $fs_h2;
+    text-align: center;
+  }
 }
 
-.range__slider {
-    position: relative;
-    z-index: 1;
-    margin-top: 20px;
-    height: 6px;
-    width: 100%;
-    border-radius: 3px;
-    background-color: $light;
-    border: 1px solid $darkShadeLess;
+.irs, .irs--flat, .js-irs-0 {
+  @include containerBlock(100%, 16px);
+  position: relative;
+  user-select: none;
 }
 
-.range__container > .ui-slider-horizontal {
-    height: 6px;
+.irs-line {
+  @include containerBlock(100%, 6px);
+  position: relative;
+  margin-top: 18px;
+  border-radius: 3px;
+  background-color: $light;
+  border: 1px solid $darkShadeLess;
 }
 
-.range__slider > .ui-slider-range {
-    border-radius: 3px;
-    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+.irs-hidden-input {
+  display: none;
 }
 
-.range__slider > .ui-slider-handle {
-    position: absolute;
-    font-size: 13.3px;
-    z-index: 3;
-    top: -.5em;
-    width: 16px;
-    height: 16px;
-    border-radius: 10px;
-    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-    border: 2px solid $light;
+.irs-bar {
+  position: absolute;
+  top: 18px;
+  display: block;
+  height: 6px;
+  border-radius: 3px;
+  background: $linearGradientTurquoise;
+  z-index: 1;
+}
+
+.irs-handle {
+  @include containerBlock(15px, 15px);
+  position: absolute;
+  top: 14px;
+  border-radius: 10px;
+  border: 2px solid $light;
+  background: $linearGradientTurquoise;
+  z-index: 1;
 }

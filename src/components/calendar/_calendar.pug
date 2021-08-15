@@ -1,18 +1,18 @@
 mixin calendar(calendarId)
-    - var weekdaysName = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"]
-    div(class="calendar" id=calendarId)
-        .calendar__date
-            .date__prev
-            .date__month!= textContent
-            .date__next
-        .calendar__weeks
-            .weeks__weekdays
-                for day in weekdaysName
-                    +weekdays(day)
-            .weeks__days
-        .calendar__buttons
-            button.calendar__buttons_reset(type='reset') Очистить
-            button.calendar__buttons_submit(type='button') Применить
+  - var weekdaysNames = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"]
+  div(class="calendar" id=calendarId)
+    .calendar__date
+      .date__prev.js-date__prev
+      .date__month.js-date__month!= textContent
+      .date__next.js-date__next
+    .calendar__weeks
+      .weeks__weekdays
+        for day in weekdaysNames
+          +weekdays(day)
+      .weeks__days.js-weeks__days
+    .calendar__buttons
+      button.js-calendar__buttons_reset.calendar__buttons_reset(type='reset') Очистить
+      button.js-calendar__buttons_submit.calendar__buttons_submit(type='button') Применить
 
 mixin weekdays(weekday)
-    span!= weekday
+  span!= weekday
