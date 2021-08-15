@@ -149,7 +149,7 @@
   font-size: $fs_h1;
   font-weight: 700;
   color: $darkShadeMost;
-  letter-spacing: .005em;
+  letter-spacing: 0.005em;
 
   @media (max-width: 1070px) {
     margin: 20px auto;
@@ -200,7 +200,7 @@
   margin-top: 21px;
   margin-left: 290px;
 
-  @media (min-width: 1500px) and (max-width: 1920px){
+  @media (min-width: 1500px) and (max-width: 1920px) {
     margin: 21px auto 0;
   }
 
@@ -212,6 +212,10 @@
 /* filter group inner containers */
 
 .filter-group {
+  @media (max-width: 700px) {
+    width: 100%;
+  }
+
   &__date-range {
     @include formMargin;
   }
@@ -223,7 +227,7 @@
 
   &__price-range {
     @include formMargin;
-    margin-top: 28px;
+    margin-top: 29px;
   }
 
   &__accessibility {
@@ -233,7 +237,7 @@
 
   &__rules {
     @include formMargin;
-    margin-top: 30px;
+    margin-top: 29px;
   }
 
   &__rooms {
@@ -247,6 +251,16 @@
   }
 }
 
-.search-room .date__range {
-  padding-left: 10px;
+.search-room {
+  & .date__range {
+    padding-left: 10px;
+  }
+
+  & .footer__info {
+    height: 130px;
+  }
+
+  & .footer__info_more {
+    margin-left: -1px;
+  }
 }
