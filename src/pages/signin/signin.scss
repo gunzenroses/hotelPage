@@ -3,6 +3,14 @@
 
 .sign-in {
   @extend .registration;
+
+  & .footer__info {
+    height: 131px;
+  }
+
+  & .textfield_login {
+    margin-top: 20px;
+  }
 }
 
 .sign-in__content {
