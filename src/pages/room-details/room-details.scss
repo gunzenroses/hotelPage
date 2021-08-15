@@ -467,8 +467,12 @@
     margin-top: 20px;
   }
 
+  & .footer__info {
+    height: 130px;
+  }
+
   & .footer__info_more {
-    margin-left: -4px;
+    margin-left: -2px;
   }
 
   & .booking-info__sign:first-of-type {
