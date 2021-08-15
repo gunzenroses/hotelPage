@@ -90,7 +90,7 @@
 .cards__card-booking {
   @include cardsMargins;
   width: 382px;
-  height: fit-content;
+  height: 513px;
   margin-top: 1px;
 
   & .booking-total__line {
@@ -102,7 +102,7 @@
   @include cardsMargins;
   width: 381px;
   height: 360px;
-  margin-top: 39px;
+  margin-top: 40px;
 
   @media (max-width: 1400px) {
     margin-top: 0;
