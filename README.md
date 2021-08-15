@@ -1,6 +1,6 @@
 ## Webpack 4 project with Pug, Sass/Stylus, jQuery, VanillaJS, Babel
 
-The purpose of this project is to create a websites without frameworks/libraries like React only using simple but powerful technologies to build quality websites.
+The purpose of this project is to create a website without frameworks/libraries like React only using simple but powerful technologies to build quality websites.
 
 ## Used technologies and libraries
 
@@ -25,10 +25,9 @@ Run production mode
 >```npm run build```
 
 ## Links to pages
-
-### [UIKit](https://gunzenroses.github.io/hotelPage/UIKit.html)
-### [Landing page](https://gunzenroses.github.io/hotelPage/landing-page.html)
-### [Search room](https://gunzenroses.github.io/hotelPage/search-room.html)
-### [Registration](https://gunzenroses.github.io/hotelPage/registration.html)
-### [Sign in](https://gunzenroses.github.io/hotelPage/signin.html)
-### [Room details](https://gunzenroses.github.io/hotelPage/room-details.html)
+- [UIKit](https://gunzenroses.github.io/hotelPage/UIKit.html)
+- [Landing page](https://gunzenroses.github.io/hotelPage/landing_page.html)
+- [Search room](https://gunzenroses.github.io/hotelPage/search_room.html)
+- [Registration](https://gunzenroses.github.io/hotelPage/registration.html)
+- [Sign in](https://gunzenroses.github.io/hotelPage/signin.html)
+- [Room details](https://gunzenroses.github.io/hotelPage/room_details.html)
