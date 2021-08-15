@@ -1,7 +1,7 @@
 mixin range (rangeId, infoText= false, labelText= "Range slider")
   .range__container
     h3.label!= labelText 
-    input(class= "label_right range-slider__value")
+    input(class= "label_right js-range-slider__value")
     input(class= "range__slider" id= rangeId)
     if infoText
       .range__info Стоимость за сутки пребывания в номере

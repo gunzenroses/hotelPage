@@ -14,6 +14,6 @@ $("#range_1").ionRangeSlider({
 })
 
 function changeValue(data){
-  const rangeValue = $(data.input).siblings(".range-slider__value");
+  const rangeValue = $(data.input).siblings(".js-range-slider__value");
   rangeValue.val(`${data.from_pretty}₽ - ${data.to_pretty}₽`);
 }
