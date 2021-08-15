@@ -100,14 +100,10 @@
 }
 
 .footer__navbar_inner > .footer__info_more {
-  margin-right: 51px;
+  margin-right: 52px;
 
   @media (min-width: 1500px) and (max-width: 1920px){
       margin-right: 0;
-  }
-
-  @media (min-width: 1350px) and (max-width: 1450px){
-    margin-right: 51px;
   }
 
   @media (max-width: 1340px) {
@@ -144,7 +140,7 @@
 .footer__info {
   @include isFlex($direction: column);
   width: 260px;
-  height: 130px;
+  height: 131px;
   letter-spacing: .001em;
 
   @media (max-width: 1340px) {
