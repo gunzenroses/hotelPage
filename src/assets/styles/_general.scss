@@ -249,3 +249,14 @@ select {
     margin-top: 2px;
   }
 }
+
+.uikit-logo {
+  @include absoluteTopLeft(30px, 30px);
+  width: 48px;
+  height: 48px;
+
+  @media (max-width: 750px) {
+    top: 10px;
+    left: 10px;
+  }
+}
