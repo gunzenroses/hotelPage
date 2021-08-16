@@ -49,28 +49,34 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: [/node_modules/],
-        use: [
-          {
-            loader: "babel-loader",
-            options: { presets: ["es2015"] },
-          },
-        ],
+        loader: "babel-loader",
+        options: { 
+          presets: ["es2015"] 
+        },
       },
       {
         test: /\.pug$/,
-        use: [
-          {
-            loader: "pug-loader",
-          },
-        ],
+        loader: "pug-loader",
       },
       {
-        test: /\.(png|jpe?g|gif|svg|ico)(\?.*)?$/,
+        test: /\.(png|jpe?g|svg|gif|ico)(\?.*)?$/,
         loader: "url-loader",
         options: {
           limit: 3000,
           name: "assets/images/[name].[ext]",
         },
+      },
+      {
+        test: /\.(gif|png|jpe?g|svg)$/i,
+        use: [
+          'file-loader',
+          {
+            loader: 'image-webpack-loader',
+            options: {
+              disable: true, // webpack@2.x and newer
+            },
+          },
+        ],
       },
       {
         test: /\.(woff2?|eot|ttf|otf|svg)(\?.*)?$/,
@@ -88,7 +94,7 @@ module.exports = {
       { from: "src/assets/fonts", to: "assets/fonts" },
     ]),
     new HtmlWebpackPlugin({
-      filename: "index",
+      filename: "index.html",
       template: `${PATHS.src}/index.pug`,
       chunks: ["index"],
       inject: "body",
@@ -98,7 +104,7 @@ module.exports = {
         Pages
     */
     ...PAGES.map(page => new HtmlWebpackPlugin({
-      filename: `${page}`,
+      filename: `${page}.html`,
       template: `${PAGES_DIR}/${page}/${page}.pug`,
       chunks: [`${page}`],
       inject: "body",
