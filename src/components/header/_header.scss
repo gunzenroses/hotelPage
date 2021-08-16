@@ -41,10 +41,6 @@
 .logo__pic {
   @include containerSize(40px);
   position: relative;
-  background: url(/assets/images/logo/logo_colored.svg);
-  background-position: center;
-  background-size: initial;
-  background-repeat: no-repeat;
 }
 
 .logo__name {
@@ -52,10 +48,6 @@
   width: 55px;
   height: 15px;
   margin-top: 1px;
-  background: url(/assets/images/logo/logo__name.svg);
-  background-position: center;
-  background-size: initial;
-  background-repeat: no-repeat;
 
   @media (max-width: 550px) {
     display: none;
