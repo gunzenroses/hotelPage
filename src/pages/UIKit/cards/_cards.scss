@@ -23,21 +23,6 @@
   }
 }
 
-.cards_outer::before {
-  content: "";
-  @include absoluteTopLeft(30px, 30px);
-  width: 48px;
-  height: 48px;
-  background-image: url(/assets/images/logo/logo.svg);
-  background-size: 100%;
-  background-position: center;
-
-  @media (max-width: 750px) {
-    top: 10px;
-    left: 10px;
-  }
-}
-
 /* Flex for adaptive design */
 
 .cards_inner {
