@@ -53,13 +53,6 @@
   }
 }
 
-@mixin bgImage($url, $repeat: no-repeat, $position: center, $size: initial) {
-  background-image: url($url);
-  background-repeat: $repeat;
-  background-position: $position;
-  background-size: $size;
-}
-
 @mixin cardsMargins {
   margin-top: 42px;
 
