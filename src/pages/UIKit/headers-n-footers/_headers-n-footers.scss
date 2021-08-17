@@ -29,16 +29,6 @@
   }
 }
 
-.headers-n-footers_outer::before {
-  content: "";
-  @include absoluteTopLeft(30px, 30px);
-  width: 48px;
-  height: 48px;
-  background-image: url(/assets/images/logo/logo.svg);
-  background-size: 100%;
-  background-position: center;
-}
-
 .headers-n-footers_outer > .footer_outer {
   margin-top: 41px;
 }

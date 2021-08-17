@@ -6,6 +6,7 @@
   border: 1px solid rgba(31, 32, 65, 0.25);
   background: $light;
   z-index: 3;
+  user-select: none;
 
   @media (min-width: 1650px) and (max-width: 1920px) {
     width: 100%;

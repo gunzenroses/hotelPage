@@ -14,8 +14,9 @@
   font-size: $fs_h3;
   color: $darkShadeLess;
   border-radius: 10px;
-  cursor: pointer;
   background: $darkShadeLess;
+  cursor: pointer;
+  user-select: none;
 
   &::before {
     content: "";
@@ -27,16 +28,10 @@
 
   &_popular {
     @extend .button-like;
-    color: $darkShadeLess;
     background: $linearGradientLilac;
 
     &::before {
-      content: "";
-      @extend .button-like_popular;
-      @include buttonLikeBefore;
-      margin: 1px;
-      color: $purple;
-      background: $light;
+      @extend .button-like::before;
     }
   }
 
@@ -57,32 +52,16 @@
   }
 
   &__heart {
-    @include containerSimple(20px, 19px);
-    position: absolute;
+    @include containerSimple(10px, 10px);
+    @include absoluteTopLeft(5px, 5px);
     text-align: center;
-    background: url(/assets/images/heart_disabled.svg);
-    background-position: center;
-    background-size: initial;
-    background-repeat: no-repeat;
 
     @media (min-width: 1750px) and (max-width: 1920px) {
-      background-size: contain;
-      top: 5px;
-      left: 5px;
+      @include containerSimple(18px, 18px);
     }
 
     &_popular {
       @extend .button-like__heart;
-      background: url(/assets/images/heart_active.svg);
-      background-position: center;
-      background-size: initial;
-      background-repeat: no-repeat;
-
-      @media (min-width: 1750px) and (max-width: 1920px) {
-        background-size: contain;
-        top: 5px;
-        left: 5px;
-      }
     }
   }
 }

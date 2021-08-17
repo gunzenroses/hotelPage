@@ -13,8 +13,8 @@ export default class ButtonLike {
   }
 
   createChildren() {
-    this.number = this.likeButton.querySelector('.js-button-like__number');
-    this.heart = this.likeButton.querySelector('.js-button-like__heart');
+    this.number = this.likeButton.querySelector('.js-b-l__n');
+    this.heart = this.likeButton.querySelector('.js-b-l__h');
   }
 
   enableHandlers() {
@@ -38,5 +38,6 @@ export default class ButtonLike {
   makePopularClass(){
     this.likeButton.classList.add("button-like_popular");
     this.heart.classList.add("button-like__heart_popular");
+    this.heart.src = "./assets/images/heart_active.svg";
   }
 }

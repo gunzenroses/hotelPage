@@ -2,10 +2,10 @@ include ../text-field/_text-field.pug
 include ../button/_button.pug
 
 mixin cardSignin()
-  form.card-signin(method="get" action="/signin")
+  form.card-signin(method="get" action="/signin.html")
     h1.card__text Войти
     +login()
     +buttonFormSubmit("Войти")
     .card__text_row
       .card__subline Нет аккаунта на Toxin?
-      +buttonFormLink("Создать", "registration")
+      +buttonFormLink("Создать", "registration.html")
