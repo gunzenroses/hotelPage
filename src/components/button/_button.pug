@@ -14,7 +14,7 @@ mixin buttonContainer()
 
 
 //- mixins for form-buttons
-mixin buttonFormLink(buttonText, buttonOnclick="/some-address")
+mixin buttonFormLink(buttonText, buttonOnclick="./some-address")
   div(class="button_filled")
     a(class="button_filled_inner" href= buttonOnclick)= buttonText
 
@@ -24,16 +24,16 @@ mixin buttonFormSubmit(buttonText)
 
 
 //- mixins for link-buttons
-mixin buttonLink(buttonText="", buttonOnclick="/some-address")
+mixin buttonLink(buttonText="", buttonOnclick="./some-address")
   div(class="button_link")
     a(class="button_link_inner" href= buttonOnclick)= buttonText
 
 
-mixin buttonBiglink(buttonText="", buttonOnclick="/some-address")
+mixin buttonBiglink(buttonText="", buttonOnclick="./some-address")
   a(class="button_link_big" href= buttonOnclick)= buttonText
 
 
-mixin buttonNavLink(buttonText="", buttonOnclick="/some-address")
+mixin buttonNavLink(buttonText="", buttonOnclick="./some-address")
   a(class="button_clear" href= buttonOnclick)= buttonText
 
 
