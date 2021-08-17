@@ -14,8 +14,9 @@
   font-size: $fs_h3;
   color: $darkShadeLess;
   border-radius: 10px;
-  cursor: pointer;
   background: $darkShadeLess;
+  cursor: pointer;
+  user-select: none;
 
   &::before {
     content: "";
