@@ -11,6 +11,6 @@ mixin buttonLikeItem(buttonId, buttonNumber)
       img.button-like__heart.js-b-l__h(src= "./assets/images/heart_disabled.svg")
       .button-like__number.js-b-l__n!= buttonNumber
   else
-    .button-like(id=buttonId)
-      img.button-like__heart.js-b-l__h.button-like__heart.js-b-l__h_p(src= "./assets/images/heart_active.svg")
-      .button-like__number.js-b-l__n.button-like__number.js-b-l__n_p!= buttonNumber
+    .button-like_popular(id=buttonId)
+      img.button-like__heart_popular.js-b-l__h(src= "./assets/images/heart_active.svg")
+      .button-like__number_popular.js-b-l__n!= buttonNumber

@@ -27,16 +27,10 @@
 
   &_popular {
     @extend .button-like;
-    color: $darkShadeLess;
     background: $linearGradientLilac;
 
     &::before {
-      content: "";
-      @extend .button-like_popular;
-      @include buttonLikeBefore;
-      margin: 1px;
-      color: $purple;
-      background: $light;
+      @extend .button-like::before;
     }
   }
 
@@ -57,23 +51,16 @@
   }
 
   &__heart {
-    @include containerSimple(20px, 19px);
-    position: absolute;
+    @include containerSimple(10px, 10px);
+    @include absoluteTopLeft(5px, 5px);
     text-align: center;
 
     @media (min-width: 1750px) and (max-width: 1920px) {
-      top: 5px;
-      left: 5px;
+      @include containerSimple(18px, 18px);
     }
 
     &_popular {
       @extend .button-like__heart;
-
-      @media (min-width: 1750px) and (max-width: 1920px) {
-        background-size: contain;
-        top: 5px;
-        left: 5px;
-      }
     }
   }
 }
