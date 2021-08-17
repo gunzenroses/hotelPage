@@ -1,5 +1,4 @@
 const path = require("path");
-const webpack = require("webpack");
 const common = require("./webpack.common");
 const { merge } = require("webpack-merge");
 
@@ -51,13 +50,5 @@ module.exports = merge(common, {
         ],
       }
     ],
-  },
-  plugins: [
-    new webpack.ProvidePlugin({
-      $: "jquery",
-      jQuery: "jquery",
-      "window.$": "jquery",
-      "window.jQuery": "jquery",
-    }),
-  ]
+  }
 })

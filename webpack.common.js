@@ -1,4 +1,5 @@
 const path = require("path");
+const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const fs = require("fs");
@@ -89,6 +90,12 @@ module.exports = {
   },
 
   plugins: [
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery",
+      "window.$": "jquery",
+      "window.jQuery": "jquery",
+    }),
     new CopyWebpackPlugin([
       { from: "src/assets/images", to: "assets/images" },
       { from: "src/assets/fonts", to: "assets/fonts" },
