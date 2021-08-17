@@ -9,7 +9,6 @@ class Carousel {
   constructor(carousel) {
     this.carousel = carousel;
     this.carouselInputs = this.carousel.getElementsByClassName("js-room-carousel__radio")[0];
-    this.carouselInputs.querySelectorAll(".js-room-carousel__radio_real")[0].checked = true;
     this.carouselPictures = this.carousel.querySelector(".js-room-carousel__pictures");
     this.carouselPictures.style.left = 0;
     this.init();
@@ -29,11 +28,12 @@ class Carousel {
     this.carouselNext = (this.carousel.querySelector(".js-room-carousel__btn_next"))
       ? this.carousel.querySelector(".js-room-carousel__btn_next")
       : null;
-    let radioRow = this.carouselInputs.querySelectorAll(".js-room-carousel__radio_real");
-    this.firstPic = radioRow[0];
-    this.secondPic = radioRow[1];
-    this.thirdPic = radioRow[2];
-    this.forthPic = radioRow[3];
+    this.carouselRow = this.carouselInputs.getElementsByClassName("js-room-carousel__radio_real");
+    this.firstPicRadio = this.carouselRow[0];
+    this.secondPicRadio = this.carouselRow[1];
+    this.thirdPicRadio = this.carouselRow[2];
+    this.forthPicRadio = this.carouselRow[3];
+    this.firstPicRadio.checked = true;
   }
 
   setupHandlers() {
@@ -43,27 +43,27 @@ class Carousel {
   }
 
   enable() {
-    if (this.carouselPrev) this.carouselPrev.addEventListener("click", this.prevImageHandler)
-    if (this.carouselNext) this.carouselNext.addEventListener("click", this.nextImgHandler)
-    this.carouselInputs.addEventListener("click", () => { this.switchImageHandler; })
+    if (this.carouselPrev) this.carouselPrev.addEventListener("click", this.prevImageHandler);
+    if (this.carouselNext) this.carouselNext.addEventListener("click", this.nextImgHandler);
+    this.carouselInputs.addEventListener("click", this.switchImageHandler );
   }
 
   prevImage() {
     this.leftValue += 100;
     switch (this.leftValue) {
       case 0:
-        this.firstPic.checked = true;
+        this.firstPicRadio.checked = true;
         this.carouselPictures.style.left = this.leftValue + "%";
         break;
-      case -100: this.secondPic.checked = true;
+      case -100: this.secondPicRadio.checked = true;
         this.carouselPictures.style.left = this.leftValue + "%";
         break;
-      case -200: this.thirdPic.checked = true;
+      case -200: this.thirdPicRadio.checked = true;
         this.carouselPictures.style.left = this.leftValue + "%";
         break;
       case 100: 
         this.leftValue = -300;
-        this.forthPic.checked = true;
+        this.forthPicRadio.checked = true;
         this.carouselPictures.style.left = this.leftValue + "%";
         break;
     }
@@ -74,19 +74,19 @@ class Carousel {
     switch (this.leftValue) {
       case -400: 
         this.leftValue = 0;
-        this.firstPic.checked = true;
+        this.firstPicRadio.checked = true;
         this.carouselPictures.style.left = this.leftValue + "%";
         break;
       case -100: 
-        this.secondPic.checked = true;
+        this.secondPicRadio.checked = true;
         this.carouselPictures.style.left = this.leftValue + "%";
         break;
       case -200: 
-        this.thirdPic.checked = true;
+        this.thirdPicRadio.checked = true;
         this.carouselPictures.style.left = this.leftValue + "%";
         break;
       case -300: 
-        this.forthPic.checked = true;
+        this.forthPicRadio.checked = true;
         this.carouselPictures.style.left = this.leftValue + "%";
         break;
     }
