@@ -72,15 +72,7 @@ module.exports = {
         loader: "pug-loader",
       },
       {
-        test: /\.(png|jpe?g|svg|gif|ico)(\?.*)?$/,
-        loader: "url-loader",
-        options: {
-          limit: 3000,
-          name: "assets/images/[name].[ext]",
-        },
-      },
-      {
-        test: /\.(gif|png|jpe?g|svg)$/i,
+        test: /\.(gif|png|jpe?g|ico)$/i,
         use: [
           'file-loader',
           {
@@ -96,7 +88,8 @@ module.exports = {
         loader: "file-loader",
         options: {
           name: '[name].[ext]',
-          outputPath: 'assets/fonts/'
+          outputPath: 'assets/fonts/',
+          esModule: false,
         },
       },
     ],
@@ -111,7 +104,6 @@ module.exports = {
     }),
     new CopyWebpackPlugin([
       { from: "src/assets/images", to: "assets/images" },
-      { from: "src/assets/fonts", to: "assets/fonts" },
       { from: "src/assets/favicons", to: "assets/favicons" },
     ]),
     new HtmlWebpackPlugin({
