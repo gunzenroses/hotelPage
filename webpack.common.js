@@ -2,7 +2,6 @@ const path = require("path");
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
 const fs = require("fs");
 
 const PATHS = {
@@ -12,9 +11,6 @@ const PATHS = {
 }
 const PAGES_DIR = `${PATHS.src}/${PATHS.pages}`
 const PAGES = fs.readdirSync(PAGES_DIR);
-
-//const plugins = require("./postcss.config");
-
 module.exports = {
   context: path.resolve(__dirname, ""),
   node: {
@@ -43,17 +39,6 @@ module.exports = {
     },
     modules: [path.resolve(__dirname, 'src'), 'node_modules'],
   },
-  optimization: {
-    minimize: true,
-    minimizer: [
-      new TerserPlugin({
-        test: /\.js(\?.*)?$/i,
-        parallel: true,
-        sourceMap: true,
-        cache: true,
-      }
-    )],
-  },
   /*
       Loaders with configurations
   */
@@ -72,19 +57,23 @@ module.exports = {
         loader: "pug-loader",
       },
       {
-        test: /\.(gif|png|jpe?g|ico)$/i,
-        use: [
-          'file-loader',
+        test: /\.svg$/,
+        use: [ 
           {
-            loader: 'image-webpack-loader',
+            loader: 'file-loader',
             options: {
-              disable: true, // webpack@2.x and newer
+              name: '[name].[ext]',
+              outputPath: 'assets/fonts/',
+              esModule: false,
             },
           },
-        ],
+          {
+            loader: 'svgo-loader',
+          }
+        ]
       },
       {
-        test: /\.(woff2?|eot|ttf|otf|svg)(\?.*)?$/,
+        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
         loader: "file-loader",
         options: {
           name: '[name].[ext]',
@@ -102,10 +91,12 @@ module.exports = {
       "window.$": "jquery",
       "window.jQuery": "jquery",
     }),
-    new CopyWebpackPlugin([
-      { from: "src/assets/images", to: "assets/images" },
-      { from: "src/assets/favicons", to: "assets/favicons" },
-    ]),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: "src/assets/images", to: "assets/images" },
+        { from: "src/assets/favicons", to: "assets/favicons" },
+      ],
+    }), 
     new HtmlWebpackPlugin({
       filename: "index.html",
       template: `${PATHS.src}/index.pug`,
