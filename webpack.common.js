@@ -95,7 +95,8 @@ module.exports = {
         test: /\.(woff2?|eot|ttf|otf|svg)(\?.*)?$/,
         loader: "file-loader",
         options: {
-          name: "assets/fonts/[name].[ext]",
+          name: '[name].[ext]',
+          outputPath: 'assets/fonts/'
         },
       },
     ],
@@ -111,6 +112,7 @@ module.exports = {
     new CopyWebpackPlugin([
       { from: "src/assets/images", to: "assets/images" },
       { from: "src/assets/fonts", to: "assets/fonts" },
+      { from: "src/assets/favicons", to: "assets/favicons" },
     ]),
     new HtmlWebpackPlugin({
       filename: "index.html",
