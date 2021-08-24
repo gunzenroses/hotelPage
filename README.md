@@ -1,6 +1,6 @@
 ## Webpack 4 project with Pug, Sass/Stylus, jQuery, VanillaJS, Babel
 
-The purpose of this project is to create a website without frameworks/libraries like React only using simple but powerful technologies to build quality websites.
+The aim of this project is to create a web-pages without frameworks/libraries like React only using simple but powerful technologies.
 
 ## Used technologies and libraries
 
