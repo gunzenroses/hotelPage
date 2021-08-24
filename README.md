@@ -1,6 +1,11 @@
 ## Webpack 4 project with Pug, Sass/Stylus, jQuery, VanillaJS, Babel
 
-The aim of this project is to create a web-pages without frameworks/libraries like React only using simple but powerful technologies.
+The aim of this project is to create a web-pages without frameworks/libraries like React that gives an experience of work with:
+- Figma and PixelPerfect;
+- webpack and npm;
+- adaptive design;
+- git and basic understanding of gitflow;
+- SPA-assemble.
 
 ## Used technologies and libraries
 
