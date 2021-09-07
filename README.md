@@ -1,6 +1,7 @@
 ## Webpack 4 project with Pug, Sass/Stylus, jQuery, VanillaJS, Babel
 
 The aim of this project is to create a web-pages without frameworks/libraries like React that gives an experience of work with:
+
 - Figma and PixelPerfect;
 - webpack and npm;
 - adaptive design;
@@ -18,16 +19,16 @@ The aim of this project is to create a web-pages without frameworks/libraries li
 ## How to
 
 Clone repository
->```git clone https://github.com/gunzenroses/hotelPage.git```
+>`git clone https://github.com/gunzenroses/hotelPage.git`
 
 Install dependancies
->```npm i```
+>`npm i`
 
 Run development mode (devServer on localhost:8080)
->```npm run dev```
+>`npm run dev`
 
 Run production mode
->```npm run build```
+>`npm run build`
 
 ## Links to pages
 - [UIKit](https://gunzenroses.github.io/hotelPage/UIKit.html)
