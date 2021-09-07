@@ -1,7 +1,7 @@
 {
     "name": "Hotel booking",
     "short_name": "Booking",
-    "start_url": "/",
+    "start_url": "https://gunzenroses.github.io/hotelPage/",
     "lang": "ru-RU",
     "icons": [
         {
