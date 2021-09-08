@@ -63,16 +63,6 @@
   url("@~Fonts/quicksand/quicksand-regular.svg") format ('svg');
 }
 
-@font-face {
-  font-family: "quicksand";
-  font-weight: 700;
-  src: url("@~Fonts/quicksand/quicksand-bold.eot") format ('eot');
-  src: url("@~Fonts/quicksand/quicksand-bold.woff") format ('woff'),
-  url("@~Fonts/quicksand/quicksand-bold.ttf") format ('ttf'),
-  url("@~Fonts/quicksand/quicksand-bold.svg") format ('svg');
-}
-
 $material-icons: "material-icons";
 $montserrat: "montserrat", Arial, sans-serif;
 $font-awesome: "Font Awesome 5 Brands";
-$quicksand: "quicksand";
