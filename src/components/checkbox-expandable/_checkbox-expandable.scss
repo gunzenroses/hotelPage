@@ -36,7 +36,7 @@
     line-height: 20px;
     font-weight: 400;
     letter-spacing: .003em;
-    color: $darkShadeMiddle;
+    color: $dark-shade_medium;
 
     @media (min-width: 1750px) and (max-width: 1920px) {
       width: calc(100% - 50px);
@@ -63,7 +63,7 @@
   &__title_description {
     height: 18px;
     line-height: 18px;
-    color: $darkShadeMore;
+    color: $dark-shade_more;
     font-weight: 700;
     text-align: start;
   }
@@ -73,7 +73,7 @@
     line-height: 15px;
     margin: 0;
     font-size: $fs_h3;
-    color: $darkShadeMiddle;
+    color: $dark-shade_medium;
     font-weight: 400;
     letter-spacing: -.01em;
 

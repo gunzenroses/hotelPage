@@ -75,7 +75,7 @@
   width: 20px;
   height: 20px;
   position: relative;
-  border: 1px solid $darkShadeLess;
+  border: 1px solid $dark-shade_less;
   border-radius: 4px;
   background-color: transparent;
 }
@@ -196,10 +196,10 @@
   width: 100%;
   height: 44px;
   padding: 0 1px 1px 12px;
-  border: 1px solid $darkShadeLess;
+  border: 1px solid $dark-shade_less;
   border-radius: 4px;
   background: transparent;
-  color: $darkShadeMore;
+  color: $dark-shade_more;
   letter-spacing: -0.01em;
 
   @media (max-width: 450px) {
@@ -214,6 +214,6 @@
 
   &:hover,
   &:focus {
-    border: 1px solid $darkShadeMiddle;
+    border: 1px solid $dark-shade_medium;
   }
 }

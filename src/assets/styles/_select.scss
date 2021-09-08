@@ -19,7 +19,7 @@
     &__plus {
         @include container($width: 30, $height: 30);
         border-radius: 50%;
-        border: 1px solid $darkShadeLess;
+        border: 1px solid $dark-shade_less;
         box-shadow: border-box;
     }
 }

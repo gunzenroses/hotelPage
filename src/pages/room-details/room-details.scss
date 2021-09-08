@@ -31,7 +31,7 @@
   height: 1433px;
   margin-left: auto;
   margin-right: auto;
-  border-bottom: 1px solid $darkShadeLess;
+  border-bottom: 1px solid $dark-shade_less;
 
   @media (max-width: 1920px) {
     width: 100%;
@@ -340,7 +340,7 @@
   line-height: 24px;
   font-weight: 700;
   font-size: $fs_h2;
-  color: $darkShadeMost;
+  color: $dark-shade_most;
   letter-spacing: -0.001em;
 
   @media (min-width: 1750px) and (max-width: 1920px) {
@@ -352,7 +352,7 @@
   width: 100%;
   height: auto;
   line-height: 1.75em;
-  color: $darkShadeMore;
+  color: $dark-shade_more;
   letter-spacing: 0.003em;
 
   @media (min-width: 1500px) {

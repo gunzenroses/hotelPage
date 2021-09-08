@@ -23,7 +23,7 @@ body {
   letter-spacing: -.05em;
   font-family: $montserrat;
   font-weight: 400;
-  color: $darkShadeMore;
+  color: $dark-shade_more;
 }
 
 h1,
@@ -33,7 +33,7 @@ h4,
 h5,
 h6 {
   margin: 0;
-  color: $darkShadeMost;
+  color: $dark-shade_most;
 }
 
 h1 {
@@ -65,7 +65,7 @@ p {
   font-size: $fs_base;
   font-weight: 400;
   line-height: $fs_h1;
-  color: $darkShadeMore;
+  color: $dark-shade_more;
 }
 
 ul {
@@ -119,7 +119,7 @@ select {
 
 ::placeholder {
   /* Most modern browsers support this now. */
-  color: $darkShadeLess;
+  color: $dark-shade_less;
 }
 
 .container_small {
@@ -170,7 +170,7 @@ select {
     position: absolute;
     right: -2px;
     font-weight: 400;
-    color: $darkShadeMiddle;
+    color: $dark-shade_medium;
     text-align: right;
   }
 }
@@ -180,7 +180,7 @@ select {
   display: block;
   height: fit-content;
   font-size: $fs_h3;
-  color: red;
+  color: $error;
 }
 
 .maretial-icon {

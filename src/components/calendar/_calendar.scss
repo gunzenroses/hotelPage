@@ -110,7 +110,7 @@
     font-weight: 400;
     font-family: Montserrat;
     text-align: center;
-    color: $darkShadeMiddle;
+    color: $dark-shade_medium;
   }
 
   &__day {
@@ -130,7 +130,7 @@
 
     &_prev,
     &_next {
-      color: $darkShadeLess;
+      color: $dark-shade_less;
     }
   }
 }
@@ -139,9 +139,9 @@
 .weeks__day_next_checkedin,
 .weeks__day_prev_checkedout,
 .weeks__day_next_checkedout {
-  color: $darkShadeLess;
+  color: $dark-shade_less;
   border-radius: 50%;
-  background: $darkShadeFew;
+  background: $dark-shade_few;
   position: relative;
 }
 
@@ -152,7 +152,7 @@
   content: "";
   @include containerBlock();
   @include absoluteTopLeft();
-  background: $darkShadeFewer;
+  background: $dark-shade_fewer;
 }
 
 .weeks__day_prev_checkedin::before,
@@ -181,8 +181,8 @@
 
   &_another {
     position: relative;
-    background: $darkShadeFewer;
-    color: $darkShadeLess;
+    background: $dark-shade_fewer;
+    color: $dark-shade_less;
   }
 }
 

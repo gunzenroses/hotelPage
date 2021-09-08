@@ -37,7 +37,7 @@
     position: relative;
     width: 40px;
     height: 20px;
-    border: 1px solid $darkShadeLess;
+    border: 1px solid $dark-shade_less;
     border-radius: 10px;
     margin-right: 10px;
   
@@ -47,14 +47,14 @@
       width: 12px;
       height: 12px;
       border-radius: 50%;
-      background: $darkShadeLess;
+      background: $dark-shade_less;
       transition: left 1s ease-out;
     }
   }
   
   &__title {
     display: inline-block;
-    color: $darkShadeMore;
+    color: $dark-shade_more;
     letter-spacing: .005em;
     line-height: 20px;
     font-size: 1.003em;

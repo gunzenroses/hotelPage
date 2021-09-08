@@ -65,7 +65,7 @@
 
   &__left {
     line-height: 11px;
-    color: $darkShadeMost;
+    color: $dark-shade_most;
   }
 
   &__sign {
@@ -102,7 +102,7 @@
   }
 
   &__right {
-    color: $darkShadeMiddle;
+    color: $dark-shade_medium;
     letter-spacing: .01em;
     line-height: 20px;
   }
@@ -140,7 +140,7 @@
     margin-left: 1px;
     font-size: $fs_base;
     font-weight: 400;
-    color: $darkShadeMore;
+    color: $dark-shade_more;
 
     @media (min-width: 1750px) and (max-width: 1920px) {
       width: 100%;
@@ -191,7 +191,7 @@
     position: relative;
     background: $light;
     border-radius: 50%;
-    border: 1px solid $darkShadeLess;
+    border: 1px solid $dark-shade_less;
 
     &::before {
       content: "i";
@@ -199,7 +199,7 @@
       font-size: $fs_h3;
       line-height: $fs_base;
       font-weight: 700;
-      color: $darkShadeLess;
+      color: $dark-shade_less;
     }
   }
 
@@ -223,7 +223,7 @@
     margin-left: 1px;
     line-height: 24px;
     font-size: $fs_h2;
-    color: $darkShadeMost;
+    color: $dark-shade_most;
     font-weight: 700;
     letter-spacing: .01em;
   }
@@ -232,6 +232,6 @@
     @include isFlex($align: flex-end);
     width: calc(100% - 139px);
     height: 19px;
-    border-bottom: 1px dotted $darkShadeLess;
+    border-bottom: 1px dotted $dark-shade_less;
   }
 }

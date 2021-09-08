@@ -41,7 +41,7 @@
     font-size: $fs_base;
     letter-spacing: .003em;
     line-height: 18px;
-    color: $darkShadeMiddle;
+    color: $dark-shade_medium;
 
     @media (min-width: 1750px) and (max-width: 1920px) {
       width: calc(100% - 50px);

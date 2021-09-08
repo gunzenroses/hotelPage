@@ -25,7 +25,7 @@
 .search-room__content_outer {
   width: 100%;
   height: fit-content;
-  border-bottom: 1px solid $darkShadeLess;
+  border-bottom: 1px solid $dark-shade_less;
 }
 
 .search-room__content {
@@ -148,7 +148,7 @@
   line-height: 37px;
   font-size: $fs_h1;
   font-weight: 700;
-  color: $darkShadeMost;
+  color: $dark-shade_most;
   letter-spacing: 0.005em;
 
   @media (max-width: 1070px) {

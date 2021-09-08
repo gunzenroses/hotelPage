@@ -1,15 +1,16 @@
 /* src/assets/styles/utils/_colors.scss  */
 
-$darkShadeMost: #1f2041;
-$darkShadeMore: #1f2041bf;
-$darkShadeMiddle: #1f204180;
-$darkShadeLess: #1f204140;
-$darkShadeFew: #1f20411a;
-$darkShadeFewer: #1f20410d;
-$darkShade: #00000000;
+$dark-shade_most: #1f2041;
+$dark-shade_more: #1f2041bf;
+$dark-shade_medium: #1f204180;
+$dark-shade_less: #1f204140;
+$dark-shade_few: #1f20411a;
+$dark-shade_fewer: #1f20410d;
+$dark-shade: #00000000;
+$error: #ff0000;
 $purple: #bc9cff;
-$purpleLess: #bc9cff40;
-$purpleLeast: #bc9cff26;
+$purple_less: #bc9cff40;
+$purple_least: #bc9cff26;
 $green: #6fcf97;
 $blue: #66d2ea;
 $light: #fff;
@@ -18,8 +19,8 @@ $background: #f4f4f6;
 
 $linearGradientLilac: linear-gradient(180deg, $purple 0%, #8ba4f9 100%);
 $linearGradientShadow: linear-gradient(90deg, #00000080 0%, #00000000 99.99%, #ffffff00 100%);
-$linearGradientMetal: linear-gradient(90deg, $darkShadeMiddle 0%, $darkShade 99.99%, $light 100%);
+$linearGradientMetal: linear-gradient(90deg, $dark-shade_medium 0%, $dark-shade 99.99%, $light 100%);
 $linearGradientTurquoise: linear-gradient(180deg, $green 0%, $blue 100%);
-$linearGradientGrape: linear-gradient(180deg, $purpleLeast 0%, #8ba4f926 100%);
+$linearGradientGrape: linear-gradient(180deg, $purple_least 0%, #8ba4f926 100%);
 $linearGradientCitrus: linear-gradient(180deg, #ffe39c 0%, #ffba9c);
 $linearGradientPurple: linear-gradient(180deg, #919191 0%, #3d4975 100%);
