@@ -31,6 +31,14 @@ module.exports = merge(common, {
   module: {
     rules: [
       {
+        test: /\.js$/,
+        exclude: [/node_modules/],
+        loader: "babel-loader",
+        options: { 
+          presets: ["es2015"] 
+        },
+      },
+      {
         test: /\.css$/,
         use: [
           MiniCssExtractPlugin.loader,   // for parallel loading of CSS/JS resources later on
