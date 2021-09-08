@@ -21,7 +21,7 @@ body {
   -webkit-text-size-adjust: 100%;
   font-size: $fs_base;
   letter-spacing: -.05em;
-  font-family: $Montserrat;
+  font-family: $montserrat;
   font-weight: 400;
   color: $darkShadeMore;
 }
@@ -184,7 +184,7 @@ select {
 }
 
 .maretial-icon {
-  font-family: $MaterialIcons;
+  font-family: $material-icons;
   position: relative;
   @include containerSize(48px);
   margin-right: 10px;

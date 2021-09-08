@@ -67,7 +67,7 @@
   &::before {
     content: "\e5c8";
     @include paginationBefore;
-    font-family: $MaterialIcons;
+    font-family: $material-icons;
     -webkit-font-feature-settings: "liga" 1;
     -moz-font-feature-settings: "liga" 1;
     font-feature-settings: "liga" 1;
@@ -81,7 +81,7 @@
   &::before {
     content: "\e5c4";
     @include paginationBefore;
-    font-family: $MaterialIcons;
+    font-family: $material-icons;
     -webkit-font-feature-settings: "liga" 1;
     -moz-font-feature-settings: "liga" 1;
     font-feature-settings: "liga" 1;
