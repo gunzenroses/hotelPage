@@ -1,5 +1,5 @@
-require("jquery-validation");
-require("Scripts/ValidationMethods.js");
+require('jquery-validation');
+require('Scripts/ValidationMethods.js');
 
 $('.card-registration').validate({
   rules: {
@@ -26,38 +26,38 @@ $('.card-registration').validate({
       upperCase: true,
       hasDigit: true,
       minlength: 8,
-    }
+    },
   },
   messages: {
     name: {
-      required: "Введите Имя",
-      minlength: "Имя должно быть длинее 2 символов",
+      required: 'Введите Имя',
+      minlength: 'Имя должно быть длинее 2 символов',
     },
     surname: {
-      required: "Введите Фамилию",
-      minlength: "Фамилия должна быть длинее 2 символов",
+      required: 'Введите Фамилию',
+      minlength: 'Фамилия должна быть длинее 2 символов',
     },
     birthday: {
-      required: "Введите дату рождения",
+      required: 'Введите дату рождения',
     },
     email: {
-      required: "Введите email",
-      email: "Некорректный email",
-      minlength: "Поле должно быть длинее 7 символов",
+      required: 'Введите email',
+      email: 'Некорректный email',
+      minlength: 'Поле должно быть длинее 7 символов',
     },
     password: {
-      required: "Введите пароль",
-      pwcheck: "Содержит недопустимые значения",
-      lowerCase: "Пароль должен содержать хотя бы 1 строчную букву",
-      upperCase: "Пароль должен содержать хотя бы 1 заглавную букву",
-      hasDigit: "Пароль должен содержать хотя бы 1 цифру",
-      minlength: "Пароль должен быть длинее 8 символов",
-    }
+      required: 'Введите пароль',
+      pwcheck: 'Содержит недопустимые значения',
+      lowerCase: 'Пароль должен содержать хотя бы 1 строчную букву',
+      upperCase: 'Пароль должен содержать хотя бы 1 заглавную букву',
+      hasDigit: 'Пароль должен содержать хотя бы 1 цифру',
+      minlength: 'Пароль должен быть длинее 8 символов',
+    },
   },
-  submitHandler: function(form) {                
+  submitHandler(form) {
     form.submit();
   },
-  errorPlacement: function(error, element) {                 
+  errorPlacement(error, element) {
     element.parent().after(error);
-  }
-})
+  },
+});

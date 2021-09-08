@@ -1,7 +1,7 @@
-require("jquery-validation");
-require("Scripts/ValidationMethods.js");
+require('jquery-validation');
+require('Scripts/ValidationMethods.js');
 
-$(".card-signin").validate({
+$('.card-signin').validate({
   rules: {
     email: {
       required: true,
@@ -15,27 +15,27 @@ $(".card-signin").validate({
       upperCase: true,
       hasDigit: true,
       minlength: 8,
-    }
+    },
   },
   messages: {
     email: {
-      required: "Введите email",
-      email: "Некорректный email",
-      minlength: "Поле должно быть длинее 7 символов",
+      required: 'Введите email',
+      email: 'Некорректный email',
+      minlength: 'Поле должно быть длинее 7 символов',
     },
     password: {
-      required: "Введите пароль",
-      pwcheck: "Содержит недопустимые значения",
-      lowerCase: "Пароль должен содержать хотя бы 1 строчную букву",
-      upperCase: "Пароль должен содержать хотя бы 1 заглавную букву",
-      hasDigit: "Пароль должен содержать хотя бы 1 цифру",
-      minlength: "Пароль должен быть длинее 8 символов",
-    }
+      required: 'Введите пароль',
+      pwcheck: 'Содержит недопустимые значения',
+      lowerCase: 'Пароль должен содержать хотя бы 1 строчную букву',
+      upperCase: 'Пароль должен содержать хотя бы 1 заглавную букву',
+      hasDigit: 'Пароль должен содержать хотя бы 1 цифру',
+      minlength: 'Пароль должен быть длинее 8 символов',
+    },
   },
-  submitHandler: function(form) {                
+  submitHandler(form) {
     form.submit();
   },
-  errorPlacement: function(error, element) {                 
+  errorPlacement(error, element) {
     element.parent().after(error);
-  }
-})
+  },
+});

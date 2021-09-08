@@ -1,7 +1,7 @@
-require("ion-rangeslider");
+require('ion-rangeslider');
 
-$("#range_1").ionRangeSlider({
-  type: "double",
+$('#range_1').ionRangeSlider({
+  type: 'double',
   min: 0,
   max: 15000,
   from: 5000,
@@ -11,9 +11,9 @@ $("#range_1").ionRangeSlider({
   step: 100,
   onStart: changeValue,
   onChange: changeValue,
-})
+});
 
-function changeValue(data){
-  const rangeValue = $(data.input).siblings(".js-range-slider__value");
+function changeValue(data) {
+  const rangeValue = $(data.input).siblings('.js-range-slider__value');
   rangeValue.val(`${data.from_pretty}₽ - ${data.to_pretty}₽`);
 }

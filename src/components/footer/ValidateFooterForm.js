@@ -1,7 +1,7 @@
-require("jquery-validation");
-require("Scripts/ValidationMethods.js");
+require('jquery-validation');
+require('Scripts/ValidationMethods.js');
 
-$(".footer__form").validate({
+$('.footer__form').validate({
   rules: {
     email: {
       required: true,
@@ -11,15 +11,15 @@ $(".footer__form").validate({
   },
   messages: {
     email: {
-      required: "Введите email",
-      email: "Некорректный email",
-      minlength: "Поле должно быть длинее 7 символов",
+      required: 'Введите email',
+      email: 'Некорректный email',
+      minlength: 'Поле должно быть длинее 7 символов',
     },
   },
-  submitHandler: function(form) {                
+  submitHandler(form) {
     form.submit();
   },
-  errorPlacement: function(error, element) {                 
+  errorPlacement(error, element) {
     element.parent().after(error);
-  }
-})
+  },
+});

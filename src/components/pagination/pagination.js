@@ -4,12 +4,12 @@ export default class ButtonPagination {
     this.paginationContainer = document.getElementById(containerId);
     this.num = this.data.currentNum;
 
-    this.pageButtons = document.createElement("div");
-    this.pageButtons.classList.add("pagination__buttons");
+    this.pageButtons = document.createElement('div');
+    this.pageButtons.classList.add('pagination__buttons');
     this.paginationContainer.prepend(this.pageButtons);
 
-    this.paginationInfo = document.createElement("div");
-    this.paginationInfo.classList.add("pagination__info");
+    this.paginationInfo = document.createElement('div');
+    this.paginationInfo.classList.add('pagination__info');
     this.paginationContainer.append(this.paginationInfo);
     this.init();
   }
@@ -22,14 +22,14 @@ export default class ButtonPagination {
   }
 
   createChildren() {
-    this.buttonItems = Array.from(this.pageButtons.getElementsByClassName("pagination__item"));
-    this.buttonFirst = this.pageButtons.querySelector(".pagination__button_first");
-    this.buttonLast = this.pageButtons.querySelector(".pagination__button_last");
+    this.buttonItems = Array.from(this.pageButtons.getElementsByClassName('pagination__item'));
+    this.buttonFirst = this.pageButtons.querySelector('.pagination__button_first');
+    this.buttonLast = this.pageButtons.querySelector('.pagination__button_last');
     this.buttonNext = (this.num < this.data.totalNum)
-      ? this.pageButtons.querySelector(".pagination__button_next")
+      ? this.pageButtons.querySelector('.pagination__button_next')
       : null;
     this.buttonPrev = (this.num > 3)
-      ? this.pageButtons.querySelector(".pagination__button_prev")
+      ? this.pageButtons.querySelector('.pagination__button_prev')
       : null;
   }
 
@@ -42,15 +42,15 @@ export default class ButtonPagination {
   }
 
   enable() {
-    this.buttonItems.map(item => item.addEventListener("click", this.onButtonClickHandler));
-    if (this.buttonNext) this.buttonNext.addEventListener("click", this.onButtonNextHandler);
-    if (this.buttonPrev) this.buttonPrev.addEventListener("click", this.onButtonPrevHandler);
-    if (this.buttonFirst) this.buttonFirst.addEventListener("click", this.onButtonFirstHandler);
-    if (this.buttonLast) this.buttonLast.addEventListener("click", this.onButtonLastHandler);
+    this.buttonItems.map((item) => item.addEventListener('click', this.onButtonClickHandler));
+    if (this.buttonNext) this.buttonNext.addEventListener('click', this.onButtonNextHandler);
+    if (this.buttonPrev) this.buttonPrev.addEventListener('click', this.onButtonPrevHandler);
+    if (this.buttonFirst) this.buttonFirst.addEventListener('click', this.onButtonFirstHandler);
+    if (this.buttonLast) this.buttonLast.addEventListener('click', this.onButtonLastHandler);
   }
 
   render() {
-    this.pageButtons.innerHTML = "";
+    this.pageButtons.innerHTML = '';
     this.countMinMax();
     this.makeNumberButtons();
     this.makeNavigationButtons();
@@ -74,7 +74,8 @@ export default class ButtonPagination {
   }
 
   makeNumberButtons() {
-    let starting, ending;
+    let starting; let
+      ending;
 
     (this.num === 1)
       ? (starting = 1, ending = 3)
@@ -86,12 +87,12 @@ export default class ButtonPagination {
   }
 
   addButton(i) {
-    let button = document.createElement("button");
+    const button = document.createElement('button');
     button.innerText = i;
     button.value = i;
     (i == this.num)
-      ? button.classList.add("pagination__button_current")
-      : button.classList.add("pagination__item");
+      ? button.classList.add('pagination__button_current')
+      : button.classList.add('pagination__item');
     return button;
   }
 
@@ -105,31 +106,29 @@ export default class ButtonPagination {
   }
 
   addRestButton() {
-    this.pageButtons.innerHTML = this.pageButtons.innerHTML + `<button value="4" class="pagination__item">...</button>`;
+    this.pageButtons.innerHTML = `${this.pageButtons.innerHTML}<button value="4" class="pagination__item">...</button>`;
   }
 
   addLastButton() {
-    this.pageButtons.innerHTML =
-      this.pageButtons.innerHTML + `<button class="pagination__button_last">15</button>`;
+    this.pageButtons.innerHTML = `${this.pageButtons.innerHTML}<button class="pagination__button_last">15</button>`;
   }
 
   addPrevButton() {
-    this.pageButtons.innerHTML =
-      `<button class="pagination__button_prev"></button>` + this.pageButtons.innerHTML;
+    this.pageButtons.innerHTML = `<button class="pagination__button_prev"></button>${this.pageButtons.innerHTML}`;
   }
 
   addNextButton() {
-    this.pageButtons.innerHTML = this.pageButtons.innerHTML + `<button class="pagination__button_next"></button>`;
+    this.pageButtons.innerHTML = `${this.pageButtons.innerHTML}<button class="pagination__button_next"></button>`;
   }
 
   addFirstButton() {
-    this.pageButtons.innerHTML = `<button class="pagination__button_first">1</button>` + this.pageButtons.innerHTML;
+    this.pageButtons.innerHTML = `<button class="pagination__button_first">1</button>${this.pageButtons.innerHTML}`;
   }
 
   makeInfoLine() {
-    this.paginationInfo.innerHTML = "";
-    let trimStart = (this.num - 1) * this.data.itemsPerPage + 1;
-    let trimEnd = trimStart + this.data.itemsPerPage - 1;
+    this.paginationInfo.innerHTML = '';
+    const trimStart = (this.num - 1) * this.data.itemsPerPage + 1;
+    const trimEnd = trimStart + this.data.itemsPerPage - 1;
     this.paginationInfo.innerText = `${trimStart} – ${trimEnd} из 100+ вариантов аренды`;
   }
 

@@ -1,8 +1,8 @@
 export default class ButtonLike {
   constructor(containerId, data) {
-    this.likeButton = document.getElementById(containerId)
-    this.data = parseInt(data, 10)
-    this.init()
+    this.likeButton = document.getElementById(containerId);
+    this.data = parseInt(data, 10);
+    this.init();
   }
 
   init() {
@@ -22,7 +22,7 @@ export default class ButtonLike {
   }
 
   enableEventListeners() {
-    this.likeButton.addEventListener('click', this.buttonLikeIncreaseHandler)
+    this.likeButton.addEventListener('click', this.buttonLikeIncreaseHandler);
   }
 
   buttonLikeIncrease() {
@@ -35,9 +35,9 @@ export default class ButtonLike {
     if (parseInt(this.number.textContent) > 9) this.makePopularClass();
   }
 
-  makePopularClass(){
-    this.likeButton.classList.add("button-like_popular");
-    this.heart.classList.add("button-like__heart_popular");
-    this.heart.src = "./assets/images/heart-active.svg";
+  makePopularClass() {
+    this.likeButton.classList.add('button-like_popular');
+    this.heart.classList.add('button-like__heart_popular');
+    this.heart.src = './assets/images/heart-active.svg';
   }
 }

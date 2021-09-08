@@ -11,7 +11,7 @@
     "deploy": "gh-pages -d dist",
     "build": "rimraf dist && webpack --config ./webpack.prod.js --env.NODE_ENV=production --mode=production ",
     "dev": "webpack-dev-server --config ./webpack.dev.js -env.NODE_ENV=development --mode=development --progress --open",
-    "eslint": "eslint --ext .js,.jsx src"
+    "eslint": "eslint --ext .js,.jsx src --fix"
   },
   "devDependencies": {
     "autoprefixer": "^8.2.0",

@@ -1,30 +1,28 @@
 export default class DropdownGuests {
   constructor(containerId, data) {
-    this.container = document.getElementById(containerId)
-    this.containerClass = this.container.classList.value
-    this.dropdownExpanded = this.container.querySelector(".js-dropdown__guests")
-    this.data = (data)
-      ? data
-      : [0, 0, 0];
-    this.init()
+    this.container = document.getElementById(containerId);
+    this.containerClass = this.container.classList.value;
+    this.dropdownExpanded = this.container.querySelector('.js-dropdown__guests');
+    this.data = (data) || [0, 0, 0];
+    this.init();
   }
 
   init() {
     this.createChildren();
-    this.dropdownItems.map((_, i) => { this.showItemNumber(i) });
+    this.dropdownItems.map((_, i) => { this.showItemNumber(i); });
     this.totalGuestsCount();
     this.enableHandlers();
     this.enableEventListeners();
   }
 
   createChildren() {
-    this.info = this.container.querySelector(".dropdown__info");
-    this.infoInput = this.container.querySelector(".dropdown__input");
-    this.dropdownItems = Array.from(this.container.querySelectorAll(".dropdown__item_expanded"));
-    this.dropdownMinuses = this.container.querySelectorAll(".dropdown__minus");
-    this.containerClassExpanded = "." + this.containerClass;
-    this.resetButton = this.dropdownExpanded.querySelector(".dropdown__button_reset");
-    this.submitButton = this.dropdownExpanded.querySelector(".dropdown__button_submit");
+    this.info = this.container.querySelector('.dropdown__info');
+    this.infoInput = this.container.querySelector('.dropdown__input');
+    this.dropdownItems = Array.from(this.container.querySelectorAll('.dropdown__item_expanded'));
+    this.dropdownMinuses = this.container.querySelectorAll('.dropdown__minus');
+    this.containerClassExpanded = `.${this.containerClass}`;
+    this.resetButton = this.dropdownExpanded.querySelector('.dropdown__button_reset');
+    this.submitButton = this.dropdownExpanded.querySelector('.dropdown__button_submit');
   }
 
   enableHandlers() {
@@ -34,15 +32,15 @@ export default class DropdownGuests {
   }
 
   enableEventListeners() {
-    this.dropdownExpanded.addEventListener("click", this.plusAndMinusHandler);
-    this.resetButton.addEventListener("click", this.resetGuestsHandler);
-    this.submitButton.addEventListener("click", this.submitGuestsHandler);
+    this.dropdownExpanded.addEventListener('click', this.plusAndMinusHandler);
+    this.resetButton.addEventListener('click', this.resetGuestsHandler);
+    this.submitButton.addEventListener('click', this.submitGuestsHandler);
   }
 
   plusAndMinusToItem(e) {
-    let trg = e.target;
-    if (trg.classList.value == "dropdown__minus") this.minusToItem(trg);
-    if (trg.classList.value == "dropdown__plus") this.plusToItem(trg);
+    const trg = e.target;
+    if (trg.classList.value == 'dropdown__minus') this.minusToItem(trg);
+    if (trg.classList.value == 'dropdown__plus') this.plusToItem(trg);
   }
 
   minusToItem(trg) {
@@ -62,13 +60,13 @@ export default class DropdownGuests {
   resetGuests(e) {
     e.preventDefault();
     this.data = [0, 0, 0];
-    this.dropdownItems.map((_, i) => { this.showItemNumber(i) });
+    this.dropdownItems.map((_, i) => { this.showItemNumber(i); });
     this.onZeroGuests();
   }
 
   submitGuests(e) {
     e.preventDefault();
-    this.dropdownExpanded.classList.remove("dropdown__show");
+    this.dropdownExpanded.classList.remove('dropdown__show');
   }
 
   showItemNumber(i) {
@@ -76,16 +74,16 @@ export default class DropdownGuests {
       ? 0
       : ((this.data[i] > 10)
         ? 10
-        : this.data[i])
-    let dropdownItem = this.dropdownItems[i].querySelector(".dropdown__number");
+        : this.data[i]);
+    const dropdownItem = this.dropdownItems[i].querySelector('.dropdown__number');
     dropdownItem.innerText = this.data[i];
     this.activateMinus(i);
   }
 
   activateMinus(i) {
     (this.data[i] > 0)
-      ? this.dropdownMinuses[i].classList.remove("button_disabled")
-      : this.dropdownMinuses[i].classList.add("button_disabled");
+      ? this.dropdownMinuses[i].classList.remove('button_disabled')
+      : this.dropdownMinuses[i].classList.add('button_disabled');
   }
 
   totalGuestsCount() {
@@ -99,63 +97,63 @@ export default class DropdownGuests {
   }
 
   onZeroGuests() {
-    this.resetButton.classList.remove("button__show");
-    this.infoInput.value = "";
+    this.resetButton.classList.remove('button__show');
+    this.infoInput.value = '';
   }
 
   onSomeGuests() {
-    this.resetButton.classList.add("button__show");
+    this.resetButton.classList.add('button__show');
     this.render();
   }
 
   render() {
-    let adultWord = this.matchWordForAdult();
-    let infantWord = this.matchWordForInfant();
+    const adultWord = this.matchWordForAdult();
+    const infantWord = this.matchWordForInfant();
 
-    let onlyAdults = (this.adultGuests > 0) && (this.infantGuests < 1);
-    let onlyInfants = (this.adultGuests < 1) && (this.infantGuests > 0);
-    let adultsWithInfants = (this.adultGuests > 0) && (this.infantGuests > 0);
-    
-    let adultsInfo = `${this.adultGuests} ${adultWord}`;
-    let infantsInfo = `${this.infantGuests} ${infantWord}`;
+    const onlyAdults = (this.adultGuests > 0) && (this.infantGuests < 1);
+    const onlyInfants = (this.adultGuests < 1) && (this.infantGuests > 0);
+    const adultsWithInfants = (this.adultGuests > 0) && (this.infantGuests > 0);
+
+    const adultsInfo = `${this.adultGuests} ${adultWord}`;
+    const infantsInfo = `${this.infantGuests} ${infantWord}`;
 
     this.infoInput.value = (onlyAdults)
       ? adultsInfo
       : ((onlyInfants)
-          ? infantsInfo
-          : (adultsWithInfants
-              ? `${adultsInfo}, ${infantsInfo}`
-              : "" ))
+        ? infantsInfo
+        : (adultsWithInfants
+          ? `${adultsInfo}, ${infantsInfo}`
+          : ''));
   }
 
-  matchWordForAdult(){
+  matchWordForAdult() {
     let form;
     switch (this.adultGuests) {
       case 1:
-      case 21: form = "гость"; break;
+      case 21: form = 'гость'; break;
       case 2:
       case 3:
       case 4:
       case 22:
       case 23:
-      case 24: form = "гостя"; break;
-      default: form = "гостей"; break;
+      case 24: form = 'гостя'; break;
+      default: form = 'гостей'; break;
     }
     return form;
   }
 
-  matchWordForInfant(){
+  matchWordForInfant() {
     let form;
     switch (this.infantGuests) {
       case 1:
-      case 21: form = "младенец"; break;
+      case 21: form = 'младенец'; break;
       case 2:
       case 3:
       case 4:
       case 22:
       case 23:
-      case 24: form = "младенца"; break;
-      default: form = "младенцев"; break;
+      case 24: form = 'младенца'; break;
+      default: form = 'младенцев'; break;
     }
     return form;
   }
