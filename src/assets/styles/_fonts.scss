@@ -54,15 +54,6 @@
   url("@~Fonts/fa-brands/fa-brands-400.svg") format('svg');
 }
 
-@font-face {
-  font-family: "quicksand";
-  font-weight: 400;
-  src: url("@~Fonts/quicksand/quicksand-regular.eot") format ('eot');
-  src: url("@~Fonts/quicksand/quicksand-regular.woff") format ('woff'),
-  url("@~Fonts/quicksand/quicksand-regular.ttf") format ('ttf'),
-  url("@~Fonts/quicksand/quicksand-regular.svg") format ('svg');
-}
-
 $material-icons: "material-icons";
 $montserrat: "montserrat", Arial, sans-serif;
 $font-awesome: "Font Awesome 5 Brands";

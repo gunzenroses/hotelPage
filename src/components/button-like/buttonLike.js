@@ -38,6 +38,6 @@ export default class ButtonLike {
   makePopularClass(){
     this.likeButton.classList.add("button-like_popular");
     this.heart.classList.add("button-like__heart_popular");
-    this.heart.src = "./assets/images/heart_active.svg";
+    this.heart.src = "./assets/images/heart-active.svg";
   }
 }

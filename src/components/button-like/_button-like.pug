@@ -8,9 +8,9 @@ mixin buttonLikeContainer()
 mixin buttonLikeItem(buttonId, buttonNumber)
   if buttonNumber < 10 
     .button-like(id=buttonId)
-      img.button-like__heart.js-b-l__h(src= "./assets/images/heart_disabled.svg")
+      img.button-like__heart.js-b-l__h(src= "./assets/images/heart-disabled.svg")
       .button-like__number.js-b-l__n!= buttonNumber
   else
     .button-like_popular(id=buttonId)
-      img.button-like__heart_popular.js-b-l__h(src= "./assets/images/heart_active.svg")
+      img.button-like__heart_popular.js-b-l__h(src= "./assets/images/heart-active.svg")
       .button-like__number_popular.js-b-l__n!= buttonNumber
