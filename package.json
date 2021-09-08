@@ -10,11 +10,13 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "build": "rimraf dist && webpack --config ./webpack.prod.js --env.NODE_ENV=production --mode=production ",
-    "dev": "webpack-dev-server --config ./webpack.dev.js -env.NODE_ENV=development --mode=development --progress --open"
+    "dev": "webpack-dev-server --config ./webpack.dev.js -env.NODE_ENV=development --mode=development --progress --open",
+    "eslint": "eslint --ext .js,.jsx src"
   },
   "devDependencies": {
     "autoprefixer": "^8.2.0",
     "babel-core": "^6.26.0",
+    "babel-eslint": "^10.1.0",
     "babel-loader": "^7.1.4",
     "babel-plugin-module-resolver": "^3.1.0",
     "babel-preset-env": "^1.6.1",
@@ -22,7 +24,12 @@
     "clean-webpack-plugin": "^4.0.0-alpha.0",
     "copy-webpack-plugin": "^6.0.3",
     "css-loader": "^0.28.11",
-    "eslint": "^4.19.1",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-fsd": "^1.0.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.25.1",
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^6.2.0",
     "gh-pages": "^3.1.0",
