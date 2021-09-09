@@ -1,45 +1,41 @@
-import ButtonLike from 'Components/button-like/ButtonLike';
-import ButtonPagination from 'Components/pagination/Pagination';
-import Calendar from 'Components/calendar/Calendar';
-import DropdownGuests from 'Components/dropdown-guests/DropdownGuests';
-import DropdownRooms from 'Components/dropdown-rooms/DropdownRooms';
-import ExpandItems from 'Components/checkbox-expandable/ExpandItems';
-import makeCarousels from 'Components/room-carousel/RoomCarousel';
+import 'Main/assets/scripts/InputMasks';
+import 'Components/checkbox-expandable/makeExpandable';
+import 'Components/card-booking/CardBooking';
+import 'Components/footer/ValidateFooterForm';
+import 'Components/card-singin/ValidateSignin';
+import 'Components/card-registration/ValidateRegistration';
+import 'Components/card-search/CardSearch';
+import 'Components/range/Range';
+import 'Components/room-carousel/makeCarousel';
+import makeButtonLike from 'Components/button-like/makeButtonLike';
+import makePagination from 'Components/pagination/makePagination';
+import makeCalendar from 'Components/calendar/makeCalendar';
+import makeGuestsOption from 'Components/dropdown-guests/makeGuestsOption';
+import makeRoomsOptions from 'Main/components/dropdown-rooms/makeRoomsOptions';
+
 import {
-  paginationData_1, guestsData_1, guestsData_booking, roomsData_1, roomsData_2,
-} from 'Scripts/MyData';
+  paginationData1, guestsData1, guestsDataBooking, roomsData1, roomsData2,
+} from 'Main/assets/scripts/MyData';
 
 import './UIkit.scss';
 import './UIKit.pug';
 
-window.onload = function () {
-  require('Main/components/footer/ValidateFooterForm');
-  require('Main/components/card-registration/ValidateRegistration');
-  require('Main/components/card-singin/ValidateSignin');
-  require('Main/components/card-search/CardSearch');
-  require('Main/components/card-booking/CardBooking');
-  require('Main/components/range/Range');
-  require('Scripts/InputMasks');
-  makeCarousels();
+window.onload = () => {
+  makeButtonLike(
+    { id: 'likes_author_1', data: 12 },
+    { id: 'buttonLike_2', data: 12 },
+    { id: 'buttonLike_1', data: 2 },
+  );
 
-  const dropdownWatches = Array.from(document.querySelectorAll('.js-dropdown__watch'));
-  dropdownWatches.forEach((item) => {
-    new ExpandItems(item);
-  });
-
-  const likeButton_1 = new ButtonLike('buttonLike_1', 2);
-  const likeButton_2 = new ButtonLike('buttonLike_2', 12);
-  const likeButtons_3 = new ButtonLike('likes_author_1', 12);
-  const pagination_formElements = new ButtonPagination(paginationData_1, 'pagination_bar_1');
-
-  const calendar_1 = new Calendar('calendar_1');
-  const calendar_2 = new Calendar('calendar_2');
-  const calendar_simple = new Calendar('calendar_simple');
-
-  const guestsHandler_0 = new DropdownGuests('dropdown_guests_0');
-  const guestsHandler_1 = new DropdownGuests('dropdown_guests_1', guestsData_1);
-  const guestsHandler_2 = new DropdownGuests('dropdown_guests_2', guestsData_booking);
-
-  const roomsHandler = new DropdownRooms('dropdown_rooms_1', roomsData_1);
-  const roomsHandler_2 = new DropdownRooms('dropdown_rooms_2', roomsData_2);
+  makeCalendar('calendar1', 'calendar2', 'calendarSimple');
+  makePagination({ id: 'pagination_bar_1', data: paginationData1 });
+  makeGuestsOption(
+    { id: 'dropdown_guests_0' },
+    { id: 'dropdown_guests_1', data: guestsData1 },
+    { id: 'dropdown_guests_2', data: guestsDataBooking },
+  );
+  makeRoomsOptions(
+    { id: 'dropdown_rooms_1', data: roomsData1 },
+    { id: 'dropdown_rooms_2', data: roomsData2 },
+  );
 };

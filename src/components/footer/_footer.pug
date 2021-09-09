@@ -47,7 +47,7 @@ mixin footer(footerText = "Бронирование номеров в лучше
         .footer__info_subscribe
           h3 Подписка
           .footer__text Получайте специальные предложения и новости сервиса
-          form.footer__form(method="get" action="./registration.html")
+          form.footer__form.js-footer__form(method="get" action="./registration.html")
             +emailSubscribe()
     .footer__copyright_outer
       .footer__copyright_inner

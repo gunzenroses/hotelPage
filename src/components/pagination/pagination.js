@@ -1,9 +1,15 @@
-export default class ButtonPagination {
-  constructor(data, containerId) {
-    this.data = data;
-    this.paginationContainer = document.getElementById(containerId);
-    this.num = this.data.currentNum;
+import { paginationData1 } from 'Main/assets/scripts/MyData';
 
+export default class ButtonPagination {
+  constructor(id, data) {
+    this.data = data || paginationData1;
+    this.num = this.data.currentNum;
+    this.createContainer(id);
+    this.init();
+  }
+
+  createContainer(id) {
+    this.paginationContainer = document.getElementById(id);
     this.pageButtons = document.createElement('div');
     this.pageButtons.classList.add('pagination__buttons');
     this.paginationContainer.prepend(this.pageButtons);
@@ -11,7 +17,6 @@ export default class ButtonPagination {
     this.paginationInfo = document.createElement('div');
     this.paginationInfo.classList.add('pagination__info');
     this.paginationContainer.append(this.paginationInfo);
-    this.init();
   }
 
   init() {
@@ -58,9 +63,9 @@ export default class ButtonPagination {
   }
 
   countMinMax() {
-    this.min = (parseInt(this.num) - parseInt(Math.floor(this.data.visibleNum / 2)));
-    this.leftDif = this.data.visibleNum - parseInt(Math.floor(this.data.visibleNum / 2)) - 1;
-    this.max = (parseInt(this.num) + this.leftDif);
+    this.min = (parseInt(this.num, 10) - parseInt(Math.floor(this.data.visibleNum / 2), 10));
+    this.leftDif = this.data.visibleNum - parseInt(Math.floor(this.data.visibleNum / 2), 10) - 1;
+    this.max = (parseInt(this.num, 10) + this.leftDif);
 
     if (this.min < 1) {
       this.min = 1;
@@ -74,14 +79,10 @@ export default class ButtonPagination {
   }
 
   makeNumberButtons() {
-    let starting; let
-      ending;
+    const starting = (this.num === 1) ? 1 : this.min;
+    const ending = (this.num === 1) ? 3 : this.max;
 
-    (this.num === 1)
-      ? (starting = 1, ending = 3)
-      : (starting = this.min, ending = this.max);
-
-    for (let i = starting; i <= ending; i++) {
+    for (let i = starting; i <= ending; i += 1) {
       this.pageButtons.appendChild(this.addButton(i));
     }
   }
@@ -90,18 +91,22 @@ export default class ButtonPagination {
     const button = document.createElement('button');
     button.innerText = i;
     button.value = i;
-    (i == this.num)
-      ? button.classList.add('pagination__button_current')
-      : button.classList.add('pagination__item');
+    if (i === this.num) {
+      button.classList.add('pagination__button_current');
+    } else {
+      button.classList.add('pagination__item');
+    }
     return button;
   }
 
   makeNavigationButtons() {
     if (this.num === 1) this.addRestButton();
     if (this.num <= 3) this.addLastButton();
-    (this.num < this.max)
-      ? this.addNextButton()
-      : this.addFirstButton();
+    if (this.num < this.max) {
+      this.addNextButton();
+    } else {
+      this.addFirstButton();
+    }
     if (this.num > 3) this.addPrevButton();
   }
 
@@ -133,17 +138,17 @@ export default class ButtonPagination {
   }
 
   onButtonClick(e) {
-    this.num = parseInt(e.target.value);
+    this.num = parseInt(e.target.value, 10);
     this.init();
   }
 
   onButtonNextClick() {
-    this.num++;
+    this.num += 1;
     this.init();
   }
 
   onButtonPrevClick() {
-    this.num--;
+    this.num -= 1;
     this.init();
   }
 

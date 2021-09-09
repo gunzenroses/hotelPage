@@ -1,10 +1,5 @@
-import ExpandItems from 'Components/checkbox-expandable/ExpandItems';
+import 'Components/footer/ValidateFooterForm';
+import 'Components/card-singin/ValidateSignin';
+import 'Main/assets/scripts/InputMasks';
 
 import './signin.scss';
-
-window.onload = function () {
-  require('Components/footer/ValidateFooterForm');
-  require('Components/card-singin/ValidateSignin');
-  require('Scripts/InputMasks');
-  const activateExpand = new ExpandItems();
-};

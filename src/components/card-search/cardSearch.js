@@ -1,7 +1,10 @@
 // this exemplar will work for all pages
-import Calendar from 'Components/calendar/Calendar';
-import DropdownGuests from 'Components/dropdown-guests/DropdownGuests';
-import guestsData_search from 'Scripts/MyData';
+import Calendar from 'Main/components/calendar/Calendar';
+import DropdownGuests from 'Main/components/dropdown-guests/DropdownGuests';
+import guestsDataSearch from 'Main/assets/scripts/MyData';
 
-const guestsHandler_search = new DropdownGuests('dropdown_guests_search', guestsData_search);
-const calendar_search = new Calendar('calendar_search');
+window.onload = () => {
+  console.log(5);
+  new DropdownGuests('dropdown_guests_search', guestsDataSearch);
+  new Calendar('calendar_search');
+};

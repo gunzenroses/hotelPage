@@ -1,26 +1,26 @@
 export default class DropdownGuests {
   constructor(containerId, data) {
-    this.container = document.getElementById(containerId);
-    this.containerClass = this.container.classList.value;
-    this.dropdownExpanded = this.container.querySelector('.js-dropdown__guests');
     this.data = (data) || [0, 0, 0];
-    this.init();
+    this.init(containerId);
   }
 
-  init() {
-    this.createChildren();
-    this.dropdownItems.map((_, i) => { this.showItemNumber(i); });
+  init(id) {
+    this.createChildren(id);
+    this.dropdownItems.forEach((_, i) => { this.showItemNumber(i); });
     this.totalGuestsCount();
     this.enableHandlers();
     this.enableEventListeners();
   }
 
-  createChildren() {
+  createChildren(id) {
+    this.container = document.getElementById(id);
+    console.log(this.container);
+    this.containerClass = this.container.classList.value;
+    this.dropdownExpanded = this.container.querySelector('.js-dropdown__guests');
     this.info = this.container.querySelector('.dropdown__info');
     this.infoInput = this.container.querySelector('.dropdown__input');
     this.dropdownItems = Array.from(this.container.querySelectorAll('.dropdown__item_expanded'));
     this.dropdownMinuses = this.container.querySelectorAll('.dropdown__minus');
-    this.containerClassExpanded = `.${this.containerClass}`;
     this.resetButton = this.dropdownExpanded.querySelector('.dropdown__button_reset');
     this.submitButton = this.dropdownExpanded.querySelector('.dropdown__button_submit');
   }
@@ -39,20 +39,20 @@ export default class DropdownGuests {
 
   plusAndMinusToItem(e) {
     const trg = e.target;
-    if (trg.classList.value == 'dropdown__minus') this.minusToItem(trg);
-    if (trg.classList.value == 'dropdown__plus') this.plusToItem(trg);
+    if (trg.classList.value === 'dropdown__minus') this.minusToItem(trg);
+    if (trg.classList.value === 'dropdown__plus') this.plusToItem(trg);
   }
 
   minusToItem(trg) {
-    this.orderInData = parseInt(trg.nextElementSibling.dataset.order);
-    this.data[this.orderInData]--;
+    this.orderInData = parseInt(trg.nextElementSibling.dataset.order, 10);
+    this.data[this.orderInData] -= 1;
     this.showItemNumber(this.orderInData);
     this.totalGuestsCount();
   }
 
   plusToItem(trg) {
-    this.orderInData = parseInt(trg.previousElementSibling.dataset.order);
-    this.data[this.orderInData]++;
+    this.orderInData = parseInt(trg.previousElementSibling.dataset.order, 10);
+    this.data[this.orderInData] += 1;
     this.showItemNumber(this.orderInData);
     this.totalGuestsCount();
   }
@@ -60,7 +60,7 @@ export default class DropdownGuests {
   resetGuests(e) {
     e.preventDefault();
     this.data = [0, 0, 0];
-    this.dropdownItems.map((_, i) => { this.showItemNumber(i); });
+    this.dropdownItems.forEach((_, i) => { this.showItemNumber(i); });
     this.onZeroGuests();
   }
 
@@ -81,19 +81,23 @@ export default class DropdownGuests {
   }
 
   activateMinus(i) {
-    (this.data[i] > 0)
-      ? this.dropdownMinuses[i].classList.remove('button_disabled')
-      : this.dropdownMinuses[i].classList.add('button_disabled');
+    if (this.data[i] > 0) {
+      this.dropdownMinuses[i].classList.remove('button_disabled');
+    } else {
+      this.dropdownMinuses[i].classList.add('button_disabled');
+    }
   }
 
   totalGuestsCount() {
-    this.adultGuests = parseInt(this.data[0]) + parseInt(this.data[1]);
-    this.infantGuests = parseInt(this.data[2]);
+    this.adultGuests = parseInt(this.data[0], 10) + parseInt(this.data[1], 10);
+    this.infantGuests = parseInt(this.data[2], 10);
     this.totalGuests = this.adultGuests + this.infantGuests;
 
-    (this.totalGuests > 0)
-      ? this.onSomeGuests()
-      : this.onZeroGuests();
+    if (this.totalGuests > 0) {
+      this.onSomeGuests();
+    } else {
+      this.onZeroGuests();
+    }
   }
 
   onZeroGuests() {

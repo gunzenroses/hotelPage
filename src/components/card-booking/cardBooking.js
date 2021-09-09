@@ -1,6 +1,8 @@
-import Calendar from 'Components/calendar/Calendar';
-import DropdownGuests from 'Components/dropdown-guests/DropdownGuests';
-import { guestsData_booking } from 'Scripts/MyData';
+import Calendar from 'Main/components/calendar/Calendar';
+import DropdownGuests from 'Main/components/dropdown-guests/DropdownGuests';
+import { guestsDataBooking } from 'Main/assets/scripts/MyData';
 
-const calendar_booking = new Calendar('calendar_booking');
-const dropdown_guests_booking = new DropdownGuests('dropdown_guests_booking', guestsData_booking);
+window.onload = () => {
+  new Calendar('calendarBooking');
+  new DropdownGuests('dropdown_guests_booking', guestsDataBooking);
+};

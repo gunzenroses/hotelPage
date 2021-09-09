@@ -1,10 +1,6 @@
-import ExpandItems from 'Components/checkbox-expandable/ExpandItems';
+import 'Main/assets/scripts/InputMasks';
+import 'Components/card-search/CardSearch';
+import 'Components/checkbox-expandable/makeExpandable';
+import 'Components/footer/ValidateFooterForm';
 
 import './landing-page.scss';
-
-window.onload = function () {
-  require('Main/components/footer/ValidateFooterForm');
-  require('Main/components/card-search/CardSearch');
-  require('Scripts/InputMasks');
-  const activateExpand = new ExpandItems();
-};

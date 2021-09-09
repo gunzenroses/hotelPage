@@ -1,18 +1,18 @@
 export default class ButtonLike {
   constructor(containerId, data) {
-    this.likeButton = document.getElementById(containerId);
     this.data = parseInt(data, 10);
-    this.init();
+    this.init(containerId);
   }
 
-  init() {
-    this.createChildren();
+  init(id) {
+    this.createChildren(id);
     this.render();
     this.enableHandlers();
     this.enableEventListeners();
   }
 
-  createChildren() {
+  createChildren(id) {
+    this.likeButton = document.getElementById(id);
     this.number = this.likeButton.querySelector('.js-b-l__n');
     this.heart = this.likeButton.querySelector('.js-b-l__h');
   }
@@ -26,13 +26,13 @@ export default class ButtonLike {
   }
 
   buttonLikeIncrease() {
-    this.data++;
+    this.data += this.data;
     this.render();
   }
 
   render() {
     this.number.textContent = this.data;
-    if (parseInt(this.number.textContent) > 9) this.makePopularClass();
+    if (parseInt(this.number.textContent, 10) > 9) this.makePopularClass();
   }
 
   makePopularClass() {

@@ -1,13 +1,14 @@
-import ButtonLike from 'Components/button-like/ButtonLike';
-import ExpandItems from 'Components/checkbox-expandable/ExpandItems';
+import 'Main/assets/scripts/InputMasks';
+import 'Components/footer/ValidateFooterForm';
+import 'Components/card-booking/CardBooking';
+import 'Components/checkbox-expandable/makeExpandable';
+import makeButtonLike from 'Components/button-like/makeButtonLike';
 
 import './room-details.scss';
 
-window.onload = function () {
-  require('Main/components/footer/ValidateFooterForm');
-  require('Main/components/card-booking/CardBooking');
-  require('Scripts/InputMasks');
-  const likeButton_1 = new ButtonLike('likes_author_1', 12);
-  const likeButton_2 = new ButtonLike('likes_author_2', 2);
-  const activateExpand = new ExpandItems();
+window.onload = () => {
+  makeButtonLike(
+    { id: 'likes_author_1', data: 12 },
+    { id: 'likes_author_2', data: 2 },
+  );
 };

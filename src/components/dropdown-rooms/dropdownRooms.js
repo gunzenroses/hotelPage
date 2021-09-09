@@ -1,27 +1,24 @@
 export default class DropdownRooms {
   constructor(containerId, data) {
-    this.container = document.getElementById(containerId);
-    this.containerClass = this.container.classList.value;
-    this.dropdownExpanded = this.container.querySelector('.js-dropdown__rooms');
     this.data = [...data];
-    this.init();
+    this.init(containerId);
   }
 
-  init() {
-    this.createChildren();
+  init(id) {
+    this.createChildren(id);
     this.dropdownItems.forEach((_, index) => { this.render(index); });
     this.enableHandlers();
     this.enableEventListeners();
   }
 
-  createChildren() {
+  createChildren(id) {
+    this.container = document.getElementById(id);
+    console.log(this.container);
     this.info = this.container.querySelector('.dropdown__info');
     this.infoInput = this.container.querySelector('.dropdown__input');
     this.dropdownItems = Array.from(this.container.querySelectorAll('.dropdown__item_expanded'));
     this.dropdownPluses = this.container.querySelectorAll('.dropdown__plus');
     this.dropdownMinuses = this.container.querySelectorAll('.dropdown__minus');
-    this.numbers = this.container.querySelectorAll('.dropdown__number');
-    this.containerClassExpanded = `.${this.containerClass}`;
   }
 
   enableHandlers() {
@@ -30,21 +27,21 @@ export default class DropdownRooms {
   }
 
   enableEventListeners() {
-    this.dropdownItems.map((_, i) => {
+    this.dropdownItems.forEach((_, i) => {
       this.dropdownMinuses[i].addEventListener('click', this.minusOneHandler);
       this.dropdownPluses[i].addEventListener('click', this.plusOneHandler);
     });
   }
 
   minusOne(e) {
-    const order = parseInt(e.target.nextElementSibling.dataset.order);
-    this.data[order]--;
+    const order = parseInt(e.target.nextElementSibling.dataset.order, 10);
+    this.data[order] -= 1;
     this.render(order);
   }
 
   plusOne(e) {
-    const order = parseInt(e.target.previousElementSibling.dataset.order);
-    this.data[order]++;
+    const order = parseInt(e.target.previousElementSibling.dataset.order, 10);
+    this.data[order] += 1;
     this.render(order);
   }
 
@@ -69,9 +66,11 @@ export default class DropdownRooms {
   }
 
   updateMinusButton(i) {
-    (this.data[i] > 0)
-      ? this.dropdownMinuses[i].classList.remove('button_disabled')
-      : this.dropdownMinuses[i].classList.add('button_disabled');
+    if (this.data[i] > 0) {
+      this.dropdownMinuses[i].classList.remove('button_disabled');
+    } else {
+      this.dropdownMinuses[i].classList.add('button_disabled');
+    }
   }
 
   updateInfoInput() {
@@ -86,29 +85,29 @@ export default class DropdownRooms {
   adjustDataType(j) {
     const dataType = this.dropdownItems[j].dataset.type;
     let dataTypeName;
-    if (this.data[j] == 0) {
+    if (this.data[j] === 0) {
       switch (dataType) {
         case 'bedrooms': dataTypeName = 'спален'; break;
         case 'beds': dataTypeName = 'кроватей'; break;
-        case 'bathrooms': dataTypeName = 'ванных комнат'; break;
+        default: dataTypeName = 'ванных комнат'; break;
       }
-    } else if (this.data[j] == 1) {
+    } else if (this.data[j] === 1) {
       switch (dataType) {
         case 'bedrooms': dataTypeName = 'спальня'; break;
         case 'beds': dataTypeName = 'кровать'; break;
-        case 'bathrooms': dataTypeName = 'ванная комната'; break;
+        default: dataTypeName = 'ванная комната'; break;
       }
     } else if (this.data[j] > 1 && this.data[j] < 5) {
       switch (dataType) {
         case 'bedrooms': dataTypeName = 'спальни'; break;
         case 'beds': dataTypeName = 'кровати'; break;
-        case 'bathrooms': dataTypeName = 'ванных комнаты'; break;
+        default: dataTypeName = 'ванных комнаты'; break;
       }
     } else {
       switch (dataType) {
         case 'bedrooms': dataTypeName = 'спален'; break;
         case 'beds': dataTypeName = 'кроватей'; break;
-        case 'bathrooms': dataTypeName = 'ванных комнат'; break;
+        default: dataTypeName = 'ванных комнат'; break;
       }
     }
     return `${this.data[j]} ${dataTypeName}, `;

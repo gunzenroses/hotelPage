@@ -1,7 +1,6 @@
 export default class ExpandItems {
   constructor(dropdownWatch) {
-    this.dropdownWatch = dropdownWatch || document.querySelector('.js-dropdown__watch');
-    this.dropdownWatchedInits = Array.from(this.dropdownWatch.querySelectorAll('.js-dropdown__init'));
+    this.dropdownWatch = dropdownWatch;
     this.dropdownWatchedParents = [];
     this.dropdownWatchedExpands = [];
     this.init();
@@ -14,6 +13,7 @@ export default class ExpandItems {
   }
 
   createChildren() {
+    this.dropdownWatchedInits = Array.from(this.dropdownWatch.querySelectorAll('.js-dropdown__init'));
     this.dropdownWatchedInits.forEach((item) => {
       this.dropdownWatchedParents.push(item.parentElement);
     });
@@ -35,24 +35,27 @@ export default class ExpandItems {
     const hasInnerExpand = event.target.closest('.dropdown__show');
     const hasExpand = event.target.closest('.js-dropdown__init');
     const hasParent = event.target.parentElement;
-    const element = event.target;
+    const noExpand = !hasInnerExpand && !hasExpand;
+    const el = event.target;
 
-    if (hasInnerExpand && hasExpand) this.expandElement(element);
-    if (!hasInnerExpand && hasExpand) this.expandInner(element);
-    if (!hasInnerExpand && !hasExpand && hasParent) this.hideElements();
+    if (hasInnerExpand && hasExpand) this.expandElement(el);
+    if (!hasInnerExpand && hasExpand) this.expandInner(el);
+    if (noExpand && hasParent) this.hideElements();
   }
 
-  expandElement(element) {
-    const innerParent = element.closest('.js-dropdown__init').parentElement;
+  expandElement(el) {
+    const innerParent = el.closest('.js-dropdown__init').parentElement;
     const innerExpand = innerParent.querySelector('.js-dropdown__content');
     innerExpand.classList.toggle('dropdown__show');
   }
 
-  expandInner(element) {
+  expandInner(el) {
     this.dropdownWatchedExpands.forEach((item, index) => {
-      (element.closest('.js-dropdown__init') != this.dropdownWatchedInits[index])
-        ? item.classList.remove('dropdown__show')
-        : item.classList.toggle('dropdown__show');
+      if (el.closest('.js-dropdown__init') !== this.dropdownWatchedInits[index]) {
+        item.classList.remove('dropdown__show');
+      } else {
+        item.classList.toggle('dropdown__show');
+      }
     });
   }
 

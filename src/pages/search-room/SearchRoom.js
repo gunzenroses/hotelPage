@@ -1,21 +1,17 @@
-import ButtonPagination from 'Components/pagination/Pagination';
-import Calendar from 'Components/calendar/Calendar';
-import DropdownRooms from 'Components/dropdown-rooms/DropdownRooms';
-import DropdownGuests from 'Components/dropdown-guests/DropdownGuests';
-import ExpandItems from 'Components/checkbox-expandable/ExpandItems';
-import makeCarousels from 'Components/room-carousel/RoomCarousel';
-import { guestsData_searchRoom, roomsData_1, paginationData_1 } from 'Scripts/MyData';
+import 'Components/footer/ValidateFooterForm';
+import 'Components/range/Range';
+import 'Components/room-carousel/makeCarousel';
+import 'Components/checkbox-expandable/makeExpandable';
+import 'Components/calendar/makeCalendar';
+import makeGuestsOption from 'Components/dropdown-guests/makeGuestsOption';
+import makeRoomsOptions from 'Components/dropdown-rooms/makeRoomsOptions';
+import makePagination from 'Components/pagination/makePagination';
+import { guestsDataSearchRoom, roomsData1 } from 'Main/assets/scripts/MyData';
 
 import './search-room.scss';
 
-window.onload = function () {
-  require('Components/footer/ValidateFooterForm');
-  require('Components/range/Range');
-  makeCarousels();
-
-  const pagination_search = new ButtonPagination(paginationData_1, 'pagination_search');
-  const calendar_booking = new Calendar('calendar_search');
-  const guests_searchRoom = new DropdownGuests('dropdown_guests_search', guestsData_searchRoom);
-  const dropdownRooms_search = new DropdownRooms('dropdown_rooms_1', roomsData_1);
-  const activateExpand = new ExpandItems();
+window.onload = () => {
+  makeGuestsOption([{ id: 'dropdown_guests_search', data: guestsDataSearchRoom }]);
+  makeRoomsOptions([{ id: 'dropdown_rooms_1', data: roomsData1 }]);
+  makePagination([{ id: 'paginationSearch' }]);
 };
