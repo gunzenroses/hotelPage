@@ -27,7 +27,7 @@ export default class ButtonPagination {
   }
 
   createChildren() {
-    this.buttonItems = Array.from(this.pageButtons.getElementsByClassName('pagination__item'));
+    this.buttonItems = Array.from(this.pageButtons.querySelectorAll('.pagination__item'));
     this.buttonFirst = this.pageButtons.querySelector('.pagination__button_first');
     this.buttonLast = this.pageButtons.querySelector('.pagination__button_last');
     this.buttonNext = (this.num < this.data.totalNum)

@@ -1,43 +1,41 @@
 require('jquery-validation');
 require('Main/assets/scripts/ValidationMethods');
 
-window.onload = () => {
-  $('.js-card-signin').validate({
-    rules: {
-      email: {
-        required: true,
-        email: true,
-        minlength: 7,
-      },
-      password: {
-        required: true,
-        pwcheck: true,
-        lowerCase: true,
-        upperCase: true,
-        hasDigit: true,
-        minlength: 8,
-      },
+$('.js-card-signin').validate({
+  rules: {
+    email: {
+      required: true,
+      email: true,
+      minlength: 7,
     },
-    messages: {
-      email: {
-        required: 'Введите email',
-        email: 'Некорректный email',
-        minlength: 'Поле должно быть длинее 7 символов',
-      },
-      password: {
-        required: 'Введите пароль',
-        pwcheck: 'Содержит недопустимые значения',
-        lowerCase: 'Пароль должен содержать хотя бы 1 строчную букву',
-        upperCase: 'Пароль должен содержать хотя бы 1 заглавную букву',
-        hasDigit: 'Пароль должен содержать хотя бы 1 цифру',
-        minlength: 'Пароль должен быть длинее 8 символов',
-      },
+    password: {
+      required: true,
+      pwcheck: true,
+      lowerCase: true,
+      upperCase: true,
+      hasDigit: true,
+      minlength: 8,
     },
-    submitHandler(form) {
-      form.submit();
+  },
+  messages: {
+    email: {
+      required: 'Введите email',
+      email: 'Некорректный email',
+      minlength: 'Поле должно быть длинее 7 символов',
     },
-    errorPlacement(error, element) {
-      element.parent().after(error);
+    password: {
+      required: 'Введите пароль',
+      pwcheck: 'Содержит недопустимые значения',
+      lowerCase: 'Пароль должен содержать хотя бы 1 строчную букву',
+      upperCase: 'Пароль должен содержать хотя бы 1 заглавную букву',
+      hasDigit: 'Пароль должен содержать хотя бы 1 цифру',
+      minlength: 'Пароль должен быть длинее 8 символов',
     },
-  });
-};
+  },
+  submitHandler(form) {
+    form.submit();
+  },
+  errorPlacement(error, element) {
+    element.parent().after(error);
+  },
+});

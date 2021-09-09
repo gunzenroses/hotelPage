@@ -87,10 +87,10 @@
   color: $dark-shade_more;
 }
 
-.dropdown__show ~ .dataRange__container .date__range::before {
+.js-dropdown__show ~ .dataRange__container .date__range::before {
   transform: rotate(180deg);
 }
 
-.dropdown__show ~ .container_medium .date__range::before {
+.js-dropdown__show ~ .container_medium .date__range::before {
   transform: rotate(180deg);
 }

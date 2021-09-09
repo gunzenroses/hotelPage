@@ -1,6 +1,6 @@
 import Carousel from './RoomCarousel';
 
-window.onload = () => {
+export default function makeCarousel() {
   const carousels = document.querySelectorAll('.js-room-carousel');
   carousels.forEach((carousel) => new Carousel(carousel));
-};
+}

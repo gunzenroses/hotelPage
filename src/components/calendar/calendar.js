@@ -1,18 +1,18 @@
 export default class Calendar {
-  constructor(className) {
+  constructor(item) {
     this.date = new Date();
-    this.init(className);
+    this.init(item);
   }
 
-  init(className) {
-    this.createChildren(className);
+  init(item) {
+    this.createChildren(item);
     this.render();
     this.enableHandlers();
     this.addEventListener();
   }
 
-  createChildren(className) {
-    this.calendarContainer = document.querySelector(className);
+  createChildren(item) {
+    this.calendarContainer = item;
     this.months = ['Январь', 'Февраль', 'Март', 'Апрель',
       'Май', 'Июнь', 'Июль', 'Август',
       'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
@@ -43,7 +43,6 @@ export default class Calendar {
 
     this.btnApply = this.mainContainer.querySelector('.js-calendar__buttons_submit');
     this.btnReset = this.mainContainer.querySelector('.js-calendar__buttons_reset');
-    this.examineCheckinCheckout();
   }
 
   enableHandlers() {
@@ -122,14 +121,19 @@ export default class Calendar {
 
   applyRange(e) {
     e.preventDefault();
+    this.examineCheckinCheckout();
     if (this.existCheckinCheckout) {
       this.rangeSpanStartMonth = this.months[this.checkin.getMonth()].slice(0, 3);
       this.rangeSpanEndMonth = this.months[this.checkout.getMonth()].slice(0, 3);
       this.rangeSpanText = `${this.checkin.getDate()} ${this.rangeSpanStartMonth} - ${this.checkout.getDate()} ${this.rangeSpanEndMonth}`;
-      // set the range
-      this.rangeSpan.value = this.rangeSpanText;
+    } else if (this.existCheckinOnly) {
+      this.rangeSpanStartMonth = this.months[this.checkin.getMonth()].slice(0, 3);
+      this.rangeSpanText = `${this.checkin.getDate()} ${this.rangeSpanStartMonth}`;
+    } else {
+      this.rangeSpanText = '';
     }
-    this.calendar.classList.remove('dropdown__show');
+    this.rangeSpan.value = this.rangeSpanText;
+    this.calendar.classList.remove('js-dropdown__show');
   }
 
   // ----------------------------end applyStartOrEnd--------------------------------//
@@ -141,7 +145,7 @@ export default class Calendar {
     this.rangeEnd.value = (this.checkout)
       ? this.applyEnd()
       : '';
-    this.calendar.classList.remove('dropdown__show');
+    this.calendar.classList.remove('js-dropdown__show');
   }
 
   applyStart() {
@@ -176,7 +180,7 @@ export default class Calendar {
       this.rangeEnd.value = '';
     }
     this.render();
-    this.calendar.classList.remove('dropdown__show');
+    this.calendar.classList.remove('js-dropdown__show');
   }
 
   showPrevMonth() {

@@ -14,15 +14,14 @@ export default class DropdownGuests {
 
   createChildren(id) {
     this.container = document.getElementById(id);
-    console.log(this.container);
     this.containerClass = this.container.classList.value;
     this.dropdownExpanded = this.container.querySelector('.js-dropdown__guests');
-    this.info = this.container.querySelector('.dropdown__info');
-    this.infoInput = this.container.querySelector('.dropdown__input');
-    this.dropdownItems = Array.from(this.container.querySelectorAll('.dropdown__item_expanded'));
-    this.dropdownMinuses = this.container.querySelectorAll('.dropdown__minus');
-    this.resetButton = this.dropdownExpanded.querySelector('.dropdown__button_reset');
-    this.submitButton = this.dropdownExpanded.querySelector('.dropdown__button_submit');
+    this.info = this.container.querySelector('.js-dropdown__info');
+    this.infoInput = this.container.querySelector('.js-dropdown__input');
+    this.dropdownItems = Array.from(this.container.querySelectorAll('.js-dropdown__item_expanded'));
+    this.dropdownMinuses = this.container.querySelectorAll('.js-dropdown__minus');
+    this.resetButton = this.dropdownExpanded.querySelector('.js-dropdown__button_reset');
+    this.submitButton = this.dropdownExpanded.querySelector('.js-dropdown__button_submit');
   }
 
   enableHandlers() {
@@ -39,8 +38,8 @@ export default class DropdownGuests {
 
   plusAndMinusToItem(e) {
     const trg = e.target;
-    if (trg.classList.value === 'dropdown__minus') this.minusToItem(trg);
-    if (trg.classList.value === 'dropdown__plus') this.plusToItem(trg);
+    if (trg.classList.value === 'js-dropdown__minus') this.minusToItem(trg);
+    if (trg.classList.value === 'js-dropdown__plus') this.plusToItem(trg);
   }
 
   minusToItem(trg) {
@@ -66,7 +65,7 @@ export default class DropdownGuests {
 
   submitGuests(e) {
     e.preventDefault();
-    this.dropdownExpanded.classList.remove('dropdown__show');
+    this.dropdownExpanded.classList.remove('js-dropdown__show');
   }
 
   showItemNumber(i) {
@@ -75,7 +74,7 @@ export default class DropdownGuests {
       : ((this.data[i] > 10)
         ? 10
         : this.data[i]);
-    const dropdownItem = this.dropdownItems[i].querySelector('.dropdown__number');
+    const dropdownItem = this.dropdownItems[i].querySelector('.js-dropdown__number');
     dropdownItem.innerText = this.data[i];
     this.activateMinus(i);
   }

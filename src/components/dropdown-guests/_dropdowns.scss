@@ -169,14 +169,6 @@
   }
 }
 
-.dropdown__show {
-  @include isFlex($direction: column, $justify: flex-start);
-
-  @media (min-width: 1650px) and (max-width: 1920px) {
-    width: 100%;
-  }
-}
-
 .button__show {
   display: inline-block;
 }
@@ -220,15 +212,23 @@
   }
 }
 
-.dropdown__show ~ .dropdown__button_transparent::before {
+.js-dropdown__show {
+  @include isFlex($direction: column, $justify: flex-start);
+
+  @media (min-width: 1650px) and (max-width: 1920px) {
+    width: 100%;
+  }
+}
+
+.js-dropdown__show ~ .dropdown__button_transparent::before {
   content: "\e5ce";
 }
 
-.dropdown__show ~ .dropdown__info {
+.js-dropdown__show ~ .dropdown__info {
   border: 1px solid rgba(31, 32, 65, 0.5);
 }
 
-.dropdown__show ~ .dropdown__info::before {
+.js-dropdown__show ~ .dropdown__info::before {
   content: "\e5ce";
 }
 

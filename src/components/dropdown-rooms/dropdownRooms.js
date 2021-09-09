@@ -13,12 +13,11 @@ export default class DropdownRooms {
 
   createChildren(id) {
     this.container = document.getElementById(id);
-    console.log(this.container);
-    this.info = this.container.querySelector('.dropdown__info');
-    this.infoInput = this.container.querySelector('.dropdown__input');
-    this.dropdownItems = Array.from(this.container.querySelectorAll('.dropdown__item_expanded'));
-    this.dropdownPluses = this.container.querySelectorAll('.dropdown__plus');
-    this.dropdownMinuses = this.container.querySelectorAll('.dropdown__minus');
+    this.info = this.container.querySelector('.js-dropdown__info');
+    this.infoInput = this.container.querySelector('.js-dropdown__input');
+    this.dropdownItems = Array.from(this.container.querySelectorAll('.js-dropdown__item_expanded'));
+    this.dropdownPluses = this.container.querySelectorAll('.js-dropdown__plus');
+    this.dropdownMinuses = this.container.querySelectorAll('.js-dropdown__minus');
   }
 
   enableHandlers() {
@@ -61,7 +60,7 @@ export default class DropdownRooms {
   }
 
   updateItemNumber(i) {
-    const dropdownItem = this.dropdownItems[i].querySelector('.dropdown__number');
+    const dropdownItem = this.dropdownItems[i].querySelector('.js-dropdown__number');
     dropdownItem.innerText = this.data[i];
   }
 

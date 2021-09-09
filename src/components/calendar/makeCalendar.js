@@ -1,8 +1,8 @@
 import Calendar from './Calendar';
 
-export default () => {
-  const items = document.querySelectorAll('.calendar');
+export default function makeCalendar() {
+  const items = document.querySelectorAll('.js-calendar');
   items.forEach((item) => {
     new Calendar(item);
   });
-};
+}
