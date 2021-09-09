@@ -1,6 +1,6 @@
 mixin calendar(calendarId)
   - var weekdaysNames = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"]
-  div(class="calendar" id=calendarId)
+  div.calendar.js-calendar(id=calendarId)
     .calendar__date
       .date__prev.js-date__prev
       .date__month.js-date__month!= textContent
