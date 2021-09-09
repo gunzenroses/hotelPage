@@ -1,8 +1,10 @@
 { 
-  "parser": "babel-eslint",
+  "parser": "@babel/eslint-parser",
   "env": {
+    "browser": true,
+    "commonjs": true,
     "es6": true,
-    "browser": true
+    "jquery": true
   },
   "plugins": [
     "fsd"
@@ -10,5 +12,27 @@
   "extends": [
     "airbnb",
     "plugin:fsd/all"
-  ]
+  ],
+  "rules": {
+    "prefer-destructuring": "off",
+    "no-new": "off",
+    "no-nested-ternary": "off",
+    "class-methods-use-this": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["Main", "./src/"],
+          ["Fonts", "./src/assets/fonts/"],
+          ["Images", "./src/assets/images/"],
+          ["Scripts", "./src/assets/scripts/"],
+          ["Styles", "./src/assets/styles/"],
+          ["Components", "./src/components/"],
+          ["Pages", ".src/pages/]"]
+        ],
+        "extensions": [".js", ".jsx"]
+      }
+    }
+  }
 }
