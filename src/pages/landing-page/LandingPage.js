@@ -1,6 +1,6 @@
-import 'Main/assets/scripts/InputMasks';
-import 'Components/footer/ValidateFooterForm';
+import 'Scripts/InputMasks';
 import 'Components/card-search/CardSearch';
+import 'Components/footer/ValidateFooterForm';
 import makeExpandable from 'Components/checkbox-expandable/makeExpandable';
 
 import './landing-page.scss';

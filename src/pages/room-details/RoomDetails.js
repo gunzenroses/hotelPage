@@ -1,8 +1,8 @@
 import 'Scripts/InputMasks';
-import 'Components/footer/ValidateFooterForm';
 import 'Components/card-booking/CardBooking';
-import makeExpandable from 'Components/checkbox-expandable/makeExpandable';
+import 'Components/footer/ValidateFooterForm';
 import makeButtonLike from 'Components/button-like/makeButtonLike';
+import makeExpandable from 'Components/checkbox-expandable/makeExpandable';
 
 import './room-details.scss';
 
