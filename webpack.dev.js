@@ -10,6 +10,7 @@ module.exports = merge(common, {
     filename: "assets/js/[name].js",
   },
   devtool: 'inline-source-map',
+  target: 'web',
   devServer: {
     contentBase: path.resolve(__dirname, "./src"),
     inline: true,
