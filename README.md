@@ -21,6 +21,9 @@ The aim of this project is to create a web-pages without frameworks/libraries li
 Clone repository
 >`git clone https://github.com/gunzenroses/hotelPage.git`
 
+Change directory to "hotelPage"
+>`cd hotelPage`
+
 Install dependancies
 >`npm i`
 
