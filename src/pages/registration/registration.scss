@@ -10,6 +10,7 @@
     $mb: 0,
     $ms: auto
   );
+
   @include isFlex($direction: column, $justify: flex-start);
   position: relative;
   min-width: 320px;
@@ -17,7 +18,7 @@
   user-select: none;
 
   @media (max-width: 1920px) {
-    width: 100vw;
+    width: 100%;
     height: auto;
     border-bottom: 1px solid $dark-shade_less;
   }
