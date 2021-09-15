@@ -6,10 +6,9 @@ mixin roomCarousel(roomPictures, nameForPictures)
         label.room-carousel__element
           if counter === 1
             input(type="radio" checked="checked" name=nameForPictures value="picture_" + counter++).room-carousel__radio_real.js-room-carousel__radio_real
-            div.room-carousel__radio_fake
           else
             input(type="radio" name=nameForPictures value="picture_" + counter++).room-carousel__radio_real.js-room-carousel__radio_real
-            div.room-carousel__radio_fake
+          span.room-carousel__radio_fake
     .room-carousel__pictures.js-room-carousel__pictures
       for picture in roomPictures
         .room-carousel__pic
