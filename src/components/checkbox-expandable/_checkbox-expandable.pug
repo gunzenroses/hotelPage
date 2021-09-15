@@ -31,6 +31,6 @@ mixin richCheckboxButtonItem(checkboxName, checkboxValue, checkboxTitle, checkbo
   label.checkbox__button
     input(type="checkbox" name=checkboxName value=checkboxValue).checkbox__real
     span.checkbox__fake_expand
-    .checkbox__description
-      .checkbox__title_description!= checkboxTitle
-      .checkbox__subtitle_description!= checkboxSubtitle
+    span.checkbox__description
+      span.checkbox__title_description!= checkboxTitle
+      span.checkbox__subtitle_description!= checkboxSubtitle
