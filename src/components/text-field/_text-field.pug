@@ -62,7 +62,8 @@ mixin password()
 
 mixin label(labelText, labelRightText)
   h3.label!= labelText
-  h3.label_right= labelRightText
+  if labelRightText
+    h3.label_right= labelRightText
 
 mixin text(inputClass, placeholder, valueText, nameText, maxText, autofocus=false)
   if inputClass === "textfield_email"

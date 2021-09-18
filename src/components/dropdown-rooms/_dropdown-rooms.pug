@@ -1,9 +1,10 @@
 include ../dropdown-guests/_dropdown-guests.pug
 
-mixin dropdownRoomsLabeled(labelText, labelRightText, dropdownContainerId, dropdownClassShow, inputId)
+mixin dropdownRoomsLabeled(labelText, labelRightText, dropdownContainerId, dropdownClassShow, inputId, labelRightText)
   .widget
     h3.label!= labelText
-    h3(class="label_right")= labelRightText
+    if labelRightText
+      h3.label_right!= labelRightText
     +dropdownRoomsItems(dropdownContainerId, dropdownClassShow, inputId)
 
 mixin dropdownRoomsItems(dropdownContainerId, dropdownClassShow, inputId)

@@ -1,7 +1,7 @@
 mixin dropdownGuestsLabeled(labelText, dropdownContainerId, dropdownClassShow, inputId, labelRightText)
   .dropdown__container
     h3.label!= labelText
-    if (labelRightText)
+    if labelRightText
       h3.label_right!= labelRightText
     +dropdownGuestsItems(dropdownContainerId, dropdownClassShow, inputId)
 
