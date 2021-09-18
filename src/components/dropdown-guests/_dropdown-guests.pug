@@ -1,7 +1,8 @@
-mixin dropdownGuestsLabeled(labelText, labelRightText = "", dropdownContainerId, dropdownClassShow, inputId)
+mixin dropdownGuestsLabeled(labelText, dropdownContainerId, dropdownClassShow, inputId, labelRightText)
   .dropdown__container
     h3.label!= labelText
-    h3.label_right!= labelRightText
+    if (labelRightText)
+      h3.label_right!= labelRightText
     +dropdownGuestsItems(dropdownContainerId, dropdownClassShow, inputId)
 
 mixin dropdownGuestsItems(dropdownContainerId, dropdownClassShow, inputId)

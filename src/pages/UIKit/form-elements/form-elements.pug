@@ -39,7 +39,7 @@ block content
         .form-elements__container_first 
           +emailContainer("Text field", "default")
           +nameContainer("Text field", "hover / focus", "This is pretty awesome")
-          +dropdownGuestsLabeled("dropdown", "", "dropdown_guests_0", "", "dropdownGuestsInput_0")
+          +dropdownGuestsLabeled("dropdown", "dropdown_guests_0", "", "dropdownGuestsInput_0")
           +birthdayContainer("Masked text field", "")
 
         .form-elements__container_second
@@ -70,11 +70,11 @@ block content
         +dropdownCheckbox("Expandable checkbox list", "js-dropdown__show")
 
       .form-elements__element_fifth
-        +dropdownGuestsLabeled("dropdown", "", "dropdown_guests_1", "js-dropdown__show", "dropdownGuestsInput_1")
+        +dropdownGuestsLabeled("dropdown", "dropdown_guests_1", "js-dropdown__show", "dropdownGuestsInput_1")
         +richCheckboxButtons("accessibility", "Rich Checkbox Buttons")
 
       .form-elements__element_sixth
-        +dropdownGuestsLabeled("dropdown", "", "dropdown_guests_2", "js-dropdown__show", "dropdownGuestsInput_2")
+        +dropdownGuestsLabeled("dropdown", "js-dropdown__show", "dropdownGuestsInput_2", "dropdown_guests_2")
         +bulletCheckboxContainer("bullet list", checkboxList)
 
       .form-elements__element_seventh
