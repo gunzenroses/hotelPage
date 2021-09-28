@@ -2,7 +2,7 @@
 include ../button/_button.pug
 
 mixin header(user)
-  nav.header
+  header.header
     +logo()
     +headerMenu(user)
 
@@ -13,7 +13,7 @@ mixin logo()
 
 
 mixin headerMenu(user="")
-  .header__menu
+  nav.header__menu
     .burger__menu.js-dropdown__init
       span
     .dropdown__navbar.dropdown__content.js-dropdown__content

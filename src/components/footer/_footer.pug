@@ -4,7 +4,7 @@ mixin footer(footerText = "Бронирование номеров в лучше
   - var navigations = ["О нас", "Новости", "Служба поддержки", "Услуги"]
   - var abouts = ["О сервисе", "Наша команда", "Вакансии", "Инвесторы"]
   - var supports = ["Соглашения", "Сообщества", "Связь с нами"]
-  .footer_outer
+  footer.footer_outer
     .footer__navbar_outer
       .footer__navbar_inner
         .footer__info
@@ -64,7 +64,7 @@ mixin socialNets()
       a(href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer")
 
 mixin footerCreative()
-  .footer-creative
+  footer.footer-creative
     .footer-creative_inner
       +logo()
       .copyright__text Copyright © 2018 Toxin отель. Все права защищены.
