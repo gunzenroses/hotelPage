@@ -1,58 +1,75 @@
 include ../text-field/_text-field.pug
 
-mixin footer(footerText = "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»")
+mixin footer(theme="main", footerText = "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»")
   - var navigations = ["О нас", "Новости", "Служба поддержки", "Услуги"]
   - var abouts = ["О сервисе", "Наша команда", "Вакансии", "Инвесторы"]
   - var supports = ["Соглашения", "Сообщества", "Связь с нами"]
-  footer.footer_outer
+  .footer_outer
     .footer__navbar_outer
-      .footer__navbar_inner
-        .footer__info
-          +logo()
-          .footer__text!= footerText
-        //- that's initially visible
-        .footer__info_more
-          .footer__navigation
-            h3 Навигация
-            .footer__links
-              for navigation in navigations
-                +buttonNavbar(navigation, buttonOnclick="./some-address")
-          .footer__about
-            h3 О нас
-            .footer__links
-              for about in abouts
-                +buttonNavbar(about, buttonOnclick="./some-address")
-          .footer__support
-            h3 Служба поддержки
-            .footer__links
-              for support in supports
-                +buttonNavbar(support, buttonOnclick="./some-address")
-        //- that's initially hidden
-        .footer__info_hidden
-          .footer__navigation
-            h3.js-dropdown__init Навигация
-            .footer__navigation_dropdown.dropdown__content.js-dropdown__content
-              for navigation in navigations
-                +buttonNavbar(navigation, buttonOnclick="./some-address")
-          .footer__about
-            h3.js-dropdown__init О нас
-            .footer__about_dropdown.dropdown__content.js-dropdown__content
-              for about in abouts
-                +buttonNavbar(about, buttonOnclick="./some-address")
-          .footer__support
-            h3.js-dropdown__init Служба поддержки
-            .footer__support_dropdown.dropdown__content.js-dropdown__content
-              for support in supports
-                +buttonNavbar(support, buttonOnclick="./some-address")
-        .footer__info_subscribe
-          h3 Подписка
-          .footer__text Получайте специальные предложения и новости сервиса
-          form.footer__form.js-footer__form(method="get" action="./registration.html")
-            +emailSubscribe()
+      if theme == "landing"
+        .footer__navbar_landing
+          +footerInfo(footerText)
+          +footerVisible(navigations, abouts, supports, theme)
+          +footerHidden(navigations, abouts, supports)
+          +footerSubscribe
+      else 
+        .footer__navbar_inner
+          +footerInfo(footerText, theme)
+          +footerVisible(navigations, abouts, supports)
+          +footerHidden(navigations, abouts, supports)
+          +footerSubscribe
     .footer__copyright_outer
       .footer__copyright_inner
         .copyright__text Copyright © 2018 Toxin отель. Все права защищены.
-        +socialNets()
+        +socialNets
+
+mixin footerInfo(footerText, theme="main")
+  div(class="footer__logo" + "_" + theme)
+    +logo()
+    .footer__text!= footerText
+
+mixin footerVisible(navigations, abouts, supports, theme="main")
+  div(class="footer__info" + "_" + theme)
+    .footer__navigation
+      h3 Навигация
+      .footer__links
+        for navigation in navigations
+          +buttonNavbar(navigation, buttonOnclick="./some-address")
+    .footer__about
+      h3 О нас
+      .footer__links
+        for about in abouts
+          +buttonNavbar(about, buttonOnclick="./some-address")
+    .footer__support
+      h3 Служба поддержки
+      .footer__links
+        for support in supports
+          +buttonNavbar(support, buttonOnclick="./some-address")
+
+mixin footerHidden(navigations, abouts, supports)
+  .footer__info_hidden
+    .footer__navigation
+      h3.js-dropdown__init Навигация
+      .footer__navigation_dropdown.dropdown__content.js-dropdown__content
+        for navigation in navigations
+          +buttonNavbar(navigation, buttonOnclick="./some-address")
+    .footer__about
+      h3.js-dropdown__init О нас
+      .footer__about_dropdown.dropdown__content.js-dropdown__content
+        for about in abouts
+          +buttonNavbar(about, buttonOnclick="./some-address")
+    .footer__support
+      h3.js-dropdown__init Служба поддержки
+      .footer__support_dropdown.dropdown__content.js-dropdown__content
+        for support in supports
+          +buttonNavbar(support, buttonOnclick="./some-address")
+
+mixin footerSubscribe()
+  .footer__info_subscribe
+    h3 Подписка
+    .footer__text Получайте специальные предложения и новости сервиса
+    form.footer__form.js-footer__form(method="get" action="./registration.html")
+      +emailSubscribe()
 
 mixin socialNets()
   .copyright__social
@@ -64,7 +81,7 @@ mixin socialNets()
       a(href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer")
 
 mixin footerCreative()
-  footer.footer-creative
+  .footer-creative
     .footer-creative_inner
       +logo()
       .copyright__text Copyright © 2018 Toxin отель. Все права защищены.

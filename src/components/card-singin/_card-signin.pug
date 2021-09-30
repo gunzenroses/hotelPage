@@ -1,10 +1,10 @@
 include ../text-field/_text-field.pug
 include ../button/_button.pug
 
-mixin cardSignin()
+mixin cardSignin(theme="")
   form.card-signin.js-card-signin(method="get" action="./signin.html")
     h1.card__text Войти
-    +login()
+    +login(theme)
     +buttonFormSubmit("Войти")
     .card__text_row
       .card__subline Нет аккаунта на Toxin?

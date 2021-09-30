@@ -32,10 +32,15 @@ mixin loginContainer(labelText, labelRightText)
 
 
 //- mixins without labels
-mixin login()
-  .textfield_login
-    +email()
-    +password()
+mixin login(theme="")
+  if theme == ""
+    .textfield_login
+      +email()
+      +password()
+  else 
+    div(class="textfield_login" + "_" + theme)
+      +email()
+      +password()
 
 
 mixin name(valueText="")

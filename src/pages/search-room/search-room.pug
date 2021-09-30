@@ -41,7 +41,7 @@ block content
           form(class="search-room__form")
             .filter-group
               .filter-group__date-range
-                +dateRangeCommon("calendar_search", "даты пребывания в отеле", "19 авг - 23 авг", "")
+                +dateRangeCommon("calendar_search", "даты пребывания в отеле", "19 авг - 23 авг", "", "in-search")
               .filter-group__guests
                 +dropdownGuestsLabeled("гости", "dropdown_guests_search", "", "dropdownGuestsInput_3")
               .filter-group__price-range
@@ -62,4 +62,4 @@ block content
               +room(room)
           .search-room__pagination 
             +pagination("paginationSearch")
-    +footer()
+    +footer("in-search")

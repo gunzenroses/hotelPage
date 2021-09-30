@@ -371,7 +371,7 @@
   }
 }
 
-.footer__info_more .footer__links {
+.footer__info_main .footer__links {
   margin-top: 21px;
 }
 
@@ -465,14 +465,6 @@
 .room-details {
   & .footer__links {
     margin-top: 20px;
-  }
-
-  & .footer__info {
-    height: 130px;
-  }
-
-  & .footer__info_more {
-    margin-left: -2px;
   }
 
   & .booking-info__sign:first-of-type {

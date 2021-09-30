@@ -16,13 +16,19 @@ mixin dateDropdownSmall(labelText, inputName, inputValue, dateDataType)
       name=inputName placeholder="ДД.ММ.ГГГГ"
       maxlength="10" data-range=dateDataType readonly)
 
-mixin dateRangeCommon(calendarId, labelText, inputValue, dropdownClassShow)
+mixin dateRangeCommon(calendarId, labelText, inputValue, dropdownClassShow, theme="")
   div(class="date-range__selector js-date-range__selector")
     div(class="dropdown__calendar js-dropdown__calendar dropdown__content js-dropdown__content" + dropdownClassShow)
       +calendar(calendarId)
     .dataRange__container_common.js-dropdown__init
       h3.label!= labelText
-      .date__range
-        input(type="text" value=inputValue 
-        name="checkin-checkout" placeholder="ДД.ММ - ДД.ММ"
-        maxlength="15" data-range="date-range" readonly)
+      if theme == ""
+        .date__range
+          input(type="text" value=inputValue 
+          name="checkin-checkout" placeholder="ДД.ММ - ДД.ММ"
+          maxlength="15" data-range="date-range" readonly)
+      else
+        div(class="date__range" + "_" + theme)
+          input(type="text" value=inputValue 
+          name="checkin-checkout" placeholder="ДД.ММ - ДД.ММ"
+          maxlength="15" data-range="date-range" readonly)
