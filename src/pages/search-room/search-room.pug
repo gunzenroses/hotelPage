@@ -13,6 +13,7 @@ include ../../components/pagination/_pagination.pug
 include ../../components/footer/_footer.pug
 
 block variables
+  - var theme = "in-search";
   - var title = "room search";
   - var description = "room search";
   - var keywords = "search, room";
@@ -34,7 +35,7 @@ block variables
 
 block content
   .search-room.js-dropdown__detection
-    +header()
+    +header("", theme)
     .search-room__content_outer
       .search-room__content
         .search-room__filter

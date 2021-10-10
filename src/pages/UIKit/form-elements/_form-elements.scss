@@ -4,8 +4,6 @@
   @include container(
     $width: 1440px,
     $height: 1853px,
-    $mt: 50px,
-    $mb: 50px,
     $ms: auto
   );
   position: relative;
@@ -27,7 +25,7 @@
 .form-elements_inner {
   @include containerSimple($w: 1165px, $h: 1582px);
   @include isFlex($wrap: wrap);
-  margin: 143px 0 128px 143px;
+  margin: 143px 0 128px 141px;
   min-width: 320px;
   background: $light;
 
@@ -57,8 +55,8 @@
 }
 
 .form-elements__element_first {
-  @include container($width: 321px, $height: 636px, $mt: 0, $mb: 100px);
-  margin-right: 120px;
+  @include container($width: 321px, $height: 636px, $mb: 89px);
+  margin-right: 117px;
 
   @media (max-width: 1400px) {
     margin: 0;
@@ -72,8 +70,7 @@
 .form-elements__element_second {
   @include containerSimple($w: 260px, $h: 537px);
   @include isFlex($direction: column, $justify: flex-start, $align: flex-start);
-  margin-right: 129px;
-  margin-left: 2px;
+  margin-right: 124px;
 
   @media (max-width: 1400px) {
     margin: 0;
@@ -81,12 +78,11 @@
 }
 
 .form-elements__element_second > div:first-of-type {
-  margin-top: 1px;
   letter-spacing: .05px;
 }
 
 .form-elements__element_second > div:nth-of-type(2) {
-  margin-top: 42px;
+  margin-top: 43px;
 }
 
 .form-elements__element_second > div:nth-of-type(3) {
@@ -94,11 +90,11 @@
 }
 
 .form-elements__element_second > div:nth-of-type(4) {
-  margin-top: 43px;
+  margin-top: 42px;
 }
 
 .form-elements__element_second > h3 {
-  margin-top: 42px;
+  margin-top: 41px;
 }
 
 .form-elements__element_second > div:last-of-type {
@@ -108,7 +104,7 @@
 .form-elements__element_third {
   @include container($width: 320px, $height: 503px);
   @include isFlex($direction: column, $align: flex-start, $justify: flex-start);
-  margin-right: 2px;
+  margin-right: 7px;
 
   @media (max-width: 1400px) {
     margin: 0;
@@ -120,21 +116,20 @@
 }
 
 .form-elements__element_third > div:nth-of-type(2) {
-  margin-top: 32px;
-  margin-left: -1px;
+  margin-top: 31px;
 }
 
 .form-elements__element_third > div:nth-of-type(3) {
-  margin-top: 41px;
+  margin-top: 40px;
 }
 
 .form-elements__element_forth {
   @include isFlex($direction: column, $justify: flex-start, $align: flex-start);
   width: 267px;
   min-height: 647px;
-  margin-right: 176px;
+  margin-right: 168px;
   margin-left: -1px;
-  margin-bottom: 47px;
+  margin-bottom: 39px;
 
   @media (max-width: 1400px) {
     margin: 0;
@@ -152,14 +147,14 @@
 }
 
 .form-elements__element_forth > div:nth-of-type(3) {
-  margin-top: 21px;
+  margin-top: 20px;
 }
 
 .form-elements__element_fifth {
-  @include container($width: 321px, $height: 465px);
+  @include container($width: 320px, $height: 465px);
   @include isFlex($direction: column, $align: flex-start, $justify: flex-start);
   margin-top: 4px;
-  margin-right: 69px;
+  margin-right: 60px;
 
   @media (max-width: 1400px) {
     margin: 0;
@@ -175,6 +170,7 @@
   @include container($width: 320px, $height: 467px);
   @include isFlex($direction: column, $align: flex-start, $justify: flex-start);
   margin-top: 4px;
+  margin-right: 7px;
 
   @media (max-width: 1400px) {
     margin: 0;
@@ -182,18 +178,13 @@
   }
 }
 
-.form-elements__element_sixth > div:first-of-type {
-  margin-left: -2px;
-}
-
 .form-elements__element_sixth > div:nth-of-type(2) {
-  margin-top: 257px;
-  margin-left: -2px;
+  margin-top: 256px;
 }
 
 .form-elements__element_seventh {
   @include container($width: 291px, $height: 158px);
-  @include isFlex($direction: column, $align: flex-start);
+  @include isFlex($direction: column, $justify: flex-start, $align: flex-start);
   margin-right: 120px;
   margin-top: 1px;
   margin-left: -1px;
@@ -212,8 +203,8 @@
   @include isFlex($direction: column, $align: flex-start);
   max-width: 711px;
   min-height: 133px;
-  margin-top: 11px;
-  margin-right: 2px;
+  margin-top: 12px;
+  margin-right: 5px;
 
   @media (max-width: 1400px) {
     width: 55vw;
@@ -247,7 +238,7 @@
     justify-content: flex-start;
     height: 322px;
     width: 100%;
-    margin-top: 3px;
+    margin-top: 1px;
   }
 
   &__container_first > div:nth-of-type(2) {
@@ -266,7 +257,7 @@
     justify-content: flex-start;
     min-height: 274px;
     width: 100%;
-    margin-top: 34.5px;
+    margin-top: 32.5px;
   }
 
   &__container_second > div:nth-of-type(2) {
@@ -274,7 +265,7 @@
   }
 
   &__container_second > div:nth-of-type(3) {
-    margin-top: 44px;
+    margin-top: 43px;
   }
 
   &__container_third {

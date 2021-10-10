@@ -6,6 +6,7 @@ include ../../components/card-search/_card-search.pug
 include ../../components/footer/_footer.pug
 
 block variables
+  - var theme = "landing"
   - var title = "landing page";
   - var description = "landing page";
   - var keywords = "landing page";
@@ -13,10 +14,10 @@ block variables
 
 block content
   .landing-page.js-dropdown__detection
-    +header()
+    +header("", theme)
     .landing-page__content
       +carouselLanding(pics)
       .landing-page__text Лучшие номера для вашей работы, отдыха и просто вдохновения
       .landing-page__card-search
         +cardSearch()
-    +footer("landing")
+    +footer(theme)

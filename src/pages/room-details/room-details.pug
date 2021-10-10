@@ -9,6 +9,7 @@ include ../../components/bullet-checkbox/_bullet-checkbox.pug
 include ../../components/footer/_footer.pug
 
 block variables
+  - var theme = "in-details";
   - var title = "room details";
   - var description = "room details";
   - var keywords = "room details";
@@ -33,7 +34,7 @@ block variables
 
 block content
   .room-details.js-dropdown__detection
-    +header()
+    +header("", theme)
     .room-details__content
       .room-details__view
         img(src="./assets/images/room-details.jpg" alt="room picture 1").room-details__view_main
@@ -67,4 +68,4 @@ block content
                 != cancellationRools
           .room-details__booking
             +cardBooking("Сбор за доп. услуги", "short")
-    +footer("in-details")
+    +footer(theme)

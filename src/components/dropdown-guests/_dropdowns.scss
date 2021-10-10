@@ -23,18 +23,9 @@
 }
 
 .dropdown__info {
-  position: relative;
-  width: 100%;
-  height: 44px;
-  border: 1px solid rgba(31, 32, 65, 0.25);
+  @include regularField;
+  padding: 0px 0px 0px 11px;
   border-radius: 4px 4px 0 0;
-  font-size: $fs_base;
-  line-height: 42px;
-
-  @media (max-width: 450px) {
-    width: 100%;
-    min-width: 260px;
-  }
 }
 
 .dropdown__info::before {
@@ -45,18 +36,6 @@
   font-size: $fs_h1;
   font-family: $material-icons;
   text-align: center;
-}
-
-.dropdown__input {
-  width: calc(100% - 44px - 15px);
-  height: 24px;
-  margin: 0 44px 0 12px;
-  line-height: 24px;
-  border: none;
-}
-
-.dropdown__info > .dropdown__input::placeholder {
-  color: $dark-shade_more;
 }
 
 .dropdown__rooms,
@@ -88,11 +67,6 @@
   @include dropdownItem;
 }
 
-.dropdown__item_expanded:nth-child(3) {
-  @extend .dropdown__item_expanded;
-  margin-top: 8px;
-}
-
 .dropdown__buttons {
   @include dropdownItem;
   justify-content: space-between;
@@ -104,7 +78,7 @@
   width: calc(100% - 30px - 30px - 32px);
   font-weight: 700;
   margin-top: 5px;
-  letter-spacing: -.01em;
+  letter-spacing: .001em;
   color: $dark-shade_most;
 
   @media (min-width: 1750px) and (max-width: 1920px) {
@@ -160,7 +134,7 @@
 .dropdown__title {
   font-size: $fs_h3;
   font-weight: 700;
-  letter-spacing: -.001em;
+  letter-spacing: .001em;
   text-transform: uppercase;
   text-align: start;
 
@@ -175,6 +149,7 @@
 
 .dropdown__button {
   @include regularField;
+  padding: 0px 0 2px 12px;
   cursor: pointer;
   white-space: nowrap;
 

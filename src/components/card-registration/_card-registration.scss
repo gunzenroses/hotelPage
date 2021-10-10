@@ -1,9 +1,9 @@
 .card-registration {
   @include containerShadowed;
   @include isFlex($direction: column, $justify: flex-start);
-  width: 383px;
+  width: 380px;
   height: fit-content;
-  min-height: 650px;
+  min-height: 645px;
   padding: 39px 29px 29px;
 
   @media (max-width: 400px) {
@@ -32,7 +32,7 @@
 }
 
 .c-r__radio {
-  margin-top: 11px;
+  margin-top: 9px;
 }
 
 .c-r__birthday {
@@ -44,14 +44,14 @@
 }
 
 .c-r__specials {
-  margin-top: 5px;
+  margin-top: 4px;
 }
 
 .card-registration > .button_submit {
-  margin-top: 20px;
+  margin-top: 19px;
   padding: 15px 20px;
 }
 
 .card-registration > .card__text_row {
-  letter-spacing: .005em;
+  margin-top: 30px;
 }

@@ -55,9 +55,9 @@
   &__title {
     display: inline-block;
     color: $dark-shade_more;
-    letter-spacing: .005em;
-    line-height: 20px;
-    font-size: 1.003em;
+    letter-spacing: 0.001em;
+    line-height: 19px;
+    font-size: 1em;
 
     @media (min-width: 1750px) and (max-width: 1920px) {
       font-size: $fs_h2;
@@ -85,6 +85,6 @@
 }
 
 .toggle__container > .label {
-  margin-left: -1px;
-  letter-spacing: -.02em;
+  font-size: .8rem;
+  letter-spacing: .0001em;
 }

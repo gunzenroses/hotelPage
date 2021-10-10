@@ -6,22 +6,20 @@ mixin footer(theme="main", footerText = "Бронирование номеров
   - var supports = ["Соглашения", "Сообщества", "Связь с нами"]
   .footer_outer
     .footer__navbar_outer
-      if theme == "landing"
-        .footer__navbar_landing
-          +footerInfo(footerText)
-          +footerVisible(navigations, abouts, supports, theme)
-          +footerHidden(navigations, abouts, supports)
-          +footerSubscribe
-      else 
-        .footer__navbar_inner
-          +footerInfo(footerText, theme)
-          +footerVisible(navigations, abouts, supports)
-          +footerHidden(navigations, abouts, supports)
-          +footerSubscribe
+      div(class="footer__navbar" + "_" + theme)
+        +footerInfo(footerText, theme)
+        +footerVisible(navigations, abouts, supports, theme)
+        +footerHidden(navigations, abouts, supports)
+        +footerSubscribe
     .footer__copyright_outer
-      .footer__copyright_inner
-        .copyright__text Copyright © 2018 Toxin отель. Все права защищены.
-        +socialNets
+      if theme == "main"
+        .footer__copyright_inner
+          .copyright__text Copyright © 2018 Toxin отель. Все права защищены.
+          +socialNets
+      else
+        div(class="footer__copyright" + "_" + theme)
+          .copyright__text Copyright © 2018 Toxin отель. Все права защищены.
+          +socialNets
 
 mixin footerInfo(footerText, theme="main")
   div(class="footer__logo" + "_" + theme)

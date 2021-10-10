@@ -29,7 +29,7 @@
   position: relative;
   width: 100%;
   min-width: 320px;
-  height: 689px;
+  height: 683px;
   margin: 0 auto;
 
   @media (max-width: 500px) {
@@ -45,7 +45,7 @@
 }
 
 .registration__card-registration {
-  @include absoluteTopLeft(20px, 721px);
+  @include absoluteTopLeft(19px, 716px);
   transform: translateX(-48.2%);
 
   @media (min-width: 1480px) and (max-width: 1920px) {

@@ -18,7 +18,7 @@
 
 .footer__navbar_outer {
   width: 100%;
-  height: 374px;
+  height: fit-content;
 
   @media (min-width: 1500px) and (max-width: 1920px) {
     width: 100%;
@@ -32,18 +32,19 @@
 
 /* inner container */
 
-.footer__navbar_inner {
+.footer__navbar_main {
   @include container(
-    $width: 1166px,
+    $width: 1160px,
     $height: 172px,
-    $mt: 101px,
-    $ms: 141px,
-    $mb: 99px
+    $mt: 100px,
+    $ms: 140px,
+    $mb: 100px
   );
 
   @include isFlex($justify: space-between, $wrap: wrap);
   position: relative;
   margin-right: 133px;
+  letter-spacing: .01em;
 
   @media (min-width: 1500px) and (max-width: 1920px) {
     margin: 100px auto;
@@ -83,9 +84,25 @@
   }
 }
 
-.footer__navbar_landing {
-  @extend .footer__navbar_inner;
-  margin-top: 100px; 
+.footer__navbar_in-signin {
+  @extend .footer__navbar_main;
+}
+
+.footer__navbar_landing,
+.footer__navbar_in-registration {
+  @extend .footer__navbar_main;
+  margin-top: 101px; 
+}
+
+.footer__navbar_in-search {
+  @extend .footer__navbar_main;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.footer__navbar_in-details {
+  @extend .footer__navbar_main;
+  letter-spacing: .001em;
 }
 
 .footer__info_main {
@@ -103,8 +120,8 @@
 .footer__text {
   width: 100%;
   margin: 0;
-  font-size: 14.1px;
-  line-height: 1.8rem;
+  font-size: 1em;
+  line-height: $fs_h1;
   font-weight: 400;
   color: $dark-shade_more;
   letter-spacing: .0001em;
@@ -118,9 +135,7 @@
   }
 }
 
-.footer__navbar_inner h3 {
-  letter-spacing: -.01em;
-  font-size: 0.874rem;
+.footer__navbar_main h3 {
   margin-top: 1px;
 }
 
@@ -129,8 +144,8 @@
 .footer__logo_main {
   @include isFlex($direction: column);
   width: 260px;
-  height: 131px;
-  margin-right: 39px;
+  height: 130px;
+  margin-right: 38px;
   letter-spacing: .001em;
 
   @media (max-width: 1340px) {
@@ -155,23 +170,19 @@
   }
 }
 
-.footer__logo_initial {
+.footer__logo_landing,
+.footer__logo_in-registration,
+.footer__logo_in-details,
+.footer__logo_in-search,
+.footer__logo_in-signin {
   @extend .footer__logo_main;
-  height: 130px;
 }
 
 .footer__logo_in-details {
-  @extend .footer__logo_main;
-  height: 130px;
-}
-
-.footer__logo_in-search {
-  @extend .footer__logo_main;
-  height: 130px;
+  margin-right: 40px;
 }
 
 .footer__logo_in-signin {
-  @extend .footer__logo_main;
   height: 131px;
 }
 
@@ -270,27 +281,21 @@
   }
 }
 
-.footer__info_main .button_navlink {
-  letter-spacing: .01em;
-}
-
 .footer__info_landing {
   @extend .footer__info_main;
 }
 
-.footer__info_initial {
+.footer__info_in-registration {
   @extend .footer__info_main;
-  margin-left: -2px;
 }
 
 .footer__info_in-details {
   @extend .footer__info_main;
-  margin-left: -2px;
+  letter-spacing: .001em;
 }
 
 .footer__info_in-search {
   @extend .footer__info_main;
-  margin-left: -1px;
 }
 
 .footer__info_in-signin {
@@ -305,7 +310,7 @@
 
 .footer__about {
   @include isFlex($direction: column);
-  width: 201px;
+  width: 200px;
   height: 168px;
 
   @media (max-width: 1340px) {
@@ -339,7 +344,7 @@
 
 .footer__navigation {
   @include isFlex($direction: column);
-  width: 201px;
+  width: 200px;
   height: 168px;
 
   @media (max-width: 1340px) {
@@ -360,7 +365,7 @@
   @include isFlex($direction: column, $align: flex-start, $justify: start);
   width: 100%;
   height: 150px;
-  margin-top: 20px;
+  margin-top: 19px;
 }
 
 .footer__links .dropdown__content { 
@@ -402,14 +407,14 @@
 
   &_inner {
     @include container(
-      $width: 1172px,
+      $width: 1164px,
       $height: 24px,
-      $mt: 23px,
-      $ms: 127px,
+      $mt: 24px,
+      $ms: 0,
       $mb: 22px
     );
     @include isFlex($align: flex-start);
-    margin-left: 141px;
+    margin-left: 140px;
 
     @media (min-width: 1500px) and (max-width: 1920px) {
       margin: 23px auto;
@@ -443,6 +448,26 @@
       width: 90%;
     }
   }
+
+  &_landing {
+    @extend .footer__copyright_inner;
+    margin-left: 139px;
+    margin-top: 22px;
+  }
+
+  &_in-signin {
+    @extend .footer__copyright_inner;
+    margin-top: 23px;
+  }
+
+  &_in-search,
+  &_in-registration {
+    @extend .footer__copyright_inner;
+  }
+
+  &_in-details {
+    @extend .footer__copyright_inner;
+  }
 }
 
 .footer__copyright_inner > .copyright__text {
@@ -471,9 +496,9 @@
 .copyright {
   &__text {
     height: 18px;
-    margin-top: 6px;
-    letter-spacing: .003em;
-    font-size: 14.03px;
+    margin-top: 5px;
+    letter-spacing: .0001em;
+    font-size: 14px;
 
     @media (min-width: 1750px) and (max-width: 1920px){
       font-size: $fs_h2;

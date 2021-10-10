@@ -1,5 +1,7 @@
 .textfield {
   @include textField;
+  font-size: 13.5px;
+  padding: 0px 0 2px 12px;
 }
 
 .label_none {
@@ -8,6 +10,7 @@
 
 .textfield_birthday {
   @include textField;
+  padding: 0 0 3px 12px;
   text-transform: uppercase;
   white-space: nowrap;
 }
@@ -30,7 +33,7 @@
 }
 
 .textfield_login > .textfield:not(:first-of-type) {
-  margin-top: 11px;
+  margin-top: 10px;
 }
 
 .arrow_submit {

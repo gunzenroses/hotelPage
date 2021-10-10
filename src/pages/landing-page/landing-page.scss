@@ -19,14 +19,9 @@
   @include isFlex($justify: flex-start, $direction: column);
   position: relative;
   width: 100%;
-  height: 836px;
+  height: 830px;
   margin: 0 auto;
   min-width: 320px;
-
-  @media (max-width: 1920px) {
-    width: 100%;
-    height: 836px;
-  }
 
   @media (max-width: 1400px) {
     height: calc(830 / 1440 * 100vw);
@@ -39,14 +34,14 @@
 
   @media (max-width: 500px) {
     width: 100%;
-    // carousel + card-search + text + initial top
+    // carousel + card-search + text + in-registration top
     height: calc(830 / 1440 * 100vw + 374px + 48px + 40px);
     min-height: calc(683 / 1440 * 320px + 374px + 48px + 40px);
   }
 }
 
 .landing-page__text {
-  @include absoluteBottomRight(25px, 126px);
+  @include absoluteBottomRight(25px, 134px);
   width: 270px;
   height: 48px;
   line-height: 24px;
@@ -70,7 +65,7 @@
 }
 
 .landing-page__card-search {
-  @include absoluteTopLeft(67px, 141px);
+  @include absoluteTopLeft(66px, 140px);
   z-index: 2;
 
   @media (max-width: 970px) {

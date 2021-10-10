@@ -6,6 +6,7 @@ include ../../components/carousel-background/_carousel-background.pug
 include ../../components/footer/_footer.pug
 
 block variables
+  - var theme = "in-signin";
   - var title = "signin";
   - var description = "sign in";
   - var keywords = "sign in";
@@ -13,9 +14,9 @@ block variables
 
 block content
   .sign-in.js-dropdown__detection
-    +header()
+    +header("", theme)
     .sign-in__content
       +carouselBackground(pics)
       .sign-in__card-signin
-        +cardSignin("in-signin")
-    +footer("in-signin")
+        +cardSignin(theme)
+    +footer(theme)

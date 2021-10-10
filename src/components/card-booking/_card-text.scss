@@ -5,10 +5,10 @@
 .card-text {
   &__type {
     display: inline-block;
-    margin-left: 7px;
-    font-size: .85rem;
+    margin-left: 6px;
+    font-size: .857rem;
     color: $purple;
-    letter-spacing: -.01em;
+    letter-spacing: .0001em;
     text-transform: uppercase;
 
     @media (min-width: 1750px) and (max-width: 1920px) {
@@ -19,7 +19,7 @@
   &__number {
     display: inline-block;
     padding-right: 2px;
-    font-size: 20.1px;
+    font-size: 18px;
     line-height: 15px;
 
     @media (min-width: 1750px) and (max-width: 1920px) {
@@ -46,15 +46,14 @@
 
   &__row_right {
     height: 100%;
-    line-height: 22px;
+    line-height: 20px;
     letter-spacing: .001em;
     color: $dark-shade_medium;
   }
 
   &__price {
-    font-size: 14.05px;
-    letter-spacing: -.01em;
-    margin-right: 2px;
+    font-size: 1rem;
+    letter-spacing: .01em;
 
     @media (min-width: 1750px) and (max-width: 1920px) {
       font-size: $fs_h2;

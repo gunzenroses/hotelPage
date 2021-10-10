@@ -3,9 +3,9 @@
 .card-booking {
   @include containerShadowed;
   @include isFlex($direction: column, $justify: flex-start);
-  width: 382px;
+  width: 380px;
   height: fit-content;
-  padding: 49px 29px 28px;
+  padding: 49px 29px 28px 29px;
 
   @media (min-width: 1650px) and (max-width: 1920px) {
     width: 100%;
@@ -19,11 +19,11 @@
 }
 
 .card-booking > .date-range__selector {
-  margin-top: 7px;
+  margin-top: 6px;
 }
 
 .card-booking > .dropdown__container {
-  margin-top: 25px;
+  margin-top: 24px;
   margin-bottom: 10px;
 }
 
@@ -39,7 +39,7 @@
 }
 
 .card-booking > button {
-  margin-top: 21.5px;
+  margin-top: 20px;
   padding-right: 5px;
   padding-bottom: 2px;
 }
@@ -80,7 +80,6 @@
 
   &__number {
     display: inline-block;
-    padding-right: 1px;
     font-size: $fs_h1;
     letter-spacing: .01em;
 
@@ -91,9 +90,9 @@
 
   &__type {
     display: inline-block;
-    font-size: $fs_h3;
+    font-size: .8rem;
     color: $purple;
-    letter-spacing: -.02em;
+    letter-spacing: .02em;
     text-transform: uppercase;
 
     @media (min-width: 1750px) and (max-width: 1920px) {
@@ -104,7 +103,7 @@
   &__right {
     color: $dark-shade_medium;
     letter-spacing: .01em;
-    line-height: 20px;
+    line-height: 19px;
   }
 
   &__price {
@@ -132,10 +131,10 @@
 
 .booking-info {
   &__row {
-    @include isFlex();
-    width: 320px;
+    @include isFlex($justify: flex-start);
+    width: 100%;
     min-height: 24px;
-    line-height: 19px;
+    line-height: 18px;
     margin-top: 10px;
     margin-left: 1px;
     font-size: $fs_base;
@@ -157,7 +156,7 @@
 
   &__description {
     display: inline-block;
-    width: calc(100% - 100px);
+    width: calc(100% - 101px);
     text-align: left;
     letter-spacing: .0001em;
 
@@ -171,9 +170,9 @@
     }
   }
 
-  &__description_short {
+  &__description_special {
     @include isFlex();
-    width: 172px;
+    width: 168px;
     letter-spacing: .0001em;
 
     @media (min-width: 1650px) and (max-width: 1920px) {
@@ -205,12 +204,25 @@
 
   &__price {
     @include isFlex($direction: row-reverse);
-    width: 100px;
+    width: 99px;
     text-align: right;
     letter-spacing: .002em;
 
     @media (min-width: 1650px) and (max-width: 1920px) {
       width: 90px;
+    }
+  }
+
+  &__price_special {
+    @extend.booking-info__price;
+    width: calc(100% - 169px);
+
+    @media (min-width: 1650px) and (max-width: 1920px) {
+      width: calc(100% - 240px);
+    }
+
+    @media (max-width: 450px) {
+      width: 120px;
     }
   }
 }
@@ -230,7 +242,7 @@
 
   &__line {
     @include isFlex($align: flex-end);
-    width: calc(100% - 139px);
+    width: calc(100% - 140px);
     height: 19px;
     border-bottom: 1px dotted $dark-shade_less;
   }

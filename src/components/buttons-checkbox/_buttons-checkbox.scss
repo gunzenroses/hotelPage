@@ -27,7 +27,7 @@
 
   &__fake {
     @include checkboxFake;
-    margin-right: 10px;
+    margin-right: 9px;
 
     @media (min-width: 1750px) and (max-width: 1920px) {
       @include containerBlock(30px, 30px);
@@ -37,9 +37,10 @@
   &__title {
     display: inline-block;
     width: 192px;
+    margin-top: 3px;
     font-weight: 400;
-    font-size: $fs_base;
-    letter-spacing: .003em;
+    font-size: 13.5px;
+    letter-spacing: .02em;
     line-height: 18px;
     color: $dark-shade_medium;
 
@@ -81,7 +82,7 @@
 .buttons-checkbox {
   @include isFlex($direction: column);
   width: 224px;
-  margin-top: 11px;
+  margin-top: 10px;
 
   @media (min-width: 1650px) and (max-width: 1920px) {
     width: 100%;
@@ -90,8 +91,4 @@
 
 .buttons-checkbox .checkbox__fake {
   margin-right: 10px;
-}
-
-.buttons-checkbox > .checkbox:not(:first-of-type) {
-  margin-top: 11px;
 }

@@ -28,7 +28,6 @@
   @include isFlex($direction: column);
   position: relative;
   min-width: 320px;
-  height: 1433px;
   margin-left: auto;
   margin-right: auto;
   border-bottom: 1px solid $dark-shade_less;
@@ -42,10 +41,10 @@
 .room-details__view {
   @include isFlex($justify: flex-start);
   width: 100%;
-  height: 488px;
+  height: 485px;
   overflow: hidden;
 
-  @media (max-width: 1920px) {
+  @media (max-width: 1920px) and (min-width: 1441px) {
     height: auto;
   }
 
@@ -55,11 +54,11 @@
 }
 
 .room-details__view_main {
-  width: 987px;
+  width: 980px;
   height: 100%;
   overflow: hidden;
 
-  @media (max-width: 1920px) {
+  @media (max-width: 1920px) and (min-width: 1441px) {
     width: 68.6%;
   }
 
@@ -73,7 +72,7 @@
   height: 100%;
   overflow: hidden;
 
-  @media (max-width: 1920px) {
+  @media (max-width: 1920px) and (min-width: 1441px) {
     width: 32.1%;
   }
 
@@ -105,8 +104,8 @@
 
 .room-details__info_outer {
   width: 100%;
-  height: 944px;
-  padding: 71px 132px 70px 141px;
+  height: fit-content;
+  padding: 70px 140px 69px 139px;
 
   @media (min-width: 1450px) and (max-width: 1920px) {
     height: auto;
@@ -122,7 +121,7 @@
   @include isFlex();
   position: relative;
   width: 100%;
-  min-width: 1167px;
+  min-width: 1160px;
   height: 799px;
 
   @media (min-width: 1450px) and (max-width: 1920px) {
@@ -158,6 +157,7 @@
   @include isFlex($justify: flex-start, $wrap: wrap);
   width: 712px;
   height: 799px;
+  margin-top: 1px;
 
   @media (min-width: 1500px) and (max-width: 1920px) {
     width: 60%;
@@ -184,6 +184,7 @@
 .room-details__roomData {
   @include isFlex();
   width: 675px;
+  margin-left: 1px;
 
   @media (min-width: 1500px) and (max-width: 1920px) {
     width: 90%;
@@ -209,23 +210,30 @@
 .room-details__roomInfo {
   @include isFlex($direction: column);
   width: 273px;
-  height: 295px;
+  height: fit-content;
   margin-right: 88px;
-  background: white;
+  background: $light;
 
   @media (min-width: 1650px) and (max-width: 1920px) {
     width: 40%;
   }
 
   @media (max-width: 1400px) {
-    //@media (max-width: 1250px) {
     margin-right: 0;
+  }
+
+  & > div:not(:first-of-type) {
+    margin-top: 21px;
+  }
+
+  & > div:last-of-type {
+    margin-top: 20px;
   }
 }
 
 .room-details__roomImpression {
-  @include isFlex($direction: column);
-  width: 311px;
+  @include isFlex($direction: column, $justify: flex-start);
+  width: 315px;
   height: 172px;
   background: white;
 
@@ -240,11 +248,11 @@
 }
 
 .room-details__reviews {
-  @include isFlex($direction: column);
+  @include isFlex($direction: column, $justify: flex-start);
   position: relative;
   width: 100%;
-  height: 331px;
-  margin-top: 10px;
+  height: 330px;
+  margin-top: 12px;
   background: $light;
 
   @media (min-width: 1650px) and (max-width: 1920px) {
@@ -264,10 +272,8 @@
 }
 
 .room-details__checkbox-list {
-  @media (min-width: 1500px) {
-    width: 100%;
-    margin-top: 20px;
-  }
+  width: 100%;
+  margin-top: 17px;
 
   @media (max-width: 1400px) {
     margin-top: 20px;
@@ -276,7 +282,7 @@
 
 .reviews__info {
   @extend .info__additional;
-  @include absoluteTopRight(6px, -2px);
+  @include absoluteTopRight(6px, 1px);
 
   @media (min-width: 1750px) and (max-width: 1920px) {
     font-size: $fs_h2;
@@ -289,12 +295,12 @@
 }
 
 .room-details__rules {
-  @include isFlex($direction: column);
+  @include isFlex($direction: column, $justify: flex-start);
   width: 292px;
   height: 158px;
-  margin-right: 72px;
-  margin-top: 7px;
-  background: white;
+  margin-right: 70px;
+  margin-top: 6px;
+  background: $light;
 
   @media (min-width: 1500px) and (max-width: 1920px) {
     margin-top: 20px;
@@ -317,11 +323,11 @@
 }
 
 .room-details__cancellation {
-  @include isFlex($direction: column);
+  @include isFlex($direction: column, $justify: flex-start);
   width: 341px;
   height: 138px;
-  margin-top: 7px;
-  background: white;
+  margin-top: 5px;
+  background: $light;
 
   @media (min-width: 1500px) and (max-width: 1920px) {
     margin-top: 20px;
@@ -337,11 +343,11 @@
 }
 
 .room-details__text {
-  line-height: 24px;
+  line-height: 22px;
   font-weight: 700;
   font-size: $fs_h2;
   color: $dark-shade_most;
-  letter-spacing: -0.001em;
+  letter-spacing: 0.001em;
 
   @media (min-width: 1750px) and (max-width: 1920px) {
     font-size: $fs_h1;
@@ -351,9 +357,10 @@
 .room-details__cancellation_info {
   width: 100%;
   height: auto;
-  line-height: 1.75em;
+  margin-top: 19px;
+  line-height: $fs_h1;
   color: $dark-shade_more;
-  letter-spacing: 0.003em;
+  letter-spacing: 0.0001em;
 
   @media (min-width: 1500px) {
     width: 100%;
@@ -424,8 +431,8 @@
 .room-details__description > div {
   @media (max-width: 690px) {
     width: 90%;
-    height: auto;
-    margin: 0 auto 50px;
+    height: fit-content;
+    margin: 1px auto 50px;
   }
 
   @media (max-width: 1400px) {
@@ -468,7 +475,7 @@
   }
 
   & .booking-info__sign:first-of-type {
-    left: 2px;
-    bottom: 2px;
+    left: 3px;
+    bottom: 1px;
   }
 }

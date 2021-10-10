@@ -17,7 +17,7 @@
 
   &__buttons {
     @include isFlex();
-    width: 242px;
+    width: 240px;
     height: 40.4px;
     font-size: 0.875em;
   }
@@ -38,11 +38,11 @@
   &__info {
     width: fit-content;
     height: 23px;
-    line-height: 18px;
+    line-height: 16px;
     margin: 0 auto;
     font-size: $fs_base;
     text-align: left;
-    letter-spacing: .005em;
+    letter-spacing: .0001em;
   }
 }
 
@@ -50,7 +50,6 @@
 .pagination__button_last,
 .pagination__button_first {
   @include paginationItem;
-  line-height: 39px;
   background: transparent;
   color: $dark-shade_medium;
   font-weight: 400;

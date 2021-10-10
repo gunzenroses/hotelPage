@@ -20,7 +20,7 @@ body {
   line-height: 14.63px;
   -webkit-text-size-adjust: 100%;
   font-size: $fs_base;
-  letter-spacing: -.05em;
+  letter-spacing: .05em;
   font-family: $montserrat;
   font-weight: 400;
   color: $dark-shade_more;
@@ -53,7 +53,7 @@ h3 {
   font-size: $fs_h3;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: .01em;
+  //letter-spacing: .01em;
 }
 
 a {
@@ -156,10 +156,10 @@ select {
   height: 15px;
   margin-bottom: 3.5px;
   line-height: $fs_h3;
-  font-size: .87rem;
+  font-size: $fs_h3;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: -.003em;
+  letter-spacing: .003em;
 
   @media (min-width: 1750px) and (max-width: 1920px) {
     font-size: $fs_base;
@@ -168,7 +168,8 @@ select {
   &_right {
     @extend .label;
     position: absolute;
-    right: -2px;
+    right: 0;
+    top: 1px;
     font-weight: 400;
     color: $dark-shade_medium;
     text-align: right;
@@ -230,7 +231,7 @@ select {
     height: 63px;
 
     & input {
-      letter-spacing: -0.01em;
+      letter-spacing: 0.005em;
     }
   }
 }

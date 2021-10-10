@@ -1,10 +1,15 @@
 
 include ../button/_button.pug
 
-mixin header(user)
-  header.header
-    +logo()
-    +headerMenu(user)
+mixin header(user="", theme="")
+  if theme == ""
+    header.header
+      +logo()
+      +headerMenu(user)
+  else 
+    header(class="header" + "_" + theme)
+      +logo()
+      +headerMenu(user)
 
 mixin logo()
   a(href="./landing-page.html").logo__link

@@ -23,14 +23,14 @@
 
   & input {
     font-size: 13.5px;
-    letter-spacing: .03em;
+    letter-spacing: .02em;
   }
 }
 
 .date-range__selector .label {
   margin-bottom: 3.5px;
   margin-top: 5px;
-  letter-spacing: -.002em;
+  letter-spacing: .002em;
 }
 
 .dataRange__container_common {
@@ -65,8 +65,6 @@
 
 .date__range {
   @extend .dropdown__button;
-  padding-left: 12px;
-  padding-bottom: 2px;
 
   @media (min-width: 1750px) and (max-width: 1920px) {
     font-size: $fs_h2;

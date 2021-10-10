@@ -2,6 +2,7 @@
   @include isFlex();
   width: 311px;
   height: 126px;
+  margin-top: 22px;
 
   @media (min-width: 1650px) and (max-width: 1920px){
     width: 100%;
@@ -46,13 +47,17 @@
 
 .donut__number {
   line-height: 29.26px;
-  font-size: 1.75rem;
+  font-size: $fs_h1;
+  font-weight: 600;
   letter-spacing: .005em;
+  color: $purple;
 }
 
 .donut__label {
   line-height: 14.63px;
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: 700;
+  color: $purple;
 }
 
 .li_circle {
@@ -68,9 +73,9 @@
 .donut__caption {
   width: 165px;
   height: 96px;
-  line-height: 24.5px;
-  margin-top: 25px;
-  margin-left: 31px;
+  line-height: 24px;
+  margin-top: 26px;
+  margin-left: 30px;
   font-size: $fs_base;
 
   @media (min-width: 1750px) and (max-width: 1920px){

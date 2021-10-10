@@ -3,13 +3,11 @@
   @include container(
     $width: 1440px,
     $height: 1350px,
-    $mt: 50px,
-    $mb: 50px,
     $ms: auto
   );
   @include isFlex($direction: column, $justify: flex-start);
   position: relative;
-  padding-top: 142px;
+  padding-top: 141px;
   padding-bottom: 132px;
   overflow: auto;                   //to avoid margin-collapse
   background: $background;
@@ -29,14 +27,14 @@
   }
 }
 
+.headers-n-footers_outer > header:not(:first-of-type) {
+  margin-top: 40px;
+}
+
 .headers-n-footers_outer > .footer_outer {
-  margin-top: 41px;
+  margin-top: 39px;
 }
 
 .headers-n-footers_outer > .footer-creative {
-  margin-top: 41px;
-}
-
-.headers-n-footers_outer > nav:not(:first-of-type) {
   margin-top: 40px;
 }

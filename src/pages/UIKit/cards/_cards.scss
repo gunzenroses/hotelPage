@@ -26,9 +26,9 @@
 /* Flex for adaptive design */
 
 .cards_inner {
-  @include containerSimple($w: 1207px, $h: 1068px);
+  @include containerSimple($w: 1200px, $h: 1068px);
   @include isFlex($direction: column, $wrap: wrap, $justify: flex-start);
-  margin: 151px 0 134px 141px;
+  margin: 150px 0 134px 140px;
   background: transparent;
 
   @media (max-width: 1400px) {
@@ -56,14 +56,14 @@
 }
 
 .cards__card-search {
-  width: 382px;
+  width: 380px;
   height: fit-content;
 }
 
 .cards__card-registration {
   @include cardsMargins;
-  width: 383px;
-  height: 650px;
+  width: 380px;
+  min-height: 645px;
   margin-top: 40px;
 
   & .textfield_login {
@@ -74,8 +74,8 @@
 
 .cards__card-booking {
   @include cardsMargins;
-  width: 382px;
-  height: 513px;
+  width: 380px;
+  height: 510px;
   margin-top: 1px;
 
   & .booking-total__line {
@@ -85,8 +85,8 @@
 
 .cards__card-signin {
   @include cardsMargins;
-  width: 381px;
-  height: 360px;
+  width: 380px;
+  min-height: 358px;
   margin-top: 40px;
 
   @media (max-width: 1400px) {
@@ -102,16 +102,14 @@
   @include cardsMargins;
   width: 320px;
   height: fit-content;
-  margin-top: -1px;
 }
 
 .cards_inner > .card-room {
-  margin-left: -0.5px;
   margin-top: 39px;
 }
 
 .cards_inner > .card-room:last-of-type {
-  margin-top: 40px;
+  margin-top: 38px;
 }
 
 /* Cards styles */
@@ -122,9 +120,9 @@
   text-align: left;
   line-height: 29px;
   margin-left: 0px;
-  letter-spacing: -0.003em;
-  line-height: 30px;
-  font-size: 1.74rem;
+  letter-spacing: 0.003em;
+  line-height: 29px;
+  font-size: $fs_h1;
 
   @media (max-width: 450px) {
     width: 280px;
@@ -138,17 +136,21 @@
   font-size: $fs_base;
   font-weight: 400;
   color: $dark-shade_most;
-  letter-spacing: 0.004em;
+  letter-spacing: 0.001em;
 }
 
 .card__text_row {
   @include isFlex();
   width: 100%;
   height: 44px;
-  margin: 31px auto 0;
   letter-spacing: 0.005em;
 
   @media (max-width: 450px) {
     width: 280px;
   }
+}
+
+.card__text_row .button_filled_inner {
+  letter-spacing: .05em;
+  padding-right: 0;
 }

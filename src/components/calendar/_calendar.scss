@@ -2,7 +2,7 @@
   @include containerDimed;
   @include isFlex($direction: column, $justify: flex-start);
   width: 320px;
-  min-height: 369px;
+  min-height: 370px;
   border: 1px solid rgba(31, 32, 65, 0.25);
   background: $light;
   z-index: 3;
@@ -95,7 +95,7 @@
     font-weight: 700;
     color: $purple;
     align-items: center;
-    letter-spacing: -.01em;
+    letter-spacing: .01em;
 
     @media (min-width: 1750px) and (max-width: 1920px) {
       font-size: $fs_h2;
@@ -226,7 +226,7 @@
 .calendar__buttons {
   @include isFlex();
   width: 100%;
-  padding: 23px 19px 21px;
+  padding: 21px 19px 18px;
   color: $purple;
 
   &_reset,

@@ -7,7 +7,7 @@
 
 .sign-in__content {
   @extend .registration__content;
-  height: 707px;
+  height: 702px;
 
   @media (max-width: 500px) {
     // carouselSignin + card-signin + initial top
@@ -23,8 +23,8 @@
 
 .sign-in__card-signin {
   @extend .registration__card-registration;
-  width: 383px;
-  top: 174px;
+  width: 380px;
+  top: 172px;
   transform: translateX(-49%);
 
   @media (max-width: 500px) {
