@@ -38,8 +38,8 @@ export default class DropdownGuests {
 
   plusAndMinusToItem(e) {
     const trg = e.target;
-    if (trg.classList.value === 'js-dropdown__minus') this.minusToItem(trg);
-    if (trg.classList.value === 'js-dropdown__plus') this.plusToItem(trg);
+    if (trg.classList.contains('js-dropdown__minus')) this.minusToItem(trg);
+    if (trg.classList.contains('js-dropdown__plus')) this.plusToItem(trg);
   }
 
   minusToItem(trg) {
@@ -50,6 +50,7 @@ export default class DropdownGuests {
   }
 
   plusToItem(trg) {
+    console.log(12)
     this.orderInData = parseInt(trg.previousElementSibling.dataset.order, 10);
     this.data[this.orderInData] += 1;
     this.showItemNumber(this.orderInData);
