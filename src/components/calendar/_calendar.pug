@@ -11,8 +11,8 @@ mixin calendar(calendarId)
           +weekdays(day)
       .weeks__days.js-weeks__days
     .calendar__buttons
-      button.js-calendar__buttons_reset.calendar__buttons_reset(type='reset') Очистить
-      button.js-calendar__buttons_submit.calendar__buttons_submit(type='button') Применить
+      button.js-calendar__button-reset.calendar__button-reset(type='reset') Очистить
+      button.js-calendar__button-submit.calendar__button-submit(type='button') Применить
 
 mixin weekdays(weekday)
   span!= weekday

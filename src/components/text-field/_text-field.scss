@@ -4,6 +4,14 @@
   padding: 0px 0 2px 12px;
 }
 
+.textfield_in-subscription {
+  @extend .textfield;
+
+  @media (max-width: 470px) {
+    width: 260px;
+  }
+}
+
 .label_none {
   display: none;
 }
@@ -36,6 +44,16 @@
   margin-top: 10px;
 }
 
+.textfield_login_main {
+  @extend .textfield_login;
+  margin-top: 20px;
+}
+
+.textfield_login_in-signin {
+  @extend .textfield_login;
+  margin-top: 20px;
+}
+
 .arrow_submit {
   @include absoluteTopRight(-1px, -2px);
   @include containerSize(44px);
@@ -47,9 +65,4 @@
   background-image: $linearGradientLilac;
   -webkit-background-clip: text;
   background-clip: text;
-}
-
-.textfield_login_in-signin {
-  @extend .textfield_login;
-  margin-top: 20px;
 }

@@ -139,7 +139,7 @@
   letter-spacing: 0.001em;
 }
 
-.card__text_row {
+.card__text_in-row {
   @include isFlex();
   width: 100%;
   height: 44px;
@@ -150,7 +150,7 @@
   }
 }
 
-.card__text_row .button_filled_inner {
+.card__text_in-row .button_filled_inner {
   letter-spacing: .05em;
   padding-right: 0;
 }

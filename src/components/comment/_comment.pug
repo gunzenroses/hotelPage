@@ -7,9 +7,9 @@ mixin comment(commentData)
       .comment__head
         .author__pic
           img(src=authorPic alt="profile picture")
-        .info__description
-          div(class="info__main")= authorName
-          div(class="info__additional")= commentTime
+        .info__form
+          div(class="info__title")= authorName
+          div(class="info__description")= commentTime
       .comment__body
         .comment__likes
           +buttonLikeItem(buttonLikeId, buttonNumber)

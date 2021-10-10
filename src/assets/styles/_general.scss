@@ -1,6 +1,6 @@
 /* src/assets/styles/common/_general.scss  */
 
-@import "./normalize";
+@import './normalize';
 
 * {
   box-sizing: border-box;
@@ -151,21 +151,10 @@ select {
 }
 
 .label {
-  display: inline-block;
-  height: 15px;
-  margin-bottom: 3.5px;
-  line-height: $fs_h3;
-  font-size: $fs_h3;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: .003em;
-
-  @media (min-width: 1750px) and (max-width: 1920px) {
-    font-size: $fs_base;
-  }
+  @include labelMixin;
 
   &_right {
-    @extend .label;
+    @include labelMixin;
     position: absolute;
     right: 0;
     top: 1px;
@@ -202,7 +191,7 @@ select {
   /* Support for Firefox. */
   -moz-osx-font-smoothing: grayscale;
   /* Support for IE. */
-  font-feature-settings: "liga";
+  font-feature-settings: 'liga';
 }
 
 .reverse {

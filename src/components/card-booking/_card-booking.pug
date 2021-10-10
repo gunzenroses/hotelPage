@@ -10,8 +10,10 @@ mixin cardBooking(serviceName, serviceStyle)
     +bookingInfoItem("9 990₽ х 4 суток", "39 960")
     +bookingInfoItem("Сбор за услуги: скидка 2 179₽", "0", "full")
     +bookingInfoItem(serviceName, "300", serviceStyle)
-    +bookingTotalPrice("38 081₽")
-    +buttonFormSubmit("Забронировать")
+    .card-booking__price-info
+      +bookingTotalPrice("38 081₽")
+    .card-booking__button
+      +buttonFormSubmit("Забронировать")
 
 
 mixin bookingTotalPrice(totalPrice)

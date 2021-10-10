@@ -9,7 +9,7 @@ mixin room(roomOptions)
     .room__info
       +bookingText("small", bookingNumber, bookingType, bookingPrice)
       .room__line
-      .card-text__row_small.pr2
+      .card-text__row_narrow
         +buttonRate(...starIds, starName, ...starRate)
         +review(reviewAmount)
 

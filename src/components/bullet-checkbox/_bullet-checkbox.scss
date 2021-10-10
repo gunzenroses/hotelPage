@@ -22,6 +22,11 @@
     border-radius: 50%;
     background-color: $dark-shade_less;
   }
+
+  &__label {
+    @include labelMixin;
+    margin-bottom: 11px;
+  }
   
   &__title {
     width: 242px;
@@ -37,10 +42,6 @@
       letter-spacing: 0;
     }
   }
-}
-
-.bullet__container > .label {
-  margin-bottom: 11px;
 }
 
 .bullet + .bullet {

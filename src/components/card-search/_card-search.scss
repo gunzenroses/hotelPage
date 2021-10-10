@@ -12,19 +12,28 @@
   }
 }
 
-.card-search .date__range {
+.card-search .date-range__info {
   height: 44px;
 }
 
-.card-search > div:first-of-type {
+.card-search__calendar,
+.card-search__guests,
+.card-search__button {
+  width: 100%;
+}
+
+.card-search__calendar {
   margin-top: 18px;
 }
 
-.card-search > div:nth-of-type(2) {
+.card-search__guests {
   margin-top: 25px;
 }
 
-.card-search > button {
+.card-search__button {
   margin-top: 30px;
+}
+
+.card-search__button .button_submit {
   padding-right: 4px;
 }

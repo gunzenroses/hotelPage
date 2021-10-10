@@ -35,7 +35,7 @@
   }
 
   &::before {
-    content: "\e5c4";
+    content: '\e5c4';
     position: absolute;
     top: 4px;
     font-size: $fs_h1;
@@ -55,7 +55,7 @@
   }
 
   &::before {
-    content: "\e5c8";
+    content: '\e5c8';
     position: absolute;
     top: 4px;
     font-size: $fs_h1;
@@ -149,7 +149,7 @@
 .weeks__day_next_checkedin::before,
 .weeks__day_prev_checkedout::before,
 .weeks__day_next_checkedout::before {
-  content: "";
+  content: '';
   @include containerBlock();
   @include absoluteTopLeft();
   background: $dark-shade_fewer;
@@ -195,7 +195,7 @@
   z-index: 2;
 
   &::after {
-    content: "";
+    content: '';
     @include absoluteTopLeft();
     @include containerBlock();
     background: $linearGradientLilac;
@@ -214,7 +214,7 @@
   z-index: 2;
 
   &::after {
-    content: "";
+    content: '';
     @include absoluteTopLeft();
     @include containerBlock();
     background: $linearGradientLilac;
@@ -228,21 +228,41 @@
   width: 100%;
   padding: 21px 19px 18px;
   color: $purple;
+}
 
-  &_reset,
-  &_submit {
-    font-size: $fs_h3;
-    font-weight: 700;
-    font-family: Montserrat;
-    text-transform: uppercase;
-    color: $purple;
+.calendar__button-reset,
+.calendar__button-submit {
+  font-size: $fs_h3;
+  font-weight: 700;
+  font-family: Montserrat;
+  text-transform: uppercase;
+  color: $purple;
 
-    @media (min-width: 1750px) and (max-width: 1920px) {
-      font-size: $fs_base;
-    }
+  @media (min-width: 1750px) and (max-width: 1920px) {
+    font-size: $fs_base;
   }
 }
 
 .calendar__input {
   text-transform: uppercase;
+}
+
+.dropdown__calendar {
+  @include absoluteTopLeft(65px);
+  display: none;
+  width: 320px;
+  height: 369px;
+  margin-top: 4px;
+  background: $light;
+  z-index: 2;
+
+  @media (min-width: 1650px) and (max-width: 1920px) {
+    width: 100%;
+  }
+
+  @media (max-width: 450px) {
+    width: 100%;
+    min-width: 260px;
+    margin: 0 auto;
+  }
 }

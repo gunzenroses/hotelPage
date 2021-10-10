@@ -2,7 +2,7 @@ mixin dropdownCheckbox(dropdownTitleName, dropdownClassShow)
   .widget.container_medium
     .dropdown.reverse
       div(class="dropdown__content js-dropdown__content " + dropdownClassShow)
-        .checkbox__content
+        .checkbox-expand__content
           +checkboxExpandList()
       .dropdown__button_transparent.js-dropdown__init
         .dropdown__title!= dropdownTitleName
@@ -16,21 +16,21 @@ mixin checkboxExpandList()
   +checkboxExpandItem("shampoo", false, "Шампунь")
 
 mixin checkboxExpandItem(checkboxName, ifChecked, checkboxTitle)
-  label.checkbox_expand
+  label.checkbox-expand
     input(type="checkbox" name=checkboxName checked=ifChecked).checkbox__real
-    span.checkbox__fake_expand
-    span.checkbox__title_expand!= checkboxTitle
+    span.checkbox-expand__fake
+    span.checkbox-expand__title!= checkboxTitle
 
 mixin richCheckboxButtons(checkboxName, containerText)
   .richcheckbox__container
-    h3.label!= containerText
+    h3.richcheckbox__label!= containerText
     +richCheckboxButtonItem(checkboxName, "wide corridor", "Широкий коридор", "Ширина коридоров в номере <br> не менее 91 см.")
     +richCheckboxButtonItem(checkboxName, "help for disabled", "Помощник для инвалидов", "На 1 этаже вас встретит специалист <br> и проводит до номера.")
 
 mixin richCheckboxButtonItem(checkboxName, checkboxValue, checkboxTitle, checkboxSubtitle, checkboxSubtitle2)
-  label.checkbox__button
+  label.richcheckbox__button
     input(type="checkbox" name=checkboxName value=checkboxValue).checkbox__real
-    span.checkbox__fake_expand
-    span.checkbox__description
-      span.checkbox__title_description!= checkboxTitle
-      span.checkbox__subtitle_description!= checkboxSubtitle
+    span.checkbox-expand__fake
+    span.richcheckbox__form
+      span.richcheckbox__title!= checkboxTitle
+      span.richcheckbox__description!= checkboxSubtitle

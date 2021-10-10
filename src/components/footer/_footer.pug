@@ -47,27 +47,27 @@ mixin footerVisible(navigations, abouts, supports, theme="main")
 mixin footerHidden(navigations, abouts, supports)
   .footer__info_hidden
     .footer__navigation
-      h3.js-dropdown__init Навигация
-      .footer__navigation_dropdown.dropdown__content.js-dropdown__content
+      h3.footer__title.js-dropdown__init Навигация
+      .footer__dropdown_in-navigation.dropdown__content.js-dropdown__content
         for navigation in navigations
           +buttonNavbar(navigation, buttonOnclick="./some-address")
     .footer__about
-      h3.js-dropdown__init О нас
-      .footer__about_dropdown.dropdown__content.js-dropdown__content
+      h3.footer__title.js-dropdown__init О нас
+      .footer__dropdown_in-about.dropdown__content.js-dropdown__content
         for about in abouts
           +buttonNavbar(about, buttonOnclick="./some-address")
     .footer__support
-      h3.js-dropdown__init Служба поддержки
-      .footer__support_dropdown.dropdown__content.js-dropdown__content
+      h3.footer__title.js-dropdown__init Служба поддержки
+      .footer__dropdown_in-support.dropdown__content.js-dropdown__content
         for support in supports
           +buttonNavbar(support, buttonOnclick="./some-address")
 
 mixin footerSubscribe()
-  .footer__info_subscribe
+  .footer__info_for-subscription
     h3 Подписка
-    .footer__text Получайте специальные предложения и новости сервиса
+    .footer__text_for-subscription Получайте специальные предложения и новости сервиса
     form.footer__form.js-footer__form(method="get" action="./registration.html")
-      +emailSubscribe()
+      +emailSubscribe("in-subscription")
 
 mixin socialNets()
   .copyright__social

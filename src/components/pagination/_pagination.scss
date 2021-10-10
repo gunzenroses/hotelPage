@@ -64,12 +64,12 @@
   @include paginationNav;
 
   &::before {
-    content: "\e5c8";
+    content: '\e5c8';
     @include paginationBefore;
     font-family: $material-icons;
-    -webkit-font-feature-settings: "liga" 1;
-    -moz-font-feature-settings: "liga" 1;
-    font-feature-settings: "liga" 1;
+    -webkit-font-feature-settings: 'liga' 1;
+    -moz-font-feature-settings: 'liga' 1;
+    font-feature-settings: 'liga' 1;
   }
 }
 
@@ -78,11 +78,11 @@
   @include paginationNav;
 
   &::before {
-    content: "\e5c4";
+    content: '\e5c4';
     @include paginationBefore;
     font-family: $material-icons;
-    -webkit-font-feature-settings: "liga" 1;
-    -moz-font-feature-settings: "liga" 1;
-    font-feature-settings: "liga" 1;
+    -webkit-font-feature-settings: 'liga' 1;
+    -moz-font-feature-settings: 'liga' 1;
+    font-feature-settings: 'liga' 1;
   }
 }

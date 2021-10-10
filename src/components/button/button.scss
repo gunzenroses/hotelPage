@@ -1,4 +1,4 @@
-.button-container {
+.buttons__container {
   @include isFlex($direction: column, $justify: flex-start);
   width: 320px;
   height: 269px;
@@ -9,11 +9,12 @@
   }
 }
 
-.button-container > .label {
+.buttons__label {
+  @include labelMixin;
   margin-bottom: 14px;
 }
 
-.button-row {
+.buttons__row {
   @include isFlex($direction: row);
   margin-top: 0;
   margin-left: 1px;
@@ -117,9 +118,7 @@
   margin-left: 14px;
 }
 
-/* buttonLink */
-
-.button_link {
+.button_linked {
   @extend .button_filled;
   @include isFlex($justify: center, $align: center);
   font-size: $fs_h3;
@@ -145,9 +144,7 @@
   }
 }
 
-/* buttonBiglink */
-
-.button_link_big {
+.button_linked_big {
   position: relative;
   width: 196px;
   height: 34px;
@@ -165,12 +162,17 @@
     cursor: pointer;
     opacity: .5;
   }
+
+  @media (max-width: 550px) {
+    position: relative;
+    width: 136px;
+    font-size: 8px;
+    font-weight: 400;
+  }
 }
 
-/* buttonFormSubmit */
-
 .button_submit {
-  @extend .button_link_big;
+  @extend .button_linked_big;
   width: 100%;
   height: 44px;
   line-height: 14px;
@@ -178,13 +180,13 @@
   letter-spacing: .0001em;
   
   &::before {
-    content: "\e5c8";
+    content: '\e5c8';
     @include absoluteTopRight();
     @include containerSize(44px);
     font-family: $material-icons;
-    -webkit-font-feature-settings: "liga" 1;
-    -moz-font-feature-settings: "liga" 1;
-    font-feature-settings: "liga" 1;
+    -webkit-font-feature-settings: 'liga' 1;
+    -moz-font-feature-settings: 'liga' 1;
+    font-feature-settings: 'liga' 1;
     text-align: center;
     font-size: $fs_h1;
     color: $light;

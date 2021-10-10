@@ -80,7 +80,7 @@
 }
 
 @mixin checkboxFakeBefore {
-  content: "";
+  content: '';
   @include absoluteTopLeft(40%, 50%);
   @include containerBlock(4px, 6px);
   transform: translate(-50%, -50%) rotate(45deg);
@@ -238,6 +238,21 @@
 
   @media (max-width: 550px) {
     padding: 15px 2%;
+  }
+}
+
+@mixin labelMixin {
+  display: inline-block;
+  height: 15px;
+  margin-bottom: 3.5px;
+  line-height: $fs_h3;
+  font-size: $fs_h3;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .003em;
+
+  @media (min-width: 1750px) and (max-width: 1920px) {
+    font-size: $fs_base;
   }
 }
 

@@ -1,15 +1,15 @@
 mixin buttonContainer()
-  .button-container
-    h3.label Buttons
-    .button-row
+  .buttons__container
+    h3.buttons__label Buttons
+    .buttons__row
       +buttonItem("button_filled", "Click me")
       +buttonItem("button_filled", "Click me")
       +buttonFormLink("Click me")
       +buttonFormLink("Click me")
-    .button-row
+    .buttons__row
       +buttonItem("button_clear", "Click me")
       +buttonItem("button_clear", "Click me")
-    .button-row
+    .buttons__row
       +buttonFormSubmit("Перейти к оплате")
 
 
@@ -25,12 +25,12 @@ mixin buttonFormSubmit(buttonText)
 
 //- mixins for link-buttons
 mixin buttonLink(buttonText="", buttonOnclick="./some-address")
-  div(class="button_link")
-    a(class="button_link_inner" href= buttonOnclick)= buttonText
+  div(class="button_linked")
+    a(class="button_linked_inner" href= buttonOnclick)= buttonText
 
 
 mixin buttonBiglink(buttonText="", buttonOnclick="./some-address")
-  a(class="button_link_big" href= buttonOnclick)= buttonText
+  a(class="button_linked_big" href= buttonOnclick)= buttonText
 
 
 mixin buttonNavLink(buttonText="", buttonOnclick="./some-address")

@@ -42,7 +42,7 @@
     margin-right: 10px;
   
     &::before {
-      content: "";
+      content: '';
       @include absoluteTopLeft(3px, 3px);
       width: 12px;
       height: 12px;
@@ -63,6 +63,13 @@
       font-size: $fs_h2;
     }
   }
+
+  &__label {
+    @include labelMixin;
+    font-size: .8rem;
+    letter-spacing: .0001em;
+  }
+  
 }
 
 .toggle_element + .toggle_element {
@@ -82,9 +89,4 @@
 
 .toggle__real:not(:checked) + .toggle__fake::before {
   @extend .toggle__fake::before;
-}
-
-.toggle__container > .label {
-  font-size: .8rem;
-  letter-spacing: .0001em;
 }

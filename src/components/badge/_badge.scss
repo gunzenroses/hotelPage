@@ -22,7 +22,7 @@
 }
 
 .info {
-  &__description {
+  &__form {
     height: 47px;
     width: 200px;
     line-height: 24px;
@@ -37,11 +37,11 @@
     }
   }
   
-  &__main {
+  &__title {
     font-weight: 700;
   }
 
-  &__additional {
+  &__description {
     font-weight: 400;
     letter-spacing: .002em;
   }

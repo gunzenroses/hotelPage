@@ -25,16 +25,16 @@
   &::before {
     width: 24px;
     height: 24px;
-    content: "☆";
+    content: '☆';
   }
 }
 
 input:checked ~ .input__label::before,
 input:checked + .input__label::before {
-  content: "★";
+  content: '★';
 }
 
 .input__rate:hover ~ .input__label:before,
 .input__rate:hover + .input__label:before {
-  content: "★";
+  content: '★';
 }

@@ -13,8 +13,8 @@ export default class ButtonLike {
 
   createChildren(id) {
     this.likeButton = document.getElementById(id);
-    this.number = this.likeButton.querySelector('.js-b-l__n');
-    this.heart = this.likeButton.querySelector('.js-b-l__h');
+    this.number = this.likeButton.querySelector('.js-button-like__number');
+    this.heart = this.likeButton.querySelector('.js-button-like__heart');
   }
 
   enableHandlers() {

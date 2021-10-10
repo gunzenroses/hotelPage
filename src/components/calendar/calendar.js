@@ -41,8 +41,8 @@ export default class Calendar {
       this.calendar = this.mainContainer.querySelector('.js-dropdown__calendar');
     }
 
-    this.btnApply = this.mainContainer.querySelector('.js-calendar__buttons_submit');
-    this.btnReset = this.mainContainer.querySelector('.js-calendar__buttons_reset');
+    this.btnApply = this.mainContainer.querySelector('.js-calendar__button-submit');
+    this.btnReset = this.mainContainer.querySelector('.js-calendar__button-reset');
   }
 
   enableHandlers() {

@@ -1,4 +1,4 @@
-.container__button-like {
+.button-like__container {
   @include isFlex($direction: column);
   width: 90px;
   height: 50px;
@@ -19,7 +19,7 @@
   user-select: none;
 
   &::before {
-    content: "";
+    content: '';
     @extend .button-like;
     @include buttonLikeBefore;
     margin: 1px;

@@ -87,4 +87,9 @@
     font-weight: 700;
     line-height: 23px;
   }
+
+  &__row_narrow {
+    @extend .card-text__row_small;
+    padding-right: 2px;
+  }
 }

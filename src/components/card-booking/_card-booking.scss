@@ -1,4 +1,4 @@
-@import "./card-text";
+@import './card-text';
 
 .card-booking {
   @include containerShadowed;
@@ -18,16 +18,7 @@
   }
 }
 
-.card-booking > .date-range__selector {
-  margin-top: 6px;
-}
-
-.card-booking > .dropdown__container {
-  margin-top: 24px;
-  margin-bottom: 10px;
-}
-
-.card-booking > .booking-total__row {
+.card-booking__price-info {
   width: 100%;
   margin-top: 30px;
 
@@ -38,10 +29,23 @@
   }
 }
 
-.card-booking > button {
+.card-booking__button {
+  width: 100%;
   margin-top: 20px;
-  padding-right: 5px;
   padding-bottom: 2px;
+}
+
+.card-booking__button .button_submit {
+  padding-right: 5px;
+}
+
+.card-booking > .date-range__selector {
+  margin-top: 6px;
+}
+
+.card-booking > .dropdown__container {
+  margin-top: 24px;
+  margin-bottom: 10px;
 }
 
 .booking-text {
@@ -173,6 +177,7 @@
   &__description_special {
     @include isFlex();
     width: 168px;
+    margin-bottom: 16px;
     letter-spacing: .0001em;
 
     @media (min-width: 1650px) and (max-width: 1920px) {
@@ -193,7 +198,7 @@
     border: 1px solid $dark-shade_less;
 
     &::before {
-      content: "i";
+      content: 'i';
       @include absoluteTopLeft(2px, 7px);
       font-size: $fs_h3;
       line-height: $fs_base;

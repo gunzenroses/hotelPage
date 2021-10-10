@@ -4,15 +4,15 @@ mixin dateRangeSeparate(calendarId, labelText_1, inputValue_1, labelText_2, inpu
   div(class="date-range__selector js-date-range__selector")
     div(class="dropdown__calendar js-dropdown__calendar dropdown__content js-dropdown__content" + dropdownClassShow)
       +calendar(calendarId)
-    .dataRange__container.js-dropdown__init
+    .date-range__container.js-dropdown__init
       +dateDropdownSmall(labelText_1, "checkin", inputValue_1, "checkin")
       +dateDropdownSmall(labelText_2, "checkout", inputValue_2, "checkout")
 
 mixin dateDropdownSmall(labelText, inputName, inputValue, dateDataType)
   .container_small
-    h3.label!= labelText
-    .date__range
-      input(type="text" value=inputValue 
+    h3.date-range__label!= labelText
+    .date-range__info
+      input(class="date-range__input" type="text" value=inputValue 
       name=inputName placeholder="ДД.ММ.ГГГГ"
       maxlength="10" data-range=dateDataType readonly)
 
@@ -20,15 +20,15 @@ mixin dateRangeCommon(calendarId, labelText, inputValue, dropdownClassShow, them
   div(class="date-range__selector js-date-range__selector")
     div(class="dropdown__calendar js-dropdown__calendar dropdown__content js-dropdown__content" + dropdownClassShow)
       +calendar(calendarId)
-    .dataRange__container_common.js-dropdown__init
-      h3.label!= labelText
+    .date-range__container_common.js-dropdown__init
+      h3.date-range__label!= labelText
       if theme == ""
-        .date__range
-          input(type="text" value=inputValue 
+        .date-range__info
+          input(class="date-range__input" type="text" value=inputValue 
           name="checkin-checkout" placeholder="ДД.ММ - ДД.ММ"
           maxlength="15" data-range="date-range" readonly)
       else
-        div(class="date__range" + "_" + theme)
-          input(type="text" value=inputValue 
+        div(class="date-range__info" + "_" + theme)
+          input(class="date-range__input" type="text" value=inputValue 
           name="checkin-checkout" placeholder="ДД.ММ - ДД.ММ"
           maxlength="15" data-range="date-range" readonly)

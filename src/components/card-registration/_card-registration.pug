@@ -6,19 +6,21 @@ include ../button-toggle/_button-toggle.pug
 mixin cardRegistration(submitText)
   form.card-registration.js-card-registration(method="get" action="./registration.html" )
     h1.card__text Регистрация аккаунта
-    .c-r__name
+    .card-registration__name
       +name()
-    .c-r__surname
+    .card-registration__surname
       +surname()
-    .c-r__radio
+    .card-registration__radio
       +buttonsRadio("gender-man", true, "gender-woman", false)
-    .c-r__birthday
+    .card-registration__birthday
       +birthdayContainer("Дата рождения", "")
-    .c-r__login
+    .card-registration__login
       +loginContainer("Данные для входа в сервис", "")
-    .c-r__specials
+    .card-registration__specials
       +buttonToggleItem("special offers", false)
-    +buttonFormSubmit(submitText)
-    .card__text_row
-      .card__subline Уже есть аккаунт на Toxin
-      +buttonFormLink("Войти", "signin.html")
+    .card-registration__button
+      +buttonFormSubmit(submitText)
+    .card-registration__info
+      .card__text_in-row
+        .card__subline Уже есть аккаунт на Toxin
+        +buttonFormLink("Войти", "signin.html")

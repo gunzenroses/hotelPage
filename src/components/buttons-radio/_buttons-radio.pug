@@ -1,6 +1,6 @@
 mixin buttonsRadioContainer(legendText, inputManId, ifCheckedMan, inputWomanId, ifCheckedWoman)
   .radio__box
-    legend.label(for="gender")= legendText
+    legend.radio__label(for="gender")= legendText
     +buttonsRadio(inputManId, ifCheckedMan, inputWomanId, ifCheckedWoman)
 
 mixin buttonsRadio(inputManId, ifCheckedMan, inputWomanId, ifCheckedWoman)

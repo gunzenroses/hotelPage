@@ -14,44 +14,45 @@
   }
 }
 
-.c-r__name,
-.c-r__surname,
-.c-r__radio,
-.c-r__birthday,
-.c-r__login,
-.c-r__name {
+.card-registration__name,
+.card-registration__surname,
+.card-registration__radio,
+.card-registration__birthday,
+.card-registration__login,
+.card-registration__name,
+.card-registration__button,
+.card-registration__info {
   width: 100%;
 }
 
-.c-r__name {
+.card-registration__name {
   margin-top: 21px;
 }
 
-.c-r__surname {
+.card-registration__surname {
   margin-top: 10px;
 }
 
-.c-r__radio {
+.card-registration__radio {
   margin-top: 9px;
 }
 
-.c-r__birthday {
+.card-registration__birthday {
   margin-top: 21px;
 }
 
-.c-r__login {
+.card-registration__login {
   margin-top: 20px;
 }
 
-.c-r__specials {
+.card-registration__specials {
   margin-top: 4px;
 }
 
-.card-registration > .button_submit {
-  margin-top: 19px;
-  padding: 15px 20px;
+.card-registration__button {
+  margin-top: 20px;
 }
 
-.card-registration > .card__text_row {
+.card-registration__info {
   margin-top: 30px;
 }

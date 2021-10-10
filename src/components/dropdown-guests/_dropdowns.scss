@@ -29,7 +29,7 @@
 }
 
 .dropdown__info::before {
-  content: "\e5cf";
+  content: '\e5cf';
   @include absoluteTopRight();
   @include containerSize(44px);
   display: block;
@@ -159,7 +159,7 @@
   }
 
   &::before {
-    content: "\e5cf";
+    content: '\e5cf';
     @include absoluteTopRight();
     @include containerSize(44px);
     line-height: 42px;
@@ -196,7 +196,7 @@
 }
 
 .js-dropdown__show ~ .dropdown__button_transparent::before {
-  content: "\e5ce";
+  content: '\e5ce';
 }
 
 .js-dropdown__show ~ .dropdown__info {
@@ -204,7 +204,7 @@
 }
 
 .js-dropdown__show ~ .dropdown__info::before {
-  content: "\e5ce";
+  content: '\e5ce';
 }
 
 .dropdown__rooms > .dropdown__item_expanded:last-of-type {

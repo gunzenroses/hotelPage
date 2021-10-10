@@ -149,20 +149,11 @@
   }
 }
 
-.header__buttons .button_link_big::before {
+.header__buttons .button_linked_big::before {
   content: "Зарегистрироваться";
 
   @media (max-width: 550px) {
-    content: "Регистрация";
-  }
-}
-
-.header__buttons > .button_link_big {
-  @media (max-width: 550px) {
-    position: relative;
-    width: 136px;
-    font-size: 8px;
-    font-weight: 400;
+    content: 'Регистрация';
   }
 }
 
@@ -237,7 +228,7 @@
 }
 
 .dropdown__icon::before {
-  content: "\e5cf";
+  content: '\e5cf';
   position: absolute;
   font-size: $fs_h1;
   font-family: $material-icons;
@@ -275,7 +266,7 @@
 .burger__menu::before,
 .burger__menu::after,
 .burger__menu > span {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   width: 100%;

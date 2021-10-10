@@ -62,10 +62,11 @@
       font-size: $fs_h2;
     }
   }
-}
 
-.radio__box .label {
-  letter-spacing: .0001em;
+  &__label {
+    @include labelMixin;
+    letter-spacing: .0001em;
+  }
 }
 
 .radio__element + .radio__element {
@@ -73,7 +74,7 @@
 }
 
 .radio__real:checked + .radio__fake::before {
-  content: "";
+  content: '';
   @include absoluteTopLeft(3px, 3px);
   @include containerBlock(12px, 12px);
   background: $linearGradientLilac;

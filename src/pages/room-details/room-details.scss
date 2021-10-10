@@ -1,5 +1,5 @@
-@import "Styles/main";
-@import "Components/chart-donut/chart-donut";
+@import 'Styles/main';
+@import 'Components/chart-donut/chart-donut';
 
 /* Main container */
 
@@ -278,7 +278,7 @@
 }
 
 .reviews__info {
-  @extend .info__additional;
+  @extend .info__description;
   @include absoluteTopRight(6px, 1px);
 
   @media (min-width: 1750px) and (max-width: 1920px) {
@@ -397,10 +397,6 @@
   @media (max-width: 450px) {
     margin: 0 auto 50px;
   }
-}
-
-.room-details__booking .booking-total__row {
-  margin-top: 42px;
 }
 
 .room-details__booking .booking-text__type {

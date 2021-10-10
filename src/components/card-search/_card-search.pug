@@ -5,6 +5,9 @@ include ../button/_button.pug
 mixin cardSearch()
   form.card-search(method="get" action="./search-room.html")
     h1.card__text Найдём номера под ваши пожелания
-    +dateRangeSeparate("calendar_search", "Прибытие", "", "Выезд", "", "")
-    +dropdownGuestsLabeled("Гости", "dropdown_guests_search", "", "dropdownGuestsInput_3")
-    +buttonFormSubmit("Подобрать номер", "room_search.html")
+    .card-search__calendar
+      +dateRangeSeparate("calendar_search", "Прибытие", "", "Выезд", "", "")
+    .card-search__guests
+      +dropdownGuestsLabeled("Гости", "dropdown_guests_search", "", "dropdownGuestsInput_3")
+    .card-search__button
+      +buttonFormSubmit("Подобрать номер", "room_search.html")
