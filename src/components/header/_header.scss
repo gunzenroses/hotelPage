@@ -205,7 +205,7 @@
 /* dropdowns in navbar */
 
 .button_navlink {
-  @include isFlex($direction: column);
+  display: inline-block;
   position: relative;
   height: 18px;
   line-height: 20px;
