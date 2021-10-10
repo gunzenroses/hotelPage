@@ -1,4 +1,4 @@
-import { paginationData1 } from 'Main/assets/scripts/MyData';
+import { paginationData1 } from 'Main/assets/scripts/myData';
 
 export default class ButtonPagination {
   constructor(id, data) {

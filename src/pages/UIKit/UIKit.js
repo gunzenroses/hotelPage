@@ -1,10 +1,10 @@
-import 'Scripts/InputMasks';
-import 'Components/card-booking/CardBooking';
-import 'Components/card-registration/ValidateRegistration';
-import 'Components/card-search/CardSearch';
-import 'Components/card-singin/ValidateSignin';
-import 'Components/footer/ValidateFooterForm';
-import 'Components/range/Range';
+import 'Scripts/inputMasks';
+import 'Components/card-booking/cardBooking';
+import 'Main/components/card-registration/validateRegistration';
+import 'Components/card-search/cardSearch';
+import 'Main/components/card-singin/validateSignin';
+import 'Main/components/footer/validateFooterForm';
+import 'Components/range/range';
 import makeButtonLike from 'Components/button-like/makeButtonLike';
 import makeCalendar from 'Components/calendar/makeCalendar';
 import makeExpandable from 'Components/checkbox-expandable/makeExpandable';
@@ -14,7 +14,7 @@ import makeCarousel from 'Components/room-carousel/makeCarousel';
 import makePagination from 'Components/pagination/makePagination';
 import {
   paginationData1, guestsData1, guestsDataBooking, roomsData1, roomsData2,
-} from 'Scripts/MyData';
+} from 'Main/assets/scripts/myData';
 
 import './UIkit.scss';
 

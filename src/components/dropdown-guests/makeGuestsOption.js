@@ -1,4 +1,4 @@
-import DropdownGuests from './DropdownGuests';
+import DropdownGuests from './dropdownGuests';
 
 export default function makeGuestsOption(items) {
   items.forEach((item) => {

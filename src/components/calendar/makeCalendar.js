@@ -1,4 +1,4 @@
-import Calendar from './Calendar';
+import Calendar from './calendar';
 
 export default function makeCalendar() {
   const items = document.querySelectorAll('.js-calendar');

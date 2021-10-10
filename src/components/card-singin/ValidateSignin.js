@@ -1,5 +1,5 @@
 require('jquery-validation');
-require('Main/assets/scripts/ValidationMethods');
+require('Main/assets/scripts/validationMethods');
 
 $('.js-card-signin').validate({
   rules: {

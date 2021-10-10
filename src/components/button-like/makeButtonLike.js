@@ -1,4 +1,4 @@
-import ButtonLike from './ButtonLike';
+import ButtonLike from './buttonLike';
 
 export default function makeButtonLike(items) {
   items.forEach((item) => {

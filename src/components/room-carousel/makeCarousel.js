@@ -1,4 +1,4 @@
-import Carousel from './RoomCarousel';
+import Carousel from './roomCarousel';
 
 export default function makeCarousel() {
   const carousels = document.querySelectorAll('.js-room-carousel');

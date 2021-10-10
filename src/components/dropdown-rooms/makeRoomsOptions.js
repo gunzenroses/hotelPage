@@ -1,4 +1,4 @@
-import DropdownRooms from './DropdownRooms';
+import DropdownRooms from './dropdownRooms';
 
 export default function makeRoomsOptions(items) {
   items.forEach((item) => {

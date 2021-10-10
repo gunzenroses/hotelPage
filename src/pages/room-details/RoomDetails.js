@@ -1,6 +1,6 @@
-import 'Scripts/InputMasks';
-import 'Components/card-booking/CardBooking';
-import 'Components/footer/ValidateFooterForm';
+import 'Scripts/inputMasks';
+import 'Components/card-booking/cardBooking';
+import 'Main/components/footer/validateFooterForm';
 import makeButtonLike from 'Components/button-like/makeButtonLike';
 import makeExpandable from 'Components/checkbox-expandable/makeExpandable';
 
