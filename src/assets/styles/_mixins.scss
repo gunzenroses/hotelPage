@@ -159,6 +159,49 @@
   z-index: 2;
 }
 
+@mixin footerMixin {
+  @include container(
+      $width: 1164px,
+      $height: 24px,
+      $mt: 24px,
+      $ms: 0,
+      $mb: 22px
+    );
+  @include isFlex($align: flex-start);
+
+  @media (min-width: 1500px) and (max-width: 1920px) {
+    margin: 23px auto;
+  }
+
+  @media (min-width: 1650px) and (max-width: 1920px) {
+    width: 80%;
+  }
+
+  @media (max-width: 1340px) {
+    @include container(
+      $width: 85%,
+      $height: 24px,
+      $mt: 23px,
+      $ms: auto,
+      $mb: 23px
+    );
+  }
+
+  @media (max-width: 800px) {
+    @include container(
+      $width: 85%,
+      $height: 36px,
+      $mt: 20px,
+      $ms: auto,
+      $mb: 20px
+    );
+  }
+
+  @media (max-width: 400px) {
+    width: 90%;
+  }
+}
+
 @mixin formMargin {
   @media (min-width: 1650px) and (max-width: 1920px) {
     margin-top: 40px;

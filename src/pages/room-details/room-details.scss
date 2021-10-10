@@ -44,7 +44,7 @@
   height: 485px;
   overflow: hidden;
 
-  @media (max-width: 1920px) and (min-width: 1441px) {
+  @media (max-width: 1920px) {
     height: auto;
   }
 
@@ -58,7 +58,7 @@
   height: 100%;
   overflow: hidden;
 
-  @media (max-width: 1920px) and (min-width: 1441px) {
+  @media (max-width: 1920px) {
     width: 68.6%;
   }
 
@@ -72,7 +72,7 @@
   height: 100%;
   overflow: hidden;
 
-  @media (max-width: 1920px) and (min-width: 1441px) {
+  @media (max-width: 1920px) {
     width: 32.1%;
   }
 
@@ -121,7 +121,6 @@
   @include isFlex();
   position: relative;
   width: 100%;
-  min-width: 1160px;
   height: 799px;
 
   @media (min-width: 1450px) and (max-width: 1920px) {
@@ -165,7 +164,6 @@
   }
 
   @media (max-width: 1400px) {
-    //@media (max-width: 1250px) {
     justify-content: space-between;
     width: 100%;
     height: auto;
@@ -191,7 +189,6 @@
   }
 
   @media (max-width: 1400px) {
-    //@media (max-width: 1250px) {
     flex-direction: column;
   }
 
@@ -309,7 +306,6 @@
   }
 
   @media (max-width: 1400px) {
-    //@media (max-width: 1250px) {
     margin-right: 0;
   }
 }
@@ -336,7 +332,6 @@
   }
 
   @media (max-width: 1400px) {
-    //@media (max-width: 1250px) {
     width: calc(100% - 292px - 20px);
     height: auto;
   }
@@ -372,7 +367,6 @@
   }
 
   @media (max-width: 1400px) {
-    //@media (max-width: 1250px) {
     margin: 20px;
     margin-left: 0;
   }
@@ -389,7 +383,6 @@
   }
 
   @media (max-width: 1400px) {
-    //@media (max-width: 1250px) {
     @include absoluteTopRight();
     right: calc((100% - 800px) / 2);
   }
@@ -436,7 +429,6 @@
   }
 
   @media (max-width: 1400px) {
-    //@media (max-width: 1250px) {
     margin-bottom: 25px;
   }
 
@@ -447,7 +439,6 @@
 
 .room-details__roomData > div {
   @media (max-width: 1400px) {
-    //@media (max-width: 1250px) {
     width: 100%;
     margin-bottom: 25px;
   }

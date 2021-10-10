@@ -121,7 +121,7 @@
 .search-room__rooms {
   @include isFlex($direction: column, $justify: flex-start);
   width: 834px;
-  height: auto;
+  height: fit-content;
 
   @media (min-width: 1500px) and (max-width: 1920px) {
     width: 68%;
@@ -204,7 +204,7 @@
   margin-left: 290px;
 
   @media (min-width: 1500px) and (max-width: 1920px) {
-    margin: 21px auto 0;
+    margin: 20px auto 0;
   }
 
   @media (max-width: 1400px) {

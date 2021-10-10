@@ -98,10 +98,6 @@
   letter-spacing: .0001em;
 }
 
-// .checkbox__description > .checkbox__subtitle_description {
-//   letter-spacing: .0001em;
-// }
-
 .checkbox__real:checked ~ .checkbox__fake_expand {
   @extend .checkbox__fake_expand;
   border-color: $purple;

@@ -3,10 +3,6 @@
   width: 280px;
   height: 69px;
 
-  // &:nth-of-type(4){
-  //   height: 70px;
-  // }
-
   @media (min-width: 1650px) and (max-width: 1920px){
     width: fit-content;
   }

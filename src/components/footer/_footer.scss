@@ -406,88 +406,27 @@
   }
 
   &_inner {
-    @include container(
-      $width: 1164px,
-      $height: 24px,
-      $mt: 24px,
-      $ms: 0,
-      $mb: 22px
-    );
-    @include isFlex($align: flex-start);
+    @include footerMixin;
     margin-left: 140px;
-
-    @media (min-width: 1500px) and (max-width: 1920px) {
-      margin: 23px auto;
-    }
-
-    @media (min-width: 1650px) and (max-width: 1920px) {
-      width: 80%;
-    }
-
-    @media (max-width: 1340px) {
-      @include container(
-        $width: 85%,
-        $height: 24px,
-        $mt: 23px,
-        $ms: auto,
-        $mb: 23px
-      );
-    }
-
-    @media (max-width: 800px) {
-      @include container(
-        $width: 85%,
-        $height: 36px,
-        $mt: 20px,
-        $ms: auto,
-        $mb: 20px
-      );
-    }
-
-    @media (max-width: 400px) {
-      width: 90%;
-    }
   }
 
   &_landing {
-    @extend .footer__copyright_inner;
+    @include footerMixin;
     margin-left: 139px;
     margin-top: 22px;
   }
 
   &_in-signin {
-    @extend .footer__copyright_inner;
+    @include footerMixin;
+    margin-left: 140px;
     margin-top: 23px;
   }
 
   &_in-search,
-  &_in-registration {
-    @extend .footer__copyright_inner;
-  }
-
+  &_in-registration,
   &_in-details {
-    @extend .footer__copyright_inner;
-  }
-}
-
-.footer__copyright_inner > .copyright__text {
-  @media (max-width: 800px) {
-    width: 230px;
-    line-height: 18px;
-  }
-  @media (max-width: 400px) {
-    width: 200px;
-    font-size: $fs_h3;
-  }
-}
-
-.footer__copyright_inner > .copyright__social {
-  @media (max-width: 800px) {
-    height: 36px;
-  }
-
-  @media (max-width: 400px) {
-    width: 100px;
+    @include footerMixin;
+    margin-left: 140px;
   }
 }
 
@@ -503,6 +442,16 @@
     @media (min-width: 1750px) and (max-width: 1920px){
       font-size: $fs_h2;
     }
+
+    @media (max-width: 800px) {
+      width: 230px;
+      line-height: 18px;
+    }
+    
+    @media (max-width: 400px) {
+      width: 200px;
+      font-size: $fs_h3;
+    }
   }
 
   &__social {
@@ -514,6 +463,14 @@
 
     @media (min-width: 1650px) and (max-width: 1920px) {
       width: 162px;
+    }
+
+    @media (max-width: 800px) {
+      height: 36px;
+    }
+  
+    @media (max-width: 400px) {
+      width: 100px;
     }
   }
 }
