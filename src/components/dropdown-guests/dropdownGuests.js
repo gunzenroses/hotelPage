@@ -50,7 +50,6 @@ export default class DropdownGuests {
   }
 
   plusToItem(trg) {
-    console.log(12)
     this.orderInData = parseInt(trg.previousElementSibling.dataset.order, 10);
     this.data[this.orderInData] += 1;
     this.showItemNumber(this.orderInData);

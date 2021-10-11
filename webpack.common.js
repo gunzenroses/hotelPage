@@ -20,11 +20,11 @@ module.exports = {
   entry: {
     "index": "./src/index.js",
     "UIKit": "./src/pages/UIKit/UIKit.js",
-    "landing-page": "./src/pages/landing-page/LandingPage.js",
-    "search-room": "./src/pages/search-room/SearchRoom.js",
-    "room-details": "./src/pages/room-details/RoomDetails.js",
-    "registration": "./src/pages/registration/Registration.js",
-    "signin": "./src/pages/signin/Signin.js",
+    "landing-page": "./src/pages/landing-page/landingPage.js",
+    "search-room": "./src/pages/search-room/searchRoom.js",
+    "room-details": "./src/pages/room-details/roomDetails.js",
+    "registration": "./src/pages/registration/registration.js",
+    "signin": "./src/pages/signin/signin.js",
   },
   resolve: {
     extensions: [".scss", ".sass", ".js"],
