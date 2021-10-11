@@ -152,6 +152,7 @@
     }
 
     @media (max-width: 450px) {
+      justify-content: space-between;
       min-width: 260px;
       width: 100%;
       margin: 9px 0;
@@ -236,7 +237,7 @@
   &__row {
     @include isFlex();
     position: relative;
-    width: 320px;
+    width: 100%;
     margin-left: 1px;
     line-height: 24px;
     font-size: $fs_h2;

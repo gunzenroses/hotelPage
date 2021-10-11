@@ -146,7 +146,7 @@
   letter-spacing: 0.005em;
 
   @media (max-width: 450px) {
-    width: 280px;
+    min-width: 270px;
   }
 }
 
