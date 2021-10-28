@@ -1,10 +1,11 @@
-import 'Scripts/inputMasks';
-import 'Main/components/footer/validateFooterForm';
-import 'Main/components/card-singin/validateSignin';
-import makeExpandable from 'Main/assets/scripts/makeExpandable';
+import 'Main/assets/scripts/input-masks';
+import 'Main/components/footer/footer';
+import 'Main/components/card-singin/card-signin';
+import ExpandItems from 'Main/assets/scripts/expand-items';
+import applyClass from 'Main/assets/scripts/apply-class';
 
 import './signin.scss';
 
 window.onload = () => {
-  makeExpandable();
+  applyClass('.js-dropdown__detection', ExpandItems);
 };

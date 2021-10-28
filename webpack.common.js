@@ -20,9 +20,9 @@ module.exports = {
   entry: {
     "index": "./src/index.js",
     "UIKit": "./src/pages/UIKit/UIKit.js",
-    "landing-page": "./src/pages/landing-page/landingPage.js",
-    "search-room": "./src/pages/search-room/searchRoom.js",
-    "room-details": "./src/pages/room-details/roomDetails.js",
+    "landing-page": "./src/pages/landing-page/landing-page.js",
+    "search-room": "./src/pages/search-room/search-room.js",
+    "room-details": "./src/pages/room-details/room-details.js",
     "registration": "./src/pages/registration/registration.js",
     "signin": "./src/pages/signin/signin.js",
   },
