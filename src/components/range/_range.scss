@@ -6,12 +6,20 @@
   margin-top: 1px;
 }
 
-.range__container > .label {
+.range__label {
+  @include labelMixin;
   margin-top: 2px;
   margin-bottom: 1.5px;
 }
 
-.range__container > .label_right {
+.range__label_right {
+  @include labelMixin;
+  position: absolute;
+  right: 0;
+  top: 1px;
+  font-weight: 400;
+  color: $dark-shade_medium;
+  text-align: right;
   margin-top: 0px;
   margin-bottom: 1.5px;
   padding-bottom: 6px;

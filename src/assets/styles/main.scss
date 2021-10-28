@@ -10,37 +10,52 @@
 @import './general';
 @import './select';
 
-/* FormElements */
-@import '@~Components/text-field/text-field';
-@import '@~Components/checkbox-expandable/checkbox-expandable';
-@import '@~Components/calendar/calendar';
-@import '@~Components/buttons-checkbox/buttons-checkbox';
-@import '@~Components/buttons-radio/buttons-radio';
-@import '@~Components/button-toggle/button-toggle';
+/* Components */
+@import '@~Components/badge/badge';
+@import "@~Components/button/button_type_form";
+@import "@~Components/button/button_type_link";
+@import "@~Components/button/button_type_submit";
 @import '@~Components/button-like/button-like';
 @import '@~Components/button-rate/button-rate';
-@import '@~Components/range/range';
-@import '@~Components/button/button';
-@import '@~Components/header/header';
+@import '@~Components/button-toggle/button-toggle';
+@import '@~Components/buttons-radio/buttons-radio';
+@import "@~Components/bullet-checkbox/bullet-checkbox";
+@import '@~Components/calendar/calendar';
+@import '@~Components/checkbox/checkbox';
+@import '@~Components/checkbox-expandable/checkbox-expandable';
+@import '@~Components/carousel/carousel_type_basic';
+@import '@~Components/carousel/carousel_type_landing';
+@import '@~Components/comment/comment';
+@import '@~Components/date-range/date-range';
 @import '@~Components/footer/footer';
 @import '@~Components/footer/footer-creative';
-@import '@~Components/dropdown-guests/dropdowns';
-@import '@~Components/date-range-dropdown/date-range-dropdown';
+@import '@~Components/header/header';
+@import '@~Components/header/__menu/header__menu';
+@import '@~Components/header/__user/header__user';
+@import '@~Components/dropdown/dropdown';
+@import '@~Components/info/info';
+@import '@~Components/logo/logo';
+@import '@~Components/navlink/navlink';
+@import '@~Components/navlink/navlink_dropdown';
+@import "@~Components/textfield/textfield";
+@import "@~Components/textfield/textfield_type_birthday";
+@import "@~Components/textfield/textfield_type_login";
 @import '@~Components/pagination/pagination';
-@import '@~Components/bullet-checkbox/bullet-checkbox';
-@import '@~Components/badge/badge';
-@import '@~Components/comment/comment';
+@import '@~Components/range/range';
+@import '@~Components/rich-checkbox/rich-checkbox';
 @import '@~Components/room-carousel/room-carousel';
-@import '@~Components/carousel-background/carousel-background';
+@import '@~Components/social-nets/social-nets';
+
 
 /* Cards */
+@import '@~Components/card-text/card-text';
 @import '@~Components/card-search/card-search';
 @import '@~Components/card-registration/card-registration';
 @import '@~Components/card-booking/card-booking';
 @import '@~Components/card-singin/card-signin';
 @import '@~Components/card-room/card-room';
+
 @import '@~Pages/UIKit/cards/cards';
 
 /* To make changes */
-
 @import './special';

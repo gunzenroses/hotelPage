@@ -1,4 +1,4 @@
-.bullet__container {
+.bullet-checkbox {
   width: 292px;
   height: 147px;
 
@@ -6,11 +6,18 @@
     width: 280px;
     margin: 0 auto;
   }
+
+  &__label {
+    @include labelMixin();
+    margin-bottom: 11px;
+  }
 }
 
-.bullet {
-  @include isFlex($justify: start);
-  position: relative;
+.bullet-checkbox {
+  &__item {
+    @include isFlex($justify: start);
+    position: relative;
+  }
 
   &__icon {
     display: block;
@@ -21,11 +28,6 @@
     margin-right: 10px;
     border-radius: 50%;
     background-color: $dark-shade_less;
-  }
-
-  &__label {
-    @include labelMixin;
-    margin-bottom: 11px;
   }
   
   &__title {
@@ -44,6 +46,6 @@
   }
 }
 
-.bullet + .bullet {
+.bullet-checkbox__item + .bullet-checkbox__item {
   margin-top: 10px;
 }

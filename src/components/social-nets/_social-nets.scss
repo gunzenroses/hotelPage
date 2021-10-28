@@ -1,0 +1,48 @@
+.fa-twitter,
+.fa-facebook-square,
+.fa-instagram {
+  position: relative;
+  width: 26px;
+  height: 26px;
+
+  @media (min-width: 1750px) and (max-width: 1920px) {
+    @include containerBlock(40px, 40px);
+  }
+}
+
+.fa-twitter::before,
+.fa-facebook-square::before,
+.fa-instagram::before {
+  @include absoluteTopLeft(-1px);
+  width: 24px;
+  line-height: 24px;
+  font-size: $fs_h1;
+  font-family: $font-awesome;
+  background-image: $linearGradientLilac;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  @media (min-width: 1650px) and (max-width: 1920px) {
+    @include containerBlock(40px, 40px);
+  }
+}
+
+.fa-twitter::before {
+  content: '';
+}
+
+.fa-facebook-square::before {
+  content: '';
+}
+
+.fa-instagram::before {
+  content: '';
+}
+
+.fab a {
+  @include absoluteTopLeft();
+  display: block;
+  height: 24px;
+  width: 24px;
+}

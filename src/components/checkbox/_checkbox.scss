@@ -1,0 +1,70 @@
+.checkbox {
+  @include isFlex($justify: flex-start);
+  font-family: $montserrat;
+  font-weight: 400;
+  font-size: $fs_base;
+  text-transform: none;
+
+  @media (min-width: 1650px) and (max-width: 1920px) {
+    width: 100%;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &__real {
+    @include containerBlock(20px, 20px);
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    appearance: none;
+
+    @media (min-width: 1750px) and (max-width: 1920px) {
+      @include containerBlock(30px, 30px);
+    }
+  }
+
+  &__fake {
+    @include checkboxFake;
+    margin-right: 10px;
+
+    @media (min-width: 1750px) and (max-width: 1920px) {
+      @include containerBlock(30px, 30px);
+    }
+  }
+
+  &__title {
+    display: inline-block;
+    width: 192px;
+    margin-top: 2px;
+    font-weight: 400;
+    font-size: 13.5px;
+    letter-spacing: .02em;
+    line-height: 18px;
+    color: $dark-shade_medium;
+
+    @media (min-width: 1750px) and (max-width: 1920px) {
+      width: calc(100% - 50px);
+      max-width: 350px;
+      font-size: $fs_h2;
+    }
+  }
+}
+
+.checkbox + .checkbox {
+  margin-top: 10px;
+}
+
+.checkbox__real:checked ~ .checkbox__fake {
+  @extend .checkbox__fake;
+  border-color: $purple;
+}
+
+.checkbox__real:checked + .checkbox__fake::before {
+  @include checkboxFakeBefore;
+
+  @media (min-width: 1750px) and (max-width: 1920px) {
+    @include containerBlock(9px, 15px);
+  }
+}

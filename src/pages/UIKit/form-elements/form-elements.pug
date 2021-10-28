@@ -1,20 +1,28 @@
-include ../../../components/date-range-dropdown/_date-range-dropdown.pug
-include ../../../components/text-field/_text-field.pug
-include ../../../components/calendar/_calendar.pug
-include ../../../components/buttons-checkbox/_buttons-checkbox.pug
-include ../../../components/buttons-radio/_buttons-radio.pug
-include ../../../components/button-toggle/_button-toggle.pug
-include ../../../components/button-like/_button-like.pug
-include ../../../components/button-rate/_button-rate.pug
-include ../../../components/range/_range.pug
-include ../../../components/button/_button.pug
-include ../../../components/pagination/_pagination.pug
-include ../../../components/dropdown-guests/_dropdown-guests.pug
-include ../../../components/dropdown-rooms/_dropdown-rooms.pug
-include ../../../components/checkbox-expandable/_checkbox-expandable.pug
-include ../../../components/bullet-checkbox/_bullet-checkbox.pug
-include ../../../components/badge/_badge.pug
-include ../../../components/comment/_comment.pug
+include ../../../components/date-range/date-range_separate.pug
+include ../../../components/date-range/date-range_common.pug
+include ../../../components/textfield/textfield__label.pug
+include ../../../components/textfield/textfield_type_birthday.pug
+include ../../../components/textfield/textfield_type_email.pug
+include ../../../components/textfield/textfield_type_name.pug
+include ../../../components/calendar/calendar.pug
+include ../../../components/checkbox/checkbox.pug
+include ../../../components/buttons-radio/buttons-radio.pug
+include ../../../components/button-toggle/button-toggle.pug
+include ../../../components/button-like/button-like.pug
+include ../../../components/button-rate/button-rate.pug
+include ../../../components/range/range.pug
+include ../../../components/button/button_type_form.pug
+include ../../../components/button/button_type_link.pug
+include ../../../components/button/button_type_submit.pug
+include ../../../components/navlink/navlink.pug
+include ../../../components/pagination/pagination.pug
+include ../../../components/dropdown/_type_guests/dropdown_type_guests.pug
+include ../../../components/dropdown/_type_rooms/dropdown_type_rooms.pug
+include ../../../components/checkbox-expandable/checkbox-expandable.pug
+include ../../../components/bullet-checkbox/bullet-checkbox.pug
+include ../../../components/badge/badge.pug
+include ../../../components/comment/comment.pug
+include ../../../components/rich-checkbox/rich-checkbox.pug
 
 block variables
   - var title = "UIKit";
@@ -37,49 +45,96 @@ block content
     .form-elements_inner
       .form-elements__element_first
         .form-elements__container_first 
-          +emailContainer("Text field", "default")
-          +nameContainer("Text field", "hover / focus", "This is pretty awesome")
-          +dropdownGuestsLabeled("dropdown", "dropdown_guests_0", "", "dropdownGuestsInput_0")
-          +birthdayContainer("Masked text field", "")
+          .widget_textfield
+            +textfield__label("Text field", "default")
+            +textfield_type_email()
+          .widget_textfield
+            +textfield__label("Text field", "hover / focus")
+            +textfield_type_name("This is pretty awesome")
+          +dropdown_type_guests("dropdown", "dropdown_guests_0", "", "dropdownGuestsInput_0")
+          .widget_textfield
+            +textfield__label("Masked text field", "")
+            +textfield_type_birthday()
+
 
         .form-elements__container_second
-          +dateRangeSeparate("calendar1", "Date dropdown", "", "Date dropdown", "19.08.2019", "")
+          +date-range_separate("calendar1", "Date dropdown", "", "Date dropdown", "19.08.2019", "")
           .container_medium
-            +dateRangeCommon("calendar2", "filter rate dropdown", "19 авг - 23 авг", "")
+            +date-range_common("calendar2", "filter rate dropdown", "19 авг - 23 авг", "")
           .container_medium
-            +emailSubscribeContainer("Subscription text field", "")
+            .widget
+              +textfield__label(labelText, labelRightText)
+              +textfield_type_email()
 
       .form-elements__element_second
-        +checkboxButtons("Сheckbox buttons")
-        +buttonsRadioContainer("Radio buttons", "man", true, "woman", false)
-        +buttonToggleContainer
-        +buttonLikeContainer
-        +buttonRateContainer("Rate button")
+        .widget
+          h3.label Сheckbox buttons
+          .checkbox__container
+            +checkbox("smoking_allowed", "house-rules", false, "Можно курить")
+            +checkbox("pets_allowed", "house-rules", true, "Можно с питомцами")
+            +checkbox("guests_allowed", "house-rules", true, "Можно пригласить гостей (до 10 человек)")
+        .radio__container 
+          legend.radio__label(for="gender") Radio buttons
+          +buttons-radio("man", true, "woman", false)
+        .widget
+          .toggle__container
+            legend(for="offer").toggle__label Toggle
+            .toggle__body
+              +button-toggle("offer1", true)
+              +button-toggle("offer2", false)
+        .button-like__container
+          h3.label like button
+          .row
+            +button-like("buttonLike_1", 2)
+            +button-like("buttonLike_2", 12)
+        .button-rate__container
+          h3.label Rate button
+          .row
+            +button-rate("star-5", "star-4", "star-3", "star-2", "star-1", "rating", false, true)
+            +button-rate("star2-5", "star2-4", "star2-3", "star2-2", "star2-1", "rating2", true)
 
       .form-elements__element_third
         .container_medium
           +range("range_1")
-        +buttonContainer()
-        +paginationContainer("pagination", "pagination_bar_1")
+        .buttons__container
+          h3.buttons__label Buttons
+          .buttons__row
+            .buttons__item
+              +button_type_link("Click me", "./some-address")
+            .buttons__item
+              +button_type_link("Click me", "./some-address")
+            .buttons__item
+             +button_type_form("Click me", "./some-address")
+            .buttons__item
+             +button_type_form("Click me", "./some-address")
+          .buttons__row
+            +navlink("Click me", "./some-address")
+            +navlink("Click me", "./some-address")
+          .buttons__row
+            +button_type_submit("Перейти к оплате")
+        .pagination__container
+            h3(class="label")= pagination
+            +pagination("pagination_bar_1")
+
 
       .form-elements__element_forth
         .width-and-heigh_266
-          +dropdownRoomsLabeled("dropdown", "dropdown_rooms_1", "", "dropdownRoomsInput_1", "default")
-          +dropdownRoomsLabeled("dropdown", "dropdown_rooms_2", "js-dropdown__show", "dropdownRoomsInput_2", "expanded")
-        +dropdownCheckbox("Expandable checkbox list", "")
-        +dropdownCheckbox("Expandable checkbox list", "js-dropdown__show")
+          +dropdown_type_rooms("dropdown", "dropdown_rooms_1", "", "dropdownRoomsInput_1", "default")
+          +dropdown_type_rooms("dropdown", "dropdown_rooms_2", "js-dropdown__show", "dropdownRoomsInput_2", "expanded")
+        +checkbox-expandable("Expandable checkbox list", "")
+        +checkbox-expandable("Expandable checkbox list", "js-dropdown__show")
 
       .form-elements__element_fifth
-        +dropdownGuestsLabeled("dropdown", "dropdown_guests_1", "js-dropdown__show", "dropdownGuestsInput_1")
-        +richCheckboxButtons("accessibility", "Rich Checkbox Buttons")
+        +dropdown_type_guests("dropdown", "dropdown_guests_1", "js-dropdown__show", "dropdownGuestsInput_1")
+        +rich-checkbox("accessibility", "Rich Checkbox Buttons")
 
       .form-elements__element_sixth
-        +dropdownGuestsLabeled("dropdown", "dropdown_guests_2", "js-dropdown__show", "dropdownGuestsInput_2")
-        +bulletCheckboxContainer("bullet list", checkboxList)
+        +dropdown_type_guests("dropdown", "dropdown_guests_2", "js-dropdown__show", "dropdownGuestsInput_2")
+        +bullet-checkbox(checkboxList, "bullet list")
 
       .form-elements__element_seventh
-        +badgeItem("insert_emoticon", "Комфорт", "Шумопоглощающие стены")
-        +badgeItem("location_city", "Удобство", "Окно в каждой из спален")
+        +badge("insert_emoticon", "Комфорт", "Шумопоглощающие стены")
+        +badge("location_city", "Удобство", "Окно в каждой из спален")
 
       .form-elements__element_eighth
         +comment(comment1)

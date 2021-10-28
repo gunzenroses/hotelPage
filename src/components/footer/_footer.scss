@@ -139,7 +139,7 @@
 .footer__logo_main {
   @include isFlex($direction: column);
   width: 260px;
-  height: 130px;
+  height: 128px;
   margin-right: 38px;
   letter-spacing: .001em;
 
@@ -195,7 +195,7 @@
   }
 }
 
-.footer__info_for-subscription {
+.footer__subscription {
   @include isFlex($direction: column, $justify: flex-start);
   width: 260px;
   height: 148px;
@@ -208,7 +208,7 @@
 
 .footer__text_for-subscription {
   @extend .footer__text;
-  margin-top: 18px;
+  margin-top: 20px;
 }
 
 @media (max-width: 470px) {
@@ -437,53 +437,4 @@
       width: 100px;
     }
   }
-}
-
-.fa-twitter,
-.fa-facebook-square,
-.fa-instagram {
-  position: relative;
-  width: 26px;
-  height: 26px;
-
-  @media (min-width: 1750px) and (max-width: 1920px) {
-    @include containerBlock(40px, 40px);
-  }
-}
-
-.copyright__social .fa-twitter::before,
-.copyright__social .fa-facebook-square::before,
-.copyright__social .fa-instagram::before {
-  @include absoluteTopLeft(-1px);
-  width: 24px;
-  line-height: 24px;
-  font-size: $fs_h1;
-  font-family: $font-awesome;
-  background-image: $linearGradientLilac;
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-
-  @media (min-width: 1650px) and (max-width: 1920px) {
-    @include containerBlock(40px, 40px);
-  }
-}
-
-.fa-twitter::before {
-  content: '';
-}
-
-.fa-facebook-square::before {
-  content: '';
-}
-
-.fa-instagram::before {
-  content: '';
-}
-
-.fab a {
-  @include absoluteTopLeft();
-  display: block;
-  height: 24px;
-  width: 24px;
 }

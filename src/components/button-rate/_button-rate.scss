@@ -8,15 +8,15 @@
   cursor: pointer;
 }
 
-.input__rate {
+.button-rate__real {
   display: none;
   appearance: none;
 }
 
-.input__label {
+.button-rate__fake {
   width: 24px;
   height: 24px;
-  color: purple;
+  color: $purple;
   background-image: $linearGradientLilac;
   color: transparent;
   -webkit-background-clip: text;
@@ -29,12 +29,12 @@
   }
 }
 
-input:checked ~ .input__label::before,
-input:checked + .input__label::before {
+input:checked ~ .button-rate__fake::before,
+input:checked + .button-rate__fake::before {
   content: '★';
 }
 
-.input__rate:hover ~ .input__label:before,
-.input__rate:hover + .input__label:before {
+.button-rate__real:hover ~ .button-rate__fake:before,
+.button-rate__real:hover + .button-rate__fake:before {
   content: '★';
 }

@@ -1,9 +1,9 @@
-extends ../../assets/templates/_template.pug
+extends ../../assets/templates/template.pug
 
-include ../../components/header/_header.pug
+include ../../components/header/header.pug
 include ../../components/card-registration/_card-registration.pug
-include ../../components/carousel-background/_carousel-background.pug
-include ../../components/footer/_footer.pug
+include ../../components/carousel/carousel_type_basic.pug
+include ../../components/footer/footer.pug
 
 block variables
   - var theme = "in-registration"
@@ -16,7 +16,7 @@ block content
   .registration.js-dropdown__detection
     +header("", theme)
     .registration__content
-      +carouselBackground(pics)
+      +carousel_type_basic(pics)
       .registration__card-registration 
-        +cardRegistration("Зарегистрироваться")
+        +card-registration("Зарегистрироваться")
     +footer(theme)

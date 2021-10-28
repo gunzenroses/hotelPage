@@ -1,0 +1,15 @@
+include ./card-room__review.pug
+include ../button-rate/button-rate.pug
+include ../card-booking/card-booking.pug
+include ../room-carousel/room-carousel.pug
+
+mixin card-room(roomOptions)
+  - var {src = [], bookingNumber = "999", bookingType = false, bookingPrice = 0, starIds = [], starName = inputName, starRate = [], reviewAmount = 0} = roomOptions
+  .card-room
+    +roomCarousel(src, nameForPictures="room " + bookingNumber)
+    .room__info
+      +card-booking__text("small", bookingNumber, bookingType, bookingPrice)
+      .room__line
+      .card-text__row_narrow
+        +button-rate(...starIds, starName, ...starRate)
+        +card-room__review(reviewAmount)

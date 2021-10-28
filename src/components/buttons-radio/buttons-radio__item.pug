@@ -1,0 +1,5 @@
+mixin buttons-radio__item(inputId, ifChecked, buttonTitle)
+  label(for=inputId).radio__element
+    input(type="radio" name="gender" id=inputId value=inputId checked=ifChecked).radio__real 
+    span.radio__fake
+    span(class="radio__title")= buttonTitle

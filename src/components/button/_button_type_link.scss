@@ -1,0 +1,7 @@
+.button_type_link {
+  @include containerBlock();
+  @include buttonBasic();
+  min-width: 74px;
+  color: $light;
+  background: $linearGradientLilac;
+}

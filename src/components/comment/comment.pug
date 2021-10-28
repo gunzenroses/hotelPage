@@ -1,0 +1,15 @@
+include ../button-like/button-like.pug
+include ../info/info.pug
+
+mixin comment(commentData)
+  - var {authorPic="", authorName="Anonymous", commentTime=Data().getDay(), buttonLikeId, buttonNumber=0, commentText="none"} = commentData
+  .widget
+    .comment
+      .comment__head
+        .comment__pic
+          img(src=authorPic alt="profile picture")
+        +info(authorName, commentTime)
+      .comment__body
+        .comment__likes
+          +button-like(buttonLikeId, buttonNumber)
+        .comment__text!= commentText

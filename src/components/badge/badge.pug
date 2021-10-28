@@ -1,0 +1,8 @@
+include ../info/info.pug
+
+mixin badge(name, title, description)
+  .badge
+    .badge__info
+      span.maretial-icon!= name
+      +info(title, description)
+    .badge__underline

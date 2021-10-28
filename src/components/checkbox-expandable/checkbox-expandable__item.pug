@@ -1,0 +1,5 @@
+mixin checkbox-expandable__item(checkboxName, ifChecked, checkboxTitle)
+  label.checkbox-expand
+    input(type="checkbox" name=checkboxName checked=ifChecked).checkbox__real
+    span.checkbox-expand__fake
+    span.checkbox-expand__title!= checkboxTitle

@@ -1,11 +1,4 @@
 .radio {
-  &__box {
-    @include isFlex($direction: column);
-    width: 220px;
-    height: 53px;
-    line-height: normal;
-  }
-
   &__row {
     @include isFlex($justify: flex-start);
     width: 220px;
@@ -61,11 +54,6 @@
     @media (min-width: 1750px) and (max-width: 1920px){
       font-size: $fs_h2;
     }
-  }
-
-  &__label {
-    @include labelMixin;
-    letter-spacing: .0001em;
   }
 }
 

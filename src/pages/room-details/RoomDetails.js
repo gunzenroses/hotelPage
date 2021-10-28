@@ -2,7 +2,7 @@ import 'Scripts/inputMasks';
 import 'Components/card-booking/cardBooking';
 import 'Main/components/footer/validateFooterForm';
 import makeButtonLike from 'Components/button-like/makeButtonLike';
-import makeExpandable from 'Components/checkbox-expandable/makeExpandable';
+import makeExpandable from 'Main/assets/scripts/makeExpandable';
 
 import './room-details.scss';
 

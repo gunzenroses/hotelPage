@@ -21,3 +21,8 @@
     margin-top: 30px;
   }
 }
+
+.card-signin__button_type_form {
+  @include containerBlock(99px, 44px);
+  line-height: 40px;
+}

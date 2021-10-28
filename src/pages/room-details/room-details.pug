@@ -1,12 +1,12 @@
-extends ../../assets/templates/_template.pug
+extends ../../assets/templates/template.pug
 
-include ../../components/header/_header.pug
-include ../../components/badge/_badge.pug
-include ../../components/card-booking/_card-booking.pug
+include ../../components/header/header.pug
+include ../../components/badge/badge.pug
+include ../../components/card-booking/card-booking.pug
 include ../../components/chart-donut/chart-donut.pug
-include ../../components/comment/_comment.pug
-include ../../components/bullet-checkbox/_bullet-checkbox.pug
-include ../../components/footer/_footer.pug
+include ../../components/comment/comment.pug
+include ../../components/bullet-checkbox/bullet-checkbox.pug
+include ../../components/footer/footer.pug
 
 block variables
   - var theme = "in-details";
@@ -47,9 +47,9 @@ block content
             .room-details__roomData
               .room-details__roomInfo
                 .room-details__text Сведения о номере
-                +badgeItem("insert_emoticon", "Комфорт", "Шумопоглощающие стены")
-                +badgeItem("location_city", "Удобство", "Окно в каждой из спален")
-                +badgeItem("whatshot", "Уют", "Номер оснащён камином")
+                +badge("insert_emoticon", "Комфорт", "Шумопоглощающие стены")
+                +badge("location_city", "Удобство", "Окно в каждой из спален")
+                +badge("whatshot", "Уют", "Номер оснащён камином")
               .room-details__roomImpression
                 .room-details__text Впечатления от номера
                 +donutChart({excellent: 50, good: 25, satisfied: 25, dissapointed: 0})
@@ -61,11 +61,11 @@ block content
             .room-details__rules
               .room-details__text Правила
               .room-details__checkbox-list
-                +bulletCheckboxList(checkboxList)
+                +bullet-checkbox(checkboxList)
             .room-details__cancellation
               .room-details__text Отмена
               .room-details__cancellation_info
                 != cancellationRools
           .room-details__booking
-            +cardBooking("Сбор за доп. услуги", "short")
+            +card-booking("Сбор за доп. услуги", "short")
     +footer(theme)

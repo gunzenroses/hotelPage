@@ -1,0 +1,7 @@
+mixin date-range__item(labelText, inputName, inputValue, dateDataType)
+  .container_small
+    h3.date-range__label!= labelText
+    .date-range__info
+      input(class="date-range__input" type="text" value=inputValue 
+      name=inputName placeholder="ДД.ММ.ГГГГ"
+      maxlength="10" data-range=dateDataType readonly)

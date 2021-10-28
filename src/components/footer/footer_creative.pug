@@ -1,0 +1,10 @@
+include ../logo/logo.pug
+include ../social-nets/social-nets.pug
+
+mixin footer_creative()
+  .footer-creative
+    .footer-creative_inner
+      +logo()
+      .copyright__text Copyright © 2018 Toxin отель. Все права защищены.
+      .copyright__social
+        +social-nets()

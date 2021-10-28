@@ -1,0 +1,15 @@
+.navlink {
+  display: inline-block;
+  position: relative;
+  height: 18px;
+  line-height: 20px;
+  font-size: $fs_base;
+  font-weight: 400;
+  color: $dark-shade_medium;
+  cursor: pointer;
+
+  @media (min-width: 1750px) and (max-width: 1920px){
+    width: fit-content;
+    font-size: $fs_h2;
+  }
+}

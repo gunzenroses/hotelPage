@@ -1,9 +1,9 @@
-include ../../../components/card-search/_card-search.pug
+include ../../../components/card-search/card-search.pug
 include ../../../components/card-registration/_card-registration.pug
-include ../../../components/card-booking/_card-booking.pug
-include ../../../components/card-singin/_card-signin.pug
-include ../../../components/calendar/_calendar.pug
-include ../../../components/card-room/_card-room.pug
+include ../../../components/card-booking/card-booking.pug
+include ../../../components/card-singin/card-signin.pug
+include ../../../components/calendar/calendar.pug
+include ../../../components/card-room/card-room.pug
 
 block variables
   - var title = "UIKit";
@@ -17,14 +17,14 @@ block content
     img.uikit-logo(src= "./assets/images/logo/logo.svg" alt="uikit logo")
     .cards_inner
       .cards__card-search
-        +cardSearch()
+        +card-search()
       .cards__card-registration
-        +cardRegistration("Перейти к оплате")
+        +card-registration("Перейти к оплате")
       .cards__card-booking
-        +cardBooking("Сбор за дополнительные услуги", "full")
+        +card-booking("Сбор за дополнительные услуги", "full")
       .cards__card-signin
-        +cardSignin()
+        +card-signin()
       .cards__calendar
         +calendar("calendarSimple")
-      +room(room888)
-      +room(room840)
+      +card-room(room888)
+      +card-room(room840)

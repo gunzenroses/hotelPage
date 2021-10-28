@@ -20,9 +20,14 @@
 .card-registration__birthday,
 .card-registration__login,
 .card-registration__name,
-.card-registration__button,
+.card-registration__button_type_submit,
 .card-registration__info {
   width: 100%;
+}
+
+.card-registration__button_type_form {
+  @include containerBlock(99px, 44px);
+  line-height: 40px;
 }
 
 .card-registration__name {
@@ -49,7 +54,7 @@
   margin-top: 4px;
 }
 
-.card-registration__button {
+.card-registration__button_type_submit {
   margin-top: 20px;
 }
 

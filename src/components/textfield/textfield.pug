@@ -1,0 +1,17 @@
+mixin textfield(inputClass, placeholder, valueText, nameText, maxText, autofocus=false)
+  if inputClass === "textfield_email"
+    div(class="textfield")
+      input(type="text" placeholder=placeholder, 
+        value=valueText name=nameText data-rule=nameText, 
+        maxlength=maxText autofocus=autofocus)
+      button(type="submit" class="arrow_submit") arrow_forward
+  else if inputClass === "password"
+    div(class="textfield")
+      input(type="password" placeholder=placeholder, 
+        value=valueText name=nameText data-rule=nameText, 
+        maxlength=maxText autofocus=autofocus)
+  else
+    div(class="" + inputClass)
+      input(type="text" placeholder=placeholder, 
+        value=valueText name=nameText data-rule=nameText, 
+        maxlength=maxText autofocus=autofocus)

@@ -1,0 +1,12 @@
+include ./textfield_type_email.pug
+include ./textfield_type_password.pug
+
+mixin textfield_type_login(theme="")
+  if theme == ""
+    .textfield_type_login
+      +textfield_type_email()
+      +textfield_type_password()
+  else 
+    div(class="textfield_type_login" + "_" + theme)
+      +textfield_type_email()
+      +textfield_type_password()

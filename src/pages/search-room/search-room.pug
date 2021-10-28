@@ -1,16 +1,17 @@
-extends ../../assets/templates/_template.pug
+extends ../../assets/templates/template.pug
 
-include ../../components/header/_header.pug
-include ../../components/text-field/_text-field.pug
-include ../../components/date-range-dropdown/_date-range-dropdown.pug
-include ../../components/dropdown-guests/_dropdown-guests.pug
-include ../../components/dropdown-rooms/_dropdown-rooms.pug
-include ../../components/range/_range.pug
-include ../../components/buttons-checkbox/_buttons-checkbox.pug
-include ../../components/checkbox-expandable/_checkbox-expandable.pug
-include ../../components/card-room/_card-room.pug
-include ../../components/pagination/_pagination.pug
-include ../../components/footer/_footer.pug
+include ../../components/header/header.pug
+include ../../components/textfield/textfield.pug
+include ../../components/date-range/date-range_common.pug
+include ../../components/dropdown/_type_guests/dropdown_type_guests.pug
+include ../../components/dropdown/_type_rooms/dropdown_type_rooms.pug
+include ../../components/range/range.pug
+include ../../components/checkbox/checkbox.pug
+include ../../components/checkbox-expandable/checkbox-expandable.pug
+include ../../components/card-room/card-room.pug
+include ../../components/pagination/pagination.pug
+include ../../components/rich-checkbox/rich-checkbox.pug
+include ../../components/footer/footer.pug
 
 block variables
   - var theme = "in-search";
@@ -42,25 +43,30 @@ block content
           form(class="search-room__form")
             .filter-group
               .filter-group__date-range
-                +dateRangeCommon("calendar_search", "даты пребывания в отеле", "19 авг - 23 авг", "", "in-search")
+                +date-range_common("calendar_search", "даты пребывания в отеле", "19 авг - 23 авг", "", "in-search")
               .filter-group__guests
-                +dropdownGuestsLabeled("гости", "dropdown_guests_search", "", "dropdownGuestsInput_3")
+                +dropdown_type_guests("гости", "dropdown_guests_search", "", "dropdownGuestsInput_3")
               .filter-group__price-range
                 +range("range_1", true, "Диапазон цены")
               .filter-group__rules
-                +checkboxButtons("Правила дома")
+                .widget
+                  h3.label Правила дома
+                  .checkbox__container
+                    +checkbox("smoking_allowed", "house-rules", false, "Можно курить")
+                    +checkbox("pets_allowed", "house-rules", true, "Можно с питомцами")
+                    +checkbox("guests_allowed", "house-rules", true, "Можно пригласить гостей (до 10 человек)")
             .filter-group
               .filter-group__accessibility
-                +richCheckboxButtons("accessibility", "Доступность")
+                +rich-checkbox("accessibility", "Доступность")
               .filter-group__rooms
-                +dropdownRoomsLabeled("Удобства номера", "dropdown_rooms_1", "", "dropdownRoomsInput_1")
+                +dropdown_type_rooms("Удобства номера", "dropdown_rooms_1", "", "dropdownRoomsInput_1")
               .filter-group__extras
-                +dropdownCheckbox("Дополнительные удобства", "")
+                +checkbox-expandable("Дополнительные удобства", "")
         .search-room__rooms
           .search-room__text Номера, которые мы для вас подобрали
           .search-room__result
             for room in roomsList 
-              +room(room)
+              +card-room(room)
           .search-room__pagination 
             +pagination("paginationSearch")
     +footer("in-search")

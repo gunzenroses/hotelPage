@@ -13,7 +13,7 @@
   height: 51px;
 }
 
-.author__pic {
+.comment__pic {
   @include isFlex($justify: center, $align: center);
   width: 48px;
   height: 48px;

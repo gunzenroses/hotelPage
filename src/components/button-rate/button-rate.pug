@@ -1,0 +1,10 @@
+include ./button-rate__item.pug
+
+mixin button-rate(inputId_5, inputId_4, inputId_3, inputId_2, inputId_1, inputName, ifChecked_5, ifChecked_4, ifChecked_3, ifChecked_2, ifChecked_1) 
+  .button-rate
+    +button-rate__item(inputId_5, inputName, 5, ifChecked_5)
+    +button-rate__item(inputId_4, inputName, 4, ifChecked_4)
+    +button-rate__item(inputId_3, inputName, 3, ifChecked_3)
+    +button-rate__item(inputId_2, inputName, 2, ifChecked_2)
+    +button-rate__item(inputId_1, inputName, 1, ifChecked_1)
+

@@ -1,0 +1,26 @@
+.logo__link {
+  @include isFlex($align: center);
+  width: 107px;
+  height: 40px;
+  line-height: 40px;
+
+  @media (max-width: 550px) {
+    width: 40px;
+  }
+}
+
+.logo__pic {
+  @include containerSize(40px);
+  position: relative;
+}
+
+.logo__name {
+  position: relative;
+  width: 55px;
+  height: 15px;
+  margin-top: 1px;
+
+  @media (max-width: 550px) {
+    display: none;
+  }
+}

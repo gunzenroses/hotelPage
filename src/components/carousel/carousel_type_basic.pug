@@ -1,0 +1,6 @@
+mixin carousel_type_basic(backgroundPicture)
+  .carousel__background_outer
+    .carousel__background_inner
+      for picture in backgroundPicture
+        .carousel__element
+          img(class="carousel__img" src= picture alt="background pictures")

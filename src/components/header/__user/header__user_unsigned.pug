@@ -1,0 +1,6 @@
+mixin header__user_unsigned(signinText, signinLink, regText, regLink)
+  .header__buttons
+    .header__signin
+      +button_type_form(signinText, signinLink)
+    .header__registration
+      +button_type_link(regText, regLink)

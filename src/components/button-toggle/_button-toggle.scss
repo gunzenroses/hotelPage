@@ -1,17 +1,4 @@
 .toggle {
-  &__container {
-    @include isFlex($direction: column);
-    height: 87px;
-    width: 268px;
-  }
-
-  &__body {
-    @include isFlex($direction: column);
-    width: 100%;
-    height: 58px;
-    margin-top: 11px;
-  }
-
   &__element {
     @include isFlex($justify: start);
     width: 268px;
@@ -63,13 +50,6 @@
       font-size: $fs_h2;
     }
   }
-
-  &__label {
-    @include labelMixin;
-    font-size: .8rem;
-    letter-spacing: .0001em;
-  }
-  
 }
 
 .toggle_element + .toggle_element {

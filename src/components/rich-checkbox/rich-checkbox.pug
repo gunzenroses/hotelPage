@@ -1,0 +1,7 @@
+include ./rich-checkbox__item.pug
+
+mixin rich-checkbox(checkboxName, containerText)
+  .rich-checkbox__container
+    h3.rich-checkbox__label!= containerText
+    +rich-checkbox__item(checkboxName, "wide corridor", "Широкий коридор", "Ширина коридоров в номере <br> не менее 91 см.")
+    +rich-checkbox__item(checkboxName, "help for disabled", "Помощник для инвалидов", "На 1 этаже вас встретит специалист <br> и проводит до номера.")

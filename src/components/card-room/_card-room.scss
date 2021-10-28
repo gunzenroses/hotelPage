@@ -1,5 +1,3 @@
-@import '../card-booking/card-text';
-
 .card-room {
   @include containerDimed;
   @include isFlex($direction: column, $justify: flex-start);

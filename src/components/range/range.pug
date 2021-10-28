@@ -1,0 +1,9 @@
+mixin range(rangeId, infoText= false, labelText= "Range slider")
+  .range__container
+    h3.range__label!= labelText 
+    input.range__label_right.js-range-slider__value
+    input(class= "range__slider" id= rangeId)
+    if infoText
+      .range__info Стоимость за сутки пребывания в номере
+    else
+      .range__info 

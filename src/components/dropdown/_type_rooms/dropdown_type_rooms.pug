@@ -1,0 +1,14 @@
+include ../dropdown__item.pug
+
+mixin dropdown_type_rooms(labelText, dropdownContainerId, dropdownClassShow, inputId, labelRightText)
+  .widget
+    h3.label!= labelText
+    if labelRightText
+      h3.label_right!= labelRightText
+    div(class="dropdown" id=dropdownContainerId)
+      div(class="dropdown__content js-dropdown__content dropdown__rooms js-dropdown__rooms " + dropdownClassShow)
+        +dropdown__item("bedrooms", "Спальни", 0)
+        +dropdown__item("beds", "Кровати", 1)
+        +dropdown__item("bathrooms", "Ванные комнаты", 2)
+      .dropdown__info.js-dropdown__info.js-dropdown__init
+        input.dropdown__input.js-dropdown__input(readonly='' type='text' placeholder='Выберите условия' value='' name="rooms" id=inputId)

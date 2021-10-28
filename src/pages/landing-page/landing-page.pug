@@ -1,9 +1,9 @@
-extends ../../assets/templates/_template.pug
+extends ../../assets/templates/template.pug
 
-include ../../components/header/_header.pug
-include ../../components/carousel-background/_carousel-background.pug
-include ../../components/card-search/_card-search.pug
-include ../../components/footer/_footer.pug
+include ../../components/header/header.pug
+include ../../components/carousel/carousel_type_landing.pug
+include ../../components/card-search/card-search.pug
+include ../../components/footer/footer.pug
 
 block variables
   - var theme = "landing"
@@ -16,8 +16,8 @@ block content
   .landing-page.js-dropdown__detection
     +header("", theme)
     .landing-page__content
-      +carouselLanding(pics)
+      +carousel_type_landing(pics)
       .landing-page__text Лучшие номера для вашей работы, отдыха и просто вдохновения
       .landing-page__card-search
-        +cardSearch()
+        +card-search()
     +footer(theme)

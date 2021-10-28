@@ -1,0 +1,40 @@
+/* Main container */
+.headers-n-footers_outer {
+  @include container(
+    $width: 1440px,
+    $height: 1350px,
+    $ms: auto
+  );
+  @include isFlex($direction: column, $justify: flex-start);
+  position: relative;
+  padding-top: 141px;
+  padding-bottom: 132px;
+  overflow: auto;                   //to avoid margin-collapse
+  background: $background;
+
+  @media (max-width: 1440px) {
+    width: 100vw;
+    height: auto;
+  }
+
+  @media (max-width: 750px) {
+    min-width: 320px;
+    
+    &::before {
+      top: 10px;
+      left: 10px;
+    }
+  }
+}
+
+.headers-n-footers_outer > header:not(:first-of-type) {
+  margin-top: 40px;
+}
+
+.headers-n-footers_outer > .footer_outer {
+  margin-top: 39px;
+}
+
+.headers-n-footers_outer > .footer-creative {
+  margin: 40px auto 0;
+}

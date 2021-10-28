@@ -1,9 +1,9 @@
-extend ../../assets/templates/_template.pug
+extend ../../assets/templates/template.pug
 
-include ../../components/header/_header.pug
-include ../../components/card-singin/_card-signin.pug
-include ../../components/carousel-background/_carousel-background.pug
-include ../../components/footer/_footer.pug
+include ../../components/header/header.pug
+include ../../components/card-singin/card-signin.pug
+include ../../components/carousel/carousel_type_basic.pug
+include ../../components/footer/footer.pug
 
 block variables
   - var theme = "in-signin";
@@ -16,7 +16,7 @@ block content
   .sign-in.js-dropdown__detection
     +header("", theme)
     .sign-in__content
-      +carouselBackground(pics)
+      +carousel_type_basic(pics)
       .sign-in__card-signin
-        +cardSignin(theme)
+        +card-signin(theme)
     +footer(theme)

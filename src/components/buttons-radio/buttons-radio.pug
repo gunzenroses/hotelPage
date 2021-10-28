@@ -1,0 +1,6 @@
+include ./buttons-radio__item.pug
+
+mixin buttons-radio(inputManId, ifCheckedMan, inputWomanId, ifCheckedWoman)
+  .radio__row
+    +buttons-radio__item(inputManId, ifCheckedMan, "Мужчина")
+    +buttons-radio__item(inputWomanId, ifCheckedWoman, "Женщина")

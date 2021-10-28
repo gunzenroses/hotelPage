@@ -1,26 +1,36 @@
-include ../text-field/_text-field.pug
-include ../button/_button.pug
-include ../buttons-radio/_buttons-radio.pug
-include ../button-toggle/_button-toggle.pug
+include ../textfield/textfield__label.pug
+include ../textfield/textfield_type_birthday.pug
+include ../textfield/textfield_type_login.pug
+include ../textfield/textfield_type_name.pug
+include ../textfield/textfield_type_surname.pug
+include ../button/button_type_submit.pug
+include ../button/button_type_form.pug
+include ../buttons-radio/buttons-radio.pug
+include ../button-toggle/button-toggle.pug
 
-mixin cardRegistration(submitText)
+mixin card-registration(submitText)
   form.card-registration.js-card-registration(method="get" action="./registration.html" )
     h1.card__text Регистрация аккаунта
     .card-registration__name
-      +name()
+      +textfield_type_name()
     .card-registration__surname
-      +surname()
+      +textfield_type_surname()
     .card-registration__radio
-      +buttonsRadio("gender-man", true, "gender-woman", false)
+      +buttons-radio("gender-man", true, "gender-woman", false)
     .card-registration__birthday
-      +birthdayContainer("Дата рождения", "")
+      .widget_textfield
+        +textfield__label("Дата рождения", "")
+        +textfield_type_birthday()
     .card-registration__login
-      +loginContainer("Данные для входа в сервис", "")
+      .widget
+        +textfield__label("Данные для входа в сервис", "")
+        +textfield_type_login()
     .card-registration__specials
-      +buttonToggleItem("special offers", false)
-    .card-registration__button
-      +buttonFormSubmit(submitText)
+      +button-toggle("special offers", false)
+    .card-registration__button_type_submit
+      +button_type_submit(submitText)
     .card-registration__info
       .card__text_in-row
         .card__subline Уже есть аккаунт на Toxin
-        +buttonFormLink("Войти", "signin.html")
+        .card-registration__button_type_form
+          +button_type_form("Войти", "signin.html")
