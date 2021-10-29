@@ -20,7 +20,7 @@ export default class DropdownGuests {
     this.infoInput = this.container.querySelector('.js-dropdown__input');
     this.dropdownItems = Array.from(this.container.querySelectorAll('.js-dropdown__item_expanded'));
     this.dropdownMinuses = this.container.querySelectorAll('.js-dropdown__minus');
-    this.resetButton = this.dropdownExpanded.querySelector('.js-dropdown__button_reset');
+    this.resetButton = this.dropdownExpanded.querySelector('.js-dropdown__button_type_reset');
     this.submitButton = this.dropdownExpanded.querySelector('.js-dropdown__button_type_submit');
   }
 
@@ -100,12 +100,12 @@ export default class DropdownGuests {
   }
 
   onZeroGuests() {
-    this.resetButton.classList.remove('show');
+    this.resetButton.classList.remove('button__show');
     this.infoInput.value = '';
   }
 
   onSomeGuests() {
-    this.resetButton.classList.add('show');
+    this.resetButton.classList.add('button__show');
     this.render();
   }
 
