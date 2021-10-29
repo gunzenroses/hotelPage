@@ -65,11 +65,3 @@
 .date-range__info input::placeholder {
   color: $dark-shade_more;
 }
-
-.js-dropdown__show ~ .date-range__container .date-range__info::before {
-  transform: rotate(180deg);
-}
-
-.js-dropdown__show ~ .container_medium .date-range__info::before {
-  transform: rotate(180deg);
-}

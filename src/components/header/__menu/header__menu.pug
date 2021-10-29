@@ -7,9 +7,9 @@ include ../../navlink/navlink_dropdown.pug
 
 mixin header__menu(user="")
   nav.header__menu
-    .header__burger-menu.js-dropdown__init
+    .header__burger-menu.js-expand__init
       span
-    .header__dropdown.dropdown__content.js-dropdown__content
+    .header__dropdown.dropdown__content.js-expand__content
       +navlink("О нас", buttonOnclick="./some-address")
       +navlink_dropdown("Услуги")
       +navlink("Вакансии", buttonOnclick="./some-address")

@@ -1,11 +1,11 @@
-import 'Main/assets/scripts/input-masks';
-import 'Main/components/card-search/card-search';
-import 'Main/components/footer/footer';
-import applyClass from 'Main/assets/scripts/apply-class';
-import ExpandItems from 'Main/assets/scripts/expand-items';
+import 'Scripts/input-masks';
+import applyClass from 'Scripts/apply-class';
+import Expand from 'Main/components/expand/expand';
+import 'Components/card-search/card-search';
+import 'Components/footer/footer';
 
 import './landing-page.scss';
 
 window.onload = () => {
-  applyClass('.js-dropdown__detection', ExpandItems);
+  applyClass('.js-dropdown__detection', Expand);
 };

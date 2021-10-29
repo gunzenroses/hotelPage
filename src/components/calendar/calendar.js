@@ -133,7 +133,7 @@ export default class Calendar {
       this.rangeSpanText = '';
     }
     this.rangeSpan.value = this.rangeSpanText;
-    this.calendar.classList.remove('js-dropdown__show');
+    this.calendar.classList.remove('js-expand__show');
   }
 
   // ----------------------------end applyStartOrEnd--------------------------------//
@@ -145,7 +145,7 @@ export default class Calendar {
     this.rangeEnd.value = (this.checkout)
       ? this.applyEnd()
       : '';
-    this.calendar.classList.remove('js-dropdown__show');
+    this.calendar.classList.remove('js-expand__show');
   }
 
   applyStart() {
@@ -180,7 +180,7 @@ export default class Calendar {
       this.rangeEnd.value = '';
     }
     this.render();
-    this.calendar.classList.remove('js-dropdown__show');
+    this.calendar.classList.remove('js-expand__show');
   }
 
   showPrevMonth() {

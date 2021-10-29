@@ -3,7 +3,7 @@ include ./checkbox-expandable__item.pug
 mixin checkbox-expandable(dropdownTitleName, dropdownClassShow)
   .widget.container_medium
     .dropdown.reverse
-      div(class="dropdown__content js-dropdown__content " + dropdownClassShow)
+      div(class="dropdown__content js-expand__content " + dropdownClassShow)
         .checkbox-expand__content
           +checkbox-expandable__item("breakfast", false, "Завтрак")
           +checkbox-expandable__item("desk", true, "Письменный стол")
@@ -11,5 +11,5 @@ mixin checkbox-expandable(dropdownTitleName, dropdownClassShow)
           +checkbox-expandable__item("baby bed", true, "Кроватка")
           +checkbox-expandable__item("TV", false, "Телевизор")
           +checkbox-expandable__item("shampoo", false, "Шампунь")
-      .dropdown__button_transparent.js-dropdown__init
+      .dropdown__button_transparent.js-expand__init
         .dropdown__title!= dropdownTitleName

@@ -1,5 +1,5 @@
 require('jquery-validation');
-require('Main/assets/scripts/validation-methods');
+require('Scripts/validation-methods');
 
 $('.js-footer__form').validate({
   rules: {

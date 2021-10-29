@@ -65,7 +65,7 @@ export default class DropdownGuests {
 
   submitGuests(e) {
     e.preventDefault();
-    this.dropdownExpanded.classList.remove('js-dropdown__show');
+    this.dropdownExpanded.classList.remove('js-expand__show');
   }
 
   showItemNumber(i) {

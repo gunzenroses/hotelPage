@@ -6,12 +6,12 @@ mixin dropdown_type_guests(labelText, dropdownContainerId, dropdownClassShow, in
     if labelRightText
       h3.label_right!= labelRightText
     div(class="dropdown" id=dropdownContainerId)
-      div(class="dropdown__content js-dropdown__content dropdown__guests js-dropdown__guests " + dropdownClassShow)
+      div(class="dropdown__content js-expand__content dropdown__guests js-dropdown__guests " + dropdownClassShow)
         +dropdown__item("grownups", "Взрослые", 0)
         +dropdown__item("kids", "Дети", 1)
         +dropdown__item("infants", "Младенцы", 2)
         .dropdown__buttons
           button.dropdown__button_type_submit.js-dropdown__button_type_submit.button__show(type='submit') Применить
           button.dropdown__button_reset.js-dropdown__button_reset(type='reset') Очистить
-      .dropdown__info.js-dropdown__info.js-dropdown__init
+      .dropdown__info.js-dropdown__info.js-expand__init
         input.dropdown__input.js-dropdown__input(readonly='' type='text' placeholder='Сколько гостей' name="guests" value='' id=inputId)

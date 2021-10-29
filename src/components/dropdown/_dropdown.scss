@@ -183,26 +183,6 @@
   }
 }
 
-.js-dropdown__show {
-  @include isFlex($direction: column, $justify: flex-start);
-
-  @media (min-width: 1650px) and (max-width: 1920px) {
-    width: 100%;
-  }
-}
-
-.js-dropdown__show ~ .dropdown__button_transparent::before {
-  content: '\e5ce';
-}
-
-.js-dropdown__show ~ .dropdown__info {
-  border: 1px solid rgba(31, 32, 65, 0.5);
-}
-
-.js-dropdown__show ~ .dropdown__info::before {
-  content: '\e5ce';
-}
-
 .dropdown__rooms > .dropdown__item_expanded:last-of-type {
   margin-bottom: 3px;
 }
