@@ -26,7 +26,7 @@ export default class ButtonLike {
   }
 
   buttonLikeIncrease() {
-    this.data += this.data;
+    this.data = this.data + 1;
     this.render();
   }
 
@@ -38,6 +38,5 @@ export default class ButtonLike {
   makePopularClass() {
     this.likeButton.classList.add('button-like_popular');
     this.heart.classList.add('button-like__heart_popular');
-    this.heart.src = './assets/images/heart-active.svg';
   }
 }
