@@ -1,16 +1,9 @@
 .button-like {
-  position: relative;
   @include buttonLike;
-  font-size: $fs_h3;
-  color: $dark-shade_less;
-  border-radius: 10px;
   background: $dark-shade_less;
-  cursor: pointer;
-  user-select: none;
 
   &::before {
     content: '';
-    @extend .button-like;
     @include buttonLikeBefore;
     margin: 1px;
     background: $light;
@@ -34,24 +27,20 @@
     @media (min-width: 1750px) and (max-width: 1920px) {
       font-size: $fs_h2;
     }
+  }
 
-    &_popular {
-      @extend .button-like__number;
-      right: 30%;
-    }
+  &__number_popular {
+    @extend .button-like__number;
+    right: 30%;
   }
 
   &__heart {
-    @include containerSimple(10px, 10px);
-    @include absoluteTopLeft(5px, 5px);
-    text-align: center;
+    @include buttonLikeHeart();
+    background-image: url('@~Components/button-like/button-like__heart-regular.svg');
+  }
 
-    @media (min-width: 1750px) and (max-width: 1920px) {
-      @include containerSimple(18px, 18px);
-    }
-
-    &_popular {
-      @extend .button-like__heart;
-    }
+  &__heart_popular {
+    @include buttonLikeHeart();
+    background-image: url('@~Components/button-like/button-like__heart-active.svg');
   }
 }

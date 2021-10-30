@@ -1,9 +1,9 @@
 mixin button-like(buttonId, buttonNumber)
   if buttonNumber < 10 
     .button-like(id=buttonId)
-      img.button-like__heart.js-button-like__heart(src= "./assets/images/heart-regular.svg" alt="heart regular icon")
+      .button-like__heart.js-button-like__heart
       .button-like__number.js-button-like__number!= buttonNumber
   else
     .button-like_popular(id=buttonId)
-      img.button-like__heart_popular.js-button-like__heart(src= "./assets/images/heart-active.svg" alt="heart active icon")
+      .button-like__heart_popular.js-button-like__heart
       .button-like__number_popular.js-button-like__number!= buttonNumber
