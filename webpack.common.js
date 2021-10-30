@@ -39,9 +39,6 @@ module.exports = {
     },
     modules: [path.resolve(__dirname, 'src'), 'node_modules'],
   },
-  /*
-      Loaders with configurations
-  */
   module: {
     rules: [
       {
@@ -57,7 +54,8 @@ module.exports = {
         loader: "pug-loader",
       },
       {
-        test: /\.svg$/,
+        test: /fonts.*\.svg$/,
+        exclude: [path.resolve(__dirname, './src/components/')],
         use: [ 
           {
             loader: 'file-loader',
@@ -73,7 +71,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+        test: /fonts.*\.(woff2?|eot|ttf|otf)(\?.*)?$/,
         loader: "file-loader",
         options: {
           name: '[name].[ext]',
@@ -81,6 +79,15 @@ module.exports = {
           esModule: false,
         },
       },
+      {
+        test: /components.*\.(png|jpg|svg|gif)$/,
+        loader: 'file-loader',
+        options: {
+            name: '[name].[ext]',
+            outputPath: 'assest/images/',
+            esModule: false,
+        }
+      }
     ],
   },
 
@@ -103,10 +110,6 @@ module.exports = {
       chunks: ["index"],
       inject: "body",
     }),
-
-    /*
-        Pages
-    */
     ...PAGES.map(page => new HtmlWebpackPlugin({
       filename: `${page}.html`,
       template: `${PAGES_DIR}/${page}/${page}.pug`,
