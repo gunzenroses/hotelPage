@@ -3,18 +3,15 @@
   background: $dark-shade_less;
 
   &::before {
-    content: '';
     @include buttonLikeBefore;
-    margin: 1px;
-    background: $light;
   }
 
   &_popular {
-    @extend .button-like;
+    @include buttonLike;
     background: $linearGradientLilac;
 
     &::before {
-      @extend .button-like::before;
+      @include buttonLikeBefore;
     }
   }
 

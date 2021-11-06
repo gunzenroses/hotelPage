@@ -39,6 +39,7 @@
   border-radius: 22px;
   text-transform: uppercase;
   cursor: pointer;
+  background: $linearGradientLilac;
 
   &:hover {
     opacity: .5;
@@ -62,16 +63,14 @@
 }
 
 @mixin buttonLikeBefore {
+  content: '';
   position: absolute;
   width: calc(100% - 2px);
   height: calc(100% - 2px);
+  margin: 1px;
   border-radius: 10px;
+  background: $light;
   cursor: pointer;
-
-  @media (min-width: 1750px) and (max-width: 1920px) {
-    width: calc(100% - 2px);
-    height: calc(100% - 2px);
-  }
 }
 
 @mixin buttonLikeHeart {

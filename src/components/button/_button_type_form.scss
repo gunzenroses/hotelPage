@@ -3,7 +3,6 @@
   @include buttonBasic();
   min-width: 74px;
   padding: 2px;
-  background: $linearGradientLilac;
 
   &_inner {
     @include absoluteTopLeft(2px, 2px);
