@@ -3,7 +3,7 @@
   @include isFlex($direction: column, $justify: flex-start);
   width: 320px;
   min-height: 370px;
-  border: 1px solid rgba(31, 32, 65, 0.25);
+  border: 1px solid $dark-shade_less;
   background: $light;
   z-index: 3;
   user-select: none;
@@ -22,67 +22,89 @@
     width: 100%;
     padding: 20px 20px 22px 19px;
   }
-}
 
-.date__prev {
-  @include containerSize(24px);
-  position: relative;
-  line-height: 18px; 
-  border-radius: 50%;
-
-  &:hover {
-    background-color: grey;
+  &__weeks {
+    @include isFlex($direction: column);
+    width: 280px;
+    min-height: 240px;
+    margin: 9px auto 0;
+  
+    @media (min-width: 1650px) and (max-width: 1920px) {
+      width: 100%;
+    }
   }
 
-  &::before {
-    content: '\e5c4';
-    position: absolute;
-    top: 4px;
-    font-size: $fs_h1;
-    font-family: $material-icons;
-    color: $purple;
-  }
-}
-
-.date__next {
-  @include containerSize(24px);
-  position: relative;
-  line-height: 18px;
-  border-radius: 50%;
-
-  &:hover {
-    background-color: grey;
-  }
-
-  &::before {
-    content: '\e5c8';
-    position: absolute;
-    top: 4px;
-    font-size: $fs_h1;
-    font-family: $material-icons;
-    color: $purple;
-  }
-}
-
-.date__month {
-  display: block;
-  line-height: 24px;
-  margin: 0 auto;
-  font-size: $fs_h2;
-  font-weight: 700;
-  font-family: $montserrat;
-  text-align: center;
-  letter-spacing: .0015em;
-}
-
-.calendar__weeks {
-  @include isFlex($direction: column);
-  width: 280px;
-  min-height: 240px;
-  margin: 9px auto 0;
-
-  @media (min-width: 1650px) and (max-width: 1920px) {
+  &__buttons {
+    @include isFlex();
     width: 100%;
+    padding: 21px 19px 18px;
+    color: $purple;
+  }
+  
+  &__button-reset,
+  &__button-submit {
+    font-size: $fs_h3;
+    font-weight: 700;
+    font-family: Montserrat;
+    text-transform: uppercase;
+    color: $purple;
+  
+    @media (min-width: 1750px) and (max-width: 1920px) {
+      font-size: $fs_base;
+    }
+  }
+}
+
+.date {
+  &__button_prev {
+    @include containerSize(24px);
+    position: relative;
+    line-height: 18px; 
+    border-radius: 50%;
+
+    &:hover {
+      background-color: $grey;
+    }
+
+    &::before {
+      content: '\e5c4';
+      position: absolute;
+      top: 4px;
+      font-size: $fs_h1;
+      font-family: $material-icons;
+      color: $purple;
+    }
+  }
+
+  &__button_next {
+    @include containerSize(24px);
+    position: relative;
+    line-height: 18px;
+    border-radius: 50%;
+
+    &:hover {
+      background-color: $grey;
+    }
+
+    &::before {
+      content: '\e5c8';
+      position: absolute;
+      top: 4px;
+      font-size: $fs_h1;
+      font-family: $material-icons;
+      color: $purple;
+    }
+  }
+
+  &__month {
+    display: block;
+    line-height: 24px;
+    margin: 0 auto;
+    font-size: $fs_h2;
+    font-weight: 700;
+    font-family: $montserrat;
+    text-align: center;
+    letter-spacing: .0015em;
   }
 }
 
@@ -112,43 +134,33 @@
     text-align: center;
     color: $dark-shade_medium;
   }
-
-  &__day {
-    @include containerSize(40px);
-
-    @media (min-width: 1750px) and (max-width: 1920px) {
-      width: 14.28%;
-      font-size: $fs_h2;
-    }
-
-    &:hover {
-      border-radius: 50%;
-      border-color: $linearGradientLilac;
-      border-width: 2px;
-      border-style: solid;
-    }
-
-    &_prev,
-    &_next {
-      color: $dark-shade_less;
-    }
-  }
 }
 
 .weeks__day_prev_checkin,
 .weeks__day_next_checkin,
-.weeks__day_prev_checkedout,
-.weeks__day_next_checkedout {
-  color: $dark-shade_less;
-  border-radius: 50%;
-  background: $dark-shade_few;
+.weeks__day_prev_checkout,
+.weeks__day_next_checkout {
   position: relative;
+  @include weeksDay();
+  border-radius: 50%;
+  color: $dark-shade_less;
+  background: $dark-shade_few;
+}
+
+.weeks__day {
+  @include weeksDay();
+}
+
+.weeks__day_prev,
+.weeks__day_next {
+  @include weeksDay();
+  color: $dark-shade_less;
 }
 
 .weeks__day_prev_checkin::before,
 .weeks__day_next_checkin::before,
-.weeks__day_prev_checkedout::before,
-.weeks__day_next_checkedout::before {
+.weeks__day_prev_checkout::before,
+.weeks__day_next_checkout::before {
   content: '';
   @include containerBlock();
   @include absoluteTopLeft();
@@ -162,13 +174,14 @@
   border-radius: 50% 0 0 50%;
 }
 
-.weeks__day_prev_checkedout::before,
-.weeks__day_next_checkedout::before {
+.weeks__day_prev_checkout::before,
+.weeks__day_next_checkout::before {
   left: 0;
   border-radius: 0 50% 50% 0;
 }
 
-.weeks__day_today {
+.weeks__today {
+  @include weeksDay();
   border-radius: 50%;
   font-weight: 700;
   color: $light;
@@ -176,17 +189,22 @@
 }
 
 .weeks__day_ranged {
+  @include weeksDay();
   position: relative;
+  color: $dark-shade_medium;
   background: $linearGradientGrape;
 
   &_between {
+    @include weeksDay();
     position: relative;
-    background: $dark-shade_fewer;
     color: $dark-shade_less;
+    background: $dark-shade_fewer;
+    
   }
 }
 
-.weeks__day_checkedout {
+.weeks__day_checkout {
+  @include weeksDay();
   position: relative;
   font-weight: 700;
   color: $light;
@@ -205,6 +223,7 @@
 }
 
 .weeks__day_checkin {
+  @include weeksDay();
   position: relative;
   font-weight: 700;
   color: $light;
@@ -220,49 +239,5 @@
     background: $linearGradientLilac;
     border-radius: 50% 0 0 50%;
     opacity: .15;
-  }
-}
-
-.calendar__buttons {
-  @include isFlex();
-  width: 100%;
-  padding: 21px 19px 18px;
-  color: $purple;
-}
-
-.calendar__button-reset,
-.calendar__button-submit {
-  font-size: $fs_h3;
-  font-weight: 700;
-  font-family: Montserrat;
-  text-transform: uppercase;
-  color: $purple;
-
-  @media (min-width: 1750px) and (max-width: 1920px) {
-    font-size: $fs_base;
-  }
-}
-
-.calendar__input {
-  text-transform: uppercase;
-}
-
-.dropdown__calendar {
-  @include absoluteTopLeft(65px);
-  display: none;
-  width: 320px;
-  height: 369px;
-  margin-top: 4px;
-  background: $light;
-  z-index: 2;
-
-  @media (min-width: 1650px) and (max-width: 1920px) {
-    width: 100%;
-  }
-
-  @media (max-width: 450px) {
-    width: 100%;
-    min-width: 260px;
-    margin: 0 auto;
   }
 }
