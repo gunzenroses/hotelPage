@@ -151,13 +151,10 @@
 }
 
 .dropdown__button {
-  @include regularField;
-  padding: 0px 0 2px 12px;
-  cursor: pointer;
-  white-space: nowrap;
+  @include dropdownButton();
 
   &_open {
-    @extend .dropdown__button;
+    @include dropdownButton();
     border-radius: 4px 4px 0 0;
   }
 
@@ -173,7 +170,7 @@
   }
 
   &_transparent {
-    @extend .dropdown__button;
+    @include dropdownButton();
     border: none;
     padding: 0;
 
@@ -190,7 +187,8 @@
   }
 }
 
-.dropdown__rooms > .dropdown__item_expanded:last-of-type {
+.dropdown__item_expanded_last {
+  @include dropdownItem;
   margin-bottom: 3px;
 }
 

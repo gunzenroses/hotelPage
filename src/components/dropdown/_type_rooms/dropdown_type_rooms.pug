@@ -9,6 +9,6 @@ mixin dropdown_type_rooms(labelText, dropdownContainerId, dropdownClassShow, inp
       div(class="dropdown__content js-expand__content dropdown__rooms js-dropdown__rooms " + dropdownClassShow)
         +dropdown__item("bedrooms", "Спальни", 0)
         +dropdown__item("beds", "Кровати", 1)
-        +dropdown__item("bathrooms", "Ванные комнаты", 2)
+        +dropdown__item("bathrooms", "Ванные комнаты", 2, "last")
       .dropdown__info.js-dropdown__info.js-expand__init
         input.dropdown__input.js-dropdown__input(readonly='' type='text' placeholder='Выберите условия' value='' name="rooms" id=inputId)
