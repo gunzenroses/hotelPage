@@ -12,19 +12,11 @@
   }
 
   &__container {
-    @include isFlex();
-    width: 100%;
-    height: 65px;
-
-    @media (max-width: 450px) {
-      width: 100%;
-      min-width: 260px;
-      margin: 0 auto;
-    }
+    @include dateRangeContainer();
   }
 
   &__container_common {
-    @extend .date-range__container;
+    @include dateRangeContainer();
     flex-direction: column;
   }
 
@@ -45,23 +37,35 @@
   }
 
   &__info {
-    @extend .dropdown__button;
-
-    @media (min-width: 1750px) and (max-width: 1920px) {
-      font-size: $fs_h2;
-    }
-
-    @media (max-width: 450px) {
-      min-width: 100%;
-    }
+    @include dateRangeInfo();
   }
 
   &__info_in-search {
-    @extend .date-range__info;
+    @include dateRangeInfo();
     padding-left: 10px;
   }
 }
 
-.date-range__info input::placeholder {
+.date-range__input::placeholder {
   color: $dark-shade_more;
+}
+
+.dropdown__calendar {
+  @include absoluteTopLeft(65px);
+  display: none;
+  width: 320px;
+  height: 369px;
+  margin-top: 4px;
+  background: $light;
+  z-index: 2;
+
+  @media (min-width: 1650px) and (max-width: 1920px) {
+    width: 100%;
+  }
+
+  @media (max-width: 450px) {
+    width: 100%;
+    min-width: 260px;
+    margin: 0 auto;
+  }
 }

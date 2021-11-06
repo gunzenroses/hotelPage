@@ -80,16 +80,11 @@
   }
 
   &__row_small {
-    @include isFlex();
-    position: relative;
-    width: 100%;
-    height: 24px;
-    font-weight: 700;
-    line-height: 23px;
+    @include cardRowSmall();
   }
 
   &__row_narrow {
-    @extend .card-text__row_small;
+    @include cardRowSmall();
     padding-right: 2px;
   }
 }
