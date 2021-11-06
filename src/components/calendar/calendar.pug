@@ -8,7 +8,7 @@ mixin calendar(calendarId)
     .calendar__weeks
       .weeks__weekdays
         for day in weekdaysNames
-          span!= weekday
+          span!= day
       .weeks__days.js-weeks__days
     .calendar__buttons
       button.js-calendar__button-reset.calendar__button-reset(type='reset') Очистить
