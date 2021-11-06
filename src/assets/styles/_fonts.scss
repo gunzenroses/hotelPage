@@ -1,9 +1,3 @@
-/* src/assets/styles/base/_Fonts.scss */
-
-/*
-    montserrat 400
-*/
-
 @font-face {
   font-family: 'montserrat';
   font-weight: 400;
@@ -13,10 +7,6 @@
   url('@~Fonts/montserrat/montserrat-regular.ttf') format('truetype'),
   url('@~Fonts/montserrat/montserrat-regular.svg') format('svg');
 }
-
-/*
-  montserrat 700
-*/
 
 @font-face {
   font-family: 'montserrat';
@@ -28,11 +18,6 @@
   url('@~Fonts/montserrat/montserrat-bold.svg') format('svg');
 }
 
-
-/* 
-  Material Design Icons
-*/
-
 @font-face {
   font-family: 'material-icons';
   font-weight: 700;
@@ -41,7 +26,6 @@
   url('@~Fonts/material/material-icons.woff') format('woff'),
   url('@~Fonts/material/material-icons.ttf') format('truetype');
 }
-
 
 @font-face {
   font-family: 'Font Awesome 5 Brands';
