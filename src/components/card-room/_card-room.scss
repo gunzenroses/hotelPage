@@ -1,9 +1,9 @@
 .card-room {
   @include containerDimed;
   @include isFlex($direction: column, $justify: flex-start);
+  position: relative;
   width: 270px;
   height: 259px;
-  position: relative;
 
   @media (min-width: 1650px) and (max-width: 1920px) {
     width: 32%;
@@ -16,8 +16,8 @@
 
   @media (max-width: 450px) {
     width: 85vw;
-    height: calc(47vw + 106px);
     min-width: 258px;
+    height: calc(47vw + 106px);
     min-height: 270px;
   }
 }

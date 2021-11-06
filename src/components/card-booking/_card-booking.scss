@@ -1,6 +1,6 @@
 .card-booking {
-  @include containerShadowed;
   @include isFlex($direction: column, $justify: flex-start);
+  @include containerShadowed;
   width: 380px;
   height: fit-content;
   padding: 49px 29px 28px 29px;
@@ -11,8 +11,8 @@
 
   @media (max-width: 450px) {
     width: 100%;
-    padding: 25px;
     min-width: 320px;
+    padding: 25px;
   }
 }
 
@@ -92,8 +92,8 @@
   &__type {
     display: inline-block;
     font-size: .8rem;
-    color: $purple;
     letter-spacing: .02em;
+    color: $purple;
     text-transform: uppercase;
 
     @media (min-width: 1750px) and (max-width: 1920px) {
@@ -102,9 +102,9 @@
   }
 
   &__right {
-    color: $dark-shade_medium;
     letter-spacing: .01em;
     line-height: 19px;
+    color: $dark-shade_medium;
   }
 
   &__price {
@@ -116,8 +116,8 @@
   }
 
   &__period {
-    font-weight: 400;
     font-size: $fs_h3;
+    font-weight: 400;
 
     @media (min-width: 1750px) and (max-width: 1920px) {
       font-size: $fs_h2;
@@ -125,8 +125,8 @@
   }
 
   &__review {
-    font-weight: 400;
     font-size: $fs_base;
+    font-weight: 400;
   }
 }
 
@@ -191,9 +191,9 @@
   &__sign {
     @include containerSize(20px);
     position: relative;
-    background: $light;
     border-radius: 50%;
     border: 1px solid $dark-shade_less;
+    background: $light;
 
     &::before {
       content: 'i';
