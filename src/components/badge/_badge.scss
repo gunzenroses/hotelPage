@@ -10,13 +10,9 @@
   &__info {
     @include isFlex($justify: start);
     height: 50px;
+    width: 100%;
     font-size: 13.5px;
     letter-spacing: .02em;
-  }
-
-  &__underline {
-    width: 280px;
-    height: 1px;
-    background-color: $dark-shade_few;
+    border-bottom: 1px solid $dark-shade_few;
   }
 }
