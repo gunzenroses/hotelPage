@@ -16,8 +16,8 @@ export default class Calendar {
     this.months = ['Январь', 'Февраль', 'Март', 'Апрель',
       'Май', 'Июнь', 'Июль', 'Август',
       'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
-    this.buttonPrev = this.calendarContainer.querySelector('.js-date__prev');
-    this.buttonNext = this.calendarContainer.querySelector('.js-date__next');
+    this.buttonPrev = this.calendarContainer.querySelector('.js-date__button_prev');
+    this.buttonNext = this.calendarContainer.querySelector('.js-date__button_next');
     this.dateInCalendar = this.calendarContainer.querySelector('.js-date__month');
     this.daysOfMonth = this.calendarContainer.querySelector('.js-weeks__days');
 
@@ -240,14 +240,14 @@ export default class Calendar {
     let prevDays = '';
     for (let p = this.prevMonthDays; p > 0; p -= 1) {
       const prevDay = this.lastDayPrev - p + 1;
-      if (this.checkinPrevMonth(prevDay) || this.checkinPrevYear(prevDay)) prevDays += `<div class="weeks__day weeks__day_prev weeks__day_prev_checkin ">${prevDay}</div>`;
-      else if (this.checkoutPrevMonth(prevDay) || this.checkoutPrevYear(prevDay)) prevDays += `<div class="weeks__day weeks__day_prev weeks__day_prev_checkedout ">${prevDay}</div>`;
+      if (this.checkinPrevMonth(prevDay) || this.checkinPrevYear(prevDay)) prevDays += `<div class="weeks__day_prev_checkin">${prevDay}</div>`;
+      else if (this.checkoutPrevMonth(prevDay) || this.checkoutPrevYear(prevDay)) prevDays += `<div class="weeks__day_prev_checkout">${prevDay}</div>`;
       else if (this.betweenInOutPrevMonth(prevDay) 
         || this.betweenInOutPrevYear(prevDay) 
         || this.betweenInOutSameYear(prevDay)
         || this.betweenInOutDiffYears(prevDay)) 
-        prevDays += `<div class="weeks__day weeks__day_prev weeks__day_ranged_between">${prevDay}</div>`;
-      else prevDays += `<div class="weeks__day weeks__day_prev">${prevDay}</div>`;
+        prevDays += `<div class="weeks__day_ranged_between">${prevDay}</div>`;
+      else prevDays += `<div class="weeks__day_prev">${prevDay}</div>`;
     }
     return prevDays;
   }
@@ -360,11 +360,11 @@ export default class Calendar {
   renderCurrentMonth() {
     let currDays = '';
     for (let i = 1; i <= this.lastDay; i += 1) {
-      if (this.checkinToday(i)) currDays += `<div class="weeks__day weeks__day_today weeks__day_checkin">${i}</div>`;
-      else if (this.checkinCurrMonth(i)) currDays += `<div class="weeks__day weeks__day_checkin">${i}</div>`;
-      else if (this.checkoutCurrMonth(i)) currDays += `<div class="weeks__day weeks__day_checkedout">${i}</div>`;
-      else if (this.todayCurrMonth(i)) currDays += `<div class="weeks__day weeks__day_today">${i}</div>`;
-      else if (this.betweenInOutCurrentMonth(i)) currDays += `<div class="weeks__day weeks__day_ranged">${i}</div>`;
+      if (this.checkinToday(i)) currDays += `<div class="weeks__day_checkin">${i}</div>`;
+      else if (this.checkinCurrMonth(i)) currDays += `<div class="weeks__day_checkin">${i}</div>`;
+      else if (this.checkoutCurrMonth(i)) currDays += `<div class="weeks__day_checkout">${i}</div>`;
+      else if (this.todayCurrMonth(i)) currDays += `<div class="weeks__today">${i}</div>`;
+      else if (this.betweenInOutCurrentMonth(i)) currDays += `<div class="weeks__day_ranged">${i}</div>`;
       else currDays += `<div class="weeks__day">${i}</div>`;
     }
     return currDays;
@@ -451,10 +451,10 @@ export default class Calendar {
         ? this.checkout.getFullYear() === this.year
         : false;
      
-      if (this.checkinNextMonth(n, yearCheckin) || this.checkinNextYear(n)) nextDays += `<div class="weeks__day weeks__day_next weeks__day_next_checkin">${n}</div>`;
-      else if (this.checkoutNextMonth(n, yearCheckout) || this.checkoutNextYear(n)) nextDays += `<div class="weeks__day weeks__day_next weeks__day_next_checkedout">${n}</div>`;
-      else if (this.betweenInOutCurrentYear(n, yearCheckin, yearCheckout) || this.betweenInOutNextYear(yearCheckin, yearCheckout)) nextDays += `<div class="weeks__day weeks__day_next weeks__day_ranged_between">${n}</div>`;
-      else nextDays += `<div class="weeks__day weeks__day_next">${n}</div>`;
+      if (this.checkinNextMonth(n, yearCheckin) || this.checkinNextYear(n)) nextDays += `<div class="weeks__day_next_checkin">${n}</div>`;
+      else if (this.checkoutNextMonth(n, yearCheckout) || this.checkoutNextYear(n)) nextDays += `<div class="weeks__day_next_checkout">${n}</div>`;
+      else if (this.betweenInOutCurrentYear(n, yearCheckin, yearCheckout) || this.betweenInOutNextYear(yearCheckin, yearCheckout)) nextDays += `<div class="weeks__day_ranged_between">${n}</div>`;
+      else nextDays += `<div class="weeks__day_next">${n}</div>`;
     }
     return nextDays;
   }
