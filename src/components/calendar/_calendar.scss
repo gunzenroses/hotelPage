@@ -135,8 +135,8 @@
   }
 }
 
-.weeks__day_prev_checkedin,
-.weeks__day_next_checkedin,
+.weeks__day_prev_checkin,
+.weeks__day_next_checkin,
 .weeks__day_prev_checkedout,
 .weeks__day_next_checkedout {
   color: $dark-shade_less;
@@ -145,8 +145,8 @@
   position: relative;
 }
 
-.weeks__day_prev_checkedin::before,
-.weeks__day_next_checkedin::before,
+.weeks__day_prev_checkin::before,
+.weeks__day_next_checkin::before,
 .weeks__day_prev_checkedout::before,
 .weeks__day_next_checkedout::before {
   content: '';
@@ -155,8 +155,8 @@
   background: $dark-shade_fewer;
 }
 
-.weeks__day_prev_checkedin::before,
-.weeks__day_next_checkedin::before {
+.weeks__day_prev_checkin::before,
+.weeks__day_next_checkin::before {
   right: 0;
   z-index: -1;
   border-radius: 50% 0 0 50%;
@@ -179,7 +179,7 @@
   position: relative;
   background: $linearGradientGrape;
 
-  &_another {
+  &_between {
     position: relative;
     background: $dark-shade_fewer;
     color: $dark-shade_less;
@@ -204,7 +204,7 @@
   }
 }
 
-.weeks__day_checkedin {
+.weeks__day_checkin {
   position: relative;
   font-weight: 700;
   color: $light;
