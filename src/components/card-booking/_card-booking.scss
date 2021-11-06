@@ -18,11 +18,10 @@
 
 .card-booking__price-info {
   width: 100%;
+  min-width: 260px;
   margin-top: 30px;
 
   @media (max-width: 450px) {
-    width: 100%;
-    min-width: 260px;
     margin: 21px auto 0;
   }
 }

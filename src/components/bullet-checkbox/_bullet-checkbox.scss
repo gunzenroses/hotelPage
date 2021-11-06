@@ -6,14 +6,14 @@
     width: 280px;
     margin: 0 auto;
   }
+}
 
+.bullet-checkbox {
   &__label {
     @include labelMixin();
     margin-bottom: 11px;
   }
-}
-
-.bullet-checkbox {
+  
   &__item {
     @include isFlex($justify: start);
     position: relative;
