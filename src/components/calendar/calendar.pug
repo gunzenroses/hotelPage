@@ -2,9 +2,9 @@ mixin calendar(calendarId)
   - var weekdaysNames = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"]
   div.calendar.js-calendar(id=calendarId)
     .calendar__date
-      .date__prev.js-date__prev
+      .date__button_prev.js-date__button_prev
       .date__month.js-date__month!= textContent
-      .date__next.js-date__next
+      .date__button_next.js-date__button_next
     .calendar__weeks
       .weeks__weekdays
         for day in weekdaysNames
