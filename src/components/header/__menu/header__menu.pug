@@ -6,22 +6,24 @@ include ../../navlink/navlink.pug
 include ../../navlink/navlink_dropdown.pug
 
 mixin header__menu(user="")
-  nav.header__menu
+  .header__menu
     .header__burger-menu.js-expand__init
       span
-    .header__dropdown.dropdown__content.js-expand__content
-      +navlink("О нас", buttonOnclick="./some-address")
-      +navlink_dropdown("Услуги")
-      +navlink("Вакансии", buttonOnclick="./some-address")
-      +navlink("Новости", buttonOnclick="./some-address")
-      +navlink_dropdown("Соглашения")
+    nav.header__dropdown.dropdown__content.js-expand__content
+      ul.header__navbar_dropdown
+        +navlink("О нас", buttonOnclick="./some-address")
+        +navlink_dropdown("Услуги")
+        +navlink("Вакансии", buttonOnclick="./some-address")
+        +navlink("Новости", buttonOnclick="./some-address")
+        +navlink_dropdown("Соглашения")
     if user
       +header__user_signed(user, buttonOnclick="./some-address")
     else
       +header__user_unsigned("Войти", buttonOnclick="signin.html", "", buttonOnclick="registration.html")
-    .header__navbar
-      +navlink("О нас", buttonOnclick="./some-address")
-      +navlink_dropdown("Услуги")
-      +navlink("Вакансии", buttonOnclick="./some-address")
-      +navlink("Новости", buttonOnclick="./some-address")
-      +navlink_dropdown("Соглашения")
+    nav.header__navbar-region
+      ul.header__navbar
+        +navlink("О нас", buttonOnclick="./some-address")
+        +navlink_dropdown("Услуги")
+        +navlink("Вакансии", buttonOnclick="./some-address")
+        +navlink("Новости", buttonOnclick="./some-address")
+        +navlink_dropdown("Соглашения")

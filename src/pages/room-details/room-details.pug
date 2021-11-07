@@ -35,16 +35,16 @@ block variables
 block content
   .room-details.js-dropdown__detection
     +header("", theme)
-    .room-details__content
-      .room-details__view
+    main.room-details__content
+      section.room-details__view
         img(src="./assets/images/room-details.jpg" alt="room picture 1").room-details__view_main
         .room-details__view_miniature
           img(src="./assets/images/room-details-2.jpg" alt="room picture 2").room-details__view_mini
           img(src="./assets/images/room-details-3.jpg" alt="room picture 3").room-details__view_mini
-      .room-details__info_outer
+      section.room-details__info_outer
         .room-details__info_inner
           .room-details__description
-            .room-details__roomData
+            article.room-details__roomData
               .room-details__roomInfo
                 .room-details__text Сведения о номере
                 +badge("insert_emoticon", "Комфорт", "Шумопоглощающие стены")
@@ -53,19 +53,19 @@ block content
               .room-details__roomImpression
                 .room-details__text Впечатления от номера
                 +donutChart({excellent: 50, good: 25, satisfied: 25, dissapointed: 0})
-            .room-details__reviews
+            article.room-details__reviews
               .room-details__text Отзывы посетителей номера
               .reviews__info 2 отзыва
               +comment(comment1)
               +comment(comment2)
-            .room-details__rules
+            article.room-details__rules
               .room-details__text Правила
               .room-details__checkbox-list
                 +bullet-checkbox(checkboxList)
-            .room-details__cancellation
+            article.room-details__cancellation
               .room-details__text Отмена
               .room-details__cancellation_info
                 != cancellationRools
-          .room-details__booking
+          article.room-details__booking
             +card-booking("Сбор за доп. услуги", "short")
     +footer(theme)

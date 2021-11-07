@@ -13,3 +13,30 @@
     font-size: $fs_h2;
   }
 }
+
+.navlink_in-footer {
+  @extend .navlink;
+}
+
+.navlink_in-footer + .navlink_in-footer {
+  margin-top: 20px;
+
+  @media (max-width: 800px) {
+    margin-top: 0;
+  }
+}
+
+.navlink__button {
+  display: inline-block;
+  position: relative;
+  line-height: 20px;
+  font-size: $fs_base;
+  font-weight: 400;
+  color: $dark-shade_medium;
+}
+
+.navlink:active .navlink__button,
+.navlink:hover .navlink__button {
+  font-weight: 700;
+  color: $dark-shade_more;
+}

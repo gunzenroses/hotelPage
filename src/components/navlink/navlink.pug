@@ -1,2 +1,7 @@
-mixin navlink(buttonText="", buttonOnclick="./some-address")
-  a(class="navlink" href= buttonOnclick)= buttonText
+mixin navlink(buttonText="", buttonOnclick="./some-address", buttonNavlinkClass="")
+  if buttonNavlinkClass == ""
+    li(class="navlink")
+      a(class="navlink__button" href= buttonOnclick)= buttonText
+  else 
+    li(class="navlink" + "_" + buttonNavlinkClass)
+      a(class="navlink__button" href= buttonOnclick)= buttonText

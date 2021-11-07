@@ -336,20 +336,6 @@
   margin-top: 19px;
 }
 
-.footer__links .dropdown__content {
-  @media (max-width: 470px) {
-    display: none;
-  }
-}
-
-.footer__links a:not(:last-of-type) {
-  margin-bottom: 20px;
-
-  @media (max-width: 800px) {
-    margin-bottom: 0;
-  }
-}
-
 .footer__copyright {
   @media (max-width: 1340px) {
     width: 100%;

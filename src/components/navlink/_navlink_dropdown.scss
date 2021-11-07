@@ -30,35 +30,3 @@
   font-family: $material-icons;
   color: $dark-shade_medium;
 }
-
-.navlink__icon:hover ~ .button_navlink,
-.navlink__icon:active ~ .button_navlink {
-  font-weight: 700;
-  color: $dark-shade_more;
-}
-
-.button_navlink:active {
-  font-weight: 700;
-  color: $dark-shade_more;
-}
-
-.header__signed .button_navlink:hover {
-  font-weight: 700;
-  color: $dark-shade_more;
-}
-
-.button_navlink {
-  display: inline-block;
-  position: relative;
-  height: 18px;
-  line-height: 20px;
-  font-size: $fs_base;
-  font-weight: 400;
-  color: $dark-shade_medium;
-  cursor: pointer;
-
-  @media (min-width: 1750px) and (max-width: 1920px){
-    width: fit-content;
-    font-size: $fs_h2;
-  }
-}

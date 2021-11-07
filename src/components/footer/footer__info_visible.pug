@@ -6,14 +6,14 @@ mixin footer__info_visible(navigations, abouts, supports, theme="main")
       h3 Навигация
       .footer__links
         for navigation in navigations
-          +navlink(navigation, buttonOnclick="./some-address")
+          +navlink(navigation, buttonOnclick="./some-address", "in-footer")
     .footer__about
       h3 О нас
       .footer__links
         for about in abouts
-          +navlink(about, buttonOnclick="./some-address")
+          +navlink(about, buttonOnclick="./some-address", "in-footer")
     .footer__support
       h3 Служба поддержки
       .footer__links
         for support in supports
-          +navlink(support, buttonOnclick="./some-address")
+          +navlink(support, buttonOnclick="./some-address", "in-footer")

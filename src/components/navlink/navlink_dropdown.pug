@@ -1,7 +1,7 @@
 mixin navlink_dropdown(buttonText)
-  div.navlink.reverse
+  li.navlink.reverse
     .dropdown__content.js-expand__content
       .navlink__content
     .navlink__init.js-expand__init
       span.navlink__icon
-      span.button_navlink!= buttonText
+      span.navlink__button!= buttonText

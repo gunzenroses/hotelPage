@@ -37,9 +37,9 @@ block variables
 block content
   .search-room.js-dropdown__detection
     +header("", theme)
-    .search-room__content_outer
+    main.search-room__content_outer
       .search-room__content
-        .search-room__filter
+        section.search-room__filter
           form(class="search-room__form")
             .filter-group
               .filter-group__date-range
@@ -62,7 +62,7 @@ block content
                 +dropdown_type_rooms("Удобства номера", "dropdown_rooms_1", "", "dropdownRoomsInput_1")
               .filter-group__extras
                 +checkbox-expandable("Дополнительные удобства", "")
-        .search-room__rooms
+        section.search-room__rooms
           .search-room__text Номера, которые мы для вас подобрали
           .search-room__result
             for room in roomsList 
