@@ -1,5 +1,5 @@
 mixin checkbox__item(valueText, inputName, ifChecked, checkboxTitle)
-  label.checkbox 
+  label.checkbox__item
     input(type="checkbox" value=valueText name=inputName checked=ifChecked).checkbox__real
     span.checkbox__fake
     span(class="checkbox__title")= checkboxTitle
