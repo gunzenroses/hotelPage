@@ -3,7 +3,7 @@ include ../calendar/calendar.pug
 
 mixin date-range_separate(calendarId, labelText_1, inputValue_1, labelText_2, inputValue_2, dropdownClassShow = "")
   div.date-range__selector.js-date-range__selector
-    div(class="dropdown__calendar js-dropdown__calendar dropdown__content js-expand__content" + dropdownClassShow)
+    div(class="dropdown__calendar js-dropdown__calendar js-expand__content" + dropdownClassShow)
       +calendar(calendarId)
     .date-range__container.js-expand__init
       +date-range__item(labelText_1, "checkin", inputValue_1, "checkin")

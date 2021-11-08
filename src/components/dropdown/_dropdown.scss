@@ -41,7 +41,6 @@
 .dropdown__rooms,
 .dropdown__guests {
   @include absoluteTopLeft(44px);
-  display: none;
   width: 100%;
   margin-top: -1px;
   border: 1px solid rgba(31, 32, 65, 0.5);
@@ -127,15 +126,6 @@
 
 .dropdown__button_type_submit {
   display: inline-block;
-}
-
-.dropdown__content {
-  display: none;
-
-  @media (max-width: 450px) {
-    width: 100%;
-    min-width: 260px;
-  }
 }
 
 .dropdown__title {

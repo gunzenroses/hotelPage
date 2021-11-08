@@ -6,7 +6,7 @@ mixin dropdown_type_guests(labelText, dropdownContainerId, dropdownClassShow, in
     if labelRightText
       h3.label_right!= labelRightText
     div(class="dropdown" id=dropdownContainerId)
-      div(class="dropdown__content js-expand__content dropdown__guests js-dropdown__guests " + dropdownClassShow)
+      div(class="dropdown__guests js-expand__content js-dropdown__guests " + dropdownClassShow)
         +dropdown__item("grownups", "Взрослые", 0)
         +dropdown__item("kids", "Дети", 1)
         +dropdown__item("infants", "Младенцы", 2)

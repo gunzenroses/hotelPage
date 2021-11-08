@@ -52,7 +52,6 @@
 
 .dropdown__calendar {
   @include absoluteTopLeft(65px);
-  display: none;
   width: 320px;
   height: 369px;
   margin-top: 4px;

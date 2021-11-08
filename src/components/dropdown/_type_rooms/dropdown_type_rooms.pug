@@ -6,7 +6,7 @@ mixin dropdown_type_rooms(labelText, dropdownContainerId, dropdownClassShow, inp
     if labelRightText
       h3.label_right!= labelRightText
     div(class="dropdown" id=dropdownContainerId)
-      div(class="dropdown__content js-expand__content dropdown__rooms js-dropdown__rooms " + dropdownClassShow)
+      div(class="dropdown__rooms js-expand__content js-dropdown__rooms " + dropdownClassShow)
         +dropdown__item("bedrooms", "Спальни", 0)
         +dropdown__item("beds", "Кровати", 1)
         +dropdown__item("bathrooms", "Ванные комнаты", 2, "last")

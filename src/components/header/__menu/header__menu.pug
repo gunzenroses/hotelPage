@@ -9,7 +9,7 @@ mixin header__menu(user="")
   .header__menu
     .header__burger-menu.js-expand__init
       span
-    nav.header__dropdown.dropdown__content.js-expand__content
+    nav.header__dropdown.js-expand__content
       ul.header__navbar_dropdown
         +navlink("О нас", buttonOnclick="./some-address")
         +navlink_dropdown("Услуги")

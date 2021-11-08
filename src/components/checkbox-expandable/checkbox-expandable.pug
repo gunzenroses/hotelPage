@@ -3,7 +3,7 @@ include ./checkbox-expandable__item.pug
 mixin checkbox-expandable(dropdownTitleName, dropdownClassShow)
   .widget.container_medium
     .dropdown.reverse
-      div(class="dropdown__content js-expand__content " + dropdownClassShow)
+      div(class="js-expand__content " + dropdownClassShow)
         .checkbox-expand__content
           +checkbox-expandable__item("breakfast", false, "Завтрак")
           +checkbox-expandable__item("desk", true, "Письменный стол")
