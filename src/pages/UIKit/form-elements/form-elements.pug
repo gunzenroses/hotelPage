@@ -11,8 +11,8 @@ include ../../../components/button-toggle/button-toggle.pug
 include ../../../components/button-like/button-like.pug
 include ../../../components/button-rate/button-rate.pug
 include ../../../components/range/range.pug
-include ../../../components/button/button_type_form.pug
 include ../../../components/button/button_type_link.pug
+include ../../../components/button/button_type_link_colored.pug
 include ../../../components/button/button_type_submit.pug
 include ../../../components/navlink/navlink.pug
 include ../../../components/pagination/pagination.pug
@@ -100,13 +100,13 @@ block content
           h3.buttons__label Buttons
           .buttons__row
             .buttons__item
-              +button_type_link("Click me", "./some-address")
+              +button_type_link_colored("Click me", "./some-address")
             .buttons__item
-              +button_type_link("Click me", "./some-address")
+              +button_type_link_colored("Click me", "./some-address")
             .buttons__item
-             +button_type_form("Click me", "./some-address")
+             +button_type_link("Click me", "./some-address")
             .buttons__item
-             +button_type_form("Click me", "./some-address")
+             +button_type_link("Click me", "./some-address")
           .buttons__row
             +navlink("Click me", "./some-address")
             +navlink("Click me", "./some-address")

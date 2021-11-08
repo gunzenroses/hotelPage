@@ -18,7 +18,7 @@ export default class DropdownGuests {
     this.dropdownExpanded = this.container.querySelector('.js-dropdown__guests');
     this.info = this.container.querySelector('.js-dropdown__info');
     this.infoInput = this.container.querySelector('.js-dropdown__input');
-    this.dropdownItems = Array.from(this.container.querySelectorAll('.js-dropdown__item_expanded'));
+    this.dropdownItems = Array.from(this.container.querySelectorAll('.js-dropdown__item'));
     this.dropdownMinuses = this.container.querySelectorAll('.js-dropdown__minus');
     this.resetButton = this.dropdownExpanded.querySelector('.js-dropdown__button_type_reset');
     this.submitButton = this.dropdownExpanded.querySelector('.js-dropdown__button_type_submit');

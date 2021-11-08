@@ -12,7 +12,7 @@
   }
 }
 
-.header__buttons .button_type_link::before {
+.header__buttons .button_type_link_colored::before {
   content: "Зарегистрироваться";
 
   @media (max-width: 550px) {

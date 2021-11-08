@@ -1,6 +1,6 @@
 include ../textfield/textfield.pug
 include ../textfield/textfield_type_login.pug
-include ../button/button_type_form.pug
+include ../button/button_type_link.pug
 include ../button/button_type_submit.pug
 
 mixin card-signin(theme="main")
@@ -12,5 +12,5 @@ mixin card-signin(theme="main")
     .card-signin__info
       .card__text_in-row
         .card__subline Нет аккаунта на Toxin?
-        .card-signin__button_type_form
-          +button_type_form("Создать", "registration.html")
+        .card-signin__button_type_link
+          +button_type_link("Создать", "registration.html")

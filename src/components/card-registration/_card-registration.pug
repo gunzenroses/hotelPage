@@ -4,7 +4,7 @@ include ../textfield/textfield_type_login.pug
 include ../textfield/textfield_type_name.pug
 include ../textfield/textfield_type_surname.pug
 include ../button/button_type_submit.pug
-include ../button/button_type_form.pug
+include ../button/button_type_link.pug
 include ../buttons-radio/buttons-radio.pug
 include ../button-toggle/button-toggle.pug
 
@@ -32,5 +32,5 @@ mixin card-registration(submitText)
     .card-registration__info
       .card__text_in-row
         .card__subline Уже есть аккаунт на Toxin
-        .card-registration__button_type_form
-          +button_type_form("Войти", "signin.html")
+        .card-registration__button_type_link
+          +button_type_link("Войти", "signin.html")

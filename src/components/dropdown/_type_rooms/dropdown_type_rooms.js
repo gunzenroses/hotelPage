@@ -15,7 +15,7 @@ export default class DropdownRooms {
     this.container = document.getElementById(id);
     this.info = this.container.querySelector('.js-dropdown__info');
     this.infoInput = this.container.querySelector('.js-dropdown__input');
-    this.dropdownItems = Array.from(this.container.querySelectorAll('.js-dropdown__item_expanded'));
+    this.dropdownItems = Array.from(this.container.querySelectorAll('.js-dropdown__item'));
     this.dropdownPluses = this.container.querySelectorAll('.js-dropdown__plus');
     this.dropdownMinuses = this.container.querySelectorAll('.js-dropdown__minus');
   }

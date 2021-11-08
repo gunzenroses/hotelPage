@@ -1,12 +1,12 @@
 mixin dropdown__item(itemDataType, itemText, itemDataOrder, itemClass="")
   if itemClass == ""
-    .dropdown__item_expanded.js-dropdown__item_expanded(data-type=itemDataType)
+    .dropdown__item.js-dropdown__item(data-type=itemDataType)
       .dropdown__text!= itemText
       .dropdown__minus.js-dropdown__minus.button_disabled - 
       .dropdown__number.js-dropdown__number(data-order=itemDataOrder) 0 
       .dropdown__plus.js-dropdown__plus +
   else
-    .dropdown__item_expanded_last.js-dropdown__item_expanded(data-type=itemDataType)
+    .dropdown__item_last.js-dropdown__item(data-type=itemDataType)
       .dropdown__text!= itemText
       .dropdown__minus.js-dropdown__minus.button_disabled - 
       .dropdown__number.js-dropdown__number(data-order=itemDataOrder) 0 

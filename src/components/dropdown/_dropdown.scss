@@ -62,7 +62,7 @@
   background: $light;
 }
 
-.dropdown__item_expanded {
+.dropdown__item {
   @include dropdownItem;
 }
 
@@ -177,7 +177,7 @@
   }
 }
 
-.dropdown__item_expanded_last {
+.dropdown__item_last {
   @include dropdownItem;
   margin-bottom: 3px;
 }
