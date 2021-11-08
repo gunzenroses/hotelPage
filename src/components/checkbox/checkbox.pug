@@ -1,5 +1,7 @@
-mixin checkbox(valueText, inputName, ifChecked, checkboxTitle)
-  label.checkbox 
-    input(type="checkbox" value=valueText name=inputName checked=ifChecked).checkbox__real
-    span.checkbox__fake
-    span(class="checkbox__title")= checkboxTitle
+include ./checkbox__item.pug
+
+mixin checkbox
+  .checkbox__container
+    +checkbox__item("smoking_allowed", "house-rules", false, "Можно курить")
+    +checkbox__item("pets_allowed", "house-rules", true, "Можно с питомцами")
+    +checkbox__item("guests_allowed", "house-rules", true, "Можно пригласить гостей (до 10 человек)")
