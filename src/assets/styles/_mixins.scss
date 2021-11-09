@@ -30,7 +30,7 @@
   right: $right;
 }
 
-@mixin buttonBasic {
+@mixin buttonLink {
   position: relative;
   font-size: .84rem;
   font-weight: 700;
@@ -201,7 +201,7 @@
 }
 
 @mixin dateRangeInfo {
-  @include dropdownButton();
+  @include dropdownInitialField();
 
   @media (min-width: 1750px) and (max-width: 1920px) {
     font-size: $fs_h2;
@@ -210,6 +210,16 @@
   @media (max-width: 450px) {
     min-width: 100%;
   }
+}
+
+@mixin dropdownButton {
+  content: '\e5cf';
+  @include absoluteTopRight();
+  @include containerSize(44px);
+  display: block;
+  font-size: $fs_h1;
+  font-family: $material-icons;
+  text-align: center;
 }
 
 @mixin dropdownItem {
@@ -223,7 +233,7 @@
   text-transform: uppercase;
 }
 
-@mixin dropdownButton {
+@mixin dropdownInitialField {
   @include regularField;
   padding: 0px 0 2px 12px;
   cursor: pointer;
