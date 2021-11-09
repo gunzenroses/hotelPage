@@ -1,6 +1,6 @@
 .button_type_link_colored {
   @include containerBlock();
-  @include buttonBasic();
+  @include buttonLink();
   min-width: 74px;
   color: $light;
 }
