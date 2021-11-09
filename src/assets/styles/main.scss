@@ -12,14 +12,15 @@
 
 /* Components */
 @import '@~Components/badge/badge';
-@import "@~Components/button/button_type_link";
-@import "@~Components/button/button_type_link_colored";
-@import "@~Components/button/button_type_submit";
+@import '@~Components/button/button_type_link';
+@import '@~Components/button/button_type_link_colored';
+@import '@~Components/button/button_type_submit';
+@import '@~Components/button/button_type_basic';
 @import '@~Components/button-like/button-like';
 @import '@~Components/button-rate/button-rate';
 @import '@~Components/button-toggle/button-toggle';
 @import '@~Components/buttons-radio/buttons-radio';
-@import "@~Components/bullet-checkbox/bullet-checkbox";
+@import '@~Components/bullet-checkbox/bullet-checkbox';
 @import '@~Components/calendar/calendar';
 @import '@~Components/checkbox/checkbox';
 @import '@~Components/checkbox-expandable/checkbox-expandable';
@@ -37,9 +38,9 @@
 @import '@~Components/logo/logo';
 @import '@~Components/navlink/navlink';
 @import '@~Components/navlink/navlink_dropdown';
-@import "@~Components/textfield/textfield";
-@import "@~Components/textfield/textfield_type_birthday";
-@import "@~Components/textfield/textfield_type_login";
+@import '@~Components/textfield/textfield';
+@import '@~Components/textfield/textfield_type_birthday';
+@import '@~Components/textfield/textfield_type_login';
 @import '@~Components/pagination/pagination';
 @import '@~Components/range/range';
 @import '@~Components/rich-checkbox/rich-checkbox';
