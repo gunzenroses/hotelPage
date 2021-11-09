@@ -13,6 +13,7 @@ include ../../../components/range/range.pug
 include ../../../components/button/button_type_link.pug
 include ../../../components/button/button_type_link_colored.pug
 include ../../../components/button/button_type_submit.pug
+include ../../../components/button/button_type_basic.pug
 include ../../../components/navlink/navlink.pug
 include ../../../components/pagination/pagination.pug
 include ../../../components/dropdown/_type_guests/dropdown_type_guests.pug
@@ -98,8 +99,8 @@ block content
             .form-elements__button-item
              +button_type_link("Click me", "./some-address")
           .form-elements__buttons-row
-            +navlink("Click me", "./some-address")
-            +navlink("Click me", "./some-address")
+            +button_type_basic("Click me", "./some-address")
+            +button_type_basic("Click me", "./some-address")
           .form-elements__buttons-row
             +button_type_submit("Перейти к оплате")
         .form-elements__container_pagination
