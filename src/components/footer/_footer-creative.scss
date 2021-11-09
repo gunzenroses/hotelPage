@@ -27,7 +27,7 @@
 }
 
 .footer-creative_inner {
-  @include container(
+  @include containerWithMargins(
     $width: 560px,
     $height: 127px,
     $mt: 120px,

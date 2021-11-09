@@ -1,6 +1,6 @@
 
 .carousel__background_outer {
-  @include container($width: 100%, $height: 100%);
+  @include containerSimple($width: 100%, $height: 100%);
   position: relative;
   min-width: 320px;
   min-height: calc(683 / 1440 * 320px);

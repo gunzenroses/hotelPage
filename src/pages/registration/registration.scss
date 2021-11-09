@@ -3,12 +3,12 @@
 /* Main container */
 
 .registration {
-  @include container(
+  @include containerWithMargins(
     $width: 1440px,
     $height: fit-content,
     $mt: 0,
-    $mb: 0,
-    $ms: auto
+    $ms: auto,
+    $mb: 0
   );
 
   @include isFlex($direction: column, $justify: flex-start);

@@ -11,13 +11,13 @@
   }
 
   &__counter {
-    @include container($width: 92, $height: 30);
+    @include containerSimple($width: 92, $height: 30);
     @include isFlex($justify: space-between);
   }
 
   &__minus,
   &__plus {
-    @include container($width: 30, $height: 30);
+    @include containerSimple($width: 30, $height: 30);
     border-radius: 50%;
     border: 1px solid $dark-shade_less;
     box-shadow: border-box;

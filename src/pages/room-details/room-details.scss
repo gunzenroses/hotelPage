@@ -5,12 +5,12 @@
 /* Main container */
 
 .room-details {
-  @include container(
+  @include containerWithMargins(
     $width: 1440px,
     $height: 1937px,
     $mt: 0,
-    $mb: 0,
-    $ms: auto
+    $ms: auto,
+    $mb: 0
   );
   @include isFlex($direction: column, $justify: flex-start);
   position: relative;

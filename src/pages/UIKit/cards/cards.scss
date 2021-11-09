@@ -1,12 +1,12 @@
 /* Main container */
 
 .cards_outer {
-  @include container(
+  @include containerWithMargins(
     $width: 1440px,
     $height: 1353px,
     $mt: 50px,
-    $mb: 50px,
-    $ms: auto
+    $ms: auto,
+    $mb: 50px
   );
   position: relative;
   display: block;

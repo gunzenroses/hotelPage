@@ -2,12 +2,10 @@
 
 /* Main container */
 .search-room {
-  @include container(
+  @include containerWithMargins(
     $width: 1440px,
     $height: fit-content,
-    $mt: 0,
-    $mb: 0,
-    $ms: auto
+    $ms: auto,
   );
   @include isFlex($direction: column, $justify: flex-start);
   position: relative;

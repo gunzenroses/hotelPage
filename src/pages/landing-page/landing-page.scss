@@ -1,7 +1,7 @@
 @import 'Styles/main';
 
 .landing-page {
-  @include container($width: 1440px, $height: auto, $mt: 0, $mb: 0, $ms: auto);
+  @include containerWithMargins($width: 1440px, $height: auto, $ms: auto);
   @include isFlex($justify: flex-start, $direction: column);
   position: relative;
   min-width: 320px;

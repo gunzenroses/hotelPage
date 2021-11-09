@@ -1,5 +1,5 @@
 .form-elements_outer {
-  @include container(
+  @include containerWithMargins(
     $width: 1440px,
     $height: 1853px,
     $ms: auto
@@ -52,7 +52,7 @@
 }
 
 .form-elements__group_first {
-  @include container($width: 321px, $height: 636px, $mb: 89px);
+  @include containerWithMargins($width: 321px, $height: 636px, $mb: 89px);
   margin-right: 117px;
 
   @media (max-width: 1400px) {
@@ -168,7 +168,7 @@
 
 
 .form-elements__group_third {
-  @include container($width: 320px, $height: 503px);
+  @include containerSimple($width: 320px, $height: 503px);
   @include isFlex($direction: column, $align: flex-start, $justify: flex-start);
   margin-right: 7px;
 
@@ -286,7 +286,7 @@
 }
 
 .form-elements__group_fifth {
-  @include container($width: 320px, $height: 465px);
+  @include containerSimple($width: 320px, $height: 465px);
   @include isFlex($direction: column, $align: flex-start, $justify: flex-start);
   margin-top: 4px;
   margin-right: 60px;
@@ -302,7 +302,7 @@
 }
 
 .form-elements__group_sixth {
-  @include container($width: 320px, $height: 467px);
+  @include containerSimple($width: 320px, $height: 467px);
   @include isFlex($direction: column, $align: flex-start, $justify: flex-start);
   margin-top: 4px;
   margin-right: 7px;
@@ -318,7 +318,7 @@
 }
 
 .form-elements__group_seventh {
-  @include container($width: 291px, $height: 158px);
+  @include containerSimple($width: 291px, $height: 158px);
   @include isFlex($direction: column, $justify: flex-start, $align: flex-start);
   margin-right: 120px;
   margin-top: 1px;
