@@ -1,0 +1,15 @@
+.button_type_basic {
+  min-width: 66px;
+  height: 15px;
+  line-height: .84rem;
+  font-size: .875rem;
+  font-weight: 700;
+  color: $purple;
+  text-transform: uppercase;
+}
+
+.button_type_basic:hover,
+.button_type_basic:active {
+  color: $dark-shade_medium;
+  cursor: pointer;
+}
