@@ -1,4 +1,4 @@
-include ../textfield/textfield__label.pug
+include ../textfield/__label/textfield__label.pug
 include ../textfield/textfield_type_birthday.pug
 include ../textfield/textfield_type_login.pug
 include ../textfield/textfield_type_name.pug
@@ -16,11 +16,9 @@ mixin card-registration(submitText)
     .card-registration__surname
       +textfield_type_surname()
     .card-registration__radio
-      +buttons-radio("gender-man", true, "gender-woman", false)
+      +buttons-radio(gender, true, false)
     .card-registration__birthday
-      .widget_textfield
-        +textfield__label("Дата рождения", "")
-        +textfield_type_birthday()
+      .textfield__container_type_birthday("Дата рождения", "")
     .card-registration__login
       .widget
         +textfield__label("Данные для входа в сервис", "")

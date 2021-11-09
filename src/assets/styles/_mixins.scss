@@ -156,6 +156,16 @@
   padding: $pt $ps $pb;
 }
 
+@mixin containerMedium {
+  @include isFlex($direction: column);
+  width: 266px;
+
+  @media (max-width: 450px) {
+    width: 280px;
+    margin: 0 auto;
+  }
+}
+
 @mixin containerSize($size: 20px) {
   width: $size;
   height: $size;
@@ -387,5 +397,25 @@
     border-color: $linearGradientLilac;
     border-width: 2px;
     border-style: solid;
+  }
+}
+
+@mixin widget {
+  position: relative;
+  width: 100%;
+  min-width: 260px;
+
+  @media (max-width: 450px) {
+    margin: 0 auto;
+  }
+}
+
+@mixin widgetTextfield {
+  @include widget;
+  @include isFlex($direction: column);
+  height: 63px;
+
+  & input {
+    letter-spacing: 0.005em;
   }
 }

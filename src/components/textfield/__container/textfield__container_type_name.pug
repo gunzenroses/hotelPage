@@ -1,0 +1,7 @@
+include ../__label/textfield__label.pug
+include ../textfield_type_name.pug
+
+mixin textfield__container_type_name(leftLabel,rightLabel, name)
+  .textfield__container
+    +textfield__label(leftLabel, rightLabel)
+    +textfield_type_name(name)

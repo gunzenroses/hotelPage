@@ -1,0 +1,7 @@
+include ../__label/textfield__label.pug
+include ../textfield_type_birthday.pug
+
+mixin textfield__container_type_birthday(labelLeft, labelRight)
+  .textfield__container
+    +textfield__label(labelLeft, labelRight)
+    +textfield_type_birthday()

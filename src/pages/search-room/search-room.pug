@@ -51,10 +51,7 @@ block content
               .filter-group__rules
                 .widget
                   h3.label Правила дома
-                  .checkbox__container
-                    +checkbox("smoking_allowed", "house-rules", false, "Можно курить")
-                    +checkbox("pets_allowed", "house-rules", true, "Можно с питомцами")
-                    +checkbox("guests_allowed", "house-rules", true, "Можно пригласить гостей (до 10 человек)")
+                  +checkbox
             .filter-group
               .filter-group__accessibility
                 +rich-checkbox("accessibility", "Доступность")

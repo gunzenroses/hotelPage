@@ -6,7 +6,7 @@
   );
   position: relative;
   display: block;
-  overflow: auto; //to avoid margin-collapse
+  overflow: auto;
   background: $light;
 
   @media (max-width: 1400px) {
@@ -19,7 +19,6 @@
   }
 }
 
-/* Flex for adaptive design */
 .form-elements_inner {
   @include containerSimple($w: 1165px, $h: 1582px);
   @include isFlex($wrap: wrap);
@@ -52,7 +51,7 @@
   }
 }
 
-.form-elements__element_first {
+.form-elements__group_first {
   @include container($width: 321px, $height: 636px, $mb: 89px);
   margin-right: 117px;
 
@@ -65,7 +64,42 @@
   }
 }
 
-.form-elements__element_second {
+.form-elements__container_first {
+  @include isFlex($direction: column, $justify: flex-start);
+  height: 322px;
+  width: 100%;
+  margin-top: 1px;
+}
+
+.form-elements__container_email {
+  margin-top: 21px;
+}
+
+.form-elements__container_dropdown-guests {
+  margin-top: 22px;
+}
+
+.form-elements__container_birthday {
+  margin-top: 23px;
+}
+
+.form-elements__container_second {
+  @include isFlex($direction: column, $justify: flex-start);
+  min-height: 274px;
+  width: 100%;
+  margin-top: 32.5px;
+}
+
+.form-elements__container_date-range_common {
+  @include containerMedium();
+  margin-top: 40px;
+}
+
+.form-elements__container_email_medium {
+  margin-top: 43px;
+}
+
+.form-elements__group_second {
   @include containerSimple($w: 260px, $h: 537px);
   @include isFlex($direction: column, $justify: flex-start, $align: flex-start);
   margin-right: 124px;
@@ -75,31 +109,65 @@
   }
 }
 
-.form-elements__element_second > div:first-of-type {
-  letter-spacing: .05px;
-}
-
-.form-elements__element_second > div:nth-of-type(2) {
-  margin-top: 43px;
-}
-
-.form-elements__element_second > div:nth-of-type(3) {
-  margin-top: 39px;
-}
-
-.form-elements__element_second > div:nth-of-type(4) {
-  margin-top: 42px;
-}
-
-.form-elements__element_second > h3 {
+.form-elements__group_second > h3 {
   margin-top: 41px;
 }
 
-.form-elements__element_second > div:last-of-type {
+.form-elements__container_checkbox {
+  @include widget;
+  letter-spacing: .05px;
+}
+
+.form-elements__container_radio {
+  @include isFlex($direction: column);
+  width: 220px;
+  height: 53px;
+  margin-top: 43px;
+  line-height: normal;
+}
+
+.form-elements__label_radio {
+  @include labelMixin;
+  letter-spacing: .0001em;
+}
+
+.form-elements__container_toggle {
+  @include isFlex($direction: column);
+    height: 87px;
+    width: 268px;
+    margin-top: 39px;
+}
+
+.form-elements__label_toggle {
+  @include labelMixin;
+    font-size: .8rem;
+    letter-spacing: .0001em;
+}
+
+.form-elements__group_toggle {
+  @include isFlex($direction: column);
+  width: 100%;
+  height: 58px;
+  margin-top: 11px;
+}
+
+.form-elements__container_button-like {
+  @include isFlex($direction: column);
+  width: 90px;
+  height: 50px;
+  margin-top: 42px;
+
+  @media (min-width: 1750px) and (max-width: 1920px){
+    width: 130px;
+  }
+}
+
+.form-elements__container_button-rate {
   margin-top: 13px;
 }
 
-.form-elements__element_third {
+
+.form-elements__group_third {
   @include container($width: 320px, $height: 503px);
   @include isFlex($direction: column, $align: flex-start, $justify: flex-start);
   margin-right: 7px;
@@ -113,180 +181,15 @@
   }
 }
 
-.form-elements__element_third > div:nth-of-type(2) {
-  margin-top: 31px;
+.form-elements__container_range {
+  @include containerMedium();
 }
 
-.form-elements__element_third > div:nth-of-type(3) {
-  margin-top: 40px;
-}
-
-.form-elements__element_forth {
-  @include isFlex($direction: column, $justify: flex-start, $align: flex-start);
-  width: 267px;
-  min-height: 647px;
-  margin-right: 168px;
-  margin-left: -1px;
-  margin-bottom: 39px;
-
-  @media (max-width: 1400px) {
-    margin: 0;
-    margin-top: 40px;
-  }
-}
-
-.form-elements__element_forth > div:first-of-type {
-  margin-top: 2px;
-}
-
-.form-elements__element_forth > div:nth-of-type(2) {
-  margin-top: 42px;
-  margin-left: 1px;
-}
-
-.form-elements__element_forth > div:nth-of-type(3) {
-  margin-top: 20px;
-}
-
-.form-elements__element_fifth {
-  @include container($width: 320px, $height: 465px);
-  @include isFlex($direction: column, $align: flex-start, $justify: flex-start);
-  margin-top: 4px;
-  margin-right: 60px;
-
-  @media (max-width: 1400px) {
-    margin: 0;
-    margin-top: 40px;
-  }
-}
-
-.form-elements__element_fifth > div:nth-of-type(2) {
-  margin-top: 258px;
-}
-
-.form-elements__element_sixth {
-  @include container($width: 320px, $height: 467px);
-  @include isFlex($direction: column, $align: flex-start, $justify: flex-start);
-  margin-top: 4px;
-  margin-right: 7px;
-
-  @media (max-width: 1400px) {
-    margin: 0;
-    margin-top: 40px;
-  }
-}
-
-.form-elements__element_sixth > div:nth-of-type(2) {
-  margin-top: 256px;
-}
-
-.form-elements__element_seventh {
-  @include container($width: 291px, $height: 158px);
-  @include isFlex($direction: column, $justify: flex-start, $align: flex-start);
-  margin-right: 120px;
-  margin-top: 1px;
-  margin-left: -1px;
-
-  @media (max-width: 1400px) {
-    margin: 0;
-    margin-top: 40px;
-  }
-}
-
-.form-elements__element_seventh > div:nth-of-type(2) {
-  margin-top: 20px;
-}
-
-.form-elements__element_eighth {
-  @include isFlex($direction: column, $align: flex-start);
-  max-width: 711px;
-  min-height: 133px;
-  margin-top: 12px;
-  margin-right: 5px;
-
-  @media (max-width: 1400px) {
-    width: 55vw;
-    max-width: 711px;
-    margin: 40px 0 0;
-  }
-
-  @media (max-width: 1250px) {
-    width: 90%;
-    height: auto;
-  }
-
-}
-
-.form-elements__element_eighth > div:first-of-type  {
-  margin-top: -1px;
-  margin-left: -3px;
-}
-
-
-/* Containers to group elements into columns */
-.form-elements {
-  &__container_first,
-  &__container_second,
-  &__container_third,
-  &__container_forth {
-    @include isFlex($direction: column);
-  }
-
-  &__container_first {
-    justify-content: flex-start;
-    height: 322px;
-    width: 100%;
-    margin-top: 1px;
-  }
-
-  &__container_first > div:nth-of-type(2) {
-    margin-top: 21px;
-  }
-
-  &__container_first > div:nth-of-type(3) {
-    margin-top: 22px;
-  }
-
-  &__container_first > div:nth-of-type(4) {
-    margin-top: 23px;
-  }
-
-  &__container_second {
-    justify-content: flex-start;
-    min-height: 274px;
-    width: 100%;
-    margin-top: 32.5px;
-  }
-
-  &__container_second > div:nth-of-type(2) {
-    margin-top: 40px;
-  }
-
-  &__container_second > div:nth-of-type(3) {
-    margin-top: 43px;
-  }
-
-  &__container_third {
-    width: 266px;
-    height: 266px;
-    margin-top: 100px;
-  }
-
-  &__container_forth {
-    width: 267px;
-    height: 341px;
-    margin-top: 40px;
-  }
-}
-
-.widget_textfield:nth-of-type(1) .label_right {
-  margin-top: -3px;
-}
-
-.buttons__container {
+.form-elements__container_buttons {
   @include isFlex($direction: column, $justify: flex-start);
   width: 320px;
   height: 269px;
+  margin-top: 31px;
 
   @media (max-width: 450px) {
     width: 280px;
@@ -294,11 +197,11 @@
   }
 }
 
-.buttons__label {
+.form-elements__label_buttons {
   @include labelMixin;
 }
 
-.buttons__row {
+.form-elements__buttons-row {
   @include isFlex($direction: row);
 
   @media (max-width: 450px) {
@@ -331,73 +234,130 @@
   }
 }
 
-.buttons__item {
+.form-elements__button-item {
   @include containerBlock(99px, 44px);
   line-height: 44px;
 }
 
-.button-like__container {
-  @include isFlex($direction: column);
-  width: 90px;
-  height: 50px;
-
-  @media (min-width: 1750px) and (max-width: 1920px){
-    width: 130px;
-  }
-}
-
-.toggle {
-  &__container {
-    @include isFlex($direction: column);
-    height: 87px;
-    width: 268px;
-  }
-
-  &__label {
-    @include labelMixin;
-    font-size: .8rem;
-    letter-spacing: .0001em;
-  }
-
-  &__body {
-    @include isFlex($direction: column);
-    width: 100%;
-    height: 58px;
-    margin-top: 11px;
-  }
-}
-
-.checkbox__container {
-  @include isFlex($direction: column);
-  width: 224px;
-  margin-top: 10px;
-
-  @media (min-width: 1650px) and (max-width: 1920px) {
-    width: 100%;
-  }
-}
-
-.radio {
-  &__container {
-    @include isFlex($direction: column);
-    width: 220px;
-    height: 53px;
-    line-height: normal;
-  }
-
-  &__label {
-    @include labelMixin;
-    letter-spacing: .0001em;
-  }
-}
-
-.pagination__container {
+.form-elements__container_pagination {
   @include isFlex($direction: column);
   width: 241px;
   height: 105px;
   margin-left: 1px;
+  margin-top: 40px;
 
   @media (max-width: 450px) {
     margin: 0 auto;
   }
+}
+
+.form-elements__group_forth {
+  @include isFlex($direction: column, $justify: flex-start, $align: flex-start);
+  width: 267px;
+  min-height: 647px;
+  margin-right: 168px;
+  margin-left: -1px;
+  margin-bottom: 39px;
+
+  @media (max-width: 1400px) {
+    margin: 0;
+    margin-top: 40px;
+  }
+}
+
+.form-elements__container_dropdowns {
+  @include isFlex($direction: column, $justify: space-between);
+  width: 266px;
+  height: 147px;
+  margin-top: 2px;
+
+  & .label_right {
+    margin-top: 2px;
+  }
+}
+
+.form-elements__container_checkbox-expand_hidden {
+  margin-top: 162px;
+  margin-left: 1px;
+}
+
+.form-elements__container_checkbox-expand {
+  margin-top: 20px;
+}
+
+.form-elements__group_fifth {
+  @include container($width: 320px, $height: 465px);
+  @include isFlex($direction: column, $align: flex-start, $justify: flex-start);
+  margin-top: 4px;
+  margin-right: 60px;
+
+  @media (max-width: 1400px) {
+    margin: 0;
+    margin-top: 40px;
+  }
+}
+
+.form-elements__container_rich-checkbox {
+  margin-top: 258px;
+}
+
+.form-elements__group_sixth {
+  @include container($width: 320px, $height: 467px);
+  @include isFlex($direction: column, $align: flex-start, $justify: flex-start);
+  margin-top: 4px;
+  margin-right: 7px;
+
+  @media (max-width: 1400px) {
+    margin: 0;
+    margin-top: 40px;
+  }
+}
+
+.form-elements__container_bullet-checkbox {
+  margin-top: 256px;
+}
+
+.form-elements__group_seventh {
+  @include container($width: 291px, $height: 158px);
+  @include isFlex($direction: column, $justify: flex-start, $align: flex-start);
+  margin-right: 120px;
+  margin-top: 1px;
+  margin-left: -1px;
+
+  @media (max-width: 1400px) {
+    margin: 0;
+    margin-top: 40px;
+  }
+}
+
+.form-elements__container_badge {
+  margin-top: 20px;
+}
+
+.form-elements__group_eighth {
+  @include isFlex($direction: column, $align: flex-start);
+  max-width: 711px;
+  min-height: 133px;
+  margin-top: 12px;
+  margin-right: 5px;
+
+  @media (max-width: 1400px) {
+    width: 55vw;
+    max-width: 711px;
+    margin: 40px 0 0;
+  }
+
+  @media (max-width: 1250px) {
+    width: 90%;
+    height: auto;
+  }
+}
+
+.form-elements__container_comment {
+  margin-top: -1px;
+  margin-left: -3px;
+}
+
+.form-elements__container_first div:nth-of-type(1) .label_right {
+  margin-top: -3px;
 }

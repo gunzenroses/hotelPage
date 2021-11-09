@@ -24,3 +24,13 @@
   -webkit-background-clip: text;
   background-clip: text;
 }
+
+.textfield__container {
+  @extend .widget;
+  @include isFlex($direction: column);
+  height: 63px;
+
+  & input {
+    letter-spacing: 0.005em;
+  }
+}

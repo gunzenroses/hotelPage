@@ -1,4 +1,9 @@
-.checkbox-expand {
+.checkbox-expand__container {
+  @include widget();
+  @include containerMedium();
+}
+
+.checkbox-expand__item {
   @include isFlex($justify: flex-start);
   font-size: $fs_base;
   font-family: $montserrat;
@@ -14,7 +19,7 @@
   }
 }
 
-.checkbox-expand + .checkbox-expand {
+.checkbox-expand__item + .checkbox-expand__item {
   margin-top: 10px;
 }
 

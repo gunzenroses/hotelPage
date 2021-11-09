@@ -222,20 +222,6 @@ select {
   }
 }
 
-.width-and-heigh_266 {
-  @include isFlex($direction: column, $justify: flex-start);
-  width: 266px;
-  height: 266px;
-
-  & > div {
-    margin-bottom: 20px;
-  }
-
-  & .label_right {
-    margin-top: 2px;
-  }
-}
-
 .uikit-logo {
   @include absoluteTopLeft(30px, 30px);
   width: 48px;
