@@ -36,10 +36,6 @@
   margin-left: 2px;
   font-size: $fs_base;
   pointer-events: none;
-
-  @media (min-width: 1750px) and (max-width: 1920px) {
-    font-size: $fs_h2;
-  }
 }
 
 .comment__text {

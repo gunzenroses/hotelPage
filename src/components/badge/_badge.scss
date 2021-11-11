@@ -6,6 +6,7 @@
   border-bottom: 1px solid $dark-shade_few;
   font-size: 13.5px;
   letter-spacing: .02em;
+  pointer-events: none;
 
   @media (min-width: 1650px) and (max-width: 1920px){
     width: fit-content;

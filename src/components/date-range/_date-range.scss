@@ -30,10 +30,6 @@
   &__input {
     font-size: 13.5px;
     letter-spacing: 0.02em;
-
-    @media (min-width: 1750px) and (max-width: 1920px) {
-      font-size: $fs_h2;
-    }
   }
 
   &__info {

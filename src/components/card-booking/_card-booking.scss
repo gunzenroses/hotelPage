@@ -16,16 +16,6 @@
   }
 }
 
-.card-booking__price-info {
-  width: 100%;
-  min-width: 260px;
-  margin-top: 30px;
-
-  @media (max-width: 450px) {
-    margin: 21px auto 0;
-  }
-}
-
 .card-booking__button {
   width: 100%;
   margin-top: 20px;
@@ -71,11 +61,6 @@
   text-transform: uppercase;
   font-weight: 700;
   line-height: 11px;
-
-
-  @media (min-width: 1750px) and (max-width: 1920px) {
-    font-size: $fs_h2;
-  }
 }
 
 .card-booking__price {
@@ -83,10 +68,6 @@
   letter-spacing: .01em;
   line-height: 19px;
   color: rgba(31,32,65,.50196);
-
-  @media (min-width: 1750px) and (max-width: 1920px) {
-    font-size: $fs_h2;
-  }
 }
 
 .card-booking__period {
@@ -95,10 +76,6 @@
   letter-spacing: .01em;
   line-height: 19px;
   color: rgba(31,32,65,.50196);
-
-  @media (min-width: 1750px) and (max-width: 1920px) {
-    font-size: $fs_h2;
-  }
 }
 
 .card-booking__date-range {
@@ -122,11 +99,10 @@
   font-size: $fs_base;
   font-weight: 400;
   color: $dark-shade_more;
+  pointer-events: none;
 
   @media (min-width: 1750px) and (max-width: 1920px) {
-    width: 100%;
     max-width: 490px;
-    font-size: $fs_h2;
   }
 
   @media (max-width: 450px) {
