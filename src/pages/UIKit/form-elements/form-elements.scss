@@ -135,6 +135,7 @@
 
 .form-elements__label_radio {
   @include labelMixin;
+  margin-bottom: 3.5px;
   letter-spacing: .0001em;
 }
 
@@ -147,8 +148,9 @@
 
 .form-elements__label_toggle {
   @include labelMixin;
-    font-size: .8rem;
-    letter-spacing: .0001em;
+  margin-bottom: 3.5px;
+  font-size: .8rem;
+  letter-spacing: .0001em;
 }
 
 .form-elements__group_toggle {
@@ -170,7 +172,13 @@
 }
 
 .form-elements__container_button-rate {
+  width: 100%;
   margin-top: 13px;
+}
+
+.form-element__label_button-rate {
+  @include labelMixin;
+  margin-bottom: 1.5px;
 }
 
 
@@ -206,6 +214,7 @@
 
 .form-elements__label_buttons {
   @include labelMixin;
+  margin-bottom: 3.5px;
 }
 
 .form-elements__buttons-row {
@@ -325,7 +334,7 @@
 }
 
 .form-elements__group_seventh {
-  @include containerSimple($w: 291px, $h: 158px);
+  @include containerSimple($w: 291px, $h: fit-content);
   @include isFlex($direction: column, $justify: flex-start, $align: flex-start);
   margin-right: 120px;
   margin-top: 1px;
@@ -338,6 +347,8 @@
 }
 
 .form-elements__container_badge {
+  height: fit-content;
+  width: 100%;
   margin-top: 20px;
 }
 

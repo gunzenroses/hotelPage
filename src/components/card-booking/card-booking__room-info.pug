@@ -1,0 +1,19 @@
+mixin card-booking__room-info(rowSize, bookingNumber, bookingType, bookingPrice)
+  if rowSize === "big"
+    .card__row
+      .card__row_small
+        span.card-booking__No №
+        span.card-booking__number!= bookingNumber  
+        span.card-booking__suite!= bookingType
+      .card__row_small
+        span.card-booking__price!= bookingPrice + "₽"
+        span.card-booking__period &nbsp;в сутки
+  else
+    .card__row
+      .card__row_small
+        span.card__sign №
+        span.card__number!= bookingNumber
+        span.card__type!= bookingType 
+      .card__row_small
+        span.card__price!= bookingPrice + "₽"
+        span.card__period &nbsp;в сутки

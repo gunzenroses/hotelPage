@@ -1,5 +1,5 @@
 .toggle {
-  &__element {
+  &__item {
     @include isFlex($justify: start);
     width: 268px;
     height: 24px;
@@ -52,7 +52,7 @@
   }
 }
 
-.toggle_element + .toggle_element {
+.toggle__item + .toggle__item {
   margin-top: 10px;
 }
 

@@ -2,14 +2,14 @@ mixin calendar(calendarId)
   - var weekdaysNames = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"]
   div.calendar.js-calendar(id=calendarId)
     .calendar__date
-      .date__button_prev.js-date__button_prev
-      .date__month.js-date__month!= textContent
-      .date__button_next.js-date__button_next
+      .calendar__button_prev.js-calendar__button_prev
+      .calendar__month.js-calendar__month!= textContent
+      .calendar__button_next.js-calendar__button_next
     .calendar__weeks
-      .weeks__weekdays
+      .calendar__weekdays
         for day in weekdaysNames
           span!= day
-      .weeks__days.js-weeks__days
+      .calendar__days.js-calendar__days
     .calendar__buttons
       button.js-calendar__button-reset.calendar__button-reset(type='reset') Очистить
       button.js-calendar__button-submit.calendar__button-submit(type='button') Применить

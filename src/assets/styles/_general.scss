@@ -150,12 +150,14 @@ select {
 
 .label {
   @include labelMixin;
+  margin-bottom: 3.5px;
 
   &_right {
     @include labelMixin;
     position: absolute;
     right: 0;
     top: 1px;
+    margin-bottom: 3.5px;
     font-weight: 400;
     color: $dark-shade_medium;
     text-align: right;

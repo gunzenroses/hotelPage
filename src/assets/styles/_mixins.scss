@@ -86,13 +86,10 @@
   }
 }
 
-@mixin cardRowSmall {
+@mixin cardRow {
   @include isFlex();
+  @include containerSimple($w: 100%, $h: fit-content);
   position: relative;
-  width: 100%;
-  height: 24px;
-  font-weight: 700;
-  line-height: 23px;
 }
 
 @mixin cardsMargins {
@@ -202,6 +199,10 @@
 
 @mixin dateRangeInfo {
   @include dropdownInitialField();
+
+  &::before {
+    @include dropdownButton;
+  }
 
   @media (min-width: 1750px) and (max-width: 1920px) {
     font-size: $fs_h2;
@@ -332,7 +333,6 @@
 @mixin labelMixin {
   display: inline-block;
   height: 15px;
-  margin-bottom: 3.5px;
   line-height: $fs_h3;
   font-size: $fs_h3;
   font-weight: 700;
@@ -391,8 +391,10 @@
   }
 }
 
-@mixin weeksDay {
+@mixin calendarDay {
   @include containerSize(40px);
+  cursor: pointer;
+
   @media (min-width: 1650px) and (max-width: 1920px) {
     width: 14.28%;
     font-size: $fs_h2;
@@ -404,6 +406,43 @@
     border-width: 2px;
     border-style: solid;
   }
+}
+
+@mixin calendarCheckDay {
+  position: relative;
+  font-weight: 700;
+  color: $light;
+  border-radius: 50%;
+  background: $linearGradientLilac;
+  z-index: 2;
+
+  &::after {
+    content: '';
+    @include absoluteTopLeft();
+    @include containerBlock();
+    background: $linearGradientLilac;
+    opacity: .15;
+  }
+}
+
+@mixin calendarButton {
+  @include containerSize(24px);
+    position: relative;
+    line-height: 18px; 
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $grey;
+    }
+
+    &::before {
+      position: absolute;
+      top: 4px;
+      font-size: $fs_h1;
+      font-family: $material-icons;
+      color: $purple;
+    }
 }
 
 @mixin widget {

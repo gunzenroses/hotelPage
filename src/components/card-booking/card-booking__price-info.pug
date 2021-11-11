@@ -1,0 +1,16 @@
+mixin card-booking__price-info(infoDesctiption, infoPrice, infoSign = "none")
+  if infoSign == "full"
+    .card-booking__price-info
+      .card-booking__description!= infoDesctiption
+      .card-booking__expense
+        != infoPrice + "₽"
+        .card-booking__info-sign
+  else if infoSign == "short"
+    .card-booking__price-info
+        .card-booking__description_special!= infoDesctiption
+          .card-booking__info-sign
+        .card-booking__expense_special!= infoPrice + "₽"
+  else if infoSign == "none"
+    .card-booking__price-info
+      .card-booking__description!= infoDesctiption
+      .card-booking__expense!= infoPrice + "₽"

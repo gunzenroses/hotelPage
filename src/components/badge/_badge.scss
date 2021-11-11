@@ -1,18 +1,13 @@
 .badge {
-  @include isFlex($direction: column);
+  @include isFlex($justify: start);
   width: 280px;
   height: 69px;
+  padding-bottom: 19px;
+  border-bottom: 1px solid $dark-shade_few;
+  font-size: 13.5px;
+  letter-spacing: .02em;
 
   @media (min-width: 1650px) and (max-width: 1920px){
     width: fit-content;
-  }
-
-  &__info {
-    @include isFlex($justify: start);
-    height: 50px;
-    width: 100%;
-    font-size: 13.5px;
-    letter-spacing: .02em;
-    border-bottom: 1px solid $dark-shade_few;
   }
 }

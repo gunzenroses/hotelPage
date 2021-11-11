@@ -1,5 +1,5 @@
 include ../textfield/__label/textfield__label.pug
-include ../textfield/textfield_type_birthday.pug
+include ../textfield/__container/textfield__container_type_birthday.pug
 include ../textfield/textfield_type_login.pug
 include ../textfield/textfield_type_name.pug
 include ../textfield/textfield_type_surname.pug
@@ -10,7 +10,7 @@ include ../button-toggle/button-toggle.pug
 
 mixin card-registration(submitText)
   form.card-registration.js-card-registration(method="get" action="./registration.html" )
-    h1.card__text Регистрация аккаунта
+    h1.card__title Регистрация аккаунта
     .card-registration__name
       +textfield_type_name()
     .card-registration__surname
@@ -18,7 +18,7 @@ mixin card-registration(submitText)
     .card-registration__radio
       +buttons-radio(gender, true, false)
     .card-registration__birthday
-      .textfield__container_type_birthday("Дата рождения", "")
+      +textfield__container_type_birthday("Дата рождения", "")
     .card-registration__login
       .widget
         +textfield__label("Данные для входа в сервис", "")
@@ -28,7 +28,7 @@ mixin card-registration(submitText)
     .card-registration__button_type_submit
       +button_type_submit(submitText)
     .card-registration__info
-      .card__text_in-row
-        .card__subline Уже есть аккаунт на Toxin
+      .card__row
+        .card__text Уже есть аккаунт на Toxin
         .card-registration__button_type_link
           +button_type_link("Войти", "signin.html")

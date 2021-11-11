@@ -1,21 +1,23 @@
-include ./card-booking__text.pug
-include ./card-booking__info.pug
+include ./card-booking__room-info.pug
+include ./card-booking__price-info.pug
 include ../date-range/date-range_separate.pug
 include ../dropdown/_type_guests/dropdown_type_guests.pug
 include ../button/button_type_submit.pug
 
 mixin card-booking(serviceName, serviceStyle)
   form.card-booking(method="get" action="./search-room.html")
-    +card-booking__text("big", "888", "Люкс", "9 990")
-    +date-range_separate("calendar_booking", "Прибытие", "19.08.2019", "Выезд", "23.08.2019", "")
-    +dropdown_type_guests("Гости", "dropdown_guests_booking", "", "dropdownGuestsInput_4")
-    +card-booking__info("9 990₽ х 4 суток", "39 960")
-    +card-booking__info("Сбор за услуги: скидка 2 179₽", "0", "full")
-    +card-booking__info(serviceName, "300", serviceStyle)
+    +card-booking__room-info("big", "888", "Люкс", "9 990")
+    .card-booking__date-range
+      +date-range_separate("calendar_booking", "Прибытие", "19.08.2019", "Выезд", "23.08.2019", "")
+    .card-booking__dropdown_guests
+      +dropdown_type_guests("Гости", "dropdown_guests_booking", "", "dropdownGuestsInput_4")
+    +card-booking__price-info("9 990₽ х 4 суток", "39 960")
+    +card-booking__price-info("Сбор за услуги: скидка 2 179₽", "0", "full")
+    +card-booking__price-info(serviceName, "300", serviceStyle)
     .card-booking__price-info
-      .booking-total__row
+      .card-booking__summary
         .booking-total__text Итого
-        .booking-total__line
-        .booking-total__price 38 081₽
+        .card-booking__line
+        .card-booking__price_total 38 081₽
     .card-booking__button
       +button_type_submit("Забронировать")

@@ -36,127 +36,108 @@
   padding-right: 5px;
 }
 
-.card-booking > .date-range__selector {
-  margin-top: 6px;
+.card-booking__No {
+  display: inline-block;
+  padding-right: 4px;
+  font-size: $fs_base;
+  font-weight: 700;
+  line-height: 11px;
+  color: #1f2041;
+
+  @media (min-width: 1750px) and (max-width: 1920px) {
+    font-size: $fs_h2;
+  }
 }
 
-.card-booking > .dropdown__container {
-  margin-top: 24px;
-  margin-bottom: 10px;
-}
-
-.booking-text {
-  &__row {
-    @include isFlex();
-    position: relative;
-    width: 321px;
-    height: 30px;
-    font-weight: 700;
-
-    @media (min-width: 1650px) and (max-width: 1920px) {
-      width: 100%;
-      max-width: 490px;
-    }
-
-    @media (max-width: 450px) {
-      max-width: 280px;
-      margin: 0 auto;
-    }
-  }
-
-  &__left {
-    line-height: 11px;
-    color: $dark-shade_most;
-  }
-
-  &__sign {
-    display: inline-block;
-    padding-right: 4px;
-    font-size: $fs_base;
-
-    @media (min-width: 1750px) and (max-width: 1920px) {
-      font-size: $fs_h2;
-    }
-  }
-
-  &__number {
+.card-booking__number {
     display: inline-block;
     font-size: $fs_h1;
     letter-spacing: .01em;
+    font-weight: 700;
+    line-height: 11px;
+    color: #1f2041;
+
 
     @media (min-width: 1750px) and (max-width: 1920px) {
       font-size: $fs_h1;
     }
   }
 
-  &__type {
-    display: inline-block;
-    font-size: .8rem;
-    letter-spacing: .02em;
-    color: $purple;
-    text-transform: uppercase;
+.card-booking__suite {
+  display: inline-block;
+  font-size: .8rem;
+  letter-spacing: .02em;
+  color: $purple;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 11px;
 
-    @media (min-width: 1750px) and (max-width: 1920px) {
-      font-size: $fs_h2;
-    }
-  }
 
-  &__right {
-    letter-spacing: .01em;
-    line-height: 19px;
-    color: $dark-shade_medium;
-  }
-
-  &__price {
-    font-size: $fs_base;
-
-    @media (min-width: 1750px) and (max-width: 1920px) {
-      font-size: $fs_h2;
-    }
-  }
-
-  &__period {
-    font-size: $fs_h3;
-    font-weight: 400;
-
-    @media (min-width: 1750px) and (max-width: 1920px) {
-      font-size: $fs_h2;
-    }
-  }
-
-  &__review {
-    font-size: $fs_base;
-    font-weight: 400;
+  @media (min-width: 1750px) and (max-width: 1920px) {
+    font-size: $fs_h2;
   }
 }
 
-.booking-info {
-  &__row {
-    @include isFlex($justify: flex-start);
+.card-booking__price {
+  font-size: $fs_base;
+  letter-spacing: .01em;
+  line-height: 19px;
+  color: rgba(31,32,65,.50196);
+
+  @media (min-width: 1750px) and (max-width: 1920px) {
+    font-size: $fs_h2;
+  }
+}
+
+.card-booking__period {
+  font-size: $fs_h3;
+  font-weight: 400;
+  letter-spacing: .01em;
+  line-height: 19px;
+  color: rgba(31,32,65,.50196);
+
+  @media (min-width: 1750px) and (max-width: 1920px) {
+    font-size: $fs_h2;
+  }
+}
+
+.card-booking__date-range {
+  width: 100%;
+  margin-top: 6px;
+}
+
+.card-booking__dropdown_guests {
+  width: 100%;
+  margin-top: 24px;
+  margin-bottom: 10px;
+}
+
+.card-booking__price-info {
+  @include isFlex($justify: flex-start);
+  width: 100%;
+  min-height: 24px;
+  line-height: 18px;
+  margin-top: 10px;
+  margin-left: 1px;
+  font-size: $fs_base;
+  font-weight: 400;
+  color: $dark-shade_more;
+
+  @media (min-width: 1750px) and (max-width: 1920px) {
     width: 100%;
-    min-height: 24px;
-    line-height: 18px;
-    margin-top: 10px;
-    margin-left: 1px;
-    font-size: $fs_base;
-    font-weight: 400;
-    color: $dark-shade_more;
-
-    @media (min-width: 1750px) and (max-width: 1920px) {
-      width: 100%;
-      max-width: 490px;
-      font-size: $fs_h2;
-    }
-
-    @media (max-width: 450px) {
-      justify-content: space-between;
-      min-width: 260px;
-      width: 100%;
-      margin: 9px 0;
-    }
+    max-width: 490px;
+    font-size: $fs_h2;
   }
 
-  &__description {
+  @media (max-width: 450px) {
+    justify-content: space-between;
+    min-width: 260px;
+    width: 100%;
+    margin: 9px 0;
+  }
+}
+
+  .card-booking__description {
     display: inline-block;
     width: calc(100% - 101px);
     text-align: left;
@@ -172,81 +153,78 @@
     }
   }
 
-  &__description_special {
-    @include isFlex();
-    width: 168px;
-    margin-bottom: 16px;
-    letter-spacing: .0001em;
+.card-booking__description_special {
+  @include isFlex();
+  width: 168px;
+  margin-bottom: 16px;
+  letter-spacing: .0001em;
 
-    @media (min-width: 1650px) and (max-width: 1920px) {
-      width: 240px;
-    }
-
-    @media (max-width: 450px) {
-      width: calc(100% - 120px);
-      max-width: 170px;
-    }
+  @media (min-width: 1650px) and (max-width: 1920px) {
+    width: 240px;
   }
 
-  &__sign {
-    @include containerSize(20px);
-    position: relative;
-    border-radius: 50%;
-    border: 1px solid $dark-shade_less;
-    background: $light;
-
-    &::before {
-      content: 'i';
-      @include absoluteTopLeft(2px, 7px);
-      font-size: $fs_h3;
-      line-height: $fs_base;
-      font-weight: 700;
-      color: $dark-shade_less;
-    }
-  }
-
-  &__price {
-    @include isFlex($direction: row-reverse);
-    width: 99px;
-    text-align: right;
-    letter-spacing: .002em;
-
-    @media (min-width: 1650px) and (max-width: 1920px) {
-      width: 90px;
-    }
-  }
-
-  &__price_special {
-    @extend.booking-info__price;
-    width: calc(100% - 169px);
-
-    @media (min-width: 1650px) and (max-width: 1920px) {
-      width: calc(100% - 240px);
-    }
-
-    @media (max-width: 450px) {
-      width: 120px;
-    }
+  @media (max-width: 450px) {
+    width: calc(100% - 120px);
+    max-width: 170px;
   }
 }
 
-.booking-total {
-  &__row {
-    @include isFlex();
-    position: relative;
-    width: 100%;
-    margin-left: 1px;
-    line-height: 24px;
-    font-size: $fs_h2;
-    color: $dark-shade_most;
+.card-booking__info-sign {
+  @include containerSize(20px);
+  position: relative;
+  border-radius: 50%;
+  border: 1px solid $dark-shade_less;
+  background: $light;
+
+  &::before {
+    content: 'i';
+    @include absoluteTopLeft(2px, 7px);
+    font-size: $fs_h3;
+    line-height: $fs_base;
     font-weight: 700;
-    letter-spacing: .01em;
+    color: $dark-shade_less;
+  }
+}
+
+.card-booking__expense {
+  @include isFlex($direction: row-reverse);
+  width: 99px;
+  text-align: right;
+  letter-spacing: .002em;
+
+  @media (min-width: 1650px) and (max-width: 1920px) {
+    width: 90px;
+  }
+}
+
+.card-booking__expense_special {
+  @extend.card-booking__expense;
+  width: calc(100% - 169px);
+
+  @media (min-width: 1650px) and (max-width: 1920px) {
+    width: calc(100% - 240px);
   }
 
-  &__line {
-    @include isFlex($align: flex-end);
-    width: calc(100% - 140px);
-    height: 19px;
-    border-bottom: 1px dotted $dark-shade_less;
+  @media (max-width: 450px) {
+    width: 120px;
   }
+}
+
+.card-booking__summary {
+  @include isFlex();
+  position: relative;
+  width: 100%;
+  margin-left: 1px;
+  line-height: 24px;
+  font-size: $fs_h2;
+  color: $dark-shade_most;
+  font-weight: 700;
+  letter-spacing: .01em;
+}
+
+.card-booking__line {
+  @include isFlex($align: flex-end);
+  width: calc(100% - 140px);
+  height: 19px;
+  border-bottom: 1px dotted $dark-shade_less;
 }

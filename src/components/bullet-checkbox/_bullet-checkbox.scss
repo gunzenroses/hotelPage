@@ -11,7 +11,7 @@
 .bullet-checkbox {
   &__label {
     @include labelMixin();
-    margin-bottom: 11px;
+    margin-bottom: 3.5px;
   }
   
   &__item {
@@ -48,4 +48,8 @@
 
 .bullet-checkbox__item + .bullet-checkbox__item {
   margin-top: 10px;
+}
+
+.bullet-checkbox__label + .bullet-checkbox__list {
+  margin-top: 8px;
 }

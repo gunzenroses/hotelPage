@@ -22,7 +22,7 @@
   }
 }
 
-.room {
+.card-room {
   &__info {
     @include isFlex($direction: column, $justify: flex-start);
     width: 100%;
@@ -31,10 +31,10 @@
     pointer-events: none;
   }
 
-  &__line {
-    width: 100%;
-    height: 6.5px;
-    border-bottom: 1px solid $dark-shade_few;
-    margin-bottom: 12px;
+  &__rating {
+    @include cardRow();
+    border-top: 1px solid $dark-shade_few;
+    margin-top: 12px;
+    padding-right: 2px;
   }
 }

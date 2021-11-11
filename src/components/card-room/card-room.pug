@@ -7,9 +7,8 @@ mixin card-room(roomOptions)
   - var {src = [], bookingNumber = "999", bookingType = false, bookingPrice = 0, starName = inputName, starRate = 0, reviewAmount = 0} = roomOptions
   .card-room
     +roomCarousel(src, nameForPictures="room " + bookingNumber)
-    .room__info
-      +card-booking__text("small", bookingNumber, bookingType, bookingPrice)
-      .room__line
-      .card-text__row_narrow
+    .card-room__info
+      +card-booking__room-info("small", bookingNumber, bookingType, bookingPrice)
+      .card-room__rating
         +button-rate(starName, starRate)
         +card-room__review(reviewAmount)
