@@ -54,6 +54,7 @@
   border-radius: 3px;
   background-color: $light;
   border: 1px solid $dark-shade_less;
+  cursor: pointer;
 }
 
 .irs-hidden-input {
@@ -68,6 +69,7 @@
   border-radius: 3px;
   background: $linearGradientTurquoise;
   z-index: 1;
+  cursor: pointer;
 }
 
 .irs-handle {
@@ -78,4 +80,5 @@
   border: 2px solid $light;
   background: $linearGradientTurquoise;
   z-index: 1;
+  cursor: pointer;
 }

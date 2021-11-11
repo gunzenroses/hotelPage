@@ -43,6 +43,7 @@
   width: auto;
   height: auto;
   z-index: 1;
+  cursor: pointer;
 }
 
 .room-carousel__element:not(:last-of-type) {
@@ -88,6 +89,7 @@
   height: 100%;
   width: 42px;
   background: $linearGradientShadow;
+  cursor: pointer;
 }
 
 .room-carousel__btn_prev::before {
@@ -102,6 +104,7 @@
   width: 42px;
   background: $linearGradientShadow;
   transform: matrix(-1, 0, 0, 1, 0, 0);
+  cursor: pointer;
 }
 
 .room-carousel__btn_next::before {
