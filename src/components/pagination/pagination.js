@@ -94,7 +94,7 @@ export default class ButtonPagination {
     if (i === this.num) {
       button.classList.add('pagination__button_current');
     } else {
-      button.classList.add('pagination__item');
+      button.classList.add('pagination__item','js-pagination__item');
     }
     return button;
   }
