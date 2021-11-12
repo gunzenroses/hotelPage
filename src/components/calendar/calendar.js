@@ -21,8 +21,8 @@ export default class Calendar {
     this.dateInCalendar = this.calendarContainer.querySelector('.js-calendar__month');
     this.daysOfMonth = this.calendarContainer.querySelector('.js-calendar__days');
 
-    if (this.calendarContainer.closest('.js-date-range__selector')) {
-      this.mainContainer = this.calendarContainer.closest('.js-date-range__selector');
+    if (this.calendarContainer.closest('.js-date-range__container')) {
+      this.mainContainer = this.calendarContainer.closest('.js-date-range__container');
     } else {
       this.mainContainer = this.calendarContainer;
     }
@@ -37,8 +37,8 @@ export default class Calendar {
       this.rangeEnd = this.mainContainer.querySelector('input[name=checkout]');
     }
 
-    if (this.mainContainer.querySelector('.js-dropdown__calendar')) {
-      this.calendar = this.mainContainer.querySelector('.js-dropdown__calendar');
+    if (this.mainContainer.querySelector('.js-date-range__calendar')) {
+      this.calendar = this.mainContainer.querySelector('.js-date-range__calendar');
     }
 
     this.btnApply = this.mainContainer.querySelector('.js-calendar__button-submit');

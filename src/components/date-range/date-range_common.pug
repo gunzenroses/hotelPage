@@ -1,10 +1,10 @@
 include ../calendar/calendar.pug
 
 mixin date-range_common(calendarId, labelText, inputValue, dropdownClassShow, theme="")
-  div.date-range__selector.js-date-range__selector
-    div(class="dropdown__calendar js-dropdown__calendar js-expand__content" + dropdownClassShow)
+  div.date-range__container.js-date-range__container
+    div(class="date-range__calendar js-date-range__calendar js-expand__content" + dropdownClassShow)
       +calendar(calendarId)
-    .date-range__container_common.js-expand__init
+    .date-range__selector_common.js-expand__init
       h3.date-range__label!= labelText
       if theme == ""
         .date-range__info

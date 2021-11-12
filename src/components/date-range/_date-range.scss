@@ -1,52 +1,51 @@
 .date-range {
-  &__selector {
+  &__container {
     position: relative;
     width: 100%;
+    min-width: 260px;
     height: 65px;
 
     @media (max-width: 450px) {
-      width: 100%;
-      min-width: 260px;
       margin: 0 auto;
     }
   }
 
-  &__container {
-    @include dateRangeContainer();
+  &__selector {
+    @include dateRangeSelector();
   }
 
-  &__container_common {
-    @include dateRangeContainer();
+  &__selector_common {
+    @include dateRangeSelector();
     flex-direction: column;
   }
-
-  &__label {
-    @include labelMixin;
-    margin-bottom: 3.5px;
-    margin-top: 5px;
-    letter-spacing: 0.002em;
-  }
-
-  &__input {
-    font-size: 13.5px;
-    letter-spacing: 0.02em;
-  }
-
-  &__info {
-    @include dateRangeInfo();
-  }
-
-  &__info_in-search {
-    @include dateRangeInfo();
-    padding-left: 10px;
-  }
 }
 
-.date-range__input::placeholder {
-  color: $dark-shade_more;
+.date-range__label {
+  @include labelMixin;
+  margin-bottom: 3.5px;
+  margin-top: 5px;
+  letter-spacing: 0.002em;
 }
 
-.dropdown__calendar {
+.date-range__info {
+  @include dateRangeInfo();
+}
+
+.date-range__info_in-search {
+  @include dateRangeInfo();
+  padding-left: 10px;
+}
+
+.date-range__input {
+  font-size: 13.5px;
+  letter-spacing: 0.02em;
+
+  &::placeholder {
+    color: $dark-shade_more;
+  } 
+}
+
+.date-range__calendar {
   @include absoluteTopLeft(65px);
   width: 320px;
   height: 369px;

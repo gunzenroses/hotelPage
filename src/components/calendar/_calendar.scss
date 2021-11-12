@@ -1,7 +1,7 @@
 .calendar {
   @include containerDimed();
   @include isFlex($direction: column, $justify: flex-start);
-  width: 320px;
+  width: 100%;
   min-height: 370px;
   border: 1px solid $dark-shade_less;
   background: $light;
