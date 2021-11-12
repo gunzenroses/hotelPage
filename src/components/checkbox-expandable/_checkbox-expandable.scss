@@ -7,71 +7,12 @@
   }
 }
 
-.checkbox-expand__item {
-  @include isFlex($justify: flex-start);
-  font-size: $fs_base;
-  font-family: $montserrat;
-  font-weight: 400;
-  text-transform: none;
+.checkbox-expand__content {
+  margin-top: 3px;
+  height: 171px;
+  width: 266px;
 
   @media (min-width: 1650px) and (max-width: 1920px) {
     width: 100%;
-  }
-
-  &:hover {
-    cursor: pointer;
-  }
-}
-
-.checkbox-expand__item + .checkbox-expand__item {
-  margin-top: 10px;
-}
-
-.checkbox-expand {
-  &__content {
-    margin-top: 3px;
-    height: 171px;
-    width: 266px;
-
-    @media (min-width: 1650px) and (max-width: 1920px) {
-      width: 100%;
-    }
-  }
-
-  &__fake {
-    @include checkboxFake;
-    margin-right: 9px;
-
-    @media (min-width: 1750px) and (max-width: 1920px) {
-      @include containerBlock(25px, 25px);
-    }
-  }
-
-  &__title {
-    display: block;
-    width: 192px;
-    font-size: $fs_base;
-    line-height: 20px;
-    font-weight: 400;
-    letter-spacing: 0.003em;
-    color: $dark-shade_medium;
-
-    @media (min-width: 1750px) and (max-width: 1920px) {
-      width: calc(100% - 50px);
-      max-width: 350px;
-    }
-  }
-}
-
-.checkbox__real:checked ~ .checkbox-expand__fake {
-  @extend .checkbox-expand__fake;
-  border-color: $purple;
-}
-
-.checkbox__real:checked + .checkbox-expand__fake::before {
-  @include checkboxFakeBefore;
-
-  @media (min-width: 1650px) and (max-width: 1920px) {
-    @include containerBlock(5px, 10px);
   }
 }
