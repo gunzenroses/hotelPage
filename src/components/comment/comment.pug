@@ -6,8 +6,7 @@ mixin comment(commentData)
   .widget
     article.comment
       .comment__head
-        .comment__pic
-          img(src=authorPic alt="profile picture")
+        img(src=authorPic alt="profile picture").comment__pic
         +info(authorName, commentTime)
       .comment__body
         .comment__likes

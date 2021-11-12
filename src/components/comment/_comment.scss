@@ -1,16 +1,12 @@
 .comment {
+  width: 100%;
   min-width: 266px;
   min-height: 133px;
-
-  @media (max-width: 450px) {
-    min-width: 260px;
-    width: 100%;
-  }
 }
 
 .comment__head {
   @include isFlex($justify: start);
-  height: 51px;
+  height: fit-content;
 }
 
 .comment__pic {
@@ -21,18 +17,14 @@
   border-radius: 50%;
   filter: drop-shadow(0px 10px 20px $dark-shade_few);
   overflow: hidden;
-
-  @media (min-width: 1750px) and (max-width: 1920px) {
-    width: 48px;
-    height: 48px;
-  }
 }
 
 .comment__body {
   @include isFlex($justify: start);
   width: 100%;
+  height: fit-content;
   min-height: 51px;
-  margin-top: 7px;
+  margin-top: 10px;
   margin-left: 2px;
   font-size: $fs_base;
   pointer-events: none;
@@ -56,6 +48,6 @@
 }
 
 .comment__likes {
-  margin-top: 2.5px;
+  margin-top: 2px;
   margin-left: 2px;
 }
