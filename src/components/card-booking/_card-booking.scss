@@ -32,7 +32,7 @@
   font-size: $fs_base;
   font-weight: 700;
   line-height: 11px;
-  color: #1f2041;
+  color: $dark-shade_most;
 
   @media (min-width: 1750px) and (max-width: 1920px) {
     font-size: $fs_h2;
@@ -45,7 +45,7 @@
     letter-spacing: .01em;
     font-weight: 700;
     line-height: 11px;
-    color: #1f2041;
+    color: $dark-shade_most;
 
 
     @media (min-width: 1750px) and (max-width: 1920px) {
@@ -55,19 +55,20 @@
 
 .card-booking__suite {
   display: inline-block;
+  line-height: 11px;
   font-size: .8rem;
+  font-weight: 700;
   letter-spacing: .02em;
   color: $purple;
   text-transform: uppercase;
-  font-weight: 700;
-  line-height: 11px;
 }
 
 .card-booking__price {
   font-size: $fs_base;
-  letter-spacing: .01em;
+  font-weight: 700;
   line-height: 19px;
-  color: rgba(31,32,65,.50196);
+  letter-spacing: .01em;
+  color: $dark-shade_medium;
 }
 
 .card-booking__period {
@@ -75,7 +76,7 @@
   font-weight: 400;
   letter-spacing: .01em;
   line-height: 19px;
-  color: rgba(31,32,65,.50196);
+  color: $dark-shade_medium;
 }
 
 .card-booking__date-range {
