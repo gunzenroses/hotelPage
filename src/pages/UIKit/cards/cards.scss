@@ -61,7 +61,7 @@
 }
 
 .cards__card-registration {
-  @include cardsMargins;
+  @include marginTop;
   width: 380px;
   min-height: 645px;
   margin-top: 40px;
@@ -73,7 +73,7 @@
 }
 
 .cards__card-booking {
-  @include cardsMargins;
+  @include marginTop;
   width: 380px;
   height: 510px;
   margin-top: 1px;
@@ -84,22 +84,14 @@
 }
 
 .cards__card-signin {
-  @include cardsMargins;
+  @include marginTop;
   width: 380px;
   min-height: 358px;
   margin-top: 40px;
-
-  @media (max-width: 1400px) {
-    margin-top: 0;
-  }
-
-  @media (max-width: 850px) {
-    margin-top: 30px;
-  }
 }
 
 .cards__calendar {
-  @include cardsMargins;
+  @include marginTop;
   width: 320px;
   height: fit-content;
 }
