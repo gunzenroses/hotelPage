@@ -1,5 +1,5 @@
-mixin card-booking__room-info(rowSize, bookingNumber, bookingType, bookingPrice)
-  if rowSize === "big"
+mixin card-booking__room-info(bookingNumber, bookingType, bookingPrice, theme="")
+  if theme == "in-uikit"
     .card__row
       .card__row_small
         span.card-booking__No №
@@ -11,9 +11,9 @@ mixin card-booking__room-info(rowSize, bookingNumber, bookingType, bookingPrice)
   else
     .card__row
       .card__row_small
-        span.card__sign №
-        span.card__number!= bookingNumber
-        span.card__type!= bookingType 
+        span.card-booking__No №
+        span.card-booking__number!= bookingNumber  
+        span(class="card-booking__suite" + "_" + theme)= bookingType
       .card__row_small
-        span.card__price!= bookingPrice + "₽"
-        span.card__period &nbsp;в сутки
+        span.card-booking__price!= bookingPrice + "₽"
+        span.card-booking__period &nbsp;в сутки

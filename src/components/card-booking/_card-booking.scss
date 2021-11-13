@@ -28,7 +28,7 @@
 
 .card-booking__No {
   display: inline-block;
-  padding-right: 4px;
+  padding-right: 3px;
   font-size: $fs_base;
   font-weight: 700;
   line-height: 11px;
@@ -42,7 +42,7 @@
 .card-booking__number {
     display: inline-block;
     font-size: $fs_h1;
-    letter-spacing: .01em;
+    letter-spacing: .001em;
     font-weight: 700;
     line-height: 11px;
     color: $dark-shade_most;
@@ -56,11 +56,16 @@
 .card-booking__suite {
   display: inline-block;
   line-height: 11px;
-  font-size: .8rem;
+  font-size: $fs_h3;
   font-weight: 700;
   letter-spacing: .02em;
   color: $purple;
   text-transform: uppercase;
+}
+
+.card-booking__suite_in-details {
+  @extend .card-booking__suite;
+  margin-left: 8px;
 }
 
 .card-booking__price {
@@ -81,13 +86,15 @@
 
 .card-booking__date-range {
   width: 100%;
-  margin-top: 6px;
+  margin-top: 23px;
+  height: 63px;
 }
 
 .card-booking__dropdown_guests {
   width: 100%;
-  margin-top: 24px;
-  margin-bottom: 10px;
+  height: 62px;
+  margin-top: 21px;
+  margin-bottom: 11px;
 }
 
 .card-booking__price-info {
@@ -97,8 +104,6 @@
   line-height: 18px;
   margin-top: 10px;
   margin-left: 1px;
-  font-size: $fs_base;
-  font-weight: 400;
   color: $dark-shade_more;
   pointer-events: none;
 
@@ -112,6 +117,11 @@
     width: 100%;
     margin: 9px 0;
   }
+}
+.card-booking__price-info_total {
+  @extend .card-booking__price-info;
+  margin-top: 30px;
+  margin-left: 0;
 }
 
   .card-booking__description {
@@ -204,4 +214,10 @@
   width: calc(100% - 140px);
   height: 19px;
   border-bottom: 1px dotted $dark-shade_less;
+}
+
+
+.card-booking__line_uikit {
+  @extend .card-booking__line;
+  width: 190px;
 }

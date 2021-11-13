@@ -1,7 +1,6 @@
 .checkbox__container {
   @include isFlex($direction: column);
   width: 224px;
-  margin-top: 10px;
 
   @media (min-width: 1650px) and (max-width: 1920px) {
     width: 100%;

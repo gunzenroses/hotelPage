@@ -1,6 +1,5 @@
-include ../textfield/__label/textfield__label.pug
 include ../textfield/__container/textfield__container_type_birthday.pug
-include ../textfield/textfield_type_login.pug
+include ../textfield/__container/textfield__container_type_login.pug
 include ../textfield/textfield_type_name.pug
 include ../textfield/textfield_type_surname.pug
 include ../button/button_type_submit.pug
@@ -20,9 +19,7 @@ mixin card-registration(submitText)
     .card-registration__birthday
       +textfield__container_type_birthday("Дата рождения", "")
     .card-registration__login
-      .widget
-        +textfield__label("Данные для входа в сервис", "")
-        +textfield_type_login()
+      +textfield__container_type_login("Данные для входа в сервис", "")
     .card-registration__specials
       +button-toggle("special offers", false)
     .card-registration__button_type_submit

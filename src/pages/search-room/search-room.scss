@@ -27,7 +27,7 @@
 }
 
 .search-room__content {
-  @include isFlex($justify: space-between);
+  @include isFlex();
   position: relative;
   height: 1262px;
   width: calc(100% - 281px);

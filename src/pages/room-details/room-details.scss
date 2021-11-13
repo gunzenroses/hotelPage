@@ -60,7 +60,7 @@
   overflow: hidden;
 
   @media (max-width: 1920px) {
-    width: 68.6%;
+    width: 68.1%;
   }
 
   @media (max-width: 970px) {
@@ -74,7 +74,7 @@
   overflow: hidden;
 
   @media (max-width: 1920px) {
-    width: 32.1%;
+    width: 32%;
   }
 
   @media (max-width: 970px) {
@@ -92,10 +92,6 @@
 .room-details__view_mini {
   width: 100%;
   height: 50%;
-
-  @media (max-width: 1440px) {
-    height: 50%;
-  }
 
   @media (max-width: 970px) {
     width: 50%;
@@ -311,7 +307,7 @@
   }
 }
 
-.room-details__rules .room-details__text {
+.room-details__rules-title {
   margin-left: 20px;
 
   @media (max-width: 650px) {
@@ -338,7 +334,7 @@
   }
 }
 
-.room-details__text {
+.room-details__title {
   line-height: 22px;
   font-weight: 700;
   font-size: $fs_h2;
@@ -369,10 +365,6 @@
   }
 }
 
-.footer__info_main .footer__links {
-  margin-top: 21px;
-}
-
 .room-details__booking {
   @media (min-width: 1450px) and (max-width: 1920px) {
     max-width: 550px;
@@ -393,18 +385,6 @@
 
   @media (max-width: 450px) {
     margin: 0 auto 50px;
-  }
-}
-
-.room-details__booking .card-booking__suite {
-  margin-left: 8px;
-}
-
-.room-details__booking .booking-total_line {
-  width: 180px;
-
-  @media (max-width: 450px) {
-    width: calc(100% - 140px);
   }
 }
 
@@ -451,15 +431,17 @@
   }
 }
 
-/* restyling of elements on page */
 
-.room-details {
-  & .footer__links {
-    margin-top: 20px;
-  }
 
-  & .card-booking__info-sign:first-of-type {
-    left: 3px;
-    bottom: 1px;
-  }
+.footer__info_main .footer__links {
+  margin-top: 21px;
+}
+
+.room-details .footer__links {
+  margin-top: 20px;
+}
+
+.room-details .card-booking__info-sign:first-of-type {
+  left: 3px;
+  bottom: 1px;
 }

@@ -1,4 +1,2 @@
 mixin header__user_signed(user, buttonOnclick)
-  .header__user_signed
-    p.header__line
-    +navlink(user, buttonOnclick)
+  a.header__user_signed(href= buttonOnclick)= user

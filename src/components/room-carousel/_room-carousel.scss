@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   height: calc(152 / 270 * 100%);
-  min-height: 153px;
+  min-height: 152px;
   overflow: hidden;
 
   @media (max-width: 700px) {
@@ -34,8 +34,8 @@
 
 .room-carousel__radio {
   @include isFlex();
-  @include absoluteBottomRight(15.5px, 16px);
-  width: 41px;
+  @include absoluteBottomRight(14px, 16px);
+  width: 40px;
   height: auto;
 }
 

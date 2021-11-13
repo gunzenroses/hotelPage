@@ -1,8 +1,8 @@
 .rich-checkbox {
   &__container {
-    @include isFlex($direction: column, $justify: flex-start);
+    @include isFlex($direction: column);
     width: 100%;
-    height: 145px;
+    height: 144px;
 
     @media (min-width: 1650px) and (max-width: 1920px) {
       width: 100%;
@@ -18,6 +18,11 @@
 
   &__label {
     @include labelMixin;
-    margin-bottom: 14px;
+  }
+
+  &__list {
+    @include isFlex($direction: column);
+    width: 100%;
+    height: 115px;
   }
 }

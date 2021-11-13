@@ -1,7 +1,7 @@
 .button-rate {
   @include isFlex($direction: row-reverse);
   width: 120px;
-  height: 24px;
+  height: fit-content;
   font-size: 29px;
   line-height: 21px;
 }

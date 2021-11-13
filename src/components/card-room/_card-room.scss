@@ -22,19 +22,3 @@
   }
 }
 
-.card-room {
-  &__info {
-    @include isFlex($direction: column, $justify: flex-start);
-    width: 100%;
-    height: 106px;
-    padding: 21px 17px 22px 20px;
-    pointer-events: none;
-  }
-
-  &__rating {
-    @include cardRow();
-    border-top: 1px solid $dark-shade_few;
-    margin-top: 12px;
-    padding-right: 2px;
-  }
-}

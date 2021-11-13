@@ -3,7 +3,7 @@
   @include isFlex($direction: column, $justify: flex-start);
   width: 380px;
   height: 374px;
-  padding: 39px 28px 0 29px;
+  padding: 39px 29px 0 29px;
 
   @media (max-width: 400px) {
     width: 100vw;
@@ -19,15 +19,17 @@
 }
 
 .card-search__calendar {
-  margin-top: 18px;
+  margin-top: 24px;
+  height: 62px;
 }
 
 .card-search__guests {
-  margin-top: 25px;
+  margin-top: 23px;
+  height: 62px;
 }
 
 .card-search__button {
-  margin-top: 30px;
+  margin-top: 31px;
 }
 
 .card-search__button .button_type_submit {

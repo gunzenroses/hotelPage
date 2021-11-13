@@ -1,7 +1,4 @@
 include ./textfield.pug
 
-mixin textfield_type_subscribe(theme="")
-  if theme == ""
-    +textfield("textfield_email", "Email", "", "email", "30", autofocus=false)
-  else
-    +textfield("textfield_in-subscription", "Email", "", "email", "30", autofocus=false)
+mixin textfield_type_subscribe()
+  +textfield("textfield_type_subscibe", "Email", "", "email", "30", autofocus=false)

@@ -38,7 +38,7 @@
     $mb: 100px
   );
 
-  @include isFlex($justify: space-between, $wrap: wrap);
+  @include isFlex($wrap: wrap);
   position: relative;
   margin-right: 133px;
   letter-spacing: .01em;
@@ -118,7 +118,7 @@
   width: 100%;
   margin: 0;
   font-size: 1em;
-  line-height: $fs_h1;
+  line-height: 1.74rem;
   font-weight: 400;
   color: $dark-shade_more;
   letter-spacing: .0001em;
@@ -140,7 +140,7 @@
 .footer__logo_main {
   @include isFlex($direction: column);
   width: 260px;
-  height: 128px;
+  height: 129px;
   margin-right: 38px;
   letter-spacing: .001em;
 
@@ -209,7 +209,7 @@
 
 .footer__text_for-subscription {
   @extend .footer__text;
-  margin-top: 20px;
+  margin-top: 19px;
 }
 
 @media (max-width: 470px) {
@@ -276,7 +276,7 @@
 .footer__form {
   position: relative;
   width: 100%;
-  margin-top: 22.5px;
+  margin-top: 21.5px;
 }
 
 .footer__about {
@@ -334,7 +334,7 @@
   @include isFlex($direction: column, $align: flex-start, $justify: start);
   width: 100%;
   height: 150px;
-  margin-top: 19px;
+  margin-top: 20px;
 }
 
 .footer__copyright {

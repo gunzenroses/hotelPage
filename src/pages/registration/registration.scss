@@ -25,7 +25,7 @@
 }
 
 .registration__content {
-  @include isFlex($direction: column, $justify: space-between);
+  @include isFlex($direction: column);
   position: relative;
   width: 100%;
   min-width: 320px;

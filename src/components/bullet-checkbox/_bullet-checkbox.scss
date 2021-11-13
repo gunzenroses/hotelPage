@@ -1,6 +1,7 @@
 .bullet-checkbox {
+  @include isFlex($direction: column);
   width: 292px;
-  height: 147px;
+  height: 142px;
 
   @media (max-width: 450px) {
     width: 280px;
@@ -11,7 +12,6 @@
 .bullet-checkbox {
   &__label {
     @include labelMixin();
-    margin-bottom: 3.5px;
   }
   
   &__item {
@@ -47,8 +47,4 @@
 
 .bullet-checkbox__item + .bullet-checkbox__item {
   margin-top: 10px;
-}
-
-.bullet-checkbox__label + .bullet-checkbox__list {
-  margin-top: 8px;
 }

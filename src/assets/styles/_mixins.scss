@@ -30,6 +30,19 @@
   right: $right;
 }
 
+@mixin arrowSubmit {
+  content: '\e5c8';
+  @include absoluteTopRight();
+  @include containerSimple(44px, 44px);
+  line-height: 42px;
+  font-family: $material-icons;
+  -webkit-font-feature-settings: 'liga' 1;
+  -moz-font-feature-settings: 'liga' 1;
+  font-feature-settings: 'liga' 1;
+  text-align: center;
+  font-size: $fs_h1;
+}
+
 @mixin buttonLink {
   position: relative;
   font-size: .84rem;
@@ -72,8 +85,8 @@
 }
 
 @mixin buttonLikeHeart {
-  @include containerSimple(10px, 10px);
-  @include absoluteTopLeft(5px, 5px);
+  @include containerSimple(8px, 8px);
+  @include absoluteTopLeft(6px, 6px);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -86,8 +99,8 @@
 }
 
 @mixin cardRow {
-  @include isFlex();
-  @include containerSimple($w: 100%, $h: fit-content);
+  @include isFlex($align: center);
+  width: 100%;
   position: relative;
 }
 
@@ -135,7 +148,7 @@
 
 @mixin checkboxFakeBefore {
   content: '';
-  @include absoluteTopLeft(40%, 50%);
+  @include absoluteTopLeft(45%, 50%);
   @include containerBlock(4px, 6px);
   transform: translate(-50%, -50%) rotate(45deg);
   border-image: $linearGradientLilac;
@@ -202,12 +215,12 @@
 
 @mixin dateRangeSelector {
   @include isFlex();
-    width: 100%;
-    min-width: 260px;
+  @include containerSimple();
+  min-width: 260px;
 
-    @media (max-width: 450px) {
-      margin: 0 auto;
-    }
+  @media (max-width: 450px) {
+    margin: 0 auto;
+  }
 }
 
 @mixin dateRangeInfo {
@@ -443,22 +456,22 @@
 
 @mixin calendarButton {
   @include containerSize(24px);
-    position: relative;
-    line-height: 18px; 
-    border-radius: 50%;
-    cursor: pointer;
+  position: relative;
+  line-height: 18px; 
+  border-radius: 50%;
+  cursor: pointer;
 
-    &:hover {
-      background-color: $grey;
-    }
+  &:hover {
+    background-color: $grey;
+  }
 
-    &::before {
-      position: absolute;
-      top: 4px;
-      font-size: $fs_h1;
-      font-family: $material-icons;
-      color: $purple;
-    }
+  &::before {
+    position: absolute;
+    top: 3px;
+    font-size: $fs_h1;
+    font-family: $material-icons;
+    color: $purple;
+  }
 }
 
 @mixin widget {

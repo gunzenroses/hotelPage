@@ -12,7 +12,7 @@
 
   &__counter {
     @include containerSimple($w: 92, $h: 30);
-    @include isFlex($justify: space-between);
+    @include isFlex();
   }
 
   &__minus,

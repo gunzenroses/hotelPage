@@ -1,12 +1,21 @@
-.dropdown__container {
-  @include isFlex($direction: column, $justify: flex-start);
+.dropdown__container_type_guests {
+  @include isFlex($direction: column);
+  @include containerSimple();
   position: relative;
-  width: 100%;
-  height: 64px;
+  min-width: 260px;
 
   @media (max-width: 450px) {
-    width: 100%;
-    min-width: 260px;
+    margin: 0 auto;
+  }
+}
+
+.dropdown__container_type_rooms {
+  @include isFlex($direction: column);
+  @include containerSimple();
+  position: relative;
+  min-width: 260px;
+
+  @media (max-width: 450px) {
     margin: 0 auto;
   }
 }
@@ -64,7 +73,7 @@
   @include dropdownItem;
   justify-content: space-between;
   flex-direction: row-reverse;
-  margin-top: 19px;
+  margin-top: 18px;
 }
 
 .dropdown__text {
@@ -95,7 +104,7 @@
   margin-top: 5px;
   font-weight: 700;
   text-align: center;
-  font-size: 1rem;
+  font-size: 13px;
 
   @media (min-width: 1750px) and (max-width: 1920px) {
     font-size: $fs_base;
@@ -171,4 +180,8 @@
 
 .button__show {
   display: inline-block;
+}
+
+.dropdown__input {
+  padding-bottom: 2px;
 }

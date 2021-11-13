@@ -30,13 +30,11 @@
   line-height: 34px;
 }
 
-.header__line {
-  height: 100%;
-  width: 21px;
+.header__user_signed {
+  width: fit-content;
+  padding-left: 21px;
   border-left: 1px solid $dark-shade_few;
-}
-
-.header__user_signed .navlink:hover {
-  font-weight: 700;
-  color: $dark-shade_more;
+  font-size: 13px;
+  color: $dark-shade_medium;
+  letter-spacing: 0.04em;
 }

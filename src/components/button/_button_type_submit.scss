@@ -4,15 +4,7 @@
   color: $light;
   
   &::before {
-    content: '\e5c8';
-    @include absoluteTopRight();
-    @include containerSize(44px);
-    font-family: $material-icons;
-    -webkit-font-feature-settings: 'liga' 1;
-    -moz-font-feature-settings: 'liga' 1;
-    font-feature-settings: 'liga' 1;
-    text-align: center;
-    font-size: $fs_h1;
+    @include arrowSubmit();
     color: $light;
   }
 

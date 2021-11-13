@@ -4,8 +4,13 @@
   padding: 0px 0 2px 12px;
 }
 
-.textfield_in-subscription {
+.textfield_type_subscibe {
   @extend .textfield;
+
+  &::before {
+    @include arrowSubmit();
+    color: $dark-shade_medium;
+  }
 
   @media (max-width: 470px) {
     width: 260px;
@@ -28,7 +33,7 @@
 .textfield__container {
   @extend .widget;
   @include isFlex($direction: column);
-  height: 63px;
+  height: 100%;
 
   & input {
     letter-spacing: 0.005em;

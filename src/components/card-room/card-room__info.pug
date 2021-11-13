@@ -1,0 +1,19 @@
+mixin card-room__info(bookingNumber, bookingType, bookingPrice, theme="")
+  if theme == ""
+    .card__row
+      .card__row_small
+        span.card-room__sign №
+        span.card-room__number!= bookingNumber
+        span.card-room__type!= bookingType 
+      .card__row_small
+        span.card-room__price!= bookingPrice + "₽"
+        span.card-room__period &nbsp;в сутки
+  else
+    .card__row
+      .card__row_small
+        span(class="card-room__sign" + "_" + theme) №
+        span(class="card-room__number" + "_" + theme)= bookingNumber
+        span.card-room__type!= bookingType 
+      .card__row_small
+        span.card-room__price!= bookingPrice + "₽"
+        span.card-room__period &nbsp;в сутки

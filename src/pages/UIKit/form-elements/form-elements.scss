@@ -20,17 +20,17 @@
 }
 
 .form-elements_inner {
-  @include containerSimple($w: 1165px, $h: 1582px);
   @include isFlex($wrap: wrap);
-  margin: 143px 0 128px 141px;
+  width: 1165px;
   min-width: 320px;
+  margin: 143px 0 128px 141px;
   background: $light;
 
   @media (max-width: 1400px) {
     width: 85%;
+    height: auto;
     max-width: 1160px;
     margin: 9% auto 9%;
-    height: auto;
   }
 
   @media (max-width: 1250px) {
@@ -52,7 +52,7 @@
 }
 
 .form-elements__group_first {
-  @include containerWithMargins($width: 321px, $height: 636px, $mb: 89px);
+  @include containerSimple($w: 321px, $h: 636px);
   margin-right: 117px;
 
   @media (max-width: 1400px) {
@@ -73,36 +73,49 @@
 
 .form-elements__container_email {
   width: 100%;
+  height: 63px;
 }
 
 .form-elements__container_name {
   width: 100%;
-  margin-top: 21px;
+  height: 62px;
+  margin-top: 23px;
 }
 
-.form-elements__container_dropdown-guests {
+.form-elements__container_guests {
   width: 100%;
+  height: 61px;
   margin-top: 22px;
 }
 
 .form-elements__container_birthday {
   width: 100%;
-  margin-top: 23px;
+  height: 62px;
+  margin-top: 25px;
+
+
 }
 
 .form-elements__container_second {
   @include isFlex($direction: column, $justify: flex-start);
   min-height: 274px;
-  width: 100%;
-  margin-top: 32.5px;
+  width: 320px;
+  margin-top: 37.5px;
+}
+
+.form-elements__container_date-range_separate {
+  @include containerSimple($w: 100%, $h: 63px);
 }
 
 .form-elements__container_date-range_common {
   @include containerMedium();
-  margin-top: 40px;
+  height: 62px;
+  margin-top: 42px;
 }
 
-.form-elements__container_email_medium {
+.form-elements__container_subscibe {
+  @include containerMedium();
+  height: 62px;
   margin-top: 43px;
 }
 
@@ -116,13 +129,11 @@
   }
 }
 
-.form-elements__group_second > h3 {
-  margin-top: 41px;
-}
-
 .form-elements__container_checkbox {
+  @include isFlex($direction: column);
   @include widget;
-  letter-spacing: .05px;
+  height: 127px;
+  margin-top: 2px;
 }
 
 .form-elements__container_radio {
@@ -135,7 +146,6 @@
 
 .form-elements__label_radio {
   @include labelMixin;
-  margin-bottom: 3.5px;
   letter-spacing: .0001em;
 }
 
@@ -148,7 +158,6 @@
 
 .form-elements__label_toggle {
   @include labelMixin;
-  margin-bottom: 3.5px;
   font-size: .8rem;
   letter-spacing: .0001em;
 }
@@ -157,13 +166,12 @@
   @include isFlex($direction: column);
   width: 100%;
   height: 58px;
-  margin-top: 11px;
 }
 
 .form-elements__container_button-like {
   @include isFlex($direction: column);
   width: 90px;
-  height: 50px;
+  height: 49px;
   margin-top: 42px;
 
   @media (min-width: 1750px) and (max-width: 1920px){
@@ -172,13 +180,14 @@
 }
 
 .form-elements__container_button-rate {
+  @include isFlex($direction: column);
   width: 100%;
-  margin-top: 13px;
+  height: 54px;
+  margin-top: 42px;
 }
 
 .form-element__label_button-rate {
   @include labelMixin;
-  margin-bottom: 1.5px;
 }
 
 
@@ -217,38 +226,40 @@
   margin-bottom: 3.5px;
 }
 
-.form-elements__buttons-row {
+.form-elements__row_buttons-link {
   @include isFlex($direction: row);
+  flex-wrap: wrap;
+  height: 148px;
+  width: 218px;
+  margin-top: 11px;
 
   @media (max-width: 450px) {
     margin: 0 auto;
     width: 280px;
   }
+}
 
-  &:nth-child(2) {
-    flex-wrap: wrap;
-    height: 148px;
-    width: 218px;
-    margin-top: 11px;
-  }
+.form-elements__row_buttons-basic {
+  @include isFlex($direction: row);
+  width: 147px;
+  margin-top: 2px;
 
-  &:nth-child(3) {
-    height: 16px;
-    width: 147px;
-    margin-left: -1px;
-    margin-top: 4px;
-  }
-
-  &:last-child {
-    width: 320px;
-    height: 44px;
-    margin-top: 26px;
-
-    @media (max-width: 450px) {
-      width: 280px;
-    }
+  @media (max-width: 450px) {
+    margin: 0 auto;
+    width: 280px;
   }
 }
+
+.form-elements__button-submit {
+  width: 320px;
+  margin-top: 29px;
+
+  @media (max-width: 450px) {
+    margin: 0 auto;
+    width: 280px;
+  }
+}
+
 
 .form-elements__button-item {
   @include containerBlock(99px, 44px);
@@ -271,9 +282,7 @@
   @include isFlex($direction: column, $justify: flex-start, $align: flex-start);
   width: 267px;
   min-height: 647px;
-  margin-right: 168px;
-  margin-left: -1px;
-  margin-bottom: 39px;
+  margin: 99px 168px 0 -1px;
 
   @media (max-width: 1400px) {
     margin: 0;
@@ -282,18 +291,18 @@
 }
 
 .form-elements__container_dropdowns {
-  @include isFlex($direction: column, $justify: space-between);
+  @include isFlex($direction: column);
   width: 266px;
-  height: 147px;
-  margin-top: 2px;
+  height: 145px;
+}
 
-  & .label_right {
-    margin-top: 2px;
-  }
+.form-elements__container_rooms {
+  width: 100%;
+  height: 62px;
 }
 
 .form-elements__container_checkbox-expand_hidden {
-  margin-top: 162px;
+  margin-top: 159px;
   margin-left: 1px;
 }
 
@@ -304,13 +313,18 @@
 .form-elements__group_fifth {
   @include containerSimple($w: 320px, $h: 465px);
   @include isFlex($direction: column, $align: flex-start, $justify: flex-start);
-  margin-top: 4px;
+  margin-top: 99px;
   margin-right: 60px;
 
   @media (max-width: 1400px) {
     margin: 0;
     margin-top: 40px;
   }
+}
+
+.form-elements__container_guests_open {
+  width: 100%;
+  height: 62px;
 }
 
 .form-elements__container_rich-checkbox {
@@ -320,7 +334,7 @@
 .form-elements__group_sixth {
   @include containerSimple($w: 320px, $h: 467px);
   @include isFlex($direction: column, $align: flex-start, $justify: flex-start);
-  margin-top: 4px;
+  margin-top: 99px;
   margin-right: 7px;
 
   @media (max-width: 1400px) {
@@ -330,14 +344,14 @@
 }
 
 .form-elements__container_bullet-checkbox {
-  margin-top: 256px;
+  margin-top: 258px;
 }
 
 .form-elements__group_seventh {
   @include containerSimple($w: 291px, $h: fit-content);
   @include isFlex($direction: column, $justify: flex-start, $align: flex-start);
   margin-right: 120px;
-  margin-top: 1px;
+  margin-top: 39px;
   margin-left: -1px;
 
   @media (max-width: 1400px) {
@@ -356,8 +370,8 @@
   @include isFlex($direction: column, $align: flex-start);
   max-width: 711px;
   min-height: 133px;
-  margin-top: 12px;
-  margin-right: 5px;
+  margin-top: 48px;
+  margin-right: 8px;
 
   @media (max-width: 1400px) {
     width: 55vw;
@@ -369,13 +383,4 @@
     width: 90%;
     height: auto;
   }
-}
-
-.form-elements__container_comment {
-  margin-top: -1px;
-  margin-left: -3px;
-}
-
-.form-elements__container_first div:nth-of-type(1) .label_right {
-  margin-top: -3px;
 }

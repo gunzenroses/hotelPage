@@ -4,9 +4,9 @@ include ../date-range/date-range_separate.pug
 include ../dropdown/_type_guests/dropdown_type_guests.pug
 include ../button/button_type_submit.pug
 
-mixin card-booking(serviceName, serviceStyle)
+mixin card-booking(serviceName, serviceStyle, theme="")
   form.card-booking(method="get" action="./search-room.html")
-    +card-booking__room-info("big", "888", "Люкс", "9 990")
+    +card-booking__room-info("888", "Люкс", "9 990", theme)
     .card-booking__date-range
       +date-range_separate("calendar_booking", "Прибытие", "19.08.2019", "Выезд", "23.08.2019", "")
     .card-booking__dropdown_guests
@@ -14,10 +14,13 @@ mixin card-booking(serviceName, serviceStyle)
     +card-booking__price-info("9 990₽ х 4 суток", "39 960")
     +card-booking__price-info("Сбор за услуги: скидка 2 179₽", "0", "full")
     +card-booking__price-info(serviceName, "300", serviceStyle)
-    .card-booking__price-info
+    .card-booking__price-info_total
       .card-booking__summary
         .booking-total__text Итого
-        .card-booking__line
+        if theme == "in-uikit"
+          .card-booking__line_uikit
+        else 
+          .card-booking__line
         .card-booking__price_total 38 081₽
     .card-booking__button
       +button_type_submit("Забронировать")

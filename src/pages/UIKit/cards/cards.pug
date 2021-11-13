@@ -6,6 +6,7 @@ include ../../../components/calendar/calendar.pug
 include ../../../components/card-room/card-room.pug
 
 block variables
+  - var theme = "in-uikit"
   - var title = "UIKit";
   - var description = "UIKit";
   - var keywords = "UIKit";
@@ -21,10 +22,10 @@ block content
       .cards__card-registration
         +card-registration("Перейти к оплате")
       .cards__card-booking
-        +card-booking("Сбор за дополнительные услуги", "full")
+        +card-booking("Сбор за дополнительные услуги", "full", theme)
       .cards__card-signin
         +card-signin()
       .cards__calendar
         +calendar("calendarSimple")
       +card-room(room888)
-      +card-room(room840)
+      +card-room(room840, "creative")
