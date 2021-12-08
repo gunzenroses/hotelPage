@@ -32,7 +32,7 @@
   height: 1262px;
   width: calc(100% - 281px);
   min-width: 320px;
-  margin: 26px 145px 68px 141px;
+  margin: 26px 145px 68px 140px;
   overflow: auto; //to avoid margin-collapse
   background: $light;
 
@@ -59,8 +59,9 @@
 
 .search-room__filter {
   @include isFlex($direction: column, $justify: flex-start);
-  width: 265px;
+  width: 266px;
   height: 739px;
+  margin-top: 6px;
 
   @media (min-width: 1500px) and (max-width: 1920px) {
     width: 30%;
@@ -219,16 +220,18 @@
 
   &__date-range {
     @include formMargin;
+    height: 62px;
   }
 
   &__guests {
     @include formMargin;
-    margin-top: 24px;
+    height: 61px;
+    margin-top: 23px;
   }
 
   &__price-range {
     @include formMargin;
-    margin-top: 30px;
+    margin-top: 31px;
   }
 
   &__accessibility {
@@ -237,8 +240,10 @@
   }
 
   &__rules {
+    @include isFlex($direction: column);
     @include formMargin;
-    margin-top: 29px;
+    height: 126px;
+    margin-top: 32px;
   }
 
   &__rooms {

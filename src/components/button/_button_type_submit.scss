@@ -1,6 +1,7 @@
 .button_type_submit {
   @include containerBlock($w: 100%, $h: 44px);
   @include buttonLink();
+  font-size: .85rem;
   color: $light;
   
   &::before {

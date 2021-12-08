@@ -1,6 +1,6 @@
 .header {
   @include headerMixin;
-  padding-top: 11px;
+  padding-top: 12px;
   padding-bottom: 15px;
 }
 
@@ -32,4 +32,8 @@
   @include headerMixin;
   padding-top: 15px;
   padding-bottom: 15px;
+}
+
+.header__logo {
+  margin-top: 2px;
 }

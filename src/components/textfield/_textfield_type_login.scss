@@ -1,8 +1,7 @@
 .textfield_type_login {
-  @include isFlex($direction: column, $justify: flex-start);
+  @include isFlex($direction: column);
   width: 100%;
-  height: fit-content;
-  min-height: 103px;
+  height: 98px;
 
   @media (max-width: 450px) {
     width: 100%;
@@ -13,10 +12,6 @@
   & > input {
     letter-spacing: 0.01em;
   }
-}
-
-.textfield_type_login > .textfield:not(:first-of-type) {
-  margin-top: 10px;
 }
 
 .textfield_type_login_main {

@@ -11,7 +11,10 @@ block content
   .headers-n-footers_outer.js-dropdown__detection
     img.uikit-logo(src= "./assets/images/logo/logo.svg" alt="uikit logo")
     +header()
-    +header("Юлий Цезарь")
-    +footer()
-    +footer_creative()
+    .headers-n-footers__header
+      +header("Юлий Цезарь")
+    .headers-n-footers__footer
+      +footer()
+    .headers-n-footers__footer-creative
+      +footer_creative()
 

@@ -1,17 +1,22 @@
 mixin textfield(inputClass, placeholder, valueText, nameText, maxText, autofocus=false)
-  if inputClass === "textfield_email"
+  if inputClass == ""
+    div(class="textfield" + inputClass)
+      input(type="text" placeholder=placeholder, 
+        value=valueText name=nameText data-rule=nameText, 
+        maxlength=maxText autofocus=autofocus)
+  else if inputClass === "textfield_email"
     div(class="textfield")
       input(type="text" placeholder=placeholder, 
         value=valueText name=nameText data-rule=nameText, 
         maxlength=maxText autofocus=autofocus)
       button(type="submit" class="arrow_submit") arrow_forward
   else if inputClass === "password"
-    div(class="textfield")
+    div(class="textfield" + "_type_" + inputClass)
       input(type="password" placeholder=placeholder, 
         value=valueText name=nameText data-rule=nameText, 
         maxlength=maxText autofocus=autofocus)
   else
-    div(class="" + inputClass)
+    div(class="textfield" + "_type_" + inputClass)
       input(type="text" placeholder=placeholder, 
         value=valueText name=nameText data-rule=nameText, 
         maxlength=maxText autofocus=autofocus)

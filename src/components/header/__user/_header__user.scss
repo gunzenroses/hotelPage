@@ -32,9 +32,11 @@
 
 .header__user_signed {
   width: fit-content;
-  padding-left: 21px;
+  margin-top: 4px;
+  padding-left: 20px;
   border-left: 1px solid $dark-shade_few;
+  line-height: 29px;
   font-size: 13px;
   color: $dark-shade_medium;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
 }

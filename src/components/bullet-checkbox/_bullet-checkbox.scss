@@ -12,6 +12,8 @@
 .bullet-checkbox {
   &__label {
     @include labelMixin();
+    line-height: $fs_h3;
+    font-size: $fs_h3;
   }
   
   &__item {

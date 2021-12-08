@@ -1,7 +1,19 @@
 .textfield {
   @include textField;
-  font-size: 13.5px;
   padding: 0px 0 2px 12px;
+  font-size: 13.5px;
+}
+
+.textfield_type_email {
+  @include textField;
+  padding: 2px 0 2px 12px;
+  font-size: 14px;
+}
+
+.textfield_type_password {
+  @include textField;
+  padding: 2px 0 2px 12px;
+  font-size: 14px;
 }
 
 .textfield_type_subscibe {
@@ -9,12 +21,20 @@
 
   &::before {
     @include arrowSubmit();
+    width: 42px;
     color: $dark-shade_medium;
   }
 
   @media (max-width: 470px) {
     width: 260px;
   }
+}
+
+.textfield_type_name {
+  @include textField;
+  padding: 2px 0 2px 12px;
+  font-size: 14px;
+  letter-spacing: 0;
 }
 
 .arrow_submit {
@@ -34,8 +54,4 @@
   @extend .widget;
   @include isFlex($direction: column);
   height: 100%;
-
-  & input {
-    letter-spacing: 0.005em;
-  }
 }

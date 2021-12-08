@@ -10,10 +10,15 @@
   @include labelMixin;
   margin-top: 2px;
   margin-bottom: 1.5px;
+  line-height: $fs_h3;
+  letter-spacing: .001em;
+  font-size: $fs_h3;
 }
 
 .range__label_right {
   @include labelMixin;
+  line-height: $fs_h3;
+  font-size: $fs_h3;
   position: absolute;
   right: 0;
   top: 1px;

@@ -7,7 +7,7 @@
   );
   @include isFlex($direction: column, $justify: flex-start);
   position: relative;
-  padding-top: 141px;
+  padding-top: 140px;
   padding-bottom: 132px;
   overflow: auto;                   //to avoid margin-collapse
   background: $background;
@@ -27,14 +27,20 @@
   }
 }
 
-.headers-n-footers_outer > header:not(:first-of-type) {
+.headers-n-footers__header {
+  width: 100%;
+  height: fit-content;
   margin-top: 40px;
 }
 
-.headers-n-footers_outer > .footer_outer {
-  margin-top: 39px;
+.headers-n-footers__footer {
+  width: 100%;
+  height: fit-content;
+  margin-top: 40px;
 }
 
-.headers-n-footers_outer > .footer-creative {
+.headers-n-footers__footer-creative {
+  width: 100%;
+  height: fit-content;
   margin: 40px auto 0;
 }

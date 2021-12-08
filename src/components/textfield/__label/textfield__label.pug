@@ -1,4 +1,4 @@
-mixin textfield__label(labelText, labelRightText)
+mixin textfield__label(labelText, labelRightText, labelRightClass="label_right")
   h3.label!= labelText
   if labelRightText
-    h3.label_right= labelRightText
+    h3(class= labelRightClass)= labelRightText

@@ -16,7 +16,6 @@
 
 .card-registration__name,
 .card-registration__surname,
-.card-registration__radio,
 .card-registration__birthday,
 .card-registration__login,
 .card-registration__name,
@@ -39,6 +38,7 @@
 }
 
 .card-registration__radio {
+  width: 222px;
   margin-top: 10px;
 }
 
@@ -49,11 +49,11 @@
 
 .card-registration__login {
   margin-top: 22px;
-  height: 122px;
+  height: 116px;
 }
 
 .card-registration__specials {
-  margin-top: 4px;
+  margin-top: 10px;
 }
 
 .card-registration__button_type_submit {

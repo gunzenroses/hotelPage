@@ -27,14 +27,11 @@
 }
 
 .footer-creative_inner {
-  @include containerWithMargins(
-    $width: 560px,
-    $height: 127px,
-    $mt: 120px,
-  );
+  @include containerSimple(560px, 127px);
   @include isFlex($direction: column, $justify: flex-start, $align: center);
   position: relative;
   margin-left: 107px;
+  padding-top: 120px;
   padding-right: 3px;
 
   @media (max-width: 800px) {
@@ -44,10 +41,10 @@
   }
 }
 
-.footer-creative_inner > div:first-of-type {
-  margin-top: 22px;
+.footer-creative__copyright-text {
+  margin-top: 17px;
 }
 
-.footer-creative_inner > div:last-of-type {
+.footer-creative__social-nets {
   margin-top: 24px;
 }

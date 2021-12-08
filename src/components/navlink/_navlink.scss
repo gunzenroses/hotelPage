@@ -16,6 +16,7 @@
 
 .navlink_in-footer {
   @extend .navlink;
+  letter-spacing: 0.001em;
 }
 
 .navlink_in-footer + .navlink_in-footer {

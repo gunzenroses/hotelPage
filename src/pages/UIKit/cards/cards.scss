@@ -65,11 +65,6 @@
   width: 380px;
   min-height: 645px;
   margin-top: 40px;
-
-  & .textfield_type_login {
-    height: fit-content;
-    min-height: 104px;
-  }
 }
 
 .cards__card-booking {
@@ -97,5 +92,5 @@
 }
 
 .cards_inner > .card-room:last-of-type {
-  margin-top: 38px;
+  margin-top: 40px;
 }

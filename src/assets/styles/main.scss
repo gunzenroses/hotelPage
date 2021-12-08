@@ -13,7 +13,6 @@
 /* Components */
 @import '@~Components/badge/badge';
 @import '@~Components/button/button_type_link';
-@import '@~Components/button/button_type_link_colored';
 @import '@~Components/button/button_type_submit';
 @import '@~Components/button/button_type_basic';
 @import '@~Components/button-like/button-like';
@@ -23,9 +22,9 @@
 @import '@~Components/bullet-checkbox/bullet-checkbox';
 @import '@~Components/calendar/calendar';
 @import '@~Components/checkbox/checkbox';
-@import '../../components/checkbox/checkbox__item';
+@import '@~Components/checkbox/checkbox__item';
 @import '@~Components/checkbox-expandable/checkbox-expandable';
-@import '../../components/checkbox-expandable/checkbox-expandable__item';
+@import '@~Components/checkbox-expandable/checkbox-expandable__item';
 @import '@~Components/carousel/carousel_type_basic';
 @import '@~Components/carousel/carousel_type_landing';
 @import '@~Components/comment/comment';
@@ -43,10 +42,11 @@
 @import '@~Components/textfield/textfield';
 @import '@~Components/textfield/textfield_type_birthday';
 @import '@~Components/textfield/textfield_type_login';
+@import '@~Components/textfield/__label/textfield__label';
 @import '@~Components/pagination/pagination';
 @import '@~Components/range/range';
 @import '@~Components/rich-checkbox/rich-checkbox';
-@import '../../components/rich-checkbox/rich-checkbox__item';
+@import '@~Components/rich-checkbox/rich-checkbox__item';
 @import '@~Components/room-carousel/room-carousel';
 @import '@~Components/social-nets/social-nets';
 @import '@~Components/expand/expand';
@@ -58,8 +58,8 @@
 @import '@~Components/card-booking/card-booking';
 @import '@~Components/card-singin/card-signin';
 @import '@~Components/card-room/card-room';
-@import '../../components/card-room/card-room__info';
-@import '../../components/card-room/card-room__review';
+@import '@~Components/card-room/card-room__info';
+@import '@~Components/card-room/card-room__review';
 
 /* To make changes */
 @import './special';

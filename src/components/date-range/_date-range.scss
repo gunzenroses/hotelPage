@@ -21,6 +21,8 @@
 
 .date-range__label {
   @include labelMixin;
+  line-height: $fs_h3;
+  font-size: $fs_h3;
   letter-spacing: 0.002em;
 }
 
@@ -30,7 +32,7 @@
 
 .date-range__info_in-search {
   @include dateRangeInfo();
-  padding-left: 10px;
+  padding-left: 12px;
 }
 
 .date-range__input {

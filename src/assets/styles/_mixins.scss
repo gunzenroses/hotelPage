@@ -45,9 +45,8 @@
 
 @mixin buttonLink {
   position: relative;
-  font-size: .84rem;
   font-weight: 700;
-  letter-spacing: .01em;
+  letter-spacing: .001em;
   text-align: center;
   border-radius: 22px;
   text-transform: uppercase;
@@ -179,7 +178,6 @@
 
 @mixin containerMedium {
   @include isFlex($direction: column);
-  width: 266px;
 
   @media (max-width: 450px) {
     width: 280px;
@@ -228,6 +226,7 @@
 
   &::before {
     @include dropdownButton;
+    width: 42px;
   }
 
   @media (min-width: 1750px) and (max-width: 1920px) {
@@ -255,7 +254,6 @@
   height: 30px;
   width: 100%;
   margin-top: 7px;
-  padding-left: 14px;
   padding-right: 6px;
   font-size: $fs_h3;
   text-transform: uppercase;
@@ -360,8 +358,6 @@
 @mixin labelMixin {
   display: inline-block;
   height: 15px;
-  line-height: $fs_h3;
-  font-size: $fs_h3;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: .003em;

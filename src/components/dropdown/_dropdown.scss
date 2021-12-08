@@ -33,11 +33,12 @@
 
 .dropdown__info {
   @include regularField;
-  padding: 0px 0px 0px 11px;
+  padding: 0px 0px 0px 12px;
   border-radius: 4px 4px 0 0;
 
   &::before {
     @include dropdownButton;
+    line-height: 43px;
   }
 }
 
@@ -54,7 +55,7 @@
 }
 
 .dropdown__rooms {
-  height: 120px;
+  height: 119px;
   padding-top: 1px;
 }
 
@@ -67,13 +68,15 @@
 
 .dropdown__item {
   @include dropdownItem;
+  padding-left: 14px;
 }
 
 .dropdown__buttons {
   @include dropdownItem;
   justify-content: space-between;
   flex-direction: row-reverse;
-  margin-top: 18px;
+  margin-top: 19px;
+  padding-left: 13px;
 }
 
 .dropdown__text {
@@ -101,7 +104,7 @@
 
 .dropdown__number {
   width: 32px;
-  margin-top: 5px;
+  margin-top: 4px;
   font-weight: 700;
   text-align: center;
   font-size: 13px;
@@ -176,6 +179,7 @@
 .dropdown__item_last {
   @include dropdownItem;
   margin-bottom: 3px;
+  padding-left: 14px;
 }
 
 .button__show {

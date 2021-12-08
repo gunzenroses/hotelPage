@@ -1,7 +1,7 @@
 include ../__label/textfield__label.pug
 include ../textfield_type_name.pug
 
-mixin textfield__container_type_name(leftLabel, rightLabel, name)
+mixin textfield__container_type_text(leftLabel, rightLabel, text)
   .textfield__container
     +textfield__label(leftLabel, rightLabel, "textfield__label_for-name")
-    +textfield_type_name(name)
+    +textfield("", "Text", text, "text", "20", autofocus=false)

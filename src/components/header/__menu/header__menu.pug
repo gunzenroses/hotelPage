@@ -1,7 +1,5 @@
 include ../__user/header__user_signed.pug
 include ../__user/header__user_unsigned.pug
-include ../../button/button_type_link.pug
-include ../../button/button_type_link_colored.pug
 include ../../navlink/navlink.pug
 include ../../navlink/navlink_dropdown.pug
 
@@ -19,7 +17,7 @@ mixin header__menu(user="")
     if user
       +header__user_signed(user, buttonOnclick="./some-address")
     else
-      +header__user_unsigned("Войти", buttonOnclick="signin.html", "", buttonOnclick="registration.html")
+      +header__user_unsigned("Войти", buttonOnclick="signin.html", "Зарегистрироваться", buttonOnclick="registration.html")
     nav.header__navbar-region
       ul.header__navbar
         +navlink("О нас", buttonOnclick="./some-address")

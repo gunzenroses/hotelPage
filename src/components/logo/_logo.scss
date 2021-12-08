@@ -10,15 +10,15 @@
 }
 
 .logo__pic {
-  @include containerSize(40px);
+  @include containerSimple(40px, 40px);
   position: relative;
 }
 
 .logo__name {
   position: relative;
-  width: 55px;
+  width: 54px;
   height: 15px;
-  margin-top: 1px;
+  margin-right: 1px;
 
   @media (max-width: 550px) {
     display: none;

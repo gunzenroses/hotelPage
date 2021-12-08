@@ -81,11 +81,11 @@
   }
 }
 
-.footer__navbar_in-signin {
+.footer__navbar_in-signin,
+.footer__navbar_landing {
   @extend .footer__navbar_main;
 }
 
-.footer__navbar_landing,
 .footer__navbar_in-registration {
   @extend .footer__navbar_main;
   margin-top: 101px;
@@ -103,7 +103,7 @@
 }
 
 .footer__info_main {
-  margin-right: 52px;
+  margin-right: 50px;
 
   @media (min-width: 1500px) and (max-width: 1920px){
       margin-right: 0;
@@ -118,7 +118,7 @@
   width: 100%;
   margin: 0;
   font-size: 1em;
-  line-height: 1.74rem;
+  line-height: 1.71rem;
   font-weight: 400;
   color: $dark-shade_more;
   letter-spacing: .0001em;
@@ -140,7 +140,7 @@
 .footer__logo_main {
   @include isFlex($direction: column);
   width: 260px;
-  height: 129px;
+  height: 131px;
   margin-right: 38px;
   letter-spacing: .001em;
 
@@ -172,6 +172,10 @@
 .footer__logo_in-search,
 .footer__logo_in-signin {
   @extend .footer__logo_main;
+}
+
+.footer__logo_landing {
+  height: 130px;
 }
 
 .footer__logo_in-details {
@@ -209,7 +213,7 @@
 
 .footer__text_for-subscription {
   @extend .footer__text;
-  margin-top: 19px;
+  margin-top: 18px;
 }
 
 @media (max-width: 470px) {
@@ -224,8 +228,12 @@
     line-height: 18px;
     z-index: 2;
   }
+}
 
-  .footer__title {
+.footer__title {
+  letter-spacing: .001em;
+
+  @media (max-width: 470px) {
     font-weight: 400;
 
     &:hover {
@@ -264,19 +272,19 @@
 .footer__info_landing,
 .footer__info_in-registration,
 .footer__info_in-search,
-.footer__info_in-signin {
+.footer__info_in-signin,
+.footer__info_in-details {
   @extend .footer__info_main;
 }
 
 .footer__info_in-details {
-  @extend .footer__info_main;
   letter-spacing: .001em;
 }
 
 .footer__form {
   position: relative;
   width: 100%;
-  margin-top: 21.5px;
+  margin-top: 22.5px;
 }
 
 .footer__about {
@@ -366,7 +374,6 @@
   &_landing {
     @include footerMixin;
     margin-left: 139px;
-    margin-top: 22px;
   }
 
   &_in-signin {

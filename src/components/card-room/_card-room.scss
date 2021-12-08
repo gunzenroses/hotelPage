@@ -3,7 +3,7 @@
   @include isFlex($direction: column, $justify: flex-start);
   position: relative;
   width: 270px;
-  height: 259px;
+  height: 257px;
 
   @media (min-width: 1650px) and (max-width: 1920px) {
     width: 32%;
