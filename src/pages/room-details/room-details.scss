@@ -45,7 +45,7 @@
   height: 485px;
   overflow: hidden;
 
-  @media (max-width: 1920px) {
+  @media (max-width: 1920px) and (min-width: 1441px) {
     height: auto;
   }
 
@@ -55,11 +55,11 @@
 }
 
 .room-details__view_main {
-  width: 980px;
+  width: 981px;
   height: 100%;
   overflow: hidden;
 
-  @media (max-width: 1920px) {
+  @media (max-width: 1920px) and (min-width: 1441px) {
     width: 68.1%;
   }
 
@@ -69,11 +69,11 @@
 }
 
 .room-details__view_miniature {
-  width: 462px;
+  width: 459px;
   height: 100%;
   overflow: hidden;
 
-  @media (max-width: 1920px) {
+  @media (max-width: 1920px) and (min-width: 1441px) {
     width: 32%;
   }
 
@@ -215,14 +215,18 @@
   @media (max-width: 1400px) {
     margin-right: 0;
   }
+}
 
-  & > div:not(:first-of-type) {
-    margin-top: 21px;
-  }
+.room-details__badge_type_comfort {
+  margin-top: 21px;
+}
 
-  & > div:last-of-type {
-    margin-top: 20px;
-  }
+.room-details__badge_type_commodity {
+  margin-top: 20px;
+}
+
+.room-details__badge_type_cozyness {
+  margin-top: 20px;
 }
 
 .room-details__roomImpression {
@@ -337,7 +341,6 @@
 .room-details__title {
   line-height: 22px;
   font-weight: 700;
-  font-size: $fs_h2;
   color: $dark-shade_most;
   letter-spacing: 0.001em;
 

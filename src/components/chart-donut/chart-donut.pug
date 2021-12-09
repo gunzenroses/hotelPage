@@ -3,7 +3,7 @@ mixin donutChart(cData={})
   - var {excellent=0, good=0, satisfied=0, dissapointed=0} = cData
   - var donutData = {dissapointed, satisfied, good, excellent} 
   - var counter = 1;
-  - var dashOffsetValue = parseInt(25);
+  - var dashOffsetValue = parseFloat(25 - 0.5);
   - var prevArraySumm = 0;
 
   figure.donut
@@ -28,12 +28,11 @@ mixin donutChart(cData={})
         circle.donut__ring(cx="50%" cy="50%" r="15.91549430918954" fill="transparent" stroke="#fff" stroke-width="1" role="presentation")
         each percent, mark in donutData
           if (percent>2)
-            - var dashValue = parseInt(percent) - 1;
+            - var dashValue = parseInt(percent - 1);
             - var dashLeft = 100 - dashValue;
             circle.donut__segment(cx="50%" cy="50%" r="15.91549430918954" fill="transparent" stroke=`url(#gradient_${mark})` stroke-width="1" stroke-dasharray=`${dashValue} ${dashLeft}` stroke-dashoffset=`${dashOffsetValue}` aria-labelledby=`donut-segment-${counter}-title`)
             title(id=`donut-segment-${counter++}-title` data-some= `${prevArraySumm}`)!= mark
-            - prevArraySumm += dashOffsetValue;
-            - dashOffsetValue = 100 - prevArraySumm + dashOffsetValue;
+            - dashOffsetValue -= percent;
         // img end
 
       .donut__text

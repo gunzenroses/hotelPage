@@ -46,25 +46,28 @@ block content
           .room-details__description
             article.room-details__roomData
               .room-details__roomInfo
-                .room-details__title Сведения о номере
-                +badge("insert_emoticon", "Комфорт", "Шумопоглощающие стены")
-                +badge("location_city", "Удобство", "Окно в каждой из спален")
-                +badge("whatshot", "Уют", "Номер оснащён камином")
+                h2.room-details__title Сведения о номере
+                .room-details__badge_type_comfort
+                  +badge("insert_emoticon", "Комфорт", "Шумопоглощающие стены")
+                .room-details__badge_type_commodity
+                  +badge("location_city", "Удобство", "Окно в каждой из спален")
+                .room-details__badge_type_cozyness
+                  +badge("whatshot", "Уют", "Номер оснащён камином")
               .room-details__roomImpression
-                .room-details__title Впечатления от номера
+                h2.room-details__title Впечатления от номера
                 +donutChart({excellent: 50, good: 25, satisfied: 25, dissapointed: 0})
             article.room-details__reviews
-              .room-details__title Отзывы посетителей номера
+              h2.room-details__title Отзывы посетителей номера
               .reviews__info 2 отзыва
               +comment(comment1)
               +comment(comment2)
             article.room-details__rules
               .room-details__rules-title
-                .room-details__title Правила
+                h2.room-details__title Правила
               .room-details__checkbox-list
                 +bullet-checkbox(checkboxList)
             article.room-details__cancellation
-              .room-details__title Отмена
+              h2.room-details__title Отмена
               .room-details__cancellation_info
                 != cancellationRools
           article.room-details__booking
