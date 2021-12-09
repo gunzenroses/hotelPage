@@ -10,6 +10,11 @@
   }
 }
 
+.card-room__price_in-search {
+  @extend .card-room__price;
+  
+}
+
 .card-room__review {
   line-height: 20px;
   font-size: 13px;

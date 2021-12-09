@@ -13,7 +13,7 @@ mixin card-room__info(bookingNumber, bookingType, bookingPrice, theme="")
       .card__row_small
         span(class="card-room__sign" + "_" + theme) №
         span(class="card-room__number" + "_" + theme)= bookingNumber
-        span.card-room__type!= bookingType 
+        span(class="card-room__type" + "_" + theme)= bookingType 
       .card__row_small
-        span.card-room__price!= bookingPrice + "₽"
-        span.card-room__period &nbsp;в сутки
+        span(class="card-room__price" + "_" + theme)= bookingPrice + "₽"
+        span(class="card-room__period" + "_" + theme) &nbsp;в сутки

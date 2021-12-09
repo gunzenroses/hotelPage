@@ -62,7 +62,7 @@ block content
           .search-room__text Номера, которые мы для вас подобрали
           .search-room__result
             for room in roomsList 
-              +card-room(room)
+              +card-room(room, theme)
           .search-room__pagination 
             +pagination("paginationSearch")
     +footer("in-search")

@@ -1,5 +1,5 @@
-include ./card-room__review.pug
-include ./card-room__info.pug
+include ./__review/card-room__review.pug
+include ./__info/card-room__info.pug
 include ../button-rate/button-rate.pug
 include ../room-carousel/room-carousel.pug
 
@@ -10,6 +10,6 @@ mixin card-room(roomOptions, theme)
     .card-room__info
       +card-room__info(bookingNumber, bookingType, bookingPrice, theme)
       .card-room__rating
-        .card-room__button-rate
+        div(class="card-room__button-rate" + "_" + theme)
           +button-rate(starName, starRate)
         +card-room__review(reviewAmount)
