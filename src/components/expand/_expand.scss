@@ -31,7 +31,3 @@
 .js-expand__show ~ .date-range__selector .date-range__info::before {
   transform: rotate(180deg);
 }
-
-.js-expand__show ~ .container_medium .date-range__info::before {
-  transform: rotate(180deg);
-}

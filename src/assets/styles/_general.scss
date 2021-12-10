@@ -131,20 +131,6 @@ select {
   }
 }
 
-.container_small > .label {
-  margin-bottom: 4px;
-}
-
-.container_medium {
-  @include isFlex($direction: column);
-  width: 266px;
-
-  @media (max-width: 450px) {
-    width: 280px;
-    margin: 0 auto;
-  }
-}
-
 .label {
   @include labelMixin();
   line-height: $fs_h3;
