@@ -43,6 +43,11 @@
     background-color: transparent;
   }
 
+  &__fake_type_male {
+    @extend .radio__fake;
+    margin-right: 10px;
+  }
+
   &__title {
     display: inline-block;
     width: 73px;

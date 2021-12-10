@@ -1,2 +1,5 @@
-mixin button_type_submit(buttonText)
-  button(class="button_type_submit" type="submit")= buttonText
+mixin button_type_submit(buttonText, type="")
+  if type == "compact"
+    button(class="button_type_submit-compact" type="submit")= buttonText
+  else
+    button(class="button_type_submit" type="submit")= buttonText

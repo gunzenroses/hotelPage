@@ -34,7 +34,6 @@
   content: '\e5c8';
   @include absoluteTopRight();
   @include containerSimple(44px, 44px);
-  line-height: 42px;
   font-family: $material-icons;
   -webkit-font-feature-settings: 'liga' 1;
   -moz-font-feature-settings: 'liga' 1;

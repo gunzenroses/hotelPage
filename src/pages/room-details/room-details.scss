@@ -263,10 +263,6 @@
     height: auto;
     margin: 0 auto 50px;
   }
-
-  & .widget {
-    margin-top: 20px;
-  }
 }
 
 .room-details__checkbox-list {
@@ -290,6 +286,14 @@
   @media (max-width: 970px) {
     display: none;
   }
+}
+
+.room-details__comment_first {
+  margin-top: 21px;
+}
+
+.room-details__comment_second {
+  margin-top: 21px;
 }
 
 .room-details__rules {

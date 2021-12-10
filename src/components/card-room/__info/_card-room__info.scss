@@ -18,6 +18,10 @@
   height: 28px;
 }
 
+.card-room__button-rate_creative {
+  height: 28px;
+}
+
 .card-room__button-rate_in-search {
   height: 30px;
 }
@@ -97,6 +101,10 @@
   @media (min-width: 1750px) and (max-width: 1920px) {
     font-size: $fs_base;
   }
+}
+
+.card-room__period_creative {
+  @extend .card-room__period;
 }
 
 .card-room__period_in-search {

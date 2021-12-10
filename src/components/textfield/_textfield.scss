@@ -22,7 +22,11 @@
   &::before {
     @include arrowSubmit();
     width: 42px;
-    color: $dark-shade_medium;
+    line-height: 42px;
+    color: transparent;
+    background: $linearGradientLilac;
+    -webkit-background-clip: text;
+    background-clip: text;
   }
 
   @media (max-width: 470px) {

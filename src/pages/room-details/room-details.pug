@@ -59,8 +59,10 @@ block content
             article.room-details__reviews
               h2.room-details__title Отзывы посетителей номера
               .reviews__info 2 отзыва
-              +comment(comment1)
-              +comment(comment2)
+              .room-details__comment_first
+                +comment(comment1)
+              .room-details__comment_second
+                +comment(comment2)
             article.room-details__rules
               .room-details__rules-title
                 h2.room-details__title Правила

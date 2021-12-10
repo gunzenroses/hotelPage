@@ -3,13 +3,17 @@ include ./__info/card-room__info.pug
 include ../button-rate/button-rate.pug
 include ../room-carousel/room-carousel.pug
 
-mixin card-room(roomOptions, theme)
+mixin card-room(roomOptions, theme="")
   - var {src = [], bookingNumber = "999", bookingType = false, bookingPrice = 0, starName = inputName, starRate = 0, reviewAmount = 0} = roomOptions
   .card-room
     +roomCarousel(src, nameForPictures="room " + bookingNumber)
     .card-room__info
       +card-room__info(bookingNumber, bookingType, bookingPrice, theme)
       .card-room__rating
-        div(class="card-room__button-rate" + "_" + theme)
-          +button-rate(starName, starRate)
+        if theme == ""
+          .card-room__button-rate
+            +button-rate(starName, starRate)
+        else
+          div(class="card-room__button-rate" + "_" + theme)
+            +button-rate(starName, starRate)
         +card-room__review(reviewAmount)

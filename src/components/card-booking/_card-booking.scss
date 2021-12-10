@@ -209,6 +209,10 @@
   letter-spacing: .01em;
 }
 
+.card-booking__summary_in-uikit {
+  @extend .card-booking__summary;
+}
+
 .card-booking__summary_in-details {
   @include isFlex();
   position: relative;
@@ -226,7 +230,6 @@
   height: 19px;
   border-bottom: 1px dotted $dark-shade_less;
 }
-
 
 .card-booking__line_uikit {
   @extend .card-booking__line;
