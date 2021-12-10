@@ -1,7 +1,12 @@
 
 mixin donutChart(cData={})
   - var {excellent=0, good=0, satisfied=0, dissapointed=0} = cData
-  - var donutData = {dissapointed, satisfied, good, excellent} 
+  - var totalData = parseFloat(excellent) + parseFloat(good) + parseFloat(satisfied) + parseFloat(dissapointed)
+  - var dissData = dissapointed / totalData * 100;
+  - var satisData = satisfied / totalData * 100;
+  - var goodData = good / totalData * 100;
+  - var excelData = excellent / totalData * 100;
+  - var donutData = {dissData, satisData, goodData, excelData} 
   - var counter = 1;
   - var dashOffsetValue = parseFloat(25 - 0.5);
   - var prevArraySumm = 0;
@@ -10,16 +15,16 @@ mixin donutChart(cData={})
     .donut__content
       svg.donut__img(width="100%" height="100%" viewbox="0 0 33 33" aria-labelledby="impression-title" role="img")
         defs
-          lineargradient#gradient_disappointed
+          lineargradient#gradient_dissData
             stop(stop-color="#909090" offset="0%")
             stop(stop-color="#3D4975" offset="100%")
-          lineargradient#gradient_satisfied(x1="0" y1="1" x2="0" y2="0")
+          lineargradient#gradient_satisData(x1="0" y1="1" x2="0" y2="0")
             stop(stop-color="#BC9CFF" offset="0%")
             stop(stop-color="#8BA4F9" offset="100%")
-          lineargradient#gradient_good
+          lineargradient#gradient_goodData
             stop(stop-color="#6FCF97" offset="0%")
             stop(stop-color="#66D2EA" offset="100%")
-          lineargradient#gradient_excellent(x1="0" y1="1" x2="0" y2="0")
+          lineargradient#gradient_excelData(x1="0" y1="1" x2="0" y2="0")
             stop(stop-color="#FFBA9C" offset="0%")
             stop(stop-color="#FFE39C" offset="100%")
         title#impression-title Впечатлeния от номера
@@ -36,7 +41,7 @@ mixin donutChart(cData={})
         // img end
 
       .donut__text
-        p.donut__number 260
+        p.donut__number!= totalData
         p.donut__label голосов
     figcaption.donut__caption
       ul.donut-key-list(aria-hidden="true" role="presentation")
