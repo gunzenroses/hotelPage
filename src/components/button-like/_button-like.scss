@@ -1,17 +1,17 @@
 .button-like {
-  @include buttonLike;
+  @include buttonLike();
   background: $dark-shade_less;
 
   &::before {
-    @include buttonLikeBefore;
+    @include buttonLikeBefore();
   }
 
   &_popular {
-    @include buttonLike;
+    @include buttonLike();
     background: $linearGradientLilac;
 
     &::before {
-      @include buttonLikeBefore;
+      @include buttonLikeBefore();
     }
   }
 

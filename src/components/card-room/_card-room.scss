@@ -1,6 +1,6 @@
 .card-room {
-  @include containerDimed;
   @include isFlex($direction: column, $justify: flex-start);
+  @include containerDimed();
   position: relative;
   width: 270px;
   height: 257px;

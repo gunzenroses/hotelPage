@@ -46,7 +46,7 @@
 }
 
 .checkbox__real:checked + .checkbox__fake::before {
-  @include checkboxFakeBefore;
+  @include checkboxFakeBefore();
 
   @media (min-width: 1750px) and (max-width: 1920px) {
     @include containerBlock(5px, 10px);

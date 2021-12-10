@@ -1,7 +1,12 @@
 .comment {
+  position: relative;
   width: 100%;
-  min-width: 266px;
+  min-width: 260px;
   min-height: 133px;
+
+  @media (max-width: 450px) {
+    margin: 0 auto;
+  }
 }
 
 .comment__head {

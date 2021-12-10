@@ -1,10 +1,9 @@
 .calendar {
-  @include containerDimed();
   @include isFlex($direction: column, $justify: flex-start);
+  @include containerDimed();
   width: 100%;
   min-height: 370px;
   border: 1px solid $dark-shade_less;
-  background: $light;
   z-index: 3;
   user-select: none;
 
@@ -38,7 +37,23 @@
 
   &__button_prev,
   &__button_next {
-    @include calendarButton();
+    @include containerSimple(24px, 24px);
+    position: relative;
+    line-height: 18px; 
+    border-radius: 50%;
+    cursor: pointer;
+  
+    &:hover {
+      background-color: $grey;
+    }
+  
+    &::before {
+      position: absolute;
+      top: 3px;
+      font-size: $fs_h1;
+      font-family: $material-icons;
+      color: $purple;
+    }
   }
 
   &__button_prev::before {
@@ -117,8 +132,8 @@
 .calendar__day_next_checkin,
 .calendar__day_prev_checkout,
 .calendar__day_next_checkout {
-  position: relative;
   @include calendarDay();
+  position: relative;
   border-radius: 50%;
   color: $dark-shade_less;
   background: $dark-shade_few;

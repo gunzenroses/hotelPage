@@ -1,5 +1,5 @@
 .textfield__label_for-email {
-  @include labelMixin;
+  @include labelMixin();
   position: absolute;
   right: 1px;
   line-height: .4rem;
@@ -10,12 +10,12 @@
 }
 
 .textfield__label_for-name {
-  @include labelMixin;
+  @include labelMixin();
   position: absolute;
   right: 1px;
   line-height: $fs_h3;
-  font-weight: 400;
   font-size: .84rem;
+  font-weight: 400;
   color: $dark-shade_medium;
   text-align: right;
 }

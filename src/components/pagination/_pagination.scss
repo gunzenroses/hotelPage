@@ -13,10 +13,10 @@
   }
 
   &__button_current {
-    @include paginationItem;
-    background: $linearGradientLilac;
-    color: $light;
+    @include paginationItem();
     font-weight: 700;
+    color: $light;
+    background: $linearGradientLilac;
   }
 
   &__items {
@@ -40,10 +40,10 @@
 .pagination__item,
 .pagination__button_last,
 .pagination__button_first {
-  @include paginationItem;
-  background: transparent;
-  color: $dark-shade_medium;
+  @include paginationItem();
   font-weight: 400;
+  color: $dark-shade_medium;
+  background: transparent;
 }
 
 .pagination__item:hover {
@@ -51,12 +51,12 @@
 }
 
 .pagination__button_next {
-  @include paginationItem;
-  @include paginationNav;
+  @include paginationItem();
+  @include paginationNav();
 
   &::before {
     content: '\e5c8';
-    @include paginationBefore;
+    @include paginationBefore();
     font-family: $material-icons;
     -webkit-font-feature-settings: 'liga' 1;
     -moz-font-feature-settings: 'liga' 1;
@@ -65,12 +65,12 @@
 }
 
 .pagination__button_prev {
-  @include paginationItem;
-  @include paginationNav;
+  @include paginationItem();
+  @include paginationNav();
 
   &::before {
     content: '\e5c4';
-    @include paginationBefore;
+    @include paginationBefore();
     font-family: $material-icons;
     -webkit-font-feature-settings: 'liga' 1;
     -moz-font-feature-settings: 'liga' 1;

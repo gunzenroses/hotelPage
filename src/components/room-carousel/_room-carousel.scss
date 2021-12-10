@@ -94,7 +94,7 @@
 
 .room-carousel__btn_prev::before {
   content: '\e5cb';
-  @include carouselButton;
+  @include carouselButton();
   font-family: $material-icons;
 }
 
@@ -109,6 +109,6 @@
 
 .room-carousel__btn_next::before {
   content: '\e5cb';
-  @include carouselButton;
+  @include carouselButton();
   font-family: $material-icons;
 }

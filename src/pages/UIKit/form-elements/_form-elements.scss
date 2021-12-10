@@ -52,7 +52,7 @@
 }
 
 .form-elements__group_first {
-  @include containerSimple($w: 321px, $h: 636px);
+  @include containerSimple(321px, 636px);
   margin-right: 117px;
 
   @media (max-width: 1400px) {
@@ -105,7 +105,7 @@
 }
 
 .form-elements__container_date-range_separate {
-  @include containerSimple($w: 100%, $h: 62px);
+  @include containerSimple(100%, 62px);
 }
 
 .form-elements__container_date-range_common {
@@ -123,7 +123,7 @@
 }
 
 .form-elements__group_second {
-  @include containerSimple($w: 260px, $h: 537px);
+  @include containerSimple(260px, 537px);
   @include isFlex($direction: column, $justify: flex-start, $align: flex-start);
   margin-right: 124px;
 
@@ -134,7 +134,7 @@
 
 .form-elements__container_checkbox {
   @include isFlex($direction: column);
-  @include widget;
+  @include widget();
   height: 127px;
   margin-top: 2px;
 }
@@ -148,7 +148,7 @@
 }
 
 .form-elements__label_radio {
-  @include labelMixin;
+  @include labelMixin();
   line-height: $fs_h3;
   font-size: $fs_h3;
   letter-spacing: .0001em;
@@ -162,7 +162,7 @@
 }
 
 .form-elements__label_toggle {
-  @include labelMixin;
+  @include labelMixin();
   font-size: .83rem;
   line-height: $fs_h3;
   letter-spacing: .0001em;
@@ -193,14 +193,14 @@
 }
 
 .form-element__label_button-rate {
-  @include labelMixin;
+  @include labelMixin();
   line-height: $fs_h3;
   font-size: $fs_h3;
 }
 
 
 .form-elements__group_third {
-  @include containerSimple($w: 320px, $h: 503px);
+  @include containerSimple(320px, 503px);
   @include isFlex($direction: column, $align: flex-start, $justify: flex-start);
   margin-right: 7px;
 
@@ -231,7 +231,7 @@
 }
 
 .form-elements__label_buttons {
-  @include labelMixin;
+  @include labelMixin();
   margin-bottom: 3.5px;
   line-height: $fs_h3;
   font-size: $fs_h3;
@@ -327,7 +327,7 @@
 }
 
 .form-elements__group_fifth {
-  @include containerSimple($w: 320px, $h: 465px);
+  @include containerSimple(320px, 465px);
   @include isFlex($direction: column, $align: flex-start, $justify: flex-start);
   margin-top: 99px;
   margin-right: 60px;
@@ -348,7 +348,7 @@
 }
 
 .form-elements__group_sixth {
-  @include containerSimple($w: 320px, $h: 467px);
+  @include containerSimple(320px, 467px);
   @include isFlex($direction: column, $align: flex-start, $justify: flex-start);
   margin-top: 99px;
   margin-right: 7px;
@@ -364,7 +364,7 @@
 }
 
 .form-elements__group_seventh {
-  @include containerSimple($w: 291px, $h: fit-content);
+  @include containerSimple(291px, fit-content);
   @include isFlex($direction: column, $justify: flex-start, $align: flex-start);
   margin-right: 120px;
   margin-top: 38px;

@@ -26,7 +26,7 @@
 }
 
 .header__dropdown {
-  @include containerDimed;
+  @include containerDimed();
   @include absoluteTopRight(50px);
   width: 130px;
   height: 130px;

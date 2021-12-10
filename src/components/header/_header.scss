@@ -1,35 +1,35 @@
 .header {
-  @include headerMixin;
+  @include headerMixin();
   padding-top: 12px;
   padding-bottom: 15px;
 }
 
 .header_landing {
-  @include headerMixin;
+  @include headerMixin();
   padding-top: 17px;
   padding-bottom: 17px;
 }
 
 .header_in-search {
-  @include headerMixin;
+  @include headerMixin();
   padding-top: 16px;
   padding-bottom: 16px;
 }
 
 .header_in-signin {
-  @include headerMixin;
+  @include headerMixin();
   padding-top: 14px;
   padding-bottom: 14px;
 }
 
 .header_in-registration {
-  @include headerMixin;
+  @include headerMixin();
   padding-top: 12px;
   padding-bottom: 12px;
 }
 
 .header_in-details {
-  @include headerMixin;
+  @include headerMixin();
   padding-top: 15px;
   padding-bottom: 15px;
 }

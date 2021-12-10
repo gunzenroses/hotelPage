@@ -55,7 +55,7 @@
 }
 
 .textfield__container {
-  @extend .widget;
   @include isFlex($direction: column);
+  @include widget();
   height: 100%;
 }

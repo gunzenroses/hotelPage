@@ -1,8 +1,9 @@
 @import 'Styles/main';
 
 .landing-page {
-  @include containerWithMargins($width: 1440px, $height: auto, $ms: auto);
+  @include containerBlock(1440px, auto);
   @include isFlex($justify: flex-start, $direction: column);
+  margin: 0 auto;
   position: relative;
   min-width: 320px;
   background: $light;

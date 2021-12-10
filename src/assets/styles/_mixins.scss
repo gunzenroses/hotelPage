@@ -96,19 +96,37 @@
   }
 }
 
-@mixin cardRow {
-  @include isFlex($align: center);
-  width: 100%;
-  position: relative;
-}
+@mixin calendarDay {
+  @include containerSize(40px);
+  cursor: pointer;
 
-@mixin marginTop {
-  @media (max-width: 1400px) {
-    margin-top: 20px;
+  @media (min-width: 1650px) and (max-width: 1920px) {
+    width: 14.28%;
+    font-size: $fs_h2;
   }
 
-  @media (max-width: 850px) {
-    margin-top: 30px;
+  &:hover {
+    border-radius: 50%;
+    border-color: $linearGradientLilac;
+    border-width: 2px;
+    border-style: solid;
+  }
+}
+
+@mixin calendarCheckDay {
+  position: relative;
+  font-weight: 700;
+  color: $light;
+  border-radius: 50%;
+  background: $linearGradientLilac;
+  z-index: 2;
+
+  &::after {
+    content: '';
+    @include absoluteTopLeft();
+    @include containerBlock();
+    background: $linearGradientLilac;
+    opacity: .15;
   }
 }
 
@@ -224,7 +242,7 @@
   @include dropdownInitialField();
 
   &::before {
-    @include dropdownButton;
+    @include dropdownButton();
     width: 42px;
   }
 
@@ -259,10 +277,10 @@
 }
 
 @mixin dropdownInitialField {
-  @include regularField;
+  @include regularField();
   padding: 0px 0 2px 12px;
-  cursor: pointer;
   white-space: nowrap;
+  cursor: pointer;
 }
 
 @mixin fontButton {
@@ -273,14 +291,9 @@
 }
 
 @mixin footerMixin {
-  @include containerWithMargins(
-      $width: 1164px,
-      $height: 24px,
-      $mt: 24px,
-      $ms: 0,
-      $mb: 22px
-    );
   @include isFlex($align: flex-start);
+  @include containerSimple(1164px, 24px);
+  margin-bottom: 22px;
 
   @media (min-width: 1500px) and (max-width: 1920px) {
     margin: 23px auto;
@@ -327,7 +340,7 @@
 
 @mixin headerMixin {
   @include isFlex($align: center);
-  @include containerDimed;
+  @include containerDimed();
   position: relative;
   width: 100%;
   height: 70px;
@@ -368,11 +381,21 @@
   }
 }
 
+@mixin marginTop {
+  @media (max-width: 1400px) {
+    margin-top: 20px;
+  }
+
+  @media (max-width: 850px) {
+    margin-top: 30px;
+  }
+}
+
 @mixin paginationItem {
   @include containerSize(40px);
-  border-radius: 50%;
   margin: 0;
   padding: 0;
+  border-radius: 50%;
   text-align: center;
   cursor: pointer;
 }
@@ -406,66 +429,12 @@
 }
 
 @mixin textField {
-  @include regularField;
+  @include regularField();
   min-width: 260px;
 
   &:hover,
   &:focus {
     border: 1px solid $dark-shade_medium;
-  }
-}
-
-@mixin calendarDay {
-  @include containerSize(40px);
-  cursor: pointer;
-
-  @media (min-width: 1650px) and (max-width: 1920px) {
-    width: 14.28%;
-    font-size: $fs_h2;
-  }
-
-  &:hover {
-    border-radius: 50%;
-    border-color: $linearGradientLilac;
-    border-width: 2px;
-    border-style: solid;
-  }
-}
-
-@mixin calendarCheckDay {
-  position: relative;
-  font-weight: 700;
-  color: $light;
-  border-radius: 50%;
-  background: $linearGradientLilac;
-  z-index: 2;
-
-  &::after {
-    content: '';
-    @include absoluteTopLeft();
-    @include containerBlock();
-    background: $linearGradientLilac;
-    opacity: .15;
-  }
-}
-
-@mixin calendarButton {
-  @include containerSize(24px);
-  position: relative;
-  line-height: 18px; 
-  border-radius: 50%;
-  cursor: pointer;
-
-  &:hover {
-    background-color: $grey;
-  }
-
-  &::before {
-    position: absolute;
-    top: 3px;
-    font-size: $fs_h1;
-    font-family: $material-icons;
-    color: $purple;
   }
 }
 
@@ -476,15 +445,5 @@
 
   @media (max-width: 450px) {
     margin: 0 auto;
-  }
-}
-
-@mixin widgetTextfield {
-  @include widget;
-  @include isFlex($direction: column);
-  height: 63px;
-
-  & input {
-    letter-spacing: 0.005em;
   }
 }

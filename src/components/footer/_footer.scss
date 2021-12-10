@@ -1,6 +1,6 @@
 .footer_outer {
-  @include containerDimed;
   @include isFlex($direction: column, $align: center);
+  @include containerDimed();
   width: 100%;
   height: 445px;
   margin: 0 auto;
@@ -216,7 +216,7 @@
   .footer__dropdown_in-navigation,
   .footer__dropdown_in-about,
   .footer__dropdown_in-support {
-    @include containerDimed;
+    @include containerDimed();
     position: absolute;
     top: 20px;
     width: 200px;
@@ -363,25 +363,28 @@
   }
 
   &_inner {
-    @include footerMixin;
+    @include footerMixin();
+    margin-top: 24px;
     margin-left: 140px;
   }
 
   &_landing {
-    @include footerMixin;
+    @include footerMixin();
+    margin-top: 24px;
     margin-left: 139px;
   }
 
   &_in-signin {
-    @include footerMixin;
-    margin-left: 140px;
+    @include footerMixin();
     margin-top: 23px;
+    margin-left: 140px;
   }
 
   &_in-search,
   &_in-registration,
   &_in-details {
-    @include footerMixin;
+    @include footerMixin();
+    margin-top: 24px;
     margin-left: 140px;
   }
 }

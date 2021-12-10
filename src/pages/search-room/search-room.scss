@@ -216,41 +216,41 @@
   }
 
   &__date-range {
-    @include formMargin;
+    @include formMargin();
     height: 62px;
   }
 
   &__guests {
-    @include formMargin;
+    @include formMargin();
     height: 61px;
     margin-top: 23px;
   }
 
   &__price-range {
-    @include formMargin;
+    @include formMargin();
     margin-top: 31px;
   }
 
   &__accessibility {
-    @include formMargin;
+    @include formMargin();
     margin-top: 33px;
   }
 
   &__rules {
     @include isFlex($direction: column);
-    @include formMargin;
+    @include formMargin();
     height: 126px;
     margin-top: 32px;
   }
 
   &__rooms {
-    @include formMargin;
+    @include formMargin();
     height: 61px;
     margin-top: 32px;
   }
 
   &__extras {
-    @include formMargin;
+    @include formMargin();
     margin-top: 16px;
   }
 }

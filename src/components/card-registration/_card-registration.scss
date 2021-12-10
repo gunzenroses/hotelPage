@@ -1,6 +1,6 @@
 .card-registration {
-  @include containerShadowed;
   @include isFlex($direction: column, $justify: flex-start);
+  @include containerShadowed();
   width: 380px;
   height: fit-content;
   min-height: 645px;

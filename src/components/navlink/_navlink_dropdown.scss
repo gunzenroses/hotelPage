@@ -1,5 +1,5 @@
 .navlink__content {
-  @include containerDimed;
+  @include containerDimed();
   position: absolute;
   top: 20px;
   width: 150px;

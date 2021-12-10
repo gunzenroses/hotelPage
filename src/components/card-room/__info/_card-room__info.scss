@@ -7,7 +7,9 @@
 }
 
 .card-room__rating {
-  @include cardRow();
+  @include isFlex($align: center);
+  width: 100%;
+  position: relative;
   height: 36px;
   border-top: 1px solid $dark-shade_few;
   padding-top: 11px;

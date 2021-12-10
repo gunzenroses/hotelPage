@@ -7,28 +7,27 @@
 }
 
 .range__label {
-  @include labelMixin;
+  @include labelMixin();
   margin-top: 2px;
   margin-bottom: 1.5px;
   line-height: $fs_h3;
-  letter-spacing: .001em;
   font-size: $fs_h3;
+  letter-spacing: .001em;
 }
 
 .range__label_right {
-  @include labelMixin;
-  line-height: $fs_h3;
-  font-size: $fs_h3;
-  position: absolute;
-  right: 0;
-  top: 1px;
-  font-weight: 400;
-  color: $dark-shade_medium;
-  text-align: right;
+  @include labelMixin();
+  @include absoluteTopRight(1px, 0);
   margin-top: 0px;
   margin-bottom: 1.5px;
   padding-bottom: 6px;
-  padding-right: 1px;
+  padding-right: 1px;  
+  line-height: $fs_h3;
+  font-size: $fs_h3;
+  font-weight: 400;
+  color: $dark-shade_medium;
+  text-align: right;
+
 }
 
 .range__info {

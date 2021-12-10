@@ -37,7 +37,7 @@
   border-radius: 4px 4px 0 0;
 
   &::before {
-    @include dropdownButton;
+    @include dropdownButton();
     line-height: 43px;
   }
 }
@@ -67,12 +67,12 @@
 }
 
 .dropdown__item {
-  @include dropdownItem;
+  @include dropdownItem();
   padding-left: 14px;
 }
 
 .dropdown__buttons {
-  @include dropdownItem;
+  @include dropdownItem();
   justify-content: space-between;
   flex-direction: row-reverse;
   margin-top: 19px;
@@ -177,7 +177,7 @@
 }
 
 .dropdown__item_last {
-  @include dropdownItem;
+  @include dropdownItem();
   margin-bottom: 3px;
   padding-left: 14px;
 }

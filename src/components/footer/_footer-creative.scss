@@ -1,7 +1,7 @@
 .footer-creative {
-  @include containerDimed;
-  height: 366px;
+  @include containerDimed();
   width: 770px;
+  height: 366px;
 
   @media (max-width: 1440px) {
     margin: 0 auto;

@@ -3,12 +3,11 @@ include ../info/info.pug
 
 mixin comment(commentData)
   - var {authorPic="", authorName="Anonymous", commentTime=Data().getDay(), buttonLikeId, buttonNumber=0, commentText="none"} = commentData
-  .widget
-    article.comment
-      .comment__head
-        img(src=authorPic alt="profile picture").comment__pic
-        +info(authorName, commentTime)
-      .comment__body
-        .comment__likes
-          +button-like(buttonLikeId, buttonNumber)
-        .comment__text!= commentText
+  article.comment
+    .comment__head
+      img(src=authorPic alt="profile picture").comment__pic
+      +info(authorName, commentTime)
+    .comment__body
+      .comment__likes
+        +button-like(buttonLikeId, buttonNumber)
+      .comment__text!= commentText

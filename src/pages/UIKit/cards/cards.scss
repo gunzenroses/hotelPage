@@ -26,7 +26,7 @@
 /* Flex for adaptive design */
 
 .cards_inner {
-  @include containerSimple($w: 1200px, $h: 1068px);
+  @include containerSimple(1200px, 1068px);
   @include isFlex($direction: column, $wrap: wrap, $justify: flex-start);
   margin: 150px 0 134px 140px;
   background: transparent;
@@ -61,28 +61,28 @@
 }
 
 .cards__card-registration {
-  @include marginTop;
+  @include marginTop();
   width: 380px;
   min-height: 645px;
   margin-top: 40px;
 }
 
 .cards__card-booking {
-  @include marginTop;
+  @include marginTop();
   width: 380px;
   height: 510px;
   margin-top: 1px;
 }
 
 .cards__card-signin {
-  @include marginTop;
+  @include marginTop();
   width: 380px;
   min-height: 358px;
   margin-top: 40px;
 }
 
 .cards__calendar {
-  @include marginTop;
+  @include marginTop();
   width: 320px;
   height: fit-content;
 }

@@ -25,7 +25,7 @@
 }
 
 .carousel-landing__img {
-  @include containerWithMargins();
+  @include containerSimple();
   object-fit: cover;
 
   @media (max-width: 970px) {
