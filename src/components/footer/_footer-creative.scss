@@ -1,11 +1,8 @@
 .footer-creative {
   @include containerDimed();
-  width: 770px;
+  width: 768px;
   height: 366px;
-
-  @media (max-width: 1440px) {
-    margin: 0 auto;
-  }
+  margin: 0 auto;
 
   @media (max-width: 800px) {
     width: 100%;
@@ -30,7 +27,7 @@
   @include containerSimple(560px, 127px);
   @include isFlex($direction: column, $justify: flex-start, $align: center);
   position: relative;
-  margin-left: 107px;
+  margin-left: 106px;
   padding-top: 120px;
   padding-right: 3px;
 
@@ -47,4 +44,6 @@
 
 .footer-creative__social-nets {
   margin-top: 24px;
+  margin-left: 3px;
+  width: 115px;
 }

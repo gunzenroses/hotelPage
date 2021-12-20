@@ -1,21 +1,55 @@
 .fa-twitter,
+.fa-twitter_landing,
+.fa-twitter_in-search,
 .fa-facebook-square,
-.fa-instagram {
+.fa-facebook-square_creative,
+.fa-facebook-square_landing,
+.fa-facebook-square_in-search,
+.fa-instagram,
+.fa-instagram_landing,
+.fa-instagram_in-search {
   position: relative;
   width: 26px;
-  height: 26px;
 
   @media (min-width: 1750px) and (max-width: 1920px) {
     @include containerBlock(40px, 40px);
   }
 }
 
+.fa-twitter,
+.fa-instagram,
+.fa-instagram_landing,
+.fa-instagram_in-search,
+.fa-facebook-square_creative,
+.fa-facebook-square_landing,
+.fa-facebook-square_in-search {
+  height: 26px;
+}
+
+.fa-twitter_in-search {
+  height: 23px;
+}
+
+.fa-twitter_landing {
+  height: 21px;
+}
+
+.fa-facebook-square {
+  height: 30px;
+}
+
 .fa-twitter::before,
+.fa-twitter_landing::before,
+.fa-twitter_in-search::before,
 .fa-facebook-square::before,
-.fa-instagram::before {
+.fa-facebook-square_creative::before,
+.fa-facebook-square_landing::before,
+.fa-facebook-square_in-search::before,
+.fa-instagram::before,
+.fa-instagram_landing::before,
+.fa-instagram_in-search::before {
   @include absoluteTopLeft(-1px);
   width: 24px;
-  line-height: 24px;
   font-size: $fs_h1;
   font-family: $font-awesome;
   background-image: $linearGradientLilac;
@@ -28,21 +62,25 @@
   }
 }
 
-.fa-twitter::before {
+.fa-twitter::before,
+.fa-twitter_landing::before,
+.fa-twitter_in-search::before {
   content: '';
+  line-height: 21px;
 }
 
-.fa-facebook-square::before {
+.fa-facebook-square::before,
+.fa-facebook-square_creative::before,
+.fa-facebook-square_landing::before,
+.fa-facebook-square_in-search::before {
   content: '';
+  line-height: 24px;
 }
 
-.fa-instagram::before {
+
+.fa-instagram::before,
+.fa-instagram_landing::before,
+.fa-instagram_in-search::before {
   content: '';
-}
-
-.fab a {
-  @include absoluteTopLeft();
-  display: block;
-  height: 24px;
-  width: 24px;
+  line-height: 24px;
 }
