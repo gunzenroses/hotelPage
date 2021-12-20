@@ -45,13 +45,3 @@
   font-size: 0.82rem;
   color: $light;
 }
-
-.button_type_link_registration {
-  @include containerBlock();
-  @include buttonLink();
-  min-width: 74px;
-  padding-right: 1px;
-  font-size: 0.82rem;
-  letter-spacing: .03em;
-  color: $light;
-}
