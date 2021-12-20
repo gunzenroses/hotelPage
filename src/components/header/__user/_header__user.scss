@@ -28,6 +28,10 @@
 .header__registration {
   @include containerBlock(196px, 34px);
   line-height: 34px;
+
+  @media (max-width: 550px) {
+    width: calc(200px - 87px);
+  }
 }
 
 .header__user_signed {
