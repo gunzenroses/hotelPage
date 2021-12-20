@@ -17,7 +17,7 @@ mixin header__menu(user="")
     if user
       +header__user_signed(user, buttonOnclick="./some-address")
     else
-      +header__user_unsigned("Войти", buttonOnclick="signin.html", "Зарегистрироваться", buttonOnclick="registration.html")
+      +header__user_unsigned("Войти", buttonOnclick="signin.html", buttonOnclick="registration.html")
     nav.header__navbar-region
       ul.header__navbar
         +navlink("О нас", buttonOnclick="./some-address")
