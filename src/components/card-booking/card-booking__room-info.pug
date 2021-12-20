@@ -12,7 +12,7 @@ mixin card-booking__room-info(bookingNumber, bookingType, bookingPrice, theme=""
     .card__row
       .card__row_small
         span.card-booking__No №
-        span.card-booking__number!= bookingNumber  
+        span(class="card-booking__number" + "_" + theme)= bookingNumber  
         span(class="card-booking__suite" + "_" + theme)= bookingType
       .card__row_small
         span.card-booking__price!= bookingPrice + "₽"

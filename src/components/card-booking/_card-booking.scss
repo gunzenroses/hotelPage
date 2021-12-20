@@ -44,7 +44,7 @@
     font-size: $fs_h1;
     letter-spacing: .001em;
     font-weight: 700;
-    line-height: 11px;
+    line-height: 9px;
     color: $dark-shade_most;
 
 
@@ -52,6 +52,11 @@
       font-size: $fs_h1;
     }
   }
+
+.card-booking__number_in-details {
+  @extend .card-booking__number;
+  line-height: 11px;
+}
 
 .card-booking__suite {
   display: inline-block;

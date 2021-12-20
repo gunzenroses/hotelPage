@@ -1,27 +1,27 @@
-import applyClass from 'Scripts/apply-class';
-import 'Scripts/input-masks';
+import applyClass from 'Main/assets/scripts/applyClass';
+import 'Main/assets/scripts/inputmasks';
 import {
   paginationData1, guestsData1, guestsDataBooking, roomsData1, roomsData2,
-} from 'Scripts/my-data';
+} from 'Main/assets/scripts/my-data';
 
-import ButtonLike from 'Components/button-like/button-like';
-import Calendar from 'Components/calendar/calendar';
+import ButtonLike from 'Main/components/button-like/ButtonLike';
+import Calendar from 'Main/components/calendar/Calendar';
 import 'Components/card-booking/card-booking';
 import 'Components/card-registration/card-registration';
 import 'Components/card-search/card-search';
 import 'Components/card-singin/card-signin';
-import Expand from 'Main/components/expand/expand';
+import Expand from 'Main/components/expand/Expand';
 import DropdownGuests from 'Components/dropdown/_type_guests/dropdown_type_guests';
 import DropdownRooms from 'Components/dropdown/_type_rooms/dropdown_type_rooms';
 import 'Components/footer/footer';
-import ButtonPagination from 'Components/pagination/pagination';
+import ButtonPagination from 'Main/components/pagination/Pagination';
 import 'Components/range/range';
-import Carousel from 'Components/room-carousel/room-carousel';
+import RoomCarousel from 'Main/components/room-carousel/RoomCarousel';
 
 import './UIkit.scss';
 
 window.onload = () => {
-  applyClass('.js-room-carousel', Carousel);
+  applyClass('.js-room-carousel', RoomCarousel);
   applyClass('.js-dropdown__detection', Expand)
   applyClass([
     { id: 'likes_author_1', data: 12 },

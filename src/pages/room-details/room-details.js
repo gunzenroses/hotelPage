@@ -1,8 +1,8 @@
-import applyClass from 'Scripts/apply-class';
-import 'Scripts/input-masks';
-import ButtonLike from 'Components/button-like/button-like';
+import applyClass from 'Main/assets/scripts/applyClass';
+import 'Main/assets/scripts/inputmasks';
+import ButtonLike from 'Main/components/button-like/ButtonLike';
 import 'Components/card-booking/card-booking';
-import Expand from 'Main/components/expand/expand';
+import Expand from 'Main/components/expand/Expand';
 import 'Components/footer/footer';
 
 import './room-details.scss';

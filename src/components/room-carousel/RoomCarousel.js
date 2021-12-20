@@ -1,4 +1,4 @@
-export default class Carousel {
+export default class RoomCarousel {
   constructor(carousel) {
     this.carousel = carousel;
     this.init();

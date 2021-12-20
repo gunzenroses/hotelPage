@@ -1,6 +1,6 @@
-import applyClass from 'Scripts/apply-class';
-import 'Scripts/input-masks';
-import Expand from 'Main/components/expand/expand';
+import applyClass from 'Main/assets/scripts/applyClass';
+import 'Main/assets/scripts/inputmasks';
+import Expand from 'Main/components/expand/Expand';
 import 'Components/footer/footer';
 import 'Components/card-singin/card-signin';
 
