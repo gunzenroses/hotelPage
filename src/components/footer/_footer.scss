@@ -124,10 +124,6 @@
   letter-spacing: .0001em;
   pointer-events: none;
 
-  @media (min-width: 1750px) and (max-width: 1920px){
-    font-size: $fs_h2;
-  }
-
   @media (max-width: 1170px){
     display: none;
   }
@@ -400,10 +396,6 @@
     letter-spacing: .0001em;
     font-size: 14px;
     pointer-events: none;
-
-    @media (min-width: 1750px) and (max-width: 1920px){
-      font-size: $fs_h2;
-    }
 
     @media (max-width: 800px) {
       width: 230px;

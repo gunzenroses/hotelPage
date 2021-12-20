@@ -10,7 +10,6 @@
 
   @media (min-width: 1750px) and (max-width: 1920px){
     width: fit-content;
-    font-size: $fs_h2;
   }
 }
 
@@ -34,10 +33,6 @@
   font-size: $fs_base;
   font-weight: 400;
   color: $dark-shade_medium;
-
-  @media (min-width: 1750px) and (max-width: 1920px){
-    font-size: $fs_h2;
-  }
 }
 
 .navlink:active .navlink__button,
