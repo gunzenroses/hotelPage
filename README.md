@@ -8,6 +8,10 @@ The aim of this project is to create a web-pages without frameworks/libraries li
 - git and basic understanding of gitflow;
 - SPA-assemble.
 
+## Plugins to work
+
+The project works with node@14.16.1, npm@8.1.0, git@2.34 and jquery@3.3.1.
+
 ## Used technologies and libraries
 
 - Templating: `Pug`
