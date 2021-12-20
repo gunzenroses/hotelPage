@@ -36,7 +36,7 @@ export default class ButtonLike {
   }
 
   makePopularClass() {
-    this.likeButton.classList.add('button-like_popular');
-    this.heart.classList.add('button-like__heart_popular');
+    this.likeButton.classList.add('js-button-like_popular');
+    this.heart.classList.add('js-button-like__heart_popular');
   }
 }

@@ -6,15 +6,6 @@
     @include buttonLikeBefore();
   }
 
-  &_popular {
-    @include buttonLike();
-    background: $linearGradientLilac;
-
-    &::before {
-      @include buttonLikeBefore();
-    }
-  }
-
   &__number {
     @include absoluteTopRight(56%, 35%);
     font-size: 0.7em;
@@ -35,9 +26,18 @@
     @include buttonLikeHeart();
     background-image: url('@~Components/button-like/button-like__heart-regular.svg');
   }
+}
 
-  &__heart_popular {
-    @include buttonLikeHeart();
-    background-image: url('@~Components/button-like/button-like__heart-active.svg');
+.js-button-like_popular {
+  @include buttonLike();
+  background: $linearGradientLilac;
+
+  &::before {
+    @include buttonLikeBefore();
   }
+}
+
+.js-button-like__heart_popular {
+  @include buttonLikeHeart();
+  background-image: url('@~Components/button-like/button-like__heart-active.svg');
 }

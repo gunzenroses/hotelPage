@@ -81,9 +81,9 @@ export default class DropdownGuests {
 
   activateMinus(i) {
     if (this.data[i] > 0) {
-      this.dropdownMinuses[i].classList.remove('button_disabled');
+      this.dropdownMinuses[i].classList.remove('js-button_disabled');
     } else {
-      this.dropdownMinuses[i].classList.add('button_disabled');
+      this.dropdownMinuses[i].classList.add('js-button_disabled');
     }
   }
 
@@ -100,12 +100,12 @@ export default class DropdownGuests {
   }
 
   onZeroGuests() {
-    this.resetButton.classList.remove('button__show');
+    this.resetButton.classList.remove('js-button__show');
     this.infoInput.value = '';
   }
 
   onSomeGuests() {
-    this.resetButton.classList.add('button__show');
+    this.resetButton.classList.add('js-button__show');
     this.render();
   }
 

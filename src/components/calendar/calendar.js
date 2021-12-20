@@ -77,10 +77,10 @@ export default class Calendar {
   // ----------------------------start chooseRange--------------------------------//
 
   chooseRange(e) {
-    const hasPrevDays = e.target.classList.contains('calendar__day_prev');
-    const hasNextDays = e.target.classList.contains('calendar__day_next');
+    const hasPrevDays = e.target.classList.contains('js-calendar__day_prev');
+    const hasNextDays = e.target.classList.contains('js-calendar__day_next');
     const noOtherDays = !hasPrevDays && !hasNextDays;
-    const hasDays = e.target.classList.contains('.calendar__days');
+    const hasDays = e.target.classList.contains('.js-calendar__days');
     const noDays = noOtherDays && !hasDays;
     const afterToday = (new Date(this.year, this.month, +e.target.innerText) > new Date());
     this.examineCheckinCheckout();
@@ -247,7 +247,7 @@ export default class Calendar {
         || this.betweenInOutSameYear(prevDay)
         || this.betweenInOutDiffYears(prevDay)) 
         prevDays += `<div class="calendar__day_ranged_between">${prevDay}</div>`;
-      else prevDays += `<div class="calendar__day_prev">${prevDay}</div>`;
+      else prevDays += `<div class="calendar__day_prev js-calendar__day_prev">${prevDay}</div>`;
     }
     return prevDays;
   }
@@ -454,7 +454,7 @@ export default class Calendar {
       if (this.checkinNextMonth(n, yearCheckin) || this.checkinNextYear(n)) nextDays += `<div class="calendar__day_next_checkin">${n}</div>`;
       else if (this.checkoutNextMonth(n, yearCheckout) || this.checkoutNextYear(n)) nextDays += `<div class="calendar__day_next_checkout">${n}</div>`;
       else if (this.betweenInOutCurrentYear(n, yearCheckin, yearCheckout) || this.betweenInOutNextYear(yearCheckin, yearCheckout)) nextDays += `<div class="calendar__day_ranged_between">${n}</div>`;
-      else nextDays += `<div class="calendar__day_next">${n}</div>`;
+      else nextDays += `<div class="calendar__day_next js-calendar__day_next">${n}</div>`;
     }
     return nextDays;
   }
