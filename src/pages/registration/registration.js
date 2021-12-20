@@ -1,7 +1,8 @@
-import applyClass from 'Main/assets/scripts/applyClass';
-import 'Main/assets/scripts/inputmasks';
+import 'Scripts/inputmasks';
+import applyClass from 'Scripts/applyClass';
+
 import 'Components/card-registration/card-registration';
-import Expand from 'Main/components/expand/Expand';
+import Expand from 'Components/expand/Expand';
 import 'Components/footer/footer';
 
 import './registration.scss';

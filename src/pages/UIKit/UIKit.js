@@ -1,22 +1,22 @@
-import applyClass from 'Main/assets/scripts/applyClass';
-import 'Main/assets/scripts/inputmasks';
+import applyClass from 'Scripts/applyClass';
+import 'Scripts/inputmasks';
 import {
   paginationData1, guestsData1, guestsDataBooking, roomsData1, roomsData2,
-} from 'Main/assets/scripts/my-data';
+} from 'Scripts/my-data';
 
-import ButtonLike from 'Main/components/button-like/ButtonLike';
-import Calendar from 'Main/components/calendar/Calendar';
+import ButtonLike from 'Components/button-like/ButtonLike';
+import Calendar from 'Components/calendar/Calendar';
 import 'Components/card-booking/card-booking';
 import 'Components/card-registration/card-registration';
 import 'Components/card-search/card-search';
 import 'Components/card-singin/card-signin';
-import Expand from 'Main/components/expand/Expand';
+import Expand from 'Components/expand/Expand';
 import DropdownGuests from 'Components/dropdown/_type_guests/dropdown_type_guests';
 import DropdownRooms from 'Components/dropdown/_type_rooms/dropdown_type_rooms';
 import 'Components/footer/footer';
-import ButtonPagination from 'Main/components/pagination/Pagination';
+import Pagination from 'Components/pagination/Pagination';
 import 'Components/range/range';
-import RoomCarousel from 'Main/components/room-carousel/RoomCarousel';
+import RoomCarousel from 'Components/room-carousel/RoomCarousel';
 
 import './UIkit.scss';
 
@@ -34,7 +34,7 @@ window.onload = () => {
     { id: 'dropdown_guests_1', data: guestsData1 },
     { id: 'dropdown_guests_2', data: guestsDataBooking },
   ], DropdownGuests);
-  applyClass([{ id: 'pagination_bar_1', data: paginationData1 }], ButtonPagination);
+  applyClass([{ id: 'pagination_bar_1', data: paginationData1 }], Pagination);
   applyClass([
     { id: 'dropdown_rooms_1', data: roomsData1 },
     { id: 'dropdown_rooms_2', data: roomsData2 },

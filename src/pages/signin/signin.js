@@ -1,8 +1,9 @@
-import applyClass from 'Main/assets/scripts/applyClass';
-import 'Main/assets/scripts/inputmasks';
-import Expand from 'Main/components/expand/Expand';
-import 'Components/footer/footer';
+import applyClass from 'Scripts/applyClass';
+import 'Scripts/inputmasks';
+
+import Expand from 'Components/expand/Expand';
 import 'Components/card-singin/card-signin';
+import 'Components/footer/footer';
 
 import './signin.scss';
 

@@ -1,6 +1,6 @@
 import { paginationData1 } from 'Main/assets/scripts/my-data';
 
-export default class ButtonPagination {
+export default class Pagination {
   constructor(id, data) {
     this.data = data || paginationData1;
     this.num = this.data.currentNum;
