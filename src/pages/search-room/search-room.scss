@@ -185,14 +185,8 @@
   }
 }
 
-.search-room__result > div {
-  @media (max-width: 1300px) {
-    margin-bottom: 25px;
-  }
-}
-
-.search-room__result > .card__room {
-  margin-top: 20px;
+.search-room__card-room {
+  margin-bottom: 20px;
 }
 
 .search-room__pagination {

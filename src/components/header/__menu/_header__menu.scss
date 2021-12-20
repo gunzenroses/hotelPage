@@ -81,7 +81,7 @@
 
 .header__burger-menu::before,
 .header__burger-menu::after,
-.header__burger-menu > span {
+.burger__span {
   content: '';
   position: absolute;
   left: 0;
@@ -98,7 +98,7 @@
   bottom: 0;
 }
 
-.header__burger-menu > span {
+.burger__span {
   top: 9px;
 }
 

@@ -27,5 +27,7 @@ block content
         +card-signin()
       .cards__calendar
         +calendar("calendarSimple")
-      +card-room(room888)
-      +card-room(room840, "creative")
+      .cards__card-room
+        +card-room(room888)
+      .cards__card-room_second
+        +card-room(room840, "creative")
