@@ -19,10 +19,12 @@ mixin footer(theme="main", footerText = "Бронирование номеров
       if theme == "main"
         .footer__copyright_inner
           .copyright__text Copyright © 2018 Toxin отель. Все права защищены.
-          .copyright__social
-            +social-nets
+          .footer__copyright-social
+            .copyright__social
+              +social-nets()
       else
         div(class="footer__copyright" + "_" + theme)
           .copyright__text Copyright © 2018 Toxin отель. Все права защищены.
-          .copyright__social
-           +social-nets
+          .footer__copyright-social
+            .copyright__social
+              +social-nets(theme)
