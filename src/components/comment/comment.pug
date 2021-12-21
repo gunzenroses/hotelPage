@@ -3,7 +3,7 @@ include ../info/info.pug
 
 mixin comment(commentData)
   - var {authorPic="", authorName="Anonymous", commentTime=Data().getDay(), buttonLikeId, buttonNumber=0, commentText="none"} = commentData
-  article.comment
+  comment
     .comment__head
       img(src=authorPic alt="profile picture").comment__pic
       +info(authorName, commentTime)
