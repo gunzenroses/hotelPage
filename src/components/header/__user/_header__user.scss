@@ -12,14 +12,6 @@
   }
 }
 
-.header__buttons .button_type_link_colored::before {
-  content: "Зарегистрироваться";
-
-  @media (max-width: 550px) {
-    content: 'Регистрация';
-  }
-}
-
 .header__signin {
   @include containerBlock(87px, 34px);
   line-height: 30px;

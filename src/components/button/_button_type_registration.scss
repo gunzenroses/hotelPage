@@ -8,11 +8,11 @@
     color: $light;
   
   &::before {
-    content: "Зарегистрироваться";
+    content: 'Зарегистрироваться';
     color: $light;
   
     @media (max-width: 550px) {
-      content: "Регистрация";
+      content: 'Регистрация';
     }
   }
 }
