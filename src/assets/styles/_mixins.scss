@@ -267,7 +267,6 @@
 }
 
 @mixin dropdownItem {
-  @include isFlex($justify: flex-start);
   height: 30px;
   width: 100%;
   margin-top: 7px;
