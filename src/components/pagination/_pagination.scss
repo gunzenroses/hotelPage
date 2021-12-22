@@ -28,11 +28,11 @@
   &__info {
     width: fit-content;
     height: 23px;
-    line-height: 16px;
     margin: 0 auto;
+    line-height: 16px;
     font-size: $fs_base;
-    text-align: left;
     letter-spacing: .0001em;
+    text-align: left;
     pointer-events: none;
   }
 }

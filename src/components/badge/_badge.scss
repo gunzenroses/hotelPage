@@ -2,8 +2,8 @@
   @include isFlex($justify: start);
   width: 280px;
   height: 69px;
-  padding-bottom: 19px;
   border-bottom: 1px solid $dark-shade_few;
+  padding-bottom: 19px;
   font-size: 13.5px;
   letter-spacing: .02em;
   pointer-events: none;

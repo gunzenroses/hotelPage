@@ -2,8 +2,6 @@
 @import '@~Components/bullet-checkbox/bullet-checkbox';
 @import '@~Components/chart-donut/chart-donut';
 
-/* Main container */
-
 .room-details {
   @include containerWithMargins(
     $width: 1440px,

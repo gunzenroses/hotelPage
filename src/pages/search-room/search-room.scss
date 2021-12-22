@@ -1,6 +1,5 @@
 @import 'Styles/main';
 
-/* Main container */
 .search-room {
   @include containerWithMargins(
     $width: 1440px,
@@ -29,8 +28,8 @@
 .search-room__content {
   @include isFlex();
   position: relative;
+  width: calc(100% - 284px);
   height: 1262px;
-  width: calc(100% - 280px);
   min-width: 320px;
   margin: 26px 144px 68px 140px;
   overflow: auto; //to avoid margin-collapse
@@ -38,6 +37,7 @@
 
   @media (min-width: 1500px) and (max-width: 1920px) {
     margin-bottom: 27px;
+    justify-content: space-around;
   }
 
   @media (max-width: 1400px) {
@@ -64,8 +64,6 @@
   margin-top: 6px;
 
   @media (min-width: 1500px) and (max-width: 1920px) {
-    width: 30%;
-    max-width: 400px;
     height: fit-content;
   }
 
@@ -201,8 +199,6 @@
     margin: 41px auto 0;
   }
 }
-
-/* filter group inner containers */
 
 .filter-group {
   @media (max-width: 700px) {

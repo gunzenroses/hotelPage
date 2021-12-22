@@ -68,13 +68,13 @@
 
 .dropdown__item {
   @include dropdownItem();
+  @include isFlex($justify: flex-start);
   padding-left: 14px;
 }
 
 .dropdown__buttons {
   @include dropdownItem();
-  justify-content: space-between;
-  flex-direction: row-reverse;
+  @include isFlex($justify: space-between, $direction: row-reverse);
   margin-top: 19px;
   padding-left: 13px;
 }
@@ -178,6 +178,7 @@
 
 .dropdown__item_last {
   @include dropdownItem();
+  @include isFlex($justify: flex-start);
   margin-bottom: 3px;
   padding-left: 14px;
 }

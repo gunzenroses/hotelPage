@@ -110,15 +110,15 @@
 
 .form-elements__container_date-range_common {
   @include containerMedium();
-  height: 62px;
   width: 266px;
+  height: 62px;
   margin-top: 43px;
 }
 
 .form-elements__container_subscibe {
   @include containerMedium();
-  height: 62px;
   width: 266px;
+  height: 62px;
   margin-top: 43px;
 }
 
@@ -377,8 +377,8 @@
 }
 
 .form-elements__container_badge {
-  height: fit-content;
   width: 100%;
+  height: fit-content;
   margin-top: 20px;
 }
 
