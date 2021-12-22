@@ -1,7 +1,7 @@
 mixin rich-checkbox__item(checkboxName, checkboxValue, checkboxTitle, checkboxSubtitle, checkboxSubtitle2)
   label.rich-checkbox__item
-    input(type="checkbox" name=checkboxName value=checkboxValue).checkbox__real
-    span.checkbox-expand__fake
+    input(type="checkbox" name=checkboxName value=checkboxValue).rich-checkbox__real
+    span.rich-checkbox__fake
     span.rich-checkbox__form
       span.rich-checkbox__title!= checkboxTitle
       span.rich-checkbox__description!= checkboxSubtitle

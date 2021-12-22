@@ -1,44 +1,73 @@
-.rich-checkbox {
-  &__item{
-    @include isFlex($justify: flex-start);
-    width: 100%;
-    height: fit-content;
-    cursor: pointer;
+.rich-checkbox__item{
+  @include isFlex($justify: flex-start);
+  width: 100%;
+  height: fit-content;
+  cursor: pointer;
+}
+
+.rich-checkbox__form {
+  @include isFlex($direction: column, $justify: flex-start);
+  min-width: 223px;
+  max-width: 350px;
+  height: fit-content;
+
+  @media (min-width: 1750px) and (max-width: 1920px) {
+    width: calc(100% - 50px);
   }
+}
 
-  &__form {
-    @include isFlex($direction: column, $justify: flex-start);
-    min-width: 223px;
-    max-width: 350px;
-    height: fit-content;
+.rich-checkbox__title {
+  margin-top: 1px;
+  line-height: 18px;
+  font-size: $fs_base;
+  letter-spacing: 0.0001em;
+  font-weight: 700;
+  color: $dark-shade_more;
+}
 
-    @media (min-width: 1750px) and (max-width: 1920px) {
-      width: calc(100% - 50px);
-    }
-  }
+.rich-checkbox__description {
+  height: fit-content;
+  margin-top: 5px;
+  font-size: $fs_h3;
+  line-height: 15px;
+  font-weight: 400;
+  letter-spacing: 0.0001em;
+  color: $dark-shade_medium;
 
-  &__title {
-    margin-top: 1px;
-    line-height: 18px;
+  @media (min-width: 1750px) and (max-width: 1920px) {
+    line-height: $fs_h2;
     font-size: $fs_base;
-    letter-spacing: 0.0001em;
-    font-weight: 700;
-    color: $dark-shade_more;
   }
+}
 
-  &__description {
-    height: fit-content;
-    margin-top: 5px;
-    font-size: $fs_h3;
-    line-height: 15px;
-    font-weight: 400;
-    letter-spacing: 0.0001em;
-    color: $dark-shade_medium;
+.rich-checkbox__real {
+  @include containerBlock(20px, 20px);
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  appearance: none;
 
-    @media (min-width: 1750px) and (max-width: 1920px) {
-      line-height: $fs_h2;
-      font-size: $fs_base;
-    }
+  @media (min-width: 1750px) and (max-width: 1920px) {
+    @include containerBlock(25px, 25px);
+  }
+}
+
+.rich-checkbox__fake {
+  @include checkboxFake();
+  margin-right: 10px;
+}
+
+
+.rich-checkbox__real:checked ~ .rich-checkbox__fake {
+  @extend .rich-checkbox__fake;
+  border-color: $purple;
+}
+
+.rich-checkbox__real:checked + .rich-checkbox__fake::before {
+  @include checkboxFakeBefore();
+
+  @media (min-width: 1650px) and (max-width: 1920px) {
+    @include containerBlock(5px, 10px);
   }
 }
 
