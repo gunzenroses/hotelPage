@@ -8,13 +8,13 @@
 }
 
 .fa-twitter,
+.fa-twitter_creative,
 .fa-instagram,
-.fa-instagram_landing,
+.fa-instagram_creative,
 .fa-instagram_in-search,
 .fa-instagram_in-details,
 .fa-instagram_in-registration,
 .fa-facebook-square_creative,
-.fa-facebook-square_landing,
 .fa-facebook-square_in-search,
 .fa-facebook-square_in-details,
 .fa-facebook-square_in-registration,
@@ -28,7 +28,9 @@
   height: 23px;
 }
 
+.fa-facebook-square_landing,
 .fa-facebook-square_in-signin,
+.fa-instagram_landing,
 .fa-instagram_in-signin {
   height: 25px;
 }
@@ -43,6 +45,7 @@
 }
 
 .fa-twitter::before,
+.fa-twitter_creative::before,
 .fa-twitter_landing::before,
 .fa-twitter_in-search::before,
 .fa-twitter_in-details::before,
@@ -56,6 +59,7 @@
 .fa-facebook-square_in-registration::before,
 .fa-facebook-square_in-signin::before,
 .fa-instagram::before,
+.fa-instagram_creative::before,
 .fa-instagram_landing::before,
 .fa-instagram_in-search::before,
 .fa-instagram_in-details::before,
@@ -76,6 +80,7 @@
 }
 
 .fa-twitter::before,
+.fa-twitter_creative::before,
 .fa-twitter_landing::before,
 .fa-twitter_in-search::before,
 .fa-twitter_in-details::before,
@@ -98,6 +103,7 @@
 
 
 .fa-instagram::before,
+.fa-instagram_creative::before,
 .fa-instagram_landing::before,
 .fa-instagram_in-search::before,
 .fa-instagram_in-details::before,
