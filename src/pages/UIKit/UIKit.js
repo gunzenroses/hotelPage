@@ -3,7 +3,6 @@ import 'Scripts/inputmasks';
 import {
   paginationData1, guestsData1, guestsDataBooking, roomsData1, roomsData2,
 } from 'Scripts/my-data';
-
 import ButtonLike from 'Components/button-like/ButtonLike';
 import Calendar from 'Components/calendar/Calendar';
 import 'Components/card-booking/card-booking';

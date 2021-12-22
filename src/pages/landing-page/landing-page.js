@@ -1,6 +1,5 @@
 import 'Scripts/inputmasks';
 import applyClass from 'Scripts/applyClass';
-
 import Expand from 'Components/expand/Expand';
 import 'Components/card-search/card-search';
 import 'Components/footer/footer';

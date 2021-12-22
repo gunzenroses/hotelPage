@@ -1,6 +1,5 @@
 import 'Scripts/inputmasks';
 import applyClass from 'Scripts/applyClass';
-
 import ButtonLike from 'Components/button-like/ButtonLike';
 import 'Components/card-booking/card-booking';
 import Expand from 'Components/expand/Expand';
