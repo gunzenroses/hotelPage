@@ -1,8 +1,12 @@
 .button-submit {
   @include containerBlock($w: 100%, $h: 44px);
   @include buttonLink();
+  border: none;
+  padding: 0;
   font-size: .85rem;
   color: $light;
+  background-color: transparent;
+  outline: none;
   
   &::before {
     @include arrowSubmit();
@@ -19,8 +23,12 @@
 .button-submit_compact {
   @include containerBlock($w: 100%, $h: 44px);
   @include buttonLink();
+  border: none;
+  padding: 0;
   font-size: .85rem;
   color: $light;
+  background-color: transparent;
+  outline: none;
 
   &::before {
     @include arrowSubmit();

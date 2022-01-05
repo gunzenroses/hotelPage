@@ -289,6 +289,13 @@
   z-index: 2;
 }
 
+@mixin fieldset {
+  appearance: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
 @mixin footerMixin {
   @include isFlex($align: flex-start);
   @include containerSimple(1164px, 24px);
@@ -337,6 +344,29 @@
   }
 }
 
+@mixin headerFirst {
+  margin: 0;
+  font-size: $fs_h1;
+  font-weight: 700;
+  color: $dark-shade_most;
+}
+
+@mixin headerSecond {
+  margin: 0;
+  line-height: 16.963rem;
+  font-size: $fs_h2;
+  font-weight: 700;
+  color: $dark-shade_most;
+}
+
+@mixin headerThird {
+  margin: 0;
+  font-size: $fs_h3;
+  font-weight: 700;
+  color: $dark-shade_most;
+  text-transform: uppercase;
+}
+
 @mixin headerMixin {
   @include isFlex($align: center);
   @include containerDimed();
@@ -366,11 +396,17 @@
   }
 }
 
+@mixin input {
+  width: 95%;
+  height: 90%;
+  appearance: none;
+  background: transparent;
+  border: none;
+}
+
 @mixin labelMixin {
   display: inline-block;
   height: 15px;
-  font-weight: 700;
-  text-transform: uppercase;
   letter-spacing: .003em;
   pointer-events: none;
 

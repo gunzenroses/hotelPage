@@ -1,9 +1,6 @@
-@import './normalize';
-
 * {
   box-sizing: border-box;
   outline: none;
-  flex-shrink: 0;
 }
 
 $fs_base: 14px;   //1rem
@@ -24,99 +21,6 @@ body {
   color: $dark-shade_more;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-  color: $dark-shade_most;
-}
-
-h1 {
-  line-height: 2.142rem;
-  font-size: $fs_h1;
-  font-weight: 700;
-}
-
-h2 {
-  line-height: 16.963rem;
-  font-size: $fs_h2;
-  font-weight: 700;
-}
-
-h3 {
-  line-height: 1.045rem;
-  font-size: $fs_h3;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-a {
-  text-decoration: none;
-}
-
-p {
-  margin: 0;
-  font-size: $fs_base;
-  font-weight: 400;
-  line-height: $fs_h1;
-  color: $dark-shade_more;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-li {
-  list-style: none;
-}
-
-img {
-  @include containerBlock(100%, auto);
-  border: none;
-}
-
-figure {
-  margin: 0;
-}
-
-button {
-  padding: 0;
-  border: none;
-  outline: none;
-  background-color: transparent;
-}
-
-fieldset {
-  appearance: none;
-  margin: 0;
-  padding: 0;
-  border: none;
-}
-
-input {
-  width: 95%;
-  height: 90%;
-  appearance: none;
-  background: transparent;
-  border: none;
-}
-
-select {
-  background-repeat: no-repeat;
-  background-color: $light;
-  background-position: right 13px center;
-  padding-right: 30px;
-}
-
-::placeholder {
-  /* Most modern browsers support this now. */
-  color: $dark-shade_less;
-}
-
 .container_small {
   @include isFlex($direction: column);
   width: 150px;
@@ -135,27 +39,18 @@ select {
 
 .label {
   @include labelMixin();
+  @include headerThird();
   line-height: $fs_h3;
-  font-size: $fs_h3;
 
   &_right {
     @include labelMixin();
+    @include headerThird();
     position: absolute;
     right: 0;
     line-height: $fs_h3;
-    font-size: $fs_h3;
     font-weight: 400;
-    color: $dark-shade_medium;
     text-align: right;
   }
-}
-
-.error {
-  position: relative;
-  display: block;
-  height: fit-content;
-  font-size: $fs_h3;
-  color: $error;
 }
 
 .maretial-icon {
@@ -192,11 +87,19 @@ select {
 
 .uikit-logo {
   @include absoluteTopLeft(30px, 30px);
-  width: 48px;
-  height: 48px;
+  @include containerSimple(48px, 48px);
+  border: none;
 
   @media (max-width: 750px) {
     top: 10px;
     left: 10px;
   }
+}
+
+.error {
+  position: relative;
+  display: block;
+  height: fit-content;
+  font-size: $fs_h3;
+  color: $error;
 }

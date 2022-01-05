@@ -44,16 +44,16 @@ mixin donutChart(cData={})
         p.donut__number!= totalData
         p.donut__label голосов
     figcaption.donut__caption
-      ul.donut-key-list(aria-hidden="true" role="presentation")
-        li
+      ul.donut-key__list(aria-hidden="true" role="presentation")
+        li.donut-key__item
           span.li_circle.excellent
           | Великолепно
-        li
+        li.donut-key__item
           span.li_circle.good
           | Хорошо
-        li
+        li.donut-key__item
           span.li_circle.satisfied
           | Удовлетворительно
-        li
+        li.donut-key__item
           span.li_circle.disappointed
           | Разочарован

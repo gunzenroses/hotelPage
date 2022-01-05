@@ -20,6 +20,7 @@
   padding-right: 3px;
   font-size: 0.82rem;
   color: $light;
+  text-decoration: none;
 }
 
 .button-link_type_registration {
@@ -30,6 +31,7 @@
   font-size: 0.82rem;
   letter-spacing: .03em;
   color: $light;
+  text-decoration: none;
 
   &::before {
     content: 'Зарегистрироваться';
@@ -51,4 +53,5 @@
   border-radius: 22px;
   background: $light;
   color: $purple;
+  text-decoration: none;
 }

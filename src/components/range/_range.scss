@@ -8,10 +8,10 @@
 
 .range__label {
   @include labelMixin();
+  @include headerThird();
   margin-top: 2px;
   margin-bottom: 1.5px;
   line-height: $fs_h3;
-  font-size: $fs_h3;
   letter-spacing: .001em;
 }
 
@@ -27,7 +27,7 @@
   font-weight: 400;
   color: $dark-shade_medium;
   text-align: right;
-
+  text-transform: uppercase;
 }
 
 .range__info {

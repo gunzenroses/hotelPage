@@ -1,7 +1,7 @@
 include ../__user/header__user_signed.pug
 include ../__user/header__user_unsigned.pug
 include ../../navlink/navlink.pug
-include ../../navlink/navlink_dropdown.pug
+include ../../navlink-dropdown/navlink-dropdown.pug
 
 mixin header__menu(user="")
   .header__menu
@@ -10,10 +10,10 @@ mixin header__menu(user="")
     nav.header__dropdown.js-expand__content
       ul.header__navbar_dropdown
         +navlink("О нас", buttonOnclick="./some-address")
-        +navlink_dropdown("Услуги")
+        +navlink-dropdown("Услуги")
         +navlink("Вакансии", buttonOnclick="./some-address")
         +navlink("Новости", buttonOnclick="./some-address")
-        +navlink_dropdown("Соглашения")
+        +navlink-dropdown("Соглашения")
     if user
       +header__user_signed(user, buttonOnclick="./some-address")
     else
@@ -21,7 +21,7 @@ mixin header__menu(user="")
     nav.header__navbar-region
       ul.header__navbar
         +navlink("О нас", buttonOnclick="./some-address")
-        +navlink_dropdown("Услуги")
+        +navlink-dropdown("Услуги")
         +navlink("Вакансии", buttonOnclick="./some-address")
         +navlink("Новости", buttonOnclick="./some-address")
-        +navlink_dropdown("Соглашения")
+        +navlink-dropdown("Соглашения")

@@ -152,6 +152,8 @@
   line-height: $fs_h3;
   font-size: $fs_h3;
   letter-spacing: .0001em;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .form-elements__container_toggle {
@@ -166,6 +168,8 @@
   font-size: .83rem;
   line-height: $fs_h3;
   letter-spacing: .0001em;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .form-elements__group_toggle {
@@ -194,8 +198,9 @@
 
 .form-element__label_button-rate {
   @include labelMixin();
+  @include headerThird();
   line-height: $fs_h3;
-  font-size: $fs_h3;
+  line-height: 1.045rem;
 }
 
 
@@ -232,9 +237,9 @@
 
 .form-elements__label_buttons {
   @include labelMixin();
+  @include headerThird();
   margin-bottom: 3.5px;
   line-height: $fs_h3;
-  font-size: $fs_h3;
 }
 
 .form-elements__row_buttons-link {

@@ -1,16 +1,16 @@
 mixin social-nets(theme = "")
   if theme == ""
     span.fab.fa-twitter
-      a(href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer")
+      a(href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer").social-nets
     span.fab.fa-facebook-square
-      a(href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer")
+      a(href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer").social-nets
     span.fab.fa-instagram
-      a(href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer")
+      a(href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer").social-nets
   else
     span.fab(class="fa-twitter" + "_" + theme)
-      a(href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer")
+      a(href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer").social-nets
     span.fab(class="fa-facebook-square" + "_" + theme)
-      a(href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer")
+      a(href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer").social-nets
     span.fab(class="fa-instagram" + "_" + theme)
-      a(href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer")
+      a(href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer").social-nets
   
