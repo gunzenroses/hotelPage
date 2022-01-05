@@ -30,3 +30,13 @@
   font-family: $material-icons;
   color: $dark-shade_medium;
 }
+
+.navlink__button {
+  display: inline-block;
+  position: relative;
+  line-height: 20px;
+  font-size: $fs_base;
+  font-weight: 400;
+  color: $dark-shade_medium;
+  text-decoration: none;
+}
