@@ -21,8 +21,8 @@
 
 .date-range__label {
   @include labelMixin();
+  @include headerThird();
   line-height: $fs_h3;
-  font-size: $fs_h3;
   letter-spacing: 0.002em;
 }
 
@@ -36,6 +36,7 @@
 }
 
 .date-range__input {
+  @include input();
   font-size: 14px;
   letter-spacing: .0001em;
 

@@ -141,10 +141,8 @@
 }
 
 .search-room__text {
+  @include headerFirst();
   line-height: 37px;
-  font-size: $fs_h1;
-  font-weight: 700;
-  color: $dark-shade_most;
   letter-spacing: 0.0001em;
 
   @media (max-width: 1070px) {

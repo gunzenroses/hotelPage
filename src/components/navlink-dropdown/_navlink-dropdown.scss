@@ -1,4 +1,20 @@
-.navlink__content {
+.navlink-dropdown {
+  display: inline-block;
+  position: relative;
+  height: 18px;
+  line-height: 20px;
+  font-size: $fs_base;
+  font-weight: 400;
+  color: $dark-shade_medium;
+  list-style: none;
+  cursor: pointer;
+
+  @media (min-width: 1750px) and (max-width: 1920px){
+    width: fit-content;
+  }
+}
+
+.navlink-dropdown__content {
   @include containerDimed();
   position: absolute;
   top: 20px;
@@ -7,7 +23,7 @@
   z-index: 3;
 }
 
-.navlink__init {
+.navlink-dropdown__init {
   @include isFlex($direction: row-reverse);
   height: 18px;
   line-height: 18px;
@@ -16,14 +32,14 @@
   color: $dark-shade_medium;
 }
 
-.navlink__icon {
+.navlink-dropdown__icon {
   position: relative;
   width: 24px;
   height: 18px;
   line-height: 22px;
 }
 
-.navlink__icon::before {
+.navlink-dropdown__icon::before {
   content: '\e5cf';
   position: absolute;
   font-size: $fs_h1;
@@ -31,7 +47,7 @@
   color: $dark-shade_medium;
 }
 
-.navlink__button {
+.navlink-dropdown__button {
   display: inline-block;
   position: relative;
   line-height: 20px;

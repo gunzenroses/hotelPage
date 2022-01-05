@@ -1,6 +1,5 @@
 /* Base */
 @import './fonts';
-@import './normalize';
 
 /* Utils */
 @import './mixins';
@@ -35,7 +34,7 @@
 @import '@~Components/info/info';
 @import '@~Components/logo/logo';
 @import '@~Components/navlink/navlink';
-@import '@~Components/navlink/navlink_dropdown';
+@import '@~Components/navlink-dropdown/navlink-dropdown';
 @import '@~Components/textfield/textfield';
 @import '@~Components/textfield/textfield_type_birthday';
 @import '@~Components/textfield/textfield_type_login';

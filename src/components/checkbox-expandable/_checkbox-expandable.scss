@@ -11,9 +11,10 @@
 }
 
 .checkbox-expand__content {
-  margin-top: 3px;
+  @include fieldset();
   height: 171px;
   width: 266px;
+  margin-top: 3px;
 
   @media (min-width: 1650px) and (max-width: 1920px) {
     width: 100%;

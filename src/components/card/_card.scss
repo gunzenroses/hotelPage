@@ -1,10 +1,10 @@
 .card__title {
+  @include headerFirst();
   width: 100%;
   min-height: 30px;
   margin-left: 0px;
   line-height: 29px;
   letter-spacing: 0.001em;
-  font-size: $fs_h1;
   text-align: left;
   pointer-events: none;
 

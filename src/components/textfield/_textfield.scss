@@ -46,6 +46,7 @@
   @include containerSize(44px);
   font-size: 1.8rem;
   border: none;
+  padding: 0;
   text-align: center;
   font-family: $material-icons;
   color: transparent;
@@ -58,4 +59,12 @@
   @include isFlex($direction: column);
   @include widget();
   height: 100%;
+}
+
+.textfield__input {
+  @include input();
+
+  ::placeholder {
+    color: $dark-shade_less;
+  }
 }

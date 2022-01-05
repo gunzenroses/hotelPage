@@ -216,6 +216,7 @@
     position: absolute;
     top: 20px;
     width: 200px;
+    margin: 0;
     padding: 10px 15px;
     line-height: 18px;
     z-index: 2;
@@ -223,6 +224,8 @@
 }
 
 .footer__title {
+  @include headerThird();
+  line-height: 1.045rem;
   letter-spacing: .001em;
 
   @media (max-width: 470px) {
@@ -334,7 +337,8 @@
   @include isFlex($direction: column, $align: flex-start, $justify: start);
   width: 100%;
   height: 150px;
-  margin-top: 20px;
+  margin: 20px 0 0;
+  padding: 0;
 }
 
 .footer__copyright {

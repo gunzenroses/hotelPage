@@ -114,12 +114,17 @@
   
   &__button-reset,
   &__button-submit {
+    padding: 0;
+    border: none;
     font-size: $fs_h3;
     font-weight: 700;
     font-family: Montserrat;
     text-transform: uppercase;
     color: $purple;
+    background-color: transparent;
     cursor: pointer;
+    outline: none;
+    
   
     @media (min-width: 1750px) and (max-width: 1920px) {
       font-size: $fs_base;
