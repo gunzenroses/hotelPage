@@ -189,6 +189,11 @@
   }
 }
 
+.form-elements__row {
+  @include isFlex;
+  width: 100%;
+}
+
 .form-elements__container_button-rate {
   @include isFlex($direction: column);
   width: 100%;

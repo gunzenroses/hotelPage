@@ -1,5 +1,5 @@
 .navlink-dropdown {
-  display: inline-block;
+  @include isFlex($direction: column-reverse);
   position: relative;
   height: 18px;
   line-height: 20px;
