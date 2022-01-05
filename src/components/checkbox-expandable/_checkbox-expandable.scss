@@ -10,6 +10,17 @@
   }
 }
 
+.checkbox-expand__dropdown {
+  @include isFlex($direction: column-reverse);
+  position: relative;
+  width: inherit;
+  user-select: none;
+
+  @media (min-width: 1650px) and (max-width: 1920px) {
+    width: 100%;
+  }
+}
+
 .checkbox-expand__content {
   @include fieldset();
   height: 171px;
