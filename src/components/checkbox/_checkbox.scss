@@ -1,3 +1,5 @@
+@import './__item/checkbox__item';
+
 .checkbox__container {
   @include isFlex($direction: column);
   width: 224px;

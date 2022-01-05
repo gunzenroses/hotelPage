@@ -1,3 +1,5 @@
+@import './__item/rich-checkbox__item';
+
 .rich-checkbox {
   &__container {
     @include isFlex($direction: column);

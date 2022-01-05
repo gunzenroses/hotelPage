@@ -1,3 +1,5 @@
+@import './__item/checkbox-expandable__item';
+
 .checkbox-expand__container {
   @include widget();
   @include containerMedium();

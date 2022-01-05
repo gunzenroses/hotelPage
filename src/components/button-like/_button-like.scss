@@ -24,7 +24,7 @@
 
   &__heart {
     @include buttonLikeHeart();
-    background-image: url('@~Components/button-like/button-like__heart-regular.svg');
+    background-image: url('@~Components/button-like/__heart/_regular/button-like__heart_regular.svg');
   }
 }
 
@@ -39,5 +39,5 @@
 
 .js-button-like__heart_popular {
   @include buttonLikeHeart();
-  background-image: url('@~Components/button-like/button-like__heart-active.svg');
+  background-image: url('@~Components/button-like/__heart/_active/button-like__heart_active.svg');
 }
