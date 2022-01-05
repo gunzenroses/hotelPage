@@ -44,17 +44,13 @@
   overflow: hidden;
 
   @media (max-width: 1920px) and (min-width: 1441px) {
-    height: auto;
+    height: calc(485 / 1440 * 100vw);
   }
 
   @media (max-width: 970px) {
     @include isFlex($direction: column);
     height: fit-content;
   }
-}
-
-.room-datails__title {
-  display: none;
 }
 
 .room-details__view_main {
@@ -76,7 +72,12 @@
   }
 }
 
+.room-details__heading {
+  display: none;
+}
+
 .room-details__view_miniature {
+  @include isFlex($direction: column);
   width: 459px;
   height: 100%;
   overflow: hidden;
@@ -90,10 +91,9 @@
   }
 
   @media (max-width: 970px) {
-    @include isFlex();
+    flex-direction: row;
     width: 100%;
     height: fit-content;
-    margin-top: -1px;
   }
 
   @media (max-width: 450px) {
@@ -336,6 +336,7 @@
 }
 
 .room-details__rules-title {
+  @include headerSecond();
   margin-left: 20px;
 
   @media (max-width: 650px) {
@@ -368,6 +369,7 @@
 }
 
 .room-details__title {
+  @include headerSecond();
   line-height: 22px;
   font-weight: 700;
   color: $dark-shade_most;
