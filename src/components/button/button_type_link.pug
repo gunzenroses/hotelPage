@@ -1,9 +1,0 @@
-mixin button_type_link(buttonText, buttonOnclick="./some-address", className = "")
-  if className == ""
-    div(class="button_type_link")
-      a(class="button_type_link_inner" href= buttonOnclick)= buttonText
-  else if className == "colored"
-    a(class="button_type_link_colored" href= buttonOnclick)= buttonText
-  else
-    div(class="button_type_link" + "_" + className)
-      a(class="button_type_link_inner" href= buttonOnclick)= buttonText

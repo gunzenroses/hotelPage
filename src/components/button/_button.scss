@@ -1,4 +1,4 @@
-.button_type_basic {
+.button {
   min-width: 66px;
   height: 15px;
   line-height: .84rem;
@@ -9,8 +9,8 @@
   text-transform: uppercase;
 }
 
-.button_type_basic:hover,
-.button_type_basic:active {
+.button:hover,
+.button:active {
   color: $dark-shade_medium;
   cursor: pointer;
 }

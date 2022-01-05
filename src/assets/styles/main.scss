@@ -11,10 +11,9 @@
 
 /* Components */
 @import '@~Components/badge/badge';
-@import '@~Components/button/button_type_link';
-@import '@~Components/button/button_type_registration';
-@import '@~Components/button/button_type_submit';
-@import '@~Components/button/button_type_basic';
+@import '@~Components/button-link/button-link';
+@import '@~Components/button-submit/button-submit';
+@import '@~Components/button/button';
 @import '@~Components/button-like/button-like';
 @import '@~Components/button-rate/button-rate';
 @import '@~Components/button-toggle/button-toggle';

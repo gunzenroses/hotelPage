@@ -19,12 +19,12 @@
 .card-registration__birthday,
 .card-registration__login,
 .card-registration__name,
-.card-registration__button_type_submit,
+.card-registration__button-submit,
 .card-registration__info {
   width: 100%;
 }
 
-.card-registration__button_type_link {
+.card-registration__button-link {
   @include containerBlock(99px, 44px);
   line-height: 40px;
 }
@@ -56,7 +56,7 @@
   margin-top: 10px;
 }
 
-.card-registration__button_type_submit {
+.card-registration__button-submit {
   margin-top: 20px;
 }
 

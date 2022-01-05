@@ -1,6 +1,6 @@
 include ../date-range/date-range_separate.pug
 include ../dropdown/_type_guests/dropdown_type_guests.pug
-include ../button/button_type_submit.pug
+include ../button-submit/button-submit.pug
 
 mixin card-search()
   form.card-search(method="get" action="./search-room.html")
@@ -10,4 +10,4 @@ mixin card-search()
     .card-search__guests
       +dropdown_type_guests("Гости", "dropdown_guests_search", "", "dropdownGuestsInput_3")
     .card-search__button
-      +button_type_submit("Подобрать номер", "room_search.html")
+      +button-submit("Подобрать номер", "room_search.html")

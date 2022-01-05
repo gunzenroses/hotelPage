@@ -21,7 +21,7 @@ export default class DropdownGuests {
     this.dropdownItems = Array.from(this.container.querySelectorAll('.js-dropdown__item'));
     this.dropdownMinuses = this.container.querySelectorAll('.js-dropdown__minus');
     this.resetButton = this.dropdownExpanded.querySelector('.js-dropdown__button_type_reset');
-    this.submitButton = this.dropdownExpanded.querySelector('.js-dropdown__button_type_submit');
+    this.submitButton = this.dropdownExpanded.querySelector('.js-dropdown__button-submit');
   }
 
   enableHandlers() {

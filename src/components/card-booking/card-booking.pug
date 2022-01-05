@@ -2,7 +2,7 @@ include ./card-booking__room-info.pug
 include ./card-booking__price-info.pug
 include ../date-range/date-range_separate.pug
 include ../dropdown/_type_guests/dropdown_type_guests.pug
-include ../button/button_type_submit.pug
+include ../button-submit/button-submit.pug
 
 mixin card-booking(serviceName, serviceStyle, theme="")
   form.card-booking(method="get" action="./search-room.html")
@@ -32,4 +32,4 @@ mixin card-booking(serviceName, serviceStyle, theme="")
             .card-booking__line
           .card-booking__price_total 38 081₽
     .card-booking__button
-      +button_type_submit("Забронировать")
+      +button-submit("Забронировать")

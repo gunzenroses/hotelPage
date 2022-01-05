@@ -2,8 +2,8 @@ include ../textfield/__container/textfield__container_type_birthday.pug
 include ../textfield/__container/textfield__container_type_login.pug
 include ../textfield/textfield_type_name.pug
 include ../textfield/textfield_type_surname.pug
-include ../button/button_type_submit.pug
-include ../button/button_type_link.pug
+include ../button-submit/button-submit.pug
+include ../button-link/button-link.pug
 include ../buttons-radio/buttons-radio.pug
 include ../button-toggle/button-toggle.pug
 
@@ -22,10 +22,10 @@ mixin card-registration(submitText)
       +textfield__container_type_login("Данные для входа в сервис", "")
     .card-registration__specials
       +button-toggle("special offers", false)
-    .card-registration__button_type_submit
-      +button_type_submit(submitText)
+    .card-registration__button-submit
+      +button-submit(submitText)
     .card-registration__info
       .card__row
         .card__text Уже есть аккаунт на Toxin
-        .card-registration__button_type_link
-          +button_type_link("Войти", "signin.html", "signin")
+        .card-registration__button-link
+          +button-link("Войти", "signin.html", "signin")

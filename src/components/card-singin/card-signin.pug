@@ -1,16 +1,16 @@
 include ../textfield/textfield.pug
 include ../textfield/textfield_type_login.pug
-include ../button/button_type_link.pug
-include ../button/button_type_submit.pug
+include ../button-link/button-link.pug
+include ../button-submit/button-submit.pug
 
 mixin card-signin(theme="main")
   form.card-signin.js-card-signin(method="get" action="./signin.html")
     h1.card__title Войти
     +textfield_type_login(theme)
     .card-signin__button
-      +button_type_submit("Войти")
+      +button-submit("Войти")
     .card-signin__info
       .card__row
         .card__text Нет аккаунта на Toxin?
-        .card-signin__button_type_link
-          +button_type_link("Создать", "registration.html", "signin")
+        .card-signin__button-link
+          +button-link("Создать", "registration.html", "signin")

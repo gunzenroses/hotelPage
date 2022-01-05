@@ -115,7 +115,7 @@
 }
 
 .dropdown__button_type_reset,
-.dropdown__button_type_submit {
+.dropdown__button-submit {
   font-size: $fs_h3;
   font-weight: 700;
   text-transform: uppercase;
@@ -130,7 +130,7 @@
   display: none;
 }
 
-.dropdown__button_type_submit {
+.dropdown__button-submit {
   display: inline-block;
 }
 

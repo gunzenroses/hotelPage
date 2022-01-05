@@ -1,4 +1,4 @@
-.button_type_submit {
+.button-submit {
   @include containerBlock($w: 100%, $h: 44px);
   @include buttonLink();
   font-size: .85rem;
@@ -16,7 +16,7 @@
   }
 }
 
-.button_type_submit-compact {
+.button-submit_compact {
   @include containerBlock($w: 100%, $h: 44px);
   @include buttonLink();
   font-size: .85rem;
