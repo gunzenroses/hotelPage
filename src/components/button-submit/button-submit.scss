@@ -1,3 +1,30 @@
+@mixin arrowSubmit {
+  content: '\e5c8';
+  @include absoluteTopRight();
+  @include containerSimple(44px, 44px);
+  font-family: $material-icons;
+  -webkit-font-feature-settings: 'liga' 1;
+  -moz-font-feature-settings: 'liga' 1;
+  font-feature-settings: 'liga' 1;
+  text-align: center;
+  font-size: $fs_h1;
+}
+
+@mixin buttonLink {
+  position: relative;
+  font-weight: 700;
+  letter-spacing: .001em;
+  text-align: center;
+  border-radius: 22px;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: $linearGradientLilac;
+
+  &:hover {
+    opacity: .5;
+  }
+}
+
 .button-submit {
   @include containerBlock($w: 100%, $h: 44px);
   @include buttonLink();

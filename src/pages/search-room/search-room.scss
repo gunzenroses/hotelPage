@@ -7,6 +7,16 @@
 @import '../../components/header/header.scss';
 @import '@~Components/footer/footer';
 
+@mixin formMargin {
+  @media (min-width: 1650px) and (max-width: 1920px) {
+    margin-top: 40px;
+  }
+
+  @media (max-width: 1070px) {
+    margin-top: 30px;
+  }
+}
+
 .search-room {
   @include containerWithMargins(
     $width: 1440px,
@@ -148,7 +158,10 @@
 }
 
 .search-room__text {
-  @include headerFirst();
+  margin: 0;
+  font-size: $fs_h1;
+  font-weight: 700;
+  color: $dark-shade_most;
   line-height: 37px;
   letter-spacing: 0.0001em;
 

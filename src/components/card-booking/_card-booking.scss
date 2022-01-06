@@ -6,10 +6,13 @@
 
 .card-booking {
   @include isFlex($direction: column, $justify: flex-start);
-  @include containerShadowed();
   width: 380px;
   height: fit-content;
   padding: 49px 29px 27px;
+  border: 1px solid $shadow-border;
+  border-radius: 4px;
+  background: $light;
+  box-shadow: 0px 0px 25px $shadow;
 
   @media (min-width: 1650px) and (max-width: 1920px) {
     width: 100%;

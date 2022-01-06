@@ -1,3 +1,26 @@
+@mixin paginationItem {
+  @include containerSize(40px);
+  margin: 0;
+  padding: 0;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+}
+
+@mixin paginationBefore {
+  @include absoluteTopRight();
+  @include containerSize(40px);
+  font-size: $fs_h1;
+  text-align: center;
+  color: $light;
+  z-index: 2;
+}
+
+@mixin paginationNav {
+  position: relative;
+  background: $linearGradientTurquoise;
+}
+
 .pagination {
   &__bar {
     @include isFlex($direction: column);

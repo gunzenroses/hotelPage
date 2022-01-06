@@ -1,3 +1,12 @@
+@mixin carouselButton {
+  @include absoluteTopLeft(53.5px);
+  @include containerSize(44px);
+  font-size: $fs_h1;
+  text-align: center;
+  color: $light;
+  z-index: 2;
+}
+
 .room-carousel {
   position: relative;
   width: 100%;

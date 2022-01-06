@@ -24,15 +24,33 @@
 }
 
 .checkbox-expand__fake {
-  @include checkboxFake();
+  position: relative;
+  width: 20px;
+  height: 20px;
   margin-right: 10px;
+  border: 1px solid $dark-shade_less;
+  border-radius: 4px;
+  background-color: transparent;
+
+  @media (min-width: 1750px) and (max-width: 1920px) {
+    @include containerBlock(25px, 25px);
+  }
 }
 
 .checkbox-expand__title {
-  @include checkboxTitle();
+  display: inline-block;
+  width: 192px;
   font-size: $fs_base;
+  font-weight: 400;
   line-height: 20px;
   letter-spacing: 0.003em;
+  color: $dark-shade_medium;
+
+  @media (min-width: 1750px) and (max-width: 1920px) {
+    width: calc(100% - 50px);
+    max-width: 350px;
+    font-size: $fs_base;
+  }
 }
 
 .checkbox-expand__real:checked ~ .checkbox-expand__fake {
@@ -41,7 +59,14 @@
 }
 
 .checkbox-expand__real:checked + .checkbox-expand__fake::before {
-  @include checkboxFakeBefore();
+  content: '';
+  @include absoluteTopLeft(45%, 50%);
+  @include containerBlock(4px, 6px);
+  transform: translate(-50%, -50%) rotate(45deg);
+  border-image: $linearGradientLilac;
+  border-image-slice: 1;
+  border-right: 2px solid transparent;
+  border-bottom: 2px solid transparent;
 
   @media (min-width: 1650px) and (max-width: 1920px) {
     @include containerBlock(5px, 10px);
