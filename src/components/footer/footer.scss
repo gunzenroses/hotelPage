@@ -1,0 +1,241 @@
+@import './__company-info/footer__company-info.scss';
+@import './__info/footer__info.scss';
+@import './__subsciption/footer__subscription.scss';
+
+.footer_outer {
+  @include isFlex($direction: column, $align: center);
+  @include containerDimed();
+  width: 100%;
+  height: 445px;
+  margin: 0 auto;
+
+  @media (max-width: 1920px) {
+    width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: 470px) {
+    min-width: 320px;
+  }
+}
+
+.footer__navbar_outer {
+  width: 100%;
+  height: fit-content;
+
+  @media (min-width: 1500px) and (max-width: 1920px) {
+    width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: 470px) {
+    min-width: 320px;
+  }
+}
+
+.footer__navbar_main {
+  @include containerWithMargins(
+    $width: 1160px,
+    $height: 172px,
+    $mt: 100px,
+    $ms: 140px,
+    $mb: 100px
+  );
+
+  @include isFlex($wrap: wrap);
+  position: relative;
+  margin-right: 133px;
+  letter-spacing: .01em;
+
+  @media (min-width: 1500px) and (max-width: 1920px) {
+    margin: 100px auto;
+  }
+
+  @media (min-width: 1650px) and (max-width: 1920px) {
+    width: 80%;
+  }
+
+  @media (max-width: 1340px) {
+    @include containerWithMargins(
+      $width: 85%,
+      $height: 172px,
+      $mt: 60px,
+      $ms: auto,
+      $mb: 60px
+    );
+  }
+
+  @media (max-width: 1170px) {
+    width: calc(415px + 260px + 5%);
+  }
+
+  @media (max-width: 800px) {
+    @include containerWithMargins(
+      $width: 85%,
+      $height: auto,
+      $mt: 40px,
+      $ms: auto,
+      $mb: 40px
+    );
+    justify-content: center;
+  }
+
+  @media (max-width: 470px) {
+    min-width: 320px;
+  }
+}
+
+.footer__navbar_in-signin,
+.footer__navbar_landing {
+  @extend .footer__navbar_main;
+}
+
+.footer__navbar_in-registration {
+  @extend .footer__navbar_main;
+  margin-top: 101px;
+}
+
+.footer__navbar_in-search {
+  @extend .footer__navbar_main;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.footer__navbar_in-details {
+  @extend .footer__navbar_main;
+  letter-spacing: .001em;
+}
+
+.footer__text {
+  width: 100%;
+  margin: 0;
+  font-size: 1em;
+  line-height: 1.71rem;
+  font-weight: 400;
+  color: $dark-shade_more;
+  letter-spacing: .0001em;
+  pointer-events: none;
+
+  @media (max-width: 1170px){
+    display: none;
+  }
+}
+
+.footer__navbar_main h3 {
+  margin-top: 1px;
+}
+
+.footer__title {
+  @include headerThird();
+  line-height: 1.045rem;
+  letter-spacing: .001em;
+
+  @media (max-width: 470px) {
+    font-weight: 400;
+
+    &:hover {
+      font-weight: 700;
+    }
+  }
+}
+
+.footer__links {
+  @include isFlex($direction: column, $align: flex-start, $justify: start);
+  width: 100%;
+  height: 150px;
+  margin: 20px 0 0;
+  padding: 0;
+}
+
+.footer__copyright {
+  @media (max-width: 1340px) {
+    width: 100%;
+    height: auto;
+  }
+
+  &_outer {
+    width: 100%;
+    height: 71px;
+    border-top: 1px solid $dark-shade_less;
+
+    @media (max-width: 1340px) {
+      width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: 400px) {
+      min-width: 320px;
+    }
+  }
+
+  &_inner {
+    @include footerMixin();
+    margin-top: 24px;
+    margin-left: 140px;
+  }
+
+  &_landing {
+    @include footerMixin();
+    margin-top: 23px;
+    margin-left: 139px;
+  }
+
+  &_in-signin {
+    @include footerMixin();
+    margin-top: 23px;
+    margin-left: 140px;
+  }
+
+  &_in-search,
+  &_in-registration,
+  &_in-details {
+    @include footerMixin();
+    margin-top: 24px;
+    margin-left: 140px;
+  }
+}
+
+.footer__copyright-social {
+  width: 116px;
+}
+
+.copyright {
+  &__text {
+    height: 18px;
+    margin-top: 5px;
+    letter-spacing: .0001em;
+    font-size: 14px;
+    pointer-events: none;
+
+    @media (max-width: 800px) {
+      width: 230px;
+      line-height: 18px;
+      text-align: center;
+    }
+
+    @media (max-width: 400px) {
+      width: 200px;
+      font-size: $fs_h3;
+    }
+  }
+
+  &__social {
+    @include isFlex($align: center);
+    width: 100%;
+    height: 26px;
+    margin-right: 1px;
+    font-size: $fs_h1;
+
+    @media (min-width: 1650px) and (max-width: 1920px) {
+      width: 162px;
+    }
+
+    @media (max-width: 800px) {
+      height: 36px;
+    }
+
+    @media (max-width: 400px) {
+      width: 100px;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.js-expand__content {
+  display: none;
+
+  @media (max-width: 450px) {
+    width: 100%;
+    min-width: 260px;
+  }
+}
+
+.js-expand__show {
+  @include isFlex($direction: column, $justify: flex-start);
+
+  @media (min-width: 1650px) and (max-width: 1920px) {
+    width: 100%;
+  }
+}
+
+.js-expand__show ~ .dropdown__button_transparent::before {
+  content: '\e5ce';
+}
+
+.js-expand__show ~ .dropdown__info {
+  border: 1px solid $dark-shade_medium;
+}
+
+.js-expand__show ~ .dropdown__info::before {
+  content: '\e5ce';
+}
+
+
+.js-expand__show ~ .date-range__selector .date-range__info::before {
+  transform: rotate(180deg);
+}

@@ -1,0 +1,28 @@
+.date-range__container {
+  @include containerSimple();
+  position: relative;
+  min-width: 260px;
+
+  @media (max-width: 450px) {
+    margin: 0 auto;
+  }
+}
+
+.date-range__calendar {
+  @include absoluteTopLeft(65px);
+  width: 320px;
+  height: 369px;
+  margin-top: 4px;
+  background: $light;
+  z-index: 2;
+
+  @media (min-width: 1650px) and (max-width: 1920px) {
+    width: 100%;
+  }
+
+  @media (max-width: 450px) {
+    width: 100%;
+    min-width: 260px;
+    margin: 0 auto;
+  }
+}

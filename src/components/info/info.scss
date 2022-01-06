@@ -1,0 +1,24 @@
+.info {
+  &__container {
+    height: 47px;
+    width: 200px;
+    line-height: 24px;
+    font-size: $fs_base;
+    font-family: $montserrat;
+    letter-spacing: .0001em;
+
+    @media (min-width: 1750px) and (max-width: 1920px){
+      width: 300px;
+      margin-left: 14px;
+    }
+  }
+  
+  &__title {
+    font-weight: 700;
+  }
+
+  &__description {
+    font-weight: 400;
+    letter-spacing: .002em;
+  }
+}
