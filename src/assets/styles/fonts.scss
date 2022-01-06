@@ -1,0 +1,43 @@
+@font-face {
+  font-family: 'montserrat';
+  font-weight: 400;
+  src: url('@~Fonts/montserrat/montserrat-regular.eot') format('eot');
+  src: url('@~Fonts/montserrat/montserrat-regular.woff2') format('woff2'),
+  url('@~Fonts/montserrat/montserrat-regular.woff') format('woff'),
+  url('@~Fonts/montserrat/montserrat-regular.ttf') format('truetype'),
+  url('@~Fonts/montserrat/montserrat-regular.svg') format('svg');
+}
+
+@font-face {
+  font-family: 'montserrat';
+  font-weight: 700;
+  src: url('@~Fonts/montserrat/montserrat-bold.eot') format('eot');
+  src: url('@~Fonts/montserrat/montserrat-bold.woff2') format('woff2'),
+  url('@~Fonts/montserrat/montserrat-bold.woff') format('woff'),
+  url('@~Fonts/montserrat/montserrat-bold.ttf') format('truetype'),
+  url('@~Fonts/montserrat/montserrat-bold.svg') format('svg');
+}
+
+@font-face {
+  font-family: 'material-icons';
+  font-weight: 700;
+  src: url('@~Fonts/material/material-icons.eot') format('eot');
+  src: url('@~Fonts/material/material-icons.woff2') format('woff2'),
+  url('@~Fonts/material/material-icons.woff') format('woff'),
+  url('@~Fonts/material/material-icons.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Font Awesome 5 Brands';
+  font-style: normal;
+  font-weight: 400;
+  src: url('@~Fonts/fa-brands/fa-brands-400.eot') format('eot');
+  src: url('@~Fonts/fa-brands/fa-brands-400.woff2') format('woff2'),
+  url('@~Fonts/fa-brands/fa-brands-400.woff') format('woff'),
+  url('@~Fonts/fa-brands/fa-brands-400.ttf') format('truetype'),
+  url('@~Fonts/fa-brands/fa-brands-400.svg') format('svg');
+}
+
+$material-icons: 'material-icons';
+$montserrat: 'montserrat', Arial, sans-serif;
+$font-awesome: 'Font Awesome 5 Brands';

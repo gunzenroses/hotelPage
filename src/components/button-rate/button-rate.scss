@@ -1,0 +1,9 @@
+@import './__item/button-rate__item.scss';
+
+.button-rate {
+  @include isFlex($direction: row-reverse);
+  width: 120px;
+  height: fit-content;
+  font-size: 29px;
+  line-height: 21px;
+}

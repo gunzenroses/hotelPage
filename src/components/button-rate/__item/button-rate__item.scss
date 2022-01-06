@@ -1,0 +1,31 @@
+.button-rate__real {
+  display: none;
+  appearance: none;
+}
+
+.button-rate__fake {
+  width: 24px;
+  height: 24px;
+  color: $purple;
+  background-image: $linearGradientLilac;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  cursor: pointer;
+
+  &::before {
+    width: 24px;
+    height: 24px;
+    content: '☆';
+  }
+}
+
+.button-rate__real:checked ~ .button-rate__fake::before,
+.button-rate__real:checked + .button-rate__fake::before {
+  content: '★';
+}
+
+.button-rate__real:hover ~ .button-rate__fake:before,
+.button-rate__real:hover + .button-rate__fake:before {
+  content: '★';
+}
