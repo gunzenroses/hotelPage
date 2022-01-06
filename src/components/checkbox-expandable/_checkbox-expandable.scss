@@ -1,12 +1,17 @@
-@import './__item/checkbox-expandable__item';
+@import './__item/checkbox-expandable__item.scss';
 
 .checkbox-expand__container {
-  @include widget();
   @include containerMedium();
+  position: relative;
   width: 266px;
+  min-width: 260px;
 
   @media (min-width: 1650px) and (max-width: 1920px) {
     width: 100%;
+  }
+
+  @media (max-width: 450px) {
+    margin: 0 auto;
   }
 }
 
