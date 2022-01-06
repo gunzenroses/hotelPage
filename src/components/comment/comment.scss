@@ -1,0 +1,61 @@
+@import '../button-like/button-like.scss';
+@import '../info/info.scss';
+
+.comment {
+  position: relative;
+  width: 100%;
+  min-width: 260px;
+  min-height: 133px;
+
+  @media (max-width: 450px) {
+    margin: 0 auto;
+  }
+}
+
+.comment__head {
+  @include isFlex($justify: start);
+  height: fit-content;
+}
+
+.comment__pic {
+  @include isFlex($justify: center, $align: center);
+  width: 48px;
+  height: 48px;
+  margin-right: 10px;
+  border-radius: 50%;
+  filter: drop-shadow(0px 10px 20px $dark-shade_few);
+  overflow: hidden;
+}
+
+.comment__body {
+  @include isFlex($justify: start);
+  width: 100%;
+  height: fit-content;
+  min-height: 51px;
+  margin-top: 10px;
+  margin-left: 2px;
+  font-size: $fs_base;
+  pointer-events: none;
+}
+
+.comment__text {
+  width: calc(100% - 54px);
+  max-width: 92%;
+  min-height: 72px;
+  margin-left: 14px;
+  line-height: 24px;
+  letter-spacing: .0001em;
+  font-family: $montserrat;
+  color: $dark-shade_more;
+  font-weight: 400;
+  text-align: left;
+
+  @media (max-width: 450px) {
+    width: 70%;
+  }
+}
+
+.comment__likes {
+  margin-top: 2px;
+  margin-left: 2px;
+}
