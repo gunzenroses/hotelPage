@@ -1,0 +1,41 @@
+.date-range__item-container {
+    @include isFlex($direction: column);
+    width: 150px;
+    height: 100%;
+  
+    @media (min-width: 1650px) and (max-width: 1920px) {
+      width: 48%;
+      max-width: 240px;
+    }
+  
+    @media (max-width: 450px) {
+      width: calc(150 / 320 * 100%);
+      min-width: 130px;
+    }
+  }
+  
+  .date-range__label {
+    @include labelMixin();
+    @include headerThird();
+    line-height: $fs_h3;
+    letter-spacing: 0.002em;
+  }
+  
+  .date-range__info {
+    @include dateRangeInfo();
+  }
+  
+  .date-range__info_in-search {
+    @include dateRangeInfo();
+    padding-left: 12px;
+  }
+  
+  .date-range__input {
+    @include input();
+    font-size: 14px;
+    letter-spacing: .0001em;
+  
+    &::placeholder {
+      color: $dark-shade_more;
+    } 
+  }
