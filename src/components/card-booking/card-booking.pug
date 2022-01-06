@@ -1,6 +1,6 @@
-include ./card-booking__room-info.pug
-include ./card-booking__price-info.pug
-include ../date-range/date-range_separate.pug
+include ./__room-info/card-booking__room-info.pug
+include ./__price-info/card-booking__price-info.pug
+include ../date-range/_separete/date-range_separate.pug
 include ../dropdown/_type_guests/dropdown_type_guests.pug
 include ../button-submit/button-submit.pug
 
@@ -19,7 +19,7 @@ mixin card-booking(serviceName, serviceStyle, theme="")
         .card-booking__summary
           .booking-total__text Итого
           if theme == "in-uikit"
-            .card-booking__line_uikit
+            .card-booking__line_in-uikit
           else 
             .card-booking__line
           .card-booking__price_total 38 081₽
@@ -27,7 +27,7 @@ mixin card-booking(serviceName, serviceStyle, theme="")
         div(class="card-booking__summary" + "_" + theme)
           .booking-total__text Итого
           if theme == "in-uikit"
-            .card-booking__line_uikit
+            .card-booking__line_in-uikit
           else 
             .card-booking__line
           .card-booking__price_total 38 081₽
