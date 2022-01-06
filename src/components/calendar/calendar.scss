@@ -1,0 +1,219 @@
+.calendar {
+  @include isFlex($direction: column, $justify: flex-start);
+  @include containerDimed();
+  width: 100%;
+  min-height: 370px;
+  border: 1px solid $dark-shade_less;
+  z-index: 3;
+  user-select: none;
+
+  @media (min-width: 1650px) and (max-width: 1920px) {
+    width: 100%;
+  }
+
+  @media (max-width: 400px) {
+    max-width: 280px;
+  }
+}
+
+.calendar {  
+  &__date {
+    @include isFlex($align: center);
+    height: 64px;
+    width: 100%;
+    padding: 20px 20px 22px 19px;
+  }
+
+  &__month {
+    display: block;
+    line-height: 24px;
+    margin: 0 auto;
+    font-size: $fs_h2;
+    font-weight: 700;
+    font-family: $montserrat;
+    text-align: center;
+    letter-spacing: .0015em;
+  }
+
+  &__button_prev,
+  &__button_next {
+    @include containerSimple(24px, 24px);
+    position: relative;
+    line-height: 18px; 
+    border-radius: 50%;
+    cursor: pointer;
+  
+    &:hover {
+      background-color: $grey;
+    }
+  
+    &::before {
+      position: absolute;
+      top: 3px;
+      font-size: $fs_h1;
+      font-family: $material-icons;
+      color: $purple;
+    }
+  }
+
+  &__button_prev::before {
+    content: '\e5c4';
+  }
+
+  &__button_next::before {
+    content: '\e5c8';
+  }
+}
+
+.calendar {
+  &__weeks {
+    @include isFlex($direction: column);
+    width: 280px;
+    min-height: 240px;
+    margin: 9px auto 0;
+  
+    @media (min-width: 1650px) and (max-width: 1920px) {
+      width: 100%;
+    }
+  }
+
+  &__weekdays {
+    @include isFlex($justify: space-around);
+    width: 100%;
+    height: 40px;
+    font-size: $fs_h3;
+    font-weight: 700;
+    color: $purple;
+    align-items: center;
+    letter-spacing: .01em;
+
+    @media (min-width: 1750px) and (max-width: 1920px) {
+      font-size: $fs_h2;
+    }
+  }
+
+  &__days {
+    @include isFlex($wrap: wrap);
+    width: 100%;
+    line-height: 40px;
+    font-size: $fs_h3;
+    font-weight: 400;
+    font-family: Montserrat;
+    text-align: center;
+    color: $dark-shade_medium;
+  }
+}
+
+.calendar {
+  &__buttons {
+    @include isFlex();
+    width: 100%;
+    padding: 21px 19px 18px;
+    color: $purple;
+  }
+  
+  &__button-reset,
+  &__button-submit {
+    padding: 0;
+    border: none;
+    font-size: $fs_h3;
+    font-weight: 700;
+    font-family: Montserrat;
+    text-transform: uppercase;
+    color: $purple;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    
+  
+    @media (min-width: 1750px) and (max-width: 1920px) {
+      font-size: $fs_base;
+    }
+  }
+}
+
+.calendar__day_prev_checkin,
+.calendar__day_next_checkin,
+.calendar__day_prev_checkout,
+.calendar__day_next_checkout {
+  @include calendarDay();
+  position: relative;
+  border-radius: 50%;
+  color: $dark-shade_less;
+  background: $dark-shade_few;
+}
+
+.calendar__day {
+  @include calendarDay();
+}
+
+.calendar__day_prev,
+.calendar__day_next {
+  @include calendarDay();
+  color: $dark-shade_less;
+}
+
+.calendar__day_prev_checkin::before,
+.calendar__day_next_checkin::before,
+.calendar__day_prev_checkout::before,
+.calendar__day_next_checkout::before {
+  content: '';
+  @include containerBlock();
+  @include absoluteTopLeft();
+  background: $dark-shade_fewer;
+}
+
+.calendar__day_prev_checkin::before,
+.calendar__day_next_checkin::before {
+  right: 0;
+  z-index: -1;
+  border-radius: 50% 0 0 50%;
+}
+
+.calendar__day_prev_checkout::before,
+.calendar__day_next_checkout::before {
+  left: 0;
+  border-radius: 0 50% 50% 0;
+}
+
+.calendar__today {
+  @include calendarDay();
+  border-radius: 50%;
+  font-weight: 700;
+  color: $light;
+  background: $linearGradientTurquoise;
+}
+
+.calendar__day_ranged {
+  @include calendarDay();
+  position: relative;
+  color: $dark-shade_medium;
+  background: $linearGradientGrape;
+
+  &_between {
+    @include calendarDay();
+    position: relative;
+    color: $dark-shade_less;
+    background: $dark-shade_fewer;
+    
+  }
+}
+
+.calendar__day_checkout {
+  @include calendarDay();
+  @include calendarCheckDay();
+
+  &::after {
+    border-radius: 0 50% 50% 0;
+  }
+}
+
+.calendar__day_checkin {
+  @include calendarDay();
+  @include calendarCheckDay();
+  isolation: isolate;
+
+  &::after {
+    border-radius: 50% 0 0 50%;
+  }
+}
