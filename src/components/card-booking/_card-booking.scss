@@ -1,3 +1,9 @@
+@import '../button-submit/button-submit.scss';
+@import '../date-range/_separete/date-range_separate.scss';
+@import '../dropdown/_type_guests/dropdown_type_guests.scss';
+@import './__price-info/card-booking__price-info.scss';
+@import './__room-info/card-booking__room-info.scss';
+
 .card-booking {
   @include isFlex($direction: column, $justify: flex-start);
   @include containerShadowed();
@@ -26,69 +32,6 @@
   padding-right: 5px;
 }
 
-.card-booking__No {
-  display: inline-block;
-  padding-right: 3px;
-  font-size: $fs_base;
-  font-weight: 700;
-  line-height: 11px;
-  color: $dark-shade_most;
-
-  @media (min-width: 1750px) and (max-width: 1920px) {
-    font-size: $fs_h2;
-  }
-}
-
-.card-booking__number {
-    display: inline-block;
-    font-size: $fs_h1;
-    letter-spacing: .001em;
-    font-weight: 700;
-    line-height: 9px;
-    color: $dark-shade_most;
-
-
-    @media (min-width: 1750px) and (max-width: 1920px) {
-      font-size: $fs_h1;
-    }
-  }
-
-.card-booking__number_in-details {
-  @extend .card-booking__number;
-  line-height: 11px;
-}
-
-.card-booking__suite {
-  display: inline-block;
-  line-height: 11px;
-  font-size: $fs_h3;
-  font-weight: 700;
-  letter-spacing: .02em;
-  color: $purple;
-  text-transform: uppercase;
-}
-
-.card-booking__suite_in-details {
-  @extend .card-booking__suite;
-  margin-left: 8px;
-}
-
-.card-booking__price {
-  font-size: $fs_base;
-  font-weight: 700;
-  line-height: 19px;
-  letter-spacing: .01em;
-  color: $dark-shade_medium;
-}
-
-.card-booking__period {
-  font-size: $fs_h3;
-  font-weight: 400;
-  letter-spacing: .01em;
-  line-height: 19px;
-  color: $dark-shade_medium;
-}
-
 .card-booking__date-range {
   width: 100%;
   margin-top: 23px;
@@ -100,106 +43,6 @@
   height: 61px;
   margin-top: 23px;
   margin-bottom: 11px;
-}
-
-.card-booking__price-info {
-  @include isFlex($justify: flex-start);
-  width: 100%;
-  min-height: 24px;
-  line-height: 18px;
-  margin-top: 10px;
-  margin-left: 1px;
-  color: $dark-shade_more;
-  pointer-events: none;
-
-  @media (min-width: 1750px) and (max-width: 1920px) {
-    max-width: 490px;
-  }
-
-  @media (max-width: 450px) {
-    justify-content: space-between;
-    min-width: 260px;
-    width: 100%;
-    margin: 9px 0;
-  }
-}
-.card-booking__price-info_total {
-  @extend .card-booking__price-info;
-  margin-top: 30px;
-  margin-left: 0;
-}
-
-  .card-booking__description {
-    display: inline-block;
-    width: calc(100% - 101px);
-    text-align: left;
-    letter-spacing: .0001em;
-
-    @media (min-width: 1650px) and (max-width: 1920px) {
-      width: calc(100% - 100px);
-    }
-
-    @media (max-width: 450px) {
-      width: calc(100% - 120px);
-      max-width: 170px;
-    }
-  }
-
-.card-booking__description_special {
-  @include isFlex();
-  width: 168px;
-  margin-bottom: 16px;
-  letter-spacing: .0001em;
-
-  @media (min-width: 1650px) and (max-width: 1920px) {
-    width: 240px;
-  }
-
-  @media (max-width: 450px) {
-    width: calc(100% - 120px);
-    max-width: 170px;
-  }
-}
-
-.card-booking__info-sign {
-  @include containerSize(20px);
-  position: relative;
-  border-radius: 50%;
-  border: 1px solid $dark-shade_less;
-  background: $light;
-
-  &::before {
-    content: 'i';
-    @include absoluteTopLeft(2px, 7px);
-    font-size: $fs_h3;
-    line-height: $fs_base;
-    font-weight: 700;
-    color: $dark-shade_less;
-  }
-}
-
-.card-booking__expense {
-  @include isFlex($direction: row-reverse);
-  width: 99px;
-  text-align: right;
-  letter-spacing: .002em;
-
-  @media (min-width: 1650px) and (max-width: 1920px) {
-    width: 90px;
-  }
-}
-
-.card-booking__expense_special {
-  @extend.card-booking__expense;
-  width: calc(100% - 169px);
-
-  @media (min-width: 1650px) and (max-width: 1920px) {
-    width: calc(100% - 240px);
-  }
-
-  @media (max-width: 450px) {
-    width: 120px;
-  }
 }
 
 .card-booking__summary {
@@ -236,7 +79,7 @@
   border-bottom: 1px dotted $dark-shade_less;
 }
 
-.card-booking__line_uikit {
+.card-booking__line_in-uikit {
   @extend .card-booking__line;
   width: 190px;
 }
