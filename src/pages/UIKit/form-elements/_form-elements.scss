@@ -15,6 +15,10 @@
 @import '../../../components/button-toggle/button-toggle.scss';
 @import '../../../components/buttons-radio/buttons-radio.scss';
 @import '../../../components/checkbox/checkbox.scss';
+@import '../../../components/checkbox-expandable/checkbox-expandable.scss';
+@import '../../../components/pagination/pagination.scss';
+@import '../../../components/range/range.scss';
+@import '../../../components/rich-checkbox/rich-checkbox.scss';
 
 @mixin isFlex(
   $direction: row,

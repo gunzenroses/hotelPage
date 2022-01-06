@@ -1,12 +1,19 @@
+@import '../../assets/styles/general.scss';
+
 @import '../../assets/styles/colors.scss';
 @import '../../assets/styles/fonts.scss';
 @import '../../components/date-range/_common/date-range_common.scss';
 @import '../../components/dropdown/_type_guests/dropdown_type_guests.scss';
 @import '../../components/dropdown/_type_rooms/dropdown_type_rooms.scss';
+@import '../../components/card-room/card-room.scss';
 @import '../../components/checkbox/checkbox.scss';
+@import '../../components/checkbox-expandable/checkbox-expandable.scss';
 @import '../../components/expand/expand.scss';
 @import '../../components/header/header.scss';
 @import '@~Components/footer/footer';
+@import '../../components/pagination/pagination.scss';
+@import '../../components/range/range.scss';
+@import '../../components/rich-checkbox/rich-checkbox.scss';
 
 @mixin isFlex(
   $direction: row,

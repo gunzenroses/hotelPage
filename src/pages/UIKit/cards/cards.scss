@@ -1,6 +1,9 @@
-@import 'Styles/main';
 @import '../../../components/calendar/calendar.scss';
-
+@import '../../../components/card-booking/card-booking.scss';
+@import '../../../components/card-registration/card-registration.scss';
+@import '../../../components/card-room/card-room.scss';
+@import '../../../components/card-search/card-search.scss';
+@import '../../../components/card-singin/card-signin.scss';
 
 @mixin marginTop {
   @media (max-width: 1400px) {
