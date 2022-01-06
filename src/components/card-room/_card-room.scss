@@ -1,3 +1,8 @@
+@import '../button-rate/button-rate.scss';
+@import '../card/card.scss';
+@import './__info/card-room__info.scss';
+@import './__review/card-room__review.scss';
+
 .card-room {
   @include isFlex($direction: column, $justify: flex-start);
   @include containerDimed();

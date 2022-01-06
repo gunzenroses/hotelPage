@@ -1,7 +1,7 @@
 extends ../../assets/templates/template.pug
 
 include ../../components/header/header.pug
-include ../../components/carousel/carousel_type_landing.pug
+include ../../components/carousel-landing/carousel-landing.pug
 include ../../components/card-search/card-search.pug
 include ../../components/footer/footer.pug
 
@@ -16,7 +16,7 @@ block content
   .landing-page.js-dropdown__detection
     +header("", theme)
     main.landing-page__content
-      +carousel_type_landing(pics)
+      +carousel-landing(pics)
       blockquote.landing-page__text Лучшие номера для вашей работы, отдыха и просто вдохновения
       .landing-page__card-search
         +card-search()

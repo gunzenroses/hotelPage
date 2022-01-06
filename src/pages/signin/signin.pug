@@ -2,7 +2,7 @@ extend ../../assets/templates/template.pug
 
 include ../../components/header/header.pug
 include ../../components/card-singin/card-signin.pug
-include ../../components/carousel/carousel_type_basic.pug
+include ../../components/carousel/carousel.pug
 include ../../components/footer/footer.pug
 
 block variables
@@ -16,7 +16,7 @@ block content
   .sign-in.js-dropdown__detection
     +header("", theme)
     main.sign-in__content
-      +carousel_type_basic(pics)
+      +carousel(pics)
       .sign-in__card-signin
         +card-signin(theme)
     +footer(theme)

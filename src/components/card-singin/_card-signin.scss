@@ -1,3 +1,7 @@
+@import '../card/card.scss';
+@import '../button-link/button-link.scss';
+@import '../button-submit/button-submit.scss';
+
 .card-signin {
   @include isFlex($direction: column, $justify: flex-start);
   @include containerShadowed();

@@ -2,7 +2,7 @@ extends ../../assets/templates/template.pug
 
 include ../../components/header/header.pug
 include ../../components/card-registration/card-registration.pug
-include ../../components/carousel/carousel_type_basic.pug
+include ../../components/carousel/carousel.pug
 include ../../components/footer/footer.pug
 
 block variables
@@ -16,7 +16,7 @@ block content
   .registration.js-dropdown__detection
     +header("", theme)
     main.registration__content
-      +carousel_type_basic(pics)
+      +carousel(pics)
       .registration__card-registration 
         +card-registration("Зарегистрироваться")
     +footer(theme)

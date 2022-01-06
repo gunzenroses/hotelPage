@@ -1,5 +1,5 @@
 /* Base */
-@import './fonts';
+@import './fonts.scss';
 
 /* Utils */
 @import './mixins';
@@ -9,30 +9,8 @@
 @import './general';
 
 /* Components */
-@import '@~Components/badge/badge';
-@import '@~Components/button-link/button-link';
-@import '@~Components/button-submit/button-submit';
-@import '@~Components/button/button';
-@import '@~Components/button-like/button-like';
-@import '@~Components/button-rate/button-rate';
-@import '@~Components/button-toggle/button-toggle';
-@import '@~Components/buttons-radio/buttons-radio';
-@import '@~Components/bullet-checkbox/bullet-checkbox';
-@import '@~Components/calendar/calendar';
 @import '@~Components/checkbox/checkbox';
 @import '@~Components/checkbox-expandable/checkbox-expandable';
-@import '@~Components/carousel/carousel_type_basic';
-@import '@~Components/carousel/carousel_type_landing';
-@import '@~Components/comment/comment';
-@import '@~Components/date-range/date-range';
-@import '@~Components/footer/footer';
-@import '@~Components/footer/footer-creative';
-@import '@~Components/header/header';
-@import '@~Components/header/__menu/header__menu';
-@import '@~Components/header/__user/header__user';
-@import '@~Components/dropdown/dropdown';
-@import '@~Components/info/info';
-@import '@~Components/logo/logo';
 @import '@~Components/navlink/navlink';
 @import '@~Components/navlink-dropdown/navlink-dropdown';
 @import '@~Components/textfield/textfield';
@@ -44,17 +22,13 @@
 @import '@~Components/rich-checkbox/rich-checkbox';
 @import '@~Components/room-carousel/room-carousel';
 @import '@~Components/social-nets/social-nets';
-@import '@~Components/expand/expand';
 
 /* Cards */
-@import '@~Components/card/card';
 @import '@~Components/card-search/card-search';
 @import '@~Components/card-registration/card-registration';
 @import '@~Components/card-booking/card-booking';
 @import '@~Components/card-singin/card-signin';
 @import '@~Components/card-room/card-room';
-@import '@~Components/card-room/__info/card-room__info';
-@import '@~Components/card-room/__review/card-room__review';
 
 /* To make changes */
 @import './special';

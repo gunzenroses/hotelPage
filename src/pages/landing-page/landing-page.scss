@@ -1,4 +1,8 @@
 @import 'Styles/main';
+@import '../../components/carousel-landing/carousel-landing.scss';
+@import '../../components/expand/expand.scss';
+@import '../../components/header/header.scss';
+@import '@~Components/footer/footer';
 
 .landing-page {
   @include containerBlock(1440px, auto);
