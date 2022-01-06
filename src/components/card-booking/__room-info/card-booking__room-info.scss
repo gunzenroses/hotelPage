@@ -1,0 +1,64 @@
+@import '../../card/card.scss';
+
+.card-booking__No {
+  display: inline-block;
+  padding-right: 3px;
+  font-size: $fs_base;
+  font-weight: 700;
+  line-height: 11px;
+  color: $dark-shade_most;
+
+  @media (min-width: 1750px) and (max-width: 1920px) {
+    font-size: $fs_h2;
+  }
+}
+
+.card-booking__number {
+  display: inline-block;
+  font-size: $fs_h1;
+  letter-spacing: .001em;
+  font-weight: 700;
+  line-height: 9px;
+  color: $dark-shade_most;
+
+
+  @media (min-width: 1750px) and (max-width: 1920px) {
+    font-size: $fs_h1;
+  }
+}
+
+.card-booking__number_in-details {
+@extend .card-booking__number;
+line-height: 11px;
+}
+
+.card-booking__suite {
+display: inline-block;
+line-height: 11px;
+font-size: $fs_h3;
+font-weight: 700;
+letter-spacing: .02em;
+color: $purple;
+text-transform: uppercase;
+}
+
+.card-booking__suite_in-details {
+@extend .card-booking__suite;
+margin-left: 8px;
+}
+
+.card-booking__price {
+  font-size: $fs_base;
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: .01em;
+  color: $dark-shade_medium;
+}
+
+.card-booking__period {
+  font-size: $fs_h3;
+  font-weight: 400;
+  letter-spacing: .01em;
+  line-height: 19px;
+  color: $dark-shade_medium;
+}

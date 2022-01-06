@@ -1,0 +1,102 @@
+.card-booking__price-info {
+  @include isFlex($justify: flex-start);
+  width: 100%;
+  min-height: 24px;
+  line-height: 18px;
+  margin-top: 10px;
+  margin-left: 1px;
+  color: $dark-shade_more;
+  pointer-events: none;
+
+  @media (min-width: 1750px) and (max-width: 1920px) {
+    max-width: 490px;
+  }
+
+  @media (max-width: 450px) {
+    justify-content: space-between;
+    min-width: 260px;
+    width: 100%;
+    margin: 9px 0;
+  }
+}
+
+//TODO
+.card-booking__price-info_total {
+  @extend .card-booking__price-info;
+  margin-top: 30px;
+  margin-left: 0;
+}
+
+.card-booking__description {
+  display: inline-block;
+  width: calc(100% - 101px);
+  text-align: left;
+  letter-spacing: .0001em;
+
+  @media (min-width: 1650px) and (max-width: 1920px) {
+    width: calc(100% - 100px);
+  }
+
+  @media (max-width: 450px) {
+    width: calc(100% - 120px);
+    max-width: 170px;
+  }
+}
+
+
+.card-booking__description_special {
+  @include isFlex();
+  width: 168px;
+  margin-bottom: 16px;
+  letter-spacing: .0001em;
+
+  @media (min-width: 1650px) and (max-width: 1920px) {
+    width: 240px;
+  }
+
+  @media (max-width: 450px) {
+    width: calc(100% - 120px);
+    max-width: 170px;
+  }
+}
+
+.card-booking__expense {
+  @include isFlex($direction: row-reverse);
+  width: 99px;
+  text-align: right;
+  letter-spacing: .002em;
+
+  @media (min-width: 1650px) and (max-width: 1920px) {
+    width: 90px;
+  }
+}
+
+.card-booking__expense_special {
+  @extend.card-booking__expense;
+  width: calc(100% - 169px);
+
+  @media (min-width: 1650px) and (max-width: 1920px) {
+    width: calc(100% - 240px);
+  }
+
+  @media (max-width: 450px) {
+    width: 120px;
+  }
+}
+
+.card-booking__info-sign {
+  @include containerSize(20px);
+  position: relative;
+  border-radius: 50%;
+  border: 1px solid $dark-shade_less;
+  background: $light;
+
+  &::before {
+    content: 'i';
+    @include absoluteTopLeft(2px, 7px);
+    font-size: $fs_h3;
+    line-height: $fs_base;
+    font-weight: 700;
+    color: $dark-shade_less;
+  }
+}
