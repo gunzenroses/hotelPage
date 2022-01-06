@@ -1,3 +1,34 @@
+@mixin dropdownButton {
+  content: '\e5cf';
+  @include absoluteTopRight();
+  @include containerSize(44px);
+  display: block;
+  font-size: $fs_h1;
+  font-family: $material-icons;
+  text-align: center;
+  cursor: pointer;
+}
+
+@mixin dropdownInitialField {
+  @include isFlex($justify: flex-start, $align: center);
+  position: relative;
+  width: 100%;
+  height: 44px;
+  padding: 0px 0 2px 12px;
+  border: 1px solid $dark-shade_less;
+  border-radius: 4px;
+  background: transparent;
+  color: $dark-shade_more;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  cursor: pointer;
+
+  @media (max-width: 450px) {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
 .dropdown {
   @include isFlex($direction: column-reverse);
   position: relative;
@@ -33,10 +64,14 @@
 }
 
 .dropdown__buttons {
-  @include dropdownItem();
   @include isFlex($justify: space-between, $direction: row-reverse);
+  height: 30px;
+  width: 100%;
   margin-top: 19px;
+  padding-right: 6px;
   padding-left: 13px;
+  font-size: $fs_h3;
+  text-transform: uppercase;
 }
 
 .dropdown__button_type_reset,

@@ -1,10 +1,13 @@
 @import '../logo/logo.scss';
 
 .footer-creative {
-  @include containerDimed();
   width: 768px;
   height: 366px;
   margin: 0 auto;
+  border-radius: 4px;
+  background: $light;
+  box-sizing: border-box;
+  box-shadow: 0px 10px 20px $dark-shade_fewer;
 
   @media (max-width: 800px) {
     width: 100%;

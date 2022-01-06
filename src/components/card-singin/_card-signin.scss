@@ -4,11 +4,14 @@
 
 .card-signin {
   @include isFlex($direction: column, $justify: flex-start);
-  @include containerShadowed();
   width: 100%;
   height: fit-content;
   min-height: 358px;
   padding: 39px 29px 31px;
+  border: 1px solid $shadow-border;
+  border-radius: 4px;
+  background: $light;
+  box-shadow: 0px 0px 25px $shadow;
 
   @media (max-width: 400px) {
     min-width: 320px;

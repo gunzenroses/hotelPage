@@ -1,3 +1,43 @@
+@mixin dateRangeInfo {
+  @include isFlex($justify: flex-start, $align: center);
+  position: relative;
+  width: 100%;
+  height: 44px;
+  padding: 0px 0 2px 12px;
+  border: 1px solid $dark-shade_less;
+  border-radius: 4px;
+  background: transparent;
+  color: $dark-shade_more;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  cursor: pointer;
+
+  @media (max-width: 450px) {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &::before {
+    content: '\e5cf';
+    @include absoluteTopRight();
+    @include containerSize(44px);
+    display: block;
+    font-size: $fs_h1;
+    font-family: $material-icons;
+    text-align: center;
+    cursor: pointer;
+    width: 42px;
+  }
+
+  @media (min-width: 1750px) and (max-width: 1920px) {
+    font-size: $fs_h2;
+  }
+
+  @media (max-width: 450px) {
+    min-width: 100%;
+  }
+}
+
 .date-range__item-container {
     @include isFlex($direction: column);
     width: 150px;

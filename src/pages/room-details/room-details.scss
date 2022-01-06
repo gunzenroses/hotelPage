@@ -7,6 +7,14 @@
 @import '../../components/header/header.scss';
 @import '@~Components/footer/footer';
 
+@mixin headerSecond {
+  margin: 0;
+  line-height: 16.963rem;
+  font-size: $fs_h2;
+  font-weight: 700;
+  color: $dark-shade_most;
+}
+
 .room-details {
   @include containerWithMargins(
     $width: 1440px,

@@ -15,11 +15,14 @@
 }
 
 .navlink-dropdown__content {
-  @include containerDimed();
   position: absolute;
   top: 20px;
   width: 150px;
   height: 60px;
+  border-radius: 4px;
+  background: $light;
+  box-sizing: border-box;
+  box-shadow: 0px 10px 20px $dark-shade_fewer;
   z-index: 3;
 }
 

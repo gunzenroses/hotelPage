@@ -1,6 +1,17 @@
 @import 'Styles/main';
 @import '../../../components/calendar/calendar.scss';
 
+
+@mixin marginTop {
+  @media (max-width: 1400px) {
+    margin-top: 20px;
+  }
+
+  @media (max-width: 850px) {
+    margin-top: 30px;
+  }
+}
+
 .cards_outer {
   @include containerWithMargins(
     $width: 1440px,

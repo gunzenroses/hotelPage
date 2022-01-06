@@ -1,9 +1,46 @@
+@mixin calendarDay {
+  @include containerSize(40px);
+  cursor: pointer;
+
+  @media (min-width: 1650px) and (max-width: 1920px) {
+    width: 14.28%;
+    font-size: $fs_h2;
+  }
+
+  &:hover {
+    border-radius: 50%;
+    border-color: $linearGradientLilac;
+    border-width: 2px;
+    border-style: solid;
+  }
+}
+
+@mixin calendarCheckDay {
+  position: relative;
+  font-weight: 700;
+  color: $light;
+  border-radius: 50%;
+  background: $linearGradientLilac;
+  z-index: 2;
+
+  &::after {
+    content: '';
+    @include absoluteTopLeft();
+    @include containerBlock();
+    background: $linearGradientLilac;
+    opacity: .15;
+  }
+}
+
 .calendar {
   @include isFlex($direction: column, $justify: flex-start);
-  @include containerDimed();
   width: 100%;
   min-height: 370px;
   border: 1px solid $dark-shade_less;
+  border-radius: 4px;
+  background: $light;
+  box-sizing: border-box;
+  box-shadow: 0px 10px 20px $dark-shade_fewer;
   z-index: 3;
   user-select: none;
 

@@ -5,10 +5,13 @@
 
 .card-room {
   @include isFlex($direction: column, $justify: flex-start);
-  @include containerDimed();
   position: relative;
   width: 270px;
   height: 257px;
+  border-radius: 4px;
+  background: $light;
+  box-sizing: border-box;
+  box-shadow: 0px 10px 20px $dark-shade_fewer;
 
   @media (max-width: 700px) {
     width: 380px;

@@ -1,3 +1,18 @@
+@mixin buttonLink {
+  position: relative;
+  font-weight: 700;
+  letter-spacing: .001em;
+  text-align: center;
+  border-radius: 22px;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: $linearGradientLilac;
+
+  &:hover {
+    opacity: .5;
+  }
+}
+
 .button-link {
   @include containerBlock();
   @include buttonLink();

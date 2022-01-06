@@ -2,8 +2,11 @@
 
 .checkbox__container {
   @include isFlex($direction: column);
-  @include fieldset();
+  appearance: none;
   width: 224px;
+  margin: 0;
+  padding: 0;
+  border: none;
 
   @media (min-width: 1650px) and (max-width: 1920px) {
     width: 100%;
