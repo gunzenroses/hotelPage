@@ -1,23 +1,30 @@
-@import 'Styles/main';
+@import '../../assets/styles/colors.scss';
 @import '../../components/carousel/carousel.scss';
 @import '../../components/expand/expand.scss';
 @import '../../components/header/header.scss';
 @import '@~Components/footer/footer';
 
-/* Main container */
+@mixin isFlex(
+  $direction: row,
+  $justify: space-between,
+  $align: flex-start,
+  $wrap: nowrap
+) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+  flex-shrink: 0;
+}
 
 .registration {
-  @include containerWithMargins(
-    $width: 1440px,
-    $height: fit-content,
-    $mt: 0,
-    $ms: auto,
-    $mb: 0
-  );
-
   @include isFlex($direction: column, $justify: flex-start);
   position: relative;
+  width: 1440px;
+  height: fit-content;
   min-width: 320px;
+  margin: 0 auto;
   background: $light;
   user-select: none;
 
@@ -49,7 +56,9 @@
 }
 
 .registration__card-registration {
-  @include absoluteTopLeft(19px, 716px);
+  position: absolute;
+  top: 19px;
+  left: 716px;
   transform: translateX(-48.2%);
 
   @media (min-width: 1480px) and (max-width: 1920px) {

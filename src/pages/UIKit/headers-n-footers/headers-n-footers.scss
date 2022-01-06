@@ -1,11 +1,15 @@
+@import '../../../assets/styles/colors.scss';
+
 .headers-n-footers_outer {
-  @include containerWithMargins(
-    $width: 1440px,
-    $height: 1350px,
-    $ms: auto
-  );
-  @include isFlex($direction: column, $justify: flex-start);
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex: 1 0 nowrap;
+  width: 1440px;
+  height: 1350px;
+  margin: 0 auto;
   padding-top: 140px;
   padding-bottom: 132px;
   overflow: auto;

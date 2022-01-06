@@ -1,3 +1,17 @@
+@mixin isFlex(
+  $direction: row,
+  $justify: space-between,
+  $align: flex-start,
+  $wrap: nowrap
+) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+  flex-shrink: 0;
+}
+
 .card-room__info {
   @include isFlex($direction: column);
   width: 100%;

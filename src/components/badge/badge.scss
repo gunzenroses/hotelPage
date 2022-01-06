@@ -1,7 +1,12 @@
+@import '../../assets/styles/colors.scss';
 @import '../info/info.scss';
 
 .badge {
-  @include isFlex($justify: start);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: 1 0 nowrap;
   width: 280px;
   height: 69px;
   border-bottom: 1px solid $dark-shade_few;
@@ -16,13 +21,15 @@
 }
 
 .maretial-icon {
-  font-family: $material-icons;
   position: relative;
-  @include containerSize(48px);
+  width: 48px;
+  height: 48px;
   margin-right: 10px;
-  align-items: center;
+  line-height: 48px;
+  font-family: $material-icons;
   font-size: 48px;
   text-align: center;
+  align-items: center;
   background-image: $linearGradientLilac;
   color: transparent;
   -webkit-background-clip: text;

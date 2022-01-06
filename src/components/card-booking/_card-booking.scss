@@ -1,8 +1,24 @@
+@import '../../assets/styles/colors.scss';
+@import '../../assets/styles/fonts.scss';
 @import '../button-submit/button-submit.scss';
 @import '../date-range/_separete/date-range_separate.scss';
 @import '../dropdown/_type_guests/dropdown_type_guests.scss';
 @import './__price-info/card-booking__price-info.scss';
 @import './__room-info/card-booking__room-info.scss';
+
+@mixin isFlex(
+  $direction: row,
+  $justify: space-between,
+  $align: flex-start,
+  $wrap: nowrap
+) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+  flex-shrink: 0;
+}
 
 .card-booking {
   @include isFlex($direction: column, $justify: flex-start);

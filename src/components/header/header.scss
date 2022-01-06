@@ -1,7 +1,12 @@
+@import '../../assets/styles/colors.scss';
 @import './__menu/header__menu.scss';
 
 @mixin headerMixin {
-  @include isFlex($align: center);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: 1 0 nowrap;
   position: relative;
   width: 100%;
   height: 70px;

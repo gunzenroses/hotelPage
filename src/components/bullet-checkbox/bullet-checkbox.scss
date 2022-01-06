@@ -1,7 +1,12 @@
+@import '../../assets/styles/fonts.scss';
 @import './__item/bullet-checkbox__item.scss';
 
 .bullet-checkbox {
-  @include isFlex($direction: column);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: 1 0 nowrap;
   width: 292px;
   height: 142px;
 
@@ -12,9 +17,21 @@
 }
 
 .bullet-checkbox__label {
-  @include headerThird();
-  @include labelMixin();
+  display: inline-block;
+  height: 15px;
+  margin: 0;
   line-height: $fs_h3;
+  font-size: $fs_h3;
+  font-weight: 700;
+  letter-spacing: .003em;
+  color: $dark-shade_most;
+  text-transform: uppercase;
+  pointer-events: none;
+
+  @media (min-width: 1750px) and (max-width: 1920px) {
+    font-size: $fs_base;
+    height: $fs_h2;
+  }
 }
 
 .bullet-checkbox__item + .bullet-checkbox__item {

@@ -1,4 +1,5 @@
-@import 'Styles/main';
+@import '../../assets/styles/colors.scss';
+@import '../../assets/styles/fonts.scss';
 @import '../../components/badge/badge.scss';
 @import '../../components/bullet-checkbox/bullet-checkbox.scss';
 @import '@~Components/chart-donut/chart-donut';
@@ -6,6 +7,20 @@
 @import '../../components/comment/comment.scss';
 @import '../../components/header/header.scss';
 @import '@~Components/footer/footer';
+
+@mixin isFlex(
+  $direction: row,
+  $justify: space-between,
+  $align: flex-start,
+  $wrap: nowrap
+) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+  flex-shrink: 0;
+}
 
 @mixin headerSecond {
   margin: 0;
@@ -16,16 +31,12 @@
 }
 
 .room-details {
-  @include containerWithMargins(
-    $width: 1440px,
-    $height: 1937px,
-    $mt: 0,
-    $ms: auto,
-    $mb: 0
-  );
   @include isFlex($direction: column, $justify: flex-start);
   position: relative;
+  width: 1440px;
+  height: 1937px;
   min-width: 320px;
+  margin: 0 auto;
   background: $light;
   user-select: none;
   overflow: hidden;
@@ -305,7 +316,9 @@
 
 .reviews__info {
   @extend .info__description;
-  @include absoluteTopRight(6px, 1px);
+  position: absolute;
+  top: 6px;
+  right: 1px;
 
   @media (min-width: 1750px) and (max-width: 1920px) {
     font-size: $fs_h2;
@@ -419,7 +432,8 @@
   }
 
   @media (max-width: 1400px) {
-    @include absoluteTopRight();
+    position: absolute;
+    top: 0;
     right: calc((100% - 800px) / 2);
   }
 

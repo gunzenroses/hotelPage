@@ -1,5 +1,9 @@
 .footer__subscription {
-  @include isFlex($direction: column, $justify: flex-start);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex: 1 0 wrap;
   width: 260px;
   height: 148px;
   padding-top: 4px;

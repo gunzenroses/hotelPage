@@ -1,3 +1,18 @@
+@import '../../../assets/styles/colors.scss';
+@import '../../../assets/styles/fonts.scss';
+
+@mixin labelMixin {
+  display: inline-block;
+  height: 15px;
+  letter-spacing: .003em;
+  pointer-events: none;
+
+  @media (min-width: 1750px) and (max-width: 1920px) {
+    font-size: $fs_base;
+    height: $fs_h2;
+  }
+}
+
 .textfield__label_for-email {
   @include labelMixin();
   position: absolute;

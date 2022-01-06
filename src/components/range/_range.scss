@@ -1,5 +1,30 @@
+@import '../../assets/styles/colors.scss';
+@import '../../assets/styles/fonts.scss';
+
+@mixin containerBlock($w: 100%, $h: 100%) {
+  display: block;
+  width: $w;
+  height: $h;
+}
+
+@mixin labelMixin {
+  display: inline-block;
+  height: 15px;
+  letter-spacing: .003em;
+  pointer-events: none;
+
+  @media (min-width: 1750px) and (max-width: 1920px) {
+    font-size: $fs_base;
+    height: $fs_h2;
+  }
+}
+
 .range__container {
-  @include isFlex($direction: column, $justify: flex-start);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: 1 0 nowrap;
   position: relative;
   width: 100%;
   height: auto;
@@ -8,16 +33,20 @@
 
 .range__label {
   @include labelMixin();
-  @include headerThird();
-  margin-top: 2px;
-  margin-bottom: 1.5px;
+  margin: 2px 0 1.5px;
   line-height: $fs_h3;
+  font-size: $fs_h3;
+  font-weight: 700;
   letter-spacing: .001em;
+  color: $dark-shade_most;
+  text-transform: uppercase;
 }
 
 .range__label_right {
   @include labelMixin();
-  @include absoluteTopRight(1px, 0);
+  position: absolute;
+  top: 1px;
+  right: 0;
   margin-top: 0px;
   margin-bottom: 1.5px;
   padding-bottom: 6px;

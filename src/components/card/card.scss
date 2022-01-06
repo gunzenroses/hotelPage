@@ -1,3 +1,6 @@
+@import '../../assets/styles/colors.scss';
+@import '../../assets/styles/fonts.scss';
+
 .card__title {
   width: 100%;
   min-height: 30px;
@@ -27,7 +30,11 @@
 }
 
 .card__row {
-  @include isFlex();
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: 1 0 nowrap;
   width: 100%;
   height: fit-content;
 

@@ -1,3 +1,6 @@
+@import '../../assets/styles/colors.scss';
+@import '../../assets/styles/fonts.scss';
+
 @mixin buttonLike {
   position: relative;
   width: 40px;
@@ -24,16 +27,22 @@
 }
 
 @mixin buttonLikeHeart {
-  @include containerSimple(8px, 8px);
-  @include absoluteTopLeft(6px, 6px);
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 8px;
+  height: 8px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   text-align: center;
 
   @media (min-width: 1750px) and (max-width: 1920px) {
-    @include containerSimple(12px, 12px);
-    @include absoluteTopLeft(4px, 11px);
+    position: absolute;
+    top: 4px;
+    left: 11px;
+    width: 12px;
+    height: 12px;
   }
 }
 
@@ -46,7 +55,9 @@
   }
 
   &__number {
-    @include absoluteTopRight(56%, 35%);
+    position: absolute;
+    top: 56%;
+    right: 35%;
     font-size: 0.7em;
     line-height: 100%;
     transform: translate(30%, -50%);

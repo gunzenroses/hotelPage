@@ -1,5 +1,9 @@
 .textfield_type_login {
-  @include isFlex($direction: column);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex: 1 0 nowrap;
   width: 100%;
   height: 98px;
 

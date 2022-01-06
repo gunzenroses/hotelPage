@@ -1,11 +1,13 @@
-@import 'Styles/main';
-@import './form-elements/form-elements';
-@import './cards/cards';
-@import './headers-n-footers/headers-n-footers';
+@import '../../assets/styles/colors.scss';
+
 @import '../../components/expand/expand.scss';
 @import '../../components/header/header.scss';
 @import '../../components/footer-creative/footer-creative.scss';
 @import '@~Components/footer/footer';
+
+@import './form-elements/form-elements';
+@import './cards/cards';
+@import './headers-n-footers/headers-n-footers';
 
 .uikit {
     background-color: $dark-shade_more;

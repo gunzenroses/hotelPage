@@ -1,7 +1,21 @@
 @import './__item/checkbox-expandable__item.scss';
 
+@mixin isFlex(
+  $direction: row,
+  $justify: space-between,
+  $align: flex-start,
+  $wrap: nowrap
+) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+  flex-shrink: 0;
+}
+
 .checkbox-expand__container {
-  @include containerMedium();
+  @include isFlex($direction: column);
   position: relative;
   width: 266px;
   min-width: 260px;
@@ -11,6 +25,7 @@
   }
 
   @media (max-width: 450px) {
+    width: 280px;
     margin: 0 auto;
   }
 }

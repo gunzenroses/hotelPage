@@ -1,7 +1,11 @@
 @import '../../logo/logo.scss';
 
 .footer__logo_main {
-  @include isFlex($direction: column);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex: 1 0 wrap;
   width: 260px;
   height: 131px;
   margin-right: 38px;
@@ -14,7 +18,9 @@
   }
 
   @media (max-width: 1170px) {
-    @include absoluteTopRight(-11px, 0);
+    position: absolute;
+    top: -11px;
+    right: 0;
     width: 106px;
     height: 40px;
     margin-right: 50px;
