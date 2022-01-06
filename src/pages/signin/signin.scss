@@ -1,5 +1,7 @@
-@import 'Styles/main';
+@import '../../assets/styles/general.scss';
+
 @import '../../components/carousel/carousel.scss';
+@import '../../components/card-singin/card-signin.scss';
 @import 'Pages/registration/registration.scss';
 @import '../../components/expand/expand.scss';
 @import '../../components/header/header.scss';
