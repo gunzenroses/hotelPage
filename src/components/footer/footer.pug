@@ -1,8 +1,8 @@
-include ./footer__company-info.pug
-include ./footer__info_hidden.pug
-include ./footer__info_visible.pug
-include ./footer__subscription.pug
 include ../social-nets/social-nets.pug
+include ./__company-info/footer__company-info.pug
+include ./__info/_hidden/footer__info_hidden.pug
+include ./__info/_visible/footer__info_visible.pug
+include ./__subsciption/footer__subscription.pug
 
 mixin footer(theme="main", footerText = "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»")
   - var navigations = ["О нас", "Новости", "Служба поддержки", "Услуги"]
