@@ -1,0 +1,47 @@
+@import '../../logo/logo.scss';
+
+.footer__logo_main {
+  @include isFlex($direction: column);
+  width: 260px;
+  height: 131px;
+  margin-right: 38px;
+  letter-spacing: .001em;
+
+  @media (max-width: 1340px) {
+    width: 200px;
+    margin: 0;
+    margin-right: 20px;
+  }
+
+  @media (max-width: 1170px) {
+    @include absoluteTopRight(-11px, 0);
+    width: 106px;
+    height: 40px;
+    margin-right: 50px;
+  }
+
+  @media (max-width: 800px) {
+    position: relative;
+    width: 60%;
+    margin-right: 0;
+    margin-bottom: 20px;
+    align-items: center;
+  }
+}
+
+.footer__logo_landing,
+.footer__logo_in-registration,
+.footer__logo_in-details,
+.footer__logo_in-search,
+.footer__logo_in-signin {
+  @extend .footer__logo_main;
+}
+
+.footer__logo_landing {
+  height: 130px;
+}
+
+.footer__logo_in-signin {
+  height: 131px;
+}
+  
