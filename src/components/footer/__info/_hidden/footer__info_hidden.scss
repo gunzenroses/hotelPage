@@ -1,0 +1,27 @@
+.footer__info_hidden {
+  display: none;
+
+  @media (max-width: 470px) {
+    @include isFlex($direction: column);
+    min-width: 260px;
+    width: 260px;
+    height: auto;
+    margin-bottom: 20px;
+    font-weight: 400;
+  }
+}
+
+@media (max-width: 470px) {
+  .footer__dropdown_in-navigation,
+  .footer__dropdown_in-about,
+  .footer__dropdown_in-support {
+    @include containerDimed();
+    position: absolute;
+    top: 20px;
+    width: 200px;
+    margin: 0;
+    padding: 10px 15px;
+    line-height: 18px;
+    z-index: 2;
+  }
+}

@@ -1,0 +1,50 @@
+.footer__info_main {
+  margin-right: 50px;
+
+  @media (min-width: 1500px) and (max-width: 1920px){
+      margin-right: 0;
+  }
+
+  @media (max-width: 1340px) {
+    margin-right: 0;
+  }
+}
+
+.footer__info_main {
+  @include isFlex($justify: flex-start);
+  height: 168px;
+  width: 548px;
+  padding-top: 4px;
+
+  @media (min-width: 1500px) and (max-width: 1920px) {
+    width: 50%;
+    justify-content: space-between;
+  }
+
+  @media (max-width: 1340px) {
+    width: 35%;
+    min-width: 415px;
+  }
+
+  @media (max-width: 800px) {
+    width: 430px;
+    height: 120px;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: 470px) {
+    display: none;
+  }
+}
+
+.footer__info_landing,
+.footer__info_in-registration,
+.footer__info_in-search,
+.footer__info_in-signin,
+.footer__info_in-details {
+  @extend .footer__info_main;
+}
+
+.footer__info_in-details {
+  letter-spacing: .001em;
+}
