@@ -1,4 +1,5 @@
-@import 'Styles/main';
+@import '../../assets/styles/colors.scss';
+@import '../../assets/styles/fonts.scss';
 @import '../../components/date-range/_common/date-range_common.scss';
 @import '../../components/dropdown/_type_guests/dropdown_type_guests.scss';
 @import '../../components/dropdown/_type_rooms/dropdown_type_rooms.scss';
@@ -6,6 +7,20 @@
 @import '../../components/expand/expand.scss';
 @import '../../components/header/header.scss';
 @import '@~Components/footer/footer';
+
+@mixin isFlex(
+  $direction: row,
+  $justify: space-between,
+  $align: flex-start,
+  $wrap: nowrap
+) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+  flex-shrink: 0;
+}
 
 @mixin formMargin {
   @media (min-width: 1650px) and (max-width: 1920px) {
@@ -18,15 +33,13 @@
 }
 
 .search-room {
-  @include containerWithMargins(
-    $width: 1440px,
-    $height: fit-content,
-    $ms: auto,
-  );
   @include isFlex($direction: column, $justify: flex-start);
   position: relative;
+  width: 1440px;
+  height: fit-content;
+  margin: 0 auto;
   background: $light;
-  overflow: auto; //to avoid margin-collapse
+  overflow: hidden; //to avoid margin-collapse
   user-select: none;
 
   @media (max-width: 1920px) {

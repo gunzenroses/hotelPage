@@ -1,5 +1,11 @@
+@import '../../assets/styles/colors.scss';
+
 .textfield_type_birthday {
-  @include isFlex($justify: flex-start, $align: center);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 1 0 wrap;
   position: relative;
   width: 100%;
   min-width: 260px;

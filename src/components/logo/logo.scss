@@ -1,5 +1,9 @@
 .logo__link {
-  @include isFlex($align: center);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: 1 0 nowrap;
   width: 107px;
   height: 40px;
   line-height: 40px;
@@ -11,14 +15,16 @@
 }
 
 .logo__pic {
-  @include containerSimple(40px, 40px);
   position: relative;
+  width: 40px;
+  height: 40px;
   border: none;
 }
 
 .logo__name {
-  @include containerSimple(54px, 15px);
   position: relative;
+  width: 54px;
+  height: 15px;
   margin-right: 1px;
   border: none;
 

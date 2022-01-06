@@ -1,7 +1,11 @@
 @import './__item/button-rate__item.scss';
 
 .button-rate {
-  @include isFlex($direction: row-reverse);
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: 1 0 nowrap;
   width: 120px;
   height: fit-content;
   font-size: 29px;

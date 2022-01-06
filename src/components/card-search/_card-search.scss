@@ -1,10 +1,15 @@
+@import '../../assets/styles/colors.scss';
 @import '../button-submit/button-submit.scss';
 @import '../card/card.scss';
 @import '../date-range/_separete/date-range_separate.scss';
 @import '../dropdown/_type_guests/dropdown_type_guests.scss';
 
 .card-search {
-  @include isFlex($direction: column, $justify: flex-start);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: 1 0 nowrap;
   width: 380px;
   height: 374px;
   padding: 39px 29px 0 29px;

@@ -1,8 +1,14 @@
+@import '../../../../assets/styles/colors.scss';
+
 .footer__info_hidden {
   display: none;
 
   @media (max-width: 470px) {
-    @include isFlex($direction: column);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex: 1 0 wrap;
     min-width: 260px;
     width: 260px;
     height: auto;

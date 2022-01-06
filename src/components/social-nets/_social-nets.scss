@@ -1,3 +1,6 @@
+@import '../../assets/styles/colors.scss';
+@import '../../assets/styles/fonts.scss';
+
 .social-nets {
   text-decoration: none;
   cursor: pointer;
@@ -8,7 +11,9 @@
   width: 26px;
 
   @media (min-width: 1750px) and (max-width: 1920px) {
-    @include containerBlock(40px, 40px);
+    display: block;
+    width: 40px;
+    height: 40px;
   }
 }
 
@@ -70,7 +75,9 @@
 .fa-instagram_in-details::before,
 .fa-instagram_in-registration::before,
 .fa-instagram_in-signin::before {
-  @include absoluteTopLeft(-1px);
+  position: absolute;
+  top: -1px;
+  left: 0;
   width: 24px;
   font-size: $fs_h1;
   font-family: $font-awesome;
@@ -80,7 +87,9 @@
   background-clip: text;
 
   @media (min-width: 1650px) and (max-width: 1920px) {
-    @include containerBlock(40px, 40px);
+    display: block;
+    width: 40px;
+    height: 40px;
   }
 }
 

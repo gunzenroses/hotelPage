@@ -1,6 +1,20 @@
 @import './_hidden/footer__info_hidden.scss';
 @import './_visible/footer__info_visible.scss';
 
+@mixin isFlex(
+  $direction: row,
+  $justify: space-between,
+  $align: flex-start,
+  $wrap: nowrap
+) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+  flex-shrink: 0;
+}
+
 .footer__navigation {
   @include isFlex($direction: column);
   width: 200px;

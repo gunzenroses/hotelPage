@@ -1,9 +1,14 @@
+@import '../../assets/styles/colors.scss';
 @import '../card/card.scss';
 @import '../button-link/button-link.scss';
 @import '../button-submit/button-submit.scss';
 
 .card-signin {
-  @include isFlex($direction: column, $justify: flex-start);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: 1 0 nowrap;
   width: 100%;
   height: fit-content;
   min-height: 358px;
@@ -30,6 +35,8 @@
 }
 
 .card-signin__button-link {
-  @include containerBlock(99px, 44px);
+  display: block;
+  width: 99px;
+  height: 44px;
   line-height: 40px;
 }

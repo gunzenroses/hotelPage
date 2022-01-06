@@ -1,5 +1,15 @@
-.checkbox-expand__item { 
-  @include isFlex($justify: flex-start);
+@mixin containerBlock($w: 100%, $h: 100%) {
+  display: block;
+  width: $w;
+  height: $h;
+}
+
+.checkbox-expand__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex: 1 0 wrap;
   font-family: $montserrat;
   font-weight: 400;
   font-size: $fs_base;
@@ -60,8 +70,10 @@
 
 .checkbox-expand__real:checked + .checkbox-expand__fake::before {
   content: '';
-  @include absoluteTopLeft(45%, 50%);
   @include containerBlock(4px, 6px);
+  position: absolute;
+  top: 45%;
+  left: 50%;
   transform: translate(-50%, -50%) rotate(45deg);
   border-image: $linearGradientLilac;
   border-image-slice: 1;

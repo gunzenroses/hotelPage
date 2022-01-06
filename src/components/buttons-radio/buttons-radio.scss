@@ -1,7 +1,11 @@
 @import './__item/button-radio__item.scss';
 
 .radio__container {
-  @include isFlex();
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: 1 0 nowrap;
   width: 100%;
   height: 24px;
 

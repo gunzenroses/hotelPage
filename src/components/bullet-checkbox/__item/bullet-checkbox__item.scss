@@ -1,7 +1,11 @@
 .bullet-checkbox {
     &__item {
-      @include isFlex($justify: start);
       position: relative;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-wrap: 1 0 nowrap;
     }
   
     &__icon {

@@ -1,15 +1,7 @@
-/* Base */
-@import './fonts.scss';
-
-/* Utils */
-@import './mixins';
-@import './colors';
-
 /* Layout */
-@import './general';
+@import './general.scss';
 
 /* Components */
-@import '@~Components/checkbox/checkbox';
 @import '@~Components/checkbox-expandable/checkbox-expandable';
 @import '@~Components/navlink/navlink';
 @import '@~Components/navlink-dropdown/navlink-dropdown';

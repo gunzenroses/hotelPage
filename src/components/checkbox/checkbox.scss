@@ -1,7 +1,11 @@
 @import './__item/checkbox__item.scss';
 
 .checkbox__container {
-  @include isFlex($direction: column);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex: 1 0 wrap;
   appearance: none;
   width: 224px;
   margin: 0;

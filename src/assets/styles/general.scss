@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+html,
+body {
+  margin: 0 auto;
+  padding: 0;
+  line-height: 14.63px;
+  -webkit-text-size-adjust: 100%;
+  font-size: $fs_base;
+  letter-spacing: .05em;
+  font-family: $montserrat;
+  font-weight: 400;
+  color: $dark-shade_more;
+}
+
+.label {
+  display: inline-block;
+  height: 15px;
+  margin: 0;
+  line-height: $fs_h3;
+  font-size: $fs_h3;
+  font-weight: 700;
+  letter-spacing: .003em;
+  color: $dark-shade_most;
+  text-transform: uppercase;
+  pointer-events: none;
+
+  @media (min-width: 1750px) and (max-width: 1920px) {
+    font-size: $fs_base;
+    height: $fs_h2;
+  }
+
+  &_right {
+    position: absolute;
+    right: 0;
+    display: inline-block;
+    height: 15px;
+    margin: 0;
+    line-height: $fs_h3;
+    font-size: $fs_h3;
+    font-weight: 400;
+    letter-spacing: .003em;
+    color: $dark-shade_most;
+  text-transform: uppercase;
+    text-align: right;
+    pointer-events: none;
+
+    @media (min-width: 1750px) and (max-width: 1920px) {
+      font-size: $fs_base;
+      height: $fs_h2;
+    }
+  }
+} 
+
+.uikit-logo {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 48px;
+  height: 48px;
+  border: none;
+
+  @media (max-width: 750px) {
+    top: 10px;
+    left: 10px;
+  }
+}
+
+.error {
+  position: relative;
+  display: block;
+  height: fit-content;
+  font-size: $fs_h3;
+  color: $error;
+}

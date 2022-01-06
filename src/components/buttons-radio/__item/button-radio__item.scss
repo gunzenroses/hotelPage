@@ -1,5 +1,9 @@
 .radio__item {
-  @include isFlex($justify: flex-start);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: 1 0 nowrap;
   width: 104px;
   height: 24px;
   font-weight: 400;
@@ -48,8 +52,12 @@
 
 .radio__real:checked + .radio__fake::before {
   content: '';
-  @include absoluteTopLeft(3px, 3px);
-  @include containerBlock(12px, 12px);
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  display: block;
+  width: 12px;
+  height: 12px;
   background: $linearGradientLilac;
   border-radius: 50%;
 }

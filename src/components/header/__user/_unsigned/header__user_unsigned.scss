@@ -1,7 +1,9 @@
 @import '../../../button-link/button-link.scss';
 
 .header__signin {
-  @include containerBlock(87px, 34px);
+  display: block;
+  width: 87px;
+  height: 34px;
   line-height: 30px;
 }
 
@@ -11,7 +13,11 @@
 }
 
 .header__buttons {
-  @include isFlex($align: center);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: 1 0 nowrap;
   width: 303px;
   height: 34px;
 
@@ -21,7 +27,9 @@
 }
 
 .header__registration {
-  @include containerBlock(196px, 34px);
+  display: block;
+  width: 196px;
+  height: 34px;
   line-height: 34px;
 
   @media (max-width: 550px) {

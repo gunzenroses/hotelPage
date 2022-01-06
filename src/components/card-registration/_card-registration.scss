@@ -1,3 +1,4 @@
+@import '../../assets/styles/colors.scss';
 @import '../card/card.scss';
 @import '../button-link/button-link.scss';
 @import '../button-submit/button-submit.scss';
@@ -5,7 +6,11 @@
 @import '../buttons-radio/buttons-radio.scss';
 
 .card-registration {
-  @include isFlex($direction: column, $justify: flex-start);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: 1 0 nowrap;
   width: 380px;
   height: fit-content;
   min-height: 645px;
@@ -34,7 +39,9 @@
 }
 
 .card-registration__button-link {
-  @include containerBlock(99px, 44px);
+  display: block;
+  width: 99px;
+  height: 44px;
   line-height: 40px;
 }
 
