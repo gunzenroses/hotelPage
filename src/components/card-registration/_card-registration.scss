@@ -1,3 +1,9 @@
+@import '../card/card.scss';
+@import '../button-link/button-link.scss';
+@import '../button-submit/button-submit.scss';
+@import '../button-toggle/button-toggle.scss';
+@import '../buttons-radio/buttons-radio.scss';
+
 .card-registration {
   @include isFlex($direction: column, $justify: flex-start);
   @include containerShadowed();
