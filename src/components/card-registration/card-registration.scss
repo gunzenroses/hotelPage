@@ -1,9 +1,9 @@
-@import '../../assets/styles/colors.scss';
-@import '../card/card.scss';
-@import '../button-link/button-link.scss';
-@import '../button-submit/button-submit.scss';
-@import '../button-toggle/button-toggle.scss';
-@import '../buttons-radio/buttons-radio.scss';
+@import '@~Assets/styles/colors.scss';
+@import '@~Components/button-link/button-link.scss';
+@import '@~Components/button-submit/button-submit.scss';
+@import '@~Components/button-toggle/button-toggle.scss';
+@import '@~Components/buttons-radio/buttons-radio.scss';
+@import '@~Components/card/card.scss';
 
 .card-registration {
   display: flex;

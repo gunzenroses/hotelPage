@@ -1,6 +1,6 @@
-@import '../../assets/styles/colors.scss';
-@import '../__item/dropdown__item.scss';
-@import '../dropdown.scss';
+@import '@~Assets/styles/colors.scss';
+@import '@~Components/__item/dropdown__item.scss';
+@import '@~Components/dropdown.scss';
 
 .dropdown__container_type_guests {
   display: flex;

@@ -1,8 +1,9 @@
-@import '../../assets/styles/colors.scss';
-@import '../../assets/styles/fonts.scss';
-@import '../button-submit/button-submit.scss';
-@import '../date-range/_separete/date-range_separate.scss';
-@import '../dropdown/_type_guests/dropdown_type_guests.scss';
+@import '@~Assets/styles/colors.scss';
+@import '@~Assets/styles/fonts.scss';
+@import '@~Components/button-submit/button-submit.scss';
+@import '@~Components/date-range/_separete/date-range_separate.scss';
+@import '@~Components/dropdown/_type_guests/dropdown_type_guests.scss';
+
 @import './__price-info/card-booking__price-info.scss';
 @import './__room-info/card-booking__room-info.scss';
 

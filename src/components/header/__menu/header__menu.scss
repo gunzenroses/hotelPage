@@ -1,6 +1,7 @@
-@import '../../../assets/styles/colors.scss';
-@import '../../../components/navlink-dropdown/navlink-dropdown.scss';
-@import '../../navlink/navlink.scss';
+@import '@~Assets/styles/colors.scss';
+@import '@~Components/navlink-dropdown/navlink-dropdown.scss';
+@import '@~Components/navlink/navlink.scss';
+
 @import '../__user/_signed/header__user_signed.scss';
 @import '../__user/_unsigned/header__user_unsigned.scss';
 

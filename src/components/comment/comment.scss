@@ -1,7 +1,7 @@
-@import '../../assets/styles/colors.scss';
-@import '../../assets/styles/fonts.scss';
-@import '../button-like/button-like.scss';
-@import '../info/info.scss';
+@import '@~Assets/styles/colors.scss';
+@import '@~Assets/styles/fonts.scss';
+@import '@~Components/button-like/button-like.scss';
+@import '@~Components/info/info.scss';
 
 @mixin isFlex(
   $direction: row,
