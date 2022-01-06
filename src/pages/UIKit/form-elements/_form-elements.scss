@@ -1,3 +1,20 @@
+@import 'Styles/main';
+@import '../../../components/date-range/_common/date-range_common.scss';
+@import '../../../components/date-range/_separete/date-range_separate.scss';
+@import '../../../components/dropdown/_type_guests/dropdown_type_guests.scss';
+@import '../../../components/dropdown/_type_rooms/dropdown_type_rooms.scss';
+@import '../../../components/comment/comment.scss';
+@import '../../../components/badge/badge.scss';
+@import '../../../components/bullet-checkbox/bullet-checkbox.scss';
+@import '../../../components/button/button.scss';
+@import '../../../components/button-like/button-like.scss';
+@import '../../../components/button-link/button-link.scss';
+@import '../../../components/button-rate/button-rate.scss';
+@import '../../../components/button-submit/button-submit.scss';
+@import '../../../components/button-toggle/button-toggle.scss';
+@import '../../../components/buttons-radio/buttons-radio.scss';
+@import '../../../components/checkbox/checkbox.scss';
+
 .form-elements_outer {
   @include containerWithMargins(
     $width: 1440px,
@@ -134,9 +151,15 @@
 
 .form-elements__container_checkbox {
   @include isFlex($direction: column);
-  @include widget();
+  position: relative;
+  width: 100%;
   height: 127px;
+  min-width: 260px;
   margin-top: 2px;
+
+  @media (max-width: 450px) {
+    margin: 0 auto;
+  }
 }
 
 .form-elements__container_radio {

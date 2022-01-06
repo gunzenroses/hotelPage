@@ -1,4 +1,11 @@
 @import 'Styles/main';
+@import '../../components/date-range/_common/date-range_common.scss';
+@import '../../components/dropdown/_type_guests/dropdown_type_guests.scss';
+@import '../../components/dropdown/_type_rooms/dropdown_type_rooms.scss';
+@import '../../components/checkbox/checkbox.scss';
+@import '../../components/expand/expand.scss';
+@import '../../components/header/header.scss';
+@import '@~Components/footer/footer';
 
 .search-room {
   @include containerWithMargins(

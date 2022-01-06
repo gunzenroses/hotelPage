@@ -1,5 +1,8 @@
 @import 'Styles/main';
+@import '../../components/carousel/carousel.scss';
 @import 'Pages/registration/registration.scss';
+@import '../../components/expand/expand.scss';
+@import '../../components/header/header.scss';
 
 .sign-in {
   @extend .registration;

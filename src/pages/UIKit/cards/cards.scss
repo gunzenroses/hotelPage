@@ -1,3 +1,6 @@
+@import 'Styles/main';
+@import '../../../components/calendar/calendar.scss';
+
 .cards_outer {
   @include containerWithMargins(
     $width: 1440px,
