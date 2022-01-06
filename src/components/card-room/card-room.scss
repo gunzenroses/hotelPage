@@ -1,7 +1,8 @@
-@import '../../assets/styles/colors.scss';
-@import '../button-rate/button-rate.scss';
-@import '../card/card.scss';
-@import '../room-carousel/room-carousel.scss';
+@import '@~Assets/styles/colors.scss';
+@import '@~Components/button-rate/button-rate.scss';
+@import '@~Components/card/card.scss';
+@import '@~Components/room-carousel/room-carousel.scss';
+
 @import './__info/card-room__info.scss';
 @import './__review/card-room__review.scss';
 

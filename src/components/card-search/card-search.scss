@@ -1,8 +1,8 @@
-@import '../../assets/styles/colors.scss';
-@import '../button-submit/button-submit.scss';
-@import '../card/card.scss';
-@import '../date-range/_separete/date-range_separate.scss';
-@import '../dropdown/_type_guests/dropdown_type_guests.scss';
+@import '@~Assets/styles/colors.scss';
+@import '@~Components/button-submit/button-submit.scss';
+@import '@~Components/card/card.scss';
+@import '@~Components/date-range/_separete/date-range_separate.scss';
+@import '@~Components/dropdown/_type_guests/dropdown_type_guests.scss';
 
 .card-search {
   display: flex;

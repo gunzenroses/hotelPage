@@ -1,11 +1,11 @@
-@import '../../assets/styles/colors.scss';
-@import '../../assets/styles/fonts.scss';
-@import '../../assets/styles/general.scss';
-@import '../../components/carousel-landing/carousel-landing.scss';
-@import '../../components/card-search/card-search.scss';
-@import '../../components/expand/expand.scss';
-@import '../../components/header/header.scss';
+@import '@~Assets/styles/colors.scss';
+@import '@~Assets/styles/fonts.scss';
+@import '@~Assets/styles/general.scss';
+@import '@~Components/carousel-landing/carousel-landing.scss';
+@import '@~Components/card-search/card-search.scss';
+@import '@~Components/expand/expand.scss';
 @import '@~Components/footer/footer';
+@import '@~Components/header/header.scss';
 
 @mixin isFlex(
   $direction: row,

@@ -1,9 +1,9 @@
-@import '../../../components/calendar/calendar.scss';
-@import '../../../components/card-booking/card-booking.scss';
-@import '../../../components/card-registration/card-registration.scss';
-@import '../../../components/card-room/card-room.scss';
-@import '../../../components/card-search/card-search.scss';
-@import '../../../components/card-singin/card-signin.scss';
+@import '@~Components/calendar/calendar.scss';
+@import '@~Components/card-booking/card-booking.scss';
+@import '@~Components/card-registration/card-registration.scss';
+@import '@~Components/card-room/card-room.scss';
+@import '@~Components/card-search/card-search.scss';
+@import '@~Components/card-singin/card-signin.scss';
 
 @mixin marginTop {
   @media (max-width: 1400px) {

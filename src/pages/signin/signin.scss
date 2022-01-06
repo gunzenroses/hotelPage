@@ -1,10 +1,11 @@
-@import '../../assets/styles/general.scss';
+@import '@~Assets/styles/general.scss';
+@import '@~Components/carousel/carousel.scss';
+@import '@~Components/card-singin/card-signin.scss';
+@import '@~Components/expand/expand.scss';
+@import '@~Components/header/header.scss';
 
-@import '../../components/carousel/carousel.scss';
-@import '../../components/card-singin/card-signin.scss';
-@import 'Pages/registration/registration.scss';
-@import '../../components/expand/expand.scss';
-@import '../../components/header/header.scss';
+@import '../registration/registration.scss';
+
 
 .sign-in {
   @extend .registration;

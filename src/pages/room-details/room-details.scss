@@ -1,14 +1,14 @@
-@import '../../assets/styles/general.scss';
-@import '../../assets/styles/colors.scss';
-@import '../../assets/styles/fonts.scss';
-@import '../../components/badge/badge.scss';
-@import '../../components/bullet-checkbox/bullet-checkbox.scss';
+@import '@~Assets/styles/general.scss';
+@import '@~Assets/styles/colors.scss';
+@import '@~Assets/styles/fonts.scss';
+@import '@~Components/badge/badge.scss';
+@import '@~Components/bullet-checkbox/bullet-checkbox.scss';
+@import '@~Components/card-booking/card-booking.scss';
 @import '@~Components/chart-donut/chart-donut';
-@import '../../components/expand/expand.scss';
-@import '../../components/card-booking/card-booking.scss';
-@import '../../components/comment/comment.scss';
-@import '../../components/header/header.scss';
+@import '@~Components/comment/comment.scss';
+@import '@~Components/expand/expand.scss';
 @import '@~Components/footer/footer';
+@import '@~Components/header/header.scss';
 
 @mixin isFlex(
   $direction: row,

@@ -1,4 +1,4 @@
-mixin donutChart(cData={})
+mixin donut-chart(cData={})
   - var {excellent=0, good=0, satisfied=0, dissapointed=0} = cData
   - var totalData = parseFloat(excellent) + parseFloat(good) + parseFloat(satisfied) + parseFloat(dissapointed)
   - var dissData = dissapointed / totalData * 100;
