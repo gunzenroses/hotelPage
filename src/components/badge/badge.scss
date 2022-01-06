@@ -1,3 +1,5 @@
+@import '../info/info.scss';
+
 .badge {
   @include isFlex($justify: start);
   width: 280px;
