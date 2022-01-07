@@ -26,7 +26,7 @@
           ["Main", "./src/"],
           ["Fonts", "./src/assets/fonts/"],
           ["Images", "./src/assets/images/"],
-          ["Scripts", "./src/assets/scripts/"],
+          ["Scripts", "./src/scripts/"],
           ["Styles", "./src/assets/styles/"],
           ["Components", "./src/components/"],
           ["Pages", ".src/pages/]"]
