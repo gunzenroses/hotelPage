@@ -14,7 +14,7 @@
   flex-shrink: 0;
 }
 
-.checkbox-expand__container {
+.checkbox-expandable__container {
   @include isFlex($direction: column);
   position: relative;
   width: 266px;
@@ -30,7 +30,7 @@
   }
 }
 
-.checkbox-expand__dropdown {
+.checkbox-expandable__dropdown {
   @include isFlex($direction: column-reverse);
   position: relative;
   width: inherit;
@@ -41,7 +41,7 @@
   }
 }
 
-.checkbox-expand__content {
+.checkbox-expandable__content {
   appearance: none;
   height: 171px;
   width: 266px;
