@@ -6,6 +6,7 @@ mixin donut-chart(cData={})
   - var goodData = good / totalData * 100;
   - var excelData = excellent / totalData * 100;
   - var donutData = {dissData, satisData, goodData, excelData} 
+  - var donutMarks = {excellent: "Великолепно",good: "Хорошо",satisfied: "Удовлетворительно",disappointed: "Разочарован"};
   - var counter = 1;
   - var dashOffsetValue = parseFloat(25 - 0.5);
   - var prevArraySumm = 0;
@@ -37,22 +38,14 @@ mixin donut-chart(cData={})
             circle.donut__segment(cx="50%" cy="50%" r="15.91549430918954" fill="transparent" stroke=`url(#gradient_${mark})` stroke-width="1" stroke-dasharray=`${dashValue} ${dashLeft}` stroke-dashoffset=`${dashOffsetValue}` aria-labelledby=`donut-segment-${counter}-title`)
             title(id=`donut-segment-${counter++}-title` data-some= `${prevArraySumm}`)!= mark
             - dashOffsetValue -= percent;
-        // img end
+        // img ends
 
       .donut__text
         p.donut__number!= totalData
         p.donut__label голосов
     figcaption.donut__caption
       ul.donut-key__list(aria-hidden="true" role="presentation")
-        li.donut-key__item
-          span.li_circle.excellent
-          | Великолепно
-        li.donut-key__item
-          span.li_circle.good
-          | Хорошо
-        li.donut-key__item
-          span.li_circle.satisfied
-          | Удовлетворительно
-        li.donut-key__item
-          span.li_circle.disappointed
-          | Разочарован
+        each val, key in donutMarks
+          li.donut-key__item
+            span.li_circle(class= key)
+            != val
