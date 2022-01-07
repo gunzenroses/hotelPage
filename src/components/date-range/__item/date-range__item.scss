@@ -58,7 +58,7 @@
   }
 }
 
-.date-range__item-container {
+.date-range__item {
     @include isFlex($direction: column);
     width: 150px;
     height: 100%;
