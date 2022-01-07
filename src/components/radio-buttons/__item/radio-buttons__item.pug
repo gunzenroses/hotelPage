@@ -1,0 +1,9 @@
+mixin radio-buttons__item(inputId, ifChecked, buttonTitle)
+  label(for=inputId).radio-buttons__item
+    input.radio-buttons__real(
+      type="radio" name="gender" id=inputId value=inputId checked=ifChecked)
+    if buttonTitle == "Мужчина"
+      span.radio-buttons__fake_type_male
+    else
+      span.radio-buttons__fake
+    span(class="radio-buttons__title")= buttonTitle
