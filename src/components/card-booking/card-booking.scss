@@ -21,6 +21,16 @@
   flex-shrink: 0;
 }
 
+@mixin cardBookingSummary {
+  @include isFlex();
+  position: relative;
+  line-height: 24px;
+  font-size: $fs_h2;
+  color: $dark-shade_most;
+  font-weight: 700;
+  letter-spacing: .01em;
+}
+
 .card-booking {
   @include isFlex($direction: column, $justify: flex-start);
   width: 380px;
@@ -66,19 +76,14 @@
 }
 
 .card-booking__summary {
-  @include isFlex();
-  position: relative;
+  @include cardBookingSummary();
   width: 100%;
   margin-left: 1px;
-  line-height: 24px;
-  font-size: $fs_h2;
-  color: $dark-shade_most;
-  font-weight: 700;
-  letter-spacing: .01em;
 }
 
 .card-booking__summary_in-uikit {
-  @extend .card-booking__summary;
+  @include cardBookingSummary();
+  width: 103%;
 }
 
 .card-booking__summary_in-details {

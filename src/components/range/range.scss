@@ -51,11 +51,16 @@
   margin-bottom: 1.5px;
   padding-bottom: 6px;
   padding-right: 1px;  
+  border: none;
   line-height: $fs_h3;
+  font-family: inherit;
   font-size: $fs_h3;
   font-weight: 400;
   color: $dark-shade_medium;
+  appearance: none;
+  background: transparent;
   text-align: right;
+  overflow: visible;
   text-transform: uppercase;
 }
 
