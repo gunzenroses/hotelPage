@@ -1,28 +1,31 @@
-include ../../../components/date-range/_separete/date-range_separate.pug
-include ../../../components/date-range/_common/date-range_common.pug
-include ../../../components/textfield/__container/textfield__container_type_email.pug
-include ../../../components/textfield/__container/textfield__container_type_birthday.pug
-include ../../../components/textfield/__container/textfield__container_type_text.pug
-include ../../../components/textfield/__container/textfield__container_type_subscribe.pug
-include ../../../components/calendar/calendar.pug
-include ../../../components/checkbox/checkbox.pug
+include ../../../components/badge/badge.pug
+include ../../../components/bullet-checkbox/bullet-checkbox.pug
 include ../../../components/buttons-radio/buttons-radio.pug
 include ../../../components/button-toggle/button-toggle.pug
 include ../../../components/button-like/button-like.pug
 include ../../../components/button-rate/button-rate.pug
-include ../../../components/range/range.pug
 include ../../../components/button-link/button-link.pug
 include ../../../components/button-submit/button-submit.pug
 include ../../../components/button/button.pug
-include ../../../components/navlink/navlink.pug
-include ../../../components/pagination/pagination.pug
+include ../../../components/calendar/calendar.pug
+include ../../../components/checkbox/checkbox.pug
+include ../../../components/checkbox-expandable/checkbox-expandable.pug
+include ../../../components/comment/comment.pug
+include ../../../components/date-range/_separete/date-range_separate.pug
+include ../../../components/date-range/_common/date-range_common.pug
 include ../../../components/dropdown/_type_guests/dropdown_type_guests.pug
 include ../../../components/dropdown/_type_rooms/dropdown_type_rooms.pug
-include ../../../components/checkbox-expandable/checkbox-expandable.pug
-include ../../../components/bullet-checkbox/bullet-checkbox.pug
-include ../../../components/badge/badge.pug
-include ../../../components/comment/comment.pug
+include ../../../components/range/range.pug
 include ../../../components/rich-checkbox/rich-checkbox.pug
+include ../../../components/navlink/navlink.pug
+include ../../../components/pagination/pagination.pug
+include ../../../components/textfield/textfield.pug
+include ../../../components/textfield/__label/textfield__label.pug
+include ../../../components/textfield/_type/_birthday/textfield_type_birthday.pug
+include ../../../components/textfield/_type/_email/textfield_type_email.pug
+include ../../../components/textfield/_type/_subscribe/textfield_type_subscribe.pug
+
+
 
 block variables
   - var title = "UIKit";
@@ -46,13 +49,17 @@ block content
       .form-elements__group_first
         .form-elements__container_first
           .form-elements__container_email
-            +textfield__container_type_email("Text field", "default")
+            .textfield__container
+              +textfield__label("Text field", "default", "textfield__label_for-email")
+              +textfield_type_email()
           .form-elements__container_name
-            +textfield__container_type_text("Text field", "hover / focus", "This is pretty awesome")
+            .textfield__container
+              +textfield__label("Text field", "hover / focus", "textfield__label_for-name")
+              +textfield("", "Text", "This is pretty awesome", "text", "20", autofocus=false)
           .form-elements__container_guests
             +dropdown_type_guests("dropdown", "dropdown_guests_0", "", "dropdownGuestsInput_0")
           .form-elements__container_birthday
-            +textfield__container_type_birthday("Masked text field", "")
+            +textfield_type_birthday("Masked text field", "")
 
         .form-elements__container_second
           .form-elements__container_date-range_separate
@@ -60,7 +67,9 @@ block content
           .form-elements__container_date-range_common
             +date-range_common("calendar2", "filter date dropdown", "19 авг - 23 авг", "")
           .form-elements__container_subscibe
-            +textfield__container_type_subscribe("Subscription text field")
+            .textfield__container
+              +textfield__label("Subscription text field", "")
+              +textfield_type_subscribe()
 
       .form-elements__group_second
         .form-elements__container_checkbox

@@ -19,6 +19,10 @@
 @import '@~Components/pagination/pagination.scss';
 @import '@~Components/range/range.scss';
 @import '@~Components/rich-checkbox/rich-checkbox.scss';
+@import '@~Components/textfield/textfield.scss';
+@import '@~Components/textfield/__label/textfield__label.scss';
+@import '@~Components/textfield/_type/_birthday/textfield_type_birthday.scss';
+@import '@~Components/textfield/_type/_email/textfield_type_email.scss';
 
 @mixin isFlex(
   $direction: row,

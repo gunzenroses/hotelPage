@@ -1,22 +1,13 @@
+include ./__input/textfield__input.pug
+
 mixin textfield(inputClass, placeholder, valueText, nameText, maxText, autofocus=false)
   if inputClass == ""
     div(class="textfield" + inputClass)
-      input(class="textfield__input" type="text" placeholder=placeholder, 
-        value=valueText name=nameText data-rule=nameText, 
-        maxlength=maxText autofocus=autofocus)
-  else if inputClass === "textfield_email"
-    div(class="textfield")
-      input(class="textfield__input" type="email" placeholder=placeholder, 
-        value=valueText name=nameText data-rule=nameText, 
-        maxlength=maxText autofocus=autofocus)
-      button(type="submit" class="arrow_submit") arrow_forward
+      +textfield__input("text", placeholder, valueText, nameText, maxText, autofocus)
   else if inputClass === "password"
     div(class="textfield" + "_type_" + inputClass)
-      input(class="textfield__input" type="password" placeholder=placeholder, 
-        value=valueText name=nameText data-rule=nameText, 
-        maxlength=maxText autofocus=autofocus)
+      +textfield__input("password", placeholder, valueText, nameText, maxText, autofocus)
   else
     div(class="textfield" + "_type_" + inputClass)
-      input(class="textfield__input" type="text" placeholder=placeholder, 
-        value=valueText name=nameText data-rule=nameText, 
-        maxlength=maxText autofocus=autofocus)
+      +textfield__input("text", placeholder, valueText, nameText, maxText, autofocus)
+      

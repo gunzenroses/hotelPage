@@ -1,11 +1,10 @@
-include ../textfield/__container/textfield__container_type_birthday.pug
-include ../textfield/__container/textfield__container_type_login.pug
-include ../textfield/textfield_type_name.pug
-include ../textfield/textfield_type_surname.pug
-include ../button-submit/button-submit.pug
 include ../button-link/button-link.pug
 include ../buttons-radio/buttons-radio.pug
+include ../button-submit/button-submit.pug
 include ../button-toggle/button-toggle.pug
+include ../textfield/_type/_birthday/textfield_type_birthday.pug
+include ../textfield/_type/_login/textfield_type_login.pug
+include ../textfield/_type/_name/textfield_type_name.pug
 
 mixin card-registration(submitText)
   form.card-registration.js-card-registration(method="get" action="./registration.html" )
@@ -13,13 +12,15 @@ mixin card-registration(submitText)
     .card-registration__name
       +textfield_type_name()
     .card-registration__surname
-      +textfield_type_surname()
+      +textfield_type_name("", "Фамилия", "surname")
     .card-registration__radio
       +buttons-radio("gender", true, false)
     .card-registration__birthday
-      +textfield__container_type_birthday("Дата рождения", "")
+      +textfield_type_birthday("Дата рождения", "")
     .card-registration__login
-      +textfield__container_type_login("Данные для входа в сервис", "")
+      .textfield__container
+        +textfield__label("Данные для входа в сервис")
+        +textfield_type_login("")
     .card-registration__specials
       +button-toggle("special offers", false)
     .card-registration__button-submit
