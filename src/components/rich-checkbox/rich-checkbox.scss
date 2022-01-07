@@ -17,46 +17,44 @@
 }
 
 .rich-checkbox {
-  &__container {
-    @include isFlex($direction: column);
+  @include isFlex($direction: column);
+  width: 100%;
+  height: 144px;
+
+  @media (min-width: 1650px) and (max-width: 1920px) {
     width: 100%;
-    height: 144px;
-
-    @media (min-width: 1650px) and (max-width: 1920px) {
-      width: 100%;
-      height: fit-content;
-    }
-
-    @media (max-width: 450px) {
-      width: 100%;
-      min-width: 266px;
-      margin: 0 auto;
-    }
+    height: fit-content;
   }
 
-  &__label {
-    display: inline-block;
-    height: 15px;
-    line-height: $fs_h3;
-    font-size: $fs_h3;
-    letter-spacing: .003em;
-    font-weight: 700;
-    pointer-events: none;
-    text-transform: uppercase;
-
-    @media (min-width: 1750px) and (max-width: 1920px) {
-      font-size: $fs_base;
-      height: $fs_h2;
-    }
-  }
-
-  &__list {
-    @include isFlex($direction: column);
-    appearance: none;
+  @media (max-width: 450px) {
     width: 100%;
-    height: 115px;
-    margin: 0;
-    padding: 0;
-    border: none;
+    min-width: 266px;
+    margin: 0 auto;
   }
+}
+
+.rich-checkbox__label {
+  display: inline-block;
+  height: 15px;
+  line-height: $fs_h3;
+  font-size: $fs_h3;
+  letter-spacing: .003em;
+  font-weight: 700;
+  pointer-events: none;
+  text-transform: uppercase;
+
+  @media (min-width: 1750px) and (max-width: 1920px) {
+    font-size: $fs_base;
+    height: $fs_h2;
+  }
+}
+
+.rich-checkbox__list {
+  @include isFlex($direction: column);
+  appearance: none;
+  width: 100%;
+  height: 115px;
+  margin: 0;
+  padding: 0;
+  border: none;
 }
