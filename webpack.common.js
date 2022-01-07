@@ -27,7 +27,7 @@ module.exports = {
     "signin": "./src/pages/signin/signin.js",
   },
   resolve: {
-    extensions: [".scss", ".sass", ".js"],
+    extensions: [".js", ".scss"],
     alias: {
       Main: path.resolve(__dirname, "src"),
       Fonts: path.resolve(__dirname, "src/assets/fonts/"),
