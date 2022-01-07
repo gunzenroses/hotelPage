@@ -15,7 +15,7 @@
   }
 }
 
-.cards_outer {
+.cards {
   position: relative;
   display: block;
   width: 1440px;
@@ -34,7 +34,7 @@
   }
 }
 
-.cards_inner {
+.cards__content {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

@@ -75,7 +75,7 @@
   }
 }
 
-.form-elements_outer {
+.form-elements {
   width: 1440px;
   height: 1853px;
   margin: 0 auto;
@@ -94,7 +94,7 @@
   }
 }
 
-.form-elements_inner {
+.form-elements__content {
   @include isFlex($wrap: wrap);
   width: 1165px;
   min-width: 320px;
