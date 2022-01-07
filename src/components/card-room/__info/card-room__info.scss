@@ -1,3 +1,5 @@
+@import '@~Assets/styles/media-mixins.scss';
+
 @mixin isFlex(
   $direction: row,
   $justify: space-between,
@@ -49,7 +51,7 @@
   font-weight: 700;
   color: $dark-shade_most;
 
-  @media (min-width: 1750px) and (max-width: 1920px) {
+  @include _1750-1920 {
     font-size: $fs_h2;
   }
 }
@@ -72,7 +74,7 @@
   font-weight: 700;
   color: $dark-shade_most;
 
-  @media (min-width: 1750px) and (max-width: 1920px) {
+  @include _1750-1920 {
     font-size: $fs_h1;
   }
 }
@@ -96,7 +98,7 @@
   font-weight: 700;
   line-height: 23px;
 
-  @media (min-width: 1750px) and (max-width: 1920px) {
+  @include _1750-1920 {
     font-size: $fs_base;
   }
 }
@@ -114,7 +116,7 @@
   letter-spacing: .001em;
   color: $dark-shade_medium;
 
-  @media (min-width: 1750px) and (max-width: 1920px) {
+  @include _1750-1920 {
     font-size: $fs_base;
   }
 }

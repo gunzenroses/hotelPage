@@ -1,3 +1,4 @@
+@import '@~Assets/styles/media-mixins.scss';
 @import '@~Components/button-link/button-link.scss';
 
 .header__signin {
@@ -21,7 +22,7 @@
   width: 303px;
   height: 34px;
 
-  @media (max-width: 550px) {
+  @include _550 {
     width: 200px;
   }
 }
@@ -32,7 +33,7 @@
   height: 34px;
   line-height: 34px;
 
-  @media (max-width: 550px) {
+  @include _550 {
     width: calc(200px - 87px);
   }
 }

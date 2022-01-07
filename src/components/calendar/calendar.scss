@@ -1,4 +1,5 @@
 @import '@~Assets/styles/colors.scss';
+@import '@~Assets/styles/media-mixins.scss';
 @import '@~Assets/styles/fonts.scss';
 
 @mixin isFlex(
@@ -21,7 +22,7 @@
   line-height: 40px;
   cursor: pointer;
 
-  @media (min-width: 1650px) and (max-width: 1920px) {
+  @include _1650-1920 {
     width: 14.28%;
     font-size: $fs_h2;
   }
@@ -67,11 +68,11 @@
   z-index: 3;
   user-select: none;
 
-  @media (min-width: 1650px) and (max-width: 1920px) {
+  @include _1650-1920 {
     width: 100%;
   }
 
-  @media (max-width: 400px) {
+  @include _400 {
     max-width: 280px;
   }
 }
@@ -133,7 +134,7 @@
     min-height: 240px;
     margin: 9px auto 0;
   
-    @media (min-width: 1650px) and (max-width: 1920px) {
+    @include _1650-1920 {
       width: 100%;
     }
   }
@@ -148,7 +149,7 @@
     align-items: center;
     letter-spacing: .01em;
 
-    @media (min-width: 1750px) and (max-width: 1920px) {
+    @include _1750-1920 {
       font-size: $fs_h2;
     }
   }
@@ -187,7 +188,7 @@
     outline: none;
     
   
-    @media (min-width: 1750px) and (max-width: 1920px) {
+    @include _1750-1920 {
       font-size: $fs_base;
     }
   }

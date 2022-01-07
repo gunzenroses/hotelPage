@@ -1,4 +1,5 @@
 @import '@~Assets/styles/colors.scss';
+@import '@~Assets/styles/media-mixins.scss';
 @import '@~Assets/styles/general.scss';
 @import '@~Components/carousel/carousel.scss';
 @import '@~Components/card-registration/card-registration.scss';
@@ -30,7 +31,7 @@
   background: $light;
   user-select: none;
 
-  @media (max-width: 1920px) {
+  @include _1920 {
     width: 100%;
     height: auto;
     border-bottom: 1px solid $dark-shade_less;
@@ -45,13 +46,13 @@
   height: 683px;
   margin: 0 auto;
 
-  @media (max-width: 500px) {
+  @include _500 {
     width: 100vw;
     // carouselRegistration + card-registration + initial top
     height: calc(683 / 1440 * 100vw + 646px + 40px);
   }
 
-  @media (max-width: 380px) {
+  @include _380 {
     height: calc(683 / 1440 * 100vw + 646px);
     min-height: calc(683 / 1440 * 320px + 646px);
   }
@@ -63,15 +64,15 @@
   left: 716px;
   transform: translateX(-48.2%);
 
-  @media (min-width: 1480px) and (max-width: 1920px) {
+  @include _1450-1920 {
     left: 50%;
   }
 
-  @media (max-width: 1400px) {
+  @include _1400 {
     left: 50%;
   }
 
-  @media (max-width: 500px) {
+  @include _500 {
     position: relative;
     left: 0;
     width: fit-content;

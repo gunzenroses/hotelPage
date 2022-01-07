@@ -1,11 +1,12 @@
 @import '@~Assets/styles/colors.scss';
+@import '@~Assets/styles/media-mixins.scss';
 @import '@~Assets/styles/fonts.scss';
 
 .social-net {
   position: relative;
   width: 26px;
 
-  @media (min-width: 1750px) and (max-width: 1920px) {
+  @include _1750-1920 {
     display: block;
     width: 40px;
     height: 40px;
@@ -86,7 +87,7 @@
   -webkit-background-clip: text;
   background-clip: text;
 
-  @media (min-width: 1650px) and (max-width: 1920px) {
+  @include _1650-1920 {
     display: block;
     width: 40px;
     height: 40px;

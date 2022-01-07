@@ -1,4 +1,5 @@
 @import '@~Assets/styles/colors.scss';
+@import '@~Assets/styles/media-mixins.scss';
 @import '@~Assets/styles/fonts.scss';
 @import '@~Components/badge/badge.scss';
 @import '@~Components/bullet-checkbox/bullet-checkbox.scss';
@@ -49,7 +50,7 @@
 @mixin containerMedium {
   @include isFlex($direction: column);
 
-  @media (max-width: 450px) {
+  @include _450 {
     width: 280px;
     margin: 0 auto;
   }
@@ -69,7 +70,7 @@
   letter-spacing: .003em;
   pointer-events: none;
 
-  @media (min-width: 1750px) and (max-width: 1920px) {
+  @include _1750-1920 {
     font-size: $fs_base;
     height: $fs_h2;
   }
@@ -84,12 +85,12 @@
   overflow: auto;
   background: $light;
 
-  @media (max-width: 1400px) {
+  @include _1400 {
     width: 100vw;
     height: auto;
   }
 
-  @media (max-width: 850px) {
+  @include _850 {
     min-width: 320px;
   }
 }
@@ -101,26 +102,26 @@
   margin: 143px 0 128px 141px;
   background: $light;
 
-  @media (max-width: 1400px) {
+  @include _1400 {
     width: 85%;
     height: auto;
     max-width: 1160px;
     margin: 9% auto 9%;
   }
 
-  @media (max-width: 1250px) {
+  @include _1250 {
     justify-content: space-evenly;
     max-width: 890px;
     margin: 7% auto 7%;
   }
 
-  @media (max-width: 970px) {
+  @include _970 {
     justify-content: space-around;
     width: 85%;
     margin: 5% auto 5%;
   }
 
-  @media (max-width: 850px) {
+  @include _850 {
     justify-content: center;
     max-width: 575px;
   }
@@ -130,11 +131,11 @@
   @include containerSimple(321px, 636px);
   margin-right: 117px;
 
-  @media (max-width: 1400px) {
+  @include _1400 {
     margin: 0;
   }
 
-  @media (max-width: 850px) {
+  @include _850 {
     margin-bottom: 40px;
   }
 }
@@ -202,7 +203,7 @@
   @include isFlex($direction: column, $justify: flex-start, $align: flex-start);
   margin-right: 124px;
 
-  @media (max-width: 1400px) {
+  @include _1400 {
     margin: 0;
   }
 }
@@ -215,7 +216,7 @@
   min-width: 260px;
   margin-top: 2px;
 
-  @media (max-width: 450px) {
+  @include _450 {
     margin: 0 auto;
   }
 }
@@ -265,7 +266,7 @@
   height: 49px;
   margin-top: 42px;
 
-  @media (min-width: 1750px) and (max-width: 1920px){
+  @include _1750-1920 {
     width: 130px;
   }
 }
@@ -295,11 +296,11 @@
   @include isFlex($direction: column, $align: flex-start, $justify: flex-start);
   margin-right: 7px;
 
-  @media (max-width: 1400px) {
+  @include _1400 {
     margin: 0;
   }
 
-  @media (max-width: 1250px) {
+  @include _1250 {
     margin-top: 40px;
   }
 }
@@ -315,7 +316,7 @@
   height: 269px;
   margin-top: 31px;
 
-  @media (max-width: 450px) {
+  @include _450 {
     width: 280px;
     margin: 0 auto;
   }
@@ -335,7 +336,7 @@
   width: 218px;
   margin-top: 11px;
 
-  @media (max-width: 450px) {
+  @include _450 {
     width: 280px;
     margin: 0 auto;
   }
@@ -346,7 +347,7 @@
   width: 147px;
   margin-top: 3px;
 
-  @media (max-width: 450px) {
+  @include _450 {
     width: 280px;
     margin: 0 auto;
   }
@@ -357,7 +358,7 @@
   height: 44px;
   margin-top: 28px;
 
-  @media (max-width: 450px) {
+  @include _450 {
     width: 280px;
     margin: 0 auto;
   }
@@ -382,7 +383,7 @@
   margin-left: 1px;
   margin-top: 40px;
 
-  @media (max-width: 450px) {
+  @include _450 {
     margin: 0 auto;
   }
 }
@@ -393,7 +394,7 @@
   min-height: 647px;
   margin: 99px 168px 0 -1px;
 
-  @media (max-width: 1400px) {
+  @include _1400 {
     margin: 0;
     margin-top: 40px;
   }
@@ -425,7 +426,7 @@
   margin-top: 99px;
   margin-right: 60px;
 
-  @media (max-width: 1400px) {
+  @include _1400 {
     margin: 0;
     margin-top: 40px;
   }
@@ -446,7 +447,7 @@
   margin-top: 99px;
   margin-right: 7px;
 
-  @media (max-width: 1400px) {
+  @include _1400 {
     margin: 0;
     margin-top: 40px;
   }
@@ -463,7 +464,7 @@
   margin-top: 38px;
   margin-left: -1px;
 
-  @media (max-width: 1400px) {
+  @include _1400 {
     margin: 0;
     margin-top: 40px;
   }
@@ -482,13 +483,13 @@
   margin-top: 48px;
   margin-right: 8px;
 
-  @media (max-width: 1400px) {
+  @include _1400 {
     width: 55vw;
     max-width: 711px;
     margin: 40px 0 0;
   }
 
-  @media (max-width: 1250px) {
+  @include _1250 {
     width: 90%;
     height: auto;
   }

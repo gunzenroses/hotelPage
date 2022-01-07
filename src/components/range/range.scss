@@ -1,4 +1,5 @@
 @import '@~Assets/styles/colors.scss';
+@import '@~Assets/styles/media-mixins.scss';
 @import '@~Assets/styles/fonts.scss';
 
 @mixin containerBlock($w: 100%, $h: 100%) {
@@ -13,7 +14,7 @@
   letter-spacing: .003em;
   pointer-events: none;
 
-  @media (min-width: 1750px) and (max-width: 1920px) {
+  @include _1750-1920 {
     font-size: $fs_base;
     height: $fs_h2;
   }
@@ -73,7 +74,7 @@
   text-transform: none;
   letter-spacing: .0001em;
 
-  @media (min-width: 1750px) and (max-width: 1920px) {
+  @include _1750-1920 {
     font-size: $fs_base;
     text-align: center;
   }

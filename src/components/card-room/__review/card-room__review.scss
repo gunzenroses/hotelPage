@@ -1,3 +1,5 @@
+@import '@~Assets/styles/media-mixins.scss';
+
 .card-room__price {
   line-height: 20px;
   font-size: 1rem;
@@ -5,7 +7,7 @@
   font-weight: 700;
   color: $dark-shade_medium;
 
-  @media (min-width: 1750px) and (max-width: 1920px) {
+  @include _1750-1920 {
     font-size: $fs_h2;
   }
 }
@@ -17,7 +19,7 @@
   font-weight: 400;
   color: $dark-shade_medium;
 
-  @media (min-width: 1750px) and (max-width: 1920px) {
+  @include _1750-1920 {
     font-size: $fs_base;
   }
 }

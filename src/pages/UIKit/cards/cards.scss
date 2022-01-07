@@ -1,3 +1,4 @@
+@import '@~Assets/styles/media-mixins.scss';
 @import '@~Components/calendar/calendar.scss';
 @import '@~Components/card-booking/card-booking.scss';
 @import '@~Components/card-registration/card-registration.scss';
@@ -6,11 +7,11 @@
 @import '@~Components/card-singin/card-signin.scss';
 
 @mixin marginTop {
-  @media (max-width: 1400px) {
+  @include _1400 {
     margin-top: 20px;
   }
 
-  @media (max-width: 850px) {
+  @include _850 {
     margin-top: 30px;
   }
 }
@@ -29,7 +30,7 @@
     height: auto;
   }
 
-  @media (max-width: 970px) {
+  @include _970 {
     min-width: 320px;
   }
 }
@@ -45,7 +46,7 @@
   margin: 150px 0 134px 140px;
   background: transparent;
 
-  @media (max-width: 1400px) {
+  @include _1400 {
     width: 85%;
     max-width: 1160px;
     height: 1600px;
@@ -53,18 +54,18 @@
     align-items: center;
   }
 
-  @media (max-width: 1070px) {
+  @include _1070 {
     max-width: 890px;
     margin: 7% auto 7%;
   }
 
-  @media (max-width: 970px) {
+  @include _970 {
     width: 100%;
     min-width: 320px;
     margin: 7% auto;
   }
 
-  @media (max-width: 850px) {
+  @include _850 {
     height: auto;
   }
 }

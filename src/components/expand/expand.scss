@@ -1,9 +1,10 @@
 @import '@~Assets/styles/colors.scss';
+@import '@~Assets/styles/media-mixins.scss';
 
 .js-expand__content {
   display: none;
 
-  @media (max-width: 450px) {
+  @include _450 {
     width: 100%;
     min-width: 260px;
   }
@@ -16,7 +17,7 @@
   align-items: flex-start;
   flex-wrap: wrap;
 
-  @media (min-width: 1650px) and (max-width: 1920px) {
+  @include _1650-1920 {
     width: 100%;
   }
 }

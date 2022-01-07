@@ -1,4 +1,5 @@
 @import '@~Assets/styles/general.scss';
+@import '@~Assets/styles/media-mixins.scss';
 @import '@~Assets/styles/colors.scss';
 @import '@~Assets/styles/fonts.scss';
 @import '@~Components/badge/badge.scss';
@@ -43,7 +44,7 @@
   user-select: none;
   overflow: hidden;
 
-  @media (max-width: 1920px) {
+  @include _1920 {
     width: 100%;
     height: fit-content;
   }
@@ -57,7 +58,7 @@
   margin-right: auto;
   border-bottom: 1px solid $dark-shade_less;
 
-  @media (max-width: 1920px) {
+  @include _1920 {
     width: 100%;
     height: auto;
   }
@@ -69,11 +70,11 @@
   height: 485px;
   overflow: hidden;
 
-  @media (max-width: 1920px) and (min-width: 1441px) {
+  @include _1441-1920 {
     height: calc(485 / 1440 * 100vw);
   }
 
-  @media (max-width: 970px) {
+  @include _970 {
     @include isFlex($direction: column);
     height: fit-content;
   }
@@ -84,15 +85,15 @@
   height: 100%;
   overflow: hidden;
 
-  @media (max-width: 1920px) and (min-width: 1441px) {
+  @include _1441-1920 {
     width: 68.1%;
   }
 
-  @media (max-width: 1350px) {
+  @include _1340 {
     width: 68.1%;
   }
 
-  @media (max-width: 970px) {
+  @include _970 {
     width: 100%;
     height: fit-content;
   }
@@ -108,21 +109,21 @@
   height: 100%;
   overflow: hidden;
 
-  @media (max-width: 1920px) and (min-width: 1441px) {
+  @include _1441-1920 {
     width: 32%;
   }
 
-  @media (max-width: 1350px) {
+  @include _1340 {
     width: 32%;
   }
 
-  @media (max-width: 970px) {
+  @include _970 {
     flex-direction: row;
     width: 100%;
     height: fit-content;
   }
 
-  @media (max-width: 450px) {
+  @include _450 {
     display: none;
     visibility: hidden;
   }
@@ -132,7 +133,7 @@
   width: 100%;
   height: 50%;
 
-  @media (max-width: 970px) {
+  @include _970 {
     width: 50%;
     height: auto;
   }
@@ -143,11 +144,11 @@
   height: fit-content;
   padding: 70px 140px 69px 139px;
 
-  @media (min-width: 1450px) and (max-width: 1920px) {
+  @include _1450-1920 {
     height: auto;
   }
 
-  @media (max-width: 1400px) {
+  @include _1400 {
     height: auto;
     padding: 0%;
   }
@@ -159,31 +160,31 @@
   width: 100%;
   height: 799px;
 
-  @media (min-width: 1450px) and (max-width: 1920px) {
+  @include _1450-1920 {
     height: auto;
   }
 
-  @media (max-width: 1400px) {
+  @include _1400 {
     width: 80%;
     height: auto;
     margin: 70px auto;
   }
 
-  @media (max-width: 1250px) {
+  @include _1250 {
     width: 95%;
     margin: 3% auto;
   }
 
-  @media (max-width: 970px) {
+  @include _970 {
     flex-direction: column-reverse;
   }
 
-  @media (max-width: 690px) {
+  @include _690 {
     width: 100%;
     padding: 0 auto;
   }
 
-  @media (max-width: 450px) {
+  @include _450 {
     margin: 0 auto;
   }
 }
@@ -194,23 +195,23 @@
   height: 799px;
   margin-top: 1px;
 
-  @media (min-width: 1500px) and (max-width: 1920px) {
+  @include _1500-1920 {
     width: 60%;
     height: fit-content;
   }
 
-  @media (max-width: 1400px) {
+  @include _1400 {
     justify-content: space-between;
     width: 100%;
     height: auto;
     padding: 0 calc((100% - 760px) / 2);
   }
 
-  @media (max-width: 970px) {
+  @include _970 {
     padding: 0 7%;
   }
 
-  @media (max-width: 690px) {
+  @include _690 {
     flex-direction: column;
   }
 }
@@ -220,22 +221,22 @@
   width: 675px;
   margin-left: 1px;
 
-  @media (min-width: 1500px) and (max-width: 1920px) {
+  @include _1500-1920 {
     width: 90%;
   }
 
-  @media (max-width: 1400px) {
+  @include _1400 {
     flex-direction: column;
   }
 
-  @media (max-width: 970px) {
+  @include _970 {
     width: 100%;
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 0;
   }
 
-  @media (max-width: 690px) {
+  @include _690 {
     flex-direction: column;
   }
 }
@@ -247,11 +248,11 @@
   margin-right: 88px;
   background: $light;
 
-  @media (min-width: 1650px) and (max-width: 1920px) {
+  @include _1650-1920 {
     width: 40%;
   }
 
-  @media (max-width: 1400px) {
+  @include _1400 {
     margin-right: 0;
   }
 }
@@ -274,16 +275,16 @@
   height: 172px;
   background: $light;
 
-  @media (min-width: 1650px) and (max-width: 1920px) {
+  @include _1650-1920 {
     width: 55%;
     height: fit-content;
   }
 
-  @media (max-width: 1400) {
+  @include _1400 {
     margin-top: 20px;
   }
 
-  @media (max-width: 450px) {
+  @include _450 {
     width: 280px;
   }
 }
@@ -296,12 +297,12 @@
   margin-top: 12px;
   background: $light;
 
-  @media (min-width: 1650px) and (max-width: 1920px) {
+  @include _1650-1920 {
     height: fit-content;
     margin-top: 50px;
   }
 
-  @media (max-width: 1400px) {
+  @include _1400 {
     height: auto;
     margin: 30px auto 0;
   }
@@ -311,7 +312,7 @@
   width: 100%;
   margin-top: 17px;
 
-  @media (max-width: 1400px) {
+  @include _1400 {
     margin-top: 20px;
   }
 }
@@ -322,12 +323,12 @@
   top: 6px;
   right: 1px;
 
-  @media (min-width: 1750px) and (max-width: 1920px) {
+  @include _1750-1920 {
     font-size: $fs_h2;
     right: 10%;
   }
 
-  @media (max-width: 970px) {
+  @include _970 {
     display: none;
   }
 }
@@ -348,17 +349,17 @@
   margin-top: 6px;
   background: $light;
 
-  @media (min-width: 1500px) and (max-width: 1920px) {
+  @include _1500-1920 {
     margin-top: 20px;
     width: 40%;
     height: fit-content;
   }
 
-  @media (max-width: 1400px) {
+  @include _1400 {
     margin-right: 0;
   }
 
-  @media (max-width: 450px) {
+  @include _450 {
     margin-top: 20px;
   }
 }
@@ -379,18 +380,18 @@
   margin-top: 5px;
   background: $light;
 
-  @media (min-width: 1500px) and (max-width: 1920px) {
+  @include _1500-1920 {
     margin-top: 20px;
     width: 50%;
     height: fit-content;
   }
 
-  @media (max-width: 1400px) {
+  @include _1400 {
     width: calc(100% - 292px - 20px);
     height: auto;
   }
 
-  @media (max-width: 700px) {
+  @include _700 {
     width: 100%;
     margin-top: 40px;
   }
@@ -403,7 +404,7 @@
   color: $dark-shade_most;
   letter-spacing: 0.001em;
 
-  @media (min-width: 1750px) and (max-width: 1920px) {
+  @include _1750-1920 {
     font-size: $fs_h1;
   }
 }
@@ -416,37 +417,36 @@
   color: $dark-shade_more;
   letter-spacing: 0.0001em;
 
-  @media (min-width: 1500px) {
-    width: 100%;
+  @include _1500-1920 {
     margin-top: 20px;
   }
 
-  @media (max-width: 1400px) {
+  @include _1400 {
     margin: 20px;
     margin-left: 0;
   }
 }
 
 .room-details__booking {
-  @media (min-width: 1450px) and (max-width: 1920px) {
+  @include _1450-1920 {
     max-width: 550px;
     height: fit-content;
   }
 
-  @media (max-width: 1400px) {
+  @include _1400 {
     position: absolute;
     top: 0;
     right: calc((100% - 800px) / 2);
   }
 
-  @media (max-width: 970px) {
+  @include _970 {
     position: relative;
     top: 0;
     right: 0;
     margin: -20% auto 50px;
   }
 
-  @media (max-width: 450px) {
+  @include _450 {
     margin: 0 auto 50px;
   }
 }

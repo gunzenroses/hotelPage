@@ -1,4 +1,6 @@
 @import '@~Assets/styles/fonts.scss';
+@import '@~Assets/styles/media-mixins.scss';
+
 @import './__item/radio-buttons__item.scss';
 
 .radio-buttons {
@@ -10,7 +12,7 @@
   width: 100%;
   height: 24px;
 
-  @media (max-width: 450px) {
+  @include _450 {
     margin: 0 auto;
   }
 }
