@@ -1,12 +1,7 @@
 @import '@~Assets/styles/colors.scss';
 @import '@~Assets/styles/fonts.scss';
 
-.social-nets {
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.fab {
+.social-net {
   position: relative;
   width: 26px;
 
@@ -17,64 +12,69 @@
   }
 }
 
-.fa-twitter,
-.fa-twitter_creative,
-.fa-instagram,
-.fa-instagram_creative,
-.fa-instagram_in-search,
-.fa-instagram_in-details,
-.fa-instagram_in-registration,
-.fa-facebook-square_creative,
-.fa-facebook-square_in-search,
-.fa-facebook-square_in-details,
-.fa-facebook-square_in-registration,
-.fa-facebook-square_in-signin {
+.social-net__link {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.social-net__twitter,
+.social-net__twitter_creative,
+.social-net__instagram,
+.social-net__instagram_creative,
+.social-net__instagram_in-search,
+.social-net__instagram_in-details,
+.social-net__instagram_in-registration,
+.social-net__facebook_creative,
+.social-net__facebook_in-search,
+.social-net__facebook_in-details,
+.social-net__facebook_in-registration,
+.social-net__facebook_in-signin {
   height: 26px;
 }
 
-.fa-twitter_in-search,
-.fa-twitter_in-details,
-.fa-twitter_in-registration {
+.social-net__twitter_in-search,
+.social-net__twitter_in-details,
+.social-net__twitter_in-registration {
   height: 23px;
 }
 
-.fa-facebook-square_landing,
-.fa-facebook-square_in-signin,
-.fa-instagram_landing,
-.fa-instagram_in-signin {
+.social-net__facebook_landing,
+.social-net__facebook_in-signin,
+.social-net__instagram_landing,
+.social-net__instagram_in-signin {
   height: 25px;
 }
 
-.fa-twitter_landing,
-.fa-twitter_in-signin {
+.social-net__twitter_landing,
+.social-net__twitter_in-signin {
   height: 21px;
 }
 
-.fa-facebook-square {
+.social-net__facebook {
   height: 30px;
 }
 
-.fa-twitter::before,
-.fa-twitter_creative::before,
-.fa-twitter_landing::before,
-.fa-twitter_in-search::before,
-.fa-twitter_in-details::before,
-.fa-twitter_in-registration::before,
-.fa-twitter_in-signin::before,
-.fa-facebook-square::before,
-.fa-facebook-square_creative::before,
-.fa-facebook-square_landing::before,
-.fa-facebook-square_in-search::before,
-.fa-facebook-square_in-details::before,
-.fa-facebook-square_in-registration::before,
-.fa-facebook-square_in-signin::before,
-.fa-instagram::before,
-.fa-instagram_creative::before,
-.fa-instagram_landing::before,
-.fa-instagram_in-search::before,
-.fa-instagram_in-details::before,
-.fa-instagram_in-registration::before,
-.fa-instagram_in-signin::before {
+.social-net__twitter::before,
+.social-net__twitter_creative::before,
+.social-net__twitter_landing::before,
+.social-net__twitter_in-search::before,
+.social-net__twitter_in-details::before,
+.social-net__twitter_in-registration::before,
+.social-net__twitter_in-signin::before,
+.social-net__facebook::before,
+.social-net__facebook_creative::before,
+.social-net__facebook_landing::before,
+.social-net__facebook_in-search::before,
+.social-net__facebook_in-details::before,
+.social-net__facebook_in-registration::before,
+.social-net__facebook_in-signin::before,
+.social-net__instagram::before,
+.social-net__instagram_creative::before,
+.social-net__instagram_landing::before,
+.social-net__instagram_in-search::before,
+.social-net__instagram_in-details::before,
+.social-net__instagram_in-registration::before,
+.social-net__instagram_in-signin::before {
   position: absolute;
   top: -1px;
   left: 0;
@@ -93,36 +93,36 @@
   }
 }
 
-.fa-twitter::before,
-.fa-twitter_creative::before,
-.fa-twitter_landing::before,
-.fa-twitter_in-search::before,
-.fa-twitter_in-details::before,
-.fa-twitter_in-registration::before,
-.fa-twitter_in-signin::before {
+.social-net__twitter::before,
+.social-net__twitter_creative::before,
+.social-net__twitter_landing::before,
+.social-net__twitter_in-search::before,
+.social-net__twitter_in-details::before,
+.social-net__twitter_in-registration::before,
+.social-net__twitter_in-signin::before {
   content: '';
   line-height: 21px;
 }
 
-.fa-facebook-square::before,
-.fa-facebook-square_creative::before,
-.fa-facebook-square_landing::before,
-.fa-facebook-square_in-search::before,
-.fa-facebook-square_in-details::before,
-.fa-facebook-square_in-registration::before,
-.fa-facebook-square_in-signin::before {
+.social-net__facebook::before,
+.social-net__facebook_creative::before,
+.social-net__facebook_landing::before,
+.social-net__facebook_in-search::before,
+.social-net__facebook_in-details::before,
+.social-net__facebook_in-registration::before,
+.social-net__facebook_in-signin::before {
   content: '';
   line-height: 24px;
 }
 
 
-.fa-instagram::before,
-.fa-instagram_creative::before,
-.fa-instagram_landing::before,
-.fa-instagram_in-search::before,
-.fa-instagram_in-details::before,
-.fa-instagram_in-registration::before,
-.fa-instagram_in-signin::before {
+.social-net__instagram::before,
+.social-net__instagram_creative::before,
+.social-net__instagram_landing::before,
+.social-net__instagram_in-search::before,
+.social-net__instagram_in-details::before,
+.social-net__instagram_in-registration::before,
+.social-net__instagram_in-signin::before {
   content: '';
   line-height: 24px;
 }

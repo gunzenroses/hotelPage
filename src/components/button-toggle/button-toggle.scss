@@ -1,77 +1,75 @@
 @import '@~Assets/styles/colors.scss';
 
-.toggle {
-  &__item {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-wrap: 1 0 nowrap;
-    width: 268px;
-    height: 24px;
-    font-weight: 400;
-    text-transform: none;
-    cursor: pointer;
+.button-toggle {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: 1 0 nowrap;
+  width: 268px;
+  height: 24px;
+  font-weight: 400;
+  text-transform: none;
+  cursor: pointer;
 
-    @media (max-width: 450px) {
-      margin: 0 auto;
-    }
-  }
-
-  &__real {
-    position: absolute;
-    width: 40px;
-    height: 20px;
-    opacity: 0;
-    appearance: none;
-    cursor: pointer;
-  }
-  
-  &__fake {
-    position: relative;
-    width: 40px;
-    height: 20px;
-    border: 1px solid $dark-shade_less;
-    border-radius: 10px;
-    margin-right: 10px;
-  
-    &::before {
-      content: '';
-      position: absolute;
-      top: 3px;
-      left: 3px;
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: $dark-shade_less;
-      transition: left 1s ease-out;
-    }
-  }
-  
-  &__title {
-    display: inline-block;
-    color: $dark-shade_more;
-    letter-spacing: 0.001em;
-    line-height: 19px;
-    font-size: 1em;
+  @media (max-width: 450px) {
+    margin: 0 auto;
   }
 }
 
-.toggle__item + .toggle__item {
+.button-toggle__real {
+  position: absolute;
+  width: 40px;
+  height: 20px;
+  opacity: 0;
+  appearance: none;
+  cursor: pointer;
+}
+
+.button-toggle__fake {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  border: 1px solid $dark-shade_less;
+  border-radius: 10px;
+  margin-right: 10px;
+
+  .button-toggle::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: $dark-shade_less;
+    transition: left 1s ease-out;
+  }
+}
+
+.button-toggle__title {
+  display: inline-block;
+  color: $dark-shade_more;
+  letter-spacing: 0.001em;
+  line-height: 19px;
+  font-size: 1em;
+}
+
+.button-toggle__item + .button-toggle__item {
   margin-top: 10px;
 }
 
-.toggle__real:checked + .toggle__fake {
-  @extend .toggle__fake;
+.button-toggle__real:checked + .button-toggle__fake {
+  @extend .button-toggle__fake;
   border-color: $purple;
 }
 
-.toggle__real:checked + .toggle__fake::before {
-  @extend .toggle__fake::before;
+.button-toggle__real:checked + .button-toggle__fake::before {
+  @extend .button-toggle__fake::before;
   left: 23px;
   background: $linearGradientLilac;
 }
 
-.toggle__real:not(:checked) + .toggle__fake::before {
-  @extend .toggle__fake::before;
+.button-toggle__real:not(:checked) + .button-toggle__fake::before {
+  @extend .button-toggle__fake::before;
 }

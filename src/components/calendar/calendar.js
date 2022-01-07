@@ -21,8 +21,8 @@ export default class Calendar {
     this.dateInCalendar = this.calendarContainer.querySelector('.js-calendar__month');
     this.daysOfMonth = this.calendarContainer.querySelector('.js-calendar__days');
 
-    if (this.calendarContainer.closest('.js-date-range__container')) {
-      this.mainContainer = this.calendarContainer.closest('.js-date-range__container');
+    if (this.calendarContainer.closest('.js-date-range')) {
+      this.mainContainer = this.calendarContainer.closest('.js-date-range');
     } else {
       this.mainContainer = this.calendarContainer;
     }
