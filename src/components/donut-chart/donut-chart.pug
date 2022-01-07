@@ -11,9 +11,9 @@ mixin donut-chart(cData={})
   - var dashOffsetValue = parseFloat(25 - 0.5);
   - var prevArraySumm = 0;
 
-  figure.donut
-    .donut__content
-      svg.donut__img(width="100%" height="100%" viewbox="0 0 33 33" aria-labelledby="impression-title" role="img")
+  figure.donut-chart
+    .donut-chart__content
+      svg.donut-chart__img(width="100%" height="100%" viewbox="0 0 33 33" aria-labelledby="impression-title" role="img")
         defs
           lineargradient#gradient_dissData
             stop(stop-color="#909090" offset="0%")
@@ -30,22 +30,22 @@ mixin donut-chart(cData={})
         title#impression-title Впечатлeния от номера
 
         // img starts
-        circle.donut__ring(cx="50%" cy="50%" r="15.91549430918954" fill="transparent" stroke="#fff" stroke-width="1" role="presentation")
+        circle.donut-chart__ring(cx="50%" cy="50%" r="15.91549430918954" fill="transparent" stroke="#fff" stroke-width="1" role="presentation")
         each percent, mark in donutData
           if (percent>2)
             - var dashValue = parseInt(percent - 1);
             - var dashLeft = 100 - dashValue;
-            circle.donut__segment(cx="50%" cy="50%" r="15.91549430918954" fill="transparent" stroke=`url(#gradient_${mark})` stroke-width="1" stroke-dasharray=`${dashValue} ${dashLeft}` stroke-dashoffset=`${dashOffsetValue}` aria-labelledby=`donut-segment-${counter}-title`)
-            title(id=`donut-segment-${counter++}-title` data-some= `${prevArraySumm}`)!= mark
+            circle.donut-chart__segment(cx="50%" cy="50%" r="15.91549430918954" fill="transparent" stroke=`url(#gradient_${mark})` stroke-width="1" stroke-dasharray=`${dashValue} ${dashLeft}` stroke-dashoffset=`${dashOffsetValue}` aria-labelledby=`donut-chart-segment-${counter}-title`)
+            title(id=`donut-chart-segment-${counter++}-title` data-some= `${prevArraySumm}`)!= mark
             - dashOffsetValue -= percent;
         // img ends
 
-      .donut__text
-        p.donut__number!= totalData
-        p.donut__label голосов
-    figcaption.donut__caption
-      ul.donut-key__list(aria-hidden="true" role="presentation")
+      .donut-chart__text
+        p.donut-chart__number!= totalData
+        p.donut-chart__label голосов
+    figcaption.donut-chart__caption
+      ul.donut-chart__key-list(aria-hidden="true" role="presentation")
         each val, key in donutMarks
-          li.donut-key__item
-            span.li_circle(class= key)
+          li.donut-chart__key-item
+            span.donut-chart__marker(class= key)
             != val

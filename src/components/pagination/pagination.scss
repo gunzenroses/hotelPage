@@ -46,42 +46,40 @@
 }
 
 .pagination {
-  &__bar {
-    @include isFlex($direction: column);
-    width: fit-content;
-    height: 75px;
-  }
+  @include isFlex($direction: column);
+  width: fit-content;
+  height: 75px;
+}
 
-  &__buttons {
-    @include isFlex();
-    width: 240px;
-    height: 40.4px;
-    font-size: 0.875em;
-  }
+.pagination__buttons {
+  @include isFlex();
+  width: 240px;
+  height: 40.4px;
+  font-size: 0.875em;
+}
 
-  &__button_current {
-    @include paginationItem();
-    font-weight: 700;
-    color: $light;
-    background: $linearGradientLilac;
-  }
+.pagination__button_current {
+  @include paginationItem();
+  font-weight: 700;
+  color: $light;
+  background: $linearGradientLilac;
+}
 
-  &__items {
-    @include isFlex();
-    width: 120px;
-    height: 40px;
-  }
+.pagination__items {
+  @include isFlex();
+  width: 120px;
+  height: 40px;
+}
 
-  &__info {
-    width: fit-content;
-    height: 23px;
-    margin: 0 auto;
-    line-height: 16px;
-    font-size: $fs_base;
-    letter-spacing: .0001em;
-    text-align: left;
-    pointer-events: none;
-  }
+.pagination__info {
+  width: fit-content;
+  height: 23px;
+  margin: 0 auto;
+  line-height: 16px;
+  font-size: $fs_base;
+  letter-spacing: .0001em;
+  text-align: left;
+  pointer-events: none;
 }
 
 .pagination__item,
@@ -101,7 +99,7 @@
   @include paginationItem();
   @include paginationNav();
 
-  &::before {
+  .pagination::before {
     content: '\e5c8';
     @include paginationBefore();
     font-family: $material-icons;
@@ -115,7 +113,7 @@
   @include paginationItem();
   @include paginationNav();
 
-  &::before {
+  .pagination::before {
     content: '\e5c4';
     @include paginationBefore();
     font-family: $material-icons;

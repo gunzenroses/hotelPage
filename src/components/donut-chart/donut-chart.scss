@@ -15,7 +15,7 @@
   flex-shrink: 0;
 }
 
-.donut {
+.donut-chart {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -36,7 +36,7 @@
   }
 }
 
-.donut__content {
+.donut-chart__content {
   display: block;
   width: 120px;
   height: 120px;
@@ -52,13 +52,13 @@
   }
 }
 
-.donut__img {
+.donut-chart__img {
   position: absolute;
   width: 100%;
   height: 100%;
 }
 
-.donut__text {
+.donut-chart__text {
   @include isFlex($direction: column, $align: center);
   position: absolute;
   top: 29%;
@@ -72,7 +72,7 @@
   }
 }
 
-.donut__number {
+.donut-chart__number {
   margin: 0;
   line-height: 29.26px;
   font-size: $fs_h1;
@@ -81,7 +81,7 @@
   color: $purple;
 }
 
-.donut__label {
+.donut-chart__label {
   margin: 0;
   line-height: 14.63px;
   font-size: 14px;
@@ -89,7 +89,7 @@
   color: $purple;
 }
 
-.donut__caption {
+.donut-chart__caption {
   width: 165px;
   height: 96px;
   line-height: 24px;
@@ -107,7 +107,7 @@
   }
 }
 
-.donut-key__list {
+.donut-chart__key-list {
   @include isFlex($direction: column);
   height: 100%;
   margin: 0;
@@ -115,11 +115,11 @@
   letter-spacing: .001em;
 }
 
-.donut-key__item {
+.donut-chart__key-item {
   list-style: none;
 }
 
-.li_circle {
+.donut-chart__marker {
   display: inline-block;
   width: 10px;
   height: 10px;

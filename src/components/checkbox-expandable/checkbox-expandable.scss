@@ -14,7 +14,7 @@
   flex-shrink: 0;
 }
 
-.checkbox-expandable__container {
+.checkbox-expandable {
   @include isFlex($direction: column);
   position: relative;
   width: 266px;
