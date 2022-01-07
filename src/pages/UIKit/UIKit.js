@@ -21,7 +21,7 @@ import './UIkit.scss';
 
 window.onload = () => {
   applyClass('.js-room-carousel', RoomCarousel);
-  applyClass('.js-dropdown__detection', Expand)
+  applyClass('.js-dropdown__detection', Expand);
   applyClass([
     { id: 'likes_author_1', data: 12 },
     { id: 'buttonLike_2', data: 12 },

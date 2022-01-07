@@ -1,4 +1,4 @@
-import { paginationData1 } from 'Main/assets/scripts/my-data';
+import { paginationData1 } from 'Scripts/my-data';
 
 export default class Pagination {
   constructor(id, data) {
@@ -94,7 +94,7 @@ export default class Pagination {
     if (i === this.num) {
       button.classList.add('pagination__button_current');
     } else {
-      button.classList.add('pagination__item','js-pagination__item');
+      button.classList.add('pagination__item', 'js-pagination__item');
     }
     return button;
   }
