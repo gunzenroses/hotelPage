@@ -26,7 +26,7 @@ export default class ButtonLike {
   }
 
   buttonLikeIncrease() {
-    this.data = this.data + 1;
+    this.data += 1;
     this.render();
   }
 
