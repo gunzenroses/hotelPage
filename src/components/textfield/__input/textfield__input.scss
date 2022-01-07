@@ -1,0 +1,12 @@
+.textfield__input {
+  width: 95%;
+  height: 90%;
+  appearance: none;
+  background: transparent;
+  border: none;
+
+  ::placeholder {
+    color: $dark-shade_less;
+  }
+}
+  

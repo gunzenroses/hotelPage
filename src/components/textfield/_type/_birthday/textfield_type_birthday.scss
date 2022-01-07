@@ -1,0 +1,35 @@
+@import '@~Assets/styles/colors.scss';
+
+@import '../../__container/textfield__container.scss';
+@import '../../__input/textfield__input.scss';
+@import '../../__label/textfield__label.scss';
+
+.textfield_type_birthday {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 1 0 wrap;
+  position: relative;
+  width: 100%;
+  min-width: 260px;
+  height: 44px;
+  padding: 0 0 3px 12px;
+  border: 1px solid $dark-shade_less;
+  border-radius: 4px;
+  background: transparent;
+  color: $dark-shade_more;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $dark-shade_medium;
+  }
+
+  @media (max-width: 450px) {
+    width: 100%;
+    margin: 0 auto;
+  }
+}

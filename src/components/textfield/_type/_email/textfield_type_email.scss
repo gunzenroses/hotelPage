@@ -1,23 +1,24 @@
-@import '../../assets/styles/colors.scss';
+@import '@~Assets/styles/colors.scss';
 
-.textfield_type_birthday {
+@import '../../__input/textfield__input.scss';
+
+.textfield_type_email {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  flex: 1 0 wrap;
+  flex: 1 0 nowrap;
   position: relative;
   width: 100%;
-  min-width: 260px;
   height: 44px;
-  padding: 0 0 3px 12px;
+  min-width: 260px;
+  padding: 2px 0 2px 12px;
   border: 1px solid $dark-shade_less;
   border-radius: 4px;
+  font-size: 1rem;
   background: transparent;
   color: $dark-shade_more;
   letter-spacing: 0.01em;
-  text-transform: uppercase;
-  white-space: nowrap;
 
   &:hover,
   &:focus {
