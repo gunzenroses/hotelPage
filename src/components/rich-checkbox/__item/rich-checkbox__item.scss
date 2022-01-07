@@ -89,7 +89,6 @@
   }
 }
 
-
 .rich-checkbox__real:checked ~ .rich-checkbox__fake {
   @extend .rich-checkbox__fake;
   border-color: $purple;
