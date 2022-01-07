@@ -1,8 +1,6 @@
 export default class Expand {
   constructor(dropdownWatch) {
     this.dropdownWatch = dropdownWatch;
-    this.dropdownWatchedParents = [];
-    this.dropdownWatchedExpands = [];
     this.init();
   }
 
@@ -13,6 +11,8 @@ export default class Expand {
   }
 
   createChildren() {
+    this.dropdownWatchedParents = [];
+    this.dropdownWatchedExpands = [];
     this.dropdownWatchedInits = Array.from(this.dropdownWatch.querySelectorAll('.js-expand__init'));
     this.dropdownWatchedInits.forEach((item) => {
       this.dropdownWatchedParents.push(item.parentElement);
