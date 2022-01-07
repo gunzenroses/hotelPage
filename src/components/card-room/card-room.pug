@@ -1,7 +1,7 @@
-include ./__review/card-room__review.pug
-include ./__info/card-room__info.pug
 include ../button-rate/button-rate.pug
 include ../room-carousel/room-carousel.pug
+include ./__review/card-room__review.pug
+include ./__info/card-room__info.pug
 
 mixin card-room(roomOptions, theme="")
   - var {src = [], bookingNumber = "999", bookingType = false, bookingPrice = 0, starName = inputName, starRate = 0, reviewAmount = 0} = roomOptions
