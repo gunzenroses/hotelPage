@@ -1,7 +1,7 @@
 @import '@~Assets/styles/fonts.scss';
-@import './__item/buttons-radio__item.scss';
+@import './__item/radio-buttons__item.scss';
 
-.radio__container {
+.radio-buttons {
   display: flex;
   flex-direction: row;
   justify-content: space-between;

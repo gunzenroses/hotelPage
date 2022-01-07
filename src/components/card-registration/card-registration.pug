@@ -1,5 +1,5 @@
 include ../button-link/button-link.pug
-include ../buttons-radio/buttons-radio.pug
+include ../radio-buttons/radio-buttons.pug
 include ../button-submit/button-submit.pug
 include ../button-toggle/button-toggle.pug
 include ../textfield/_type/_birthday/textfield_type_birthday.pug
@@ -14,7 +14,7 @@ mixin card-registration(submitText)
     .card-registration__surname
       +textfield_type_name("", "Фамилия", "surname")
     .card-registration__radio
-      +buttons-radio("gender", true, false)
+      +radio-buttons("gender", true, false)
     .card-registration__birthday
       +textfield_type_birthday("Дата рождения", "")
     .card-registration__login

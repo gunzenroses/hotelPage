@@ -1,6 +1,6 @@
 include ../../../components/badge/badge.pug
 include ../../../components/bullet-checkbox/bullet-checkbox.pug
-include ../../../components/buttons-radio/buttons-radio.pug
+include ../../../components/radio-buttons/radio-buttons.pug
 include ../../../components/button-toggle/button-toggle.pug
 include ../../../components/button-like/button-like.pug
 include ../../../components/button-rate/button-rate.pug
@@ -114,7 +114,7 @@ block content
           +checkbox
         .form-elements__container_radio 
           .form-elements__label_radio Radio buttons
-          +buttons-radio("customer-gender",true, false) 
+          +radio-buttons("customer-gender",true, false) 
         .form-elements__container_toggle
           .form-elements__label_toggle Toggle
           .form-elements__group_toggle
