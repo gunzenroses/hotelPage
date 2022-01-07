@@ -1,8 +1,8 @@
 import applyClass from 'Scripts/applyClass';
 import { guestsDataSearchRoom, roomsData1 } from 'Scripts/my-data';
 import Calendar from 'Components/calendar/Calendar';
-import DropdownGuests from 'Main/components/dropdown/_type_guests/DropdownGuests';
-import DropdownRooms from 'Main/components/dropdown/_type_rooms/DropdownRooms';
+import DropdownGuests from 'Components/dropdown/_type_guests/DropdownGuests';
+import DropdownRooms from 'Components/dropdown/_type_rooms/DropdownRooms';
 import Expand from 'Components/expand/Expand';
 import 'Components/footer/footer';
 import Pagination from 'Components/pagination/Pagination';
