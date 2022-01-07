@@ -1,3 +1,5 @@
+@import '@~Assets/styles/media-mixins.scss';
+
 .carousel {
   position: relative;
   width: 100%;
@@ -6,7 +8,7 @@
   min-height: calc(683 / 1440 * 320px);
   overflow: hidden;
 
-  @media (max-width: 500px) {
+  @include _500 {
     width: 100%;
     height: calc(683 / 1440 * 100vw);
   }
@@ -37,7 +39,7 @@
   min-width: 320px;
   object-fit: cover;
 
-  @media (max-width: 500px) {
+  @include _500 {
     height: auto;
   }
 }

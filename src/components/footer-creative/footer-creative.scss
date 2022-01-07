@@ -1,4 +1,5 @@
 @import '@~Assets/styles/fonts.scss';
+@import '@~Assets/styles/media-mixins.scss';
 @import '@~Components/logo/logo.scss';
 @import '@~Components/social-nets/social-nets.scss';
 
@@ -11,11 +12,11 @@
   box-sizing: border-box;
   box-shadow: 0px 10px 20px $dark-shade_fewer;
 
-  @media (max-width: 800px) {
+  @include _800 {
     width: 100%;
   }
 
-  @media (max-width: 450px) {
+  @include _450 {
     min-width: 320px;
   }
 }
@@ -33,7 +34,7 @@
   padding-top: 120px;
   padding-right: 3px;
 
-  @media (max-width: 800px) {
+  @include _800 {
     width: 85%;
     height: auto;
     margin: 9% auto;
@@ -61,15 +62,15 @@
   margin-right: 1px;
   font-size: $fs_h1;
 
-  @media (min-width: 1650px) and (max-width: 1920px) {
+  @include _1650-1920 {
     width: 162px;
   }
 
-  @media (max-width: 800px) {
+  @include _800 {
     height: 36px;
   }
 
-  @media (max-width: 400px) {
+  @include _400 {
     width: 100px;
   }
 }

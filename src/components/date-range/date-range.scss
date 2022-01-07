@@ -1,4 +1,5 @@
 @import '@~Assets/styles/colors.scss';
+@import '@~Assets/styles/media-mixins.scss';
 
 @mixin dateRangeSelector {
   display: flex;
@@ -10,7 +11,7 @@
   height: 100%;
   min-width: 260px;
 
-  @media (max-width: 450px) {
+  @include _450 {
     margin: 0 auto;
   }
 }
@@ -21,7 +22,7 @@
   height: 100%;
   min-width: 260px;
 
-  @media (max-width: 450px) {
+  @include _450 {
     margin: 0 auto;
   }
 }
@@ -36,11 +37,11 @@
   background: $light;
   z-index: 2;
 
-  @media (min-width: 1650px) and (max-width: 1920px) {
+  @include _1650-1920 {
     width: 100%;
   }
 
-  @media (max-width: 450px) {
+  @include _450 {
     width: 100%;
     min-width: 260px;
     margin: 0 auto;

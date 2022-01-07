@@ -1,4 +1,5 @@
 @import '@~Assets/styles/colors.scss';
+@import '@~Assets/styles/media-mixins.scss';
 @import '@~Assets/styles/fonts.scss';
 
 @mixin containerBlock($w: 100%, $h: 100%) {
@@ -54,7 +55,7 @@
     color: $light;
   }
 
-  @media (max-width: 450px) {
+  @include _450 {
     min-width: 260px;
     margin: 0 auto;
   }

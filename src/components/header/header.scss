@@ -1,4 +1,5 @@
 @import '@~Assets/styles/colors.scss';
+@import '@~Assets/styles/media-mixins.scss';
 
 @import './__menu/header__menu.scss';
 
@@ -19,21 +20,21 @@
   box-sizing: border-box;
   box-shadow: 0px 10px 20px $dark-shade_fewer;
 
-  @media (min-width: 1650px) and (max-width: 1920px) {
+  @include _1650-1920 {
     width: 100%;
     padding: 0 10%;
   }
 
-  @media (max-width: 1340px) {
+  @include _1340 {
     padding: 15px 7%;
   }
 
-  @media (max-width: 750px) {
+  @include _750 {
     min-width: 320px;
     padding: 15px 5%;
   }
 
-  @media (max-width: 550px) {
+  @include _550 {
     padding: 15px 2%;
   }
 }

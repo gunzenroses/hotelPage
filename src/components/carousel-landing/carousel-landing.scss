@@ -1,3 +1,5 @@
+@import '@~Assets/styles/media-mixins.scss';
+
 .carousel-landing {
   position: relative;
   width: 100%;
@@ -6,7 +8,7 @@
   min-height: calc(830 / 1440 * 320px);
   overflow: hidden;
 
-  @media (max-width: 500px) {
+  @include _500 {
     width: 100%;
     height: calc(830 / 1440 * 100vw);
   }
@@ -36,11 +38,11 @@
   height: 100%;
   object-fit: cover;
 
-  @media (max-width: 970px) {
+  @include _970 {
     height: calc(830 / 1440 * 970px);
   }
 
-  @media (max-width: 500px) {
+  @include _500 {
     height: auto;
   }
 }

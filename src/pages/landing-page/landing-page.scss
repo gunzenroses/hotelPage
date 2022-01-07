@@ -1,4 +1,5 @@
 @import '@~Assets/styles/colors.scss';
+@import '@~Assets/styles/media-mixins.scss';
 @import '@~Assets/styles/fonts.scss';
 @import '@~Assets/styles/general.scss';
 @import '@~Components/carousel-landing/carousel-landing.scss';
@@ -32,7 +33,7 @@
   background: $light;
   user-select: none;
 
-  @media (max-width: 1920px) {
+  @include _1920 {
     width: 100%;
     height: auto;
   }
@@ -46,16 +47,16 @@
   margin: 0 auto;
   min-width: 320px;
 
-  @media (max-width: 1400px) {
+  @include _1400 {
     height: calc(830 / 1440 * 100vw);
   }
 
-  @media (max-width: 970px) {
+  @include _970 {
     width: 100%;
     height: calc(830 / 1440 * 970px);
   }
 
-  @media (max-width: 500px) {
+  @include _500 {
     width: 100%;
     // carousel + card-search + text + in-registration top
     height: calc(830 / 1440 * 100vw + 374px + 48px + 40px);
@@ -74,13 +75,13 @@
   letter-spacing: .002em;
   z-index: 2;
 
-  @media (min-width: 1750px) and (max-width: 1920px){
+  @include _1750-1920 {
     width: 400px;
     line-height: $fs_h2;
     font-size: $fs_h2;
   }
 
-  @media (max-width: 500px) {
+  @include _500 {
     position: relative;
     bottom: 0;
     right: 0;
@@ -95,12 +96,12 @@
   left: 140px;
   z-index: 2;
 
-  @media (max-width: 970px) {
+  @include _970 {
     left: 50%;
     transform: translateX(-50%);
   }
 
-  @media (max-width: 500px) {
+  @include _500 {
     position: relative;
     top: 0;
     left: 0;

@@ -1,4 +1,5 @@
 @import '@~Assets/styles/colors.scss';
+@import '@~Assets/styles/media-mixins.scss';
 @import '@~Assets/styles/fonts.scss';
 
 @mixin isFlex(
@@ -35,11 +36,11 @@
   min-height: 152px;
   overflow: hidden;
 
-  @media (max-width: 700px) {
+  @include _700 {
     height: 211px;
   }
 
-  @media (max-width: 450px) {
+  @include _450 {
     width: 85vw;
     height: 47vw;
     min-width: 258px;

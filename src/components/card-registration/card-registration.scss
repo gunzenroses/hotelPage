@@ -1,4 +1,5 @@
 @import '@~Assets/styles/colors.scss';
+@import '@~Assets/styles/media-mixins.scss';
 @import '@~Components/button-link/button-link.scss';
 @import '@~Components/radio-buttons/radio-buttons.scss';
 @import '@~Components/button-submit/button-submit.scss';
@@ -26,7 +27,7 @@
   background: $light;
   box-shadow: 0px 0px 25px $shadow;
 
-  @media (max-width: 400px) {
+  @include _400 {
     width: 100vw;
     min-width: 320px;
     margin: 0 auto;

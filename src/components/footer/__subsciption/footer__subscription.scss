@@ -1,3 +1,5 @@
+@import '@~Assets/styles/media-mixins.scss';
+
 @import '../../textfield/_type/_subscribe/textfield_type_subscribe.scss';
 
 .footer__subscription {
@@ -10,7 +12,7 @@
   height: 152px;
   padding-top: 4px;
 
-  @media (max-width: 800px) {
+  @include _800 {
     height: auto;
   }
 }
@@ -25,7 +27,7 @@
   letter-spacing: .0001em;
   pointer-events: none;
 
-  @media (max-width: 1170px){
+  @include _1170 {
     display: none;
   }
 }

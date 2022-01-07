@@ -1,4 +1,5 @@
 @import '@~Assets/styles/colors.scss';
+@import '@~Assets/styles/media-mixins.scss';
 
 .button-toggle {
   display: flex;
@@ -12,7 +13,7 @@
   text-transform: none;
   cursor: pointer;
 
-  @media (max-width: 450px) {
+  @include _450 {
     margin: 0 auto;
   }
 }

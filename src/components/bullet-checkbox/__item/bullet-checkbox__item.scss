@@ -1,3 +1,5 @@
+@import '@~Assets/styles/media-mixins.scss';
+
 .bullet-checkbox {
     &__item {
       position: relative;
@@ -27,7 +29,7 @@
       color: $dark-shade_more;
       letter-spacing: .001em;
   
-      @media (min-width: 1750px) and (max-width: 1920px) {
+      @include _1750-1920 {
         width: calc(100% - 20px);
         letter-spacing: 0;
       }

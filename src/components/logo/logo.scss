@@ -1,3 +1,5 @@
+@import '@~Assets/styles/media-mixins.scss';
+
 .logo {
   display: flex;
   flex-direction: row;
@@ -9,7 +11,7 @@
   line-height: 40px;
   text-decoration: none;
 
-  @media (max-width: 550px) {
+  @include _550 {
     width: 40px;
   }
 }
@@ -28,7 +30,7 @@
   margin-right: 1px;
   border: none;
 
-  @media (max-width: 550px) {
+  @include _550 {
     display: none;
   }
 }

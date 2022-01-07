@@ -1,10 +1,11 @@
 @import '@~Assets/styles/colors.scss';
+@import '@~Assets/styles/media-mixins.scss';
 @import '@~Components/navlink/navlink.scss';
 
 .footer__info_hidden {
   display: none;
 
-  @media (max-width: 470px) {
+  @include _470 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -18,7 +19,7 @@
   }
 }
 
-@media (max-width: 470px) {
+@include _470 {
   .footer__dropdown_in-navigation,
   .footer__dropdown_in-about,
   .footer__dropdown_in-support {

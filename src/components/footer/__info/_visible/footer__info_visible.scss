@@ -1,13 +1,14 @@
+@import '@~Assets/styles/media-mixins.scss';
 @import '@~Components/navlink/navlink.scss';
 
 .footer__info_main {
   margin-right: 50px;
 
-  @media (min-width: 1500px) and (max-width: 1920px){
+  @include _1500-1920 {
       margin-right: 0;
   }
 
-  @media (max-width: 1340px) {
+  @include _1340 {
     margin-right: 0;
   }
 }
@@ -22,23 +23,23 @@
   width: 548px;
   padding-top: 4px;
 
-  @media (min-width: 1500px) and (max-width: 1920px) {
+  @include _1500-1920 {
     width: 50%;
     justify-content: space-between;
   }
 
-  @media (max-width: 1340px) {
+  @include _1340 {
     width: 35%;
     min-width: 415px;
   }
 
-  @media (max-width: 800px) {
+  @include _800 {
     width: 430px;
     height: 120px;
     margin-bottom: 40px;
   }
 
-  @media (max-width: 470px) {
+  @include _470 {
     display: none;
   }
 }
