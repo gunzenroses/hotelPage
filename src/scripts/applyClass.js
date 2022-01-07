@@ -1,12 +1,12 @@
-export default function applyClass(options, classMaker) {
+export default function applyClass(options, ClassMaker) {
   if (Array.isArray(options)) {
     options.forEach((item) => {
-      new classMaker(item.id, item.data);
+      new ClassMaker(item.id, item.data);
     });
   } else {
     const items = document.querySelectorAll(options);
     items.forEach((item) => {
-      new classMaker(item);
+      new ClassMaker(item);
     });
   }
 }
