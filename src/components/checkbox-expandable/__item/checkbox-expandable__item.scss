@@ -9,7 +9,7 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-  flex: 1 0 wrap;
+  flex-wrap: wrap;
   font-family: $montserrat;
   font-weight: 400;
   font-size: $fs_base;
@@ -21,7 +21,11 @@
   }
 }
 
-.checkbox-expandable__title {
+.checkbox-expandable__item + .checkbox-expandable__item {
+  margin-top: 10px;
+}
+
+.checkbox-expandable__real {
   @include containerBlock(20px, 20px);
   position: absolute;
   opacity: 0;
@@ -63,12 +67,12 @@
   }
 }
 
-.checkbox-expandable__title:checked ~ .checkbox-expandable__fake {
+.checkbox-expandable__real:checked ~ .checkbox-expandable__fake {
   @extend .checkbox-expandable__fake;
   border-color: $purple;
 }
 
-.checkbox-expandable__title:checked + .checkbox-expandable__fake::before {
+.checkbox-expandable__real:checked + .checkbox-expandable__fake::before {
   content: '';
   @include containerBlock(4px, 6px);
   position: absolute;

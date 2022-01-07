@@ -5,12 +5,12 @@ export default class RoomCarousel {
   }
 
   init() {
-    this.creatChildren();
+    this.createChildren();
     this.setupHandlers();
     this.enable();
   }
 
-  creatChildren() {
+  createChildren() {
     this.carouselInputs = this.carousel.getElementsByClassName('js-room-carousel__radio')[0];
     this.carouselPictures = this.carousel.querySelector('.js-room-carousel__pictures');
     this.carouselPictures.style.left = 0;

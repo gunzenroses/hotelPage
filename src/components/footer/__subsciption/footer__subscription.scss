@@ -5,9 +5,9 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  flex: 1 0 wrap;
+  flex-wrap: wrap;
   width: 260px;
-  height: 148px;
+  height: 152px;
   padding-top: 4px;
 
   @media (max-width: 800px) {
@@ -16,8 +16,18 @@
 }
 
 .footer__text_for-subscription {
-  @extend .footer__text;
+  width: 100%;
   margin-top: 18px;
+  font-size: 1em;
+  line-height: 1.71rem;
+  font-weight: 400;
+  color: $dark-shade_more;
+  letter-spacing: .0001em;
+  pointer-events: none;
+
+  @media (max-width: 1170px){
+    display: none;
+  }
 }
 
 .footer__form {

@@ -9,12 +9,12 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  flex: 1 0 wrap;
+  flex-wrap: nowrap;
   position: relative;
   width: 100%;
   min-width: 260px;
   height: 44px;
-  padding: 0 0 3px 12px;
+  padding: 0 0 3px 13px;
   border: 1px solid $dark-shade_less;
   border-radius: 4px;
   background: transparent;
