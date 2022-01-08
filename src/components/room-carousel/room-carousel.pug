@@ -12,7 +12,7 @@ mixin room-carousel(roomPictures, nameForPictures)
     .room-carousel__pictures.js-room-carousel__pictures
       for picture in roomPictures
         .room-carousel__pic
-          img(src= picture alt="room pictures")
+          img(src= picture alt="room pictures").room-carousel__img
     .room-carousel__btn
       .room-carousel__btn_prev.js-room-carousel__btn_prev
       .room-carousel__btn_next.js-room-carousel__btn_next
