@@ -6,16 +6,15 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   width: 260px;
   height: 131px;
   margin-right: 38px;
   letter-spacing: .001em;
 
   @include _1340 {
-    width: 200px;
+    height: 160px;
     margin: 0;
-    margin-right: 20px;
   }
 
   @include _1170 {
