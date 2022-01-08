@@ -1,6 +1,6 @@
 include ./__item/checkbox-expandable__item.pug
 
-mixin checkbox-expandable(dropdownTitleName, dropdownClassShow)
+mixin checkbox-expandable({ dropdownTitleName, dropdownClassShow="" })
   .checkbox-expandable
     .checkbox-expandable__dropdown
       div(class="js-expand__content " + dropdownClassShow)

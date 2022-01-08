@@ -1,4 +1,4 @@
-mixin navlink(buttonText="", buttonOnclick="./some-address", buttonNavlinkClass="")
+mixin navlink({ buttonText="", buttonOnclick="./some-address", buttonNavlinkClass="" })
   if buttonNavlinkClass == ""
     li(class="navlink")
       a(class="navlink__button" href= buttonOnclick)= buttonText

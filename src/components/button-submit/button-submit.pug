@@ -1,4 +1,4 @@
-mixin button-submit(buttonText, type="")
+mixin button-submit({ buttonText="", type="" })
   if type == "compact"
     button(class="button-submit_compact" type="submit")= buttonText
   else

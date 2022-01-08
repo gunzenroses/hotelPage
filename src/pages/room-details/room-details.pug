@@ -29,7 +29,7 @@ block variables
       buttonLikeId: "likes_author_2", 
       buttonNumber: 2, 
       commentText: "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент."};
-  - var checkboxList = [ "Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00" ];
+  - var checkboxList1 = [ "Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00" ];
   - var cancellationRools = "Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги."
 
 block content
@@ -50,14 +50,31 @@ block content
               .room-details__roomInfo
                 h2.room-details__title Сведения о номере
                 .room-details__badge_type_comfort
-                  +badge("insert_emoticon", "Комфорт", "Шумопоглощающие стены")
+                  +badge({
+                    name: "insert_emoticon", 
+                    title: "Комфорт",
+                    description: "Шумопоглощающие стены"
+                  })
                 .room-details__badge_type_commodity
-                  +badge("location_city", "Удобство", "Окно в каждой из спален")
+                  +badge({
+                    name: "location_city", 
+                    title: "Удобство",
+                    description: "Окно в каждой из спален"
+                  })
                 .room-details__badge_type_cozyness
-                  +badge("whatshot", "Уют", "Номер оснащён камином")
+                  +badge({
+                    name: "whatshot", 
+                    title: "Уют",
+                    description: "Номер оснащён камином"
+                  })
               .room-details__roomImpression
                 h2.room-details__title Впечатления от номера
-                +donut-chart({excellent: 130, good: 65, satisfied: 65, dissapointed: 0})
+                +donut-chart({
+                  excellent: 130,
+                  good: 65,
+                  satisfied: 65,
+                  dissapointed: 0
+                })
             article.room-details__reviews
               h2.room-details__title Отзывы посетителей номера
               .reviews__info 2 отзыва
@@ -69,11 +86,15 @@ block content
               .room-details__rules-title
                 h2.room-details__title Правила
               .room-details__checkbox-list
-                +bullet-checkbox(checkboxList)
+                +bullet-checkbox({ checkboxList: checkboxList1 })
             article.room-details__cancellation
               h2.room-details__title Отмена
               .room-details__cancellation_info
                 != cancellationRools
           article.room-details__booking
-            +card-booking("Сбор за доп. услуги", "short", theme)
+            +card-booking({
+              serviceName: "Сбор за доп. услуги",
+              serviceStyle: "short", 
+              theme: theme
+            })
     +footer(theme)

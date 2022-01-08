@@ -1,6 +1,6 @@
 include ./__item/bullet-checkbox__item.pug
 
-mixin bullet-checkbox(checkboxList, labelText="")
+mixin bullet-checkbox({ checkboxList=[], labelText="" })
   .bullet-checkbox
     if labelText == ""
       .bullet-checkbox__list

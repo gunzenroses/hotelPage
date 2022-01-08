@@ -14,7 +14,7 @@ mixin card-registration(submitText)
     .card-registration__surname
       +textfield_type_name("", "Фамилия", "surname")
     .card-registration__radio
-      +radio-buttons("gender", true, false)
+      +radio-buttons({ inputId: "gender" })
     .card-registration__birthday
       +textfield_type_birthday("Дата рождения", "")
     .card-registration__login
@@ -22,11 +22,15 @@ mixin card-registration(submitText)
         +textfield__label("Данные для входа в сервис")
         +textfield_type_login("")
     .card-registration__specials
-      +button-toggle("special offers", false)
+      +button-toggle({ inputName: "special offers" })
     .card-registration__button-submit
-      +button-submit(submitText)
+      +button-submit({ buttonText: submitText })
     .card-registration__info
       .card__row
         .card__text Уже есть аккаунт на Toxin
         .card-registration__button-link
-          +button-link("Войти", "signin.html", "signin")
+          +button-link({
+            buttonText: "Войти",
+            buttonOnclick: "signin.html",
+            className: "signin"
+          })

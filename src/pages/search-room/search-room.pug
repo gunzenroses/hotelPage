@@ -43,27 +43,49 @@ block content
           form(class="search-room__form")
             .filter-group
               .filter-group__date-range
-                +date-range_common("calendar_search", "даты пребывания в отеле", "19 авг - 23 авг", "", "in-search")
+                +date-range_common({
+                  calendarId: "calendar_search",
+                  labelText: "даты пребывания в отеле",
+                  inputValue: "19 авг - 23 авг",
+                  theme: "in-search"
+                })
               .filter-group__guests
-                +dropdown_type_guests("гости", "dropdown_guests_search", "", "dropdownGuestsInput_3")
+                +dropdown_type_guests({
+                  labelText: "гости",
+                  dropdownContainerId: "dropdown_guests_search",
+                  inputId: "dropdownGuestsInput_3"
+                })
               .filter-group__price-range
-                +range("range_1", true, "Диапазон цены")
+                +range({
+                  rangeId: "range_1",
+                  infoText: true,
+                  labelText: "Диапазон цены"
+                })
               .filter-group__rules
                 h3.label Правила дома
                 +checkbox
             .filter-group
               .filter-group__accessibility
-                +rich-checkbox("accessibility", "Доступность")
+                +rich-checkbox({
+                  checkboxName: "accessibility",
+                  containerText: "Доступность"
+                })
               .filter-group__rooms
-                +dropdown_type_rooms("Удобства номера", "dropdown_rooms_1", "", "dropdownRoomsInput_1")
+                +dropdown_type_rooms({
+                  labelText: "Удобства номера",
+                  dropdownContainerId: "dropdown_rooms_1", 
+                  inputId: "dropdownRoomsInput_1"
+                })
               .filter-group__extras
-                +checkbox-expandable("Дополнительные удобства", "")
+                +checkbox-expandable({
+                  dropdownTitleName: "Дополнительные удобства"
+                })
         section.search-room__rooms
           h1.search-room__text Номера, которые мы для вас подобрали
           .search-room__result
             for room in roomsList 
               .search-room__card-room
-                +card-room(room, theme)
+                +card-room({ roomOptions: room, theme: theme })
           .search-room__pagination 
             +pagination("paginationSearch")
     +footer(theme)

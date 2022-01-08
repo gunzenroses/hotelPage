@@ -1,4 +1,4 @@
-mixin button-like(buttonId, buttonNumber)
+mixin button-like({ buttonId= 1, buttonNumber= 1 })
   if buttonNumber < 10 
     .button-like(id=buttonId)
       .button-like__heart.js-button-like__heart

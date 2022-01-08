@@ -1,6 +1,6 @@
 include ../../calendar/calendar.pug
 
-mixin date-range_common(calendarId, labelText, inputValue, dropdownClassShow="", theme="")
+mixin date-range_common({ calendarId, labelText="", inputValue="19 авг - 23 авг", dropdownClassShow="", theme="" })
   div.date-range.js-date-range
     div(class="date-range__calendar js-date-range__calendar js-expand__content" + dropdownClassShow)
       +calendar(calendarId)

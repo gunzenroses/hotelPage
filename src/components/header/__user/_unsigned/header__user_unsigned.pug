@@ -3,6 +3,10 @@ include ../../../button-link/button-link.pug
 mixin header__user_unsigned(signinText, signinLink, regLink)
   .header__buttons
     .header__signin
-      +button-link(signinText, signinLink, "signin")
+      +button-link({
+        buttonText: signinText,
+        buttonOnclick: signinLink,
+        className: "signin"
+      })
     .header__registration
       a(class="button-link_type_registration" href= regLink)

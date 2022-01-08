@@ -1,4 +1,4 @@
-mixin button-link(buttonText, buttonOnclick="./some-address", className = "")
+mixin button-link({ buttonText="", buttonOnclick="./some-address", className = "" })
   if className == ""
     div(class="button-link")
       a(class="button-link__inner" href= buttonOnclick)= buttonText

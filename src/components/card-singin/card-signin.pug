@@ -8,9 +8,13 @@ mixin card-signin(theme="main")
     h1.card__title Войти
     +textfield_type_login(theme)
     .card-signin__button
-      +button-submit("Войти")
+      +button-submit({ buttonText: "Войти" })
     .card-signin__info
       .card__row
         .card__text Нет аккаунта на Toxin?
         .card-signin__button-link
-          +button-link("Создать", "registration.html", "signin")
+          +button-link({
+            buttonText: "Создать",
+            buttonOnclick: "registration.html",
+            className: "signin"
+          })

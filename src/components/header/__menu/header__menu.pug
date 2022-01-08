@@ -9,10 +9,19 @@ mixin header__menu(user="")
       span.burger__span
     nav.header__dropdown.js-expand__content
       ul.header__navbar_dropdown
-        +navlink("О нас", buttonOnclick="./some-address")
+        +navlink({
+          buttonText: "О нас",
+          buttonOnclick: "./some-address"
+        })
         +navlink-dropdown("Услуги")
-        +navlink("Вакансии", buttonOnclick="./some-address")
-        +navlink("Новости", buttonOnclick="./some-address")
+        +navlink({
+          buttonText: "Вакансии",
+          buttonOnclick: "./some-address"
+        })
+        +navlink({
+          buttonText: "Новости",
+          buttonOnclick: "./some-address"
+        })
         +navlink-dropdown("Соглашения")
     if user
       +header__user_signed(user, buttonOnclick="./some-address")
@@ -20,8 +29,17 @@ mixin header__menu(user="")
       +header__user_unsigned("Войти", buttonOnclick="signin.html", buttonOnclick="registration.html")
     nav.header__navbar-region
       ul.header__navbar
-        +navlink("О нас", buttonOnclick="./some-address")
+        +navlink({
+          buttonText: "О нас",
+          buttonOnclick: "./some-address"
+        })
         +navlink-dropdown("Услуги")
-        +navlink("Вакансии", buttonOnclick="./some-address")
-        +navlink("Новости", buttonOnclick="./some-address")
+        +navlink({
+          buttonText: "Вакансии",
+          buttonOnclick: "./some-address"
+        })
+        +navlink({
+          buttonText: "Новости",
+          buttonOnclick: "./some-address"
+        })
         +navlink-dropdown("Соглашения")

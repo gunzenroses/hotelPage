@@ -1,6 +1,6 @@
 include ./__item/radio-buttons__item.pug
 
-mixin radio-buttons(inputId, ifCheckedMan, ifCheckedWoman)
+mixin radio-buttons({ inputId, ifCheckedMan=true, ifCheckedWoman=false })
   .radio-buttons
     +radio-buttons__item("man-" + inputId, ifCheckedMan, "Мужчина")
     +radio-buttons__item("woman-" + inputId, ifCheckedWoman, "Женщина")

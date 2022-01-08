@@ -1,6 +1,6 @@
 include ./__item/rich-checkbox__item.pug
 
-mixin rich-checkbox(checkboxName, containerText)
+mixin rich-checkbox({ checkboxName="", containerText="" })
   .rich-checkbox
     .rich-checkbox__label!= containerText
     fieldset.rich-checkbox__list

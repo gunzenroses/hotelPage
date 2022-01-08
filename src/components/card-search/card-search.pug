@@ -6,8 +6,12 @@ mixin card-search()
   form.card-search(method="get" action="./search-room.html")
     h1.card__title Найдём номера под ваши пожелания
     .card-search__calendar
-      +date-range_separate("calendar_search", "Прибытие", "", "Выезд", "", "")
+      +date-range_separate({ calendarId: "calendar_search" })
     .card-search__guests
-      +dropdown_type_guests("Гости", "dropdown_guests_search", "", "dropdownGuestsInput_3")
+      +dropdown_type_guests({
+        labelText: "Гости",
+        dropdownContainerId: "dropdown_guests_search",
+        inputId: "dropdownGuestsInput_3"
+      })
     .card-search__button
-      +button-submit("Подобрать номер", "room_search.html")
+      +button-submit({ buttonText: "Подобрать номер", type: "room_search.html" })

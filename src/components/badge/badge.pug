@@ -1,6 +1,6 @@
 include ../info/info.pug
 
-mixin badge(name, title, description)
+mixin badge({ name="insert_emoticon", title="Комфорт", description="Шумопоглощающие стены" })
   .badge
     span.maretial-icon!= name
-    +info(title, description)
+    +info({ title: title, description: description })

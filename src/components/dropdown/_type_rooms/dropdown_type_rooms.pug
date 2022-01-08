@@ -1,6 +1,6 @@
 include ../__item/dropdown__item.pug
 
-mixin dropdown_type_rooms(labelText, dropdownContainerId, dropdownClassShow, inputId, labelRightText)
+mixin dropdown_type_rooms({ labelText="", dropdownContainerId, dropdownClassShow="", inputId, labelRightText="" })
   .dropdown__container_type_rooms
     h3.label!= labelText
     if labelRightText

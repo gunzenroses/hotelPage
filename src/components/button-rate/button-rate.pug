@@ -1,6 +1,6 @@
 include ./__item/button-rate__item.pug
 
-mixin button-rate(inputName, checkedNum) 
+mixin button-rate({ inputName="", checkedNum=1 }) 
   .button-rate
     each val in [5, 4, 3, 2, 1]
       +button-rate__item(inputName, val, checkedNum)
