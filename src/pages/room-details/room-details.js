@@ -2,7 +2,7 @@ import 'Scripts/inputmasks';
 import applyClass from 'Scripts/applyClass';
 import ButtonLike from 'Components/button-like/ButtonLike';
 import 'Components/card-booking/card-booking';
-import Expand from 'Components/expand/Expand';
+import Expand from 'Main/components/expand/Expand';
 import 'Components/footer/footer';
 
 import './room-details.scss';

@@ -1,11 +1,11 @@
 import applyClass from 'Scripts/applyClass';
 import { guestsDataSearchRoom, roomsData1 } from 'Scripts/my-data';
-import Calendar from 'Components/calendar/Calendar';
+import Calendar from 'Main/components/calendar/Calendar';
 import DropdownGuests from 'Components/dropdown/_type_guests/DropdownGuests';
 import DropdownRooms from 'Components/dropdown/_type_rooms/DropdownRooms';
-import Expand from 'Components/expand/Expand';
+import Expand from 'Main/components/expand/Expand';
 import 'Components/footer/footer';
-import Pagination from 'Components/pagination/Pagination';
+import Pagination from 'Main/components/pagination/Pagination';
 import 'Components/range/range';
 import RoomCarousel from 'Components/room-carousel/RoomCarousel';
 

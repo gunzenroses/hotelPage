@@ -4,16 +4,16 @@ import {
   paginationData1, guestsData1, guestsDataBooking, roomsData1, roomsData2,
 } from 'Scripts/my-data';
 import ButtonLike from 'Components/button-like/ButtonLike';
-import Calendar from 'Components/calendar/Calendar';
+import Calendar from 'Main/components/calendar/Calendar';
 import 'Components/card-booking/card-booking';
 import 'Components/card-registration/card-registration';
 import 'Components/card-search/card-search';
 import 'Components/card-singin/card-signin';
-import Expand from 'Components/expand/Expand';
+import Expand from 'Main/components/expand/Expand';
 import DropdownGuests from 'Components/dropdown/_type_guests/DropdownGuests';
 import DropdownRooms from 'Components/dropdown/_type_rooms/DropdownRooms';
 import 'Components/footer/footer';
-import Pagination from 'Components/pagination/Pagination';
+import Pagination from 'Main/components/pagination/Pagination';
 import 'Components/range/range';
 import RoomCarousel from 'Components/room-carousel/RoomCarousel';
 
