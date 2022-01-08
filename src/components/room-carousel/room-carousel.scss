@@ -63,6 +63,13 @@
   transition: 2s;
 }
 
+.room-carousel__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: none;
+}
+
 .room-carousel__radio {
   @include isFlex();
   position: absolute;
