@@ -83,7 +83,7 @@
     margin: 27px auto 68px;
   }
 
-  @include _1300 {
+  @include _1340 {
     width: 980px;
     height: auto;
   }
@@ -104,7 +104,7 @@
     height: fit-content;
   }
 
-  @include _1300 {
+  @include _1340 {
     margin-left: 25px;
   }
 
@@ -157,7 +157,7 @@
     width: 68%;
   }
 
-  @include _1300 {
+  @include _1340 {
     width: 637px;
     height: auto;
   }
@@ -201,7 +201,7 @@
   margin-top: 18px;
   padding-left: 1px;
 
-  @include _1300 {
+  @include _1340 {
     height: auto;
     justify-content: space-around;
   }

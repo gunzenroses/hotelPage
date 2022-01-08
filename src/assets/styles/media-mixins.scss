@@ -34,20 +34,26 @@
   }
 }
 
+@mixin _1440 {
+  @media (max-width: 1400px) {
+    @content;
+  }
+}
+
 @mixin _1400 {
   @media (max-width: 1400px) {
     @content;
   }
 }
 
-@mixin _1300 {
-  @media (max-width: 1300px) {
+@mixin _1340 {
+  @media (max-width: 1340px) {
     @content;
   }
 }
 
-@mixin _1340 {
-  @media (max-width: 1340px) {
+@mixin _1300 {
+  @media (max-width: 1300px) {
     @content;
   }
 }
