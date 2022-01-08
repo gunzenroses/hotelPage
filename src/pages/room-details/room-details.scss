@@ -368,7 +368,7 @@
   @include headerSecond();
   margin-left: 20px;
 
-  @media (max-width: 650px) {
+  @include _700 {
     margin-left: 0;
   }
 }

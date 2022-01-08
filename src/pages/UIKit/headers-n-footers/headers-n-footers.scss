@@ -16,7 +16,7 @@
   overflow: auto;
   background: $background;
 
-  @media (max-width: 1440px) {
+  @include _1440 {
     width: 100vw;
     height: auto;
   }
