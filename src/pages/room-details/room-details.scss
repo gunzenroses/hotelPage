@@ -213,6 +213,11 @@
 
   @include _690 {
     flex-direction: column;
+    padding: 0 12%;
+  }
+
+  @include _450 {
+    padding: 0 7%;
   }
 }
 
@@ -282,6 +287,10 @@
 
   @include _1400 {
     margin-top: 20px;
+  }
+
+  @include _970 {
+    margin-top: 0;
   }
 
   @include _450 {
@@ -404,7 +413,8 @@
   color: $dark-shade_most;
   letter-spacing: 0.001em;
 
-  @include _1750-1920 {
+  @include _1650-1920 {
+    margin: 0 auto;
     font-size: $fs_h1;
   }
 }

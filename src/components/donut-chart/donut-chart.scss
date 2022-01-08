@@ -44,7 +44,7 @@
   position: relative;
 
   @include _1650-1920 {
-    width: 167px;
+    width: calc(100% - 200px);
     height: 167px;
   }
 
@@ -98,8 +98,8 @@
   margin-left: 30px;
   font-size: $fs_base;
 
-  @include _1750-1920 {
-    width: calc(100% - 167px);
+  @include _1650-1920 {
+    width: 200px;
   }
 
   @include _380 {
