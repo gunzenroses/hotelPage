@@ -99,7 +99,7 @@
   @include paginationItem();
   @include paginationNav();
 
-  .pagination::before {
+  &::before {
     content: '\e5c8';
     @include paginationBefore();
     font-family: $material-icons;
@@ -113,7 +113,7 @@
   @include paginationItem();
   @include paginationNav();
 
-  .pagination::before {
+  &::before {
     content: '\e5c4';
     @include paginationBefore();
     font-family: $material-icons;
