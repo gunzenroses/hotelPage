@@ -24,7 +24,8 @@
 
 .rich-checkbox__item {
   @include isFlex($justify: flex-start);
-  width: 100%;
+  width: fit-content;
+  max-width: 100%;
   height: fit-content;
   cursor: pointer;
   user-select: none;
@@ -32,7 +33,6 @@
 
 .rich-checkbox__form {
   @include isFlex($direction: column, $justify: flex-start);
-  min-width: 223px;
   max-width: 350px;
   height: fit-content;
 
