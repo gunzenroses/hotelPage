@@ -30,7 +30,7 @@ body {
   letter-spacing: .003em;
   color: $dark-shade_most;
   text-transform: uppercase;
-  pointer-events: none;
+  user-select: none;
 
   @include _1750-1920 {
     font-size: $fs_base;

@@ -236,6 +236,7 @@
   letter-spacing: .0001em;
   font-weight: 700;
   text-transform: uppercase;
+  user-select: none;
 }
 
 .form-elements__container_toggle {
@@ -252,6 +253,7 @@
   letter-spacing: .0001em;
   font-weight: 700;
   text-transform: uppercase;
+  user-select: none;
 }
 
 .form-elements__group_toggle {
@@ -288,6 +290,7 @@
   @include headerThird();
   line-height: $fs_h3;
   line-height: 1.045rem;
+  user-select: none;
 }
 
 
@@ -327,6 +330,7 @@
   @include headerThird();
   margin-bottom: 3.5px;
   line-height: $fs_h3;
+  user-select: none;
 }
 
 .form-elements__row_buttons-link {

@@ -41,8 +41,8 @@
   font-size: $fs_h3;
   letter-spacing: .003em;
   font-weight: 700;
-  pointer-events: none;
   text-transform: uppercase;
+  user-select: none;
 
   @include _1750-1920 {
     font-size: $fs_base;

@@ -85,7 +85,7 @@
     color: $dark-shade_most;
     letter-spacing: 0.002em;
     text-transform: uppercase;
-    pointer-events: none;
+    user-select: none;
 
     @include _1750-1920 {
       font-size: $fs_base;

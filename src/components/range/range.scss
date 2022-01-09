@@ -41,6 +41,7 @@
   letter-spacing: .001em;
   color: $dark-shade_most;
   text-transform: uppercase;
+  user-select: none;
 }
 
 .range__label_right {
@@ -63,6 +64,7 @@
   text-align: right;
   overflow: visible;
   text-transform: uppercase;
+  user-select: none;
 }
 
 .range__info {
