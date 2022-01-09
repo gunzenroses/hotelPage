@@ -50,6 +50,7 @@
   letter-spacing: .005em;
   height: 100%;
   color: $dark-shade_medium;
+  user-select: none;
 }
 
 .radio-buttons__real:checked + .radio-buttons__fake::before {

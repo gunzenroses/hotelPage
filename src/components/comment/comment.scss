@@ -23,6 +23,7 @@
   width: 100%;
   min-width: 260px;
   min-height: 133px;
+  user-select: none;
 
   @include _450 {
     margin: 0 auto;

@@ -49,6 +49,7 @@
   @include isFlex($direction: column);
   width: fit-content;
   height: 75px;
+  user-select: none;
 }
 
 .pagination__buttons {

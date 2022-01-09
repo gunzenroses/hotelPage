@@ -14,7 +14,7 @@
   padding-bottom: 19px;
   font-size: 13.5px;
   letter-spacing: .02em;
-  pointer-events: none;
+  user-select: none;
 
   @include _1650-1920 {
     width: fit-content;

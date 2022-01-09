@@ -50,6 +50,7 @@
 .button-like {
   @include buttonLike();
   background: $dark-shade_less;
+  user-select: none;
 
   &::before {
     @include buttonLikeBefore();

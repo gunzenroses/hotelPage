@@ -22,11 +22,12 @@
   height: $h;
 }
 
-.rich-checkbox__item{
+.rich-checkbox__item {
   @include isFlex($justify: flex-start);
   width: 100%;
   height: fit-content;
   cursor: pointer;
+  user-select: none;
 }
 
 .rich-checkbox__form {

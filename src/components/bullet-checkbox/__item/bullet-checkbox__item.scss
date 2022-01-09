@@ -1,37 +1,36 @@
 @import '@~Assets/styles/media-mixins.scss';
 
-.bullet-checkbox {
-    &__item {
-      position: relative;
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-      align-items: flex-start;
-      flex-wrap: nowrap;
-    }
-  
-    &__icon {
-      display: inline-block;
-      position: relative;
-      top: 7px;
-      width: 10.43px;
-      height: 10px;
-      margin-right: 10px;
-      border-radius: 50%;
-      background-color: $dark-shade_less;
-    }
-    
-    &__title {
-      width: 242px;
-      font-weight: 400;
-      font-size: $fs_base;
-      line-height: 24px;
-      color: $dark-shade_more;
-      letter-spacing: .001em;
-  
-      @include _1750-1920 {
-        width: calc(100% - 20px);
-        letter-spacing: 0;
-      }
-    }
+.bullet-checkbox__item {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  user-select: none;
+}
+
+.bullet-checkbox__icon {
+  display: inline-block;
+  position: relative;
+  top: 7px;
+  width: 10.43px;
+  height: 10px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: $dark-shade_less;
+}
+
+.bullet-checkbox__title {
+  width: 242px;
+  font-weight: 400;
+  font-size: $fs_base;
+  line-height: 24px;
+  color: $dark-shade_more;
+  letter-spacing: .001em;
+
+  @include _1750-1920 {
+    width: calc(100% - 20px);
+    letter-spacing: 0;
   }
+}

@@ -12,6 +12,7 @@
   font-weight: 400;
   text-transform: none;
   cursor: pointer;
+  user-select: none;
 
   @include _450 {
     margin: 0 auto;

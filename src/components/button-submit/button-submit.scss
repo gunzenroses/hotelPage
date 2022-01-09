@@ -48,6 +48,7 @@
   color: $light;
   background-color: transparent;
   outline: none;
+  user-select: none;
   
   &::before {
     @include arrowSubmit();
