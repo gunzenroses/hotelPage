@@ -5,5 +5,5 @@ mixin button-link({ buttonText="", buttonOnclick="./some-address", className = "
   else if className == "colored"
     a(class="button-link_type_colored" href= buttonOnclick)= buttonText
   else
-    div(class="button-link" + "_type_" + className)
+    div(class=`button-link_type_${className}`)
       a(class="button-link__inner" href= buttonOnclick)= buttonText

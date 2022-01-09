@@ -49,7 +49,7 @@ mixin card-booking({ serviceName, serviceStyle, theme="" })
             .card-booking__line
           .card-booking__price_total 38 081₽
       else
-        div(class="card-booking__summary" + "_" + theme)
+        div(class=`${card-booking__summary}_${theme}`)
           .booking-total__text Итого
           if theme == "in-uikit"
             .card-booking__line_in-uikit

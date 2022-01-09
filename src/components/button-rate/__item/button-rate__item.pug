@@ -1,7 +1,7 @@
 mixin button-rate__item(inputName, inputValue, checkedNum)
   if checkedNum <= inputValue
-    input(type="radio" name=inputName value=inputValue checked=true id=inputName + "-" + inputValue).button-rate__real
-    label(for=inputName + "-" + inputValue).button-rate__fake
+    input(type="radio" name=inputName value=inputValue checked=true id=`${inputName}-${inputValue}`).button-rate__real
+    label(for=`${inputName}-${inputValue}`).button-rate__fake
   else
-    input(type="radio" name=inputName value=inputValue checked=false id=inputName + "-" + inputValue).button-rate__real
-    label(for=inputName + "-" + inputValue).button-rate__fake
+    input(type="radio" name=inputName value=inputValue checked=false id=`${inputName}-${inputValue}`).button-rate__real
+    label(for=`${inputName}-${inputValue}`).button-rate__fake

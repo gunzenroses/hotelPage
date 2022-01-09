@@ -7,10 +7,10 @@ mixin social-nets(theme = "")
     span.social-net.social-net__instagram
       a(href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer").social-net__link
   else
-    span.social-net(class="social-net__twitter" + "_" + theme)
+    span.social-net(class=`social-net__twitter_${theme}`)
       a(href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer").social-net__link
-    span.social-net(class="social-net__facebook" + "_" + theme)
+    span.social-net(class=`social-net__facebook_${theme}`)
       a(href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer").social-net__link
-    span.social-net(class="social-net__instagram" + "_" + theme)
+    span.social-net(class=`social-net__instagram_${theme}`)
       a(href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer").social-net__link
   

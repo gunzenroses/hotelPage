@@ -10,7 +10,7 @@ mixin footer({ theme="main", footerText="Бронирование номеров
   - var supports = ["Соглашения", "Сообщества", "Связь с нами"]
   footer.footer
     .footer__navbar_outer
-      div(class="footer__navbar" + "_" + theme)
+      div(class=`footer__navbar_${theme}`)
         +footer__company-info({
           footerText: footerText,
           theme: theme
@@ -35,7 +35,7 @@ mixin footer({ theme="main", footerText="Бронирование номеров
             .copyright__social
               +social-nets()
       else
-        div(class="footer__copyright" + "_" + theme)
+        div(class=`footer__copyright_${theme}`)
           .copyright__text Copyright © 2018 Toxin отель. Все права защищены.
           .footer__copyright-social
             .copyright__social

@@ -25,7 +25,7 @@ mixin card-room({ roomOptions, theme="" })
               checkedNum: starRate
             })
         else
-          div(class="card-room__button-rate" + "_" + theme)
+          div(class=`card-room__button-rate_${theme}`)
             +button-rate({
               inputName: starName,
               checkedNum: starRate

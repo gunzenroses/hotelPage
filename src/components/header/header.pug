@@ -8,6 +8,6 @@ mixin header({ user="", theme="" })
         +logo()
       +header__menu(user)
   else 
-    header(class="header" + "_" + theme)
+    header(class=`header_${theme}`)
       +logo()
       +header__menu(user)

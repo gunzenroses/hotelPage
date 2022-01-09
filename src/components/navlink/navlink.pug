@@ -3,5 +3,5 @@ mixin navlink({ buttonText="", buttonOnclick="./some-address", buttonNavlinkClas
     li(class="navlink")
       a(class="navlink__button" href= buttonOnclick)= buttonText
   else 
-    li(class="navlink" + "_" + buttonNavlinkClass)
+    li(class=`navlink_${buttonNavlinkClass}`)
       a(class="navlink__button" href= buttonOnclick)= buttonText

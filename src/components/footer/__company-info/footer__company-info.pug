@@ -1,6 +1,6 @@
 include ../../logo/logo.pug
 
 mixin footer__company-info({ footerText="", theme="main" })
-  div(class="footer__logo" + "_" + theme)
+  div(class=`footer__logo_${theme}`)
     +logo()
     .footer__text!= footerText
