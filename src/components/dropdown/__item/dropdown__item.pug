@@ -1,4 +1,4 @@
-mixin dropdown__item(itemDataType, itemText, itemDataOrder, itemClass="")
+mixin dropdown__item({ itemDataType, itemText, itemDataOrder, itemClass="" })
   if itemClass == ""
     .dropdown__item.js-dropdown__item(data-type=itemDataType)
       .dropdown__text!= itemText

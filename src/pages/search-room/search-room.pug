@@ -36,11 +36,11 @@ block variables
 
 block content
   .search-room.js-dropdown__detection
-    +header("", theme)
+    +header({ user: "", theme: theme })
     main.search-room__content_outer
       .search-room__content
         section.search-room__filter
-          form(class="search-room__form")
+          form.search-room__form
             .filter-group
               .filter-group__date-range
                 +date-range_common({
@@ -88,4 +88,4 @@ block content
                 +card-room({ roomOptions: room, theme: theme })
           .search-room__pagination 
             +pagination("paginationSearch")
-    +footer(theme)
+    +footer({ theme: theme })

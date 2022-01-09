@@ -10,16 +10,16 @@ mixin card-registration(submitText)
   form.card-registration.js-card-registration(method="get" action="./registration.html" )
     h1.card__title Регистрация аккаунта
     .card-registration__name
-      +textfield_type_name()
+      +textfield_type_name({})
     .card-registration__surname
-      +textfield_type_name("", "Фамилия", "surname")
+      +textfield_type_name({ placeholder: "Фамилия", value: "surname" })
     .card-registration__radio
       +radio-buttons({ inputId: "gender" })
     .card-registration__birthday
-      +textfield_type_birthday("Дата рождения", "")
+      +textfield_type_birthday({ labelLeft: "Дата рождения", labelRight: "" })
     .card-registration__login
       .textfield__container
-        +textfield__label("Данные для входа в сервис")
+        +textfield__label({ labelText: "Данные для входа в сервис" })
         +textfield_type_login("")
     .card-registration__specials
       +button-toggle({ inputName: "special offers" })

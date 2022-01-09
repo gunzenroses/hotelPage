@@ -1,4 +1,4 @@
-mixin card-booking__price-info(infoDesctiption, infoPrice, infoSign = "none")
+mixin card-booking__price-info({ infoDesctiption, infoPrice, infoSign = "none" })
   if infoSign == "full"
     .card-booking__price-info
       .card-booking__description!= infoDesctiption

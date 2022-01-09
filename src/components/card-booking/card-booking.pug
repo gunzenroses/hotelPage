@@ -7,7 +7,12 @@ include ./__price-info/card-booking__price-info.pug
 
 mixin card-booking({ serviceName, serviceStyle, theme="" })
   form.card-booking(method="get" action="./search-room.html")
-    +card-booking__room-info("888", "Люкс", "9 990", theme)
+    +card-booking__room-info({
+      bookingNumber: "888",
+      bookingType: "Люкс",
+      bookingPrice: "9 990",
+      theme: theme
+    })
     .card-booking__date-range
       +date-range_separate({ 
         calendarId: "calendar_booking",
@@ -20,9 +25,20 @@ mixin card-booking({ serviceName, serviceStyle, theme="" })
         dropdownContainerId: "dropdown_guests_booking", 
         inputId: "dropdownGuestsInput_4"
       })
-    +card-booking__price-info("9 990₽ х 4 суток", "39 960")
-    +card-booking__price-info("Сбор за услуги: скидка 2 179₽", "0", "full")
-    +card-booking__price-info(serviceName, "300", serviceStyle)
+    +card-booking__price-info({
+      infoDesctiption: "9 990₽ х 4 суток",
+      infoPrice: "39 960"
+    })
+    +card-booking__price-info({
+      infoDesctiption: "Сбор за услуги: скидка 2 179₽",
+      infoPrice: "0",
+      infoSign: "full"
+    })
+    +card-booking__price-info({
+      infoDesctiption: serviceName,
+      infoPrice: "300",
+      infoSign: serviceStyle
+    })
     .card-booking__price-info_total
       if theme == ""
         .card-booking__summary

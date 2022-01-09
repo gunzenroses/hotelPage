@@ -1,4 +1,4 @@
-mixin textfield__input(inputType="text", placeHolder="", valueText="", nameText="text", maxText="20", autofocus=false)
+mixin textfield__input({ inputType="text", placeHolder="", valueText="", nameText="text", maxText="20", autofocus=false })
   input(class="textfield__input" type=inputType placeholder=placeHolder, 
     value=valueText name=nameText data-rule=nameText, 
     maxlength=maxText autofocus=autofocus)

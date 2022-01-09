@@ -1,4 +1,4 @@
-mixin rich-checkbox__item(checkboxName, checkboxValue, checkboxTitle, checkboxSubtitle, checkboxSubtitle2)
+mixin rich-checkbox__item({ checkboxName="", checkboxValue="", checkboxTitle="", checkboxSubtitle="" })
   label.rich-checkbox__item
     input(type="checkbox" name=checkboxName value=checkboxValue).rich-checkbox__real
     span.rich-checkbox__fake

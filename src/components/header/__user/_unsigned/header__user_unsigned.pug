@@ -1,6 +1,6 @@
 include ../../../button-link/button-link.pug
 
-mixin header__user_unsigned(signinText, signinLink, regLink)
+mixin header__user_unsigned({ signinText="", signinLink="/some-link", regLink="/reg-link" })
   .header__buttons
     .header__signin
       +button-link({

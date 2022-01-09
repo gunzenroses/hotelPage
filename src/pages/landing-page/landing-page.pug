@@ -14,10 +14,10 @@ block variables
 
 block content
   .landing-page.js-dropdown__detection
-    +header("", theme)
+    +header({ user: "", theme: theme })
     main.landing-page__content
       +carousel-landing(pics)
       blockquote.landing-page__text Лучшие номера для вашей работы, отдыха и просто вдохновения
       .landing-page__card-search
         +card-search()
-    +footer(theme)
+    +footer({ theme: theme })

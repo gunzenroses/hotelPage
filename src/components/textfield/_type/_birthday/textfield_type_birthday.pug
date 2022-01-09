@@ -1,7 +1,7 @@
 include ../../__label/textfield__label.pug
 include ../../textfield.pug
 
-mixin textfield_type_birthday(labelLeft, labelRight)
+mixin textfield_type_birthday({ labelLeft="", labelRight="" })
   .textfield__container
-    +textfield__label(labelLeft, labelRight)
+    +textfield__label({ labelText: labelLeft, labelRightText: labelRight })
     +textfield("birthday", "ДД.ММ.ГГГГ", "", "birthday", "10", autofocus=false)

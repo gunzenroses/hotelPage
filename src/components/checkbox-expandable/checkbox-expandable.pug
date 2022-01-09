@@ -5,11 +5,35 @@ mixin checkbox-expandable({ dropdownTitleName, dropdownClassShow="" })
     .checkbox-expandable__dropdown
       div(class="js-expand__content " + dropdownClassShow)
         fieldset.checkbox-expandable__content
-          +checkbox-expandable__item("breakfast", false, "Завтрак")
-          +checkbox-expandable__item("desk", true, "Письменный стол")
-          +checkbox-expandable__item("feeding chair", true, "Стул для кормления")
-          +checkbox-expandable__item("baby bed", true, "Кроватка")
-          +checkbox-expandable__item("TV", false, "Телевизор")
-          +checkbox-expandable__item("shampoo", false, "Шампунь")
+          +checkbox-expandable__item({
+            checkboxName: "breakfast",
+            ifChecked: false,
+            checkboxTitle: "Завтрак"
+          })
+          +checkbox-expandable__item({
+            checkboxName: "desk",
+            ifChecked: true,
+            checkboxTitle: "Письменный стол"
+          })
+          +checkbox-expandable__item({
+            checkboxName: "feeding chair",
+            ifChecked: true,
+            checkboxTitle: "Стул для кормления"
+          })
+          +checkbox-expandable__item({
+            checkboxName: "baby bed",
+            ifChecked: true,
+            checkboxTitle: "Кроватка"
+          })
+          +checkbox-expandable__item({
+            checkboxName: "TV",
+            ifChecked: false,
+            checkboxTitle: "Телевизор"
+          })
+          +checkbox-expandable__item({
+            checkboxName: "shampoo",
+            ifChecked: false,
+            checkboxTitle: "Шампунь"
+          })
       .dropdown__button_transparent.js-expand__init
         .dropdown__title!= dropdownTitleName

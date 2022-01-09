@@ -1,13 +1,33 @@
 include ./__input/textfield__input.pug
 
-mixin textfield(inputClass, placeholder, valueText, nameText, maxText, autofocus=false)
+mixin textfield({ inputClass, placeholder, valueText, nameText, maxText, autofocus=false })
   if inputClass == ""
     div(class="textfield" + inputClass)
-      +textfield__input("text", placeholder, valueText, nameText, maxText, autofocus)
+      +textfield__input({
+        inputType: "text",
+        placeHolder: placeholder,
+        valueText: valueText,
+        nameText: nameText,
+        maxText: maxText,
+        autofocus: autofocus
+      })
   else if inputClass === "password"
     div(class="textfield" + "_type_" + inputClass)
-      +textfield__input("password", placeholder, valueText, nameText, maxText, autofocus)
+      +textfield__input({
+        inputType: "password",
+        placeHolder: placeholder,
+        valueText: valueText,
+        nameText: nameText,
+        maxText: maxText,
+        autofocus: autofocus
+      })
   else
     div(class="textfield" + "_type_" + inputClass)
-      +textfield__input("text", placeholder, valueText, nameText, maxText, autofocus)
-      
+      +textfield__input({
+        inputType: "text",
+        placeHolder: placeholder,
+        valueText: valueText,
+        nameText: nameText,
+        maxText: maxText,
+        autofocus: autofocus
+      })

@@ -7,9 +7,21 @@ mixin dropdown_type_guests({ labelText="", dropdownContainerId, dropdownClassSho
       h3.label_right!= labelRightText
     div(class="dropdown" id=dropdownContainerId)
       div(class="dropdown__guests js-expand__content js-dropdown__guests " + dropdownClassShow)
-        +dropdown__item("grownups", "Взрослые", 0)
-        +dropdown__item("kids", "Дети", 1)
-        +dropdown__item("infants", "Младенцы", 2)
+        +dropdown__item({
+          itemDataType: "grownups",
+          itemText: "Взрослые",
+          itemDataOrder: 0
+        })
+        +dropdown__item({
+          itemDataType: "kids",
+          itemText: "Дети",
+          itemDataOrder: 1
+        })
+        +dropdown__item({
+          itemDataType: "infants",
+          itemText: "Младенцы",
+         itemDataOrder: 2
+        })
         .dropdown__buttons
           button.dropdown__button_type_submit.js-dropdown__button_type_submit(type="submit") Применить
           button.dropdown__button_type_reset.js-dropdown__button_type_reset(type="reset") Очистить

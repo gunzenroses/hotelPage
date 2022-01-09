@@ -1,4 +1,4 @@
-mixin checkbox__item(valueText, inputName, ifChecked, checkboxTitle)
+mixin checkbox__item({ valueText, inputName, ifChecked=false, checkboxTitle="" })
   label.checkbox__item
     input(type="checkbox" value=valueText name=inputName checked=ifChecked).checkbox__real
     span.checkbox__fake

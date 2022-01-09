@@ -6,5 +6,15 @@ mixin date-range_separate({ calendarId, labelText_1="Прибытие", inputVal
     div(class="date-range__calendar js-date-range__calendar js-expand__content" + dropdownClassShow)
       +calendar(calendarId)
     .date-range__selector.js-expand__init
-      +date-range__item(labelText_1, "checkin", inputValue_1, "checkin")
-      +date-range__item(labelText_2, "checkout", inputValue_2, "checkout") 
+      +date-range__item({
+        labelText: labelText_1,
+        inputName: "checkin",
+        inputValue: inputValue_1,
+        dateDataType: "checkin"
+      })
+      +date-range__item({
+        labelText: labelText_2,
+        inputName: "checkout",
+        inputValue: inputValue_2,
+        dateDataType: "checkout"
+      })

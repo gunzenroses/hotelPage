@@ -10,11 +10,10 @@ block variables
 block content
   .headers-n-footers.js-dropdown__detection
     img.uikit-logo(src= "./assets/images/logo/logo.svg" alt="uikit logo")
-    +header()
+    +header({})
     .headers-n-footers__header
-      +header("Юлий Цезарь")
+      +header({ user: "Юлий Цезарь", theme: theme })
     .headers-n-footers__footer
-      +footer()
+      +footer({})
     .headers-n-footers__footer-creative
       +footer-creative()
-

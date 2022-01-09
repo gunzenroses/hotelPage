@@ -24,9 +24,16 @@ mixin header__menu(user="")
         })
         +navlink-dropdown("Соглашения")
     if user
-      +header__user_signed(user, buttonOnclick="./some-address")
+      +header__user_signed({
+        user: user,
+        buttonOnclick: "./some-address"
+      })
     else
-      +header__user_unsigned("Войти", buttonOnclick="signin.html", buttonOnclick="registration.html")
+      +header__user_unsigned({
+        signinText: "Войти",
+        signinLink: "signin.html",
+        regLink: "registration.html"
+      })
     nav.header__navbar-region
       ul.header__navbar
         +navlink({

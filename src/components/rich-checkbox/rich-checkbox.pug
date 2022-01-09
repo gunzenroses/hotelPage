@@ -4,5 +4,15 @@ mixin rich-checkbox({ checkboxName="", containerText="" })
   .rich-checkbox
     .rich-checkbox__label!= containerText
     fieldset.rich-checkbox__list
-      +rich-checkbox__item(checkboxName, "wide corridor", "Широкий коридор", "Ширина коридоров в номере <br> не менее 91 см.")
-      +rich-checkbox__item(checkboxName, "help for disabled", "Помощник для инвалидов", "На 1 этаже вас встретит специалист <br> и проводит до номера.")
+      +rich-checkbox__item({
+        checkboxName: checkboxName,
+        checkboxValue: "wide corridor",
+        checkboxTitle: "Широкий коридор",
+        checkboxSubtitle: "Ширина коридоров в номере <br> не менее 91 см."
+      })
+      +rich-checkbox__item({
+        checkboxName: checkboxName,
+        checkboxValue: "help for disabled",
+        checkboxTitle: "Помощник для инвалидов",
+        checkboxSubtitle: "На 1 этаже вас встретит специалист <br> и проводит до номера."
+      })

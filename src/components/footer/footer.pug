@@ -4,16 +4,28 @@ include ./__info/_hidden/footer__info_hidden.pug
 include ./__info/_visible/footer__info_visible.pug
 include ./__subsciption/footer__subscription.pug
 
-mixin footer(theme="main", footerText="Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»")
+mixin footer({ theme="main", footerText="Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»" })
   - var navigations = ["О нас", "Новости", "Служба поддержки", "Услуги"]
   - var abouts = ["О сервисе", "Наша команда", "Вакансии", "Инвесторы"]
   - var supports = ["Соглашения", "Сообщества", "Связь с нами"]
   footer.footer
     .footer__navbar_outer
       div(class="footer__navbar" + "_" + theme)
-        +footer__company-info(footerText, theme)
-        +footer__info_visible(navigations, abouts, supports, theme)
-        +footer__info_hidden(navigations, abouts, supports)
+        +footer__company-info({
+          footerText: footerText,
+          theme: theme
+        })
+        +footer__info_visible({
+          navigations: navigations,
+          abouts: abouts,
+          supports: supports,
+          theme: theme
+        })
+        +footer__info_hidden({ 
+          navigations: navigations,
+          abouts: abouts,
+          supports: supports
+        })
         +footer__subscription
     .footer__copyright_outer
       if theme == "main"

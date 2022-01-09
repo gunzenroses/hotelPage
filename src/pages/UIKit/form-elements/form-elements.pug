@@ -55,19 +55,19 @@ block content
         .form-elements__container_first
           .form-elements__container_email
             .textfield__container
-              +textfield__label(
-                "Text field", 
-                "default", 
-                "textfield__label_for-email"
-                )
+              +textfield__label({
+                labelText: "Text field", 
+                labelRightText: "default", 
+                labelRightClass: "textfield__label_for-email"
+              })
               +textfield_type_email()
           .form-elements__container_name
             .textfield__container
-              +textfield__label(
-                "Text field", 
-                "hover / focus", 
-                "textfield__label_for-name"
-                )
+              +textfield__label({
+                labelText: "Text field", 
+                labelRightText: "hover / focus", 
+                labelRightClass: "textfield__label_for-name"
+              })
               +textfield(
                 "", 
                 "Text", 
@@ -83,8 +83,10 @@ block content
               inputId: "dropdownGuestsInput_0"
             })
           .form-elements__container_birthday
-            +textfield_type_birthday("Masked text field", "")
-            
+            +textfield_type_birthday({
+              labelLeft: "Masked text field",
+              labelRight: ""
+            })
         .form-elements__container_second
           .form-elements__container_date-range_separate
             +date-range_separate({ 
@@ -101,9 +103,8 @@ block content
             })
           .form-elements__container_subscibe
             .textfield__container
-              +textfield__label("Subscription text field", "")
+              +textfield__label({ labelText: "Subscription text field" })
               +textfield_type_subscribe()
-
       .form-elements__group_second
         .form-elements__container_checkbox
           h3.label Сheckbox buttons
@@ -185,8 +186,6 @@ block content
         .form-elements__container_pagination
             h3.label pagination
             +pagination("pagination_bar_1")
-
-
       .form-elements__group_forth
         .form-elements__container_dropdowns
           .form-elements__container_rooms

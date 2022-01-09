@@ -1,4 +1,4 @@
-mixin radio-buttons__item(inputId, ifChecked, buttonTitle)
+mixin radio-buttons__item({ inputId, ifChecked=false, buttonTitle="" })
   label(for=inputId).radio-buttons__item
     input.radio-buttons__real(
       type="radio" name="gender" id=inputId value=inputId checked=ifChecked)
