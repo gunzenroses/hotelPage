@@ -81,15 +81,9 @@
 }
 
 .js-button-like_popular {
-  @include buttonLike();
   background: $linearGradientLilac;
-
-  &::before {
-    @include buttonLikeBefore();
-  }
 }
 
 .js-button-like__heart_popular {
-  @include buttonLikeHeart();
   background-image: url('@~Components/button-like/__heart/_active/button-like__heart_active.svg');
 }
