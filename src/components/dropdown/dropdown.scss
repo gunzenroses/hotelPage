@@ -143,25 +143,31 @@
     border-radius: 4px 4px 0 0;
   }
 
+  &:hover,
+  &:focus {
+    border: none;
+  }
+
   &::before {
     @include dropdownButton();
     line-height: 42px;
   }
+}
 
-  &_transparent {
-    @include dropdownInitialField();
+.dropdown__button_transparent {
+  @include dropdownInitialField();
+  border: none;
+  padding: 0;
+
+  &:hover,
+  &:focus {
     border: none;
-    padding: 0;
+  }
 
-    &:hover,
-    &:focus {
-      border: none;
-    }
-
-    &::before {
-      @include dropdownButton();
-      line-height: 45px;
-    }
+  &::before {
+    @include dropdownButton();
+    color: $dark-shade_medium;
+    line-height: 45px;
   }
 }
 
