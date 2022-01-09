@@ -15,7 +15,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 
   @include _1650-1920 {
     width: 100%;
