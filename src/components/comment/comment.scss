@@ -32,6 +32,7 @@
 .comment__head {
   @include isFlex($justify: start);
   height: fit-content;
+  pointer-events: none;
 }
 
 .comment__pic {
@@ -52,7 +53,6 @@
   margin-top: 10px;
   margin-left: 2px;
   font-size: $fs_base;
-  pointer-events: none;
 }
 
 .comment__text {
@@ -66,6 +66,7 @@
   color: $dark-shade_more;
   font-weight: 400;
   text-align: left;
+  pointer-events: none;
 
   @include _450 {
     width: 70%;
