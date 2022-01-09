@@ -1,6 +1,6 @@
 include ./__input/textfield__input.pug
 
-mixin textfield({ inputClass, placeholder, valueText, nameText, maxText, autofocus=false })
+mixin textfield({ inputClass="", placeholder="", valueText="", nameText="text", maxText=30, autofocus=false })
   if inputClass == ""
     div(class="textfield")
       +textfield__input({

@@ -1,4 +1,10 @@
 include ../../textfield.pug
 
-mixin textfield_type_name({ valueText="", placeholder="Имя", value= "name" })
-  +textfield("name", placeholder, valueText, value, "20", autofocus=false)
+mixin textfield_type_name({ valueText="", placeholder="Имя", nameText = "name" })
+  +textfield({ 
+    inputClass: "name",
+    placeholder: placeholder,
+    valueText: valueText,
+    nameText: nameText,
+    maxText: 20 
+  })

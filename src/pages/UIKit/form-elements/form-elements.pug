@@ -68,14 +68,12 @@ block content
                 labelRightText: "hover / focus", 
                 labelRightClass: "textfield__label_for-name"
               })
-              +textfield(
-                "", 
-                "Text", 
-                "This is pretty awesome", 
-                "text", 
-                "20", 
-                autofocus=false
-                )
+              +textfield({
+                placeholder: "Text", 
+                valueText: "This is pretty awesome", 
+                nameText: "text", 
+                maxText: 20
+              })
           .form-elements__container_guests
             +dropdown_type_guests({
               labelText: "dropdown", 

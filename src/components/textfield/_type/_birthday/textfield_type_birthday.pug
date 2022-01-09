@@ -4,4 +4,9 @@ include ../../textfield.pug
 mixin textfield_type_birthday({ labelLeft="", labelRight="" })
   .textfield__container
     +textfield__label({ labelText: labelLeft, labelRightText: labelRight })
-    +textfield("birthday", "ДД.ММ.ГГГГ", "", "birthday", "10", autofocus=false)
+    +textfield({
+      inputClass: "birthday",
+      placeholder: "ДД.ММ.ГГГГ",
+      nameText: "birthday",
+      maxText: 10
+    })
