@@ -58,4 +58,8 @@
   margin: 0;
   padding: 0;
   border: none;
+
+  @include _1750-1920 {
+    height: fit-content;
+  }
 }
