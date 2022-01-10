@@ -1,19 +1,8 @@
 @import '@~Assets/styles/media-mixins.scss';
 @import '@~Components/logo/logo.scss';
 
-.footer__logo_main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: nowrap;
-  width: 260px;
-  height: 131px;
-  margin-right: 38px;
-  letter-spacing: .001em;
-
+@mixin footerLogo {
   @include _1340 {
-    height: 160px;
     margin: 0;
   }
 
@@ -29,10 +18,24 @@
   @include _800 {
     position: relative;
     width: 60%;
+    height: fit-content;
     margin-right: 0;
     margin-bottom: 20px;
     align-items: center;
   }
+}
+
+.footer__logo_main {
+  @include footerLogo();
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  width: 260px;
+  height: 131px;
+  margin-right: 38px;
+  letter-spacing: .001em;
 }
 
 .footer__logo_landing,
@@ -45,9 +48,11 @@
 
 .footer__logo_landing {
   height: 130px;
+  @include footerLogo();
 }
 
 .footer__logo_in-signin {
   height: 131px;
+  @include footerLogo();
 }
   
