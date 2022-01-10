@@ -2,8 +2,48 @@ extend ./assets/templates/template.pug
 
 block variables
   - var title = "Hotel page";
-  - var description = "index";
-  - var keywords = "index";
+  - var description = "navigation";
+  - var keywords = "navigation, hotel pages";
+  - 
+    var pages = [
+      {
+        name: "UIKit",
+        href: "/UIKit.html",
+        src: "./assets/images/navigation/UIKit.jpg",
+      },
+      {
+        name: "Landing page",
+        href: "/landing-page.html",
+        src: "./assets/images/navigation/LandingPage.jpg",
+      },
+      {
+        name: "Search room",
+        href: "/search-room.html",
+        src: "./assets/images/navigation/SearchRoom.jpg",
+      },
+      {
+        name: 'Room details',
+        href: "/room-details.html",
+        src: "./assets/images/navigation/RoomDetails.jpg",
+      },
+      {
+        name: "Registration",
+        href: "/registration.html",
+        src: "./assets/images/navigation/Registration.jpg",
+      },
+      {
+        name: "Sign in",
+        href: "/signin.html",
+        src: "./assets/images/navigation/SignIn.jpg",
+      }
+    ]
 
 block content
-  .welcome Welcome to index.page (=^_^=)
+  main.index-content
+    ul.navigation
+      each page in pages
+        li.navigation__item
+          a(href=page.href).navigation__link
+            img.navigation__pic(alt=`${page.name}` src=page.src)
+            
+    
