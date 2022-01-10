@@ -9,7 +9,7 @@ mixin footer__info_visible({ navigations, abouts, supports, theme="main" })
           +navlink({
             buttonText: navigation, 
             buttonOnclick: "./some-address",
-            buttonNavlinkClass: "in-footer"
+            navlinkModificator: "footer"
           })
     .footer__about
       h3.footer__title О нас
@@ -18,7 +18,7 @@ mixin footer__info_visible({ navigations, abouts, supports, theme="main" })
           +navlink({
             buttonText: about,
             buttonOnclick: "./some-address",
-            buttonNavlinkClass: "in-footer"
+            navlinkModificator: "footer"
           })
     .footer__support
       h3.footer__title Служба поддержки
@@ -27,5 +27,5 @@ mixin footer__info_visible({ navigations, abouts, supports, theme="main" })
           +navlink({
             buttonText: support,
             buttonOnclick: "./some-address",
-            buttonNavlinkClass: "in-footer"
+            navlinkModificator: "footer"
           })

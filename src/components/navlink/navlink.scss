@@ -18,12 +18,17 @@
   }
 }
 
-.navlink_in-footer {
+.navlink_type_header {
+  @extend .navlink;
+  text-align: center;
+}
+
+.navlink_type_footer {
   @extend .navlink;
   letter-spacing: 0.001em;
 }
 
-.navlink_in-footer + .navlink_in-footer {
+.navlink_type_footer + .navlink_type_footer {
   margin-top: 20px;
 
   @include _800 {
@@ -41,8 +46,23 @@
   text-decoration: none;
 }
 
+.navlink__button_type_header {
+  @extend .navlink__button;
+
+  &::before {
+    display: block;
+    content: attr(title);
+    font-weight: bold;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+  }
+}
+
 .navlink:active .navlink__button,
-.navlink:hover .navlink__button {
+.navlink:hover .navlink__button,
+.navlink:active .navlink__button_type_header,
+.navlink:hover .navlink__button_type_header {
   font-weight: 700;
   color: $dark-shade_more;
 }

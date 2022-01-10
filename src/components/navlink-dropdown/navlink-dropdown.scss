@@ -57,7 +57,7 @@
   position: relative;
   width: 24px;
   height: 18px;
-  line-height: 22px;
+  line-height: 21px;
 }
 
 .navlink-dropdown__icon::before {
@@ -75,5 +75,21 @@
   font-size: $fs_base;
   font-weight: 400;
   color: $dark-shade_medium;
+  text-align: center;
   text-decoration: none;
+
+  &::before {
+    display: block;
+    content: attr(title);
+    font-weight: bold;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+  }
+}
+
+.navlink-dropdown:active .navlink-dropdown__button,
+.navlink-dropdown:hover .navlink-dropdown__button {
+  font-weight: 700;
+  color: $dark-shade_more;
 }

@@ -38,15 +38,21 @@ mixin header__menu(user="")
       ul.header__navbar
         +navlink({
           buttonText: "О нас",
-          buttonOnclick: "./some-address"
+          buttonOnclick: "./some-address",
+          navlinkModificator: "header",
+          navlinkButtonModificator: "header"
         })
         +navlink-dropdown("Услуги")
         +navlink({
           buttonText: "Вакансии",
-          buttonOnclick: "./some-address"
+          buttonOnclick: "./some-address",
+          navlinkModificator: "header",
+          navlinkButtonModificator: "header"
         })
         +navlink({
           buttonText: "Новости",
-          buttonOnclick: "./some-address"
+          buttonOnclick: "./some-address",
+          navlinkModificator: "header",
+          navlinkButtonModificator: "header"
         })
         +navlink-dropdown("Соглашения")
