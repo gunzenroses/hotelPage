@@ -16,6 +16,6 @@ window.onload = () => {
   applyClass('.js-room-carousel', RoomCarousel);
   applyClass('.js-dropdown__detection', Expand);
   applyClass([{ id: 'dropdown_guests_search', data: guestsDataSearchRoom }], DropdownGuests);
-  applyClass([{ id: 'paginationSearch' }], Pagination);
+  applyClass('js-pagination', Pagination);
   applyClass([{ id: 'dropdown_rooms_1', data: roomsData1 }], DropdownRooms);
 };

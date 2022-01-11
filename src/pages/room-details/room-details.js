@@ -9,8 +9,5 @@ import './room-details.scss';
 
 window.onload = () => {
   applyClass('.js-dropdown__detection', Expand);
-  applyClass([
-    { id: 'likes_author_1', data: 12 },
-    { id: 'likes_author_2', data: 2 },
-  ], ButtonLike);
+  applyClass('.js-button-like', ButtonLike);
 };
