@@ -1,21 +1,21 @@
 import { paginationData1 } from 'Scripts/my-data';
 
 class Pagination {
-  constructor(id, data) {
-    this.data = data || paginationData1;
+  constructor(item) {
+    this.data = paginationData1;
     this.num = this.data.currentNum;
-    this.createContainer(id);
+    this.createContainer(item);
     this.init();
   }
 
-  createContainer(id) {
-    this.paginationContainer = document.getElementById(id);
+  createContainer(item) {
+    this.paginationContainer = item;
     this.pageButtons = document.createElement('div');
-    this.pageButtons.classList.add('pagination__buttons');
+    this.pageButtons.classList.add('js-pagination__buttons');
     this.paginationContainer.prepend(this.pageButtons);
 
     this.paginationInfo = document.createElement('div');
-    this.paginationInfo.classList.add('pagination__info');
+    this.paginationInfo.classList.add('js-pagination__info');
     this.paginationContainer.append(this.paginationInfo);
   }
 
@@ -92,9 +92,9 @@ class Pagination {
     button.innerText = i;
     button.value = i;
     if (i === this.num) {
-      button.classList.add('pagination__button_current');
+      button.classList.add('js-pagination__button_current');
     } else {
-      button.classList.add('pagination__item', 'js-pagination__item');
+      button.classList.add('js-pagination__item');
     }
     return button;
   }
@@ -111,23 +111,23 @@ class Pagination {
   }
 
   addRestButton() {
-    this.pageButtons.innerHTML = `${this.pageButtons.innerHTML}<button value="4" class="pagination__item js-pagination__item">...</button>`;
+    this.pageButtons.innerHTML = `${this.pageButtons.innerHTML}<button value='4' class='js-pagination__item'>...</button>`;
   }
 
   addLastButton() {
-    this.pageButtons.innerHTML = `${this.pageButtons.innerHTML}<button class="pagination__button_last js-pagination__button_first">15</button>`;
+    this.pageButtons.innerHTML = `${this.pageButtons.innerHTML}<button class='js-pagination__button_last'>15</button>`;
   }
 
   addPrevButton() {
-    this.pageButtons.innerHTML = `<button class="pagination__button_prev js-pagination__button_prev"></button>${this.pageButtons.innerHTML}`;
+    this.pageButtons.innerHTML = `<button class='js-pagination__button_prev'></button>${this.pageButtons.innerHTML}`;
   }
 
   addNextButton() {
-    this.pageButtons.innerHTML = `${this.pageButtons.innerHTML}<button class="pagination__button_next js-pagination__button_next"></button>`;
+    this.pageButtons.innerHTML = `${this.pageButtons.innerHTML}<button class='js-pagination__button_next'></button>`;
   }
 
   addFirstButton() {
-    this.pageButtons.innerHTML = `<button class="pagination__button_first js-pagination__button_first">1</button>${this.pageButtons.innerHTML}`;
+    this.pageButtons.innerHTML = `<button class='js-pagination__button_first'>1</button>${this.pageButtons.innerHTML}`;
   }
 
   makeInfoLine() {
