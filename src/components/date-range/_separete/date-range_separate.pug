@@ -1,10 +1,10 @@
 include ../../calendar/calendar.pug
 include ../__item/date-range__item.pug
 
-mixin date-range_separate({ calendarId, labelText_1="Прибытие", inputValue_1="", labelText_2="Выезд", inputValue_2="", dropdownClassShow = "" })
+mixin date-range_separate({ labelText_1="Прибытие", inputValue_1="", labelText_2="Выезд", inputValue_2="", dropdownClassShow = "" })
   div.date-range.js-date-range
     div(class=`date-range__calendar js-date-range__calendar js-expand__content ${dropdownClassShow}`)
-      +calendar(calendarId)
+      +calendar()
     .date-range__selector.js-expand__init
       +date-range__item({
         labelText: labelText_1,
