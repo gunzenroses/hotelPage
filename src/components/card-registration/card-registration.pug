@@ -14,7 +14,7 @@ mixin card-registration(submitText)
     .card-registration__surname
       +textfield_type_name({ placeholder: "Фамилия", value: "surname" })
     .card-registration__radio
-      +radio-buttons({ inputId: "gender" })
+      +radio-buttons({})
     .card-registration__birthday
       +textfield_type_birthday({ labelLeft: "Дата рождения", labelRight: "" })
     .card-registration__login
