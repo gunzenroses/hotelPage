@@ -5,4 +5,4 @@ const paginationData1 = {
   currentNum: 1,
 };
 
-export { paginationData1 };
+export default paginationData1;

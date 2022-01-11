@@ -24,12 +24,12 @@ export default class DropdownGuests {
     this.submitButton = this.dropdownExpanded.querySelector('.js-dropdown__button_type_submit');
   }
 
-  makeData(){
-    let nums = Array.from(this.container.querySelectorAll(".js-dropdown__number"));
+  makeData() {
+    const nums = Array.from(this.container.querySelectorAll('.js-dropdown__number'));
     nums.forEach((num) => {
       const value = parseInt(num.textContent, 10);
       this.data.push(value);
-    })
+    });
   }
 
   enableHandlers() {

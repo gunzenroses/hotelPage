@@ -21,12 +21,12 @@ export default class DropdownRooms {
     this.dropdownMinuses = this.container.querySelectorAll('.js-dropdown__minus');
   }
 
-  makeData(){
-    let nums = Array.from(this.container.querySelectorAll(".js-dropdown__number"));
+  makeData() {
+    const nums = Array.from(this.container.querySelectorAll('.js-dropdown__number'));
     nums.forEach((num) => {
       const value = parseInt(num.textContent, 10);
       this.data.push(value);
-    })
+    });
   }
 
   enableHandlers() {

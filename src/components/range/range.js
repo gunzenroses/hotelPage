@@ -7,7 +7,7 @@ function changeValue(data) {
   rangeValue.val(`${fromPretty}₽ - ${toPretty}₽`);
 }
 
-$('.range__slider').ionRangeSlider({
+$('.js-range__slider').ionRangeSlider({
   type: 'double',
   min: 0,
   max: 15000,
