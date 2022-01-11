@@ -1,20 +1,20 @@
 class ButtonLike {
-  constructor(containerId, data) {
-    this.data = parseInt(data, 10);
-    this.init(containerId);
+  constructor(item) {
+    this.buttonLike = item;
+    this.init();
   }
 
-  init(id) {
-    this.createChildren(id);
+  init() {
+    this.createChildren();
     this.render();
     this.enableHandlers();
     this.enableEventListeners();
   }
 
-  createChildren(id) {
-    this.likeButton = document.getElementById(id);
-    this.number = this.likeButton.querySelector('.js-button-like__number');
-    this.heart = this.likeButton.querySelector('.js-button-like__heart');
+  createChildren() {
+    this.number = this.buttonLike.querySelector('.js-button-like__number');
+    this.data = parseInt(this.number.textContent, 10);
+    this.heart = this.buttonLike.querySelector('.js-button-like__heart');
   }
 
   enableHandlers() {
@@ -22,7 +22,7 @@ class ButtonLike {
   }
 
   enableEventListeners() {
-    this.likeButton.addEventListener('click', this.buttonLikeIncreaseHandler);
+    this.buttonLike.addEventListener('click', this.buttonLikeIncreaseHandler);
   }
 
   buttonLikeIncrease() {
@@ -36,7 +36,7 @@ class ButtonLike {
   }
 
   makePopularClass() {
-    this.likeButton.classList.add('js-button-like_popular');
+    this.buttonLike.classList.add('js-button-like_popular');
     this.heart.classList.add('js-button-like__heart_popular');
   }
 }

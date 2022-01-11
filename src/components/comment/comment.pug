@@ -2,15 +2,12 @@ include ../button-like/button-like.pug
 include ../info/info.pug
 
 mixin comment(commentData)
-  - var {authorPic="", authorName="Anonymous", commentTime=Data().getDay(), buttonLikeId, buttonNumber=0, commentText="none"} = commentData
+  - var {authorPic="", authorName="Anonymous", commentTime=Data().getDay(), buttonNumber=0, commentText="none"} = commentData
   .comment
     .comment__head
       img(src=authorPic alt="profile picture").comment__pic
       +info({ title: authorName, description: commentTime })
     .comment__body
       .comment__likes
-        +button-like({
-          buttonId: buttonLikeId, 
-          buttonNumber: buttonNumber
-        })
+        +button-like(buttonNumber)
       .comment__text!= commentText
