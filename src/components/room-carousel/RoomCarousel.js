@@ -1,4 +1,4 @@
-export default class RoomCarousel {
+class RoomCarousel {
   constructor(carousel) {
     this.carousel = carousel;
     this.init();
@@ -95,3 +95,5 @@ export default class RoomCarousel {
     this.carouselPictures.style.left = `${this.leftValue}%`;
   }
 }
+
+export default RoomCarousel;

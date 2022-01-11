@@ -1,4 +1,4 @@
-export default class Calendar {
+class Calendar {
   constructor(item) {
     this.date = new Date();
     this.init(item);
@@ -531,3 +531,5 @@ export default class Calendar {
 
   // ---------------------end render-----------------------//
 }
+
+export default Calendar;

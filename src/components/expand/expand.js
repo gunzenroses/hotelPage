@@ -1,4 +1,4 @@
-export default class Expand {
+class Expand {
   constructor(dropdownWatch) {
     this.dropdownWatch = dropdownWatch;
     this.init();
@@ -65,3 +65,5 @@ export default class Expand {
     });
   }
 }
+
+export default Expand;

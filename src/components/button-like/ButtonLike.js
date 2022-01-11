@@ -1,4 +1,4 @@
-export default class ButtonLike {
+class ButtonLike {
   constructor(containerId, data) {
     this.data = parseInt(data, 10);
     this.init(containerId);
@@ -40,3 +40,5 @@ export default class ButtonLike {
     this.heart.classList.add('js-button-like__heart_popular');
   }
 }
+
+export default ButtonLike;

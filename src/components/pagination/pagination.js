@@ -1,6 +1,6 @@
 import { paginationData1 } from 'Scripts/my-data';
 
-export default class Pagination {
+class Pagination {
   constructor(id, data) {
     this.data = data || paginationData1;
     this.num = this.data.currentNum;
@@ -162,3 +162,5 @@ export default class Pagination {
     this.init();
   }
 }
+
+export default Pagination;
