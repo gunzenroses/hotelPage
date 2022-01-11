@@ -45,34 +45,34 @@
   background: $linearGradientTurquoise;
 }
 
-.pagination {
+.js-pagination {
   @include isFlex($direction: column);
   width: fit-content;
   height: 75px;
   user-select: none;
 }
 
-.pagination__buttons {
+.js-pagination__buttons {
   @include isFlex();
   width: 240px;
   height: 40.4px;
   font-size: 0.875em;
 }
 
-.pagination__button_current {
+.js-pagination__button_current {
   @include paginationItem();
   font-weight: 700;
   color: $light;
   background: $linearGradientLilac;
 }
 
-.pagination__items {
+.js-pagination__items {
   @include isFlex();
   width: 120px;
   height: 40px;
 }
 
-.pagination__info {
+.js-pagination__info {
   width: fit-content;
   height: 23px;
   margin: 0 auto;
@@ -83,20 +83,20 @@
   pointer-events: none;
 }
 
-.pagination__item,
-.pagination__button_last,
-.pagination__button_first {
+.js-pagination__item,
+.js-pagination__button_last,
+.js-pagination__button_first {
   @include paginationItem();
   font-weight: 400;
   color: $dark-shade_medium;
   background: transparent;
 }
 
-.pagination__item:hover {
+.js-pagination__item:hover {
   background: $purple;
 }
 
-.pagination__button_next {
+.js-pagination__button_next {
   @include paginationItem();
   @include paginationNav();
 
@@ -110,7 +110,7 @@
   }
 }
 
-.pagination__button_prev {
+.js-pagination__button_prev {
   @include paginationItem();
   @include paginationNav();
 
