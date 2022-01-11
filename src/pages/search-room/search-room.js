@@ -17,5 +17,5 @@ window.onload = () => {
   applyClass('.js-dropdown__detection', Expand);
   applyClass('.js-dropdown__guests', DropdownGuests);
   applyClass('js-pagination', Pagination);
-  applyClass([{ id: 'dropdown_rooms_1', data: roomsData1 }], DropdownRooms);
+  applyClass('.js-dropdown__rooms', DropdownRooms);
 };

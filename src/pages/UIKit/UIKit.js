@@ -1,8 +1,5 @@
 import applyClass from 'Scripts/applyClass';
 import 'Scripts/inputmasks';
-import {
-  guestsData1, guestsDataBooking, roomsData1, roomsData2,
-} from 'Scripts/my-data';
 import ButtonLike from 'Components/button-like/ButtonLike';
 import Calendar from 'Main/components/calendar/Calendar';
 import 'Components/card-booking/card-booking';
@@ -26,8 +23,5 @@ window.onload = () => {
   ['calendar1', 'calendar2', 'calendarSimple'].forEach((item) => applyClass(item, Calendar));
   applyClass('.js-dropdown__guests', DropdownGuests);
   applyClass('.js-pagination', Pagination);
-  applyClass([
-    { id: 'dropdown_rooms_1', data: roomsData1 },
-    { id: 'dropdown_rooms_2', data: roomsData2 },
-  ], DropdownRooms);
+  applyClass('.js-dropdown__rooms', DropdownRooms);
 };

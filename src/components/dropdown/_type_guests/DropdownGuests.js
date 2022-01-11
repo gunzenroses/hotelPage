@@ -30,7 +30,6 @@ export default class DropdownGuests {
       const value = parseInt(num.textContent, 10);
       this.data.push(value);
     })
-    console.log(this.data);
   }
 
   enableHandlers() {

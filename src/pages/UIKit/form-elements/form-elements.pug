@@ -181,17 +181,14 @@ block content
           .form-elements__container_rooms.js-dropdown__detection
             +dropdown_type_rooms({
               labelText: "dropdown",
-              dropdownContainerId: "dropdown_rooms_1",
-              inputId: "dropdownRoomsInput_1",
               labelRightText: "default"
             })
           .form-elements__container_rooms.js-dropdown__detection
             +dropdown_type_rooms({
               labelText: "dropdown",
-              dropdownContainerId: "dropdown_rooms_2",
               dropdownClassShow: "js-expand__show",
-              inputId: "dropdownRoomsInput_2",
-              labelRightText: "expanded"
+              labelRightText: "expanded",
+              itemNumbers: [2, 2, 0],
             })
         .form-elements__container_checkbox-expand_hidden.js-dropdown__detection
           +checkbox-expandable({

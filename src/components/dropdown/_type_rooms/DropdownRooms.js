@@ -1,23 +1,32 @@
 export default class DropdownRooms {
-  constructor(containerId, data) {
-    this.data = [...data];
-    this.init(containerId);
+  constructor(item) {
+    this.container = item;
+    this.data = [];
+    this.init();
   }
 
-  init(id) {
-    this.createChildren(id);
+  init() {
+    this.createChildren();
+    this.makeData();
     this.dropdownItems.forEach((_, index) => { this.render(index); });
     this.enableHandlers();
     this.enableEventListeners();
   }
 
-  createChildren(id) {
-    this.container = document.getElementById(id);
+  createChildren() {
     this.info = this.container.querySelector('.js-dropdown__info');
     this.infoInput = this.container.querySelector('.js-dropdown__input');
     this.dropdownItems = Array.from(this.container.querySelectorAll('.js-dropdown__item'));
     this.dropdownPluses = this.container.querySelectorAll('.js-dropdown__plus');
     this.dropdownMinuses = this.container.querySelectorAll('.js-dropdown__minus');
+  }
+
+  makeData(){
+    let nums = Array.from(this.container.querySelectorAll(".js-dropdown__number"));
+    nums.forEach((num) => {
+      const value = parseInt(num.textContent, 10);
+      this.data.push(value);
+    })
   }
 
   enableHandlers() {

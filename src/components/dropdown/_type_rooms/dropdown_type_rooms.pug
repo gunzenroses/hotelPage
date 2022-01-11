@@ -1,27 +1,30 @@
 include ../__item/dropdown__item.pug
 
-mixin dropdown_type_rooms({ labelText="", dropdownContainerId, dropdownClassShow="", inputId, labelRightText="" })
+mixin dropdown_type_rooms({ labelText="", dropdownContainerId, dropdownClassShow="", itemNumbers=[0, 0, 0], labelRightText="" })
   .dropdown__container_type_rooms
     h3.label!= labelText
     if labelRightText
       h3.label_right!= labelRightText
-    div(class="dropdown" id=dropdownContainerId)
-      div(class=`dropdown__rooms js-expand__content js-dropdown__rooms ${dropdownClassShow}`)
+    div(class="dropdown js-dropdown__rooms")
+      div(class=`dropdown__rooms js-expand__content ${dropdownClassShow}`)
         +dropdown__item({
           itemDataType: "bedrooms",
           itemText: "Спальни",
-          itemDataOrder: 0
+          itemDataOrder: 0,
+          itemNumber: itemNumbers[0]
         })
         +dropdown__item({
           itemDataType: "beds",
           itemText: "Кровати",
-          itemDataOrder: 1
+          itemDataOrder: 1,
+          itemNumber: itemNumbers[1]
         })
         +dropdown__item({
           itemDataType: "bathrooms",
           itemText: "Ванные комнаты",
           itemDataOrder: 2,
-          itemClass: "last"
+          itemClass: "last",
+          itemNumber: itemNumbers[2]
         })
       .dropdown__info.js-dropdown__info.js-expand__init
-        input.dropdown__input.js-dropdown__input(readonly="" type="text" placeholder="Выберите условия" value="" name="rooms" id=inputId)
+        input.dropdown__input.js-dropdown__input(readonly="" type="text" placeholder="Выберите условия" value="" name="rooms")
