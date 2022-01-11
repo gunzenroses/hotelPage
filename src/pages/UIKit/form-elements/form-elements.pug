@@ -76,9 +76,7 @@ block content
               })
           .form-elements__container_guests.js-dropdown__detection
             +dropdown_type_guests({
-              labelText: "dropdown", 
-              dropdownContainerId: "dropdown_guests_0",
-              inputId: "dropdownGuestsInput_0"
+              labelText: "dropdown",
             })
           .form-elements__container_birthday
             +textfield_type_birthday({
@@ -207,10 +205,8 @@ block content
       .form-elements__group_fifth
         .form-elements__container_guests_open.js-dropdown__detection
           +dropdown_type_guests({
-            labelText: "dropdown", 
-            dropdownContainerId: "dropdown_guests_1", 
-            dropdownClassShow: "js-expand__show", 
-            inputId: "dropdownGuestsInput_1"
+            labelText: "dropdown",
+            dropdownClassShow: "js-expand__show",
           })
         .form-elements__container_rich-checkbox
           +rich-checkbox({
@@ -220,10 +216,9 @@ block content
       .form-elements__group_sixth
         .form-elements__container_guests_open.js-dropdown__detection
           +dropdown_type_guests({
-            labelText: "dropdown", 
-            dropdownContainerId: "dropdown_guests_2", 
-            dropdownClassShow: "js-expand__show", 
-            inputId: "dropdownGuestsInput_2"
+            labelText: "dropdown",
+            dropdownClassShow: "js-expand__show",
+            itemNumbers: [2, 1, 0],
           })
         .form-elements__container_bullet-checkbox
           +bullet-checkbox({

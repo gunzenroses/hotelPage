@@ -1,5 +1,5 @@
 import applyClass from 'Scripts/applyClass';
-import { guestsDataSearchRoom, roomsData1 } from 'Scripts/my-data';
+import { roomsData1 } from 'Scripts/my-data';
 import Calendar from 'Main/components/calendar/Calendar';
 import DropdownGuests from 'Components/dropdown/_type_guests/DropdownGuests';
 import DropdownRooms from 'Components/dropdown/_type_rooms/DropdownRooms';
@@ -15,7 +15,7 @@ window.onload = () => {
   applyClass('.js-calendar', Calendar);
   applyClass('.js-room-carousel', RoomCarousel);
   applyClass('.js-dropdown__detection', Expand);
-  applyClass([{ id: 'dropdown_guests_search', data: guestsDataSearchRoom }], DropdownGuests);
+  applyClass('.js-dropdown__guests', DropdownGuests);
   applyClass('js-pagination', Pagination);
   applyClass([{ id: 'dropdown_rooms_1', data: roomsData1 }], DropdownRooms);
 };

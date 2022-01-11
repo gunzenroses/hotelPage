@@ -1,29 +1,32 @@
 include ../__item/dropdown__item.pug
 
-mixin dropdown_type_guests({ labelText="", dropdownContainerId, dropdownClassShow="", inputId, labelRightText="" })
+mixin dropdown_type_guests({ labelText="", dropdownClassShow="", itemNumbers=[0, 0, 0], labelRightText="" })
   .dropdown__container_type_guests
     h3.label!= labelText
     if labelRightText
       h3.label_right!= labelRightText
-    div(class="dropdown" id=dropdownContainerId)
-      div(class=`dropdown__guests js-expand__content js-dropdown__guests ${dropdownClassShow}`)
+    div(class="dropdown js-dropdown__guests")
+      div(class=`dropdown__guests js-expand__content ${dropdownClassShow}`)
         +dropdown__item({
           itemDataType: "grownups",
           itemText: "Взрослые",
-          itemDataOrder: 0
+          itemDataOrder: 0,
+          itemNumber: itemNumbers[0]
         })
         +dropdown__item({
           itemDataType: "kids",
           itemText: "Дети",
-          itemDataOrder: 1
+          itemDataOrder: 1,
+          itemNumber: itemNumbers[1]
         })
         +dropdown__item({
           itemDataType: "infants",
           itemText: "Младенцы",
-         itemDataOrder: 2
+         itemDataOrder: 2,
+         itemNumber: itemNumbers[2]
         })
         .dropdown__buttons
           button.dropdown__button_type_submit.js-dropdown__button_type_submit(type="submit") Применить
           button.dropdown__button_type_reset.js-dropdown__button_type_reset(type="reset") Очистить
       .dropdown__info.js-dropdown__info.js-expand__init
-        input.dropdown__input.js-dropdown__input(readonly="" type="text" placeholder="Сколько гостей" name="guests" value="" id=inputId)
+        input.dropdown__input.js-dropdown__input(readonly="" type="text" placeholder="Сколько гостей" name="guests" value="")

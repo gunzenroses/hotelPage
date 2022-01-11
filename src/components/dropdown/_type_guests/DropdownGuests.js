@@ -1,27 +1,36 @@
 export default class DropdownGuests {
-  constructor(containerId, data) {
-    this.data = (data) || [0, 0, 0];
-    this.init(containerId);
+  constructor(item) {
+    this.container = item;
+    this.data = [];
+    this.init();
   }
 
-  init(id) {
-    this.createChildren(id);
+  init() {
+    this.createChildren();
+    this.makeData();
     this.dropdownItems.forEach((_, i) => { this.showItemNumber(i); });
     this.totalGuestsCount();
     this.enableHandlers();
     this.enableEventListeners();
   }
 
-  createChildren(id) {
-    this.container = document.getElementById(id);
-    this.containerClass = this.container.classList.value;
-    this.dropdownExpanded = this.container.querySelector('.js-dropdown__guests');
+  createChildren() {
+    this.dropdownExpanded = this.container.querySelector('.js-expand__content');
     this.info = this.container.querySelector('.js-dropdown__info');
     this.infoInput = this.container.querySelector('.js-dropdown__input');
     this.dropdownItems = Array.from(this.container.querySelectorAll('.js-dropdown__item'));
     this.dropdownMinuses = this.container.querySelectorAll('.js-dropdown__minus');
     this.resetButton = this.dropdownExpanded.querySelector('.js-dropdown__button_type_reset');
     this.submitButton = this.dropdownExpanded.querySelector('.js-dropdown__button_type_submit');
+  }
+
+  makeData(){
+    let nums = Array.from(this.container.querySelectorAll(".js-dropdown__number"));
+    nums.forEach((num) => {
+      const value = parseInt(num.textContent, 10);
+      this.data.push(value);
+    })
+    console.log(this.data);
   }
 
   enableHandlers() {

@@ -24,11 +24,7 @@ window.onload = () => {
   applyClass('.js-dropdown__detection', Expand);
   applyClass('.js-button-like', ButtonLike);
   ['calendar1', 'calendar2', 'calendarSimple'].forEach((item) => applyClass(item, Calendar));
-  applyClass([
-    { id: 'dropdown_guests_0' },
-    { id: 'dropdown_guests_1', data: guestsData1 },
-    { id: 'dropdown_guests_2', data: guestsDataBooking },
-  ], DropdownGuests);
+  applyClass('.js-dropdown__guests', DropdownGuests);
   applyClass('.js-pagination', Pagination);
   applyClass([
     { id: 'dropdown_rooms_1', data: roomsData1 },
