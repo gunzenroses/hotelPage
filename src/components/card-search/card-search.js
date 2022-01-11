@@ -1,6 +1,6 @@
-import applyClass from 'Scripts/applyClass';
-import Calendar from 'Main/components/calendar/Calendar';
-import DropdownGuests from 'Components/dropdown/_type_guests/DropdownGuests';
+import initClass from 'Scripts/initClass';
+import 'Components/calendar/Calendar-init';
+import 'Components/dropdown/_type_guests/DropdownGuests-init';
 
-applyClass('.js-calendar', Calendar);
-applyClass('.js-dropdown__guests', DropdownGuests);
+
+

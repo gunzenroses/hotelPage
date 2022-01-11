@@ -1,11 +1,6 @@
 import 'Scripts/inputmasks';
-import applyClass from 'Scripts/applyClass';
 import 'Components/card-registration/card-registration';
-import Expand from 'Main/components/expand/Expand';
+import 'Components/expand/Expand-init';
 import 'Components/footer/footer';
 
 import './registration.scss';
-
-window.onload = () => {
-  applyClass('.js-dropdown__detection', Expand);
-};
