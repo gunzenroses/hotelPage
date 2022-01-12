@@ -1,4 +1,4 @@
-import { paginationData1 } from 'Scripts/my-data';
+import paginationData1 from 'Scripts/my-data';
 
 class Pagination {
   constructor(item) {
