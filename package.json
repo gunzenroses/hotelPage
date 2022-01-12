@@ -9,7 +9,7 @@
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "build": "rimraf dist && webpack --config ./webpack.prod.js --env.NODE_ENV=production --mode=production ",
+    "build": "rimraf dist && webpack --config ./webpack.prod.js --env.NODE_ENV=production --mode=production",
     "dev": "webpack-dev-server --config ./webpack.dev.js -env.NODE_ENV=development --mode=development --progress",
     "eslint": "eslint --ext .js,.jsx src --fix"
   },
