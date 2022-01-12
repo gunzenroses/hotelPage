@@ -16,6 +16,11 @@
   }
 }
 
+@mixin cardPosition {
+  position: relative;
+  overflow: visible;
+}
+
 .cards {
   position: relative;
   display: block;
@@ -76,9 +81,10 @@
 }
 
 .cards__card-registration {
+  @include cardPosition();
   @include marginTop();
   width: 380px;
-  min-height: 645px;
+  height: 646px;
   margin-top: 40px;
 }
 
@@ -90,9 +96,10 @@
 }
 
 .cards__card-signin {
+  @include cardPosition();
   @include marginTop();
   width: 380px;
-  min-height: 358px;
+  height: 360px;
   margin-top: 40px;
 }
 
