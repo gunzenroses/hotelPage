@@ -3,7 +3,7 @@ include ./__item/checkbox-expandable__item.pug
 mixin checkbox-expandable({ dropdownTitleName, dropdownClassShow="" })
   .checkbox-expandable.js-checkbox-expandable
     .checkbox-expandable__dropdown
-      div(class=`checkbox-expandable__content js-checkbox-expandable__content ${dropdownClassShow}`)
+      div(class=`js-checkbox-expandable__content ${dropdownClassShow}`)
         fieldset.checkbox-expandable__content
           +checkbox-expandable__item({
             checkboxName: "breakfast",
