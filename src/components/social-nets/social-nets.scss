@@ -5,17 +5,14 @@
 .social-net {
   position: relative;
   width: 26px;
+  text-decoration: none;
+  cursor: pointer;
 
   @include _1750-1920 {
     display: block;
     width: 40px;
     height: 40px;
   }
-}
-
-.social-net__link {
-  text-decoration: none;
-  cursor: pointer;
 }
 
 .social-net__twitter,
