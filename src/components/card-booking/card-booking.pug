@@ -5,7 +5,7 @@ include ../dropdown/_type_guests/dropdown_type_guests.pug
 include ./__room-info/card-booking__room-info.pug
 include ./__price-info/card-booking__price-info.pug
 
-mixin card-booking({ serviceName, serviceStyle, theme="" })
+mixin card-booking({ serviceName, serviceStyle, itemNumbers=[0, 0, 0], theme="" })
   form.card-booking(method="get" action="./search-room.html")
     +card-booking__room-info({
       bookingNumber: "888",
@@ -21,6 +21,7 @@ mixin card-booking({ serviceName, serviceStyle, theme="" })
     .card-booking__dropdown_guests
       +dropdown_type_guests({
         labelText: "Гости",
+        itemNumbers: itemNumbers
       })
     +card-booking__price-info({
       infoDesctiption: "9 990₽ х 4 суток",
