@@ -1,9 +1,9 @@
 include ./__item/checkbox-expandable__item.pug
 
 mixin checkbox-expandable({ dropdownTitleName, dropdownClassShow="" })
-  .checkbox-expandable
+  .checkbox-expandable.js-checkbox-expandable
     .checkbox-expandable__dropdown
-      div(class=`js-expand__content ${dropdownClassShow}`)
+      div(class=`checkbox-expandable__content js-checkbox-expandable__content ${dropdownClassShow}`)
         fieldset.checkbox-expandable__content
           +checkbox-expandable__item({
             checkboxName: "breakfast",
@@ -35,5 +35,5 @@ mixin checkbox-expandable({ dropdownTitleName, dropdownClassShow="" })
             ifChecked: false,
             checkboxTitle: "Шампунь"
           })
-      .dropdown__button_transparent.js-expand__init
+      .checkbox-expandable__button.js-checkbox-expandable__init
         .dropdown__title!= dropdownTitleName

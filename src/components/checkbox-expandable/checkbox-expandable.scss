@@ -16,6 +16,41 @@
   flex-shrink: 0;
 }
 
+@mixin dropdownButton {
+  content: '\e5cf';
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+  font-family: $material-icons;
+  font-size: $fs_h1;
+  text-align: center;
+  cursor: pointer;
+}
+
+@mixin dropdownInitialField {
+  @include isFlex($justify: flex-start, $align: center);
+  position: relative;
+  width: 100%;
+  height: 44px;
+  padding: 0px 0 2px 12px;
+  border: 1px solid $dark-shade_less;
+  border-radius: 4px;
+  background: transparent;
+  color: $dark-shade_more;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  cursor: pointer;
+
+  @include _450 {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
 .checkbox-expandable {
   @include isFlex($direction: column);
   position: relative;
@@ -44,7 +79,6 @@
 }
 
 .checkbox-expandable__content {
-  appearance: none;
   height: 171px;
   width: 266px;
   margin: 3px 0 0;
@@ -54,4 +88,41 @@
   @include _1650-1920 {
     width: 100%;
   }
+}
+
+.checkbox-expandable__button {
+  @include dropdownInitialField();
+  border: none;
+  padding: 0;
+
+  &:hover,
+  &:focus {
+    border: none;
+  }
+
+  &::before {
+    @include dropdownButton();
+    color: $dark-shade_medium;
+    line-height: 45px;
+  }
+}
+
+.js-checkbox-expandable__content {
+  display: none;
+}
+
+.js-checkbox-expandable__show {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+
+  @include _1650-1920 {
+    width: 100%;
+  }
+}
+
+.js-checkbox-expandable__show ~ .checkbox-expandable__button::before {
+  content: '\e5ce';
 }
