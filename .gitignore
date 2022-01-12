@@ -1,6 +1,7 @@
 node_modules
 .vscode
 .DS_Store
+dist
 .git
 HOW_TO.md
 package-lock.json
