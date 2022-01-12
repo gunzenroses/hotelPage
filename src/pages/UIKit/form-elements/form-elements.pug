@@ -179,7 +179,8 @@ block content
           .form-elements__container_rooms.js-dropdown__detection
             +dropdown_type_rooms({
               labelText: "dropdown",
-              labelRightText: "default"
+              labelRightText: "default",
+              itemNumbers: [2, 2, 0],
             })
           .form-elements__container_rooms.js-dropdown__detection
             +dropdown_type_rooms({
@@ -195,13 +196,13 @@ block content
         .form-elements__container_checkbox-expand
           +checkbox-expandable({
             dropdownTitleName: "Expandable checkbox list",
-            dropdownClassShow: "js-expand__show"
+            dropdownClassShow: "js-checkbox-expandable__show",
           })
       .form-elements__group_fifth
         .form-elements__container_guests_open.js-dropdown__detection
           +dropdown_type_guests({
             labelText: "dropdown",
-            dropdownClassShow: "js-expand__show",
+            dropdownClassShow: "js-expand__show"
           })
         .form-elements__container_rich-checkbox
           +rich-checkbox({
