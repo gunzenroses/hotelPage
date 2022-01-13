@@ -36,7 +36,9 @@ class Calendar {
     this.dateInCalendar = this.calendarContainer.querySelector(
       '.js-calendar__month'
     );
-    this.daysOfMonth = this.calendarContainer.querySelector('.js-calendar__days');
+    this.daysOfMonth = this.calendarContainer.querySelector(
+      '.js-calendar__days'
+    );
 
     if (this.calendarContainer.closest('.js-date-range')) {
       this.mainContainer = this.calendarContainer.closest('.js-date-range');
@@ -107,27 +109,33 @@ class Calendar {
     const noOtherDays = !hasPrevDays && !hasNextDays;
     const hasDays = e.target.classList.contains('.js-calendar__days');
     const noDays = noOtherDays && !hasDays;
-    const afterToday = new Date(this.year, this.month, +e.target.innerText) > new Date();
+    const chosenDay = new Date(this.year, this.month, +e.target.innerText);
+    const afterToday = chosenDay > new Date();
     this.examineCheckinCheckout();
     if (noDays && afterToday) {
       if (this.existCheckinCheckout) this.makeCheckin(e);
       else if (this.existCheckinOnly) {
-        const [dayBeforeExistingCheckin, dayAfterExistingCheckin] = this.getCheckinData(e);
-        if (dayBeforeExistingCheckin) this.makeCheckin(e);
-        else if (dayAfterExistingCheckin) this.makeCheckout(e);
+        const [dayBeforeCheckin, dayAfterCheckin] = this.getCheckinData(e);
+        if (dayBeforeCheckin) this.makeCheckin(e);
+        else if (dayAfterCheckin) this.makeCheckout(e);
       } else if (!this.checkin && !this.checkout) this.makeCheckin(e);
     }
   }
 
   getCheckinData(e) {
-    const yearCheckin = parseInt(this.year, 10) === parseInt(this.checkin.getFullYear(), 10);
-    const yearBeforeCheckin = parseInt(this.year, 10) < parseInt(this.checkin.getFullYear(), 10);
-    const yearAfterCheckin = parseInt(this.year, 10) > parseInt(this.checkin.getFullYear(), 10);
-    const monthCheckin = parseInt(this.month, 10) === parseInt(this.checkin.getMonth(), 10);
-    const monthBeforeCheckin = parseInt(this.month, 10) < parseInt(this.checkin.getMonth(), 10);
-    const monthAfterCheckin = parseInt(this.month, 10) > parseInt(this.checkin.getMonth(), 10);
-    const dayBeforeCheckin = parseInt(e.target.innerText, 10) < parseInt(this.checkin.getDate(), 10);
-    const dayAfterCheckin = parseInt(e.target.innerText, 10) > parseInt(this.checkin.getDate(), 10);
+    const thisYear = parseInt(this.year, 10);
+    const thisMonth = parseInt(this.month, 10);
+    const checkinYear = parseInt(this.checkin.getFullYear(), 10);
+    const checkinMonth = parseInt(this.checkin.getMonth(), 10);
+    const checkinDay = parseInt(this.checkin.getDate(), 10);
+    const yearCheckin = thisYear === checkinYear;
+    const yearBeforeCheckin = thisYear < checkinYear;
+    const yearAfterCheckin = thisYear > checkinYear;
+    const monthCheckin = thisMonth === checkinMonth;
+    const monthBeforeCheckin = thisMonth < checkinMonth;
+    const monthAfterCheckin = thisMonth > checkinMonth;
+    const dayBeforeCheckin = parseInt(e.target.innerText, 10) < checkinDay;
+    const dayAfterCheckin = parseInt(e.target.innerText, 10) > checkinDay;
     const dayBeforeExistingCheckin = this.chooseBeforeCheckin(
       yearBeforeCheckin,
       yearCheckin,
@@ -153,7 +161,8 @@ class Calendar {
     dayBeforeCheckin
   ) {
     const monthBeforeCheckinSameYear = yearCheckin && monthBeforeCheckin;
-    const dayBeforeCheckinSameYear = yearCheckin && monthCheckin && dayBeforeCheckin;
+    const daysBeforeCheckin = monthCheckin && dayBeforeCheckin;
+    const dayBeforeCheckinSameYear = yearCheckin && daysBeforeCheckin;
     const beforeCheckin = yearBeforeCheckin
       || monthBeforeCheckinSameYear
       || dayBeforeCheckinSameYear;
@@ -170,9 +179,11 @@ class Calendar {
     monthCheckin,
     dayAfterCheckin
   ) {
+    const daysAfterCheckin = monthCheckin && dayAfterCheckin;
     const montAfterCheckin = yearCheckin && monthAfterCheckin;
-    const dayAfterCheckinThinYear = yearCheckin && monthCheckin && dayAfterCheckin;
-    const afterCheckin = yearAfterCheckin || montAfterCheckin || dayAfterCheckinThinYear;
+    const dayAfterCheckinThinYear = yearCheckin && daysAfterCheckin;
+    const dayOrMonthAfterCheckin = montAfterCheckin || dayAfterCheckinThinYear;
+    const afterCheckin = yearAfterCheckin || dayOrMonthAfterCheckin;
     const dayAfterExistingCheckin = this.existCheckinOnly
       ? afterCheckin
       : false;
@@ -196,14 +207,14 @@ class Calendar {
     e.preventDefault();
     this.examineCheckinCheckout();
     if (this.existCheckinCheckout) {
-      this.rangeSpanStartMonth = this.months[this.checkin.getMonth()].slice(0, 3);
-      this.rangeSpanEndMonth = this.months[this.checkout.getMonth()].slice(0, 3);
-      const checkinInfo = `${this.checkin.getDate()} ${this.rangeSpanStartMonth}`;
-      const checkoutInfo = `${this.checkout.getDate()} ${this.rangeSpanEndMonth}`;
+      this.rangeStartMonth = this.months[this.checkin.getMonth()].slice(0, 3);
+      this.rangeEndMonth = this.months[this.checkout.getMonth()].slice(0, 3);
+      const checkinInfo = `${this.checkin.getDate()} ${this.rangeStartMonth}`;
+      const checkoutInfo = `${this.checkout.getDate()} ${this.rangeEndMonth}`;
       this.rangeSpanText = `${checkinInfo} - ${checkoutInfo}`;
     } else if (this.existCheckinOnly) {
-      this.rangeSpanStartMonth = this.months[this.checkin.getMonth()].slice(0, 3);
-      this.rangeSpanText = `${this.checkin.getDate()} ${this.rangeSpanStartMonth}`;
+      this.rangeStartMonth = this.months[this.checkin.getMonth()].slice(0, 3);
+      this.rangeSpanText = `${this.checkin.getDate()} ${this.rangeStartMonth}`;
     } else {
       this.rangeSpanText = '';
     }
@@ -276,13 +287,19 @@ class Calendar {
     this.day = this.date.getDate();
 
     // for setting month's days in calendar
-    this.lastDay = new Date(this.year, parseInt(this.month, 10) + 1, 0).getDate();
-    this.lastDayPrev = new Date(this.year, parseInt(this.month, 10), 0).getDate();
-    this.dayOfWeekFirst = new Date(this.year, parseInt(this.month, 10), 1).getDay();
-    this.prevMonthDays = (this.dayOfWeekFirst === 0) ? 6 : (this.dayOfWeekFirst - 1);
-    this.dayOfWeekLast = new Date(this.year, parseInt(this.month, 10) + 1, 0).getDay();
-    this.nextMonthDay = (this.dayOfWeekLast === 0) ? 6 : (this.dayOfWeekLast - 1);
-    this.daysLeft = (this.dayOfWeekLast === 0) ? 0 : (7 - this.dayOfWeekLast);
+    const thisMonth = parseInt(this.month, 10);
+
+    this.lastDay = new Date(this.year, thisMonth + 1, 0).getDate();
+    this.lastDayPrev = new Date(this.year, thisMonth, 0).getDate();
+    this.dayOfWeekFirst = new Date(this.year, thisMonth, 1).getDay();
+
+    const ifFirstDaySunday = this.dayOfWeekFirst === 0;
+    this.prevMonthDays = ifFirstDaySunday ? 6 : (this.dayOfWeekFirst - 1);
+    this.dayOfWeekLast = new Date(this.year, thisMonth + 1, 0).getDay();
+
+    const ifLastDaySunday = this.dayOfWeekLast === 0;
+    this.nextMonthDay = ifLastDaySunday ? 6 : (this.dayOfWeekLast - 1);
+    this.daysLeft = ifLastDaySunday ? 0 : (7 - this.dayOfWeekLast);
     this.dateInCalendar.textContent = `${this.months[this.month]} ${this.year}`;
 
     this.daysOfMonth.innerHTML = `${this.renderPrevMonth()} ${
@@ -294,8 +311,10 @@ class Calendar {
     let prevDays = '';
     for (let p = this.prevMonthDays; p > 0; p -= 1) {
       const prevDay = this.lastDayPrev - p + 1;
-      const betweenInOutOneYear = (this.betweenInOutPrevYear(prevDay) || this.betweenInOutSameYear(prevDay));
-      const betweenInOutYears = betweenInOutOneYear || this.betweenInOutDiffYears(prevDay);
+      const betweenInOutOneYear = this.betweenInOutPrevYear(prevDay)
+        || this.betweenInOutSameYear(prevDay);
+      const betweenInOutYears = betweenInOutOneYear
+        || this.betweenInOutDiffYears(prevDay);
       if (this.checkinPrevMonth(prevDay) || this.checkinPrevYear(prevDay)) {
         prevDays += `<div class="calendar__day_prev_checkin">${prevDay}</div>`;
       } else if (
@@ -304,9 +323,13 @@ class Calendar {
       ) {
         prevDays += `<div class="calendar__day_prev_checkout">${prevDay}</div>`;
       } else if (this.betweenInOutPrevMonth(prevDay) || betweenInOutYears) {
-        prevDays += `<div class="calendar__day_ranged_between">${prevDay}</div>`;
+        prevDays
+          += `<div class="calendar__day_ranged_between">${prevDay}</div>`;
       } else {
-        prevDays += `<div class="calendar__day_prev js-calendar__day_prev">${prevDay}</div>`;
+        prevDays
+          += `<div class="calendar__day_prev js-calendar__day_prev">
+            ${prevDay}
+          </div>`;
       }
     }
     return prevDays;
@@ -329,8 +352,10 @@ class Calendar {
     const checkinLastMonth = this.checkin.getMonth() === 12;
     const thisMonthFirst = this.month === 1;
     const checkinPrevDay = this.checkin.getDate() === prevDay;
-    const checkinPrevYear = (this.checkin)
-      ? checkinYearBefore && checkinLastMonth && thisMonthFirst && checkinPrevDay
+    const checkinLastYearLastMonth = checkinYearBefore && checkinLastMonth;
+    const checkinBeforeJanuary = thisMonthFirst && checkinPrevDay;
+    const checkinPrevYear = this.checkin
+      ? checkinLastYearLastMonth && checkinBeforeJanuary
       : false;
     return checkinPrevYear;
   }
@@ -352,8 +377,10 @@ class Calendar {
     const checkoutMonthLast = this.checkout.getMonth() === 12;
     const thisMonthFirst = this.month === 1;
     const checkoutDayPrev = this.checkout.getDate() === prevDay;
+    const checkoutLastYearLastMonth = checkoutYearBefore && checkoutMonthLast;
+    const checkoutBeforeJanuary = thisMonthFirst && checkoutDayPrev;
     const checkoutPrevYear = (this.checkout)
-      ? checkoutYearBefore && checkoutMonthLast && thisMonthFirst && checkoutDayPrev
+      ? checkoutLastYearLastMonth && checkoutBeforeJanuary
       : false;
     return checkoutPrevYear;
   }
@@ -362,41 +389,43 @@ class Calendar {
     if (!this.checkin || !this.checkout) return false;
     const sameYear = this.checkin.getFullYear() === this.year
       && this.checkout.getFullYear() === this.year;
-    const checkinPrevMonth = (this.checkin.getMonth() === this.month - 1);
-    const checkoutPrevMonth = this.checkout.getMonth() === this.month - 1;
-    const checkinPrevDays = this.checkin.getDate() < prevDay;
-    const checkoutNextDays = this.checkout.getDate() > prevDay;
-    const checkoutMonthAfterCheckin = this.checkout.getMonth() > this.checkin.getMonth();
-    const checkinCheckoutPrevMonth = checkinPrevMonth && checkoutPrevMonth && checkinPrevDays && checkoutNextDays;
-    const checkinCheckoutDiffMonth = checkinPrevMonth && checkinPrevDays && checkoutMonthAfterCheckin;
-    const checkinOrOutPrevMonth = checkinCheckoutPrevMonth || checkinCheckoutDiffMonth;
-    const checkinOrOutPrevMonthSameYear = sameYear && checkinOrOutPrevMonth;
-    return checkinOrOutPrevMonthSameYear;
+    const inPrevMonth = (this.checkin.getMonth() === this.month - 1);
+    const outPrevMonth = this.checkout.getMonth() === this.month - 1;
+    const inPrevDays = this.checkin.getDate() < prevDay;
+    const outNextDays = this.checkout.getDate() > prevDay;
+    const outAfterInMonth = this.checkout.getMonth() > this.checkin.getMonth();
+    const inPrevMonthDay = inPrevMonth && inPrevDays;
+    const outPrevMonthNextDay = outPrevMonth && outNextDays;
+    const inOutPrevMonth = inPrevMonthDay && outPrevMonthNextDay;
+    const inOutDiffMonth = inPrevMonth && inPrevDays && outAfterInMonth;
+    const inOrOutPrevMonth = inOutPrevMonth || inOutDiffMonth;
+    const inOrOutPrevMonthSameYear = sameYear && inOrOutPrevMonth;
+    return inOrOutPrevMonthSameYear;
   }
 
   betweenInOutPrevYear(prevDay) {
     if (!this.checkin || !this.checkout) return false;
-    const checkinPrevYear = this.checkin.getFullYear() === this.year - 1;
-    const checkoutNextYear = this.checkout.getFullYear() >= this.year;
-    const checkoutPrevYear = this.checkout.getFullYear() === this.year - 1;
-    const checkinLastMonth = this.checkin.getMonth() === 12;
-    const checkoutLastMonth = this.checkout.getMonth() === 12;
-    const checkinBeforePrevDay = this.checkin.getDate() < prevDay;
-    const checkoutAfterPrevDay = this.checkout.getDate() > prevDay;
-    const checkinLastMonthBeforePrev = checkinLastMonth && checkinBeforePrevDay;
-    const checkoutLastMonthAfterPrev = checkoutLastMonth && checkoutAfterPrevDay;
-    const checkinPrevCheckoutNextYear = checkinPrevYear && checkoutNextYear;
-    const checkInOutPrevYear = checkinPrevYear && checkoutPrevYear;
-    const betweenCheckinPrevYear = checkinPrevCheckoutNextYear
-      && checkinLastMonthBeforePrev;
-    const betweenCheckInOutPrevYear = checkInOutPrevYear
-      && checkinLastMonthBeforePrev
-      && checkoutLastMonthAfterPrev;
-    const betweenCheckoutPrevYeaer = checkoutPrevYear && checkoutLastMonthAfterPrev;
-    const betweenInOutPrevYear = betweenCheckinPrevYear
-      || betweenCheckInOutPrevYear
-      || betweenCheckoutPrevYeaer;
-    return betweenInOutPrevYear;
+    const inPrevYear = this.checkin.getFullYear() === this.year - 1;
+    const outNextYear = this.checkout.getFullYear() >= this.year;
+    const outPrevYear = this.checkout.getFullYear() === this.year - 1;
+    const inLastMonth = this.checkin.getMonth() === 12;
+    const outLastMonth = this.checkout.getMonth() === 12;
+    const inBeforePrevDay = this.checkin.getDate() < prevDay;
+    const outAfterPrevDay = this.checkout.getDate() > prevDay;
+    const inLastMonthBeforePrev = inLastMonth && inBeforePrevDay;
+    const outLastMonthAfterPrev = outLastMonth && outAfterPrevDay;
+    const inPrevOutNextYear = inPrevYear && outNextYear;
+    const InOutPrevYear = inPrevYear && outPrevYear;
+    const betweenInPrevYear = inPrevOutNextYear
+      && inLastMonthBeforePrev;
+    const betweenInOutPrevYear = InOutPrevYear
+      && inLastMonthBeforePrev
+      && outLastMonthAfterPrev;
+    const betweenOutPrevYeaer = outPrevYear && outLastMonthAfterPrev;
+    const betweenInOutPrevYearFull = betweenInPrevYear
+      || betweenInOutPrevYear
+      || betweenOutPrevYeaer;
+    return betweenInOutPrevYearFull;
   }
 
   betweenInOutSameYear() {
@@ -406,8 +435,8 @@ class Calendar {
     const sameYear = checkinThisYear && checkoutThisYear;
     const checkinPrevMonth = this.checkin.getMonth() < this.month - 1;
     const checkoutNextMOnth = this.checkout.getMonth() >= this.month;
-    const betweenInOutSameYear = sameYear && checkinPrevMonth && checkoutNextMOnth;
-    return betweenInOutSameYear;
+    const betweenInOut = sameYear && checkinPrevMonth && checkoutNextMOnth;
+    return betweenInOut;
   }
 
   betweenInOutDiffYears(prevDay) {
@@ -427,12 +456,19 @@ class Calendar {
   renderCurrentMonth() {
     let currDays = '';
     for (let i = 1; i <= this.lastDay; i += 1) {
-      if (this.checkinToday(i)) currDays += `<div class="calendar__day_checkin">${i}</div>`;
-      else if (this.checkinCurrMonth(i)) currDays += `<div class="calendar__day_checkin">${i}</div>`;
-      else if (this.checkoutCurrMonth(i)) currDays += `<div class="calendar__day_checkout">${i}</div>`;
-      else if (this.todayCurrMonth(i)) currDays += `<div class="calendar__today">${i}</div>`;
-      else if (this.betweenInOutCurrentMonth(i)) currDays += `<div class="calendar__day_ranged">${i}</div>`;
-      else currDays += `<div class="calendar__day">${i}</div>`;
+      if (this.checkinToday(i)) {
+        currDays += `<div class="calendar__day_checkin">${i}</div>`;
+      } else if (this.checkinCurrMonth(i)) {
+        currDays += `<div class="calendar__day_checkin">${i}</div>`;
+      } else if (this.checkoutCurrMonth(i)) {
+        currDays += `<div class="calendar__day_checkout">${i}</div>`;
+      } else if (this.todayCurrMonth(i)) {
+        currDays += `<div class="calendar__today">${i}</div>`;
+      } else if (this.betweenInOutCurrentMonth(i)) {
+        currDays += `<div class="calendar__day_ranged">${i}</div>`;
+      } else {
+        currDays += `<div class="calendar__day">${i}</div>`;
+      }
     }
     return currDays;
   }
@@ -476,7 +512,9 @@ class Calendar {
     if (!this.checkin || !this.checkout) return false;
     const yearCheckin = this.checkin.getFullYear() === this.year;
     const yearCheckout = this.checkout.getFullYear() === this.year;
-    const yearCheckoutAfterCheckin = this.checkin.getFullYear() < this.checkout.getFullYear();
+    const checkinYear = this.checkin.getFullYear();
+    const checkoutYear = this.checkout.getFullYear();
+    const yearCheckoutAfterCheckin = checkinYear < checkoutYear;
     const yearCheckoutSameCheckin = yearCheckin && yearCheckout;
     const monthCheckin = this.month === this.checkin.getMonth();
     const monthAfterCheckin = this.month > this.checkin.getMonth();
@@ -487,10 +525,25 @@ class Calendar {
     const dayBeforeCheckout = i < this.checkout.getDate();
     const dayBetweenCheckinCheckout = dayAfterCheckin && dayBeforeCheckout;
 
-    const thisYearRange = (yearCheckoutSameCheckin && sameMonth && dayBetweenCheckinCheckout)
-      || (yearCheckoutSameCheckin && monthCheckin && monthBeforeCheckout && dayAfterCheckin)
-      || (yearCheckoutSameCheckin && monthCheckout && monthAfterCheckin && dayBeforeCheckout)
-      || (yearCheckoutSameCheckin && monthAfterCheckin && monthBeforeCheckout);
+    const checkinCheckoutSameMonth = yearCheckoutSameCheckin
+      && sameMonth
+      && dayBetweenCheckinCheckout;
+    const checkinBeforeCheckoutMonth = yearCheckoutSameCheckin
+      && monthCheckin
+      && monthBeforeCheckout
+      && dayAfterCheckin;
+    const checkoutAfterCheckinMonth = yearCheckoutSameCheckin
+      && monthCheckout
+      && monthAfterCheckin
+      && dayBeforeCheckout;
+    const checkinCheckoutBetween = yearCheckoutSameCheckin
+      && monthAfterCheckin
+      && monthBeforeCheckout;
+
+    const thisYearRange = checkinCheckoutSameMonth
+      || checkinBeforeCheckoutMonth
+      || checkoutAfterCheckinMonth
+      || checkinCheckoutBetween;
 
     const prevYearRange = (yearCheckin && yearCheckoutAfterCheckin)
       && ((monthCheckin && dayAfterCheckin)
@@ -510,17 +563,28 @@ class Calendar {
   renderNextMonth() {
     let nextDays = '';
     for (let n = 1; n < this.daysLeft + 1; n += 1) {
-      const yearCheckin = this.checkin
+      const yearIn = this.checkin
         ? this.checkin.getFullYear() === this.year
         : false;
-      const yearCheckout = this.checkout
+      const yearOut = this.checkout
         ? this.checkout.getFullYear() === this.year
         : false;
+      const inOutCurrYear = this.betweenInOutCurrYear(n, yearIn, yearOut);
+      const inOutNextYear = this.betweenInOutNextYear(yearIn, yearOut);
+      const checkoutNextMonthOrYear = this.checkoutNextMonth(n, yearOut)
+        || this.checkoutNextYear(n);
+      const betweenInOutAYear = inOutCurrYear || inOutNextYear;
 
-      if (this.checkinNextMonth(n, yearCheckin) || this.checkinNextYear(n)) nextDays += `<div class="calendar__day_next_checkin">${n}</div>`;
-      else if (this.checkoutNextMonth(n, yearCheckout) || this.checkoutNextYear(n)) nextDays += `<div class="calendar__day_next_checkout">${n}</div>`;
-      else if (this.betweenInOutCurrentYear(n, yearCheckin, yearCheckout) || this.betweenInOutNextYear(yearCheckin, yearCheckout)) nextDays += `<div class="calendar__day_ranged_between">${n}</div>`;
-      else nextDays += `<div class="calendar__day_next js-calendar__day_next">${n}</div>`;
+      if (this.checkinNextMonth(n, yearIn) || this.checkinNextYear(n)) {
+        nextDays += `<div class="calendar__day_next_checkin">${n}</div>`;
+      } else if (checkoutNextMonthOrYear) {
+        nextDays += `<div class="calendar__day_next_checkout">${n}</div>`;
+      } else if (betweenInOutAYear) {
+        nextDays += `<div class="calendar__day_ranged_between">${n}</div>`;
+      } else {
+        nextDays
+          += `<div class="calendar__day_next js-calendar__day_next">${n}</div>`;
+      }
     }
     return nextDays;
   }
@@ -566,14 +630,14 @@ class Calendar {
     return checkoutNextYear;
   }
 
-  betweenInOutCurrentYear(n, yearCheckin, yearCheckout) {
-    const betweenInOutCurrentYear = (yearCheckin && yearCheckout)
+  betweenInOutCurrYear(n, yearCheckin, yearCheckout) {
+    const betweenInOutCurrYear = (yearCheckin && yearCheckout)
       ? (this.checkout.getMonth() > this.month
         && this.checkin.getMonth() <= this.month)
         || (this.checkout.getMonth() === this.month + 1
           && this.checkout.getDate() > n)
       : false;
-    return betweenInOutCurrentYear;
+    return betweenInOutCurrYear;
   }
 
   betweenInOutNextYear(yearCheckin, yearCheckout) {

@@ -53,13 +53,21 @@ class Pagination {
   }
 
   enable() {
-    this.buttonItems.map((item) => {
+    this.buttonItems.forEach((item) => {
       item.addEventListener('click', this.onButtonClickHandler);
     });
-    if (this.buttonNext) this.buttonNext.addEventListener('click', this.onButtonNextHandler);
-    if (this.buttonPrev) this.buttonPrev.addEventListener('click', this.onButtonPrevHandler);
-    if (this.buttonFirst) this.buttonFirst.addEventListener('click', this.onButtonFirstHandler);
-    if (this.buttonLast) this.buttonLast.addEventListener('click', this.onButtonLastHandler);
+    if (this.buttonNext) {
+      this.buttonNext.addEventListener('click', this.onButtonNextHandler);
+    }
+    if (this.buttonPrev) {
+      this.buttonPrev.addEventListener('click', this.onButtonPrevHandler);
+    }
+    if (this.buttonFirst) {
+      this.buttonFirst.addEventListener('click', this.onButtonFirstHandler);
+    }
+    if (this.buttonLast) {
+      this.buttonLast.addEventListener('click', this.onButtonLastHandler);
+    }
   }
 
   render() {
