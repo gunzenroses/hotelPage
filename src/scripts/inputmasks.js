@@ -14,17 +14,13 @@ Inputmask({
       casing: 'lower',
     },
   },
-})
-  .mask($("input[name='email']"));
+}).mask($("input[name='email']"));
 
-Inputmask(
-  'datetime', {
-    placeholder: 'ДД.ММ.ГГГГ',
-    separator: '.',
-    alias: 'dd.mm.yyyy',
-    inputFormat: 'dd.mm.yyyy',
-    min: '01/01/1900',
-    max: '01/01/2018',
-  },
-)
-  .mask($("input[name='birthday']"));
+Inputmask('datetime', {
+  placeholder: 'ДД.ММ.ГГГГ',
+  separator: '.',
+  alias: 'dd.mm.yyyy',
+  inputFormat: 'dd.mm.yyyy',
+  min: '01/01/1900',
+  max: '01/01/2018',
+}).mask($("input[name='birthday']"));
