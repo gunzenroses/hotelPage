@@ -14,13 +14,14 @@
     "plugin:fsd/all"
   ],
   "rules": {
+    "linebreak-style": ["error", "windows"],
     "prefer-destructuring": "off",
     "no-new": "off",
     "max-len": ["error", {
-      "code": 120, 
-      "tabWidth": 2, 
-      "comments": 65,
+      "tabWidth": 2,
+      "quotes": ["error", "single"],
       "ignoreUrls": true,
+      "code": 80,
       "ignoreRegExpLiterals": true,
       "ignoreTemplateLiterals": true
       }],
