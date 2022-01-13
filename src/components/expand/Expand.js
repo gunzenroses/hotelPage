@@ -13,13 +13,17 @@ class Expand {
   createChildren() {
     this.dropdownWatchedParents = [];
     this.dropdownWatchedExpands = [];
-    this.dropdownWatchedInits = Array.from(this.dropdownWatch.querySelectorAll('.js-expand__init'));
+    this.dropdownWatchedInits = Array.from(
+      this.dropdownWatch.querySelectorAll('.js-expand__init')
+    );
     this.dropdownWatchedInits.forEach((item) => {
       this.dropdownWatchedParents.push(item.parentElement);
     });
 
     this.dropdownWatchedParents.forEach((item) => {
-      this.dropdownWatchedExpands.push(item.querySelector('.js-expand__content'));
+      this.dropdownWatchedExpands.push(
+        item.querySelector('.js-expand__content')
+      );
     });
   }
 

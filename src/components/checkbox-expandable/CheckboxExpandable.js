@@ -11,8 +11,12 @@ class CheckboxExpandable {
   }
 
   createChildren() {
-    this.dropdownInit = this.dropdown.querySelector('.js-checkbox-expandable__init');
-    this.dropdownExpand = this.dropdown.querySelector('.js-checkbox-expandable__content');
+    this.dropdownInit = this.dropdown.querySelector(
+      '.js-checkbox-expandable__init'
+    );
+    this.dropdownExpand = this.dropdown.querySelector(
+      '.js-checkbox-expandable__content'
+    );
     this.dropdownParent = this.dropdownInit.parentElement;
   }
 
@@ -28,6 +32,5 @@ class CheckboxExpandable {
     this.dropdownExpand.classList.toggle('js-checkbox-expandable__show');
   }
 }
-  
+
 export default CheckboxExpandable;
-  
