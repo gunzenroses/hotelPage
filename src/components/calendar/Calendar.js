@@ -151,11 +151,11 @@ class Calendar {
     monthCheckin,
     dayBeforeCheckin,
   ) {
-    const monthBeforeCheckin = yearCheckin && monthBeforeCheckin;
-    const dayBeforeCheckin = yearCheckin && monthCheckin && dayBeforeCheckin;
+    const monthBeforeCheckinSameYear = yearCheckin && monthBeforeCheckin;
+    const dayBeforeCheckinSameYear = yearCheckin && monthCheckin && dayBeforeCheckin;
     const beforeCheckin = yearBeforeCheckin 
-      || monthBeforeCheckin
-      || dayBeforeCheckin;
+      || monthBeforeCheckinSameYear
+      || dayBeforeCheckinSameYear;
     const dayBeforeExistingCheckin = this.existCheckinOnly
       ? beforeCheckin
       : false;
@@ -312,6 +312,7 @@ class Calendar {
   }
 
   checkinPrevMonth(prevDay) {
+    if (!this.checkin) return false;
     const checkinMonthBefore = this.checkin.getMonth() === (this.month - 1);
     const checkinThisYear = this.checkin.getFullYear() === this.year;
     const checkinPrevDay = this.checkin.getDate() === (prevDay);
@@ -322,6 +323,7 @@ class Calendar {
   }
 
   checkinPrevYear(prevDay) {
+    if (!this.checkin) return false;
     const checkinYearBefore = this.checkin.getFullYear === this.year - 1;
     const checkinLastMonth = this.checkin.getMonth() === 12;
     const thisMonthFirst = this.month === 1;
@@ -333,16 +335,18 @@ class Calendar {
   }
 
   checkoutPrevMonth(prevDay) {
+    if (!this.checkout) return false;
     const checkoutPrevMonth = this.checkout.getMonth() === (this.month - 1);
     const checkinThisYear = this.checkin.getFullYear() === this.year;
     const checkoutPrevDday = this.checkout.getDate() === (prevDay);
-    const checkoutPrevMonth = (this.checkout)
+    const checkoutPrevMonthThisYear = (this.checkout)
       ? checkoutPrevMonth && checkinThisYear && checkoutPrevDday
       : false;
-    return checkoutPrevMonth;
+    return checkoutPrevMonthThisYear;
   }
 
   checkoutPrevYear(prevDay) {
+    if (!this.checkout) return false;
     const checkoutYearBefore = this.checkout.getFullYear() === this.year - 1;
     const checkoutMonthLast = this.checkout.getMonth() === 12;
     const thisMonthFirst = this.month === 1;
