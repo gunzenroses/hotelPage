@@ -17,6 +17,8 @@
     "linebreak-style": ["error", "windows"],
     "prefer-destructuring": "off",
     "no-new": "off",
+    "quotes": ["error", "single"],
+    "comma-dangle": ["error", "never"],
     "max-len": ["error", {
       "tabWidth": 2,
       "quotes": ["error", "single"],
