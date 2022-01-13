@@ -6,3 +6,5 @@ dist
 HOW_TO.md
 package-lock.json
 .gitignore
+.editorconfig
+.package-lock.json
