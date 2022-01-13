@@ -53,8 +53,8 @@ class Pagination {
   }
 
   enable() {
-    this.buttonItems.map((item) => { 
-      item.addEventListener('click', this.onButtonClickHandler)
+    this.buttonItems.map((item) => {
+      item.addEventListener('click', this.onButtonClickHandler);
     });
     if (this.buttonNext) this.buttonNext.addEventListener('click', this.onButtonNextHandler);
     if (this.buttonPrev) this.buttonPrev.addEventListener('click', this.onButtonPrevHandler);

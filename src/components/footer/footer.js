@@ -6,20 +6,20 @@ $('.js-footer__form').validate({
     email: {
       required: true,
       email: true,
-      minlength: 7,
-    },
+      minlength: 7
+    }
   },
   messages: {
     email: {
       required: 'Введите email',
       email: 'Некорректный email',
-      minlength: 'Поле должно быть длинее 7 символов',
-    },
+      minlength: 'Поле должно быть длинее 7 символов'
+    }
   },
   submitHandler(form) {
     form.submit();
   },
   errorPlacement(error, element) {
     element.parent().after(error);
-  },
+  }
 });

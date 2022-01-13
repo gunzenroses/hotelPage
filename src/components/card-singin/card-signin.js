@@ -6,7 +6,7 @@ $('.js-card-signin').validate({
     email: {
       required: true,
       email: true,
-      minlength: 7,
+      minlength: 7
     },
     password: {
       required: true,
@@ -14,14 +14,14 @@ $('.js-card-signin').validate({
       lowerCase: true,
       upperCase: true,
       hasDigit: true,
-      minlength: 8,
-    },
+      minlength: 8
+    }
   },
   messages: {
     email: {
       required: 'Введите email',
       email: 'Некорректный email',
-      minlength: 'Поле должно быть длинее 7 символов',
+      minlength: 'Поле должно быть длинее 7 символов'
     },
     password: {
       required: 'Введите пароль',
@@ -29,13 +29,13 @@ $('.js-card-signin').validate({
       lowerCase: 'Пароль должен содержать хотя бы 1 строчную букву',
       upperCase: 'Пароль должен содержать хотя бы 1 заглавную букву',
       hasDigit: 'Пароль должен содержать хотя бы 1 цифру',
-      minlength: 'Пароль должен быть длинее 8 символов',
-    },
+      minlength: 'Пароль должен быть длинее 8 символов'
+    }
   },
   submitHandler(form) {
     form.submit();
   },
   errorPlacement(error, element) {
     element.parent().after(error);
-  },
+  }
 });

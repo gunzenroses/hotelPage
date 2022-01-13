@@ -9,12 +9,12 @@ Inputmask({
   },
   definitions: {
     '*': {
-      validator: "[0-9A-Za-z!#$%&'*+/=?^_`{|}~-]",
+      validator: '[0-9A-Za-z!#$%&\'*+/=?^_`{|}~-]',
       cardinality: 1,
-      casing: 'lower',
-    },
-  },
-}).mask($("input[name='email']"));
+      casing: 'lower'
+    }
+  }
+}).mask($('input[name=\'email\']'));
 
 Inputmask('datetime', {
   placeholder: 'ДД.ММ.ГГГГ',
@@ -22,5 +22,5 @@ Inputmask('datetime', {
   alias: 'dd.mm.yyyy',
   inputFormat: 'dd.mm.yyyy',
   min: '01/01/1900',
-  max: '01/01/2018',
-}).mask($("input[name='birthday']"));
+  max: '01/01/2018'
+}).mask($('input[name=\'birthday\']'));

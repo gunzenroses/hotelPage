@@ -25,7 +25,7 @@ class Calendar {
       'Сентябрь',
       'Октябрь',
       'Ноябрь',
-      'Декабрь',
+      'Декабрь'
     ];
     this.buttonPrev = this.calendarContainer.querySelector(
       '.js-calendar__button_prev'
@@ -128,18 +128,19 @@ class Calendar {
     const monthAfterCheckin = parseInt(this.month, 10) > parseInt(this.checkin.getMonth(), 10);
     const dayBeforeCheckin = parseInt(e.target.innerText, 10) < parseInt(this.checkin.getDate(), 10);
     const dayAfterCheckin = parseInt(e.target.innerText, 10) > parseInt(this.checkin.getDate(), 10);
-    const dayBeforeExistingCheckin = this.chooseBeforeCheckin(yearBeforeCheckin,
+    const dayBeforeExistingCheckin = this.chooseBeforeCheckin(
+      yearBeforeCheckin,
       yearCheckin,
       monthBeforeCheckin,
       monthCheckin,
-      dayBeforeCheckin,
+      dayBeforeCheckin
     );
     const dayAfterExistingCheckin = this.chooseAfterCheckin(
       yearAfterCheckin,
       yearCheckin,
       monthAfterCheckin,
       monthCheckin,
-      dayAfterCheckin,
+      dayAfterCheckin
     );
     return [dayBeforeExistingCheckin, dayAfterExistingCheckin];
   }
@@ -149,11 +150,11 @@ class Calendar {
     yearCheckin,
     monthBeforeCheckin,
     monthCheckin,
-    dayBeforeCheckin,
+    dayBeforeCheckin
   ) {
     const monthBeforeCheckinSameYear = yearCheckin && monthBeforeCheckin;
     const dayBeforeCheckinSameYear = yearCheckin && monthCheckin && dayBeforeCheckin;
-    const beforeCheckin = yearBeforeCheckin 
+    const beforeCheckin = yearBeforeCheckin
       || monthBeforeCheckinSameYear
       || dayBeforeCheckinSameYear;
     const dayBeforeExistingCheckin = this.existCheckinOnly
@@ -167,7 +168,7 @@ class Calendar {
     yearCheckin,
     monthAfterCheckin,
     monthCheckin,
-    dayAfterCheckin,
+    dayAfterCheckin
   ) {
     const montAfterCheckin = yearCheckin && monthAfterCheckin;
     const dayAfterCheckinThinYear = yearCheckin && monthCheckin && dayAfterCheckin;
@@ -367,7 +368,7 @@ class Calendar {
     const checkoutNextDays = this.checkout.getDate() > prevDay;
     const checkoutMonthAfterCheckin = this.checkout.getMonth() > this.checkin.getMonth();
     const checkinCheckoutPrevMonth = checkinPrevMonth && checkoutPrevMonth && checkinPrevDays && checkoutNextDays;
-    const checkinCheckoutDiffMonth = checkinPrevMonth && checkinPrevDays && checkoutMonthAfterCheckin; 
+    const checkinCheckoutDiffMonth = checkinPrevMonth && checkinPrevDays && checkoutMonthAfterCheckin;
     const checkinOrOutPrevMonth = checkinCheckoutPrevMonth || checkinCheckoutDiffMonth;
     const checkinOrOutPrevMonthSameYear = sameYear && checkinOrOutPrevMonth;
     return checkinOrOutPrevMonthSameYear;
@@ -389,7 +390,7 @@ class Calendar {
     const betweenCheckinPrevYear = checkinPrevCheckoutNextYear
       && checkinLastMonthBeforePrev;
     const betweenCheckInOutPrevYear = checkInOutPrevYear
-      && checkinLastMonthBeforePrev 
+      && checkinLastMonthBeforePrev
       && checkoutLastMonthAfterPrev;
     const betweenCheckoutPrevYeaer = checkoutPrevYear && checkoutLastMonthAfterPrev;
     const betweenInOutPrevYear = betweenCheckinPrevYear

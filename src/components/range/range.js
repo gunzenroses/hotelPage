@@ -18,5 +18,5 @@ $('.js-range__slider').ionRangeSlider({
   prettify_enabled: true,
   step: 100,
   onStart: changeValue,
-  onChange: changeValue,
+  onChange: changeValue
 });
