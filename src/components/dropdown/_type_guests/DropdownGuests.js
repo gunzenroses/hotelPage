@@ -8,7 +8,9 @@ export default class DropdownGuests {
   init() {
     this.createChildren();
     this.makeData();
-    this.dropdownItems.forEach((_, i) => { this.showItemNumber(i); });
+    this.dropdownItems.forEach((_, i) => {
+      this.showItemNumber(i);
+    });
     this.totalGuestsCount();
     this.enableHandlers();
     this.enableEventListeners();
@@ -18,14 +20,24 @@ export default class DropdownGuests {
     this.dropdownExpanded = this.container.querySelector('.js-expand__content');
     this.info = this.container.querySelector('.js-dropdown__info');
     this.infoInput = this.container.querySelector('.js-dropdown__input');
-    this.dropdownItems = Array.from(this.container.querySelectorAll('.js-dropdown__item'));
-    this.dropdownMinuses = this.container.querySelectorAll('.js-dropdown__minus');
-    this.resetButton = this.dropdownExpanded.querySelector('.js-dropdown__button_type_reset');
-    this.submitButton = this.dropdownExpanded.querySelector('.js-dropdown__button_type_submit');
+    this.dropdownItems = Array.from(
+      this.container.querySelectorAll('.js-dropdown__item')
+    );
+    this.dropdownMinuses = this.container.querySelectorAll(
+      '.js-dropdown__minus'
+    );
+    this.resetButton = this.dropdownExpanded.querySelector(
+      '.js-dropdown__button_type_reset'
+    );
+    this.submitButton = this.dropdownExpanded.querySelector(
+      '.js-dropdown__button_type_submit'
+    );
   }
 
   makeData() {
-    const nums = Array.from(this.container.querySelectorAll('.js-dropdown__number'));
+    const nums = Array.from(
+      this.container.querySelectorAll('.js-dropdown__number')
+    );
     nums.forEach((num) => {
       const value = parseInt(num.textContent, 10);
       this.data.push(value);
@@ -67,7 +79,9 @@ export default class DropdownGuests {
   resetGuests(e) {
     e.preventDefault();
     this.data = [0, 0, 0];
-    this.dropdownItems.forEach((_, i) => { this.showItemNumber(i); });
+    this.dropdownItems.forEach((_, i) => {
+      this.showItemNumber(i);
+    });
     this.onZeroGuests();
   }
 
@@ -77,12 +91,10 @@ export default class DropdownGuests {
   }
 
   showItemNumber(i) {
-    this.data[i] = (this.data[i] < 0)
-      ? 0
-      : ((this.data[i] > 10)
-        ? 10
-        : this.data[i]);
-    const dropdownItem = this.dropdownItems[i].querySelector('.js-dropdown__number');
+    this.data[i] = this.data[i] < 0 ? 0 : this.data[i] > 10 ? 10 : this.data[i];
+    const dropdownItem = this.dropdownItems[i].querySelector(
+      '.js-dropdown__number'
+    );
     dropdownItem.innerText = this.data[i];
     this.activateMinus(i);
   }
@@ -121,9 +133,9 @@ export default class DropdownGuests {
     const adultWord = this.matchWordForAdult();
     const infantWord = this.matchWordForInfant();
 
-    const onlyAdults = (this.adultGuests > 0) && (this.infantGuests < 1);
-    const onlyInfants = (this.adultGuests < 1) && (this.infantGuests > 0);
-    const adultsWithInfants = (this.adultGuests > 0) && (this.infantGuests > 0);
+    const onlyAdults = this.adultGuests > 0 && this.infantGuests < 1;
+    const onlyInfants = this.adultGuests < 1 && this.infantGuests > 0;
+    const adultsWithInfants = this.adultGuests > 0 && this.infantGuests > 0;
 
     const adultsInfo = `${this.adultGuests} ${adultWord}`;
     const infantsInfo = `${this.infantGuests} ${infantWord}`;
@@ -141,14 +153,20 @@ export default class DropdownGuests {
     let form;
     switch (this.adultGuests) {
       case 1:
-      case 21: form = 'гость'; break;
+      case 21:
+        form = 'гость';
+        break;
       case 2:
       case 3:
       case 4:
       case 22:
       case 23:
-      case 24: form = 'гостя'; break;
-      default: form = 'гостей'; break;
+      case 24:
+        form = 'гостя';
+        break;
+      default:
+        form = 'гостей';
+        break;
     }
     return form;
   }
@@ -157,14 +175,20 @@ export default class DropdownGuests {
     let form;
     switch (this.infantGuests) {
       case 1:
-      case 21: form = 'младенец'; break;
+      case 21:
+        form = 'младенец';
+        break;
       case 2:
       case 3:
       case 4:
       case 22:
       case 23:
-      case 24: form = 'младенца'; break;
-      default: form = 'младенцев'; break;
+      case 24:
+        form = 'младенца';
+        break;
+      default:
+        form = 'младенцев';
+        break;
     }
     return form;
   }

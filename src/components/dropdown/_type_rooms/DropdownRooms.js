@@ -8,7 +8,9 @@ export default class DropdownRooms {
   init() {
     this.createChildren();
     this.makeData();
-    this.dropdownItems.forEach((_, index) => { this.render(index); });
+    this.dropdownItems.forEach((_, index) => {
+      this.render(index);
+    });
     this.enableHandlers();
     this.enableEventListeners();
   }
@@ -16,13 +18,19 @@ export default class DropdownRooms {
   createChildren() {
     this.info = this.container.querySelector('.js-dropdown__info');
     this.infoInput = this.container.querySelector('.js-dropdown__input');
-    this.dropdownItems = Array.from(this.container.querySelectorAll('.js-dropdown__item'));
+    this.dropdownItems = Array.from(
+      this.container.querySelectorAll('.js-dropdown__item')
+    );
     this.dropdownPluses = this.container.querySelectorAll('.js-dropdown__plus');
-    this.dropdownMinuses = this.container.querySelectorAll('.js-dropdown__minus');
+    this.dropdownMinuses = this.container.querySelectorAll(
+      '.js-dropdown__minus'
+    );
   }
 
   makeData() {
-    const nums = Array.from(this.container.querySelectorAll('.js-dropdown__number'));
+    const nums = Array.from(
+      this.container.querySelectorAll('.js-dropdown__number')
+    );
     nums.forEach((num) => {
       const value = parseInt(num.textContent, 10);
       this.data.push(value);
@@ -69,7 +77,9 @@ export default class DropdownRooms {
   }
 
   updateItemNumber(i) {
-    const dropdownItem = this.dropdownItems[i].querySelector('.js-dropdown__number');
+    const dropdownItem = this.dropdownItems[i].querySelector(
+      '.js-dropdown__number'
+    );
     dropdownItem.innerText = this.data[i];
   }
 
@@ -95,27 +105,51 @@ export default class DropdownRooms {
     let dataTypeName;
     if (this.data[j] === 0) {
       switch (dataType) {
-        case 'bedrooms': dataTypeName = 'спален'; break;
-        case 'beds': dataTypeName = 'кроватей'; break;
-        default: dataTypeName = 'ванных комнат'; break;
+        case 'bedrooms':
+          dataTypeName = 'спален';
+          break;
+        case 'beds':
+          dataTypeName = 'кроватей';
+          break;
+        default:
+          dataTypeName = 'ванных комнат';
+          break;
       }
     } else if (this.data[j] === 1) {
       switch (dataType) {
-        case 'bedrooms': dataTypeName = 'спальня'; break;
-        case 'beds': dataTypeName = 'кровать'; break;
-        default: dataTypeName = 'ванная комната'; break;
+        case 'bedrooms':
+          dataTypeName = 'спальня';
+          break;
+        case 'beds':
+          dataTypeName = 'кровать';
+          break;
+        default:
+          dataTypeName = 'ванная комната';
+          break;
       }
     } else if (this.data[j] > 1 && this.data[j] < 5) {
       switch (dataType) {
-        case 'bedrooms': dataTypeName = 'спальни'; break;
-        case 'beds': dataTypeName = 'кровати'; break;
-        default: dataTypeName = 'ванных комнаты'; break;
+        case 'bedrooms':
+          dataTypeName = 'спальни';
+          break;
+        case 'beds':
+          dataTypeName = 'кровати';
+          break;
+        default:
+          dataTypeName = 'ванных комнаты';
+          break;
       }
     } else {
       switch (dataType) {
-        case 'bedrooms': dataTypeName = 'спален'; break;
-        case 'beds': dataTypeName = 'кроватей'; break;
-        default: dataTypeName = 'ванных комнат'; break;
+        case 'bedrooms':
+          dataTypeName = 'спален';
+          break;
+        case 'beds':
+          dataTypeName = 'кроватей';
+          break;
+        default:
+          dataTypeName = 'ванных комнат';
+          break;
       }
     }
     return `${this.data[j]} ${dataTypeName}, `;
