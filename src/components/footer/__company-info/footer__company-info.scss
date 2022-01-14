@@ -25,7 +25,7 @@
   }
 }
 
-.footer__logo_main {
+.footer__logo {
   @include footerLogo();
   display: flex;
   flex-direction: column;
@@ -38,15 +38,7 @@
   letter-spacing: .001em;
 }
 
-.footer__logo_landing,
-.footer__logo_in-registration,
-.footer__logo_in-details,
-.footer__logo_in-search,
-.footer__logo_in-signin {
-  @extend .footer__logo_main;
-}
-
-.footer__logo_landing {
+.footer__logo_in-landing {
   height: 130px;
   @include footerLogo();
 }

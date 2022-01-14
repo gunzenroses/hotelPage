@@ -4,7 +4,7 @@ mixin footer__info_hidden({ navigations, abouts, supports })
   .footer__info_hidden
     .footer__navigation
       h3.footer__title.js-expand__init Навигация
-      ul.footer__dropdown_in-navigation.js-expand__content
+      ul.footer__dropdown.js-expand__content
         for navigation in navigations
           +navlink({ 
             buttonText: navigation, 
@@ -12,7 +12,7 @@ mixin footer__info_hidden({ navigations, abouts, supports })
           })
     .footer__about
       h3.footer__title.js-expand__init О нас
-      ul.footer__dropdown_in-about.js-expand__content
+      ul.footer__dropdown.js-expand__content
         for about in abouts
           +navlink({
             buttonText: about,
@@ -20,7 +20,7 @@ mixin footer__info_hidden({ navigations, abouts, supports })
           })
     .footer__support
       h3.footer__title.js-expand__init Служба поддержки
-      ul.footer__dropdown_in-support.js-expand__content
+      ul.footer__dropdown.js-expand__content
         for support in supports
           +navlink({ 
             buttonText: support,

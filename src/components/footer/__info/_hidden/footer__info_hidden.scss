@@ -20,9 +20,7 @@
 }
 
 @include _470 {
-  .footer__dropdown_in-navigation,
-  .footer__dropdown_in-about,
-  .footer__dropdown_in-support {
+  .footer__dropdown {
     position: absolute;
     top: 20px;
     width: 200px;

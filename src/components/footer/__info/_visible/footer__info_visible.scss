@@ -1,19 +1,7 @@
 @import '@~Assets/styles/media-mixins.scss';
 @import '@~Components/navlink/navlink.scss';
 
-.footer__info_main {
-  margin-right: 50px;
-
-  @include _1500-1920 {
-      margin-right: 0;
-  }
-
-  @include _1340 {
-    margin-right: 0;
-  }
-}
-
-.footer__info_main {
+.footer__info {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -21,16 +9,19 @@
   flex-wrap: nowrap;
   height: 168px;
   width: 548px;
+  margin-right: 50px;
   padding-top: 4px;
 
   @include _1500-1920 {
-    width: 50%;
     justify-content: space-between;
+    width: 50%;
+    margin-right: 0;
   }
 
   @include _1340 {
     width: 35%;
     min-width: 415px;
+    margin-right: 0;
   }
 
   @include _800 {
@@ -42,14 +33,6 @@
   @include _470 {
     display: none;
   }
-}
-
-.footer__info_landing,
-.footer__info_in-registration,
-.footer__info_in-search,
-.footer__info_in-signin,
-.footer__info_in-details {
-  @extend .footer__info_main;
 }
 
 .footer__info_in-details {
