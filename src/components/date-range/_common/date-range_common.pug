@@ -1,18 +1,16 @@
 include ../../calendar/calendar.pug
+include ../__item/date-range__item.pug
 
 mixin date-range_common({ labelText="", inputValue="19 авг - 23 авг", dropdownClassShow="", theme="" })
   div.date-range.js-date-range
     div(class=`date-range__calendar js-date-range__calendar js-expand__content ${dropdownClassShow}`)
       +calendar()
     .date-range__selector_common.js-expand__init
-      h3.date-range__label!= labelText
-      if theme == ""
-        .date-range__info
-          input(class="date-range__input" type="text" value=inputValue 
-          name="checkin-checkout" placeholder="ДД.ММ - ДД.ММ"
-          maxlength="15" data-range="date-range" readonly)
-      else
-        div(class=`date-range__info_${theme}`)
-          input(class="date-range__input" type="text" value=inputValue 
-          name="checkin-checkout" placeholder="ДД.ММ - ДД.ММ"
-          maxlength="15" data-range="date-range" readonly)
+      +date-range__item({ 
+        labelText: labelText, 
+        inputName: "checkin-checkout", 
+        inputValue: inputValue, 
+        dateDataType: "date-range", 
+        maxLength: 15, 
+        theme: theme
+      })
