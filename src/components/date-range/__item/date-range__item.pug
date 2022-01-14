@@ -1,7 +1,19 @@
-mixin date-range__item({ labelText, inputName, inputValue, dateDataType })
-  .date-range__item
-    h3.date-range__label!= labelText
-    .date-range__info
-      input(class="date-range__input" type="text" value=inputValue 
-      name=inputName placeholder="ДД.ММ.ГГГГ"
-      maxlength="10" data-range=dateDataType readonly)
+mixin date-range__item({ labelText="", inputName="", inputValue="", dateDataType="", maxLength=10, theme="" })
+  - 
+    var className = 
+      theme == "search" ? `date-range__info date-range__info_in-${theme}` : "date-range__info"
+
+  if dateDataType == "date-range"
+    .date-range__item
+      h3.date-range__label!= labelText
+      div(class= className)
+        input(class="date-range__input" type="text" value=inputValue 
+        name=inputName placeholder="ДД.ММ.ГГГГ"
+        maxlength=maxLength data-range=dateDataType readonly)
+  else
+    .date-range__item_separate
+      h3.date-range__label!= labelText
+      .date-range__info
+        input(class="date-range__input" type="text" value=inputValue 
+        name=inputName placeholder="ДД.ММ.ГГГГ"
+        maxlength=maxLength data-range=dateDataType readonly)
