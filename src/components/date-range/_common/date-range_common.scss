@@ -4,7 +4,6 @@
 @import '../date-range.scss';
 
 .date-range__selector_common {
-  @include dateRangeSelector();
   flex-direction: column;
 }
   

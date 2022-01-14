@@ -5,7 +5,7 @@ mixin date-range_common({ labelText="", inputValue="19 авг - 23 авг", drop
   div.date-range.js-date-range
     div(class=`date-range__calendar js-date-range__calendar js-expand__content ${dropdownClassShow}`)
       +calendar()
-    .date-range__selector_common.js-expand__init
+    .date-range__selector.date-range__selector_common.js-expand__init
       +date-range__item({ 
         labelText: labelText, 
         inputName: "checkin-checkout", 
