@@ -9,4 +9,7 @@ mixin header__user_unsigned({ signinText="", signinLink="/some-link", regLink="/
         className: "signin"
       })
     .header__registration
-      a(class="button-link_type_registration" href= regLink)
+      +button-link({ 
+        buttonOnclick: regLink,
+        className: "registration"
+      })
