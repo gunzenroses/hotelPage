@@ -30,6 +30,10 @@
   height: 26px;
 }
 
+.social-net__facebook {
+  height: 30px;
+}
+
 .social-net__twitter_in-search,
 .social-net__twitter_in-details,
 .social-net__twitter_in-registration {
@@ -48,31 +52,9 @@
   height: 21px;
 }
 
-.social-net__facebook {
-  height: 30px;
-}
-
 .social-net__twitter::before,
-.social-net__twitter_creative::before,
-.social-net__twitter_landing::before,
-.social-net__twitter_in-search::before,
-.social-net__twitter_in-details::before,
-.social-net__twitter_in-registration::before,
-.social-net__twitter_in-signin::before,
 .social-net__facebook::before,
-.social-net__facebook_creative::before,
-.social-net__facebook_landing::before,
-.social-net__facebook_in-search::before,
-.social-net__facebook_in-details::before,
-.social-net__facebook_in-registration::before,
-.social-net__facebook_in-signin::before,
-.social-net__instagram::before,
-.social-net__instagram_creative::before,
-.social-net__instagram_landing::before,
-.social-net__instagram_in-search::before,
-.social-net__instagram_in-details::before,
-.social-net__instagram_in-registration::before,
-.social-net__instagram_in-signin::before {
+.social-net__instagram::before {
   position: absolute;
   top: -1px;
   left: 0;
@@ -91,36 +73,18 @@
   }
 }
 
-.social-net__twitter::before,
-.social-net__twitter_creative::before,
-.social-net__twitter_landing::before,
-.social-net__twitter_in-search::before,
-.social-net__twitter_in-details::before,
-.social-net__twitter_in-registration::before,
-.social-net__twitter_in-signin::before {
+.social-net__twitter::before {
   content: '';
   line-height: 21px;
 }
 
-.social-net__facebook::before,
-.social-net__facebook_creative::before,
-.social-net__facebook_landing::before,
-.social-net__facebook_in-search::before,
-.social-net__facebook_in-details::before,
-.social-net__facebook_in-registration::before,
-.social-net__facebook_in-signin::before {
+.social-net__facebook::before {
   content: '';
   line-height: 24px;
 }
 
 
-.social-net__instagram::before,
-.social-net__instagram_creative::before,
-.social-net__instagram_landing::before,
-.social-net__instagram_in-search::before,
-.social-net__instagram_in-details::before,
-.social-net__instagram_in-registration::before,
-.social-net__instagram_in-signin::before {
+.social-net__instagram::before {
   content: '';
   line-height: 24px;
 }

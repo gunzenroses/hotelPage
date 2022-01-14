@@ -1,10 +1,28 @@
 mixin social-nets(theme = "")
   if theme == ""
-    a(href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer" class="social-net social-net__twitter")
-    a(href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="social-net social-net__facebook")
-    a(href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="social-net social-net__instagram")
+    a(href="https://www.twitter.com/" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      class="social-net social-net__twitter")
+    a(href="https://www.facebook.com/" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      class="social-net social-net__facebook")
+    a(href="https://www.instagram.com/" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      class="social-net social-net__instagram")
   else
-    a(href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer" class=`social-net social-net__twitter_${theme}`)
-    a(href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class=`social-net social-net__facebook_${theme}`)
-    a(href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class=`social-net social-net__instagram_${theme}`)
+    a(href="https://www.twitter.com/" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      class=`social-net social-net__twitter social-net__twitter_in-${theme}`)
+    a(href="https://www.facebook.com/" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      class=`social-net social-net__facebook social-net__facebook_in-${theme}`)
+    a(href="https://www.instagram.com/" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      class=`social-net social-net__instagram social-net__instagram_in-${theme}`)
   
