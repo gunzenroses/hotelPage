@@ -1,5 +1,5 @@
 mixin button-submit({ buttonText="", type="" })
   if type == "compact"
-    button(class="button-submit_compact" type="submit")= buttonText
+    button(class="button-submit button-submit_compact" type="submit")= buttonText
   else
     button(class="button-submit" type="submit")= buttonText

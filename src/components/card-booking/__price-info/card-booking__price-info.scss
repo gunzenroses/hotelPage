@@ -36,13 +36,6 @@
   }
 }
 
-//TODO
-.card-booking__price-info_total {
-  @extend .card-booking__price-info;
-  margin-top: 30px;
-  margin-left: 0;
-}
-
 .card-booking__description {
   display: inline-block;
   width: calc(100% - 101px);
@@ -58,7 +51,6 @@
     max-width: 170px;
   }
 }
-
 
 .card-booking__description_special {
   @include isFlex();
@@ -88,7 +80,6 @@
 }
 
 .card-booking__expense_special {
-  @extend.card-booking__expense;
   width: calc(100% - 169px);
 
   @include _1650-1920 {

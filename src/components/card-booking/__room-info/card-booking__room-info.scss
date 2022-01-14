@@ -29,7 +29,6 @@
 }
 
 .card-booking__number_in-details {
-@extend .card-booking__number;
 line-height: 11px;
 }
 
@@ -44,8 +43,7 @@ text-transform: uppercase;
 }
 
 .card-booking__suite_in-details {
-@extend .card-booking__suite;
-margin-left: 8px;
+  margin-left: 8px;
 }
 
 .card-booking__price {

@@ -7,9 +7,9 @@ mixin card-booking__price-info({ infoDesctiption, infoPrice, infoSign = "none" }
         .card-booking__info-sign
   else if infoSign == "short"
     .card-booking__price-info
-        .card-booking__description_special!= infoDesctiption
+        .card-booking__description.card-booking__description_special!= infoDesctiption
           .card-booking__info-sign
-        .card-booking__expense_special!= `${infoPrice}₽`
+        .card-booking__expense.card-booking__expense_special!= `${infoPrice}₽`
   else if infoSign == "none"
     .card-booking__price-info
       .card-booking__description!= infoDesctiption
