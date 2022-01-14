@@ -36,8 +36,9 @@ class ButtonLike {
   }
 
   makePopularClass() {
-    this.buttonLike.classList.add('js-button-like_popular');
-    this.heart.classList.add('js-button-like__heart_popular');
+    this.buttonLike.classList.add('button-like_popular');
+    this.heart.classList.add('button-like__heart_popular');
+    this.number.classList.add('button-like__number_popular');
   }
 }
 

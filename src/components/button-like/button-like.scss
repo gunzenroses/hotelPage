@@ -55,35 +55,34 @@
   &::before {
     @include buttonLikeBefore();
   }
-
-  &__number {
-    position: absolute;
-    top: 56%;
-    right: 35%;
-    font-size: 0.7em;
-    line-height: 100%;
-    transform: translate(30%, -50%);
-
-    @include _1750-1920 {
-      font-size: $fs_h2;
-    }
-  }
-
-  &__number_popular {
-    @extend .button-like__number;
-    right: 32%;
-  }
-
-  &__heart {
-    @include buttonLikeHeart();
-    background-image: url('@~Components/button-like/__heart/_regular/button-like__heart_regular.svg');
-  }
 }
 
-.js-button-like_popular {
+.button-like_popular {
   background: $linearGradientLilac;
 }
 
-.js-button-like__heart_popular {
+.button-like__heart {
+  @include buttonLikeHeart();
+  background-image: url('@~Components/button-like/__heart/_regular/button-like__heart_regular.svg');
+}
+
+.button-like__heart_popular {
   background-image: url('@~Components/button-like/__heart/_active/button-like__heart_active.svg');
+}
+
+.button-like__number {
+  position: absolute;
+  top: 56%;
+  right: 35%;
+  font-size: 0.7em;
+  line-height: 100%;
+  transform: translate(30%, -50%);
+
+  @include _1750-1920 {
+    font-size: $fs_h2;
+  }
+}
+
+.button-like__number_popular {
+  right: 32%;
 }
