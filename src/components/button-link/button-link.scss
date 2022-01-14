@@ -32,27 +32,17 @@
 }
 
 .button-link_type_signin {
-  @include containerBlock();
-  @include buttonLink();
-  min-width: 74px;
   font-size: 0.84rem;
 }
 
 .button-link_type_colored {
-  @include containerBlock();
-  @include buttonLink();
-  min-width: 74px;
   padding-right: 3px;
   font-size: 0.82rem;
   color: $light;
   text-decoration: none;
-  user-select: none;
 }
 
 .button-link_type_registration {
-  @include containerBlock();
-  @include buttonLink();
-  min-width: 74px;
   padding-right: 1px;
   font-size: 0.82rem;
   letter-spacing: .03em;
