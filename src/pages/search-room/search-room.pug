@@ -14,7 +14,7 @@ include ../../components/rich-checkbox/rich-checkbox.pug
 include ../../components/textfield/textfield.pug
 
 block variables
-  - var theme = "in-search";
+  - var theme = "search";
   - var title = "room search";
   - var description = "room search";
   - var keywords = "search, room";
@@ -46,7 +46,7 @@ block content
                 +date-range_common({
                   labelText: "даты пребывания в отеле",
                   inputValue: "19 авг - 23 авг",
-                  theme: "in-search"
+                  theme: theme
                 })
               .filter-group__guests
                 +dropdown_type_guests({
