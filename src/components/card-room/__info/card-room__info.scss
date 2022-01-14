@@ -14,36 +14,6 @@
   flex-shrink: 0;
 }
 
-.card-room__info {
-  @include isFlex($direction: column);
-  width: 100%;
-  height: 111px;
-  padding: 22px 17px 22px 20px;
-  pointer-events: none;
-}
-
-.card-room__rating {
-  @include isFlex($align: center);
-  width: 100%;
-  position: relative;
-  height: 36px;
-  border-top: 1px solid $dark-shade_few;
-  padding-top: 11px;
-  padding-right: 2px;
-}
-
-.card-room__button-rate {
-  height: 28px;
-}
-
-.card-room__button-rate_creative {
-  height: 28px;
-}
-
-.card-room__button-rate_in-search {
-  height: 30px;
-}
-
 .card-room__sign {
   display: inline-block;
   font-size: $fs_base;
@@ -56,13 +26,8 @@
   }
 }
 
-.card-room__sign_creative {
-  @extend .card-room__sign;
+.card-room__sign_in-creative {
   line-height: 20px;
-}
-
-.card-room__sign_in-search {
-  @extend .card-room__sign;
 }
 
 .card-room__number {
@@ -80,12 +45,7 @@
 }
 
 .card-room__number_creative {
-  @extend .card-room__number;
   line-height: 20px;
-}
-
-.card-room__number_in-search {
-  @extend .card-room__number;
 }
 
 .card-room__type {
@@ -104,7 +64,6 @@
 }
 
 .card-room__type_in-search {
-  @extend .card-room__type;
   margin-left: 7px;
 }
 
@@ -121,11 +80,6 @@
   }
 }
 
-.card-room__period_creative {
-  @extend .card-room__period;
-}
-
 .card-room__period_in-search {
-  @extend .card-room__period;
   line-height: 20px;
 }

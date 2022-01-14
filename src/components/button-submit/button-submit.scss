@@ -43,7 +43,6 @@
   @include buttonLink();
   border: none;
   padding: 0;
-  font-family: inherit;
   font-size: .85rem;
   color: $light;
   background-color: transparent;
@@ -63,18 +62,7 @@
 }
 
 .button-submit_compact {
-  @include containerBlock($w: 100%, $h: 44px);
-  @include buttonLink();
-  border: none;
-  padding: 0;
-  font-size: .85rem;
-  color: $light;
-  background-color: transparent;
-  outline: none;
-
   &::before {
-    @include arrowSubmit();
     line-height: 42px;
-    color: $light;
   }
 }
