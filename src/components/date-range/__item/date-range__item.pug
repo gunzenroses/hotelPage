@@ -11,7 +11,7 @@ mixin date-range__item({ labelText="", inputName="", inputValue="", dateDataType
         name=inputName placeholder="ДД.ММ.ГГГГ"
         maxlength=maxLength data-range=dateDataType readonly)
   else
-    .date-range__item_separate
+    .date-range__item.date-range__item_separate
       h3.date-range__label!= labelText
       .date-range__info
         input(class="date-range__input" type="text" value=inputValue 

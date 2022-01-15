@@ -90,7 +90,7 @@
   margin-right: 3.75px;
 }
 
-.room-carousel__radio_real {
+.room-carousel__radio-real {
   position: absolute;
   width: 7.5px;
   height: 7.5px;
@@ -98,7 +98,7 @@
   appearance: none;
 }
 
-.room-carousel__radio_fake {
+.room-carousel__radio-fake {
   display: inline-block;
   position: relative;
   width: 7px;
@@ -108,11 +108,11 @@
   background: transparent;
 }
 
-.room-carousel__radio_real:checked ~ .room-carousel__radio_fake {
+.room-carousel__radio-real:checked ~ .room-carousel__radio-fake {
   background: $light;
 }
 
-.room-carousel__btn {
+.room-carousel__buttons {
   @include isFlex();
   position: absolute;
   display: none;
@@ -120,11 +120,11 @@
   height: 100%;
 }
 
-.room-carousel:hover .room-carousel__btn {
+.room-carousel:hover .room-carousel__buttons {
   display: flex;
 }
 
-.room-carousel__btn_prev {
+.room-carousel__button {
   position: relative;
   height: 100%;
   width: 42px;
@@ -132,22 +132,17 @@
   cursor: pointer;
 }
 
-.room-carousel__btn_prev::before {
+.room-carousel__button_prev::before {
   content: '\e5cb';
   @include carouselButton();
   font-family: $material-icons;
 }
 
-.room-carousel__btn_next {
-  position: relative;
-  height: 100%;
-  width: 42px;
-  background: $linearGradientShadow;
+.room-carousel__button_next {
   transform: matrix(-1, 0, 0, 1, 0, 0);
-  cursor: pointer;
 }
 
-.room-carousel__btn_next::before {
+.room-carousel__button_next::before {
   content: '\e5cb';
   @include carouselButton();
   font-family: $material-icons;

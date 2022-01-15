@@ -1,7 +1,7 @@
-include ../../../button-link/button-link.pug
+include ../../button-link/button-link.pug
 
-mixin header__user_unsigned({ signinText="", signinLink="/some-link", regLink="/reg-link" })
-  .header__buttons
+mixin header__forms({ signinText="", signinLink="/some-link", regLink="/reg-link" })
+  .header__forms
     .header__signin
       +button-link({
         buttonText: signinText,

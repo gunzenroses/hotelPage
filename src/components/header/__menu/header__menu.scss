@@ -3,8 +3,8 @@
 @import '@~Components/navlink-dropdown/navlink-dropdown.scss';
 @import '@~Components/navlink/navlink.scss';
 
-@import '../__user/_signed/header__user_signed.scss';
-@import '../__user/_unsigned/header__user_unsigned.scss';
+@import '../__user/header__user.scss';
+@import '../__forms/header__forms.scss';
 
 @mixin isFlex(
   $direction: row,

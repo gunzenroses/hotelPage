@@ -19,12 +19,10 @@
 }
 
 .navlink_type_header {
-  @extend .navlink;
   text-align: center;
 }
 
 .navlink_type_footer {
-  @extend .navlink;
   letter-spacing: 0.001em;
 }
 
@@ -47,8 +45,6 @@
 }
 
 .navlink__button_type_header {
-  @extend .navlink__button;
-
   &::before {
     display: block;
     content: attr(title);
@@ -60,9 +56,7 @@
 }
 
 .navlink:active .navlink__button,
-.navlink:hover .navlink__button,
-.navlink:active .navlink__button_type_header,
-.navlink:hover .navlink__button_type_header {
+.navlink:hover .navlink__button {
   font-weight: 700;
   color: $dark-shade_more;
 }

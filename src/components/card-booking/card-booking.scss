@@ -98,18 +98,19 @@
   margin-left: 1px;
 }
 
-.card-booking__summary_type_uikit {
+.card-booking__summary_in-uikit {
   width: 103%;
 }
 
-.card-booking__summary_type_details {
+.card-booking__summary_in-details {
   width: 100%;
+  margin-left: 0px;
   letter-spacing: .001em;
 }
 
 .card-booking__text {
-  line-height: 18px;
-  color: $dark-shade_more;
+  line-height: 24px;
+  color: $dark-shade_most;
 }
 
 .card-booking__line {

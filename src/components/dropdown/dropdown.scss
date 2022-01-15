@@ -31,26 +31,6 @@
   cursor: pointer;
 }
 
-@mixin dropdownInitialField {
-  @include isFlex($justify: flex-start, $align: center);
-  position: relative;
-  width: 100%;
-  height: 44px;
-  padding: 0px 0 2px 12px;
-  border: 1px solid $dark-shade_less;
-  border-radius: 4px;
-  background: transparent;
-  color: $dark-shade_more;
-  letter-spacing: 0.01em;
-  white-space: nowrap;
-  cursor: pointer;
-
-  @include _450 {
-    width: 100%;
-    margin: 0 auto;
-  }
-}
-
 .dropdown {
   @include isFlex($direction: column-reverse);
   position: relative;
@@ -96,8 +76,7 @@
   text-transform: uppercase;
 }
 
-.dropdown__button_type_reset,
-.dropdown__button_type_submit {
+.dropdown__button {
   border: none;
   margin: 0;
   padding: 0;
@@ -132,42 +111,6 @@
 
   @include _1750-1920 {
     font-size: $fs_base;
-  }
-}
-
-.dropdown__button {
-  @include dropdownInitialField();
-
-  &_open {
-    @include dropdownInitialField();
-    border-radius: 4px 4px 0 0;
-  }
-
-  &:hover,
-  &:focus {
-    border: none;
-  }
-
-  &::before {
-    @include dropdownButton();
-    line-height: 42px;
-  }
-}
-
-.dropdown__button_transparent {
-  @include dropdownInitialField();
-  border: none;
-  padding: 0;
-
-  &:hover,
-  &:focus {
-    border: none;
-  }
-
-  &::before {
-    @include dropdownButton();
-    color: $dark-shade_medium;
-    line-height: 45px;
   }
 }
 

@@ -1,18 +1,34 @@
 mixin donut-chart({ excellent=0, good=0, satisfied=0, dissapointed=0 })
-  - var totalData = parseFloat(excellent) + parseFloat(good) + parseFloat(satisfied) + parseFloat(dissapointed)
+  - 
+    var totalData = 
+      parseFloat(excellent) +
+      parseFloat(good) +
+      parseFloat(satisfied) + 
+      parseFloat(dissapointed)
   - var dissData = dissapointed / totalData * 100;
   - var satisData = satisfied / totalData * 100;
   - var goodData = good / totalData * 100;
   - var excelData = excellent / totalData * 100;
   - var donutData = {dissData, satisData, goodData, excelData} 
-  - var donutMarks = {excellent: "Великолепно",good: "Хорошо",satisfied: "Удовлетворительно",disappointed: "Разочарован"};
+  - 
+    var donutMarks = {
+      excellent: "Великолепно", 
+      good: "Хорошо", 
+      satisfied: "Удовлетворительно", 
+      disappointed: "Разочарован"
+    };
   - var counter = 1;
   - var dashOffsetValue = parseFloat(25 - 0.5);
   - var prevArraySumm = 0;
 
   figure.donut-chart
     .donut-chart__content
-      svg.donut-chart__img(width="100%" height="100%" viewbox="0 0 33 33" aria-labelledby="impression-title" role="img")
+      svg.donut-chart__img(
+        width="100%" 
+        height="100%" 
+        viewbox="0 0 33 33" 
+        aria-labelledby="impression-title" 
+        role="img")
         defs
           lineargradient#gradient_dissData
             stop(stop-color="#909090" offset="0%")
@@ -29,13 +45,29 @@ mixin donut-chart({ excellent=0, good=0, satisfied=0, dissapointed=0 })
         title#impression-title Впечатлeния от номера
 
         // img starts
-        circle.donut-chart__ring(cx="50%" cy="50%" r="15.91549430918954" fill="transparent" stroke="#fff" stroke-width="1" role="presentation")
+        circle.donut-chart__ring(
+          cx="50%" cy="50%" 
+          r="15.91549430918954" 
+          fill="transparent" 
+          stroke="#fff" 
+          stroke-width="1" 
+          role="presentation")
         each percent, mark in donutData
           if (percent>2)
             - var dashValue = parseInt(percent - 1);
             - var dashLeft = 100 - dashValue;
-            circle.donut-chart__segment(cx="50%" cy="50%" r="15.91549430918954" fill="transparent" stroke=`url(#gradient_${mark})` stroke-width="1" stroke-dasharray=`${dashValue} ${dashLeft}` stroke-dashoffset=`${dashOffsetValue}` aria-labelledby=`donut-chart-segment-${counter}-title`)
-            title(id=`donut-chart-segment-${counter++}-title` data-some= `${prevArraySumm}`)!= mark
+            circle.donut-chart__segment(
+              cx="50%" cy="50%" 
+              r="15.91549430918954" 
+              fill="transparent" 
+              stroke=`url(#gradient_${mark})` 
+              stroke-width="1" 
+              stroke-dasharray=`${dashValue} ${dashLeft}` 
+              stroke-dashoffset=`${dashOffsetValue}` 
+              aria-labelledby=`donut-chart-segment-${counter}-title`)
+            title(
+              id=`donut-chart-segment-${counter++}-title` 
+              data-some= `${prevArraySumm}`)!= mark
             - dashOffsetValue -= percent;
         // img ends
 

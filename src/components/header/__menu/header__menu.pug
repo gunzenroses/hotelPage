@@ -1,5 +1,5 @@
-include ../__user/_signed/header__user_signed.pug
-include ../__user/_unsigned/header__user_unsigned.pug
+include ../__user/header__user.pug
+include ../__forms/header__forms.pug
 include ../../navlink/navlink.pug
 include ../../navlink-dropdown/navlink-dropdown.pug
 
@@ -24,12 +24,12 @@ mixin header__menu(user="")
         })
         +navlink-dropdown("Соглашения")
     if user
-      +header__user_signed({
+      +header__user({
         user: user,
         buttonOnclick: "./some-address"
       })
     else
-      +header__user_unsigned({
+      +header__forms({
         signinText: "Войти",
         signinLink: "signin.html",
         regLink: "registration.html"

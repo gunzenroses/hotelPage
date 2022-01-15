@@ -3,8 +3,8 @@ mixin navlink({ buttonText="", buttonOnclick="./some-address", navlinkModificato
     li(class="navlink")
       a(class="navlink__button" href=buttonOnclick title=buttonText)= buttonText
   else 
-    li(class=`navlink_type_${navlinkModificator}`)
+    li(class=`navlink navlink_type_${navlinkModificator}`)
       if navlinkButtonModificator == ""
         a(class="navlink__button" href=buttonOnclick title=buttonText)= buttonText
       else
-        a(class=`navlink__button_type_${navlinkButtonModificator}` href=buttonOnclick title=buttonText)= buttonText
+        a(class=`navlink__button navlink__button_type_${navlinkButtonModificator}` href=buttonOnclick title=buttonText)= buttonText

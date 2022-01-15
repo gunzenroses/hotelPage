@@ -20,17 +20,17 @@ class RoomCarousel {
     this.carouselPictures.style.left = 0;
     this.leftValue = parseInt(this.carouselPictures.style.left, 10);
     this.carouselPrev = this.carousel.querySelector(
-      '.js-room-carousel__btn_prev'
+      '.js-room-carousel__button_prev'
     )
-      ? this.carousel.querySelector('.js-room-carousel__btn_prev')
+      ? this.carousel.querySelector('.js-room-carousel__button_prev')
       : null;
     this.carouselNext = this.carousel.querySelector(
-      '.js-room-carousel__btn_next'
+      '.js-room-carousel__button_next'
     )
-      ? this.carousel.querySelector('.js-room-carousel__btn_next')
+      ? this.carousel.querySelector('.js-room-carousel__button_next')
       : null;
     this.carouselRow = this.carouselInputs.getElementsByClassName(
-      'js-room-carousel__radio_real'
+      'js-room-carousel__radio-real'
     );
     this.firstPicRadio = this.carouselRow[0];
     this.secondPicRadio = this.carouselRow[1];

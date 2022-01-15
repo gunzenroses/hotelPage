@@ -60,14 +60,13 @@
 }
 
 .date-range__item {
+  @include isFlex($direction: column);
   width: 100%;
   height: 100%;
 }
 
 .date-range__item_separate {
-  @include isFlex($direction: column);
   width: 150px;
-  height: 100%;
 
   @include _1650-1920 {
     width: 48%;

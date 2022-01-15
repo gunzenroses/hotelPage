@@ -1,14 +1,7 @@
 @import '@~Assets/styles/media-mixins.scss';
 @import '@~Components/button-link/button-link.scss';
 
-.header__signin {
-  display: block;
-  width: 87px;
-  height: 34px;
-  line-height: 30px;
-}
-
-.header__buttons {
+.header__forms {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -20,6 +13,13 @@
   @include _550 {
     width: 210px;
   }
+}
+
+.header__signin {
+  display: block;
+  width: 87px;
+  height: 34px;
+  line-height: 30px;
 }
 
 .header__registration {

@@ -15,23 +15,23 @@
   }
 }
 
+.social-net__facebook {
+  height: 30px;
+}
+
 .social-net__twitter,
-.social-net__twitter_creative,
+.social-net__twitter_in-creative,
 .social-net__instagram,
-.social-net__instagram_creative,
+.social-net__instagram_in-creative,
 .social-net__instagram_in-search,
 .social-net__instagram_in-details,
 .social-net__instagram_in-registration,
-.social-net__facebook_creative,
+.social-net__facebook_in-creative,
 .social-net__facebook_in-search,
 .social-net__facebook_in-details,
 .social-net__facebook_in-registration,
 .social-net__facebook_in-signin {
   height: 26px;
-}
-
-.social-net__facebook {
-  height: 30px;
 }
 
 .social-net__twitter_in-search,
@@ -40,14 +40,14 @@
   height: 23px;
 }
 
-.social-net__facebook_landing,
+.social-net__facebook_in-landing,
 .social-net__facebook_in-signin,
-.social-net__instagram_landing,
+.social-net__instagram_in-landing,
 .social-net__instagram_in-signin {
   height: 25px;
 }
 
-.social-net__twitter_landing,
+.social-net__twitter_in-landing,
 .social-net__twitter_in-signin {
   height: 21px;
 }

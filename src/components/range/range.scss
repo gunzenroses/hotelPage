@@ -44,7 +44,7 @@
   user-select: none;
 }
 
-.range__label_right {
+.range__value {
   @include labelMixin();
   position: absolute;
   top: 1px;

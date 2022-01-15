@@ -65,8 +65,6 @@
 }
 
 .dropdown__item_last {
-  @include dropdownItem();
-  @include isFlex($justify: flex-start);
   margin-top: 6px;
   padding-left: 14px;
 }
@@ -77,7 +75,6 @@
 }
 
 .dropdown__text_last {
-  @include dropdownText();
   margin-top: 6px;
 }
 
@@ -90,7 +87,6 @@
 
 .dropdown__minus_last,
 .dropdown__plus_last {
-  @include dropdownPlus();
   top: -1px;
   line-height: 29px;
 }
@@ -101,7 +97,6 @@
 }
 
 .dropdown__number_last {
-  @include dropdownNumber();
   margin-top: 5px;
 }
 

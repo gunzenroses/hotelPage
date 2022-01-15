@@ -6,8 +6,8 @@ mixin dropdown__item({ itemDataType, itemText, itemDataOrder, itemNumber=0, item
       .dropdown__number.js-dropdown__number(data-order=itemDataOrder)= itemNumber
       .dropdown__plus.js-dropdown__plus +
   else
-    .dropdown__item_last.js-dropdown__item(data-type=itemDataType)
-      .dropdown__text_last!= itemText
-      .dropdown__minus_last.js-dropdown__minus.js-button_disabled - 
-      .dropdown__number_last.js-dropdown__number(data-order=itemDataOrder)= itemNumber 
-      .dropdown__plus_last.js-dropdown__plus +
+    .dropdown__item.dropdown__item_last.js-dropdown__item(data-type=itemDataType)
+      .dropdown__text.dropdown__text_last!= itemText
+      .dropdown__minus.dropdown__minus_last.js-dropdown__minus.js-button_disabled - 
+      .dropdown__number.dropdown__number_last.js-dropdown__number(data-order=itemDataOrder)= itemNumber 
+      .dropdown__plus.dropdown__plus_last.js-dropdown__plus +

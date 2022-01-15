@@ -6,6 +6,10 @@ include ./__room-info/card-booking__room-info.pug
 include ./__price-info/card-booking__price-info.pug
 
 mixin card-booking({ serviceName, serviceStyle, itemNumbers=[0, 0, 0], theme="" })
+  - 
+    var totalPriceClass = theme == ""
+      ? "card-booking__summary": `card-booking__summary card-booking__summary_in-${theme}`
+
   form.card-booking(method="get" action="./search-room.html")
     +card-booking__room-info({
       bookingNumber: "888",
@@ -37,19 +41,12 @@ mixin card-booking({ serviceName, serviceStyle, itemNumbers=[0, 0, 0], theme="" 
       infoPrice: "300",
       infoSign: serviceStyle
     })
-    .card-booking__price-info_total
-      if theme == ""
-        .card-booking__summary
-          .booking-total__text Итого
-            .card-booking__line
-          .card-booking__price_total 38 081₽
-      else
-        div(class=`card-booking__summary_${theme}`)
-          .booking-total__text Итого
-          if theme == "in-uikit"
-            .card-booking__line_in-uikit
-          else 
-            .card-booking__line
-          .card-booking__price_total 38 081₽
+    div(class= totalPriceClass)
+      .card-booking__text Итого
+      if theme == "in-uikit"
+        .card-booking__line_in-uikit
+      else 
+        .card-booking__line
+      .card-booking__price_total 38 081₽
     .card-booking__button
       +button-submit({ buttonText: "Забронировать" })

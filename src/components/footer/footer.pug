@@ -8,35 +8,33 @@ mixin footer({ theme="main", footerText="Бронирование номеров
   - var navigations = ["О нас", "Новости", "Служба поддержки", "Услуги"]
   - var abouts = ["О сервисе", "Наша команда", "Вакансии", "Инвесторы"]
   - var supports = ["Соглашения", "Сообщества", "Связь с нами"]
+  - 
+    var footerCopywriteClass = theme == "main"
+      ? "footer__copyright" : `footer__copyright footer__copyright_in-${theme}`
+  -
+    var footerNavbarClass = theme == "main"
+      ? "footer__navbar" : `footer__navbar footer__navbar_in-${theme}`
+
   footer.footer
-    .footer__navbar_outer
-      div(class=`footer__navbar_${theme}`)
-        +footer__company-info({
-          footerText: footerText,
-          theme: theme
-        })
-        +footer__info_visible({
-          navigations: navigations,
-          abouts: abouts,
-          supports: supports,
-          theme: theme
-        })
-        +footer__info_hidden({ 
-          navigations: navigations,
-          abouts: abouts,
-          supports: supports
-        })
-        +footer__subscription
-    .footer__copyright_outer
-      if theme == "main"
-        .footer__copyright_inner
-          .copyright__text Copyright © 2018 Toxin отель. Все права защищены.
-          .footer__copyright-social
-            .copyright__social
-              +social-nets()
-      else
-        div(class=`footer__copyright_${theme}`)
-          .copyright__text Copyright © 2018 Toxin отель. Все права защищены.
-          .footer__copyright-social
-            .copyright__social
-              +social-nets(theme)
+    div(class= footerNavbarClass)
+      +footer__company-info({
+        footerText: footerText,
+        theme: theme
+      })
+      +footer__info_visible({
+        navigations: navigations,
+        abouts: abouts,
+        supports: supports,
+        theme: theme
+      })
+      +footer__info_hidden({ 
+        navigations: navigations,
+        abouts: abouts,
+        supports: supports
+      })
+      +footer__subscription
+    div(class= footerCopywriteClass)
+      .copyright__text Copyright © 2018 Toxin отель. Все права защищены.
+      .footer__copyright-social
+        .copyright__social
+          +social-nets(theme)
