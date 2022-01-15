@@ -31,6 +31,12 @@
 @mixin _1441-1920 {
   @media (min-width: 1441px) and (max-width: 1920px) {
     @content;
+  } 
+}
+
+@mixin _1400-1500 {
+  @media (min-width: 1400px) and (max-width: 1500px) {
+    @content;
   }
 }
 
