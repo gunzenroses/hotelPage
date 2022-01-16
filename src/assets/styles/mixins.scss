@@ -48,6 +48,14 @@
   height: $h;
 }
 
+@mixin containerSimple(
+  $w: 100%,
+  $h: 100%,
+) {
+  width: $w;
+  height: $h;
+}
+
 @mixin dropdownButton {
   content: '\e5cf';
   position: absolute;
