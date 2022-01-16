@@ -63,11 +63,11 @@
 
 .button-like__heart {
   @include buttonLikeHeart();
-  background-image: url('@~Components/button-like/__heart/_regular/button-like__heart_regular.svg');
+  background-image: url('@~Components/button-like/img/button-like__heart_regular.svg');
 }
 
 .button-like__heart_popular {
-  background-image: url('@~Components/button-like/__heart/_active/button-like__heart_active.svg');
+  background-image: url('@~Components/button-like/img/button-like__heart_active.svg');
 }
 
 .button-like__number {
