@@ -1,0 +1,76 @@
+@mixin isFlex(
+  $direction: row,
+  $justify: space-between,
+  $align: flex-start,
+  $wrap: nowrap
+) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+  flex-shrink: 0;
+}
+
+@mixin arrowSubmit {
+  content: '\e5c8';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 44px;
+  height: 44px;
+  font-family: $material-icons;
+  -webkit-font-feature-settings: 'liga' 1;
+  -moz-font-feature-settings: 'liga' 1;
+  font-feature-settings: 'liga' 1;
+  text-align: center;
+  font-size: $fs_h1;
+}
+
+@mixin buttonLink {
+  position: relative;
+  font-weight: 700;
+  letter-spacing: .001em;
+  text-align: center;
+  border-radius: 22px;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: $linearGradientLilac;
+
+  &:hover {
+    opacity: .5;
+  }
+}
+
+@mixin containerBlock($w: 100%, $h: 100%) {
+  display: block;
+  width: $w;
+  height: $h;
+}
+
+@mixin dropdownButton {
+  content: '\e5cf';
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+  font-family: $material-icons;
+  font-size: $fs_h1;
+  text-align: center;
+  cursor: pointer;
+}
+
+@mixin labelMixin {
+  display: inline-block;
+  height: 15px;
+  letter-spacing: .003em;
+  pointer-events: none;
+
+  @include _1750-1920 {
+    font-size: $fs_base;
+    height: $fs_h2;
+  }
+}
