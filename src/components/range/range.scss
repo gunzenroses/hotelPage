@@ -1,24 +1,7 @@
 @import '@~Assets/styles/colors.scss';
 @import '@~Assets/styles/media-mixins.scss';
+@import '@~Assets/styles//mixins.scss';
 @import '@~Assets/styles/fonts.scss';
-
-@mixin containerBlock($w: 100%, $h: 100%) {
-  display: block;
-  width: $w;
-  height: $h;
-}
-
-@mixin labelMixin {
-  display: inline-block;
-  height: 15px;
-  letter-spacing: .003em;
-  pointer-events: none;
-
-  @include _1750-1920 {
-    font-size: $fs_base;
-    height: $fs_h2;
-  }
-}
 
 .range {
   display: flex;

@@ -1,5 +1,6 @@
 @import '@~Assets/styles/fonts.scss';
 @import '@~Assets/styles/media-mixins.scss';
+@import '@~Assets/styles//mixins.scss';
 @import '@~Components/logo/logo.scss';
 @import '@~Components/social-nets/social-nets.scss';
 
@@ -22,11 +23,7 @@
 }
 
 .footer-creative__content {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  flex-wrap: nowrap;
+  @include isFlex($direction: column, $align: center);
   position: relative;
   width: 560px;
   height: 127px;

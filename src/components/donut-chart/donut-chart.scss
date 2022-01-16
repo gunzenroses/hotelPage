@@ -1,20 +1,7 @@
 @import '@~Assets/styles/colors.scss';
 @import '@~Assets/styles/media-mixins.scss';
+@import '@~Assets/styles//mixins.scss';
 @import '@~Assets/styles/fonts.scss';
-
-@mixin isFlex(
-  $direction: row,
-  $justify: space-between,
-  $align: flex-start,
-  $wrap: nowrap
-) {
-  display: flex;
-  flex-direction: $direction;
-  justify-content: $justify;
-  align-items: $align;
-  flex-wrap: $wrap;
-  flex-shrink: 0;
-}
 
 .donut-chart {
   display: flex;

@@ -1,12 +1,9 @@
 @import '@~Assets/styles/media-mixins.scss';
+@import '@~Assets/styles//mixins.scss';
 @import '@~Components/button-link/button-link.scss';
 
 .header__forms {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: nowrap;
+  @include isFlex($align: center);
   width: 303px;
   height: 34px;
 

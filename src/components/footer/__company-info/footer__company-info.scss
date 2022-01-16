@@ -27,11 +27,7 @@
 
 .footer__logo {
   @include footerLogo();
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: nowrap;
+  @include isFlex($direction: column);
   width: 260px;
   height: 131px;
   margin-right: 38px;

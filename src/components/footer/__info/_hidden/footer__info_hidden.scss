@@ -1,16 +1,13 @@
 @import '@~Assets/styles/colors.scss';
 @import '@~Assets/styles/media-mixins.scss';
+@import '@~Assets/styles//mixins.scss';
 @import '@~Components/navlink/navlink.scss';
 
 .footer__info_hidden {
   display: none;
 
   @include _470 {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: nowrap;
+    @include isFlex($direction: column);
     min-width: 260px;
     width: 260px;
     height: auto;

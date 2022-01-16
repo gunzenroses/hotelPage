@@ -1,13 +1,9 @@
 @import '@~Assets/styles/colors.scss';
 @import '@~Assets/styles/media-mixins.scss';
+@import '@~Assets/styles//mixins.scss';
 
 .headers-n-footers {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-wrap: nowrap;
+  @include isFlex($direction: column, $justify: flex-start);
   width: 1440px;
   height: 1350px;
   margin: 0 auto;

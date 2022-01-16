@@ -1,12 +1,9 @@
 @import '@~Assets/styles/media-mixins.scss';
+@import '@~Assets/styles//mixins.scss';
 @import '@~Components/navlink/navlink.scss';
 
 .footer__info {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-wrap: nowrap;
+  @include isFlex($justify: flex-start);
   height: 168px;
   width: 548px;
   margin-right: 50px;

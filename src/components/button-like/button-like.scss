@@ -2,37 +2,44 @@
 @import '@~Assets/styles/media-mixins.scss';
 @import '@~Assets/styles/fonts.scss';
 
-@mixin buttonLike {
+.button-like {
   position: relative;
   width: 40px;
   height: 20px;
   border-radius: 10px;
   line-height: 20px;
   color: $dark-shade_less;
+  background: $dark-shade_less;
+  user-select: none;
   cursor: pointer;
 
   @include _1750-1920 {
     width: 60px;
   }
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    margin: 1px;
+    border-radius: 10px;
+    background: $light;
+    cursor: pointer;
+  }
 }
 
-@mixin buttonLikeBefore {
-  content: '';
-  position: absolute;
-  width: calc(100% - 2px);
-  height: calc(100% - 2px);
-  margin: 1px;
-  border-radius: 10px;
-  background: $light;
-  cursor: pointer;
+.button-like_popular {
+  background: $linearGradientLilac;
 }
 
-@mixin buttonLikeHeart {
+.button-like__heart {
   position: absolute;
   top: 6px;
   left: 6px;
   width: 8px;
   height: 8px;
+  background-image: url('@~Components/button-like/img/button-like__heart_regular.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -45,25 +52,6 @@
     width: 12px;
     height: 12px;
   }
-}
-
-.button-like {
-  @include buttonLike();
-  background: $dark-shade_less;
-  user-select: none;
-
-  &::before {
-    @include buttonLikeBefore();
-  }
-}
-
-.button-like_popular {
-  background: $linearGradientLilac;
-}
-
-.button-like__heart {
-  @include buttonLikeHeart();
-  background-image: url('@~Components/button-like/img/button-like__heart_regular.svg');
 }
 
 .button-like__heart_popular {

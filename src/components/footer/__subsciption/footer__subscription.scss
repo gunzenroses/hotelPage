@@ -1,13 +1,10 @@
 @import '@~Assets/styles/media-mixins.scss';
+@import '@~Assets/styles//mixins.scss';
 
 @import '../../textfield/_type/_subscribe/textfield_type_subscribe.scss';
 
 .footer__subscription {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-wrap: nowrap;
+  @include isFlex($direction: column, $justify: flex-start);
   width: 260px;
   height: 152px;
   padding-top: 4px;

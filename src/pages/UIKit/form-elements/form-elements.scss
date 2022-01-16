@@ -1,5 +1,6 @@
 @import '@~Assets/styles/colors.scss';
 @import '@~Assets/styles/media-mixins.scss';
+@import '@~Assets/styles//mixins.scss';
 @import '@~Assets/styles/fonts.scss';
 @import '@~Components/badge/badge.scss';
 @import '@~Components/bullet-checkbox/bullet-checkbox.scss';
@@ -25,28 +26,6 @@
 @import '@~Components/textfield/_type/_birthday/textfield_type_birthday.scss';
 @import '@~Components/textfield/_type/_email/textfield_type_email.scss';
 
-@mixin isFlex(
-  $direction: row,
-  $justify: space-between,
-  $align: flex-start,
-  $wrap: nowrap
-) {
-  display: flex;
-  flex-direction: $direction;
-  justify-content: $justify;
-  align-items: $align;
-  flex-wrap: $wrap;
-  flex-shrink: 0;
-}
-
-@mixin containerSimple(
-  $w: 100%,
-  $h: 100%,
-) {
-  width: $w;
-  height: $h;
-}
-
 @mixin containerMedium {
   @include isFlex($direction: column);
 
@@ -62,18 +41,6 @@
   font-weight: 700;
   color: $dark-shade_most;
   text-transform: uppercase;
-}
-
-@mixin labelMixin {
-  display: inline-block;
-  height: 15px;
-  letter-spacing: .003em;
-  pointer-events: none;
-
-  @include _1750-1920 {
-    font-size: $fs_base;
-    height: $fs_h2;
-  }
 }
 
 .form-elements {

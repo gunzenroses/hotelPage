@@ -1,11 +1,8 @@
 @import '@~Assets/styles/media-mixins.scss';
+@import '@~Assets/styles//mixins.scss';
 
 .textfield__container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: nowrap;
+  @include isFlex($direction: column);
   position: relative;
   width: 100%;
   height: 100%;

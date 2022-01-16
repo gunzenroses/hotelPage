@@ -1,15 +1,12 @@
 @import '@~Assets/styles/colors.scss';
 @import '@~Assets/styles/media-mixins.scss';
+@import '@~Assets/styles//mixins.scss';
 @import '@~Assets/styles/fonts.scss';
 
 @import './__input/textfield__input.scss';
 
 .textfield {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  flex-wrap: nowrap;
+  @include isFlex($justify: flex-start, $align: center);
   position: relative;
   width: 100%;
   height: 44px;
