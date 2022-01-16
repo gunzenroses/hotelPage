@@ -33,104 +33,104 @@
     min-width: 258px;
     min-height: 145px;
   }
-}
 
-.room-carousel__pictures {
-  @include isFlex();
-  position: absolute;
-  left: 0;
-  width: 400%;
-  height: 100%;
-  transition: 2s;
-}
+  &:hover .room-carousel__buttons {
+    display: flex;
+  }
 
-.room-carousel__pic {
-  width: 25%;
-  height: 100%;
-  transition: 2s;
-}
+  &__pictures {
+    @include isFlex();
+    position: absolute;
+    left: 0;
+    width: 400%;
+    height: 100%;
+    transition: 2s;
+  }
 
-.room-carousel__img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border: none;
-}
+  &__pic {
+    width: 25%;
+    height: 100%;
+    transition: 2s;
+  }
 
-.room-carousel__radio {
-  @include isFlex();
-  position: absolute;
-  bottom: 13px;
-  right: 16px;
-  width: 40px;
-  height: auto;
-}
+  &__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: none;
+  }
 
-.room-carousel__element {
-  width: auto;
-  height: auto;
-  z-index: 1;
-  cursor: pointer;
-}
+  &__radio {
+    @include isFlex();
+    position: absolute;
+    bottom: 13px;
+    right: 16px;
+    width: 40px;
+    height: auto;
+  }
 
-.room-carousel__element:not(:last-of-type) {
-  margin-right: 3.75px;
-}
+  &__element {
+    width: auto;
+    height: auto;
+    z-index: 1;
+    cursor: pointer;
+  }
 
-.room-carousel__radio-real {
-  position: absolute;
-  width: 7.5px;
-  height: 7.5px;
-  cursor: pointer;
-  appearance: none;
-}
+  &__element:not(:last-of-type) {
+    margin-right: 3.75px;
+  }
 
-.room-carousel__radio-fake {
-  display: inline-block;
-  position: relative;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  border: 1px solid $light;
-  background: transparent;
-}
+  &__radio-real {
+    position: absolute;
+    width: 7.5px;
+    height: 7.5px;
+    cursor: pointer;
+    appearance: none;
+  }
 
-.room-carousel__radio-real:checked ~ .room-carousel__radio-fake {
-  background: $light;
-}
+  &__radio-fake {
+    display: inline-block;
+    position: relative;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    border: 1px solid $light;
+    background: transparent;
+  }
 
-.room-carousel__buttons {
-  @include isFlex();
-  position: absolute;
-  display: none;
-  width: 100%;
-  height: 100%;
-}
+  &__radio-real:checked ~ &__radio-fake {
+    background: $light;
+  }
 
-.room-carousel:hover .room-carousel__buttons {
-  display: flex;
-}
+  &__buttons {
+    @include isFlex();
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100%;
+  }
 
-.room-carousel__button {
-  position: relative;
-  height: 100%;
-  width: 42px;
-  background: $linearGradientShadow;
-  cursor: pointer;
-}
+  &__button {
+    position: relative;
+    height: 100%;
+    width: 42px;
+    background: $linearGradientShadow;
+    cursor: pointer;
+  }
 
-.room-carousel__button_prev::before {
-  content: '\e5cb';
-  @include carouselButton();
-  font-family: $material-icons;
-}
+  &__button_prev::before {
+    content: '\e5cb';
+    @include carouselButton();
+    font-family: $material-icons;
+  }
 
-.room-carousel__button_next {
-  transform: matrix(-1, 0, 0, 1, 0, 0);
-}
+  &__button_next {
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+  }
 
-.room-carousel__button_next::before {
-  content: '\e5cb';
-  @include carouselButton();
-  font-family: $material-icons;
+  &__button_next::before {
+    content: '\e5cb';
+    @include carouselButton();
+    font-family: $material-icons;
+  }
 }

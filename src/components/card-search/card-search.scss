@@ -5,7 +5,7 @@
 @import '@~Components/date-range/_separete/date-range_separate.scss';
 @import '@~Components/dropdown/_type_guests/dropdown_type_guests.scss';
 
-.card-search {
+.card-room {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -24,28 +24,28 @@
     min-width: 320px;
     padding: 25px 20px;
   }
-}
 
-.card-search__calendar,
-.card-search__guests,
-.card-search__button {
-  width: 100%;
-}
+  &__calendar,
+  &__guests,
+  &__button {
+    width: 100%;
+  }
 
-.card-search__calendar {
-  margin-top: 24px;
-  height: 62px;
-}
+  &__calendar {
+    margin-top: 24px;
+    height: 62px;
+  }
 
-.card-search__guests {
-  margin-top: 23px;
-  height: 62px;
-}
+  &__guests {
+    margin-top: 23px;
+    height: 62px;
+  }
 
-.card-search__button {
-  margin-top: 31px;
-}
+  &__button {
+    margin-top: 31px;
 
-.card-search__button .button-submit {
-  padding-right: 4px;
+    & .button-submit {
+      padding-right: 4px;
+    }
+  }
 }

@@ -30,57 +30,57 @@
     margin: 0 auto;
     padding: 25px 30px;
   }
-}
 
-.card-registration__name,
-.card-registration__surname,
-.card-registration__birthday,
-.card-registration__login,
-.card-registration__name,
-.card-registration__button-submit,
-.card-registration__info {
-  width: 100%;
-}
+  &__name,
+  &__surname,
+  &__birthday,
+  &__login,
+  &__name,
+  &__button-submit,
+  &__info {
+    width: 100%;
+  }
 
-.card-registration__button-link {
-  display: block;
-  width: 99px;
-  height: 44px;
-  line-height: 40px;
-}
+  &__button-link {
+    display: block;
+    width: 99px;
+    height: 44px;
+    line-height: 40px;
+  }
 
-.card-registration__name {
-  margin-top: 20px;
-}
+  &__name {
+    margin-top: 20px;
+  }
 
-.card-registration__surname {
-  margin-top: 10px;
-}
+  &__surname {
+    margin-top: 10px;
+  }
 
-.card-registration__radio {
-  width: 222px;
-  margin-top: 10px;
-}
+  &__radio {
+    width: 222px;
+    margin-top: 10px;
+  }
 
-.card-registration__birthday {
-  margin-top: 22px;
-  height: 62px;
-}
+  &__birthday {
+    margin-top: 22px;
+    height: 62px;
+  }
 
-.card-registration__login {
-  margin-top: 22px;
-  height: 116px;
-}
+  &__login {
+    margin-top: 22px;
+    height: 116px;
+  }
 
-.card-registration__specials {
-  margin-top: 10px;
-}
+  &__specials {
+    margin-top: 10px;
+  }
 
-.card-registration__button-submit {
-  margin-top: 20px;
-}
+  &__button-submit {
+    margin-top: 20px;
+  }
 
-.card-registration__info {
-  margin-top: 30px;
-  min-width: 270px;
+  &__info {
+    margin-top: 30px;
+    min-width: 270px;
+  }
 }

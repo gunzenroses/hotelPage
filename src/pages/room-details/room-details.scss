@@ -35,428 +35,415 @@
     width: 100%;
     height: fit-content;
   }
-}
 
-.room-details__content {
-  @include isFlex($direction: column);
-  position: relative;
-  min-width: 320px;
-  margin-left: auto;
-  margin-right: auto;
-  border-bottom: 1px solid $dark-shade_less;
-
-  @include _1920 {
-    width: 100%;
-    height: auto;
-  }
-}
-
-.room-details__view {
-  @include isFlex($justify: flex-start);
-  width: 100%;
-  height: 485px;
-  overflow: hidden;
-
-  @include _1441-1920 {
-    height: calc(485 / 1440 * 100vw);
-  }
-
-  @include _970 {
+  &__content {
     @include isFlex($direction: column);
-    height: fit-content;
-  }
-}
-
-.room-details__view_main {
-  width: 981px;
-  height: 100%;
-  overflow: hidden;
-
-  @include _1441-1920 {
-    width: 68.1%;
-  }
-
-  @include _1340 {
-    width: 68.1%;
-  }
-
-  @include _970 {
-    width: 100%;
-    height: fit-content;
-  }
-}
-
-.room-details__heading {
-  display: none;
-}
-
-.room-details__view_miniature {
-  @include isFlex($direction: column);
-  width: 459px;
-  height: 100%;
-  overflow: hidden;
-
-  @include _1441-1920 {
-    width: 32%;
-  }
-
-  @include _1340 {
-    width: 32%;
-  }
-
-  @include _970 {
-    flex-direction: row;
-    width: 100%;
-    height: fit-content;
-  }
-
-  @include _450 {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-.room-details__view_mini {
-  width: 100%;
-  height: 50%;
-
-  @include _970 {
-    width: 50%;
-    height: auto;
-  }
-}
-
-.room-details__info_outer {
-  width: 100%;
-  height: fit-content;
-  padding: 70px 140px 69px 139px;
-
-  @include _1450-1920 {
-    height: auto;
-  }
-
-  @include _1400 {
-    height: auto;
-    padding: 0%;
-  }
-}
-
-.room-details__info_inner {
-  @include isFlex();
-  position: relative;
-  width: 100%;
-  height: 799px;
-
-  @include _1450-1920 {
-    height: auto;
-  }
-
-  @include _1400 {
-    width: 80%;
-    height: auto;
-    margin: 70px auto;
-  }
-
-  @include _1250 {
-    width: 95%;
-    margin: 3% auto;
-  }
-
-  @include _970 {
-    flex-direction: column-reverse;
-  }
-
-  @include _690 {
-    width: 100%;
-    padding: 0 auto;
-  }
-
-  @include _450 {
-    margin: 0 auto;
-  }
-}
-
-.room-details__description {
-  @include isFlex($justify: flex-start, $wrap: wrap);
-  width: 712px;
-  height: 799px;
-  margin-top: 1px;
-
-  @include _1500-1920 {
-    width: 60%;
-    height: fit-content;
-  }
-
-  @include _1400 {
-    justify-content: space-between;
-    width: 100%;
-    height: auto;
-    padding: 0 calc((100% - 760px) / 2);
-  }
-
-  @include _970 {
-    padding: 0 7%;
-  }
-
-  @include _690 {
-    flex-direction: column;
-    padding: 0 12%;
-  }
-
-  @include _450 {
-    padding: 0 7%;
-  }
-}
-
-.room-details__roomData {
-  @include isFlex();
-  width: 675px;
-  margin-left: 1px;
-
-  @include _1500-1920 {
-    width: 90%;
-  }
-
-  @include _1400 {
-    flex-direction: column;
-  }
-
-  @include _970 {
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 0;
-  }
-
-  @include _690 {
-    flex-direction: column;
-  }
-}
-
-.room-details__roomInfo {
-  @include isFlex($direction: column);
-  width: 273px;
-  height: fit-content;
-  margin-right: 88px;
-  background: $light;
-
-  @include _1650-1920 {
-    width: 40%;
-  }
-
-  @include _1400 {
-    margin-right: 0;
-  }
-}
-
-.room-details__badge_type_comfort {
-  margin-top: 21px;
-}
-
-.room-details__badge_type_commodity {
-  margin-top: 20px;
-}
-
-.room-details__badge_type_cozyness {
-  margin-top: 20px;
-}
-
-.room-details__roomImpression {
-  @include isFlex($direction: column, $justify: flex-start);
-  width: 315px;
-  height: 172px;
-  background: $light;
-
-  @include _1650-1920 {
-    width: 55%;
-    height: fit-content;
-  }
-
-  @include _1400 {
-    margin-top: 20px;
-  }
-
-  @include _970 {
-    margin-top: 0;
-  }
-
-  @include _450 {
-    width: 280px;
-  }
-}
-
-.room-details__reviews {
-  @include isFlex($direction: column, $justify: flex-start);
-  position: relative;
-  width: 100%;
-  height: 330px;
-  margin-top: 12px;
-  background: $light;
-
-  @include _1650-1920 {
-    height: fit-content;
-    margin-top: 50px;
-  }
-
-  @include _1400 {
-    height: auto;
-    margin: 30px auto 0;
-  }
-}
-
-.room-details__checkbox-list {
-  width: 100%;
-  margin-top: 17px;
-
-  @include _1400 {
-    margin-top: 20px;
-  }
-}
-
-.reviews__info {
-  @extend .info__description;
-  position: absolute;
-  top: 6px;
-  right: 1px;
-
-  @include _1750-1920 {
-    font-size: $fs_h2;
-    right: 10%;
-  }
-
-  @include _970 {
-    display: none;
-  }
-}
-
-.room-details__comment_first {
-  margin-top: 21px;
-}
-
-.room-details__comment_second {
-  margin-top: 20px;
-}
-
-.room-details__rules {
-  @include isFlex($direction: column, $justify: flex-start);
-  width: 292px;
-  height: 158px;
-  margin-right: 70px;
-  margin-top: 6px;
-  background: $light;
-
-  @include _1500-1920 {
-    margin-top: 20px;
-    width: 40%;
-    height: fit-content;
-  }
-
-  @include _1400 {
-    margin-right: 0;
-  }
-
-  @include _450 {
-    margin-top: 20px;
-  }
-}
-
-.room-details__rules-title {
-  @include headerSecond();
-  margin-left: 21px;
-
-  @include _700 {
-    margin-left: 0;
-  }
-}
-
-.room-details__cancellation {
-  @include isFlex($direction: column, $justify: flex-start);
-  width: 341px;
-  height: 138px;
-  margin-top: 5px;
-  background: $light;
-
-  @include _1500-1920 {
-    margin-top: 20px;
-    width: 50%;
-    height: fit-content;
-  }
-
-  @include _1400 {
-    width: calc(100% - 292px - 20px);
-    height: auto;
-  }
-
-  @include _700 {
-    width: 100%;
-    margin-top: 40px;
-  }
-}
-
-.room-details__title {
-  @include headerSecond();
-  line-height: 22px;
-  font-weight: 700;
-  color: $dark-shade_most;
-  letter-spacing: 0.001em;
-
-  @include _1650-1920 {
-    margin: 0 auto;
-    font-size: $fs_h1;
-  }
-}
-
-.room-details__cancellation_info {
-  width: 100%;
-  height: auto;
-  margin-top: 19px;
-  line-height: $fs_h1;
-  color: $dark-shade_more;
-  letter-spacing: 0.0001em;
-
-  @include _1500-1920 {
-    margin-top: 20px;
-  }
-
-  @include _1400 {
-    margin: 20px;
-    margin-left: 0;
-  }
-}
-
-.room-details__booking {
-  @include _1450-1920 {
-    max-width: 550px;
-    height: fit-content;
-  }
-
-  @include _1400 {
-    position: absolute;
-    top: 0;
-    right: calc((100% - 800px) / 2);
-  }
-
-  @include _970 {
     position: relative;
-    top: 0;
-    right: 0;
-    margin: -20% auto 50px;
+    min-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid $dark-shade_less;
+
+    @include _1920 {
+      width: 100%;
+      height: auto;
+    }
   }
 
-  @include _450 {
-    margin: 0 auto 50px;
+  &__view {
+    @include isFlex($justify: flex-start);
+    width: 100%;
+    height: 485px;
+    overflow: hidden;
+
+    @include _1441-1920 {
+      height: calc(485 / 1440 * 100vw);
+    }
+
+    @include _970 {
+      @include isFlex($direction: column);
+      height: fit-content;
+    }
   }
-}
 
-.footer__info_main .footer__links {
-  margin-top: 21px;
-}
+  &__view_main {
+    width: 981px;
+    height: 100%;
+    overflow: hidden;
 
-.room-details .footer__links {
-  margin-top: 20px;
-}
+    @include _1441-1920 {
+      width: 68.1%;
+    }
 
-.room-details .card-booking__info-sign:first-of-type {
-  left: 3px;
-  bottom: 1px;
+    @include _1340 {
+      width: 68.1%;
+    }
+
+    @include _970 {
+      width: 100%;
+      height: fit-content;
+    }
+  }
+
+  &__heading {
+    display: none;
+  }
+
+  &__view_miniature {
+    @include isFlex($direction: column);
+    width: 459px;
+    height: 100%;
+    overflow: hidden;
+
+    @include _1441-1920 {
+      width: 32%;
+    }
+
+    @include _1340 {
+      width: 32%;
+    }
+
+    @include _970 {
+      flex-direction: row;
+      width: 100%;
+      height: fit-content;
+    }
+
+    @include _450 {
+      display: none;
+      visibility: hidden;
+    }
+  }
+
+  &__view_mini {
+    width: 100%;
+    height: 50%;
+
+    @include _970 {
+      width: 50%;
+      height: auto;
+    }
+  }
+
+  &__info_outer {
+    width: 100%;
+    height: fit-content;
+    padding: 70px 140px 69px 139px;
+
+    @include _1450-1920 {
+      height: auto;
+    }
+
+    @include _1400 {
+      height: auto;
+      padding: 0%;
+    }
+  }
+
+  &__info_inner {
+    @include isFlex();
+    position: relative;
+    width: 100%;
+    height: 799px;
+
+    @include _1450-1920 {
+      height: auto;
+    }
+
+    @include _1400 {
+      width: 80%;
+      height: auto;
+      margin: 70px auto;
+    }
+
+    @include _1250 {
+      width: 95%;
+      margin: 3% auto;
+    }
+
+    @include _970 {
+      flex-direction: column-reverse;
+    }
+
+    @include _690 {
+      width: 100%;
+      padding: 0 auto;
+    }
+
+    @include _450 {
+      margin: 0 auto;
+    }
+  }
+
+  &__description {
+    @include isFlex($justify: flex-start, $wrap: wrap);
+    width: 712px;
+    height: 799px;
+    margin-top: 1px;
+
+    @include _1500-1920 {
+      width: 60%;
+      height: fit-content;
+    }
+
+    @include _1400 {
+      justify-content: space-between;
+      width: 100%;
+      height: auto;
+      padding: 0 calc((100% - 760px) / 2);
+    }
+
+    @include _970 {
+      padding: 0 7%;
+    }
+
+    @include _690 {
+      flex-direction: column;
+      padding: 0 12%;
+    }
+
+    @include _450 {
+      padding: 0 7%;
+    }
+  }
+
+  &__roomData {
+    @include isFlex();
+    width: 675px;
+    margin-left: 1px;
+
+    @include _1500-1920 {
+      width: 90%;
+    }
+
+    @include _1400 {
+      flex-direction: column;
+    }
+
+    @include _970 {
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 0;
+    }
+
+    @include _690 {
+      flex-direction: column;
+    }
+  }
+
+  &__roomInfo {
+    @include isFlex($direction: column);
+    width: 273px;
+    height: fit-content;
+    margin-right: 88px;
+    background: $light;
+
+    @include _1650-1920 {
+      width: 40%;
+    }
+
+    @include _1400 {
+      margin-right: 0;
+    }
+  }
+
+  &__badge_type_comfort {
+    margin-top: 21px;
+  }
+
+  &__badge_type_commodity {
+    margin-top: 20px;
+  }
+
+  &__badge_type_cozyness {
+    margin-top: 20px;
+  }
+
+  &__roomImpression {
+    @include isFlex($direction: column, $justify: flex-start);
+    width: 315px;
+    height: 172px;
+    background: $light;
+
+    @include _1650-1920 {
+      width: 55%;
+      height: fit-content;
+    }
+
+    @include _1400 {
+      margin-top: 20px;
+    }
+
+    @include _970 {
+      margin-top: 0;
+    }
+
+    @include _450 {
+      width: 280px;
+    }
+  }
+
+  &__reviews {
+    @include isFlex($direction: column, $justify: flex-start);
+    position: relative;
+    width: 100%;
+    height: 330px;
+    margin-top: 12px;
+    background: $light;
+
+    @include _1650-1920 {
+      height: fit-content;
+      margin-top: 50px;
+    }
+
+    @include _1400 {
+      height: auto;
+      margin: 30px auto 0;
+    }
+  }
+
+  &__review-amounts {
+    @extend .info__description;
+    position: absolute;
+    top: 6px;
+    right: 1px;
+  
+    @include _1750-1920 {
+      font-size: $fs_h2;
+      right: 10%;
+    }
+  
+    @include _970 {
+      display: none;
+    }
+  }
+
+  &__checkbox-list {
+    width: 100%;
+    margin-top: 17px;
+
+    @include _1400 {
+      margin-top: 20px;
+    }
+  }
+
+  &__comment-first {
+    margin-top: 21px;
+  }
+
+  &__comment-second {
+    margin-top: 20px;
+  }
+
+  &__rules {
+    @include isFlex($direction: column, $justify: flex-start);
+    width: 292px;
+    height: 158px;
+    margin-right: 70px;
+    margin-top: 6px;
+    background: $light;
+
+    @include _1500-1920 {
+      margin-top: 20px;
+      width: 40%;
+      height: fit-content;
+    }
+
+    @include _1400 {
+      margin-right: 0;
+    }
+
+    @include _450 {
+      margin-top: 20px;
+    }
+  }
+
+  &__rules-title {
+    @include headerSecond();
+    margin-left: 21px;
+
+    @include _700 {
+      margin-left: 0;
+    }
+  }
+
+  &__cancellation {
+    @include isFlex($direction: column, $justify: flex-start);
+    width: 341px;
+    height: 138px;
+    margin-top: 5px;
+    background: $light;
+
+    @include _1500-1920 {
+      margin-top: 20px;
+      width: 50%;
+      height: fit-content;
+    }
+
+    @include _1400 {
+      width: calc(100% - 292px - 20px);
+      height: auto;
+    }
+
+    @include _700 {
+      width: 100%;
+      margin-top: 40px;
+    }
+  }
+
+  &__title {
+    @include headerSecond();
+    line-height: 22px;
+    font-weight: 700;
+    color: $dark-shade_most;
+    letter-spacing: 0.001em;
+
+    @include _1650-1920 {
+      margin: 0 auto;
+      font-size: $fs_h1;
+    }
+  }
+
+  &__cancellation_info {
+    width: 100%;
+    height: auto;
+    margin-top: 19px;
+    line-height: $fs_h1;
+    color: $dark-shade_more;
+    letter-spacing: 0.0001em;
+
+    @include _1500-1920 {
+      margin-top: 20px;
+    }
+
+    @include _1400 {
+      margin: 20px;
+      margin-left: 0;
+    }
+  }
+
+  &__booking {
+    @include _1450-1920 {
+      max-width: 550px;
+      height: fit-content;
+    }
+
+    @include _1400 {
+      position: absolute;
+      top: 0;
+      right: calc((100% - 800px) / 2);
+    }
+
+    @include _970 {
+      position: relative;
+      top: 0;
+      right: 0;
+      margin: -20% auto 50px;
+    }
+
+    @include _450 {
+      margin: 0 auto 50px;
+    }
+  }
 }

@@ -41,202 +41,202 @@
     height: auto;
     min-width: 320px;
   }
-}
 
-.search-room__content {
-  @include isFlex();
-  position: relative;
-  width: 100%;
-  height: fit-content;
-  min-width: 320px;
-  padding: 26px 140px 69px;
-  border-bottom: 1px solid $dark-shade_less;
-  overflow: auto;
-  background: $light;
-
-  @include _1500-1920 {
-    padding-bottom: 27px;
-    justify-content: space-around;
-  }
-
-  @include _1400 {
+  &__content {
+    @include isFlex();
+    position: relative;
+    width: 100%;
     height: fit-content;
-    width: 1167px;
-    padding: 27px auto 68px;
+    min-width: 320px;
+    padding: 26px 140px 69px;
+    border-bottom: 1px solid $dark-shade_less;
+    overflow: auto;
+    background: $light;
+
+    @include _1500-1920 {
+      padding-bottom: 27px;
+      justify-content: space-around;
+    }
+
+    @include _1400 {
+      height: fit-content;
+      width: 1167px;
+      padding: 27px auto 68px;
+    }
+
+    @include _1340 {
+      width: 980px;
+      height: auto;
+    }
+
+    @include _1070 {
+      flex-direction: column;
+      width: 100%;
+    }
   }
 
-  @include _1340 {
-    width: 980px;
-    height: auto;
+  &__filter {
+    @include isFlex($direction: column, $justify: flex-start);
+    width: 266px;
+    height: 739px;
+    margin-top: 6px;
+
+    @include _1500-1920 {
+      height: fit-content;
+    }
+
+    @include _1340 {
+      margin-left: 25px;
+    }
+
+    @include _1070 {
+      height: auto;
+      margin: 0 auto;
+    }
+
+    @include _1070 {
+      width: 637px;
+      margin: 0 auto 30px;
+    }
+
+    @include _700 {
+      width: 100%;
+    }
   }
 
-  @include _1070 {
-    flex-direction: column;
+  &__form {
     width: 100%;
+
+    @include _1070 {
+      height: auto;
+      margin: 0 auto;
+    }
+
+    @include _1070 {
+      @include isFlex($direction: row, $wrap: wrap);
+    }
+
+    @include _700 {
+      flex-direction: column;
+      width: 380px;
+    }
+
+    @include _450 {
+      justify-content: center;
+      width: 85%;
+      min-width: 260px;
+      max-width: 320px;
+    }
   }
-}
 
-.search-room__filter {
-  @include isFlex($direction: column, $justify: flex-start);
-  width: 266px;
-  height: 739px;
-  margin-top: 6px;
-
-  @include _1500-1920 {
+  &__rooms {
+    @include isFlex($direction: column, $justify: flex-start);
+    width: 835px;
     height: fit-content;
+
+    @include _1500-1920 {
+      width: 68%;
+    }
+
+    @include _1340 {
+      width: 637px;
+      height: auto;
+    }
+
+    @include _1070 {
+      margin: 20px auto;
+    }
+
+    @include _700 {
+      flex-direction: column;
+      width: 380px;
+    }
+
+    @include _450 {
+      width: 100%;
+      min-width: 320px;
+    }
   }
 
-  @include _1340 {
-    margin-left: 25px;
+  &__text {
+    margin: 0;
+    font-size: $fs_h1;
+    font-weight: 700;
+    color: $dark-shade_most;
+    line-height: 37px;
+    letter-spacing: 0.0001em;
+
+    @include _1070 {
+      margin: 20px auto;
+    }
+
+    @include _450 {
+      width: 85%;
+    }
   }
 
-  @include _1070 {
-    height: auto;
-    margin: 0 auto;
-  }
-
-  @include _1070 {
-    width: 637px;
-    margin: 0 auto 30px;
-  }
-
-  @include _700 {
+  &__result {
+    @include isFlex($wrap: wrap);
     width: 100%;
-  }
-}
+    height: 1112px;
+    margin-top: 18px;
+    padding-left: 1px;
 
-.search-room__form {
-  width: 100%;
+    @include _1340 {
+      height: auto;
+      justify-content: space-around;
+    }
 
-  @include _1070 {
-    height: auto;
-    margin: 0 auto;
-  }
+    @include _1070 {
+      height: auto;
+      margin: 0 auto;
+    }
 
-  @include _1070 {
-    @include isFlex($direction: row, $wrap: wrap);
-  }
+    @include _700 {
+      width: 100%;
+    }
 
-  @include _700 {
-    flex-direction: column;
-    width: 380px;
-  }
-
-  @include _450 {
-    justify-content: center;
-    width: 85%;
-    min-width: 260px;
-    max-width: 320px;
-  }
-}
-
-.search-room__rooms {
-  @include isFlex($direction: column, $justify: flex-start);
-  width: 835px;
-  height: fit-content;
-
-  @include _1500-1920 {
-    width: 68%;
+    @include _450 {
+      width: 85vw;
+      min-width: 320px;
+    }
   }
 
-  @include _1340 {
-    width: 637px;
-    height: auto;
+  &__card-room {
+    margin-bottom: 20px;
   }
 
-  @include _1070 {
-    margin: 20px auto;
+  &__pagination {
+    margin-top: 19px;
+    margin-left: 291px;
+
+    @include _1500-1920 {
+      margin: 20px auto 0;
+    }
+
+    @include _1400 {
+      margin: 41px auto 0;
+    }
   }
 
-  @include _700 {
-    flex-direction: column;
-    width: 380px;
+  &__filter-group {
+    @include _700 {
+      width: 100%;
+    }
   }
 
-  @include _450 {
-    width: 100%;
-    min-width: 320px;
-  }
-}
-
-.search-room__text {
-  margin: 0;
-  font-size: $fs_h1;
-  font-weight: 700;
-  color: $dark-shade_most;
-  line-height: 37px;
-  letter-spacing: 0.0001em;
-
-  @include _1070 {
-    margin: 20px auto;
-  }
-
-  @include _450 {
-    width: 85%;
-  }
-}
-
-.search-room__result {
-  @include isFlex($wrap: wrap);
-  width: 100%;
-  height: 1112px;
-  margin-top: 18px;
-  padding-left: 1px;
-
-  @include _1340 {
-    height: auto;
-    justify-content: space-around;
-  }
-
-  @include _1070 {
-    height: auto;
-    margin: 0 auto;
-  }
-
-  @include _700 {
-    width: 100%;
-  }
-
-  @include _450 {
-    width: 85vw;
-    min-width: 320px;
-  }
-}
-
-.search-room__card-room {
-  margin-bottom: 20px;
-}
-
-.search-room__pagination {
-  margin-top: 19px;
-  margin-left: 291px;
-
-  @include _1500-1920 {
-    margin: 20px auto 0;
-  }
-
-  @include _1400 {
-    margin: 41px auto 0;
-  }
-}
-
-.filter-group {
-  @include _700 {
-    width: 100%;
-  }
-
-  &__date-range {
+  &__filter-date {
     @include formMargin();
     height: 62px;
   }
 
-  &__guests {
+  &__filter-guests {
     @include formMargin();
     height: 61px;
     margin-top: 23px;
   }
 
-  &__price-range {
+  &__filter-price {
     @include formMargin();
     margin-top: 31px;
   }
@@ -246,20 +246,20 @@
     margin-top: 33px;
   }
 
-  &__rules {
+  &__filter-rules {
     @include isFlex($direction: column);
     @include formMargin();
     height: 126px;
     margin-top: 32px;
   }
 
-  &__rooms {
+  &__filter-rooms {
     @include formMargin();
     height: 61px;
     margin-top: 32px;
   }
 
-  &__extras {
+  &__filter-extras {
     @include formMargin();
     margin-top: 16px;
   }

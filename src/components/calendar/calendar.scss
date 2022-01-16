@@ -62,9 +62,7 @@
   @include _400 {
     max-width: 280px;
   }
-}
 
-.calendar {  
   &__date {
     @include isFlex($align: center);
     height: 64px;
@@ -112,9 +110,7 @@
   &__button_next::before {
     content: '\e5c8';
   }
-}
 
-.calendar {
   &__weeks {
     @include isFlex($direction: column);
     width: 280px;
@@ -151,9 +147,7 @@
     text-align: center;
     color: $dark-shade_medium;
   }
-}
 
-.calendar {
   &__buttons {
     @include isFlex();
     width: 100%;
@@ -179,94 +173,94 @@
       font-size: $fs_base;
     }
   }
-}
 
-.calendar__day_prev_checkin,
-.calendar__day_next_checkin,
-.calendar__day_prev_checkout,
-.calendar__day_next_checkout {
-  @include calendarDay();
-  position: relative;
-  border-radius: 50%;
-  color: $dark-shade_less;
-  background: $dark-shade_few;
-}
-
-.calendar__day {
-  @include calendarDay();
-}
-
-.calendar__day_prev,
-.calendar__day_next {
-  @include calendarDay();
-  color: $dark-shade_less;
-}
-
-.calendar__day_prev_checkin::before,
-.calendar__day_next_checkin::before,
-.calendar__day_prev_checkout::before,
-.calendar__day_next_checkout::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: $dark-shade_fewer;
-}
-
-.calendar__day_prev_checkin::before,
-.calendar__day_next_checkin::before {
-  right: 0;
-  z-index: -1;
-  border-radius: 50% 0 0 50%;
-}
-
-.calendar__day_prev_checkout::before,
-.calendar__day_next_checkout::before {
-  left: 0;
-  border-radius: 0 50% 50% 0;
-}
-
-.calendar__today {
-  @include calendarDay();
-  border-radius: 50%;
-  font-weight: 700;
-  color: $light;
-  background: $linearGradientTurquoise;
-}
-
-.calendar__day_ranged {
-  @include calendarDay();
-  position: relative;
-  color: $dark-shade_medium;
-  background: $linearGradientGrape;
-
-  &_between {
+  &__day_prev_checkin,
+  &__day_next_checkin,
+  &__day_prev_checkout,
+  &__day_next_checkout {
     @include calendarDay();
     position: relative;
+    border-radius: 50%;
     color: $dark-shade_less;
-    background: $dark-shade_fewer;
-    
+    background: $dark-shade_few;
   }
-}
 
-.calendar__day_checkout {
-  @include calendarDay();
-  @include calendarCheckDay();
+  &__day {
+    @include calendarDay();
+  }
 
-  &::after {
+  &__day_prev,
+  &__day_next {
+    @include calendarDay();
+    color: $dark-shade_less;
+  }
+
+  &__day_prev_checkin::before,
+  &__day_next_checkin::before,
+  &__day_prev_checkout::before,
+  &__day_next_checkout::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: $dark-shade_fewer;
+  }
+
+  &__day_prev_checkin::before,
+  &__day_next_checkin::before {
+    right: 0;
+    z-index: -1;
+    border-radius: 50% 0 0 50%;
+  }
+
+  &__day_prev_checkout::before,
+  &__day_next_checkout::before {
+    left: 0;
     border-radius: 0 50% 50% 0;
   }
-}
 
-.calendar__day_checkin {
-  @include calendarDay();
-  @include calendarCheckDay();
-  isolation: isolate;
+  &__today {
+    @include calendarDay();
+    border-radius: 50%;
+    font-weight: 700;
+    color: $light;
+    background: $linearGradientTurquoise;
+  }
 
-  &::after {
-    border-radius: 50% 0 0 50%;
+  &__day_ranged {
+    @include calendarDay();
+    position: relative;
+    color: $dark-shade_medium;
+    background: $linearGradientGrape;
+
+    &_between {
+      @include calendarDay();
+      position: relative;
+      color: $dark-shade_less;
+      background: $dark-shade_fewer;
+      
+    }
+  }
+
+  &__day_checkout {
+    @include calendarDay();
+    @include calendarCheckDay();
+
+    &::after {
+      border-radius: 0 50% 50% 0;
+    }
+  }
+
+  &__day_checkin {
+    @include calendarDay();
+    @include calendarCheckDay();
+    isolation: isolate;
+
+    &::after {
+      border-radius: 50% 0 0 50%;
+    }
   }
 }

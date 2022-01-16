@@ -4,7 +4,7 @@ mixin dropdown_type_guests({ labelText="", dropdownClassShow="", itemNumbers=[0,
   .dropdown__container_type_guests
     h3.label!= labelText
     if labelRightText
-      h3.label_right!= labelRightText
+      h3.label.label_right!= labelRightText
     div(class="dropdown js-dropdown__guests")
       div(class=`dropdown__guests js-expand__content ${dropdownClassShow}`)
         +dropdown__item({

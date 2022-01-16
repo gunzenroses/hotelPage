@@ -25,10 +25,10 @@
     min-width: 260px;
     margin: 0 auto;
   }
-}
 
-.button-submit_compact {
-  &::before {
-    line-height: 42px;
+  &_compact {
+    &::before {
+      line-height: 42px;
+    }
   }
 }

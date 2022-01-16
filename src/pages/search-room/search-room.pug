@@ -40,38 +40,38 @@ block content
     main.search-room__content
       section.search-room__filter
         form.search-room__form
-          .filter-group
-            .filter-group__date-range
+          .search-room__filter-group
+            .search-room__filter-date
               +date-range_common({
                 labelText: "даты пребывания в отеле",
                 inputValue: "19 авг - 23 авг",
                 theme: theme
               })
-            .filter-group__guests
+            .search-room__filter-guests
               +dropdown_type_guests({
                 labelText: "гости",
                 itemNumbers: [2, 1, 1]
               })
-            .filter-group__price-range
+            .search-room__filter-price
               +range({
                 infoText: true,
                 labelText: "Диапазон цены"
               })
-            .filter-group__rules
+            .search-room__filter-rules
               h3.label Правила дома
               +checkbox
-          .filter-group
-            .filter-group__accessibility
+          .search-room__filter-group
+            .search-room__accessibility
               +rich-checkbox({
                 checkboxName: "accessibility",
                 containerText: "Доступность"
               })
-            .filter-group__rooms
+            .search-room__filter-rooms
               +dropdown_type_rooms({
                 labelText: "Удобства номера",
                 itemNumbers: [2, 2, 0],
               })
-            .filter-group__extras
+            .search-room__filter-extras
               +checkbox-expandable({
                 dropdownTitleName: "Дополнительные удобства"
               })

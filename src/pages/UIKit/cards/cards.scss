@@ -1,4 +1,5 @@
 @import '@~Assets/styles/media-mixins.scss';
+@import '@~Assets/styles//mixins.scss';
 @import '@~Components/calendar/calendar.scss';
 @import '@~Components/card-booking/card-booking.scss';
 @import '@~Components/card-registration/card-registration.scss';
@@ -38,81 +39,77 @@
   @include _970 {
     min-width: 320px;
   }
-}
 
-.cards__content {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  width: 1200px;
-  height: 1068px;
-  margin: 150px 0 134px 140px;
-  background: transparent;
+  &__content {
+    @include isFlex($direction: column, $justify: flex-start, $wrap: wrap);
+    width: 1200px;
+    height: 1068px;
+    margin: 150px 0 134px 140px;
+    background: transparent;
 
-  @include _1400 {
-    width: 85%;
-    max-width: 1160px;
-    height: 1600px;
-    margin: 9% auto 9%;
-    align-items: center;
+    @include _1400 {
+      width: 85%;
+      max-width: 1160px;
+      height: 1600px;
+      margin: 9% auto 9%;
+      align-items: center;
+    }
+
+    @include _1070 {
+      max-width: 890px;
+      margin: 7% auto 7%;
+    }
+
+    @include _970 {
+      width: 100%;
+      min-width: 320px;
+      margin: 7% auto;
+    }
+
+    @include _850 {
+      height: auto;
+    }
   }
 
-  @include _1070 {
-    max-width: 890px;
-    margin: 7% auto 7%;
+  &__card-search {
+    width: 380px;
+    height: fit-content;
   }
 
-  @include _970 {
-    width: 100%;
-    min-width: 320px;
-    margin: 7% auto;
+  &__card-registration {
+    @include cardPosition();
+    @include marginTop();
+    width: 380px;
+    height: 646px;
+    margin-top: 40px;
   }
 
-  @include _850 {
-    height: auto;
+  &__card-booking {
+    @include marginTop();
+    width: 380px;
+    height: 510px;
+    margin-top: 1px;
   }
-}
 
-.cards__card-search {
-  width: 380px;
-  height: fit-content;
-}
+  &__card-signin {
+    @include cardPosition();
+    @include marginTop();
+    width: 380px;
+    height: 360px;
+    margin-top: 40px;
+  }
 
-.cards__card-registration {
-  @include cardPosition();
-  @include marginTop();
-  width: 380px;
-  height: 646px;
-  margin-top: 40px;
-}
+  &__calendar {
+    @include marginTop();
+    width: 320px;
+    height: fit-content;
+  }
 
-.cards__card-booking {
-  @include marginTop();
-  width: 380px;
-  height: 510px;
-  margin-top: 1px;
-}
+  &__card-room {
+    margin-top: 39px;
+  }
 
-.cards__card-signin {
-  @include cardPosition();
-  @include marginTop();
-  width: 380px;
-  height: 360px;
-  margin-top: 40px;
-}
-
-.cards__calendar {
-  @include marginTop();
-  width: 320px;
-  height: fit-content;
-}
-
-.cards__card-room {
-  margin-top: 39px;
-}
-
-.cards__card-room_second {
-  margin-top: 40px;
+  &__card-room_second {
+    margin-top: 40px;
+  }
 }

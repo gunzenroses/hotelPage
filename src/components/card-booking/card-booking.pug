@@ -5,7 +5,7 @@ include ../dropdown/_type_guests/dropdown_type_guests.pug
 include ./__room-info/card-booking__room-info.pug
 include ./__price-info/card-booking__price-info.pug
 
-mixin card-booking({ serviceName, serviceStyle, itemNumbers=[0, 0, 0], theme="" })
+mixin card-booking({ serviceName, itemNumbers=[0, 0, 0], theme="" })
   - 
     var totalPriceClass = theme == ""
       ? "card-booking__summary": `card-booking__summary card-booking__summary_in-${theme}`
@@ -34,12 +34,14 @@ mixin card-booking({ serviceName, serviceStyle, itemNumbers=[0, 0, 0], theme="" 
     +card-booking__price-info({
       infoDesctiption: "Сбор за услуги: скидка 2 179₽",
       infoPrice: "0",
-      infoSign: "full"
+      infoSign: "full",
+      theme: theme
     })
     +card-booking__price-info({
       infoDesctiption: serviceName,
       infoPrice: "300",
-      infoSign: serviceStyle
+      infoSign: "full",
+      theme: theme
     })
     div(class= totalPriceClass)
       .card-booking__text Итого

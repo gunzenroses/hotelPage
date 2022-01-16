@@ -35,7 +35,7 @@
 
 .date-range__selector {
   @include isFlex();
-  @include containerBlock();
+  @include containerSimple();
   min-width: 260px;
 
   @include _450 {

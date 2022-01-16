@@ -23,48 +23,48 @@
     height: auto;
     border-bottom: 1px solid $dark-shade_less;
   }
-}
 
-.registration__content {
-  @include isFlex($direction: column);
-  position: relative;
-  width: 100%;
-  min-width: 320px;
-  height: 683px;
-  margin: 0 auto;
-
-  @include _500 {
-    width: 100vw;
-    // carouselRegistration + card-registration + initial top
-    height: calc(683 / 1440 * 100vw + 646px + 40px);
-  }
-
-  @include _380 {
-    height: calc(683 / 1440 * 100vw + 646px);
-    min-height: calc(683 / 1440 * 320px + 646px);
-  }
-}
-
-.registration__card-registration {
-  position: absolute;
-  top: 19px;
-  left: 716px;
-  transform: translateX(-48.2%);
-
-  @include _1450-1920 {
-    left: 50%;
-  }
-
-  @include _1400 {
-    left: 50%;
-  }
-
-  @include _500 {
+  &__content {
+    @include isFlex($direction: column);
     position: relative;
-    left: 0;
-    width: fit-content;
+    width: 100%;
     min-width: 320px;
+    height: 683px;
     margin: 0 auto;
-    transform: none;
+
+    @include _500 {
+      width: 100vw;
+      // carouselRegistration + card-registration + initial top
+      height: calc(683 / 1440 * 100vw + 646px + 40px);
+    }
+
+    @include _380 {
+      height: calc(683 / 1440 * 100vw + 646px);
+      min-height: calc(683 / 1440 * 320px + 646px);
+    }
+  }
+
+  &__card-registration {
+    position: absolute;
+    top: 19px;
+    left: 716px;
+    transform: translateX(-48.2%);
+
+    @include _1450-1920 {
+      left: 50%;
+    }
+
+    @include _1400 {
+      left: 50%;
+    }
+
+    @include _500 {
+      position: relative;
+      left: 0;
+      width: fit-content;
+      min-width: 320px;
+      margin: 0 auto;
+      transform: none;
+    }
   }
 }

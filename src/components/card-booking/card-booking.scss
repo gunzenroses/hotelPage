@@ -28,79 +28,80 @@
     min-width: 320px;
     padding: 25px;
   }
-}
 
-.card-booking__button {
-  width: 100%;
-  margin-top: 20px;
-  padding-bottom: 2px;
-}
-
-.card-booking__button .button-submit {
-  padding-right: 5px;
-}
-
-.card-booking__date-range {
-  width: 100%;
-  margin-top: 23px;
-  height: 62px;
-}
-
-.card-booking__dropdown_guests {
-  width: 100%;
-  height: 61px;
-  margin-top: 23px;
-  margin-bottom: 11px;
-}
-
-.card-booking__summary {
-  @include isFlex();
-  position: relative;
-  width: 100%;
-  min-height: 24px;
-  margin-top: 30px;
-  margin-left: 1px;
-  line-height: 24px;
-  font-size: $fs_h2;
-  color: $dark-shade_most;
-  font-weight: 700;
-  letter-spacing: .01em;
-  pointer-events: none;
-
-  @include _1750-1920 {
-    max-width: 490px;
-  }
-
-  @include _450 {
-    justify-content: space-between;
-    min-width: 260px;
+  &__button {
     width: 100%;
-    margin: 9px 0;
+    margin-top: 20px;
+    padding-bottom: 2px;
   }
-}
 
-.card-booking__summary_in-uikit {
-  width: 103%;
-}
+  &__button .button-submit {
+    padding-right: 5px;
+  }
 
-.card-booking__summary_in-details {
-  width: 100%;
-  margin-left: 0px;
-  letter-spacing: .001em;
-}
+  &__date-range {
+    width: 100%;
+    margin-top: 23px;
+    height: 62px;
+  }
 
-.card-booking__text {
-  line-height: 24px;
-  color: $dark-shade_most;
-}
+  &__dropdown_guests {
+    width: 100%;
+    height: 61px;
+    margin-top: 23px;
+    margin-bottom: 11px;
+  }
 
-.card-booking__line {
-  @include isFlex($align: flex-end);
-  width: calc(100% - 140px);
-  height: 19px;
-  border-bottom: 1px dotted $dark-shade_less;
-}
+  &__summary {
+    @include isFlex();
+    position: relative;
+    width: 100%;
+    min-height: 24px;
+    margin-top: 30px;
+    margin-left: 1px;
+    line-height: 24px;
+    font-size: $fs_h2;
+    color: $dark-shade_most;
+    font-weight: 700;
+    letter-spacing: .01em;
+    pointer-events: none;
 
-.card-booking__line_in-uikit {
-  width: 190px;
+    @include _1750-1920 {
+      max-width: 490px;
+    }
+
+    @include _450 {
+      justify-content: space-between;
+      min-width: 260px;
+      width: 100%;
+      margin: 9px 0;
+    }
+  }
+
+  &__summary_in-uikit {
+    width: 103%;
+  }
+
+  &__summary_in-details {
+    width: 100%;
+    margin-top: 42px;
+    margin-left: 0px;
+    letter-spacing: .001em;
+  }
+
+  &__text {
+    line-height: 24px;
+    color: $dark-shade_most;
+  }
+
+  &__line {
+    @include isFlex($align: flex-end);
+    width: calc(100% - 140px);
+    height: 19px;
+    border-bottom: 1px dotted $dark-shade_less;
+  }
+
+  &__line_in-uikit {
+    width: 190px;
+  }
 }

@@ -10,33 +10,33 @@
 
 .sign-in {
   @extend .registration;
-}
 
-.sign-in__content {
-  @extend .registration__content;
-  height: 702px;
+  &__content {
+    @extend .registration__content;
+    height: 702px;
 
-  @include _500 {
-    // carouselSignin + card-signin + initial top
-    height: calc(683 / 1440 * 100vw + 360px + 40px);
+    @include _500 {
+      // carouselSignin + card-signin + initial top
+      height: calc(683 / 1440 * 100vw + 360px + 40px);
+    }
+
+    @include _380 {
+      // carouselSignin + card-signin + initial top
+      height: calc(683 / 1440 * 100vw + 360px);
+      min-height: calc(683 / 1440 * 320px + 360px);
+    }
   }
 
-  @include _380 {
-    // carouselSignin + card-signin + initial top
-    height: calc(683 / 1440 * 100vw + 360px);
-    min-height: calc(683 / 1440 * 320px + 360px);
-  }
-}
+  &__card-signin {
+    @extend .registration__card-registration;
+    width: 380px;
+    top: 172px;
+    transform: translateX(-49%);
 
-.sign-in__card-signin {
-  @extend .registration__card-registration;
-  width: 380px;
-  top: 172px;
-  transform: translateX(-49%);
-
-  @include _500 {
-    top: 0;
-    width: 100%;
-    transform: none;
+    @include _500 {
+      top: 0;
+      width: 100%;
+      transform: none;
+    }
   }
 }

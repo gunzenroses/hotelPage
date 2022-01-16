@@ -4,7 +4,7 @@ mixin dropdown_type_rooms({ labelText="", dropdownContainerId, dropdownClassShow
   .dropdown__container_type_rooms
     h3.label!= labelText
     if labelRightText
-      h3.label_right!= labelRightText
+      h3.label.label_right!= labelRightText
     div(class="dropdown js-dropdown__rooms")
       div(class=`dropdown__rooms js-expand__content ${dropdownClassShow}`)
         +dropdown__item({

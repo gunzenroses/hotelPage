@@ -75,10 +75,10 @@ block content
                 })
             article.room-details__reviews
               h2.room-details__title Отзывы посетителей номера
-              .reviews__info 2 отзыва
-              .room-details__comment_first
+              .room-details__review-amounts 2 отзыва
+              .room-details__comment-first
                 +comment(comment1)
-              .room-details__comment_second
+              .room-details__comment-second
                 +comment(comment2)
             article.room-details__rules
               .room-details__rules-title
@@ -92,7 +92,6 @@ block content
           article.room-details__booking
             +card-booking({
               serviceName: "Сбор за доп. услуги",
-              serviceStyle: "short",
               itemNumbers: [2, 1, 0],
               theme: theme
             })

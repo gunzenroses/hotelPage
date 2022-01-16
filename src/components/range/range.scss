@@ -13,55 +13,55 @@
   width: 100%;
   height: auto;
   margin-top: 1px;
-}
 
-.range__label {
-  @include labelMixin();
-  margin: 2px 0 1.5px;
-  line-height: $fs_h3;
-  font-size: $fs_h3;
-  font-weight: 700;
-  letter-spacing: .001em;
-  color: $dark-shade_most;
-  text-transform: uppercase;
-  user-select: none;
-}
+  &__label {
+    @include labelMixin();
+    margin: 2px 0 1.5px;
+    line-height: $fs_h3;
+    font-size: $fs_h3;
+    font-weight: 700;
+    letter-spacing: .001em;
+    color: $dark-shade_most;
+    text-transform: uppercase;
+    user-select: none;
+  }
 
-.range__value {
-  @include labelMixin();
-  position: absolute;
-  top: 1px;
-  right: 0;
-  margin-top: 0px;
-  margin-bottom: 1.5px;
-  padding-bottom: 6px;
-  padding-right: 1px;  
-  border: none;
-  line-height: $fs_h3;
-  font-family: inherit;
-  font-size: $fs_h3;
-  font-weight: 400;
-  color: $dark-shade_medium;
-  appearance: none;
-  background: transparent;
-  text-align: right;
-  overflow: visible;
-  text-transform: uppercase;
-  user-select: none;
-}
+  &__value {
+    @include labelMixin();
+    position: absolute;
+    top: 1px;
+    right: 0;
+    margin-top: 0px;
+    margin-bottom: 1.5px;
+    padding-bottom: 6px;
+    padding-right: 1px;  
+    border: none;
+    line-height: $fs_h3;
+    font-family: inherit;
+    font-size: $fs_h3;
+    font-weight: 400;
+    color: $dark-shade_medium;
+    appearance: none;
+    background: transparent;
+    text-align: right;
+    overflow: visible;
+    text-transform: uppercase;
+    user-select: none;
+  }
 
-.range__info {
-  margin-top: 23px;
-  line-height: 1.045rem;
-  font-size: $fs_h3;
-  font-weight: 400;
-  color: $dark-shade_medium;
-  text-transform: none;
-  letter-spacing: .0001em;
+  &__info {
+    margin-top: 23px;
+    line-height: 1.045rem;
+    font-size: $fs_h3;
+    font-weight: 400;
+    color: $dark-shade_medium;
+    text-transform: none;
+    letter-spacing: .0001em;
 
-  @include _1750-1920 {
-    font-size: $fs_base;
-    text-align: center;
+    @include _1750-1920 {
+      font-size: $fs_base;
+      text-align: center;
+    }
   }
 }
 

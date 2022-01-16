@@ -25,22 +25,22 @@
       left: 10px;
     }
   }
-}
 
-.headers-n-footers__header {
-  width: 100%;
-  height: fit-content;
-  margin-top: 39px;
-}
+  &__header {
+    width: 100%;
+    height: fit-content;
+    margin-top: 39px;
+  }
 
-.headers-n-footers__footer {
-  width: 100%;
-  height: fit-content;
-  margin-top: 40px;
-}
+  &__footer {
+    width: 100%;
+    height: fit-content;
+    margin-top: 40px;
+  }
 
-.headers-n-footers__footer-creative {
-  width: 100%;
-  height: fit-content;
-  margin: 40px auto 0;
+  &__footer-creative {
+    width: 100%;
+    height: fit-content;
+    margin: 40px auto 0;
+  }
 }

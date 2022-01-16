@@ -1,22 +1,24 @@
-.button-rate__real {
-  display: none;
-  appearance: none;
-}
+.button-rate {
+  &__real {
+    display: none;
+    appearance: none;
+  }
 
-.button-rate__fake {
-  width: 24px;
-  height: 24px;
-  color: $purple;
-  background-image: $linearGradientLilac;
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-  cursor: pointer;
-
-  &::before {
+  &__fake {
     width: 24px;
     height: 24px;
-    content: '☆';
+    color: $purple;
+    background-image: $linearGradientLilac;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    cursor: pointer;
+
+    &::before {
+      width: 24px;
+      height: 24px;
+      content: '☆';
+    }
   }
 }
 

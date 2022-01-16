@@ -17,44 +17,44 @@
   @include _450 {
     margin: 0 auto;
   }
-}
 
-.button-toggle__real {
-  position: absolute;
-  width: 40px;
-  height: 20px;
-  opacity: 0;
-  appearance: none;
-  cursor: pointer;
-}
-
-.button-toggle__fake {
-  position: relative;
-  width: 40px;
-  height: 20px;
-  border: 1px solid $dark-shade_less;
-  border-radius: 10px;
-  margin-right: 10px;
-
-  &::before {
-    content: '';
+  &__real {
     position: absolute;
-    top: 3px;
-    left: 3px;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: $dark-shade_less;
-    transition: left 0.2s ease-out;
+    width: 40px;
+    height: 20px;
+    opacity: 0;
+    appearance: none;
+    cursor: pointer;
   }
-}
 
-.button-toggle__title {
-  display: inline-block;
-  color: $dark-shade_more;
-  letter-spacing: 0.001em;
-  line-height: 19px;
-  font-size: 1em;
+  &__fake {
+    position: relative;
+    width: 40px;
+    height: 20px;
+    border: 1px solid $dark-shade_less;
+    border-radius: 10px;
+    margin-right: 10px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: $dark-shade_less;
+      transition: left 0.2s ease-out;
+    }
+  }
+
+  &__title {
+    display: inline-block;
+    color: $dark-shade_more;
+    letter-spacing: 0.001em;
+    line-height: 19px;
+    font-size: 1em;
+  }
 }
 
 .button-toggle__item + .button-toggle__item {

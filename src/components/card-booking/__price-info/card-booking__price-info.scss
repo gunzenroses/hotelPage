@@ -1,88 +1,90 @@
 @import '@~Assets/styles/media-mixins.scss';
 @import '@~Assets/styles//mixins.scss';
 
-.card-booking__price-info {
-  @include isFlex();
-  width: 100%;
-  min-height: 24px;
-  line-height: 18px;
-  margin-top: 10px;
-  margin-left: 1px;
-  color: $dark-shade_more;
-  pointer-events: none;
-
-  @include _1750-1920 {
-    max-width: 490px;
-  }
-
-  @include _450 {
-    justify-content: space-between;
-    min-width: 260px;
+.card-booking {
+  &__price-info {
+    @include isFlex();
     width: 100%;
-    margin: 9px 0;
+    min-height: 24px;
+    line-height: 18px;
+    margin-top: 10px;
+    margin-left: 1px;
+    color: $dark-shade_more;
+    pointer-events: none;
+
+    @include _1750-1920 {
+      max-width: 490px;
+    }
+
+    @include _450 {
+      justify-content: space-between;
+      min-width: 260px;
+      width: 100%;
+      margin: 9px 0;
+    }
   }
-}
 
-.card-booking__description {
-  @include isFlex($justify: flex-start);
-  width: fit-content;
-  text-align: left;
-  letter-spacing: .0001em;
+  &__description {
+    @include isFlex($justify: flex-start);
+    width: fit-content;
+    text-align: left;
+    letter-spacing: .0001em;
 
-  @include _1650-1920 {
-    width: calc(100% - 100px);
+    @include _1650-1920 {
+      width: calc(100% - 100px);
+    }
+
+    @include _450 {
+      width: calc(100% - 120px);
+      max-width: 170px;
+    }
   }
 
-  @include _450 {
-    width: calc(100% - 120px);
-    max-width: 170px;
+  &__description_in-uikit {
+    max-width: 239px;
   }
-}
 
-.card-booking__description_in-uikit {
-  max-width: 239px;
-}
-
-.card-booking__description_in-details {
-  max-width: 245px;
-}
-
-.card-booking__expense {
-  @include isFlex();
-  width: fit-content;
-  text-align: right;
-  letter-spacing: .002em;
-
-  @include _1650-1920 {
-    max-width: 90px;
+  &__description_in-details {
+    max-width: 245px;
   }
-}
 
-.card-booking__info-sign {
-  position: relative;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  border: 1px solid $dark-shade_less;
-  line-height: 20px;
-  background: $light;
+  &__expense {
+    @include isFlex();
+    width: fit-content;
+    text-align: right;
+    letter-spacing: .002em;
 
-  &::before {
-    content: 'i';
-    position: absolute;
-    top: 2px;
-    left: 7px;
-    line-height: $fs_base;
-    font-size: $fs_h3;
-    font-weight: 700;
-    color: $dark-shade_less;
+    @include _1650-1920 {
+      max-width: 90px;
+    }
   }
-}
 
-.card-booking__info-sign_in-details {
-  margin-left: 8px;
-}
+  &__info-sign {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid $dark-shade_less;
+    line-height: 20px;
+    background: $light;
 
-.card-booking__info-sign_in-uikit {
-  margin-left: 5px;
+    &::before {
+      content: 'i';
+      position: absolute;
+      top: 2px;
+      left: 7px;
+      line-height: $fs_base;
+      font-size: $fs_h3;
+      font-weight: 700;
+      color: $dark-shade_less;
+    }
+  }
+
+  &__info-sign_in-details {
+    margin-left: 8px;
+  }
+
+  &__info-sign_in-uikit {
+    margin-left: 5px;
+  }
 }

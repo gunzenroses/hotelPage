@@ -3,30 +3,33 @@
 @import '@~Assets/styles//mixins.scss';
 @import '@~Assets/styles/fonts.scss';
 
-.textfield__label_for-email {
-  @include labelMixin();
-  position: absolute;
-  right: 1px;
-  margin: 0;
-  line-height: .4rem;
-  font-size: $fs_h3;
-  font-weight: 400;
-  color: $dark-shade_medium;
-  text-align: right;
-  text-transform: uppercase;
-  user-select: none;
-}
+.textfield {
+  &__label {
+    @include labelMixin();
+    position: absolute;
+    right: 1px;
+    margin: 0;
+    font-weight: 400;
+    line-height: $fs_h3;
+    font-size: $fs_h3;
+    color: $dark-shade_most;
+    text-align: right;
+    text-transform: uppercase;
+    user-select: none;
 
-.textfield__label_for-name {
-  @include labelMixin();
-  position: absolute;
-  right: 1px;
-  margin: 0;
-  line-height: $fs_h3;
-  font-size: .84rem;
-  font-weight: 400;
-  color: $dark-shade_medium;
-  text-align: right;
-  text-transform: uppercase;
-  user-select: none;
+    &_for-email {
+      right: 1px;
+      margin: 0;
+      line-height: .4rem;
+      color: $dark-shade_medium;
+    }
+
+    &_for-name {
+      right: 1px;
+      margin: 0;
+      line-height: $fs_h3;
+      font-size: .84rem;
+      color: $dark-shade_medium;
+    }
+  }
 }

@@ -9,53 +9,53 @@
   padding: 2px;
   font-size: 0.82rem;
   user-select: none;
-}
 
-.button-link_type_signin {
-  font-size: 0.84rem;
-}
+  &_type_signin {
+    font-size: 0.84rem;
+  }
 
-.button-link_type_colored {
-  padding: 0;
-  padding-right: 3px;
-  font-size: 0.82rem;
-  color: $light;
-  text-decoration: none;
-}
-
-.button-link_type_registration {
-  padding: 0;
-  padding-right: 1px;
-  font-size: 0.82rem;
-  letter-spacing: .03em;
-  color: $light;
-  text-decoration: none;
-
-  &::before {
-    content: 'Зарегистрироваться';
+  &_type_colored {
+    padding: 0;
+    padding-right: 3px;
+    font-size: 0.82rem;
     color: $light;
+    text-decoration: none;
+  }
 
-    @include _550 {
-      content: 'Регистрация';
+  &_type_registration {
+    padding: 0;
+    padding-right: 1px;
+    font-size: 0.82rem;
+    letter-spacing: .03em;
+    color: $light;
+    text-decoration: none;
+
+    &::before {
+      content: 'Зарегистрироваться';
+      color: $light;
+
+      @include _550 {
+        content: 'Регистрация';
+      }
     }
   }
-}
 
-.button-link__inner {
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
-  width: calc(100% - 4px);
-  height: calc(100% - 4px);
-  min-width: 70px;
-  padding-right: 1px;
-  border-radius: 22px;
-  background: $light;
-  color: $purple;
-  text-decoration: none;
+  &__ref {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    min-width: 70px;
+    padding-right: 1px;
+    border-radius: 22px;
+    background: $light;
+    color: $purple;
+    text-decoration: none;
+  }
 }

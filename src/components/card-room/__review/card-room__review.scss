@@ -1,25 +1,27 @@
 @import '@~Assets/styles/media-mixins.scss';
 
-.card-room__price {
-  line-height: 20px;
-  font-size: 1rem;
-  letter-spacing: .01em;
-  font-weight: 700;
-  color: $dark-shade_medium;
+.card-room {
+  &__price {
+    line-height: 20px;
+    font-size: 1rem;
+    letter-spacing: .01em;
+    font-weight: 700;
+    color: $dark-shade_medium;
 
-  @include _1750-1920 {
-    font-size: $fs_h2;
+    @include _1750-1920 {
+      font-size: $fs_h2;
+    }
   }
-}
 
-.card-room__review {
-  line-height: 20px;
-  font-size: 13px;
-  letter-spacing: .05em;
-  font-weight: 400;
-  color: $dark-shade_medium;
+  &__review {
+    line-height: 20px;
+    font-size: 13px;
+    letter-spacing: .05em;
+    font-weight: 400;
+    color: $dark-shade_medium;
 
-  @include _1750-1920 {
-    font-size: $fs_base;
+    @include _1750-1920 {
+      font-size: $fs_base;
+    }
   }
 }

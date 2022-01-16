@@ -33,34 +33,34 @@
     height: calc(47vw + 106px);
     min-height: 270px;
   }
-}
 
-.card-room__button-rate {
-  height: 28px;
-}
+  &__button-rate {
+    height: 28px;
+  }
 
-.card-room__button-rate_in-creative {
-  height: 28px;
-}
+  &__button-rate_in-creative {
+    height: 28px;
+  }
 
-.card-room__button-rate_in-search {
-  height: 30px;
-}
+  &__button-rate_in-search {
+    height: 30px;
+  }
 
-.card-room__info {
-  @include isFlex($direction: column);
-  width: 100%;
-  height: 111px;
-  padding: 22px 17px 22px 20px;
-  pointer-events: none;
-}
+  &__info {
+    @include isFlex($direction: column);
+    width: 100%;
+    height: 111px;
+    padding: 22px 17px 22px 20px;
+    pointer-events: none;
+  }
 
-.card-room__rating {
-  @include isFlex($align: center);
-  width: 100%;
-  position: relative;
-  height: 36px;
-  border-top: 1px solid $dark-shade_few;
-  padding-top: 11px;
-  padding-right: 2px;
+  &__rating {
+    @include isFlex($align: center);
+    width: 100%;
+    position: relative;
+    height: 36px;
+    border-top: 1px solid $dark-shade_few;
+    padding-top: 11px;
+    padding-right: 2px;
+  }
 }

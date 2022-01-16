@@ -61,400 +61,400 @@
   @include _850 {
     min-width: 320px;
   }
-}
 
-.form-elements__content {
-  @include isFlex($wrap: wrap);
-  width: 1165px;
-  min-width: 320px;
-  margin: 143px 0 128px 141px;
-  background: $light;
+  &__content {
+    @include isFlex($wrap: wrap);
+    width: 1165px;
+    min-width: 320px;
+    margin: 143px 0 128px 141px;
+    background: $light;
 
-  @include _1400 {
-    width: 85%;
-    height: auto;
-    max-width: 1160px;
-    margin: 9% auto 9%;
+    @include _1400 {
+      width: 85%;
+      height: auto;
+      max-width: 1160px;
+      margin: 9% auto 9%;
+    }
+
+    @include _1250 {
+      justify-content: space-evenly;
+      max-width: 890px;
+      margin: 7% auto 7%;
+    }
+
+    @include _970 {
+      justify-content: space-around;
+      width: 85%;
+      margin: 5% auto 5%;
+    }
+
+    @include _850 {
+      justify-content: center;
+      max-width: 575px;
+    }
   }
 
-  @include _1250 {
-    justify-content: space-evenly;
-    max-width: 890px;
-    margin: 7% auto 7%;
+  &__textfields {
+    @include containerSimple(321px, 636px);
+    margin-right: 117px;
+
+    @include _1400 {
+      margin: 0;
+    }
+
+    @include _850 {
+      margin-bottom: 40px;
+    }
   }
 
-  @include _970 {
-    justify-content: space-around;
-    width: 85%;
-    margin: 5% auto 5%;
+  &__container-first {
+    @include isFlex($direction: column, $justify: flex-start);
+    height: 322px;
+    width: 100%;
+    margin-top: 1px;
   }
 
-  @include _850 {
-    justify-content: center;
-    max-width: 575px;
-  }
-}
-
-.form-elements__textfields {
-  @include containerSimple(321px, 636px);
-  margin-right: 117px;
-
-  @include _1400 {
-    margin: 0;
+  &__email {
+    width: 100%;
+    height: 62px;
+    margin-top: 1px;
   }
 
-  @include _850 {
-    margin-bottom: 40px;
-  }
-}
-
-.form-elements__container-first {
-  @include isFlex($direction: column, $justify: flex-start);
-  height: 322px;
-  width: 100%;
-  margin-top: 1px;
-}
-
-.form-elements__email {
-  width: 100%;
-  height: 62px;
-  margin-top: 1px;
-}
-
-.form-elements__name {
-  width: 100%;
-  height: 62px;
-  margin-top: 23px;
-}
-
-.form-elements__guests {
-  width: 100%;
-  height: 61px;
-  margin-top: 22px;
-}
-
-.form-elements__birthday {
-  width: 100%;
-  height: 62px;
-  margin-top: 25px;
-
-
-}
-
-.form-elements__container-second {
-  @include isFlex($direction: column, $justify: flex-start);
-  min-height: 274px;
-  width: 320px;
-  margin-top: 37.5px;
-}
-
-.form-elements__date-range_separate {
-  @include containerSimple(100%, 62px);
-}
-
-.form-elements__date-range_common {
-  @include containerMedium();
-  width: 266px;
-  height: 62px;
-  margin-top: 43px;
-}
-
-.form-elements__subscibe {
-  @include containerMedium();
-  width: 266px;
-  height: 62px;
-  margin-top: 43px;
-}
-
-.form-elements__input-buttons {
-  @include containerSimple(260px, 537px);
-  @include isFlex($direction: column, $justify: flex-start, $align: flex-start);
-  margin-right: 124px;
-
-  @include _1400 {
-    margin: 0;
-  }
-}
-
-.form-elements__checkbox {
-  @include isFlex($direction: column);
-  position: relative;
-  width: 100%;
-  height: 127px;
-  min-width: 260px;
-  margin-top: 2px;
-
-  @include _450 {
-    margin: 0 auto;
-  }
-}
-
-.form-elements__radio {
-  @include isFlex($direction: column);
-  width: 222px;
-  height: 53px;
-  margin-top: 43px;
-  line-height: normal;
-}
-
-.form-elements__label {
-  @include labelMixin();
-  @include headerThird();
-}
-
-.form-elements__label_radio {
-  line-height: $fs_h3;
-  letter-spacing: .0001em;
-}
-
-.form-elements__toggle {
-  @include isFlex($direction: column);
-    height: 87px;
-    width: 268px;
-    margin-top: 39px;
-}
-
-.form-elements__label_toggle {
-  font-size: .83rem;
-  letter-spacing: .0001em;
-}
-
-.form-elements__group_toggle {
-  @include isFlex($direction: column);
-  width: 100%;
-  height: 58px;
-}
-
-.form-elements__button-like {
-  @include isFlex($direction: column);
-  width: 90px;
-  height: 49px;
-  margin-top: 42px;
-
-  @include _1750-1920 {
-    width: 130px;
-  }
-}
-
-.form-elements__row {
-  @include isFlex;
-  width: 100%;
-}
-
-.form-elements__button-rate {
-  @include isFlex($direction: column);
-  width: 100%;
-  height: 53px;
-  margin-top: 42px;
-}
-
-.form-element__label_button-rate {
-  @include labelMixin();
-  @include headerThird();
-  line-height: $fs_h3;
-  line-height: 1.045rem;
-  user-select: none;
-}
-
-
-.form-elements__clickable-objects {
-  @include containerSimple(320px, 503px);
-  @include isFlex($direction: column, $align: flex-start, $justify: flex-start);
-  margin-right: 7px;
-
-  @include _1400 {
-    margin: 0;
+  &__name {
+    width: 100%;
+    height: 62px;
+    margin-top: 23px;
   }
 
-  @include _1250 {
+  &__guests {
+    width: 100%;
+    height: 61px;
+    margin-top: 22px;
+  }
+
+  &__birthday {
+    width: 100%;
+    height: 62px;
+    margin-top: 25px;
+
+
+  }
+
+  &__container-second {
+    @include isFlex($direction: column, $justify: flex-start);
+    min-height: 274px;
+    width: 320px;
+    margin-top: 37.5px;
+  }
+
+  &__date-range_separate {
+    @include containerSimple(100%, 62px);
+  }
+
+  &__date-range_common {
+    @include containerMedium();
+    width: 266px;
+    height: 62px;
+    margin-top: 43px;
+  }
+
+  &__subscibe {
+    @include containerMedium();
+    width: 266px;
+    height: 62px;
+    margin-top: 43px;
+  }
+
+  &__input-buttons {
+    @include containerSimple(260px, 537px);
+    @include isFlex($direction: column, $justify: flex-start, $align: flex-start);
+    margin-right: 124px;
+
+    @include _1400 {
+      margin: 0;
+    }
+  }
+
+  &__checkbox {
+    @include isFlex($direction: column);
+    position: relative;
+    width: 100%;
+    height: 127px;
+    min-width: 260px;
+    margin-top: 2px;
+
+    @include _450 {
+      margin: 0 auto;
+    }
+  }
+
+  &__radio {
+    @include isFlex($direction: column);
+    width: 222px;
+    height: 53px;
+    margin-top: 43px;
+    line-height: normal;
+  }
+
+  &__label {
+    @include labelMixin();
+    @include headerThird();
+  }
+
+  &__label_radio {
+    line-height: $fs_h3;
+    letter-spacing: .0001em;
+  }
+
+  &__toggle {
+    @include isFlex($direction: column);
+      height: 87px;
+      width: 268px;
+      margin-top: 39px;
+  }
+
+  &__label_toggle {
+    font-size: .83rem;
+    letter-spacing: .0001em;
+  }
+
+  &__group_toggle {
+    @include isFlex($direction: column);
+    width: 100%;
+    height: 58px;
+  }
+
+  &__button-like {
+    @include isFlex($direction: column);
+    width: 90px;
+    height: 49px;
+    margin-top: 42px;
+
+    @include _1750-1920 {
+      width: 130px;
+    }
+  }
+
+  &__row {
+    @include isFlex;
+    width: 100%;
+  }
+
+  &__button-rate {
+    @include isFlex($direction: column);
+    width: 100%;
+    height: 53px;
+    margin-top: 42px;
+  }
+
+  .form-element__label_button-rate {
+    @include labelMixin();
+    @include headerThird();
+    line-height: $fs_h3;
+    line-height: 1.045rem;
+    user-select: none;
+  }
+
+
+  &__clickable-objects {
+    @include containerSimple(320px, 503px);
+    @include isFlex($direction: column, $align: flex-start, $justify: flex-start);
+    margin-right: 7px;
+
+    @include _1400 {
+      margin: 0;
+    }
+
+    @include _1250 {
+      margin-top: 40px;
+    }
+  }
+
+  &__range {
+    @include containerMedium();
+    width: 267px;
+  }
+
+  &__buttons {
+    @include isFlex($direction: column, $justify: flex-start);
+    width: 320px;
+    height: 269px;
+    margin-top: 31px;
+
+    @include _450 {
+      width: 280px;
+      margin: 0 auto;
+    }
+  }
+
+  &__label_buttons {
+    margin-bottom: 3.5px;
+    line-height: $fs_h3;
+  }
+
+  &__row_buttons-link {
+    @include isFlex($direction: row);
+    flex-wrap: wrap;
+    height: 148px;
+    width: 218px;
+    margin-top: 11px;
+
+    @include _450 {
+      width: 280px;
+      margin: 0 auto;
+    }
+  }
+
+  &__row_buttons-basic {
+    @include isFlex($direction: row);
+    width: 147px;
+    margin-top: 3px;
+
+    @include _450 {
+      width: 280px;
+      margin: 0 auto;
+    }
+  }
+
+  &__button-submit {
+    width: 320px;
+    height: 44px;
+    margin-top: 28px;
+
+    @include _450 {
+      width: 280px;
+      margin: 0 auto;
+    }
+  }
+
+
+  &__button-item {
+    display: block;
+    width: 99px;
+    height: 44px;
+    line-height: 44px;
+  }
+
+  &__button-item:first-of-type {
+    margin-left: 1px;
+  }
+
+  &__pagination {
+    @include isFlex($direction: column);
+    width: 241px;
+    height: 104px;
+    margin-left: 1px;
     margin-top: 40px;
+
+    @include _450 {
+      margin: 0 auto;
+    }
   }
-}
 
-.form-elements__range {
-  @include containerMedium();
-  width: 267px;
-}
+  &__dropdowns {
+    @include isFlex($direction: column, $justify: flex-start, $align: flex-start);
+    width: 267px;
+    min-height: 647px;
+    margin: 99px 168px 0 -1px;
 
-.form-elements__buttons {
-  @include isFlex($direction: column, $justify: flex-start);
-  width: 320px;
-  height: 269px;
-  margin-top: 31px;
-
-  @include _450 {
-    width: 280px;
-    margin: 0 auto;
+    @include _1400 {
+      margin: 0;
+      margin-top: 40px;
+    }
   }
-}
 
-.form-elements__label_buttons {
-  margin-bottom: 3.5px;
-  line-height: $fs_h3;
-}
-
-.form-elements__row_buttons-link {
-  @include isFlex($direction: row);
-  flex-wrap: wrap;
-  height: 148px;
-  width: 218px;
-  margin-top: 11px;
-
-  @include _450 {
-    width: 280px;
-    margin: 0 auto;
+  &__room-criterions {
+    @include isFlex($direction: column);
+    width: 266px;
+    height: 146px;
   }
-}
 
-.form-elements__row_buttons-basic {
-  @include isFlex($direction: row);
-  width: 147px;
-  margin-top: 3px;
-
-  @include _450 {
-    width: 280px;
-    margin: 0 auto;
+  &__rooms {
+    width: 100%;
+    height: 62px;
   }
-}
 
-.form-elements__button-submit {
-  width: 320px;
-  height: 44px;
-  margin-top: 28px;
-
-  @include _450 {
-    width: 280px;
-    margin: 0 auto;
+  &__checkbox-rolled-up {
+    margin-top: 158px;
+    margin-left: 1px;
   }
-}
 
-
-.form-elements__button-item {
-  display: block;
-  width: 99px;
-  height: 44px;
-  line-height: 44px;
-}
-
-.form-elements__button-item:first-of-type {
-  margin-left: 1px;
-}
-
-.form-elements__pagination {
-  @include isFlex($direction: column);
-  width: 241px;
-  height: 104px;
-  margin-left: 1px;
-  margin-top: 40px;
-
-  @include _450 {
-    margin: 0 auto;
+  &__checkbox-expand {
+    margin-top: 20px;
   }
-}
 
-.form-elements__dropdowns {
-  @include isFlex($direction: column, $justify: flex-start, $align: flex-start);
-  width: 267px;
-  min-height: 647px;
-  margin: 99px 168px 0 -1px;
+  &__search-info {
+    @include containerSimple(320px, 465px);
+    @include isFlex($direction: column, $align: flex-start, $justify: flex-start);
+    margin-top: 99px;
+    margin-right: 60px;
 
-  @include _1400 {
-    margin: 0;
-    margin-top: 40px;
+    @include _1400 {
+      margin: 0;
+      margin-top: 40px;
+    }
   }
-}
 
-.form-elements__room-criterions {
-  @include isFlex($direction: column);
-  width: 266px;
-  height: 146px;
-}
-
-.form-elements__rooms {
-  width: 100%;
-  height: 62px;
-}
-
-.form-elements__checkbox-rolled-up {
-  margin-top: 158px;
-  margin-left: 1px;
-}
-
-.form-elements__checkbox-expand {
-  margin-top: 20px;
-}
-
-.form-elements__search-info {
-  @include containerSimple(320px, 465px);
-  @include isFlex($direction: column, $align: flex-start, $justify: flex-start);
-  margin-top: 99px;
-  margin-right: 60px;
-
-  @include _1400 {
-    margin: 0;
-    margin-top: 40px;
+  &__guests_open {
+    width: 100%;
+    height: 62px;
   }
-}
 
-.form-elements__guests_open {
-  width: 100%;
-  height: 62px;
-}
-
-.form-elements__rich-checkbox {
-  margin-top: 258px;
-}
-
-.form-elements__room-info {
-  @include containerSimple(320px, 467px);
-  @include isFlex($direction: column, $align: flex-start, $justify: flex-start);
-  margin-top: 99px;
-  margin-right: 7px;
-
-  @include _1400 {
-    margin: 0;
-    margin-top: 40px;
+  &__rich-checkbox {
+    margin-top: 258px;
   }
-}
 
-.form-elements__bullet-checkbox {
-  margin-top: 258px;
-}
+  &__room-info {
+    @include containerSimple(320px, 467px);
+    @include isFlex($direction: column, $align: flex-start, $justify: flex-start);
+    margin-top: 99px;
+    margin-right: 7px;
 
-.form-elements__badges {
-  @include containerSimple(291px, fit-content);
-  @include isFlex($direction: column, $justify: flex-start, $align: flex-start);
-  margin-right: 120px;
-  margin-top: 38px;
-  margin-left: -1px;
-
-  @include _1400 {
-    margin: 0;
-    margin-top: 40px;
+    @include _1400 {
+      margin: 0;
+      margin-top: 40px;
+    }
   }
-}
 
-.form-elements__badge {
-  width: 100%;
-  height: fit-content;
-  margin-top: 20px;
-}
+  &__bullet-checkbox {
+    margin-top: 258px;
+  }
 
-.form-elements__comment {
-  @include isFlex($direction: column, $align: flex-start);
-  max-width: 711px;
-  min-height: 133px;
-  margin-top: 48px;
-  margin-right: 8px;
+  &__badges {
+    @include containerSimple(291px, fit-content);
+    @include isFlex($direction: column, $justify: flex-start, $align: flex-start);
+    margin-right: 120px;
+    margin-top: 38px;
+    margin-left: -1px;
 
-  @include _1400 {
-    width: 55vw;
+    @include _1400 {
+      margin: 0;
+      margin-top: 40px;
+    }
+  }
+
+  &__badge {
+    width: 100%;
+    height: fit-content;
+    margin-top: 20px;
+  }
+
+  &__comment {
+    @include isFlex($direction: column, $align: flex-start);
     max-width: 711px;
-    margin: 40px 0 0;
-  }
+    min-height: 133px;
+    margin-top: 48px;
+    margin-right: 8px;
 
-  @include _1250 {
-    width: 90%;
-    height: auto;
+    @include _1400 {
+      width: 55vw;
+      max-width: 711px;
+      margin: 40px 0 0;
+    }
+
+    @include _1250 {
+      width: 90%;
+      height: auto;
+    }
   }
 }
