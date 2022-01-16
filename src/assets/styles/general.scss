@@ -1,5 +1,6 @@
 @import './colors.scss';
 @import './media-mixins.scss';
+@import './mixins.scss';
 @import './fonts.scss';
 
 * {
@@ -21,16 +22,13 @@ body {
 }
 
 .label {
-  display: inline-block;
-  height: 15px;
+  @include labelMixin();
   margin: 0;
   line-height: $fs_h3;
   font-size: $fs_h3;
   font-weight: 700;
-  letter-spacing: .003em;
   color: $dark-shade_most;
   text-transform: uppercase;
-  user-select: none;
 
   @include _1750-1920 {
     font-size: $fs_base;
@@ -40,22 +38,9 @@ body {
   &_right {
     position: absolute;
     right: 0;
-    display: inline-block;
-    height: 15px;
-    margin: 0;
-    line-height: $fs_h3;
-    font-size: $fs_h3;
     font-weight: 400;
-    letter-spacing: .003em;
-    color: $dark-shade_most;
-  text-transform: uppercase;
     text-align: right;
-    pointer-events: none;
-
-    @include _1750-1920 {
-      font-size: $fs_base;
-      height: $fs_h2;
-    }
+    text-transform: none;    
   }
 } 
 
