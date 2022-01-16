@@ -56,31 +56,26 @@
   }
 }
 
-.search-room__content_outer {
-  width: 100%;
-  height: fit-content;
-  border-bottom: 1px solid $dark-shade_less;
-}
-
 .search-room__content {
   @include isFlex();
   position: relative;
-  width: calc(100% - 280px);
-  height: 1262px;
+  width: 100%;
+  height: fit-content;
   min-width: 320px;
-  margin: 26px 144px 68px 140px;
-  overflow: auto; //to avoid margin-collapse
+  padding: 26px 140px 69px;
+  border-bottom: 1px solid $dark-shade_less;
+  overflow: auto;
   background: $light;
 
   @include _1500-1920 {
-    margin-bottom: 27px;
+    padding-bottom: 27px;
     justify-content: space-around;
   }
 
   @include _1400 {
     height: fit-content;
     width: 1167px;
-    margin: 27px auto 68px;
+    padding: 27px auto 68px;
   }
 
   @include _1340 {

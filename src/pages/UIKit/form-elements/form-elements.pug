@@ -51,9 +51,9 @@ block content
   .form-elements
     img.uikit-logo(src= "./assets/images/logo/logo.svg" alt="uikit logo")
     .form-elements__content
-      .form-elements__group_first
-        .form-elements__container_first
-          .form-elements__container_email
+      .form-elements__textfields
+        .form-elements__container-first
+          .form-elements__email
             .textfield__container
               +textfield__label({
                 labelText: "Text field", 
@@ -61,7 +61,7 @@ block content
                 labelRightClass: "textfield__label_for-email"
               })
               +textfield_type_email()
-          .form-elements__container_name
+          .form-elements__name
             .textfield__container
               +textfield__label({
                 labelText: "Text field", 
@@ -74,39 +74,39 @@ block content
                 nameText: "text", 
                 maxText: 20
               })
-          .form-elements__container_guests.js-dropdown__detection
+          .form-elements__guests.js-dropdown__detection
             +dropdown_type_guests({
               labelText: "dropdown",
             })
-          .form-elements__container_birthday
+          .form-elements__birthday
             +textfield_type_birthday({
               labelLeft: "Masked text field",
               labelRight: ""
             })
-        .form-elements__container_second
-          .form-elements__container_date-range_separate.js-dropdown__detection
+        .form-elements__container-second
+          .form-elements__date-range_separate.js-dropdown__detection
             +date-range_separate({ 
               labelText_1: "Date dropdown",
               labelText_2: "Date dropdown",
               inputValue_2: "19.08.2019" 
             })
-          .form-elements__container_date-range_common.js-dropdown__detection
+          .form-elements__date-range_common.js-dropdown__detection
             +date-range_common({
               labelText: "filter date dropdown", 
               inputValue: "19 авг - 23 авг"
             })
-          .form-elements__container_subscibe
+          .form-elements__subscibe
             .textfield__container
               +textfield__label({ labelText: "Subscription text field" })
               +textfield_type_subscribe()
-      .form-elements__group_second
-        .form-elements__container_checkbox
+      .form-elements__input-buttons
+        .form-elements__checkbox
           h3.label Сheckbox buttons
           +checkbox
-        .form-elements__container_radio 
+        .form-elements__radio 
           .form-elements__label_radio Radio buttons
           +radio-buttons({}) 
-        .form-elements__container_toggle
+        .form-elements__toggle
           .form-elements__label_toggle Toggle
           .form-elements__group_toggle
             +button-toggle({
@@ -114,12 +114,12 @@ block content
               ifChecked: true
             })
             +button-toggle({ inputName: "offer2" })
-        .form-elements__container_button-like
+        .form-elements__button-like
           h3.label like button
           .form-elements__row
             +button-like(2)
             +button-like(12)
-        .form-elements__container_button-rate
+        .form-elements__button-rate
           h3.form-element__label_button-rate Rate button
           .form-elements__row
             +button-rate({
@@ -130,10 +130,10 @@ block content
               inputName: "rating2",
               checkedNum: 5
             })
-      .form-elements__group_third
-        .form-elements__container_range
+      .form-elements__buttons
+        .form-elements__range
           +range({})
-        .form-elements__container_buttons
+        .form-elements__buttons
           h3.form-elements__label_buttons Buttons
           .form-elements__row_buttons-link
             .form-elements__button-item
@@ -171,67 +171,67 @@ block content
             })
           .form-elements__button-submit 
             +button-submit({ buttonText: "Перейти к оплате" })
-        .form-elements__container_pagination
+        .form-elements__pagination
             h3.label pagination
             +pagination()
-      .form-elements__group_forth
-        .form-elements__container_dropdowns
-          .form-elements__container_rooms.js-dropdown__detection
+      .form-elements__dropdowns
+        .form-elements__room-criterions
+          .form-elements__container-rooms.js-dropdown__detection
             +dropdown_type_rooms({
               labelText: "dropdown",
               labelRightText: "default",
               itemNumbers: [2, 2, 0],
             })
-          .form-elements__container_rooms.js-dropdown__detection
+          .form-elements__container-rooms.js-dropdown__detection
             +dropdown_type_rooms({
               labelText: "dropdown",
               dropdownClassShow: "js-expand__show",
               labelRightText: "expanded",
               itemNumbers: [2, 2, 0],
             })
-        .form-elements__container_checkbox-expand_hidden
+        .form-elements__checkbox-rolled-up
           +checkbox-expandable({
             dropdownTitleName: "Expandable checkbox list"
           })
-        .form-elements__container_checkbox-expand
+        .form-elements__checkbox-expand
           +checkbox-expandable({
             dropdownTitleName: "Expandable checkbox list",
             dropdownClassShow: "js-checkbox-expandable__show",
           })
-      .form-elements__group_fifth
-        .form-elements__container_guests_open.js-dropdown__detection
+      .form-elements__search-info
+        .form-elements__guests_open.js-dropdown__detection
           +dropdown_type_guests({
             labelText: "dropdown",
             dropdownClassShow: "js-expand__show"
           })
-        .form-elements__container_rich-checkbox
+        .form-elements__rich-checkbox
           +rich-checkbox({
             checkboxName: "accessibility",
             containerText: "Rich Checkbox Buttons"
           })
-      .form-elements__group_sixth
-        .form-elements__container_guests_open.js-dropdown__detection
+      .form-elements__room-info
+        .form-elements__guests_open.js-dropdown__detection
           +dropdown_type_guests({
             labelText: "dropdown",
             dropdownClassShow: "js-expand__show",
             itemNumbers: [2, 1, 0],
           })
-        .form-elements__container_bullet-checkbox
+        .form-elements__bullet-checkbox
           +bullet-checkbox({
             checkboxList: checkboxList,
             labelText: "bullet list"
           })
-      .form-elements__group_seventh
+      .form-elements__badges
         +badge({ 
           name: "insert_emoticon",
           title: "Комфорт",
           description: "Шумопоглощающие стены" 
         })
-        .form-elements__container_badge
+        .form-elements__badge
           +badge({ 
             name: "location_city",
             title: "Удобство",
             description: "Окно в каждой из спален"
           })
-      .form-elements__group_eighth
+      .form-elements__comment
         +comment(comment1)

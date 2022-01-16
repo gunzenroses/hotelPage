@@ -37,51 +37,50 @@ block variables
 block content
   .search-room.js-dropdown__detection
     +header({ user: "", theme: theme })
-    main.search-room__content_outer
-      .search-room__content
-        section.search-room__filter
-          form.search-room__form
-            .filter-group
-              .filter-group__date-range
-                +date-range_common({
-                  labelText: "даты пребывания в отеле",
-                  inputValue: "19 авг - 23 авг",
-                  theme: theme
-                })
-              .filter-group__guests
-                +dropdown_type_guests({
-                  labelText: "гости",
-                  itemNumbers: [2, 1, 1]
-                })
-              .filter-group__price-range
-                +range({
-                  infoText: true,
-                  labelText: "Диапазон цены"
-                })
-              .filter-group__rules
-                h3.label Правила дома
-                +checkbox
-            .filter-group
-              .filter-group__accessibility
-                +rich-checkbox({
-                  checkboxName: "accessibility",
-                  containerText: "Доступность"
-                })
-              .filter-group__rooms
-                +dropdown_type_rooms({
-                  labelText: "Удобства номера",
-                  itemNumbers: [2, 2, 0],
-                })
-              .filter-group__extras
-                +checkbox-expandable({
-                  dropdownTitleName: "Дополнительные удобства"
-                })
-        section.search-room__rooms
-          h1.search-room__text Номера, которые мы для вас подобрали
-          .search-room__result
-            for room in roomsList 
-              .search-room__card-room
-                +card-room({ roomOptions: room, theme: theme })
-          .search-room__pagination 
-            +pagination()
+    main.search-room__content
+      section.search-room__filter
+        form.search-room__form
+          .filter-group
+            .filter-group__date-range
+              +date-range_common({
+                labelText: "даты пребывания в отеле",
+                inputValue: "19 авг - 23 авг",
+                theme: theme
+              })
+            .filter-group__guests
+              +dropdown_type_guests({
+                labelText: "гости",
+                itemNumbers: [2, 1, 1]
+              })
+            .filter-group__price-range
+              +range({
+                infoText: true,
+                labelText: "Диапазон цены"
+              })
+            .filter-group__rules
+              h3.label Правила дома
+              +checkbox
+          .filter-group
+            .filter-group__accessibility
+              +rich-checkbox({
+                checkboxName: "accessibility",
+                containerText: "Доступность"
+              })
+            .filter-group__rooms
+              +dropdown_type_rooms({
+                labelText: "Удобства номера",
+                itemNumbers: [2, 2, 0],
+              })
+            .filter-group__extras
+              +checkbox-expandable({
+                dropdownTitleName: "Дополнительные удобства"
+              })
+      section.search-room__rooms
+        h1.search-room__text Номера, которые мы для вас подобрали
+        .search-room__result
+          for room in roomsList 
+            .search-room__card-room
+              +card-room({ roomOptions: room, theme: theme })
+        .search-room__pagination 
+          +pagination()
     +footer({ theme: theme })

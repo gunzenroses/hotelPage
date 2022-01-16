@@ -127,7 +127,7 @@
   }
 }
 
-.form-elements__group_first {
+.form-elements__textfields {
   @include containerSimple(321px, 636px);
   margin-right: 117px;
 
@@ -140,32 +140,32 @@
   }
 }
 
-.form-elements__container_first {
+.form-elements__container-first {
   @include isFlex($direction: column, $justify: flex-start);
   height: 322px;
   width: 100%;
   margin-top: 1px;
 }
 
-.form-elements__container_email {
+.form-elements__email {
   width: 100%;
   height: 62px;
   margin-top: 1px;
 }
 
-.form-elements__container_name {
+.form-elements__name {
   width: 100%;
   height: 62px;
   margin-top: 23px;
 }
 
-.form-elements__container_guests {
+.form-elements__guests {
   width: 100%;
   height: 61px;
   margin-top: 22px;
 }
 
-.form-elements__container_birthday {
+.form-elements__birthday {
   width: 100%;
   height: 62px;
   margin-top: 25px;
@@ -173,32 +173,32 @@
 
 }
 
-.form-elements__container_second {
+.form-elements__container-second {
   @include isFlex($direction: column, $justify: flex-start);
   min-height: 274px;
   width: 320px;
   margin-top: 37.5px;
 }
 
-.form-elements__container_date-range_separate {
+.form-elements__date-range_separate {
   @include containerSimple(100%, 62px);
 }
 
-.form-elements__container_date-range_common {
+.form-elements__date-range_common {
   @include containerMedium();
   width: 266px;
   height: 62px;
   margin-top: 43px;
 }
 
-.form-elements__container_subscibe {
+.form-elements__subscibe {
   @include containerMedium();
   width: 266px;
   height: 62px;
   margin-top: 43px;
 }
 
-.form-elements__group_second {
+.form-elements__input-buttons {
   @include containerSimple(260px, 537px);
   @include isFlex($direction: column, $justify: flex-start, $align: flex-start);
   margin-right: 124px;
@@ -208,7 +208,7 @@
   }
 }
 
-.form-elements__container_checkbox {
+.form-elements__checkbox {
   @include isFlex($direction: column);
   position: relative;
   width: 100%;
@@ -221,7 +221,7 @@
   }
 }
 
-.form-elements__container_radio {
+.form-elements__radio {
   @include isFlex($direction: column);
   width: 222px;
   height: 53px;
@@ -239,7 +239,7 @@
   user-select: none;
 }
 
-.form-elements__container_toggle {
+.form-elements__toggle {
   @include isFlex($direction: column);
     height: 87px;
     width: 268px;
@@ -262,7 +262,7 @@
   height: 58px;
 }
 
-.form-elements__container_button-like {
+.form-elements__button-like {
   @include isFlex($direction: column);
   width: 90px;
   height: 49px;
@@ -278,7 +278,7 @@
   width: 100%;
 }
 
-.form-elements__container_button-rate {
+.form-elements__button-rate {
   @include isFlex($direction: column);
   width: 100%;
   height: 53px;
@@ -294,7 +294,7 @@
 }
 
 
-.form-elements__group_third {
+.form-elements__buttons {
   @include containerSimple(320px, 503px);
   @include isFlex($direction: column, $align: flex-start, $justify: flex-start);
   margin-right: 7px;
@@ -308,12 +308,12 @@
   }
 }
 
-.form-elements__container_range {
+.form-elements__range {
   @include containerMedium();
   width: 267px;
 }
 
-.form-elements__container_buttons {
+.form-elements__buttons {
   @include isFlex($direction: column, $justify: flex-start);
   width: 320px;
   height: 269px;
@@ -380,7 +380,7 @@
   margin-left: 1px;
 }
 
-.form-elements__container_pagination {
+.form-elements__pagination {
   @include isFlex($direction: column);
   width: 241px;
   height: 104px;
@@ -392,7 +392,7 @@
   }
 }
 
-.form-elements__group_forth {
+.form-elements__dropdowns {
   @include isFlex($direction: column, $justify: flex-start, $align: flex-start);
   width: 267px;
   min-height: 647px;
@@ -404,27 +404,27 @@
   }
 }
 
-.form-elements__container_dropdowns {
+.form-elements__room-criterions {
   @include isFlex($direction: column);
   width: 266px;
   height: 146px;
 }
 
-.form-elements__container_rooms {
+.form-elements__rooms {
   width: 100%;
   height: 62px;
 }
 
-.form-elements__container_checkbox-expand_hidden {
+.form-elements__checkbox-rolled-up {
   margin-top: 158px;
   margin-left: 1px;
 }
 
-.form-elements__container_checkbox-expand {
+.form-elements__checkbox-expand {
   margin-top: 20px;
 }
 
-.form-elements__group_fifth {
+.form-elements__search-info {
   @include containerSimple(320px, 465px);
   @include isFlex($direction: column, $align: flex-start, $justify: flex-start);
   margin-top: 99px;
@@ -436,16 +436,16 @@
   }
 }
 
-.form-elements__container_guests_open {
+.form-elements__guests_open {
   width: 100%;
   height: 62px;
 }
 
-.form-elements__container_rich-checkbox {
+.form-elements__rich-checkbox {
   margin-top: 258px;
 }
 
-.form-elements__group_sixth {
+.form-elements__room-info {
   @include containerSimple(320px, 467px);
   @include isFlex($direction: column, $align: flex-start, $justify: flex-start);
   margin-top: 99px;
@@ -457,11 +457,11 @@
   }
 }
 
-.form-elements__container_bullet-checkbox {
+.form-elements__bullet-checkbox {
   margin-top: 258px;
 }
 
-.form-elements__group_seventh {
+.form-elements__badges {
   @include containerSimple(291px, fit-content);
   @include isFlex($direction: column, $justify: flex-start, $align: flex-start);
   margin-right: 120px;
@@ -474,13 +474,13 @@
   }
 }
 
-.form-elements__container_badge {
+.form-elements__badge {
   width: 100%;
   height: fit-content;
   margin-top: 20px;
 }
 
-.form-elements__group_eighth {
+.form-elements__comment {
   @include isFlex($direction: column, $align: flex-start);
   max-width: 711px;
   min-height: 133px;
