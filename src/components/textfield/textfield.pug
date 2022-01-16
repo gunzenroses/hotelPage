@@ -12,7 +12,7 @@ mixin textfield({ inputClass="", placeholder="", valueText="", nameText="text", 
         autofocus: autofocus
       })
   else if inputClass === "password"
-    div(class=`textfield_type_${inputClass}`)
+    div(class=`textfield textfield_type_${inputClass}`)
       +textfield__input({
         inputType: "password",
         placeHolder: placeholder,
@@ -22,7 +22,7 @@ mixin textfield({ inputClass="", placeholder="", valueText="", nameText="text", 
         autofocus: autofocus
       })
   else
-    div(class=`textfield_type_${inputClass}`)
+    div(class=`textfield textfield_type_${inputClass}`)
       +textfield__input({
         inputType: "text",
         placeHolder: placeholder,

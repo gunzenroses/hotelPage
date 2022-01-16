@@ -1,31 +1,24 @@
 @import '@~Assets/styles/media-mixins.scss';
 
 @import '../../__input/textfield__input.scss';
+@import '../../textfield.scss';
 @import '../_email/textfield_type_email.scss';
 @import '../_password/textfield_type_password.scss';
 
 .textfield_type_login {
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: nowrap;
-  width: 100%;
   height: 98px;
-
-  @include _450 {
-    width: 100%;
-    min-width: 260px;
-    margin: 0 auto;
-  }
+  padding: 0;
+  border: none;
 }
 
-.textfield_type_login_main {
+.textfield_type_login-in-main {
   @extend .textfield_type_login;
   margin-top: 20px;
 }
 
-.textfield_type_login_in-signin {
+.textfield_type_login-in-signin {
   @extend .textfield_type_login;
   margin-top: 20px;
 }

@@ -28,6 +28,8 @@
   }
 
   @include _450 {
+    width: 100%;
+    max-width: 260px;
     margin: 0 auto;
   }
 }

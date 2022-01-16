@@ -6,7 +6,7 @@ include ../../../components/calendar/calendar.pug
 include ../../../components/card-room/card-room.pug
 
 block variables
-  - var theme = "in-uikit"
+  - var theme = "uikit"
   - var title = "UIKit";
   - var description = "UIKit";
   - var keywords = "UIKit";
@@ -25,6 +25,7 @@ block content
         +card-booking({ 
           serviceName: "Сбор за дополнительные услуги",
           serviceStyle: "full",
+          itemNumbers: [2, 1, 0],
           theme: theme
         })
       .cards__card-signin

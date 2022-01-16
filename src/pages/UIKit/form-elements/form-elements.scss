@@ -294,7 +294,7 @@
 }
 
 
-.form-elements__buttons {
+.form-elements__clickable-objects {
   @include containerSimple(320px, 503px);
   @include isFlex($direction: column, $align: flex-start, $justify: flex-start);
   margin-right: 7px;

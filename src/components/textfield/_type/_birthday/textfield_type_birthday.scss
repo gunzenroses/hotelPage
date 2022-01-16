@@ -4,33 +4,10 @@
 @import '../../__container/textfield__container.scss';
 @import '../../__input/textfield__input.scss';
 @import '../../__label/textfield__label.scss';
+@import '../../textfield.scss';
 
 .textfield_type_birthday {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  flex-wrap: nowrap;
-  position: relative;
-  width: 100%;
-  min-width: 260px;
-  height: 44px;
   padding: 0 0 3px 13px;
-  border: 1px solid $dark-shade_less;
-  border-radius: 4px;
-  background: transparent;
-  color: $dark-shade_more;
-  letter-spacing: 0.01em;
   text-transform: uppercase;
   white-space: nowrap;
-
-  &:hover,
-  &:focus {
-    border: 1px solid $dark-shade_medium;
-  }
-
-  @include _450 {
-    width: 100%;
-    margin: 0 auto;
-  }
 }

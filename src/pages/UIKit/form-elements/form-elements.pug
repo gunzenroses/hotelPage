@@ -130,7 +130,7 @@ block content
               inputName: "rating2",
               checkedNum: 5
             })
-      .form-elements__buttons
+      .form-elements__clickable-objects
         .form-elements__range
           +range({})
         .form-elements__buttons
@@ -176,13 +176,13 @@ block content
             +pagination()
       .form-elements__dropdowns
         .form-elements__room-criterions
-          .form-elements__container-rooms.js-dropdown__detection
+          .form-elements__rooms.js-dropdown__detection
             +dropdown_type_rooms({
               labelText: "dropdown",
               labelRightText: "default",
               itemNumbers: [2, 2, 0],
             })
-          .form-elements__container-rooms.js-dropdown__detection
+          .form-elements__rooms.js-dropdown__detection
             +dropdown_type_rooms({
               labelText: "dropdown",
               dropdownClassShow: "js-expand__show",
