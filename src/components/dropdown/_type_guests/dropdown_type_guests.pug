@@ -1,6 +1,9 @@
 include ../__item/dropdown__item.pug
 
 mixin dropdown_type_guests({ labelText="", dropdownClassShow="", itemNumbers=[0, 0, 0], labelRightText="" })
+  - var buttonSubmitClass = "dropdown__button dropdown__button_type_submit";
+  - var buttonResetClass = "dropdown__button dropdown__button_type_reset";
+
   .dropdown__container_type_guests
     h3.label!= labelText
     if labelRightText
@@ -28,16 +31,16 @@ mixin dropdown_type_guests({ labelText="", dropdownClassShow="", itemNumbers=[0,
         .dropdown__buttons
           button(
             type="submit"
-            class="dropdown__button dropdown__button_type_submit js-dropdown__button_type_submit")
+            class=`${buttonSubmitClass} js-dropdown__button_type_submit`)
             != Применить
           button(
             type="reset"
-            class="dropdown__button dropdown__button_type_reset js-dropdown__button_type_reset")
+            class=`${buttonResetClass} js-dropdown__button_type_reset`)
             != Очистить
       .dropdown__info.js-dropdown__info.js-expand__init
         input.dropdown__input.js-dropdown__input(
           readonly="" 
           type="text"
-           placeholder="Сколько гостей" 
-           name="guests" 
-           value="")
+          placeholder="Сколько гостей" 
+          name="guests" 
+          value="")
