@@ -14,21 +14,7 @@ block variables
   - var description = "room details";
   - var keywords = "room details";
   - 
-    var comment1 = { 
-      authorPic: "./assets/images/avatar/avatar.jpg",
-      authorName: "Мурад Сарафанов",
-      commentTime: "5 дней назад",
-      buttonNumber: 12,
-      commentText: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей." };
-  - 
-    var comment2 = {
-      authorPic: "./assets/images/avatar/avatar-2.jpg",
-      authorName: "Патрисия Стёклышкова",
-      commentTime: "Неделю назад",
-      buttonNumber: 2,
-      commentText: "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент." };
-  - var checkboxList1 = [ "Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00" ];
-  - var cancellationRools = "Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги."
+    var { comment1, comment2, checkboxList1, cancellationRools } = require("./room-details.json");
 
 block content
   .room-details.js-dropdown__detection

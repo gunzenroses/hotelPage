@@ -10,13 +10,13 @@ block variables
   - var title = "registration";
   - var description = "registration";
   - var keywords = "registration";
-  - var pics = ["./assets/images/registration-1.jpg", "./assets/images/registration-2.jpg"];
+  - var registrationInfo = require("./registration.json");
 
 block content
   .registration.js-dropdown__detection
     +header({ user: "", theme: theme })
     main.registration__content
-      +carousel(pics)
+      +carousel(registrationInfo.pics)
       .registration__card-registration 
         +card-registration("Зарегистрироваться")
     +footer({ theme: theme })

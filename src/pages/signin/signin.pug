@@ -10,13 +10,13 @@ block variables
   - var title = "signin";
   - var description = "sign in";
   - var keywords = "sign in";
-  - var pics = ["./assets/images/signin-1.jpg", "./assets/images/signin-2.jpg"];
+  - var { signPics } =  require("./signin.json");
 
 block content
   .sign-in.js-dropdown__detection
     +header({ user: "", theme: theme })
     main.sign-in__content
-      +carousel(pics)
+      +carousel(signPics)
       .sign-in__card-signin
         +card-signin(theme)
     +footer({ theme: theme })
