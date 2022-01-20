@@ -127,31 +127,35 @@ class Calendar {
     const monthAfterCheckin = thisMonth > checkinMonth;
     const dayBeforeCheckin = parseInt(e.target.innerText, 10) < checkinDay;
     const dayAfterCheckin = parseInt(e.target.innerText, 10) > checkinDay;
-    const dayBeforeExistingCheckin = this.chooseBeforeCheckin(
+    const checkinBefore = {
       yearBeforeCheckin,
       yearCheckin,
       monthBeforeCheckin,
       monthCheckin,
       dayBeforeCheckin
-    );
-    const dayAfterExistingCheckin = this.chooseAfterCheckin(
+    };
+    const checkinAfter = {
       yearAfterCheckin,
       yearCheckin,
       monthAfterCheckin,
       monthCheckin,
       dayAfterCheckin
-    );
+    }
+    const dayBeforeExistingCheckin = this.chooseBeforeCheckin(checkinBefore);
+    const dayAfterExistingCheckin = this.chooseAfterCheckin(checkinAfter);
     return [dayBeforeExistingCheckin, dayAfterExistingCheckin];
   }
 
-  chooseBeforeCheckin(
-    yearBeforeCheckin,
-    yearCheckin,
-    monthBeforeCheckin,
-    monthCheckin,
-    dayBeforeCheckin
-  ) {
-    const monthBeforeCheckinSameYear = yearCheckin && monthBeforeCheckin;
+  chooseBeforeCheckin(options) {
+    const {
+      yearBeforeCheckin,
+      yearCheckin,
+      monthBeforeCheckin,
+      monthCheckin,
+      dayBeforeCheckin,
+    } = options;
+    const monthBeforeCheckinSameYear =
+      yearCheckin && monthBeforeCheckin;
     const daysBeforeCheckin = monthCheckin && dayBeforeCheckin;
     const dayBeforeCheckinSameYear = yearCheckin && daysBeforeCheckin;
     const beforeCheckin =
@@ -164,17 +168,20 @@ class Calendar {
     return dayBeforeExistingCheckin;
   }
 
-  chooseAfterCheckin(
-    yearAfterCheckin,
-    yearCheckin,
-    monthAfterCheckin,
-    monthCheckin,
-    dayAfterCheckin
-  ) {
+  chooseAfterCheckin(options) {
+    const {
+      yearAfterCheckin,
+      yearCheckin,
+      monthAfterCheckin,
+      monthCheckin,
+      dayAfterCheckin
+    } = options;
     const daysAfterCheckin = monthCheckin && dayAfterCheckin;
     const montAfterCheckin = yearCheckin && monthAfterCheckin;
-    const dayAfterCheckinThinYear = yearCheckin && daysAfterCheckin;
-    const dayOrMonthAfterCheckin = montAfterCheckin || dayAfterCheckinThinYear;
+    const dayAfterCheckinThinYear =
+      yearCheckin && daysAfterCheckin;
+    const dayOrMonthAfterCheckin =
+      montAfterCheckin || dayAfterCheckinThinYear;
     const afterCheckin = yearAfterCheckin || dayOrMonthAfterCheckin;
     const dayAfterExistingCheckin = this.existCheckinOnly
       ? afterCheckin
@@ -565,7 +572,10 @@ class Calendar {
       const yearOut = this.checkout
         ? this.checkout.getFullYear() === this.year
         : false;
-      const inOutCurrYear = this.betweenInOutCurrYear(n, yearIn, yearOut);
+      const optionsInOutYear = {
+        n, yearIn, yearOut
+      }
+      const inOutCurrYear = this.betweenInOutCurrYear(optionsInOutYear);
       const inOutNextYear = this.betweenInOutNextYear(yearIn, yearOut);
       const checkoutNextMonthOrYear =
         this.checkoutNextMonth(n, yearOut) || this.checkoutNextYear(n);
@@ -625,9 +635,10 @@ class Calendar {
     return checkoutNextYear;
   }
 
-  betweenInOutCurrYear(n, yearCheckin, yearCheckout) {
+  betweenInOutCurrYear(options) {
+    const { n, yearIn, yearOut } = options;
     const betweenInOutCurrYear =
-      yearCheckin && yearCheckout
+      yearIn && yearOut
         ? (this.checkout.getMonth() > this.month &&
             this.checkin.getMonth() <= this.month) ||
           (this.checkout.getMonth() === this.month + 1 &&
