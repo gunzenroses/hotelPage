@@ -1,6 +1,6 @@
 {
   "presets": [
-    "env"
+    "@babel/preset-env"
   ],
   "plugins": [
     [
@@ -15,6 +15,12 @@
           "Components": "./src/components/",
           "Pages": ".src/pages/"
         }
+      }
+    ],
+    [
+      "@babel/plugin-proposal-decorators",
+      {
+        "legacy": true
       }
     ]
   ]

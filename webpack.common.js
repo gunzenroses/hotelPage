@@ -18,13 +18,13 @@ module.exports = {
     __dirname: true,
   },
   entry: {
-    "index": "./src/index.js",
-    "UIKit": "./src/pages/UIKit/UIKit.js",
+    index: "./src/index.js",
+    UIKit: "./src/pages/UIKit/UIKit.js",
     "landing-page": "./src/pages/landing-page/landing-page.js",
     "search-room": "./src/pages/search-room/search-room.js",
     "room-details": "./src/pages/room-details/room-details.js",
-    "registration": "./src/pages/registration/registration.js",
-    "signin": "./src/pages/signin/signin.js",
+    registration: "./src/pages/registration/registration.js",
+    signin: "./src/pages/signin/signin.js",
   },
   resolve: {
     extensions: [".js", ".scss"],
@@ -37,7 +37,7 @@ module.exports = {
       Components: path.resolve(__dirname, "src/components/"),
       Pages: path.resolve(__dirname, "src/pages/"),
     },
-    modules: [path.resolve(__dirname, 'src'), 'node_modules'],
+    modules: [path.resolve(__dirname, "src"), "node_modules"],
   },
   module: {
     rules: [
@@ -45,8 +45,8 @@ module.exports = {
         test: /\.js$/,
         exclude: [/node_modules/],
         loader: "babel-loader",
-        options: { 
-          presets: ["es2015"] 
+        options: {
+          presets: [["@babel/preset-env", { targets: "defaults" }]],
         },
       },
       {
@@ -55,39 +55,39 @@ module.exports = {
       },
       {
         test: /fonts.*\.svg$/,
-        exclude: [path.resolve(__dirname, './src/components/')],
-        use: [ 
+        exclude: [path.resolve(__dirname, "./src/components/")],
+        use: [
           {
-            loader: 'file-loader',
+            loader: "file-loader",
             options: {
-              name: '[name].[ext]',
-              outputPath: 'assets/fonts/',
+              name: "[name].[ext]",
+              outputPath: "assets/fonts/",
               esModule: false,
             },
           },
           {
-            loader: 'svgo-loader',
-          }
-        ]
+            loader: "svgo-loader",
+          },
+        ],
       },
       {
         test: /fonts.*\.(woff2?|eot|ttf|otf)(\?.*)?$/,
         loader: "file-loader",
         options: {
-          name: '[name].[ext]',
-          outputPath: 'assets/fonts/',
+          name: "[name].[ext]",
+          outputPath: "assets/fonts/",
           esModule: false,
         },
       },
       {
         test: /components.*\.(png|jpg|svg|gif)$/,
-        loader: 'file-loader',
+        loader: "file-loader",
         options: {
-            name: '[name].[ext]',
-            outputPath: 'assets/images/',
-            esModule: false,
-        }
-      }
+          name: "[name].[ext]",
+          outputPath: "assets/images/",
+          esModule: false,
+        },
+      },
     ],
   },
 
@@ -103,19 +103,22 @@ module.exports = {
         { from: "src/assets/images", to: "assets/images" },
         { from: "src/assets/favicons", to: "assets/favicons" },
       ],
-    }), 
+    }),
     new HtmlWebpackPlugin({
       filename: "index.html",
       template: `${PATHS.src}/index.pug`,
       chunks: ["index"],
       inject: "body",
     }),
-    ...PAGES.map(page => new HtmlWebpackPlugin({
-      filename: `${page}.html`,
-      template: `${PAGES_DIR}/${page}/${page}.pug`,
-      chunks: [`${page}`],
-      inject: "body",
-      cache: false,
-    }))
+    ...PAGES.map(
+      (page) =>
+        new HtmlWebpackPlugin({
+          filename: `${page}.html`,
+          template: `${PAGES_DIR}/${page}/${page}.pug`,
+          chunks: [`${page}`],
+          inject: "body",
+          cache: false,
+        })
+    ),
   ],
 };
