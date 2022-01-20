@@ -3,5 +3,8 @@ include ./__item/button-rate__item.pug
 mixin button-rate({ inputName="rating", checkedNum=1 }) 
   .button-rate
     each val in [5, 4, 3, 2, 1]
-      +button-rate__item(inputName, val, checkedNum)
-
+      +button-rate__item({ 
+        inputName: inputName,
+        inputValue: val,
+        checkedNum: checkedNum
+      })

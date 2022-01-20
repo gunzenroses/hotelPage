@@ -1,13 +1,27 @@
 mixin dropdown__item({ itemDataType, itemText, itemDataOrder, itemNumber=0, itemClass="" })
+  - var dropdownItemClass = "dropdown__item js-dropdown__item";
+  - var dropdownTextClass = "dropdown__text";
+  - var dropdownMinusClass = "dropdown__minus js-dropdown__minus";
+  - var dropdownNumberClass = "dropdown__number js-dropdown__number";
+  - var dropdownPlusClass = "dropdown__plus js-dropdown__plus";
   if itemClass === ""
-    .dropdown__item.js-dropdown__item(data-type=itemDataType)
-      .dropdown__text!= itemText
-      .dropdown__minus.js-dropdown__minus.js-button_disabled - 
-      .dropdown__number.js-dropdown__number(data-order=itemDataOrder)= itemNumber
-      .dropdown__plus.js-dropdown__plus +
+    div(
+      class=`${dropdownItemClass}` 
+      data-type=itemDataType)
+      div(class=`${dropdownTextClass}`)= itemText
+      div(class=`${dropdownMinusClass} js-button_disabled`) - 
+      div(class=`${dropdownNumberClass}` data-order=itemDataOrder)
+        != itemNumber
+      div(class=`${dropdownPlusClass}`) +
   else
-    .dropdown__item.dropdown__item_last.js-dropdown__item(data-type=itemDataType)
-      .dropdown__text.dropdown__text_last!= itemText
-      .dropdown__minus.dropdown__minus_last.js-dropdown__minus.js-button_disabled - 
-      .dropdown__number.dropdown__number_last.js-dropdown__number(data-order=itemDataOrder)= itemNumber 
-      .dropdown__plus.dropdown__plus_last.js-dropdown__plus +
+    
+    div(
+      class=`${dropdownItemClass} dropdown__item_last` 
+      data-type=itemDataType)
+      div(class=`${dropdownTextClass} dropdown__text_last`)= itemText
+      div(
+        class=`${dropdownMinusClass} dropdown__minus_last js-button_disabled`) - 
+      div(
+        class=`${dropdownNumberClass} dropdown__number_last` 
+        data-order=itemDataOrder)= itemNumber 
+      div(class=`${dropdownPlusClass} dropdown__plus_last`) +
