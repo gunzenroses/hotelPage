@@ -1,4 +1,5 @@
-import paginationData1 from 'Scripts/my-data';
+import { boundMethod } from "autobind-decorator";
+import paginationData1 from "Scripts/my-data";
 
 class Pagination {
   constructor(item) {
@@ -10,68 +11,61 @@ class Pagination {
 
   createContainer(item) {
     this.paginationContainer = item;
-    this.pageButtons = document.createElement('div');
-    this.pageButtons.classList.add('js-pagination__buttons');
+    this.pageButtons = document.createElement("div");
+    this.pageButtons.classList.add("js-pagination__buttons");
     this.paginationContainer.prepend(this.pageButtons);
 
-    this.paginationInfo = document.createElement('div');
-    this.paginationInfo.classList.add('js-pagination__info');
+    this.paginationInfo = document.createElement("div");
+    this.paginationInfo.classList.add("js-pagination__info");
     this.paginationContainer.append(this.paginationInfo);
   }
 
   init() {
     this.render();
     this.createChildren();
-    this.setupHandlers();
     this.enable();
   }
 
   createChildren() {
     this.buttonItems = Array.from(
-      this.pageButtons.querySelectorAll('.js-pagination__item')
+      this.pageButtons.querySelectorAll(".js-pagination__item")
     );
     this.buttonFirst = this.pageButtons.querySelector(
-      '.js-pagination__button_first'
+      ".js-pagination__button_first"
     );
     this.buttonLast = this.pageButtons.querySelector(
-      '.js-pagination__button_last'
+      ".js-pagination__button_last"
     );
-    this.buttonNext = this.num < this.data.totalNum
-      ? this.pageButtons.querySelector('.js-pagination__button_next')
-      : null;
-    this.buttonPrev = this.num > 3
-      ? this.pageButtons.querySelector('.js-pagination__button_prev')
-      : null;
-  }
-
-  setupHandlers() {
-    this.onButtonClickHandler = this.onButtonClick.bind(this);
-    this.onButtonNextHandler = this.onButtonNextClick.bind(this);
-    this.onButtonPrevHandler = this.onButtonPrevClick.bind(this);
-    this.onButtonFirstHandler = this.onButtonFirstClick.bind(this);
-    this.onButtonLastHandler = this.onButtonLastClick.bind(this);
+    this.buttonNext =
+      this.num < this.data.totalNum
+        ? this.pageButtons.querySelector(".js-pagination__button_next")
+        : null;
+    this.buttonPrev =
+      this.num > 3
+        ? this.pageButtons.querySelector(".js-pagination__button_prev")
+        : null;
   }
 
   enable() {
     this.buttonItems.forEach((item) => {
-      item.addEventListener('click', this.onButtonClickHandler);
+      item.addEventListener("click", this.onButtonClick);
     });
     if (this.buttonNext) {
-      this.buttonNext.addEventListener('click', this.onButtonNextHandler);
+      this.buttonNext.addEventListener("click", this.onButtonNextClick);
     }
     if (this.buttonPrev) {
-      this.buttonPrev.addEventListener('click', this.onButtonPrevHandler);
+      this.buttonPrev.addEventListener("click", this.onButtonPrevClick);
     }
     if (this.buttonFirst) {
-      this.buttonFirst.addEventListener('click', this.onButtonFirstHandler);
+      this.buttonFirst.addEventListener("click", this.onButtonFirstClick);
     }
     if (this.buttonLast) {
-      this.buttonLast.addEventListener('click', this.onButtonLastHandler);
+      this.buttonLast.addEventListener("click", this.onButtonLastClick);
     }
   }
 
   render() {
-    this.pageButtons.innerHTML = '';
+    this.pageButtons.innerHTML = "";
     this.countMinMax();
     this.makeNumberButtons();
     this.makeNavigationButtons();
@@ -107,13 +101,13 @@ class Pagination {
   }
 
   addButton(i) {
-    const button = document.createElement('button');
+    const button = document.createElement("button");
     button.innerText = i;
     button.value = i;
     if (i === this.num) {
-      button.classList.add('js-pagination__button_current');
+      button.classList.add("js-pagination__button_current");
     } else {
-      button.classList.add('js-pagination__item');
+      button.classList.add("js-pagination__item");
     }
     return button;
   }
@@ -130,60 +124,57 @@ class Pagination {
   }
 
   addRestButton() {
-    this.pageButtons.innerHTML = `${
-      this.pageButtons.innerHTML
-    }<button value='4' class='js-pagination__item'>...</button>`;
+    this.pageButtons.innerHTML = `${this.pageButtons.innerHTML}<button value='4' class='js-pagination__item'>...</button>`;
   }
 
   addLastButton() {
-    this.pageButtons.innerHTML = `${
-      this.pageButtons.innerHTML
-    }<button class='js-pagination__button_last'>15</button>`;
+    this.pageButtons.innerHTML = `${this.pageButtons.innerHTML}<button class='js-pagination__button_last'>15</button>`;
   }
 
   addPrevButton() {
-    this.pageButtons.innerHTML = `<button class='js-pagination__button_prev'></button>${
-      this.pageButtons.innerHTML}`;
+    this.pageButtons.innerHTML = `<button class='js-pagination__button_prev'></button>${this.pageButtons.innerHTML}`;
   }
 
   addNextButton() {
-    this.pageButtons.innerHTML = `${
-      this.pageButtons.innerHTML
-    }<button class='js-pagination__button_next'></button>`;
+    this.pageButtons.innerHTML = `${this.pageButtons.innerHTML}<button class='js-pagination__button_next'></button>`;
   }
 
   addFirstButton() {
-    this.pageButtons.innerHTML = `<button class='js-pagination__button_first'>1</button>${
-      this.pageButtons.innerHTML}`;
+    this.pageButtons.innerHTML = `<button class='js-pagination__button_first'>1</button>${this.pageButtons.innerHTML}`;
   }
 
   makeInfoLine() {
-    this.paginationInfo.innerHTML = '';
+    this.paginationInfo.innerHTML = "";
     const trimStart = (this.num - 1) * this.data.itemsPerPage + 1;
     const trimEnd = trimStart + this.data.itemsPerPage - 1;
-    this.paginationInfo.innerText = `${ trimStart } – ${ trimEnd } из 100+ вариантов аренды`;
+    this.paginationInfo.innerText = `${trimStart} – ${trimEnd} из 100+ вариантов аренды`;
   }
 
+  @boundMethod
   onButtonClick(e) {
     this.num = parseInt(e.target.value, 10);
     this.init();
   }
 
+  @boundMethod
   onButtonNextClick() {
     this.num += 1;
     this.init();
   }
 
+  @boundMethod
   onButtonPrevClick() {
     this.num -= 1;
     this.init();
   }
 
+  @boundMethod
   onButtonFirstClick() {
     this.num = 1;
     this.init();
   }
 
+  @boundMethod
   onButtonLastClick() {
     this.num = 15;
     this.init();

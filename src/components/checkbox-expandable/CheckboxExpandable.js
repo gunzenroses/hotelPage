@@ -1,3 +1,5 @@
+import { boundMethod } from "autobind-decorator";
+
 class CheckboxExpandable {
   constructor(dropdown) {
     this.dropdown = dropdown;
@@ -6,30 +8,26 @@ class CheckboxExpandable {
 
   init() {
     this.createChildren();
-    this.setupHandlers();
     this.enable();
   }
 
   createChildren() {
     this.dropdownInit = this.dropdown.querySelector(
-      '.js-checkbox-expandable__init'
+      ".js-checkbox-expandable__init"
     );
     this.dropdownExpand = this.dropdown.querySelector(
-      '.js-checkbox-expandable__content'
+      ".js-checkbox-expandable__content"
     );
     this.dropdownParent = this.dropdownInit.parentElement;
   }
 
-  setupHandlers() {
-    this.dropdownClickHandler = this.dropdownClick.bind(this);
-  }
-
   enable() {
-    this.dropdownInit.addEventListener('click', this.dropdownClickHandler);
+    this.dropdownInit.addEventListener("click", this.dropdownClick);
   }
 
+  @boundMethod
   dropdownClick() {
-    this.dropdownExpand.classList.toggle('js-checkbox-expandable__show');
+    this.dropdownExpand.classList.toggle("js-checkbox-expandable__show");
   }
 }
 

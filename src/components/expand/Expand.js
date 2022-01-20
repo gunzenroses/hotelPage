@@ -1,3 +1,5 @@
+import { boundMethod } from "autobind-decorator";
+
 class Expand {
   constructor(dropdownWatch) {
     this.dropdownWatch = dropdownWatch;
@@ -6,7 +8,6 @@ class Expand {
 
   init() {
     this.createChildren();
-    this.setupHandlers();
     this.enable();
   }
 
@@ -14,7 +15,7 @@ class Expand {
     this.dropdownWatchedParents = [];
     this.dropdownWatchedExpands = [];
     this.dropdownWatchedInits = Array.from(
-      this.dropdownWatch.querySelectorAll('.js-expand__init')
+      this.dropdownWatch.querySelectorAll(".js-expand__init")
     );
     this.dropdownWatchedInits.forEach((item) => {
       this.dropdownWatchedParents.push(item.parentElement);
@@ -22,22 +23,19 @@ class Expand {
 
     this.dropdownWatchedParents.forEach((item) => {
       this.dropdownWatchedExpands.push(
-        item.querySelector('.js-expand__content')
+        item.querySelector(".js-expand__content")
       );
     });
   }
 
-  setupHandlers() {
-    this.dropdownClickHandler = this.dropdownClick.bind(this);
-  }
-
   enable() {
-    this.dropdownWatch.addEventListener('click', this.dropdownClickHandler);
+    this.dropdownWatch.addEventListener("click", this.dropdownClick);
   }
 
+  @boundMethod
   dropdownClick(event) {
-    const hasInnerExpand = event.target.closest('.js-expand__show');
-    const hasExpand = event.target.closest('.js-expand__init');
+    const hasInnerExpand = event.target.closest(".js-expand__show");
+    const hasExpand = event.target.closest(".js-expand__init");
     const hasParent = event.target.parentElement;
     const noExpand = !hasInnerExpand && !hasExpand;
     const el = event.target;
@@ -48,24 +46,24 @@ class Expand {
   }
 
   expandElement(el) {
-    const innerParent = el.closest('.js-expand__init').parentElement;
-    const innerExpand = innerParent.querySelector('.js-expand__content');
-    innerExpand.classList.toggle('js-expand__show');
+    const innerParent = el.closest(".js-expand__init").parentElement;
+    const innerExpand = innerParent.querySelector(".js-expand__content");
+    innerExpand.classList.toggle("js-expand__show");
   }
 
   expandInner(el) {
     this.dropdownWatchedExpands.forEach((item, index) => {
-      if (el.closest('.js-expand__init') !== this.dropdownWatchedInits[index]) {
-        item.classList.remove('js-expand__show');
+      if (el.closest(".js-expand__init") !== this.dropdownWatchedInits[index]) {
+        item.classList.remove("js-expand__show");
       } else {
-        item.classList.toggle('js-expand__show');
+        item.classList.toggle("js-expand__show");
       }
     });
   }
 
   hideElements() {
     this.dropdownWatchedExpands.forEach((item) => {
-      item.classList.remove('js-expand__show');
+      item.classList.remove("js-expand__show");
     });
   }
 }
