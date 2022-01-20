@@ -114,7 +114,7 @@ class RoomCarousel {
         this.leftValue = 0;
         break;
     }
-    this.carouselPictures.style.left = `${this.leftValue}%`;
+    this.carouselPictures.style.left = `${ this.leftValue }%`;
   }
 }
 
