@@ -208,12 +208,12 @@ class Calendar {
     if (this.existCheckinCheckout) {
       this.rangeStartMonth = this.months[this.checkin.getMonth()].slice(0, 3);
       this.rangeEndMonth = this.months[this.checkout.getMonth()].slice(0, 3);
-      const checkinInfo = `${this.checkin.getDate()} ${this.rangeStartMonth}`;
-      const checkoutInfo = `${this.checkout.getDate()} ${this.rangeEndMonth}`;
-      this.rangeSpanText = `${checkinInfo} - ${checkoutInfo}`;
+      const checkinInfo = `${ this.checkin.getDate() } ${ this.rangeStartMonth }`;
+      const checkoutInfo = `${ this.checkout.getDate() } ${ this.rangeEndMonth }`;
+      this.rangeSpanText = `${ checkinInfo } - ${ checkoutInfo }`;
     } else if (this.existCheckinOnly) {
       this.rangeStartMonth = this.months[this.checkin.getMonth()].slice(0, 3);
-      this.rangeSpanText = `${this.checkin.getDate()} ${this.rangeStartMonth}`;
+      this.rangeSpanText = `${ this.checkin.getDate() } ${ this.rangeStartMonth }`;
     } else {
       this.rangeSpanText = "";
     }
@@ -233,21 +233,21 @@ class Calendar {
   applyStart() {
     const monthBefore10 = parseInt(this.checkin.getMonth() + 1, 10) < 10;
     this.rangeStartMonth = monthBefore10
-      ? `0${parseInt(this.checkin.getMonth() + 1, 10)}`
+      ? `0${ parseInt(this.checkin.getMonth() + 1, 10) }`
       : parseInt(this.checkin.getMonth() + 1, 10);
-    return `${this.checkin.getDate()}.${
+    return `${ this.checkin.getDate() }.${
       this.rangeStartMonth
-    }.${this.checkin.getFullYear()}`;
+    }.${ this.checkin.getFullYear() }`;
   }
 
   applyEnd() {
     const monthBefore10 = parseInt(this.checkout.getMonth() + 1, 10) < 10;
     this.rangeEndMonth = monthBefore10
-      ? `0${parseInt(this.checkout.getMonth() + 1, 10)}`
+      ? `0${ parseInt(this.checkout.getMonth() + 1, 10) }`
       : parseInt(this.checkout.getMonth() + 1, 10);
-    return `${this.checkout.getDate()}.${
+    return `${ this.checkout.getDate() }.${
       this.rangeEndMonth
-    }.${this.checkout.getFullYear()}`;
+    }.${ this.checkout.getFullYear() }`;
   }
 
   // ------------------end applyStartOrEnd-------------------//
@@ -302,9 +302,12 @@ class Calendar {
     const ifLastDaySunday = this.dayOfWeekLast === 0;
     this.nextMonthDay = ifLastDaySunday ? 6 : this.dayOfWeekLast - 1;
     this.daysLeft = ifLastDaySunday ? 0 : 7 - this.dayOfWeekLast;
-    this.dateInCalendar.textContent = `${this.months[this.month]} ${this.year}`;
+    this.dateInCalendar.textContent = `${
+      this.months[this.month]} ${ this.year }`;
 
-    this.daysOfMonth.innerHTML = `${this.renderPrevMonth()} ${this.renderCurrentMonth()} ${this.renderNextMonth()}`;
+    this.daysOfMonth.innerHTML = `${
+      this.renderPrevMonth()} ${
+      this.renderCurrentMonth()} ${ this.renderNextMonth() }`;
   }
 
   renderPrevMonth() {
@@ -317,17 +320,18 @@ class Calendar {
       const betweenInOutYears =
         betweenInOutOneYear || this.betweenInOutDiffYears(prevDay);
       if (this.checkinPrevMonth(prevDay) || this.checkinPrevYear(prevDay)) {
-        prevDays += `<div class="calendar__day_prev_checkin">${prevDay}</div>`;
+        prevDays += `<div class="calendar__day_prev_checkin">${ prevDay }</div>`;
       } else if (
         this.checkoutPrevMonth(prevDay) ||
         this.checkoutPrevYear(prevDay)
       ) {
-        prevDays += `<div class="calendar__day_prev_checkout">${prevDay}</div>`;
+        prevDays += `<div class="calendar__day_prev_checkout">${ prevDay }</div>`;
       } else if (this.betweenInOutPrevMonth(prevDay) || betweenInOutYears) {
-        prevDays += `<div class="calendar__day_ranged_between">${prevDay}</div>`;
+        prevDays += `<div class="calendar__day_ranged_between">${
+          prevDay}</div>`;
       } else {
         prevDays += `<div class="calendar__day_prev js-calendar__day_prev">
-            ${prevDay}
+            ${ prevDay }
           </div>`;
       }
     }
@@ -454,17 +458,17 @@ class Calendar {
     let currDays = "";
     for (let i = 1; i <= this.lastDay; i += 1) {
       if (this.checkinToday(i)) {
-        currDays += `<div class="calendar__day_checkin">${i}</div>`;
+        currDays += `<div class="calendar__day_checkin">${ i }</div>`;
       } else if (this.checkinCurrMonth(i)) {
-        currDays += `<div class="calendar__day_checkin">${i}</div>`;
+        currDays += `<div class="calendar__day_checkin">${ i }</div>`;
       } else if (this.checkoutCurrMonth(i)) {
-        currDays += `<div class="calendar__day_checkout">${i}</div>`;
+        currDays += `<div class="calendar__day_checkout">${ i }</div>`;
       } else if (this.todayCurrMonth(i)) {
-        currDays += `<div class="calendar__today">${i}</div>`;
+        currDays += `<div class="calendar__today">${ i }</div>`;
       } else if (this.betweenInOutCurrentMonth(i)) {
-        currDays += `<div class="calendar__day_ranged">${i}</div>`;
+        currDays += `<div class="calendar__day_ranged">${ i }</div>`;
       } else {
-        currDays += `<div class="calendar__day">${i}</div>`;
+        currDays += `<div class="calendar__day">${ i }</div>`;
       }
     }
     return currDays;
@@ -582,13 +586,14 @@ class Calendar {
       const betweenInOutAYear = inOutCurrYear || inOutNextYear;
 
       if (this.checkinNextMonth(n, yearIn) || this.checkinNextYear(n)) {
-        nextDays += `<div class="calendar__day_next_checkin">${n}</div>`;
+        nextDays += `<div class="calendar__day_next_checkin">${ n }</div>`;
       } else if (checkoutNextMonthOrYear) {
-        nextDays += `<div class="calendar__day_next_checkout">${n}</div>`;
+        nextDays += `<div class="calendar__day_next_checkout">${ n }</div>`;
       } else if (betweenInOutAYear) {
-        nextDays += `<div class="calendar__day_ranged_between">${n}</div>`;
+        nextDays += `<div class="calendar__day_ranged_between">${ n }</div>`;
       } else {
-        nextDays += `<div class="calendar__day_next js-calendar__day_next">${n}</div>`;
+        nextDays += 
+          `<div class="calendar__day_next js-calendar__day_next">${ n }</div>`;
       }
     }
     return nextDays;
