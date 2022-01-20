@@ -11,8 +11,13 @@ mixin comment(commentData)
       commentText="none" } = commentData
   .comment
     .comment__head
-      img(src=authorPic alt="profile picture").comment__pic
-      +info({ title: authorName, description: commentTime })
+      img(
+        src=authorPic 
+        alt="profile picture").comment__pic
+      +info({ 
+        title: authorName, 
+        description: commentTime 
+      })
     .comment__body
       .comment__likes
         +button-like(buttonNumber)
