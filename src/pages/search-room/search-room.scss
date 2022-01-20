@@ -21,7 +21,7 @@
     margin-top: 40px;
   }
 
-  @include _1070 {
+  @include _1170 {
     margin-top: 30px;
   }
 }
@@ -59,19 +59,19 @@
     }
 
     @include _1400 {
+      justify-content: space-around;
       height: fit-content;
-      width: 1167px;
-      padding: 27px auto 68px;
+      width: 100%;
+      padding: 5% 7%;
     }
 
-    @include _1340 {
-      width: 980px;
-      height: auto;
-    }
-
-    @include _1070 {
+    @include _1170 {
       flex-direction: column;
       width: 100%;
+    }
+
+    @include _450 {
+      padding: 0;
     }
   }
 
@@ -85,21 +85,13 @@
       height: fit-content;
     }
 
-    @include _1340 {
-      margin-left: 25px;
-    }
-
-    @include _1070 {
+    @include _1170 {
       height: auto;
-      margin: 0 auto;
-    }
-
-    @include _1070 {
-      width: 637px;
+      width: 650px;
       margin: 0 auto 30px;
     }
 
-    @include _700 {
+    @include _750 {
       width: 100%;
     }
   }
@@ -107,16 +99,13 @@
   &__form {
     width: 100%;
 
-    @include _1070 {
+    @include _1170 {
+      @include isFlex($direction: row, $wrap: wrap);
       height: auto;
       margin: 0 auto;
     }
 
-    @include _1070 {
-      @include isFlex($direction: row, $wrap: wrap);
-    }
-
-    @include _700 {
+    @include _750 {
       flex-direction: column;
       width: 380px;
     }
@@ -143,13 +132,12 @@
       height: auto;
     }
 
-    @include _1070 {
-      margin: 20px auto;
+    @include _1170 {
+      width: 100%;
     }
 
-    @include _700 {
+    @include _850 {
       flex-direction: column;
-      width: 380px;
     }
 
     @include _450 {
@@ -166,8 +154,9 @@
     line-height: 37px;
     letter-spacing: 0.0001em;
 
-    @include _1070 {
-      margin: 20px auto;
+    @include _1170 {
+      margin: 30px auto;
+      text-align: center;
     }
 
     @include _450 {
@@ -197,8 +186,7 @@
     }
 
     @include _450 {
-      width: 85vw;
-      min-width: 320px;
+      width: 85%;
     }
   }
 
@@ -220,7 +208,7 @@
   }
 
   &__filter-group {
-    @include _700 {
+    @include _750 {
       width: 100%;
     }
   }
