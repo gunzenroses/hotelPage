@@ -1,3 +1,5 @@
+import { boundMethod } from "autobind-decorator";
+
 export default class DropdownGuests {
   constructor(item) {
     this.container = item;
@@ -12,31 +14,30 @@ export default class DropdownGuests {
       this.showItemNumber(i);
     });
     this.totalGuestsCount();
-    this.enableHandlers();
     this.enableEventListeners();
   }
 
   createChildren() {
-    this.dropdownExpanded = this.container.querySelector('.js-expand__content');
-    this.info = this.container.querySelector('.js-dropdown__info');
-    this.infoInput = this.container.querySelector('.js-dropdown__input');
+    this.dropdownExpanded = this.container.querySelector(".js-expand__content");
+    this.info = this.container.querySelector(".js-dropdown__info");
+    this.infoInput = this.container.querySelector(".js-dropdown__input");
     this.dropdownItems = Array.from(
-      this.container.querySelectorAll('.js-dropdown__item')
+      this.container.querySelectorAll(".js-dropdown__item")
     );
     this.dropdownMinuses = this.container.querySelectorAll(
-      '.js-dropdown__minus'
+      ".js-dropdown__minus"
     );
     this.resetButton = this.dropdownExpanded.querySelector(
-      '.js-dropdown__button_type_reset'
+      ".js-dropdown__button_type_reset"
     );
     this.submitButton = this.dropdownExpanded.querySelector(
-      '.js-dropdown__button_type_submit'
+      ".js-dropdown__button_type_submit"
     );
   }
 
   makeData() {
     const nums = Array.from(
-      this.container.querySelectorAll('.js-dropdown__number')
+      this.container.querySelectorAll(".js-dropdown__number")
     );
     nums.forEach((num) => {
       const value = parseInt(num.textContent, 10);
@@ -44,22 +45,17 @@ export default class DropdownGuests {
     });
   }
 
-  enableHandlers() {
-    this.plusAndMinusHandler = this.plusAndMinusToItem.bind(this);
-    this.resetGuestsHandler = this.resetGuests.bind(this);
-    this.submitGuestsHandler = this.submitGuests.bind(this);
-  }
-
   enableEventListeners() {
-    this.dropdownExpanded.addEventListener('click', this.plusAndMinusHandler);
-    this.resetButton.addEventListener('click', this.resetGuestsHandler);
-    this.submitButton.addEventListener('click', this.submitGuestsHandler);
+    this.dropdownExpanded.addEventListener("click", this.plusAndMinusToItem);
+    this.resetButton.addEventListener("click", this.resetGuests);
+    this.submitButton.addEventListener("click", this.submitGuests);
   }
 
+  @boundMethod
   plusAndMinusToItem(e) {
     const trg = e.target;
-    if (trg.classList.contains('js-dropdown__minus')) this.minusToItem(trg);
-    if (trg.classList.contains('js-dropdown__plus')) this.plusToItem(trg);
+    if (trg.classList.contains("js-dropdown__minus")) this.minusToItem(trg);
+    if (trg.classList.contains("js-dropdown__plus")) this.plusToItem(trg);
   }
 
   minusToItem(trg) {
@@ -76,6 +72,7 @@ export default class DropdownGuests {
     this.totalGuestsCount();
   }
 
+  @boundMethod
   resetGuests(e) {
     e.preventDefault();
     this.data = [0, 0, 0];
@@ -85,15 +82,16 @@ export default class DropdownGuests {
     this.onZeroGuests();
   }
 
+  @boundMethod
   submitGuests(e) {
     e.preventDefault();
-    this.dropdownExpanded.classList.remove('js-expand__show');
+    this.dropdownExpanded.classList.remove("js-expand__show");
   }
 
   showItemNumber(i) {
     this.data[i] = this.data[i] < 0 ? 0 : this.data[i] > 10 ? 10 : this.data[i];
     const dropdownItem = this.dropdownItems[i].querySelector(
-      '.js-dropdown__number'
+      ".js-dropdown__number"
     );
     dropdownItem.innerText = this.data[i];
     this.activateMinus(i);
@@ -101,9 +99,9 @@ export default class DropdownGuests {
 
   activateMinus(i) {
     if (this.data[i] > 0) {
-      this.dropdownMinuses[i].classList.remove('js-button_disabled');
+      this.dropdownMinuses[i].classList.remove("js-button_disabled");
     } else {
-      this.dropdownMinuses[i].classList.add('js-button_disabled');
+      this.dropdownMinuses[i].classList.add("js-button_disabled");
     }
   }
 
@@ -120,12 +118,12 @@ export default class DropdownGuests {
   }
 
   onZeroGuests() {
-    this.resetButton.classList.remove('js-button__show');
-    this.infoInput.value = '';
+    this.resetButton.classList.remove("js-button__show");
+    this.infoInput.value = "";
   }
 
   onSomeGuests() {
-    this.resetButton.classList.add('js-button__show');
+    this.resetButton.classList.add("js-button__show");
     this.render();
   }
 
@@ -137,16 +135,16 @@ export default class DropdownGuests {
     const onlyInfants = this.adultGuests < 1 && this.infantGuests > 0;
     const adultsWithInfants = this.adultGuests > 0 && this.infantGuests > 0;
 
-    const adultsInfo = `${ this.adultGuests } ${ adultWord }`;
-    const infantsInfo = `${ this.infantGuests } ${ infantWord }`;
+    const adultsInfo = `${this.adultGuests} ${adultWord}`;
+    const infantsInfo = `${this.infantGuests} ${infantWord}`;
 
-    this.infoInput.value = (onlyAdults)
+    this.infoInput.value = onlyAdults
       ? adultsInfo
-      : ((onlyInfants)
-        ? infantsInfo
-        : (adultsWithInfants
-          ? `${ adultsInfo }, ${ infantsInfo }`
-          : ''));
+      : onlyInfants
+      ? infantsInfo
+      : adultsWithInfants
+      ? `${adultsInfo}, ${infantsInfo}`
+      : "";
   }
 
   matchWordForAdult() {
@@ -154,7 +152,7 @@ export default class DropdownGuests {
     switch (this.adultGuests) {
       case 1:
       case 21:
-        form = 'гость';
+        form = "гость";
         break;
       case 2:
       case 3:
@@ -162,10 +160,10 @@ export default class DropdownGuests {
       case 22:
       case 23:
       case 24:
-        form = 'гостя';
+        form = "гостя";
         break;
       default:
-        form = 'гостей';
+        form = "гостей";
         break;
     }
     return form;
@@ -176,7 +174,7 @@ export default class DropdownGuests {
     switch (this.infantGuests) {
       case 1:
       case 21:
-        form = 'младенец';
+        form = "младенец";
         break;
       case 2:
       case 3:
@@ -184,10 +182,10 @@ export default class DropdownGuests {
       case 22:
       case 23:
       case 24:
-        form = 'младенца';
+        form = "младенца";
         break;
       default:
-        form = 'младенцев';
+        form = "младенцев";
         break;
     }
     return form;
