@@ -1,7 +1,8 @@
 mixin date-range__item({ labelText="", inputName="", inputValue="", dateDataType="", maxLength=10, theme="" })
   - 
     var className = 
-      theme === "search" ? `date-range__info date-range__info_in-${theme}` : "date-range__info"
+      theme === "search" ? `date-range__info date-range__info_in-${
+        theme }` : "date-range__info"
 
   if dateDataType === "date-range"
     .date-range__item

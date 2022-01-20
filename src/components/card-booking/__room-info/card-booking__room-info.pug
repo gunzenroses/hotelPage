@@ -6,14 +6,16 @@ mixin card-booking__room-info({ bookingNumber, bookingType, bookingPrice=0, them
         span.card-booking__number!= bookingNumber  
         span.card-booking__suite!= bookingType
       .card__row_small
-        span.card-booking__price!= `${bookingPrice}₽`
+        span.card-booking__price!= `${ bookingPrice }₽`
         span.card-booking__period &nbsp;в сутки
   else
     .card__row
       .card__row_small
         span.card-booking__No №
-        span(class=`card-booking__number card-booking__number_in-${theme}`)= bookingNumber  
-        span(class=`card-booking__suite card-booking__suite_in-${theme}`)= bookingType
+        span(class=`card-booking__number card-booking__number_in-${ 
+          theme }`)= bookingNumber  
+        span(class=`card-booking__suite card-booking__suite_in-${ 
+          theme }`)= bookingType
       .card__row_small
-        span.card-booking__price!= `${bookingPrice}₽`
+        span.card-booking__price!= `${ bookingPrice }₽`
         span.card-booking__period &nbsp;в сутки

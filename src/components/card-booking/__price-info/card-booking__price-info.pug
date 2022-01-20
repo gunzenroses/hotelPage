@@ -1,17 +1,18 @@
 mixin card-booking__price-info({ infoDesctiption, infoPrice, infoSign = "none", theme="" })
   -
     var descriptionClass = theme === ""
-      ? "" : `card-booking__description card-booking__description_in-${theme}`
+      ? "" : `card-booking__description card-booking__description_in-${ theme }`
   - 
     var infoSignClass = theme === ""
-      ? "card-booking__info-sign" : `card-booking__info-sign card-booking__info-sign_in-${theme}`
+      ? "card-booking__info-sign" 
+      : `card-booking__info-sign card-booking__info-sign_in-${ theme }`
 
   if infoSign === "full"
     .card-booking__price-info
       div(class= descriptionClass)= infoDesctiption
         div(class= infoSignClass)
-      .card-booking__expense!= `${infoPrice}₽`
+      .card-booking__expense!= `${ infoPrice }₽`
   else
     .card-booking__price-info
       .card-booking__description!= infoDesctiption
-      .card-booking__expense!= `${infoPrice}₽`
+      .card-booking__expense!= `${ infoPrice }₽`

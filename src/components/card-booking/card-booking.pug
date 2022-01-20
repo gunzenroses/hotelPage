@@ -8,7 +8,8 @@ include ./__price-info/card-booking__price-info.pug
 mixin card-booking({ serviceName, itemNumbers=[0, 0, 0], theme="" })
   - 
     var totalPriceClass = theme === ""
-      ? "card-booking__summary": `card-booking__summary card-booking__summary_in-${theme}`
+      ? "card-booking__summary"
+      : `card-booking__summary card-booking__summary_in-${ theme }`
 
   form.card-booking(method="get" action="./search-room.html")
     +card-booking__room-info({

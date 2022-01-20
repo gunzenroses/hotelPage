@@ -2,11 +2,11 @@ include ../../logo/logo.pug
 
 mixin footer__company-info({ footerText="", theme="main" })
   if theme === "landing"
-    div(class=`footer__logo footer__logo_in-${theme}`)
+    div(class=`footer__logo footer__logo_in-${ theme }`)
       +logo()
       .footer__text!= footerText
   else if theme === "signin"
-    div(class=`footer__logo footer__logo_in-${theme}`)
+    div(class=`footer__logo footer__logo_in-${ theme }`)
       +logo()
       .footer__text!= footerText
   else

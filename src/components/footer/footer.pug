@@ -10,10 +10,10 @@ mixin footer({ theme="main", footerText="Бронирование номеров
   - var supports = ["Соглашения", "Сообщества", "Связь с нами"]
   - 
     var footerCopywriteClass = theme === "main"
-      ? "footer__basement" : `footer__basement footer__basement_in-${theme}`
+      ? "footer__basement" : `footer__basement footer__basement_in-${ theme }`
   -
     var footerNavbarClass = theme === "main"
-      ? "footer__navbar" : `footer__navbar footer__navbar_in-${theme}`
+      ? "footer__navbar" : `footer__navbar footer__navbar_in-${ theme }`
 
   footer.footer
     div(class= footerNavbarClass)

@@ -7,5 +7,5 @@ mixin button-link({ buttonText="", buttonOnclick="./some-address", className = "
   else if className === "registration"
     a(class="button-link button-link_type_registration" href= buttonOnclick)= buttonText
   else
-    div(class=`button-link button-link_type_${className}`)
+    div(class=`button-link button-link_type_${ className }`)
       a(class="button-link__ref" href= buttonOnclick)= buttonText

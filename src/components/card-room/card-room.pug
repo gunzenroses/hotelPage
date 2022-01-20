@@ -4,16 +4,24 @@ include ./__review/card-room__review.pug
 include ./__info/card-room__info.pug
 
 mixin card-room({ roomOptions, theme="" })
-  - var {src = [], bookingNumber = "999", bookingType = false, bookingPrice = 0, starName = inputName, starRate = 0, reviewAmount = 0} = roomOptions
+  - 
+    var {
+      src = [], 
+      bookingNumber = "999", 
+      bookingType = false, 
+      bookingPrice = 0, 
+      starName = inputName, 
+      starRate = 0, 
+      reviewAmount = 0} = roomOptions
   - 
     var buttonRateClass = theme === ""
-      ? "card-room__button-rate" : `
-      card-room__button-rate card-room__button-rate_in-${theme}`
+      ? "card-room__button-rate" 
+      : `card-room__button-rate card-room__button-rate_in-${ theme }`
 
   .card-room
     +room-carousel({
       roomPictures: src,
-      nameForPictures: `room ${bookingNumber}`
+      nameForPictures: `room ${ bookingNumber }`
     })
     .card-room__info
       +card-room__info({
@@ -30,7 +38,8 @@ mixin card-room({ roomOptions, theme="" })
               checkedNum: starRate
             })
         else
-          div(class=`card-room__button-rate card-room__button-rate_in-${theme}`)
+          div(class=`card-room__button-rate card-room__button-rate_in-${
+            theme }`)
             +button-rate({
               inputName: starName,
               checkedNum: starRate
