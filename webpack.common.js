@@ -84,7 +84,7 @@ module.exports = {
         loader: 'file-loader',
         options: {
             name: '[name].[ext]',
-            outputPath: 'assest/images/',
+            outputPath: 'assets/images/',
             esModule: false,
         }
       }
