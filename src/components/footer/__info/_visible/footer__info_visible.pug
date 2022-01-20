@@ -2,7 +2,7 @@ include ../../../navlink/navlink.pug
 
 mixin footer__info_visible({ navigations, abouts, supports, theme="" })
   - 
-    var className = theme == "details" 
+    var className = theme === "details" 
       ? `footer__info footer__info_in-${theme}` : "footer__info"
 
   div(class= className)

@@ -1,10 +1,10 @@
 mixin navlink({ buttonText="", buttonOnclick="./some-address", navlinkModificator="", navlinkButtonModificator=""})
-  if navlinkModificator == ""
+  if navlinkModificator === ""
     li(class="navlink")
       a(class="navlink__button" href=buttonOnclick title=buttonText)= buttonText
   else 
     li(class=`navlink navlink_type_${navlinkModificator}`)
-      if navlinkButtonModificator == ""
+      if navlinkButtonModificator === ""
         a(class="navlink__button" href=buttonOnclick title=buttonText)= buttonText
       else
         a(class=`navlink__button navlink__button_type_${navlinkButtonModificator}` href=buttonOnclick title=buttonText)= buttonText

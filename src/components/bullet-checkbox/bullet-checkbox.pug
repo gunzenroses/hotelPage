@@ -2,7 +2,7 @@ include ./__item/bullet-checkbox__item.pug
 
 mixin bullet-checkbox({ checkboxList=[], labelText="" })
   .bullet-checkbox
-    if labelText == ""
+    if labelText === ""
       .bullet-checkbox__list
         for item in checkboxList 
           +bullet-checkbox__item(item)

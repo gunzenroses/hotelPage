@@ -12,4 +12,8 @@ mixin card-search()
         labelText: "Гости",
       })
     .card-search__button
-      +button-submit({ buttonText: "Подобрать номер", type: "room_search.html" })
+      +button-submit({ 
+        buttonText: "Подобрать номер",
+        type: "room_search.html",
+        theme: theme
+      })

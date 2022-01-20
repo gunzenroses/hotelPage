@@ -1,8 +1,8 @@
 mixin button-submit({ buttonText="", type="", theme="" })
   - 
-    var buttonSubmitClass = theme == ""
+    var buttonSubmitClass = theme === ""
       ? "button-submit" : `button-submit button-submit_in-${theme}`
-  if type == "compact"
+  if type === "compact"
     button(class="button-submit button-submit_compact" type="submit")= buttonText
   else
     button(class= buttonSubmitClass type="submit")= buttonText

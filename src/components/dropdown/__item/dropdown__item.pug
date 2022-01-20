@@ -1,5 +1,5 @@
 mixin dropdown__item({ itemDataType, itemText, itemDataOrder, itemNumber=0, itemClass="" })
-  if itemClass == ""
+  if itemClass === ""
     .dropdown__item.js-dropdown__item(data-type=itemDataType)
       .dropdown__text!= itemText
       .dropdown__minus.js-dropdown__minus.js-button_disabled - 

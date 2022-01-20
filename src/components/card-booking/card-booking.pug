@@ -7,7 +7,7 @@ include ./__price-info/card-booking__price-info.pug
 
 mixin card-booking({ serviceName, itemNumbers=[0, 0, 0], theme="" })
   - 
-    var totalPriceClass = theme == ""
+    var totalPriceClass = theme === ""
       ? "card-booking__summary": `card-booking__summary card-booking__summary_in-${theme}`
 
   form.card-booking(method="get" action="./search-room.html")
@@ -45,10 +45,13 @@ mixin card-booking({ serviceName, itemNumbers=[0, 0, 0], theme="" })
     })
     div(class= totalPriceClass)
       .card-booking__text Итого
-      if theme == "in-uikit"
+      if theme === "uikit"
         .card-booking__line.card-booking__line_in-uikit
       else 
         .card-booking__line
-      .card-booking__price_total 38 081₽
+      .card-booking__text 38 081₽
     .card-booking__button
-      +button-submit({ buttonText: "Забронировать" })
+      +button-submit({ 
+        buttonText: "Забронировать",
+        theme: theme
+      })

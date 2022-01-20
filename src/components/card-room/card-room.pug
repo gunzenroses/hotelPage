@@ -6,7 +6,7 @@ include ./__info/card-room__info.pug
 mixin card-room({ roomOptions, theme="" })
   - var {src = [], bookingNumber = "999", bookingType = false, bookingPrice = 0, starName = inputName, starRate = 0, reviewAmount = 0} = roomOptions
   - 
-    var buttonRateClass = theme == ""
+    var buttonRateClass = theme === ""
       ? "card-room__button-rate" : `
       card-room__button-rate card-room__button-rate_in-${theme}`
 
@@ -23,7 +23,7 @@ mixin card-room({ roomOptions, theme="" })
         theme: theme
       })
       .card-room__rating
-        if theme == ""
+        if theme === ""
           .card-room__button-rate
             +button-rate({
               inputName: starName,

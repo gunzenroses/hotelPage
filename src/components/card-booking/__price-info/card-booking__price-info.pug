@@ -1,12 +1,12 @@
 mixin card-booking__price-info({ infoDesctiption, infoPrice, infoSign = "none", theme="" })
   -
-    var descriptionClass = theme == ""
+    var descriptionClass = theme === ""
       ? "" : `card-booking__description card-booking__description_in-${theme}`
   - 
-    var infoSignClass = theme == ""
+    var infoSignClass = theme === ""
       ? "card-booking__info-sign" : `card-booking__info-sign card-booking__info-sign_in-${theme}`
 
-  if infoSign == "full"
+  if infoSign === "full"
     .card-booking__price-info
       div(class= descriptionClass)= infoDesctiption
         div(class= infoSignClass)

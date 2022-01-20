@@ -1,19 +1,19 @@
 mixin card-room__info({ bookingNumber, bookingType, bookingPrice, theme="" })
   - 
     var classSign = 
-      theme == "creative" ? "card-room__sign card-room__sign_in-creative"
+      theme === "creative" ? "card-room__sign card-room__sign_in-creative"
       : "card-room__sign"
   - 
     var classNumber = 
-      theme == "creative" ? "card-room__number card-room__number_creative"
+      theme === "creative" ? "card-room__number card-room__number_creative"
       : "card-room__number"
   -
     var classRoomType =
-      theme == "search" ? "card-room__type card-room__type_in-search"
+      theme === "search" ? "card-room__type card-room__type_in-search"
       : "card-room__type"
   -
     var classPeriod =
-      theme == "search" ? "card-room__period card-room__period_in-search"
+      theme === "search" ? "card-room__period card-room__period_in-search"
       : "card-room__period"
 
   .card__row
