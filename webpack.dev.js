@@ -9,8 +9,8 @@ module.exports = merge(common, {
     publicPath: "/",
     filename: "assets/js/[name].js",
   },
-  devtool: 'inline-source-map',
-  target: 'web',
+  devtool: "inline-source-map",
+  target: "web",
   devServer: {
     contentBase: path.resolve(__dirname, "./src"),
     inline: true,
@@ -49,7 +49,7 @@ module.exports = merge(common, {
           "postcss-loader", // translates CSS into CommonJS
           "sass-loader", // compiles Sass to CSS
         ],
-      }
+      },
     ],
-  }
-})
+  },
+});
