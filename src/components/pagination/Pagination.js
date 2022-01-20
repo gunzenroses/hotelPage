@@ -161,7 +161,7 @@ class Pagination {
     this.paginationInfo.innerHTML = '';
     const trimStart = (this.num - 1) * this.data.itemsPerPage + 1;
     const trimEnd = trimStart + this.data.itemsPerPage - 1;
-    this.paginationInfo.innerText = `${trimStart} – ${trimEnd} из 100+ вариантов аренды`;
+    this.paginationInfo.innerText = `${ trimStart } – ${ trimEnd } из 100+ вариантов аренды`;
   }
 
   onButtonClick(e) {

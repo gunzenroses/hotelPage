@@ -97,7 +97,7 @@ export default class DropdownRooms {
     this.data.forEach((_, i) => {
       this.roomInfo += this.adjustDataType(i);
     });
-    this.infoInput.value = `${this.roomInfo.slice(0, 20)}...`;
+    this.infoInput.value = `${ this.roomInfo.slice(0, 20) }...`;
   }
 
   adjustDataType(j) {
@@ -152,6 +152,6 @@ export default class DropdownRooms {
           break;
       }
     }
-    return `${this.data[j]} ${dataTypeName}, `;
+    return `${ this.data[j] } ${ dataTypeName }, `;
   }
 }
