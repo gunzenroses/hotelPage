@@ -28,10 +28,10 @@ class Calendar {
       'Декабрь'
     ];
     this.buttonPrev = this.calendarContainer.querySelector(
-      '.js-calendar__button_prev'
+      '.js-calendar__control_prev'
     );
     this.buttonNext = this.calendarContainer.querySelector(
-      '.js-calendar__button_next'
+      '.js-calendar__control_next'
     );
     this.dateInCalendar = this.calendarContainer.querySelector(
       '.js-calendar__month'
@@ -65,10 +65,10 @@ class Calendar {
     }
 
     this.btnApply = this.mainContainer.querySelector(
-      '.js-calendar__button-submit'
+      '.js-calendar__button_submit'
     );
     this.btnReset = this.mainContainer.querySelector(
-      '.js-calendar__button-reset'
+      '.js-calendar__button_reset'
     );
   }
 

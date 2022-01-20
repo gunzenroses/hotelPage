@@ -81,8 +81,7 @@
     letter-spacing: .0015em;
   }
 
-  &__button_prev,
-  &__button_next {
+  &__control {
     position: relative;
     width: 24px;
     height: 24px;
@@ -101,14 +100,14 @@
       font-family: $material-icons;
       color: $purple;
     }
-  }
 
-  &__button_prev::before {
-    content: '\e5c4';
-  }
+    &_prev::before {
+      content: '\e5c4';
+    }
 
-  &__button_next::before {
-    content: '\e5c8';
+    &_next::before {
+      content: '\e5c8';
+    }
   }
 
   &__weeks {
@@ -155,8 +154,7 @@
     color: $purple;
   }
   
-  &__button-reset,
-  &__button-submit {
+  &__button {
     padding: 0;
     border: none;
     font-size: $fs_h3;
@@ -168,7 +166,6 @@
     cursor: pointer;
     outline: none;
     
-  
     @include _1750-1920 {
       font-size: $fs_base;
     }
