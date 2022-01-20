@@ -1,11 +1,11 @@
+@import '@~Assets/styles/card.scss';
 @import '@~Assets/styles/colors.scss';
 @import '@~Assets/styles/media-mixins.scss';
 @import '@~Components/button-submit/button-submit.scss';
-@import '@~Components/card/card.scss';
 @import '@~Components/date-range/_separete/date-range_separate.scss';
 @import '@~Components/dropdown/_type_guests/dropdown_type_guests.scss';
 
-.card-room {
+.card-search {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -43,9 +43,5 @@
 
   &__button {
     margin-top: 31px;
-
-    & .button-submit {
-      padding-right: 4px;
-    }
   }
 }

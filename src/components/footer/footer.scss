@@ -38,211 +38,188 @@
   @include _470 {
     min-width: 320px;
   }
-}
 
-.footer__navbar {
-  @include isFlex($wrap: wrap);
-  position: relative;
-  width: 1160px;
-  height: fit-content;
-  margin: 100px 133px;
-  letter-spacing: .01em;
+  &__navbar {
+    @include isFlex($wrap: wrap);
+    position: relative;
+    width: 1160px;
+    height: fit-content;
+    margin: 100px 133px;
+    letter-spacing: .01em;
 
-  @include _1500-1920 {
-    margin: 100px 10%;
-  }
+    @include _1500-1920 {
+      margin: 100px 10%;
+    }
 
-  @include _1650-1920 {
-    width: 80%;
-  }
+    @include _1650-1920 {
+      width: 80%;
+    }
 
-  @include _1340 {
-    @include containerWithMargins(
-      $width: 85%,
-      $height: 172px,
-      $mt: 60px,
-      $ms: auto,
-      $mb: 60px
-    );
-  }
+    @include _1340 {
+      @include containerWithMargins(
+        $width: 85%,
+        $height: 172px,
+        $mt: 60px,
+        $ms: auto,
+        $mb: 60px
+      );
+    }
 
-  @include _1170 {
-    width: calc(415px + 260px + 5%);
-  }
+    @include _1170 {
+      width: calc(415px + 260px + 5%);
+    }
 
-  @include _800 {
-    @include containerWithMargins(
-      $width: 85%,
-      $height: auto,
-      $mt: 40px,
-      $ms: auto,
-      $mb: 40px
-    );
-    justify-content: center;
-  }
+    @include _800 {
+      @include containerWithMargins(
+        $width: 85%,
+        $height: auto,
+        $mt: 40px,
+        $ms: auto,
+        $mb: 40px
+      );
+      justify-content: center;
+    }
 
-  @include _470 {
-    min-width: 320px;
-  }
-}
+    @include _470 {
+      min-width: 320px;
+    }
 
-.footer__navbar_in-landing {
-  @include _1400-1500 {
-    height: 172px;
-  }
-}
-
-.footer__navbar_in-registration {
-  @include _1400-1500 {
-    height: 172px;
-    margin-top: 101px;
-  }
-}
-
-.footer__navbar_in-search {
-  @include _1400-1500 {
-    height: 172px;
-    margin-top: 100px;
-    margin-bottom: 100px;
-  }
-}
-
-.footer__navbar_in-details {
-  @include _1400-1500 {
-    height: 172px;
-    letter-spacing: .001em;
-  }
-}
-
-.footer__navbar_in-signin {
-  @include _1400-1500 {
-    height: 172px;
-  }
-}
-
-.footer__navbar h3 {
-  margin-top: 1px;
-}
-
-.footer__text {
-  width: 100%;
-  margin: 0;
-  font-size: 1em;
-  line-height: 1.71rem;
-  font-weight: 400;
-  color: $dark-shade_more;
-  letter-spacing: .0001em;
-  pointer-events: none;
-
-  @include _1170 {
-    display: none;
-  }
-}
-
-.footer__title {
-  margin: 0;
-  line-height: 1.045rem;
-  font-size: $fs_h3;
-  font-weight: 700;
-  letter-spacing: .001em;
-  color: $dark-shade_most;
-  text-transform: uppercase;
-
-  @include _470 {
-    font-weight: 400;
-
-    &:hover {
-      font-weight: 700;
+    &_in-landing {
+      @include _1400-1500 {
+        height: 172px;
+      }
+    }
+  
+    &_in-registration {
+      @include _1400-1500 {
+        height: 172px;
+        margin-top: 101px;
+      }
+    }
+  
+    &_in-search {
+      @include _1400-1500 {
+        height: 172px;
+        margin-top: 100px;
+        margin-bottom: 100px;
+      }
+    }
+  
+    &_in-details {
+      @include _1400-1500 {
+        height: 172px;
+        letter-spacing: .001em;
+      }
+    }
+  
+    &_in-signin {
+      @include _1400-1500 {
+        height: 172px;
+      }
     }
   }
-}
 
-.footer__links {
-  @include isFlex($direction: column, $align: flex-start, $justify: start);
-  width: 100%;
-  height: 150px;
-  margin: 20px 0 0;
-  padding: 0;
-}
+  &__text {
+    width: 100%;
+    margin: 0;
+    font-size: 1em;
+    line-height: 1.71rem;
+    font-weight: 400;
+    color: $dark-shade_more;
+    letter-spacing: .0001em;
+    pointer-events: none;
 
-.footer__copyright {
-  @include isFlex($align: flex-start);
-  width: 100%;
-  height: 71px;
-  padding: 24px 136px 22px 140px;
-  border-top: 1px solid $dark-shade_less;
-
-  @include _1500-1920 {
-    align-items: center;
-    padding: 0 10%;
+    @include _1170 {
+      display: none;
+    }
   }
 
-  @include _1340 {
-    align-items: center;
-    padding: 0 7%;
-  }
-
-  @include _800 {
-    padding: 0 5%;
-  }
-
-  @include _400 {
-    min-width: 320px;
-  }
-}
-
-.footer__copyright_in-landing {
-  @include _1400-1500 {
-    padding-top: 23px;
-    padding-left: 139px;
-  }
-}
-
-.footer__copyright_in-signin {
-  @include _1400-1500 {
-    padding-top: 23px;
-    padding-left: 140px;
-  }
-}
-
-.footer__copyright-social {
-  width: 116px;
-}
-
-.copyright__text {
-  height: 18px;
-  margin-top: 5px;
-  letter-spacing: .0001em;
-  font-size: 14px;
-  pointer-events: none;
-
-  @include _690 {
-    width: 230px;
-    height: fit-content;
-  }
-
-  @include _400 {
-    width: 200px;
+  &__title {
+    margin: 0;
+    margin-top: 1px;
+    line-height: 1.045rem;
     font-size: $fs_h3;
-  }
-}
+    font-weight: 700;
+    letter-spacing: .001em;
+    color: $dark-shade_most;
+    text-transform: uppercase;
 
-.copyright__social {
-  @include isFlex($align: center);
-  width: 100%;
-  height: 26px;
-  margin-right: 1px;
-  font-size: $fs_h1;
+    @include _470 {
+      font-weight: 400;
 
-  @include _1650-1920 {
-    width: 162px;
-  }
-
-  @include _800 {
-    height: 36px;
+      &:hover {
+        font-weight: 700;
+      }
+    }
   }
 
-  @include _400 {
-    width: 100px;
+  &__links {
+    @include isFlex($direction: column, $align: flex-start, $justify: start);
+    width: 100%;
+    height: 150px;
+    margin: 20px 0 0;
+    padding: 0;
   }
+
+  &__basement {
+    @include isFlex($align: flex-start);
+    width: 100%;
+    height: 71px;
+    padding: 24px 136px 22px 140px;
+    border-top: 1px solid $dark-shade_less;
+
+    @include _1500-1920 {
+      align-items: center;
+      padding: 0 10%;
+    }
+
+    @include _1340 {
+      align-items: center;
+      padding: 0 7%;
+    }
+
+    @include _800 {
+      padding: 0 5%;
+    }
+
+    @include _400 {
+      min-width: 320px;
+    }
+
+    &_in-landing {
+      @include _1400-1500 {
+        padding-top: 23px;
+        padding-left: 139px;
+      }
+    }
+
+    &_in-signin {
+      @include _1400-1500 {
+        padding-top: 23px;
+        padding-left: 140px;
+      }
+    }
+  }
+
+  &__basement-text {
+    height: 18px;
+    margin-top: 5px;
+    letter-spacing: .0001em;
+    font-size: 14px;
+    pointer-events: none;
+  
+    @include _690 {
+      width: 230px;
+      height: fit-content;
+    }
+  
+    @include _400 {
+      width: 200px;
+      font-size: $fs_h3;
+    }
+  }
+
+  &__social-nets {
+    width: 116px;
+  }  
 }

@@ -35,10 +35,6 @@
     padding-bottom: 2px;
   }
 
-  &__button .button-submit {
-    padding-right: 5px;
-  }
-
   &__date-range {
     width: 100%;
     margin-top: 23px;
@@ -76,17 +72,17 @@
       width: 100%;
       margin: 9px 0;
     }
-  }
 
-  &__summary_in-uikit {
-    width: 103%;
-  }
+    &_in-uikit {
+      width: 103%;
+    }
 
-  &__summary_in-details {
-    width: 100%;
-    margin-top: 42px;
-    margin-left: 0px;
-    letter-spacing: .001em;
+    &_in-details {
+      width: 100%;
+      margin-top: 42px;
+      margin-left: 0px;
+      letter-spacing: .001em;
+    }
   }
 
   &__text {
@@ -99,9 +95,9 @@
     width: calc(100% - 140px);
     height: 19px;
     border-bottom: 1px dotted $dark-shade_less;
-  }
 
-  &__line_in-uikit {
-    width: 190px;
+    &_in-uikit {
+      width: 190px;
+    }
   }
 }

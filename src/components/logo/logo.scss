@@ -14,23 +14,23 @@
   @include _550 {
     width: 40px;
   }
-}
 
-.logo__pic {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  border: none;
-}
+  &__pic {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border: none;
+  }
 
-.logo__name {
-  position: relative;
-  width: 54px;
-  height: 15px;
-  margin-right: 1px;
-  border: none;
+  &__name {
+    position: relative;
+    width: 54px;
+    height: 15px;
+    margin-right: 1px;
+    border: none;
 
-  @include _550 {
-    display: none;
+    @include _550 {
+      display: none;
+    }
   }
 }

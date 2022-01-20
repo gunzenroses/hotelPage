@@ -15,53 +15,53 @@
   @include _450 {
     margin: 0 auto;
   }
-}
 
-.comment__head {
-  @include isFlex($justify: start);
-  height: fit-content;
-  pointer-events: none;
-}
-
-.comment__pic {
-  @include isFlex($justify: center, $align: center);
-  width: 48px;
-  height: 48px;
-  margin-right: 10px;
-  border-radius: 50%;
-  filter: drop-shadow(0px 10px 20px $dark-shade_few);
-  overflow: hidden;
-}
-
-.comment__body {
-  @include isFlex($justify: start);
-  width: 100%;
-  height: fit-content;
-  min-height: 51px;
-  margin-top: 10px;
-  margin-left: 2px;
-  font-size: $fs_base;
-}
-
-.comment__text {
-  width: calc(100% - 54px);
-  max-width: 92%;
-  min-height: 72px;
-  margin-left: 14px;
-  line-height: 24px;
-  letter-spacing: .0001em;
-  font-family: $montserrat;
-  color: $dark-shade_more;
-  font-weight: 400;
-  text-align: left;
-  pointer-events: none;
-
-  @include _450 {
-    width: 70%;
+  &__head {
+    @include isFlex($justify: start);
+    height: fit-content;
+    pointer-events: none;
   }
-}
 
-.comment__likes {
-  margin-top: 2px;
-  margin-left: 2px;
+  &__pic {
+    @include isFlex($justify: center, $align: center);
+    width: 48px;
+    height: 48px;
+    margin-right: 10px;
+    border-radius: 50%;
+    filter: drop-shadow(0px 10px 20px $dark-shade_few);
+    overflow: hidden;
+  }
+
+  &__body {
+    @include isFlex($justify: start);
+    width: 100%;
+    height: fit-content;
+    min-height: 51px;
+    margin-top: 10px;
+    margin-left: 2px;
+    font-size: $fs_base;
+  }
+
+  &__text {
+    width: calc(100% - 54px);
+    max-width: 92%;
+    min-height: 72px;
+    margin-left: 14px;
+    line-height: 24px;
+    letter-spacing: .0001em;
+    font-family: $montserrat;
+    color: $dark-shade_more;
+    font-weight: 400;
+    text-align: left;
+    pointer-events: none;
+
+    @include _450 {
+      width: 70%;
+    }
+  }
+
+  &__likes {
+    margin-top: 2px;
+    margin-left: 2px;
+  }
 }

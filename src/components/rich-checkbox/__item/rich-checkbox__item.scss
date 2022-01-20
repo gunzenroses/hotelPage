@@ -3,72 +3,74 @@
 @import '@~Assets/styles//mixins.scss';
 @import '@~Assets/styles/fonts.scss';
 
-.rich-checkbox__item {
-  @include isFlex($justify: flex-start);
-  width: fit-content;
-  max-width: 100%;
-  height: fit-content;
-  cursor: pointer;
-  user-select: none;
-}
-
-.rich-checkbox__form {
-  @include isFlex($direction: column, $justify: flex-start);
-  max-width: 350px;
-  height: fit-content;
-
-  @include _1750-1920 {
-    width: calc(100% - 50px);
+.rich-checkbox {
+  &__item {
+    @include isFlex($justify: flex-start);
+    width: fit-content;
+    max-width: 100%;
+    height: fit-content;
+    cursor: pointer;
+    user-select: none;
   }
-}
 
-.rich-checkbox__title {
-  margin-top: 1px;
-  line-height: 18px;
-  font-size: $fs_base;
-  letter-spacing: 0.0001em;
-  font-weight: 700;
-  color: $dark-shade_more;
-}
+  &__form {
+    @include isFlex($direction: column, $justify: flex-start);
+    max-width: 350px;
+    height: fit-content;
 
-.rich-checkbox__description {
-  height: fit-content;
-  margin-top: 5px;
-  font-size: $fs_h3;
-  line-height: 15px;
-  font-weight: 400;
-  letter-spacing: 0.0001em;
-  color: $dark-shade_medium;
+    @include _1750-1920 {
+      width: calc(100% - 50px);
+    }
+  }
 
-  @include _1750-1920 {
-    line-height: $fs_h2;
+  &__title {
+    margin-top: 1px;
+    line-height: 18px;
     font-size: $fs_base;
+    letter-spacing: 0.0001em;
+    font-weight: 700;
+    color: $dark-shade_more;
   }
-}
 
-.rich-checkbox__real {
-  @include containerBlock(20px, 20px);
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  appearance: none;
+  &__description {
+    height: fit-content;
+    margin-top: 5px;
+    font-size: $fs_h3;
+    line-height: 15px;
+    font-weight: 400;
+    letter-spacing: 0.0001em;
+    color: $dark-shade_medium;
 
-  @include _1750-1920 {
-    @include containerBlock(25px, 25px);
+    @include _1750-1920 {
+      line-height: $fs_h2;
+      font-size: $fs_base;
+    }
   }
-}
 
-.rich-checkbox__fake {
-  position: relative;
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-  border: 1px solid $dark-shade_less;
-  border-radius: 4px;
-  background-color: transparent;
+  &__real {
+    @include containerBlock(20px, 20px);
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    appearance: none;
 
-  @include _1750-1920 {
-    @include containerBlock(25px, 25px);
+    @include _1750-1920 {
+      @include containerBlock(25px, 25px);
+    }
+  }
+
+  &__fake {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border: 1px solid $dark-shade_less;
+    border-radius: 4px;
+    background-color: transparent;
+
+    @include _1750-1920 {
+      @include containerBlock(25px, 25px);
+    }
   }
 }
 
@@ -95,5 +97,5 @@
 }
 
 .rich-checkbox__item + .rich-checkbox__item{
-margin-top: 8px;
+  margin-top: 8px;
 }

@@ -16,14 +16,41 @@
   @include _1750-1920 {
     width: fit-content;
   }
+
+  &_type_header {
+    text-align: center;
+  }
+
+  &_type_footer {
+    letter-spacing: 0.001em;
+  }
+
+  &__button {
+    display: inline-block;
+    position: relative;
+    line-height: 20px;
+    font-size: $fs_base;
+    font-weight: 400;
+    color: $dark-shade_medium;
+    text-decoration: none;
+  }
+
+  &__button_type_header {
+    &::before {
+      display: block;
+      content: attr(title);
+      font-weight: bold;
+      height: 0;
+      overflow: hidden;
+      visibility: hidden;
+    }
+  }
 }
 
-.navlink_type_header {
-  text-align: center;
-}
-
-.navlink_type_footer {
-  letter-spacing: 0.001em;
+.navlink:active .navlink__button,
+.navlink:hover .navlink__button {
+  font-weight: 700;
+  color: $dark-shade_more;
 }
 
 .navlink_type_footer + .navlink_type_footer {
@@ -32,31 +59,4 @@
   @include _800 {
     margin-top: 0;
   }
-}
-
-.navlink__button {
-  display: inline-block;
-  position: relative;
-  line-height: 20px;
-  font-size: $fs_base;
-  font-weight: 400;
-  color: $dark-shade_medium;
-  text-decoration: none;
-}
-
-.navlink__button_type_header {
-  &::before {
-    display: block;
-    content: attr(title);
-    font-weight: bold;
-    height: 0;
-    overflow: hidden;
-    visibility: hidden;
-  }
-}
-
-.navlink:active .navlink__button,
-.navlink:hover .navlink__button {
-  font-weight: 700;
-  color: $dark-shade_more;
 }

@@ -33,33 +33,33 @@
   @include _550 {
     padding: 15px 2%;
   }
-}
 
-.header_in-landing {
-  padding-top: 17px;
-  padding-bottom: 17px;
-}
-
-.header_in-search {
-  padding-top: 16px;
-  padding-bottom: 16px;
-}
-
-.header_in-signin {
-  padding-top: 14px;
-  padding-bottom: 14px;
-}
-
-.header_in-registration {
-  padding-top: 12px;
-  padding-bottom: 12px;
-}
-
-.header_in-details {
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
-
-.header__logo {
-  margin-top: 2px;
+  &_in-landing {
+    padding-top: 17px;
+    padding-bottom: 17px;
+  }
+  
+  &_in-search {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  
+  &_in-signin {
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+  
+  &_in-registration {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  
+  &_in-details {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  
+  &__logo {
+    margin-top: 2px;
+  }
 }

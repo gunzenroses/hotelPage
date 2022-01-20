@@ -1,8 +1,8 @@
 @import '@~Assets/styles/colors.scss';
 @import '@~Assets/styles/media-mixins.scss';
-@import '@~Assets/styles//mixins.scss';
+@import '@~Assets/styles/mixins.scss';
+@import '@~Assets/styles/card.scss';
 @import '@~Components/button-rate/button-rate.scss';
-@import '@~Components/card/card.scss';
 @import '@~Components/room-carousel/room-carousel.scss';
 
 @import './__info/card-room__info.scss';
@@ -36,14 +36,14 @@
 
   &__button-rate {
     height: 28px;
-  }
 
-  &__button-rate_in-creative {
-    height: 28px;
-  }
+    &_in-creative {
+      height: 28px;
+    }
 
-  &__button-rate_in-search {
-    height: 30px;
+    &_in-search {
+      height: 30px;
+    }
   }
 
   &__info {

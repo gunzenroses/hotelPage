@@ -12,93 +12,93 @@
   @include _1650-1920 {
     width: 100%;
   }
-}
 
-.dropdown__info {
-  @include isFlex($justify: flex-start, $align: center);
-  position: relative;
-  width: 100%;
-  height: 44px;
-  padding: 0px 0px 0px 12px;
-  border: 1px solid $dark-shade_less;
-  border-radius: 4px 4px 0 0;
-  background: transparent;
-  color: $dark-shade_more;
-  letter-spacing: 0.01em;
-
-  &::before {
-    @include dropdownButton();
-    line-height: 43px;
-  }
-
-  @include _450 {
+  &__info {
+    @include isFlex($justify: flex-start, $align: center);
+    position: relative;
     width: 100%;
-    margin: 0 auto;
+    height: 44px;
+    padding: 0px 0px 0px 12px;
+    border: 1px solid $dark-shade_less;
+    border-radius: 4px 4px 0 0;
+    background: transparent;
+    color: $dark-shade_more;
+    letter-spacing: 0.01em;
+
+    &::before {
+      @include dropdownButton();
+      line-height: 43px;
+    }
+
+    @include _450 {
+      width: 100%;
+      margin: 0 auto;
+    }
   }
-}
 
-.dropdown__buttons {
-  @include isFlex($justify: space-between, $direction: row-reverse);
-  height: 30px;
-  width: 100%;
-  margin-top: 18px;
-  padding-right: 6px;
-  padding-left: 13px;
-  font-size: $fs_h3;
-  text-transform: uppercase;
-}
-
-.dropdown__button {
-  border: none;
-  margin: 0;
-  padding: 0;
-  border: none;
-  font-family: inherit;
-  font-size: $fs_h3;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: $purple;
-  background-color: transparent;
-  outline: none;
-
-  @include _1750-1920 {
-    font-size: $fs_base;
+  &__buttons {
+    @include isFlex($justify: space-between, $direction: row-reverse);
+    height: 30px;
+    width: 100%;
+    margin-top: 18px;
+    padding-right: 6px;
+    padding-left: 13px;
+    font-size: $fs_h3;
+    text-transform: uppercase;
   }
-}
 
-.dropdown__button_type_reset {
-  display: none;
-}
+  &__button {
+    border: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-family: inherit;
+    font-size: $fs_h3;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $purple;
+    background-color: transparent;
+    outline: none;
 
-.dropdown__button_type_submit {
-  display: inline-block;
-}
+    @include _1750-1920 {
+      font-size: $fs_base;
+    }
 
-.dropdown__title {
-  font-size: $fs_h3;
-  font-weight: 700;
-  letter-spacing: .001em;
-  text-transform: uppercase;
-  text-align: start;
+    &_type_reset {
+      display: none;
+    }
 
-  @include _1750-1920 {
-    font-size: $fs_base;
+    &_type_submit {
+      display: inline-block;
+    }
   }
-}
 
-.dropdown__input {
-  width: 95%;
-  height: 90%;
-  padding-bottom: 2px;
-  padding-left: 2px;
-  font-family: inherit;
-  font-size: 1rem;
-  appearance: none;
-  background: transparent;
-  border: none;
+  &__title {
+    font-size: $fs_h3;
+    font-weight: 700;
+    letter-spacing: .001em;
+    text-transform: uppercase;
+    text-align: start;
 
-  &::placeholder {
-    color: $dark-shade_less;
+    @include _1750-1920 {
+      font-size: $fs_base;
+    }
+  }
+
+  &__input {
+    width: 95%;
+    height: 90%;
+    padding-bottom: 2px;
+    padding-left: 2px;
+    font-family: inherit;
+    font-size: 1rem;
+    appearance: none;
+    background: transparent;
+    border: none;
+
+    &::placeholder {
+      color: $dark-shade_less;
+    }
   }
 }
 

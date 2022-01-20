@@ -17,57 +17,57 @@
     width: 280px;
     margin: 0 auto;
   }
-}
 
-.checkbox-expandable__dropdown {
-  @include isFlex($direction: column-reverse);
-  position: relative;
-  width: inherit;
-  user-select: none;
+  &__dropdown {
+    @include isFlex($direction: column-reverse);
+    position: relative;
+    width: inherit;
+    user-select: none;
 
-  @include _1650-1920 {
-    width: 100%;
+    @include _1650-1920 {
+      width: 100%;
+    }
   }
-}
 
-.checkbox-expandable__content {
-  height: 171px;
-  width: 266px;
-  margin: 3px 0 0;
-  padding: 0;
-  border: none;
-
-  @include _1650-1920 {
-    width: 100%;
-  }
-}
-
-.checkbox-expandable__button {
-  @include isFlex($justify: flex-start, $align: center);
-  position: relative;
-  width: 100%;
-  height: 44px;
-  padding: 0;
-  border: none;
-  background: transparent;
-  color: $dark-shade_more;
-  letter-spacing: 0.01em;
-  white-space: nowrap;
-  cursor: pointer;
-
-  &:hover,
-  &:focus {
+  &__content {
+    height: 171px;
+    width: 266px;
+    margin: 3px 0 0;
+    padding: 0;
     border: none;
+
+    @include _1650-1920 {
+      width: 100%;
+    }
   }
 
-  &::before {
-    @include dropdownButton();
-    color: $dark-shade_medium;
-    line-height: 45px;
-  }
+  &__button {
+    @include isFlex($justify: flex-start, $align: center);
+    position: relative;
+    width: 100%;
+    height: 44px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: $dark-shade_more;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+    cursor: pointer;
 
-  @include _450 {
-    margin: 0 auto;
+    &:hover,
+    &:focus {
+      border: none;
+    }
+
+    &::before {
+      @include dropdownButton();
+      color: $dark-shade_medium;
+      line-height: 45px;
+    }
+
+    @include _450 {
+      margin: 0 auto;
+    }
   }
 }
 

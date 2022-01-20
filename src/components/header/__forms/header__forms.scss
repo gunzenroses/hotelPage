@@ -2,30 +2,32 @@
 @import '@~Assets/styles//mixins.scss';
 @import '@~Components/button-link/button-link.scss';
 
-.header__forms {
-  @include isFlex($align: center);
-  width: 303px;
-  height: 34px;
+.header {
+  &__forms {
+    @include isFlex($align: center);
+    width: 303px;
+    height: 34px;
 
-  @include _550 {
-    width: 210px;
+    @include _550 {
+      width: 210px;
+    }
   }
-}
 
-.header__signin {
-  display: block;
-  width: 87px;
-  height: 34px;
-  line-height: 30px;
-}
+  &__signin {
+    display: block;
+    width: 87px;
+    height: 34px;
+    line-height: 30px;
+  }
 
-.header__registration {
-  display: block;
-  width: 196px;
-  height: 34px;
-  line-height: 34px;
+  &__registration {
+    display: block;
+    width: 196px;
+    height: 34px;
+    line-height: 34px;
 
-  @include _550 {
-    width: calc(200px - 87px);
+    @include _550 {
+      width: calc(200px - 87px);
+    }
   }
 }

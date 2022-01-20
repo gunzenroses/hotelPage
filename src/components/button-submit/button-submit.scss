@@ -26,6 +26,14 @@
     margin: 0 auto;
   }
 
+  &_in-details {
+    padding-right: 5px;
+  }
+
+  &_in-landing {
+    padding-right: 4px;
+  }
+
   &_compact {
     &::before {
       line-height: 42px;

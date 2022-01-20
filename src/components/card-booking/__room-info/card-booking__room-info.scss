@@ -1,4 +1,4 @@
-@import '@~Components/card/card.scss';
+@import '@~Assets/styles/card.scss';
 @import '@~Assets/styles/media-mixins.scss';
 
 .card-booking {
@@ -27,24 +27,24 @@
     @include _1750-1920 {
       font-size: $fs_h1;
     }
-  }
 
-  &__number_in-details {
-  line-height: 11px;
+    &_in-details {
+      line-height: 11px;
+    }
   }
 
   &__suite {
-  display: inline-block;
-  line-height: 11px;
-  font-size: $fs_h3;
-  font-weight: 700;
-  letter-spacing: .02em;
-  color: $purple;
-  text-transform: uppercase;
-  }
+    display: inline-block;
+    line-height: 11px;
+    font-size: $fs_h3;
+    font-weight: 700;
+    letter-spacing: .02em;
+    color: $purple;
+    text-transform: uppercase;
 
-  &__suite_in-details {
-    margin-left: 8px;
+    &_in-details {
+      margin-left: 8px;
+    }
   }
 
   &__price {

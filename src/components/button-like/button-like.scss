@@ -27,50 +27,50 @@
     background: $light;
     cursor: pointer;
   }
-}
 
-.button-like_popular {
-  background: $linearGradientLilac;
-}
+  &_popular {
+    background: $linearGradientLilac;
+  }
 
-.button-like__heart {
-  position: absolute;
-  top: 6px;
-  left: 6px;
-  width: 8px;
-  height: 8px;
-  background-image: url('@~Components/button-like/img/button-like__heart_regular.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  text-align: center;
-
-  @include _1750-1920 {
+  &__heart {
     position: absolute;
-    top: 4px;
-    left: 11px;
-    width: 12px;
-    height: 12px;
+    top: 6px;
+    left: 6px;
+    width: 8px;
+    height: 8px;
+    background-image: url('@~Components/button-like/img/button-like__heart_regular.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+
+    @include _1750-1920 {
+      position: absolute;
+      top: 4px;
+      left: 11px;
+      width: 12px;
+      height: 12px;
+    }
+
+    &_popular {
+      background-image: url('@~Components/button-like/img/button-like__heart_active.svg');
+    }
   }
-}
 
-.button-like__heart_popular {
-  background-image: url('@~Components/button-like/img/button-like__heart_active.svg');
-}
+  &__number {
+    position: absolute;
+    top: 56%;
+    right: 35%;
+    font-size: 0.7em;
+    line-height: 100%;
+    transform: translate(30%, -50%);
 
-.button-like__number {
-  position: absolute;
-  top: 56%;
-  right: 35%;
-  font-size: 0.7em;
-  line-height: 100%;
-  transform: translate(30%, -50%);
+    @include _1750-1920 {
+      font-size: $fs_h2;
+    }
 
-  @include _1750-1920 {
-    font-size: $fs_h2;
+    &_popular {
+      right: 32%;
+    }
   }
-}
-
-.button-like__number_popular {
-  right: 32%;
 }

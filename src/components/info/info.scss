@@ -14,13 +14,13 @@
     width: 300px;
     margin-left: 14px;
   }
-}
   
-.info__title {
-  font-weight: 700;
-}
+  &__title {
+    font-weight: 700;
+  }
 
-.info__description {
-  font-weight: 400;
-  letter-spacing: .002em;
+  &__description {
+    font-weight: 400;
+    letter-spacing: .002em;
+  }
 }

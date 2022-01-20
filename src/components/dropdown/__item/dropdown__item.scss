@@ -57,47 +57,49 @@
   }
 }
 
-.dropdown__item {
-  @include dropdownItem();
-  @include isFlex($justify: flex-start);
-  margin-top: 7px;
-  padding-left: 14px;
-}
+.dropdown {
+  &__item {
+    @include dropdownItem();
+    @include isFlex($justify: flex-start);
+    margin-top: 7px;
+    padding-left: 14px;
 
-.dropdown__item_last {
-  margin-top: 6px;
-  padding-left: 14px;
-}
+    &_last {
+      margin-top: 6px;
+      padding-left: 14px;
+    }
+  }
 
-.dropdown__text {
-  @include dropdownText();
-  margin-top: 5px;
-}
+  &__text {
+    @include dropdownText();
+    margin-top: 5px;
 
-.dropdown__text_last {
-  margin-top: 6px;
-}
+    &_last {
+      margin-top: 6px;
+    }
+  }
 
-.dropdown__minus,
-.dropdown__plus {
-  @include dropdownPlus();
-  top: -2px;
-  line-height: 28px;
-}
+  &__minus,
+  &__plus {
+    @include dropdownPlus();
+    top: -2px;
+    line-height: 28px;
+  }
 
-.dropdown__minus_last,
-.dropdown__plus_last {
-  top: -1px;
-  line-height: 29px;
-}
+  &__minus_last,
+  &__plus_last {
+    top: -1px;
+    line-height: 29px;
+  }
 
-.dropdown__number {
-  @include dropdownNumber();
-  margin-top: 4px;
-}
+  &__number {
+    @include dropdownNumber();
+    margin-top: 4px;
 
-.dropdown__number_last {
-  margin-top: 5px;
+    &_last {
+      margin-top: 5px;
+    }
+  }
 }
 
 .js-button_disabled {

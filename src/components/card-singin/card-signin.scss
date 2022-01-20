@@ -1,8 +1,8 @@
+@import '@~Assets/styles/card.scss';
 @import '@~Assets/styles/colors.scss';
 @import '@~Assets/styles/media-mixins.scss';
 @import '@~Components/button-link/button-link.scss';
 @import '@~Components/button-submit/button-submit.scss';
-@import '@~Components/card/card.scss';
 @import '@~Components/textfield/textfield.scss';
 @import '@~Components/textfield/_type/_login/textfield_type_login.scss';
 
@@ -35,11 +35,11 @@
     width: 100%;
     margin-top: 30px;
   }
-}
 
-.card-signin__button-link {
-  display: block;
-  width: 99px;
-  height: 44px;
-  line-height: 40px;
+  &__button-link {
+    display: block;
+    width: 99px;
+    height: 44px;
+    line-height: 40px;
+  }
 }

@@ -38,14 +38,14 @@
       width: calc(100% - 120px);
       max-width: 170px;
     }
-  }
 
-  &__description_in-uikit {
-    max-width: 239px;
-  }
+    &_in-uikit {
+      max-width: 239px;
+    }
 
-  &__description_in-details {
-    max-width: 245px;
+    &_in-details {
+      max-width: 245px;
+    }
   }
 
   &__expense {
@@ -78,13 +78,13 @@
       font-weight: 700;
       color: $dark-shade_less;
     }
-  }
 
-  &__info-sign_in-details {
-    margin-left: 8px;
-  }
+    &_in-details {
+      margin-left: 8px;
+    }
 
-  &__info-sign_in-uikit {
-    margin-left: 5px;
+    &_in-uikit {
+      margin-left: 5px;
+    }
   }
 }
