@@ -1,13 +1,15 @@
-include ./__item/bullet-checkbox__item.pug
-
 mixin bullet-checkbox({ checkboxList=[], labelText="" })
   .bullet-checkbox
     if labelText === ""
       .bullet-checkbox__list
         for item in checkboxList 
-          +bullet-checkbox__item(item)
+          label.bullet-checkbox__item
+            span.bullet-checkbox__icon
+            span.bullet-checkbox__title!= item
     else 
       h3.bullet-checkbox__label!= labelText
       .bullet-checkbox__list
         for item in checkboxList 
-          +bullet-checkbox__item(item)
+          label.bullet-checkbox__item
+            span.bullet-checkbox__icon
+            span.bullet-checkbox__title!= item
