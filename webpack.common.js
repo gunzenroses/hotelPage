@@ -18,13 +18,13 @@ module.exports = {
     __dirname: true,
   },
   entry: {
-    index: "./src/index.js",
-    UIKit: "./src/pages/UIKit/UIKit.js",
+    "index": "./src/index.js",
+    "UIKit": "./src/pages/UIKit/UIKit.js",
     "landing-page": "./src/pages/landing-page/landing-page.js",
     "search-room": "./src/pages/search-room/search-room.js",
     "room-details": "./src/pages/room-details/room-details.js",
-    registration: "./src/pages/registration/registration.js",
-    signin: "./src/pages/signin/signin.js",
+    "registration": "./src/pages/registration/registration.js",
+    "signin": "./src/pages/signin/signin.js",
   },
   resolve: {
     extensions: [".js", ".scss"],
