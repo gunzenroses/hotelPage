@@ -1,6 +1,18 @@
 @import '@~Assets/styles/media-mixins.scss';
 
-@import './__item/checkbox__item.scss';
+@mixin checkboxFake {
+  position: relative;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border: 1px solid $dark-shade_less;
+    border-radius: 4px;
+    background-color: transparent;
+
+    @include _1750-1920 {
+      @include containerBlock(25px, 25px);
+    }
+}
 
 .checkbox {
   display: flex;
@@ -16,5 +28,82 @@
 
   @include _1650-1920 {
     width: 100%;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    font-family: $montserrat;
+    font-weight: 400;
+    font-size: $fs_base;
+    text-transform: none;
+    cursor: pointer;
+    user-select: none;
+
+    @include _1650-1920 {
+      width: 100%;
+    }
+  }
+
+  &__real {
+    @include containerBlock(20px, 20px);
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    appearance: none;
+
+    @include _1750-1920 {
+      @include containerBlock(25px, 25px);
+    }
+  }
+
+  &__fake {
+    @include checkboxFake();
+  }
+
+  &__title {
+    display: inline-block;
+    max-width: 192px;
+    margin-top: 2px;
+    font-size: 13.5px;
+    letter-spacing: .02em;
+    line-height: 18px;
+    font-weight: 400;
+    color: $dark-shade_medium;
+
+    @include _1750-1920 {
+      width: calc(100% - 50px);
+      max-width: 350px;
+      font-size: $fs_base;
+    }
+  }
+
+  &__item + &__item {
+    margin-top: 10px;
+  }
+
+  &__real:checked ~ &__fake {
+    @include checkboxFake();
+    border-color: $purple;
+  }
+
+  &__real:checked + &__fake::before {
+    content: '';
+    @include containerBlock(4px, 6px);
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    border-image: $linearGradientLilac;
+    border-image-slice: 1;
+    border-right: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+
+    @include _1750-1920 {
+      @include containerBlock(5px, 10px);
+    }
   }
 }
