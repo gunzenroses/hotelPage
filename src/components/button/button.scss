@@ -11,10 +11,10 @@
   text-transform: uppercase;
   text-decoration: none;
   user-select: none;
-}
 
-.button:hover,
-.button:active {
-  color: $dark-shade_medium;
-  cursor: pointer;
+  &:hover,
+  &:active {
+    color: $dark-shade_medium;
+    cursor: pointer;
+  }
 }
