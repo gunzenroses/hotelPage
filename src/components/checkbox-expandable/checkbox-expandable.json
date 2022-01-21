@@ -1,0 +1,34 @@
+{
+  "checkboxContent": [
+    {
+      "checkboxName": "breakfast",
+      "ifChecked": false,
+      "checkboxTitle": "Завтрак"
+    },
+    {
+      "checkboxName": "desk",
+      "ifChecked": true,
+      "checkboxTitle": "Письменный стол"
+    },
+    {
+      "checkboxName": "feeding chair",
+      "ifChecked": true,
+      "checkboxTitle": "Стул для кормления"
+    },
+    {
+      "checkboxName": "baby bed",
+      "ifChecked": true,
+      "checkboxTitle": "Кроватка"
+    },
+    {
+      "checkboxName": "TV",
+      "ifChecked": false,
+      "checkboxTitle": "Телевизор"
+    },
+    {
+      "checkboxName": "shampoo",
+      "ifChecked": false,
+      "checkboxTitle": "Шампунь"
+    }
+  ]
+}
