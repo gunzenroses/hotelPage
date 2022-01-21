@@ -7,11 +7,7 @@
 @import '@~Components/textfield/_type/_login/textfield_type_login.scss';
 
 .card-signin {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-wrap: nowrap;
+  @include isFlex($direction: column, $justify: flex-start);
   width: 100%;
   height: fit-content;
   min-height: 358px;

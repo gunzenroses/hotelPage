@@ -41,14 +41,10 @@
   }
 
   &__ref {
+    @include isFlex($justify: center, $align: center);
     position: absolute;
     top: 2px;
     left: 2px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
     width: calc(100% - 4px);
     height: calc(100% - 4px);
     min-width: 70px;

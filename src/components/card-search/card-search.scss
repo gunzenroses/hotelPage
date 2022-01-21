@@ -1,16 +1,13 @@
 @import '@~Assets/styles/card.scss';
 @import '@~Assets/styles/colors.scss';
 @import '@~Assets/styles/media-mixins.scss';
+@import '@~Assets/styles/mixins.scss';
 @import '@~Components/button-submit/button-submit.scss';
 @import '@~Components/date-range/_separete/date-range_separate.scss';
 @import '@~Components/dropdown/_type_guests/dropdown_type_guests.scss';
 
 .card-search {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-wrap: nowrap;
+  @include isFlex($direction: column, $justify: flex-start);
   width: 380px;
   height: 374px;
   padding: 39px 29px 0 29px;
