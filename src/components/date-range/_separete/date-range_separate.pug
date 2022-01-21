@@ -1,22 +1,33 @@
 include ../../calendar/calendar.pug
-include ../__item/date-range__item.pug
 
-mixin date-range_separate({ labelText_1="Прибытие", inputValue_1="", labelText_2="Выезд", inputValue_2="", dropdownClassShow = "" })
+mixin date-range_separate({ inputValue_1="", inputValue_2="", classShow = "" })
   div.date-range.js-date-range
     div(
       class=`date-range__calendar js-date-range__calendar js-expand__content ${ 
-        dropdownClassShow }`)
+        classShow }`)
       +calendar()
     .date-range__selector.js-expand__init
-      +date-range__item({
-        labelText: labelText_1,
-        inputName: "checkin",
-        inputValue: inputValue_1,
-        dateDataType: "checkin"
-      })
-      +date-range__item({
-        labelText: labelText_2,
-        inputName: "checkout",
-        inputValue: inputValue_2,
-        dateDataType: "checkout"
-      })
+      .date-range__item.date-range__item_separate
+        h3.date-range__label!= "Прибытие"
+        .date-range__info
+          input(
+            class= "date-range__input" 
+            type= "text" 
+            value= inputValue_1
+            name= "checkin"
+            placeholder= "ДД.ММ.ГГГГ"
+            maxlength= 10
+            data-range= "checkin"
+            readonly)
+      .date-range__item.date-range__item_separate
+        h3.date-range__label!= "Выезд"
+        .date-range__info
+          input(
+            class= "date-range__input" 
+            type= "text" 
+            value= inputValue_2
+            name= "checkout"
+            placeholder= "ДД.ММ.ГГГГ"
+            maxlength= 10
+            data-range= "checkout"
+            readonly)
