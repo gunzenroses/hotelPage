@@ -1,22 +1,12 @@
-include ./__item/checkbox__item.pug
-
 mixin checkbox
+  - var { houseRules } = require("Components/checkbox/checkbox.json");
   fieldset.checkbox
-    +checkbox__item({
-      valueText: "smoking_allowed", 
-      inputName: "house-rules", 
-      ifChecked: false, 
-      checkboxTitle: "Можно курить"
-    })
-    +checkbox__item({
-      valueText: "pets_allowed", 
-      inputName: "house-rules", 
-      ifChecked: true, 
-      checkboxTitle: "Можно с питомцами"
-    })
-    +checkbox__item({
-      valueText: "guests_allowed", 
-      inputName: "house-rules", 
-      ifChecked: true, 
-      checkboxTitle: "Можно пригласить гостей (до 10 человек)"
-    })
+    each houseRule in houseRules
+      label.checkbox__item
+        input(
+          type="checkbox"
+          value= houseRule.valueText
+          name= houseRule.inputName
+          checked= houseRule.ifChecked).checkbox__real
+        span.checkbox__fake
+        span.checkbox__title!= houseRule.checkboxTitle

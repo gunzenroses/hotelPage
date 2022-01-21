@@ -1,39 +1,17 @@
-include ./__item/checkbox-expandable__item.pug
-
 mixin checkbox-expandable({ dropdownTitleName, dropdownClassShow="" })
+  - var { checkboxContent } = require("Components/checkbox-expandable/checkbox-expandable.json");
+
   .checkbox-expandable.js-checkbox-expandable
     .checkbox-expandable__dropdown
       div(class=`js-checkbox-expandable__content ${ dropdownClassShow }`)
         fieldset.checkbox-expandable__content
-          +checkbox-expandable__item({
-            checkboxName: "breakfast",
-            ifChecked: false,
-            checkboxTitle: "Завтрак"
-          })
-          +checkbox-expandable__item({
-            checkboxName: "desk",
-            ifChecked: true,
-            checkboxTitle: "Письменный стол"
-          })
-          +checkbox-expandable__item({
-            checkboxName: "feeding chair",
-            ifChecked: true,
-            checkboxTitle: "Стул для кормления"
-          })
-          +checkbox-expandable__item({
-            checkboxName: "baby bed",
-            ifChecked: true,
-            checkboxTitle: "Кроватка"
-          })
-          +checkbox-expandable__item({
-            checkboxName: "TV",
-            ifChecked: false,
-            checkboxTitle: "Телевизор"
-          })
-          +checkbox-expandable__item({
-            checkboxName: "shampoo",
-            ifChecked: false,
-            checkboxTitle: "Шампунь"
-          })
+          each checkboxItem in checkboxContent
+            label.checkbox-expandable__item
+              input(
+                type="checkbox" 
+                name= checkboxItem.checkboxName 
+                checked= checkboxItem.ifChecked).checkbox-expandable__real
+              span.checkbox-expandable__fake
+              span.checkbox-expandable__title!= checkboxItem.checkboxTitle
       .checkbox-expandable__button.js-checkbox-expandable__init
         .dropdown__title!= dropdownTitleName
