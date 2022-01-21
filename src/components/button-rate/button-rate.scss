@@ -1,14 +1,42 @@
-@import './__item/button-rate__item.scss';
+@import '@~Assets/styles//mixins.scss';
 
 .button-rate {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: nowrap;
+  @include isFlex($direction: row-reverse);
   width: 120px;
   height: fit-content;
   font-size: 29px;
   line-height: 21px;
   user-select: none;
+
+  &__real {
+    display: none;
+    appearance: none;
+  }
+
+  &__fake {
+    width: 24px;
+    height: 24px;
+    color: $purple;
+    background-image: $linearGradientLilac;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    cursor: pointer;
+
+    &::before {
+      width: 24px;
+      height: 24px;
+      content: '☆';
+    }
+  }
+
+  &__real:checked ~ &__fake::before,
+  &__real:checked + &__fake::before {
+    content: '★';
+  }
+
+  &__real:hover ~ &__fake:before,
+  &__real:hover + &__fake:before {
+    content: '★';
+  }
 }

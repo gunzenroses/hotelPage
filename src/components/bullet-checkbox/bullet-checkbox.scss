@@ -1,13 +1,10 @@
+@import '@~Assets/styles/colors.scss';
 @import '@~Assets/styles/fonts.scss';
 @import '@~Assets/styles/media-mixins.scss';
-@import './__item/bullet-checkbox__item.scss';
+@import '@~Assets/styles/mixins.scss';
 
 .bullet-checkbox {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: nowrap;
+  @include isFlex($direction: column);
   width: 292px;
   height: 142px;
 
@@ -33,8 +30,43 @@
       height: $fs_h2;
     }
   }
-}
 
-.bullet-checkbox__item + .bullet-checkbox__item {
-  margin-top: 10px;
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    user-select: none;
+  }
+
+  &__icon {
+    display: inline-block;
+    position: relative;
+    top: 7px;
+    width: 10.43px;
+    height: 10px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background-color: $dark-shade_less;
+  }
+
+  &__title {
+    width: 242px;
+    font-weight: 400;
+    font-size: $fs_base;
+    line-height: 24px;
+    color: $dark-shade_more;
+    letter-spacing: .001em;
+
+    @include _1750-1920 {
+      width: calc(100% - 20px);
+      letter-spacing: 0;
+    }
+  }
+
+  &__item + &__item {
+    margin-top: 10px;
+  }
 }
