@@ -8,8 +8,9 @@
 
 .textfield_type_login {
   @include isFlex($direction: column);
-  height: 98px;
+  min-height: 98px;
   width: 100%;
+  margin-top: 3px;
   padding: 0;
   border: none;
 }

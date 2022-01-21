@@ -39,7 +39,7 @@
     }
 
     @include _380 {
-      height: calc(683 / 1440 * 100vw + 646px);
+      height: fit-content;
       min-height: calc(683 / 1440 * 320px + 646px);
     }
   }

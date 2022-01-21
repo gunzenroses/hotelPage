@@ -68,7 +68,8 @@
 
   &__login {
     margin-top: 22px;
-    height: 116px;
+    height: fit-content;
+    min-height: 116px;
   }
 
   &__specials {
