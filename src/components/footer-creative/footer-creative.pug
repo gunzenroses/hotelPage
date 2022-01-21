@@ -2,10 +2,11 @@ include ../logo/logo.pug
 include ../social-nets/social-nets.pug
 
 mixin footer-creative()
+  - var copyRightText = "Copyright © 2018 Toxin отель. Все права защищены."
   .footer-creative
     .footer-creative__content
       +logo()
       .footer-creative__copyright-text
-        .copyright__text Copyright © 2018 Toxin отель. Все права защищены.
+        != copyRightText
       .footer-creative__social-nets
         +social-nets("creative")
