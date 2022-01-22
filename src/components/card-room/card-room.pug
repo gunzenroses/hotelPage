@@ -16,19 +16,19 @@ mixin card-room({ roomOptions, theme="" })
       ? "card-room__button-rate"
       : `card-room__button-rate card-room__button-rate_in-${ theme }`
   - 
-    var classSign = theme === "creative" 
+    var signClass = theme === "creative" 
       ? "card-room__sign card-room__sign_in-creative"
       : "card-room__sign"
   - 
-    var classNumber = theme === "creative" 
+    var numberClass = theme === "creative" 
       ? "card-room__number card-room__number_creative"
       : "card-room__number"
   -
-    var classRoomType = theme === "search" 
+    var roomTypeClass = theme === "search" 
       ? "card-room__type card-room__type_in-search"
       : "card-room__type"
   -
-    var classPeriod = theme === "search" 
+    var periodClass = theme === "search" 
       ? "card-room__period card-room__period_in-search"
       : "card-room__period"
 
@@ -40,12 +40,12 @@ mixin card-room({ roomOptions, theme="" })
     .card-room__info
       .card__row
         .card__row_small
-          span(class= `${ classSign }`) №
-          span(class= `${ classNumber }`)= bookingNumber
-          span(class= `${ classRoomType }`)= bookingType 
+          span(class= `${ signClass }`) №
+          span(class= `${ numberClass }`)= bookingNumber
+          span(class= `${ roomTypeClass }`)= bookingType 
         .card__row_small
           span.card-room__price!= bookingPrice + "₽"
-          span(class= `${ classPeriod }`) &nbsp;в сутки
+          span(class= `${ periodClass }`) &nbsp;в сутки
       .card-room__rating
         div(class=`${ buttonRateClass }`)
           +button-rate({
