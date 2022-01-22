@@ -2,7 +2,8 @@ include ../button-submit/button-submit.pug
 include ../date-range/_separete/date-range_separate.pug
 include ../dropdown-guests/dropdown-guests.pug
 
-mixin card-booking({ priceInfos, itemNumbers=[0, 0, 0], theme="" })
+mixin card-booking({ cardBookingInfo })
+  - var { theme, itemNumbers, priceInfos } = cardBookingInfo;
   -
     var descriptionClass = theme === ""
       ? "card-booking__description" 
@@ -22,7 +23,7 @@ mixin card-booking({ priceInfos, itemNumbers=[0, 0, 0], theme="" })
   -
     var infoSuiteClass = theme === "uikit"
       ? "card-booking__suite"
-      ? `card-booking__suite card-booking__suite_in-${ theme }`
+      : `card-booking__suite card-booking__suite_in-${ theme }`
   - 
     var bookingLineClass = theme === "uikit"
       ? "card-booking__line card-booking__line_in-uikit"
@@ -46,12 +47,12 @@ mixin card-booking({ priceInfos, itemNumbers=[0, 0, 0], theme="" })
         labelText: "Гости",
         itemNumbers: itemNumbers
       })
-    //- each priceInfo in priceInfos 
-    //-   .card-booking__price-info
-    //-     div(class= descriptionClass)= priceInfo.infoDesctiption
-    //-       if priceInfo.infoSign === "full"
-    //-         div(class= infoSignClass)
-    //-     .card-booking__expense!= `${ priceInfo.infoPrice }₽`
+    each priceInfo in priceInfos 
+      .card-booking__price-info
+        div(class= descriptionClass)= priceInfo.infoDesctiption
+          if priceInfo.infoSign === "full"
+            div(class= infoSignClass)
+        .card-booking__expense!= `${ priceInfo.infoPrice }₽`
     div(class= totalPriceClass)
       .card-booking__text Итого
       div(class= `${ bookingLineClass }`)
