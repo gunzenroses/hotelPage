@@ -1,7 +1,5 @@
 include ../button-rate/button-rate.pug
 include ../room-carousel/room-carousel.pug
-include ./__review/card-room__review.pug
-include ./__info/card-room__info.pug
 
 mixin card-room({ roomOptions, theme="" })
   - 
@@ -14,9 +12,25 @@ mixin card-room({ roomOptions, theme="" })
       starRate = 0, 
       reviewAmount = 0} = roomOptions
   - 
-    var buttonRateClass = theme === ""
-      ? "card-room__button-rate" 
+    var buttonRateClass = theme === "" 
+      ? "card-room__button-rate"
       : `card-room__button-rate card-room__button-rate_in-${ theme }`
+  - 
+    var classSign = theme === "creative" 
+      ? "card-room__sign card-room__sign_in-creative"
+      : "card-room__sign"
+  - 
+    var classNumber = theme === "creative" 
+      ? "card-room__number card-room__number_creative"
+      : "card-room__number"
+  -
+    var classRoomType = theme === "search" 
+      ? "card-room__type card-room__type_in-search"
+      : "card-room__type"
+  -
+    var classPeriod = theme === "search" 
+      ? "card-room__period card-room__period_in-search"
+      : "card-room__period"
 
   .card-room
     +room-carousel({
@@ -24,24 +38,20 @@ mixin card-room({ roomOptions, theme="" })
       nameForPictures: `room ${ bookingNumber }`
     })
     .card-room__info
-      +card-room__info({
-        bookingNumber: bookingNumber,
-        bookingType: bookingType,
-        bookingPrice: bookingPrice,
-        theme: theme
-      })
+      .card__row
+        .card__row_small
+          span(class= `${ classSign }`) №
+          span(class= `${ classNumber }`)= bookingNumber
+          span(class= `${ classRoomType }`)= bookingType 
+        .card__row_small
+          span.card-room__price!= bookingPrice + "₽"
+          span(class= `${ classPeriod }`) &nbsp;в сутки
       .card-room__rating
-        if theme === ""
-          .card-room__button-rate
-            +button-rate({
-              inputName: starName,
-              checkedNum: starRate
-            })
-        else
-          div(class=`card-room__button-rate card-room__button-rate_in-${
-            theme }`)
-            +button-rate({
-              inputName: starName,
-              checkedNum: starRate
-            })
-        +card-room__review(reviewAmount)
+        div(class=`${ buttonRateClass }`)
+          +button-rate({
+            inputName: starName,
+            checkedNum: starRate
+          })
+        .card__row_small
+          span.card-room__price!= reviewAmount
+          span.card-room__review  Отзывов

@@ -5,9 +5,6 @@
 @import '@~Components/button-rate/button-rate.scss';
 @import '@~Components/room-carousel/room-carousel.scss';
 
-@import './__info/card-room__info.scss';
-@import './__review/card-room__review.scss';
-
 .card-room {
   @include isFlex($direction: column, $justify: flex-start);
   position: relative;
@@ -28,6 +25,76 @@
     min-width: 258px;
     height: calc(47vw + 106px);
     min-height: 270px;
+  }
+
+  &__sign {
+    display: inline-block;
+    font-size: $fs_base;
+    line-height: 15px;
+    font-weight: 700;
+    color: $dark-shade_most;
+
+    @include _1750-1920 {
+      font-size: $fs_h2;
+    }
+
+    &_in-creative {
+      line-height: 20px;
+    }
+  }
+
+  &__number {
+    display: inline-block;
+    padding-left: 3px;
+    font-size: 19px;
+    line-height: 15px;
+    letter-spacing: .001em;
+    font-weight: 700;
+    color: $dark-shade_most;
+
+    @include _1750-1920 {
+      font-size: $fs_h1;
+    }
+
+    &_creative {
+      line-height: 20px;
+    }
+  }
+
+  &__type {
+    display: inline-block;
+    padding-left: 2px;
+    font-size: .857rem;
+    color: $purple;
+    letter-spacing: .0001em;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 23px;
+
+    @include _1750-1920 {
+      font-size: $fs_base;
+    }
+
+    &_in-search {
+      margin-left: 7px;
+    }
+  }
+
+  &__period {
+    font-size: $fs_h3;
+    font-weight: 400;
+
+    line-height: 24px;
+    letter-spacing: .001em;
+    color: $dark-shade_medium;
+
+    @include _1750-1920 {
+      font-size: $fs_base;
+    }
+
+    &_in-search {
+      line-height: 20px;
+    }
   }
 
   &__button-rate {
@@ -58,5 +125,29 @@
     border-top: 1px solid $dark-shade_few;
     padding-top: 11px;
     padding-right: 2px;
+  }
+
+  &__price {
+    line-height: 20px;
+    font-size: 1rem;
+    letter-spacing: .01em;
+    font-weight: 700;
+    color: $dark-shade_medium;
+
+    @include _1750-1920 {
+      font-size: $fs_h2;
+    }
+  }
+
+  &__review {
+    line-height: 20px;
+    font-size: 13px;
+    letter-spacing: .05em;
+    font-weight: 400;
+    color: $dark-shade_medium;
+
+    @include _1750-1920 {
+      font-size: $fs_base;
+    }
   }
 }
