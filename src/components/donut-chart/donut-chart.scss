@@ -4,11 +4,7 @@
 @import '@~Assets/styles/fonts.scss';
 
 .donut-chart {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: nowrap;
+  @include isFlex();
   width: 315px;
   height: 126px;
   margin: 22px 0 0;

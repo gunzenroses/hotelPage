@@ -1,5 +1,6 @@
 @import '@~Assets/styles/colors.scss';
 @import '@~Assets/styles/media-mixins.scss';
+@import '@~Assets/styles/mixins.scss';
 @import '@~Assets/styles/fonts.scss';
 
 .card {
@@ -32,11 +33,7 @@
   }
 
   &__row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: nowrap;
+    @include isFlex();
     width: 100%;
     height: fit-content;
 

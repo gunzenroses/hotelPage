@@ -1,5 +1,6 @@
 @import '@~Assets/styles/colors.scss';
 @import '@~Assets/styles/media-mixins.scss';
+@import '@~Assets/styles/mixins.scss';
 
 .js-expand__content {
   display: none;
@@ -11,11 +12,7 @@
 }
 
 .js-expand__show {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-wrap: nowrap;
+  @include isFlex($direction: column, $justify: flex-start);
 
   @include _1650-1920 {
     width: 100%;

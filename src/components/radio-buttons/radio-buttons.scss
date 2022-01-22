@@ -1,5 +1,6 @@
 @import '@~Assets/styles/fonts.scss';
 @import '@~Assets/styles/media-mixins.scss';
+@import '@~Assets/styles/mixins.scss';
 
 @mixin radioButtonTitle {
   display: inline-block;
@@ -26,11 +27,7 @@
 }
 
 .radio-buttons {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: nowrap;
+  @include isFlex();
   width: 100%;
   height: 24px;
 
@@ -39,11 +36,7 @@
   }
 
   &__item {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-wrap: nowrap;
+    @include isFlex($justify: flex-start);
     width: 104px;
     height: 24px;
     font-weight: 400;

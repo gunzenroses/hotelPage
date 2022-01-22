@@ -83,12 +83,8 @@
   }
 
   &__item {
-    display: flex;
+    @include isFlex($justify: flex-start);
     width: fit-content;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-wrap: nowrap;
     font-family: $montserrat;
     font-weight: 400;
     font-size: $fs_base;
@@ -159,11 +155,7 @@
 }
 
 .js-checkbox-expandable__show {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-wrap: nowrap;
+  @include isFlex($direction: column, $justify: flex-start);
 
   @include _1650-1920 {
     width: 100%;

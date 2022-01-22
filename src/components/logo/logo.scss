@@ -1,11 +1,8 @@
 @import '@~Assets/styles/media-mixins.scss';
+@import '@~Assets/styles/mixins.scss';
 
 .logo {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: nowrap;
+  @include isFlex($align: center);
   width: 107px;
   height: 40px;
   line-height: 40px;

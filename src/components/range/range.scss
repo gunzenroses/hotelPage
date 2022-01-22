@@ -4,11 +4,7 @@
 @import '@~Assets/styles/fonts.scss';
 
 .range {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-wrap: nowrap;
+  @include isFlex($direction: column, $justify: flex-start);
   position: relative;
   width: 100%;
   height: auto;

@@ -1,13 +1,10 @@
 @import '@~Assets/styles/colors.scss';
 @import '@~Assets/styles/media-mixins.scss';
+@import '@~Assets/styles/mixins.scss';
 @import '@~Components/info/info.scss';
 
 .badge {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-wrap: nowrap;
+  @include isFlex($justify: flex-start);
   width: 280px;
   height: 69px;
   border-bottom: 1px solid $dark-shade_few;

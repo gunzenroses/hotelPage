@@ -236,7 +236,7 @@
   }
 
   &__row {
-    @include isFlex;
+    @include isFlex();
     width: 100%;
   }
 
