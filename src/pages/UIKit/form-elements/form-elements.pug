@@ -13,8 +13,8 @@ include ../../../components/checkbox-expandable/checkbox-expandable.pug
 include ../../../components/comment/comment.pug
 include ../../../components/date-range/_separete/date-range_separate.pug
 include ../../../components/date-range/_common/date-range_common.pug
-include ../../../components/dropdown/_type_guests/dropdown_type_guests.pug
-include ../../../components/dropdown/_type_rooms/dropdown_type_rooms.pug
+include ../../../components/dropdown-guests/dropdown-guests.pug
+include ../../../components/dropdown-rooms/dropdown-rooms.pug
 include ../../../components/range/range.pug
 include ../../../components/rich-checkbox/rich-checkbox.pug
 include ../../../components/navlink/navlink.pug
@@ -63,7 +63,7 @@ block content
                 maxText: 20
               })
           .form-elements__guests.js-dropdown__detection
-            +dropdown_type_guests({
+            +dropdown-guests({
               labelText: "dropdown",
             })
           .form-elements__birthday
@@ -162,13 +162,13 @@ block content
       .form-elements__dropdowns
         .form-elements__room-criterions
           .form-elements__rooms.js-dropdown__detection
-            +dropdown_type_rooms({
+            +dropdown-rooms({
               labelText: "dropdown",
               labelRightText: "default",
               itemNumbers: [2, 2, 0],
             })
           .form-elements__rooms.js-dropdown__detection
-            +dropdown_type_rooms({
+            +dropdown-rooms({
               labelText: "dropdown",
               dropdownClassShow: "js-expand__show",
               labelRightText: "expanded",
@@ -185,7 +185,7 @@ block content
           })
       .form-elements__search-info
         .form-elements__guests_open.js-dropdown__detection
-          +dropdown_type_guests({
+          +dropdown-guests({
             labelText: "dropdown",
             dropdownClassShow: "js-expand__show"
           })
@@ -196,7 +196,7 @@ block content
           })
       .form-elements__room-info
         .form-elements__guests_open.js-dropdown__detection
-          +dropdown_type_guests({
+          +dropdown-guests({
             labelText: "dropdown",
             dropdownClassShow: "js-expand__show",
             itemNumbers: [2, 1, 0],

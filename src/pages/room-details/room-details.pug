@@ -14,7 +14,12 @@ block variables
   - var description = "room details";
   - var keywords = "room details";
   - 
-    var { comment1, comment2, checkboxList1, cancellationRools } = require("./room-details.json");
+    var { 
+      comment1, 
+      comment2, 
+      checkboxList1, 
+      cancellationRools, 
+      cardBookingInfo } = require("./room-details.json");
 
 block content
   .room-details.js-dropdown__detection
@@ -76,9 +81,5 @@ block content
               .room-details__cancellation_info
                 != cancellationRools
           article.room-details__booking
-            +card-booking({
-              serviceName: "Сбор за доп. услуги",
-              itemNumbers: [2, 1, 0],
-              theme: theme
-            })
+            +card-booking({ cardBookingInfo: cardBookingInfo })
     +footer({ theme: theme })

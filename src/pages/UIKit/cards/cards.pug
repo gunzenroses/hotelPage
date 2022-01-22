@@ -10,7 +10,12 @@ block variables
   - var title = "UIKit";
   - var description = "UIKit";
   - var keywords = "UIKit";
-  - var { room888, room840 } = require("Pages/UIKit/cards/cards.json");
+  - 
+    var { 
+      room888, 
+      room840, 
+      priceInfos,
+      cardBookingInfo } = require("Pages/UIKit/cards/cards.json");
 
 block content
   .cards.js-dropdown__detection
@@ -21,11 +26,7 @@ block content
       .cards__card-registration
         +card-registration("Перейти к оплате")
       .cards__card-booking
-        +card-booking({ 
-          serviceName: "Сбор за дополнительные услуги",
-          itemNumbers: [2, 1, 0],
-          theme: theme
-        })
+        +card-booking({ cardBookingInfo: cardBookingInfo })
       .cards__card-signin
         +card-signin()
       .cards__calendar
