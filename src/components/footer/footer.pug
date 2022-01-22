@@ -4,10 +4,12 @@ include ../social-nets/social-nets.pug
 include ../textfield/_type/_subscribe/textfield_type_subscribe.pug
 
 mixin footer({ theme="main" })
-  - var navigations = ["О нас", "Новости", "Служба поддержки", "Услуги"]
-  - var abouts = ["О сервисе", "Наша команда", "Вакансии", "Инвесторы"]
-  - var supports = ["Соглашения", "Сообщества", "Связь с нами"]
-  - var footerText = "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»";
+  - 
+    var { 
+      footerText,
+      footerTextSubscription,
+      footerGroups
+    } = require("Components/footer/footer.json");
   - 
     var footerCopywriteClass = theme === "main"
       ? "footer__basement" : `footer__basement footer__basement_in-${ theme }`
@@ -33,62 +35,32 @@ mixin footer({ theme="main" })
           +logo()
           .footer__text!= footerText
       div(class= infoVisibleClass)
-        .footer__navigation
-          h3.footer__title Навигация
-          ul.footer__links
-            for navigation in navigations
-              +navlink({
-                buttonText: navigation, 
-                buttonOnclick: "./some-address",
-                navlinkModificator: "footer"
-              })
-        .footer__about
-          h3.footer__title О нас
-          ul.footer__links
-            for about in abouts
-              +navlink({
-                buttonText: about,
-                buttonOnclick: "./some-address",
-                navlinkModificator: "footer"
-              })
-        .footer__support
-          h3.footer__title Служба поддержки
-          ul.footer__links
-            for support in supports
-              +navlink({
-                buttonText: support,
-                buttonOnclick: "./some-address",
-                navlinkModificator: "footer"
-              })
+        for footerGroup in footerGroups
+          div(class=`footer__${ footerGroup.name }`)
+            h3.footer__title!= footerGroup.text
+            ul.footer__links
+              for item in footerGroup.items
+                +navlink({
+                  buttonText: item.name,
+                  buttonOnclick: item.link,
+                  navlinkModificator: "footer"
+                })
       .footer__info-hidden
-        .footer__navigation
-          h3.footer__title.js-expand__init Навигация
-          ul.footer__dropdown.js-expand__content
-            for navigation in navigations
-              +navlink({ 
-                buttonText: navigation, 
-                buttonOnclick: "./some-address"
-              })
-        .footer__about
-          h3.footer__title.js-expand__init О нас
-          ul.footer__dropdown.js-expand__content
-            for about in abouts
-              +navlink({
-                buttonText: about,
-                buttonOnclick: "./some-address"
-              })
-        .footer__support
-          h3.footer__title.js-expand__init Служба поддержки
-          ul.footer__dropdown.js-expand__content
-            for support in supports
-              +navlink({ 
-                buttonText: support,
-                buttonOnclick: "./some-address"
-              })
+        for footerGroup in footerGroups
+          div(class=`footer__${ footerGroup.name }`)
+            h3.footer__title.js-expand__init!= footerGroup.text
+            ul.footer__dropdown.js-expand__content
+              for item in footerGroup.items
+                +navlink({ 
+                  buttonText: item.name, 
+                  buttonOnclick: item.link
+                })
       .footer__subscription
         h3.footer__title Подписка
-        p.footer__special-offer Получайте специальные предложения и новости сервиса
-        form.footer__form.js-footer__form(method="get" action="./registration.html")
+        p.footer__special-offer!= footerTextSubscription
+        form.footer__form.js-footer__form(
+          method="get" 
+          action="./registration.html")
           +textfield_type_subscribe()
     div(class= footerCopywriteClass)
       .footer__basement-text Copyright © 2018 Toxin отель. Все права защищены.
