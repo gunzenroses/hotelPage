@@ -9,7 +9,7 @@ mixin dropdown-guests({ labelText="", dropdownClassShow="", itemNumbers=[0, 0, 0
     if labelRightText
       h3.label.label_right!= labelRightText
     div(class="dropdown js-dropdown-guests")
-      div(class=`dropdown-guest__content js-expand__content ${ dropdownClassShow }`)
+      div(class=`dropdown-guests__content js-expand__content ${ dropdownClassShow }`)
         +dropdown-item({
           itemDataType: "grownups",
           itemText: "Взрослые",
@@ -31,12 +31,12 @@ mixin dropdown-guests({ labelText="", dropdownClassShow="", itemNumbers=[0, 0, 0
         .dropdown__buttons
           button(
             type="submit"
-            class=`${buttonSubmitClass} js-dropdown__button_type_submit`)
-            != Применить
+            class=`${buttonSubmitClass} js-dropdown__button_type_submit`
+            )= Применить
           button(
             type="reset"
-            class=`${buttonResetClass} js-dropdown__button_type_reset`)
-            != Очистить
+            class=`${buttonResetClass} js-dropdown__button_type_reset`
+            )= Очистить
       .dropdown__info.js-dropdown__info.js-expand__init
         input.dropdown__input.js-dropdown__input(
           readonly="" 
