@@ -26,5 +26,26 @@
     "starName": "rating4",
     "starRate": 4,
     "reviewAmount": "65"
+  },
+  "cardBookingInfo": {
+    "theme": "uikit",
+    "itemNumbers": [2, 1, 0],
+    "priceInfos": [
+      {
+        "infoDesctiption": "9 990₽ х 4 суток",
+        "infoPrice": "39 960",
+        "infoSign": ""
+      },
+      {
+        "infoDesctiption": "Сбор за услуги: скидка 2 179₽",
+        "infoPrice": "0",
+        "infoSign": "full"
+      },
+      {
+        "infoDesctiption": "Сбор за дополнительные услуги",
+        "infoPrice": "300",
+        "infoSign": "full"
+      }
+    ]
   }
 }
