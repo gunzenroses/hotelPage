@@ -1,18 +1,30 @@
-include ./__item/rich-checkbox__item.pug
-
 mixin rich-checkbox({ checkboxName="", containerText="" })
-  .rich-checkbox
-    .rich-checkbox__label!= containerText
-    fieldset.rich-checkbox__list
-      +rich-checkbox__item({
-        checkboxName: checkboxName,
+  - 
+    var checkboxItems = [
+      {
+        checkboxName: "accessibility",
         checkboxValue: "wide corridor",
         checkboxTitle: "Широкий коридор",
         checkboxSubtitle: "Ширина коридоров в номере <br> не менее 91 см."
-      })
-      +rich-checkbox__item({
-        checkboxName: checkboxName,
+      },
+      {
+        checkboxName: "accessibility",
         checkboxValue: "help for disabled",
         checkboxTitle: "Помощник для инвалидов",
         checkboxSubtitle: "На 1 этаже вас встретит специалист <br> и проводит до номера."
-      })
+      }
+    ]
+
+  .rich-checkbox
+    .rich-checkbox__label!= containerText
+    fieldset.rich-checkbox__list
+      each checkboxItem in checkboxItems
+        label.rich-checkbox__item
+          input(
+            type= "checkbox"
+            name= checkboxItem.checkboxName 
+            value= checkboxItem.checkboxValue).rich-checkbox__real
+          span.rich-checkbox__fake
+          span.rich-checkbox__form
+            span.rich-checkbox__title!= checkboxItem.checkboxTitle
+            span.rich-checkbox__description!= checkboxItem.checkboxSubtitle

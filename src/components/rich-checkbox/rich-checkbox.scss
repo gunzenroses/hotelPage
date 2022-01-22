@@ -1,8 +1,21 @@
+@import '@~Assets/styles/colors.scss';
 @import '@~Assets/styles/fonts.scss';
 @import '@~Assets/styles/media-mixins.scss';
 @import '@~Assets/styles//mixins.scss';
 
-@import './__item/rich-checkbox__item.scss';
+@mixin richCheckboxFake {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border: 1px solid $dark-shade_less;
+  border-radius: 4px;
+  background-color: transparent;
+
+  @include _1750-1920 {
+    @include containerBlock(25px, 25px);
+  }
+}
 
 .rich-checkbox {
   @include isFlex($direction: column);
@@ -48,5 +61,90 @@
     @include _1750-1920 {
       height: fit-content;
     }
+  }
+
+  &__item {
+    @include isFlex($justify: flex-start);
+    width: fit-content;
+    max-width: 100%;
+    height: fit-content;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  &__form {
+    @include isFlex($direction: column, $justify: flex-start);
+    max-width: 350px;
+    height: fit-content;
+
+    @include _1750-1920 {
+      width: calc(100% - 50px);
+    }
+  }
+
+  &__title {
+    margin-top: 1px;
+    line-height: 18px;
+    font-size: $fs_base;
+    letter-spacing: 0.0001em;
+    font-weight: 700;
+    color: $dark-shade_more;
+  }
+
+  &__description {
+    height: fit-content;
+    margin-top: 5px;
+    font-size: $fs_h3;
+    line-height: 15px;
+    font-weight: 400;
+    letter-spacing: 0.0001em;
+    color: $dark-shade_medium;
+
+    @include _1750-1920 {
+      line-height: $fs_h2;
+      font-size: $fs_base;
+    }
+  }
+
+  &__real {
+    @include containerBlock(20px, 20px);
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    appearance: none;
+
+    @include _1750-1920 {
+      @include containerBlock(25px, 25px);
+    }
+  }
+
+  &__fake {
+    @include richCheckboxFake();
+  }
+
+  &__real:checked ~ &__fake {
+    @include richCheckboxFake();
+    border-color: $purple;
+  }
+
+  &__real:checked + &__fake::before {
+    content: '';
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    @include containerBlock(4px, 6px);
+    transform: translate(-50%, -50%) rotate(45deg);
+    border-image: $linearGradientLilac;
+    border-image-slice: 1;
+    border-right: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+
+    @include _1650-1920 {
+      @include containerBlock(5px, 10px);
+    }
+  }
+
+  &__item + &__item{
+    margin-top: 8px;
   }
 }
