@@ -42,10 +42,6 @@
     text-transform: none;
     cursor: pointer;
     user-select: none;
-
-    @include _1650-1920 {
-      width: 100%;
-    }
   }
 
   &__real {
@@ -75,8 +71,6 @@
     color: $dark-shade_medium;
 
     @include _1750-1920 {
-      width: calc(100% - 50px);
-      max-width: 350px;
       font-size: $fs_base;
     }
   }

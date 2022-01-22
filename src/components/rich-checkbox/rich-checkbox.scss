@@ -76,10 +76,6 @@
     @include isFlex($direction: column, $justify: flex-start);
     max-width: 350px;
     height: fit-content;
-
-    @include _1750-1920 {
-      width: calc(100% - 50px);
-    }
   }
 
   &__title {
