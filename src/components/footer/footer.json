@@ -1,0 +1,66 @@
+{
+  "footerGroups": [
+    {
+      "name": "navigation",
+      "text": "Навигация",
+      "items": [
+        {
+          "name": "О нас",
+          "link": "./some-addresse"
+        },
+        {
+          "name": "Новости",
+          "link": "./some-addresse"
+        },
+        {
+          "name": "Служба поддержки",
+          "link": "./some-addresse"
+        },
+        {
+          "name": "Услуги",
+          "link": "./some-addresse"
+        }
+      ]
+    },
+    {
+      "name": "about",
+      "text": "О Нас",
+      "items": [
+        {
+          "name": "О сервисе",
+          "link": "./some-addresse"
+        },
+        {
+          "name": "Наша команда",
+          "link": "./some-addresse"
+        },
+        {
+          "name": "Вакансии",
+          "link": "./some-addresse"
+        },
+        {
+          "name": "Инвесторы",
+          "link": "./some-addresse"
+        }
+      ]
+    },
+    {
+      "name": "support",
+      "text": "Служба поддержки",
+      "items": [
+        {
+          "name": "Соглашения",
+          "link": "./some-addresse"
+        },
+        {
+          "name": "Сообщества",
+          "link": "./some-addresse"
+        },
+        {
+          "name": "Связь с нами",
+          "link": "./some-addresse"
+        }
+      ]
+    }
+  ]
+}
