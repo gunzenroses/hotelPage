@@ -1,0 +1,28 @@
+mixin dropdown-item({ itemDataType, itemText, itemDataOrder, itemNumber=0, itemClass="" })
+  - var dropdownItemClass = "dropdown-item js-dropdown-item";
+  - var dropdownTextClass = "dropdown-item__text";
+  - var dropdownMinusClass = "dropdown-item__minus js-dropdown-item__minus";
+  - var dropdownNumberClass = "dropdown-item__number js-dropdown-item__number";
+  - var dropdownPlusClass = "dropdown-item__plus js-dropdown-item__plus";
+  if itemClass === ""
+    div(
+      class=`${ dropdownItemClass }` 
+      data-type=itemDataType)
+      div(class=`${ dropdownTextClass }`)= itemText
+      div(class=`${ dropdownMinusClass } js-dropdown-item__minus_disabled`) - 
+      div(class=`${ dropdownNumberClass }` data-order=itemDataOrder)
+        != itemNumber
+      div(class=`${ dropdownPlusClass }`) +
+  else
+    div(
+      class=`${ dropdownItemClass } dropdown-item__item_last` 
+      data-type=itemDataType)
+      div(class=`${ dropdownTextClass } dropdown-item__text_last`)= itemText
+      div(
+        class=`${ 
+          dropdownMinusClass 
+          } dropdown-item__minus_last js-dropdown-item__minus_disabled`) - 
+      div(
+        class=`${ dropdownNumberClass } dropdown-item__number_last` 
+        data-order=itemDataOrder)= itemNumber 
+      div(class=`${ dropdownPlusClass } dropdown-item__plus_last`) +

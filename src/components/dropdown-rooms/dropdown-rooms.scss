@@ -1,0 +1,37 @@
+@import '@~Assets/styles/colors.scss';
+@import '@~Assets/styles/dropdown.scss';
+@import '@~Assets/styles/media-mixins.scss';
+
+@import '../dropdown-item/dropdown-item.scss';
+
+
+.dropdown-rooms {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-width: 260px;
+
+  @include _450 {
+    margin: 0 auto;
+  }
+
+  &__content {
+    position: absolute;
+    top: 44px;
+    left: 0;
+    width: 100%;
+    height: 119px;
+    margin-top: -1px;
+    padding-top: 1px;
+    border: 1px solid $dark-shade_medium;
+    border-radius: 0 0 4px 4px;
+    background: $light;
+    box-shadow: 0px 10px 20px $dark-shade_fewer;
+    z-index: 2;
+  }
+}

@@ -1,25 +1,25 @@
-include ../__item/dropdown__item.pug
+include ../dropdown-item/dropdown-item.pug
 
-mixin dropdown_type_rooms({ labelText="", dropdownContainerId, dropdownClassShow="", itemNumbers=[0, 0, 0], labelRightText="" })
-  .dropdown__container_type_rooms
+mixin dropdown-rooms({ labelText="", dropdownContainerId, dropdownClassShow="", itemNumbers=[0, 0, 0], labelRightText="" })
+  .dropdown-rooms
     h3.label!= labelText
     if labelRightText
       h3.label.label_right!= labelRightText
-    div(class="dropdown js-dropdown__rooms")
-      div(class=`dropdown__rooms js-expand__content ${ dropdownClassShow }`)
-        +dropdown__item({
+    div(class="dropdown js-dropdown-rooms")
+      div(class=`dropdown-rooms__content js-expand__content ${ dropdownClassShow }`)
+        +dropdown-item({
           itemDataType: "bedrooms",
           itemText: "Спальни",
           itemDataOrder: 0,
           itemNumber: itemNumbers[0]
         })
-        +dropdown__item({
+        +dropdown-item({
           itemDataType: "beds",
           itemText: "Кровати",
           itemDataOrder: 1,
           itemNumber: itemNumbers[1]
         })
-        +dropdown__item({
+        +dropdown-item({
           itemDataType: "bathrooms",
           itemText: "Ванные комнаты",
           itemDataOrder: 2,

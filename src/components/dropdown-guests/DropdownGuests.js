@@ -22,10 +22,10 @@ export default class DropdownGuests {
     this.info = this.container.querySelector(".js-dropdown__info");
     this.infoInput = this.container.querySelector(".js-dropdown__input");
     this.dropdownItems = Array.from(
-      this.container.querySelectorAll(".js-dropdown__item")
+      this.container.querySelectorAll(".js-dropdown-item__item")
     );
     this.dropdownMinuses = this.container.querySelectorAll(
-      ".js-dropdown__minus"
+      ".js-dropdown-item__minus"
     );
     this.resetButton = this.dropdownExpanded.querySelector(
       ".js-dropdown__button_type_reset"
@@ -37,7 +37,7 @@ export default class DropdownGuests {
 
   makeData() {
     const nums = Array.from(
-      this.container.querySelectorAll(".js-dropdown__number")
+      this.container.querySelectorAll(".js-dropdown-item__number")
     );
     nums.forEach((num) => {
       const value = parseInt(num.textContent, 10);
@@ -54,8 +54,8 @@ export default class DropdownGuests {
   @boundMethod
   plusAndMinusToItem(e) {
     const trg = e.target;
-    if (trg.classList.contains("js-dropdown__minus")) this.minusToItem(trg);
-    if (trg.classList.contains("js-dropdown__plus")) this.plusToItem(trg);
+    if (trg.classList.contains("js-dropdown-item__minus")) this.minusToItem(trg);
+    if (trg.classList.contains("js-dropdown-item__plus")) this.plusToItem(trg);
   }
 
   minusToItem(trg) {
@@ -91,7 +91,7 @@ export default class DropdownGuests {
   showItemNumber(i) {
     this.data[i] = this.data[i] < 0 ? 0 : this.data[i] > 10 ? 10 : this.data[i];
     const dropdownItem = this.dropdownItems[i].querySelector(
-      ".js-dropdown__number"
+      ".js-dropdown-item__number"
     );
     dropdownItem.innerText = this.data[i];
     this.activateMinus(i);
@@ -99,9 +99,9 @@ export default class DropdownGuests {
 
   activateMinus(i) {
     if (this.data[i] > 0) {
-      this.dropdownMinuses[i].classList.remove("js-button_disabled");
+      this.dropdownMinuses[i].classList.remove("js-dropdown-item__minus_disabled");
     } else {
-      this.dropdownMinuses[i].classList.add("js-button_disabled");
+      this.dropdownMinuses[i].classList.add("js-dropdown-item__minus_disabled");
     }
   }
 

@@ -20,17 +20,17 @@ export default class DropdownRooms {
     this.info = this.container.querySelector(".js-dropdown__info");
     this.infoInput = this.container.querySelector(".js-dropdown__input");
     this.dropdownItems = Array.from(
-      this.container.querySelectorAll(".js-dropdown__item")
+      this.container.querySelectorAll(".js-dropdown-item")
     );
-    this.dropdownPluses = this.container.querySelectorAll(".js-dropdown__plus");
+    this.dropdownPluses = this.container.querySelectorAll(".js-dropdown-item__plus");
     this.dropdownMinuses = this.container.querySelectorAll(
-      ".js-dropdown__minus"
+      ".js-dropdown-item__minus"
     );
   }
 
   makeData() {
     const nums = Array.from(
-      this.container.querySelectorAll(".js-dropdown__number")
+      this.container.querySelectorAll(".js-dropdown-item__number")
     );
     nums.forEach((num) => {
       const value = parseInt(num.textContent, 10);
@@ -45,7 +45,7 @@ export default class DropdownRooms {
     });
   }
 
-  @boundMethod
+  @boundMethod 
   minusOne(e) {
     const order = parseInt(e.target.nextElementSibling.dataset.order, 10);
     this.data[order] -= 1;
@@ -72,16 +72,16 @@ export default class DropdownRooms {
 
   updateItemNumber(i) {
     const dropdownItem = this.dropdownItems[i].querySelector(
-      ".js-dropdown__number"
+      ".js-dropdown-item__number"
     );
     dropdownItem.innerText = this.data[i];
   }
 
   updateMinusButton(i) {
     if (this.data[i] > 0) {
-      this.dropdownMinuses[i].classList.remove("js-button_disabled");
+      this.dropdownMinuses[i].classList.remove("js-dropdown-item__minus_disabled");
     } else {
-      this.dropdownMinuses[i].classList.add("js-button_disabled");
+      this.dropdownMinuses[i].classList.add("js-dropdown-item__minus_disabled");
     }
   }
 
