@@ -1,55 +1,60 @@
 include ../button-submit/button-submit.pug
 include ../date-range/_separete/date-range_separate.pug
-include ../dropdown/_type_guests/dropdown_type_guests.pug
+include ../dropdown-guests/dropdown-guests.pug
 
-include ./__room-info/card-booking__room-info.pug
-include ./__price-info/card-booking__price-info.pug
-
-mixin card-booking({ serviceName, itemNumbers=[0, 0, 0], theme="" })
+mixin card-booking({ priceInfos, itemNumbers=[0, 0, 0], theme="" })
+  -
+    var descriptionClass = theme === ""
+      ? "card-booking__description" 
+      : `card-booking__description card-booking__description_in-${ theme }`
+  - 
+    var infoSignClass = theme === ""
+      ? "card-booking__info-sign" 
+      : `card-booking__info-sign card-booking__info-sign_in-${ theme }`
   - 
     var totalPriceClass = theme === ""
       ? "card-booking__summary"
       : `card-booking__summary card-booking__summary_in-${ theme }`
+  - 
+    var infoNumberClass = theme === "uikit"
+      ? "card-booking__number" 
+      : `card-booking__number card-booking__number_in-${ theme }`
+  -
+    var infoSuiteClass = theme === "uikit"
+      ? "card-booking__suite"
+      ? `card-booking__suite card-booking__suite_in-${ theme }`
+  - 
+    var bookingLineClass = theme === "uikit"
+      ? "card-booking__line card-booking__line_in-uikit"
+      : "card-booking__line"
 
   form.card-booking(method="get" action="./search-room.html")
-    +card-booking__room-info({
-      bookingNumber: "888",
-      bookingType: "Люкс",
-      bookingPrice: "9 990",
-      theme: theme
-    })
+    .card__row
+      .card__row_small
+        span.card-booking__No №
+        span(class=`${ infoNumberClass }`) "888"  
+        span(class=`${ infoSuiteClass }`) "Люкс"
+      .card__row_small
+        span.card-booking__price!= "9 990₽"
     .card-booking__date-range
       +date-range_separate({
         inputValue_1: "19.08.2019",
         inputValue_2: "23.08.2019" 
       })
     .card-booking__dropdown_guests
-      +dropdown_type_guests({
+      +dropdown-guests({
         labelText: "Гости",
         itemNumbers: itemNumbers
       })
-    +card-booking__price-info({
-      infoDesctiption: "9 990₽ х 4 суток",
-      infoPrice: "39 960"
-    })
-    +card-booking__price-info({
-      infoDesctiption: "Сбор за услуги: скидка 2 179₽",
-      infoPrice: "0",
-      infoSign: "full",
-      theme: theme
-    })
-    +card-booking__price-info({
-      infoDesctiption: serviceName,
-      infoPrice: "300",
-      infoSign: "full",
-      theme: theme
-    })
+    //- each priceInfo in priceInfos 
+    //-   .card-booking__price-info
+    //-     div(class= descriptionClass)= priceInfo.infoDesctiption
+    //-       if priceInfo.infoSign === "full"
+    //-         div(class= infoSignClass)
+    //-     .card-booking__expense!= `${ priceInfo.infoPrice }₽`
     div(class= totalPriceClass)
       .card-booking__text Итого
-      if theme === "uikit"
-        .card-booking__line.card-booking__line_in-uikit
-      else 
-        .card-booking__line
+      div(class= `${ bookingLineClass }`)
       .card-booking__text 38 081₽
     .card-booking__button
       +button-submit({ 
