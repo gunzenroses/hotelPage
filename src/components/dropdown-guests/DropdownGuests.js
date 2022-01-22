@@ -22,7 +22,7 @@ export default class DropdownGuests {
     this.info = this.container.querySelector(".js-dropdown__info");
     this.infoInput = this.container.querySelector(".js-dropdown__input");
     this.dropdownItems = Array.from(
-      this.container.querySelectorAll(".js-dropdown-item__item")
+      this.container.querySelectorAll(".js-dropdown-item")
     );
     this.dropdownMinuses = this.container.querySelectorAll(
       ".js-dropdown-item__minus"
