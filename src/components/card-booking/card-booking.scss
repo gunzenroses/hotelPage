@@ -4,10 +4,7 @@
 @import '@~Assets/styles/fonts.scss';
 @import '@~Components/button-submit/button-submit.scss';
 @import '@~Components/date-range/_separete/date-range_separate.scss';
-@import '@~Components/dropdown/_type_guests/dropdown_type_guests.scss';
-
-@import './__price-info/card-booking__price-info.scss';
-@import './__room-info/card-booking__room-info.scss';
+@import '@~Components/dropdown-guests/dropdown-guests.scss';
 
 .card-booking {
   @include isFlex($direction: column, $justify: flex-start);
@@ -98,6 +95,153 @@
 
     &_in-uikit {
       width: 190px;
+    }
+  }
+
+  &__No {
+    display: inline-block;
+    padding-right: 3px;
+    font-size: $fs_base;
+    font-weight: 700;
+    line-height: 11px;
+    color: $dark-shade_most;
+
+    @include _1750-1920 {
+      font-size: $fs_h2;
+    }
+  }
+
+  &__number {
+    display: inline-block;
+    font-size: $fs_h1;
+    letter-spacing: .001em;
+    font-weight: 700;
+    line-height: 9px;
+    color: $dark-shade_most;
+
+
+    @include _1750-1920 {
+      font-size: $fs_h1;
+    }
+
+    &_in-details {
+      line-height: 11px;
+    }
+  }
+
+  &__suite {
+    display: inline-block;
+    line-height: 11px;
+    font-size: $fs_h3;
+    font-weight: 700;
+    letter-spacing: .02em;
+    color: $purple;
+    text-transform: uppercase;
+
+    &_in-details {
+      margin-left: 8px;
+    }
+  }
+
+  &__price {
+    font-size: $fs_base;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: .01em;
+    color: $dark-shade_medium;
+  }
+
+  &__period {
+    font-size: $fs_h3;
+    font-weight: 400;
+    letter-spacing: .01em;
+    line-height: 19px;
+    color: $dark-shade_medium;
+  }
+
+  &__price-info {
+    @include isFlex();
+    width: 100%;
+    min-height: 24px;
+    line-height: 18px;
+    margin-top: 10px;
+    margin-left: 1px;
+    color: $dark-shade_more;
+    pointer-events: none;
+
+    @include _1750-1920 {
+      max-width: 490px;
+    }
+
+    @include _450 {
+      justify-content: space-between;
+      min-width: 260px;
+      width: 100%;
+      margin: 9px 0;
+    }
+  }
+
+  &__description {
+    @include isFlex($justify: flex-start);
+    width: fit-content;
+    text-align: left;
+    letter-spacing: .0001em;
+
+    @include _1650-1920 {
+      width: calc(100% - 100px);
+    }
+
+    @include _450 {
+      width: calc(100% - 120px);
+      max-width: 170px;
+    }
+
+    &_in-uikit {
+      max-width: 239px;
+    }
+
+    &_in-details {
+      max-width: 245px;
+    }
+  }
+
+  &__expense {
+    @include isFlex();
+    width: fit-content;
+    text-align: right;
+    letter-spacing: .002em;
+
+    @include _1650-1920 {
+      max-width: 90px;
+    }
+  }
+
+  &__info-sign {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid $dark-shade_less;
+    line-height: 20px;
+    background: $light;
+
+    &::before {
+      content: 'i';
+      position: absolute;
+      top: 2px;
+      left: 7px;
+      line-height: $fs_base;
+      font-size: $fs_h3;
+      font-weight: 700;
+      color: $dark-shade_less;
+    }
+
+    &_in-details {
+      margin-left: 8px;
+    }
+
+    &_in-uikit {
+      margin-left: 5px;
     }
   }
 }
