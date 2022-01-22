@@ -2,11 +2,9 @@
 @import '@~Assets/styles/media-mixins.scss';
 @import '@~Assets/styles//mixins.scss';
 @import '@~Assets/styles/fonts.scss';
+@import '@~Components/logo/logo.scss';
 @import '@~Components/social-nets/social-nets.scss';
-
-@import './__company-info/footer__company-info.scss';
-@import './__info/footer__info.scss';
-@import './__subsciption/footer__subscription.scss';
+@import '@~Components/textfield/_type/_subscribe/textfield_type_subscribe.scss';
 
 @mixin containerWithMargins(
   $width: 100%,
@@ -18,6 +16,30 @@
   width: $width;
   height: $height;
   margin: $mt $ms $mb;
+}
+
+@mixin footerLogo {
+  @include _1340 {
+    margin: 0;
+  }
+
+  @include _1170 {
+    position: absolute;
+    top: -11px;
+    right: 0;
+    width: 106px;
+    height: 40px;
+    margin-right: 50px;
+  }
+
+  @include _800 {
+    position: relative;
+    width: 60%;
+    height: fit-content;
+    margin-right: 0;
+    margin-bottom: 20px;
+    align-items: center;
+  }
 }
 
 .footer {
@@ -119,6 +141,25 @@
     }
   }
 
+  &__logo {
+    @include footerLogo();
+    @include isFlex($direction: column);
+    width: 260px;
+    height: 131px;
+    margin-right: 38px;
+    letter-spacing: .001em;
+
+    &_in-landing {
+      height: 130px;
+      @include footerLogo();
+    }
+
+    &_in-signin {
+      height: 131px;
+      @include footerLogo();
+    }
+  }
+
   &__text {
     width: 100%;
     margin: 0;
@@ -131,6 +172,57 @@
 
     @include _1170 {
       display: none;
+    }
+  }
+
+  &__info {
+    @include isFlex($justify: flex-start);
+    height: 168px;
+    width: 548px;
+    margin-right: 50px;
+    padding-top: 4px;
+
+    @include _1500-1920 {
+      justify-content: space-between;
+      width: 50%;
+      margin-right: 0;
+    }
+
+    @include _1340 {
+      width: 35%;
+      min-width: 415px;
+      margin-right: 0;
+    }
+
+    @include _800 {
+      width: 430px;
+      height: 120px;
+      margin-bottom: 40px;
+    }
+
+    @include _470 {
+      display: none;
+    }
+    
+    &_in-details {
+      letter-spacing: .001em;
+    }
+  }
+
+  &__navigation {
+    @include isFlex($direction: column);
+    width: 200px;
+    height: 168px;
+
+    @include _1340 {
+      width: 150px;
+      margin-right: 5%;
+    }
+
+    @include _470 {
+      position: relative;
+      width: 100%;
+      height: 20px;
     }
   }
 
@@ -159,6 +251,101 @@
     height: 150px;
     margin: 20px 0 0;
     padding: 0;
+  }
+
+  &__about {
+    @include isFlex($direction: column);
+    width: 200px;
+    height: 168px;
+
+    @include _1340 {
+      width: 135px;
+      margin-right: 5%;
+    }
+
+    @include _470 {
+      position: relative;
+      width: 100%;
+      height: 20px;
+    }
+  }
+
+  &__support {
+    @include isFlex($direction: column);
+    width: 200px;
+    height: 130px;
+
+    @include _1340 {
+      width: 120px;
+      margin-right: 5%;
+    }
+
+    @include _470 {
+      position: relative;
+      width: 100%;
+      height: 20px;
+    }
+  }
+
+  &__info-hidden {
+    display: none;
+
+    @include _470 {
+      @include isFlex($direction: column);
+      min-width: 260px;
+      width: 260px;
+      height: auto;
+      margin-bottom: 20px;
+      font-weight: 400;
+    }
+  }
+
+  &__dropdown {
+    @include _470 {
+      position: absolute;
+      top: 20px;
+      width: 200px;
+      margin: 0;
+      padding: 10px 15px;
+      border-radius: 4px;
+      line-height: 18px;
+      background: $light;
+      box-sizing: border-box;
+      box-shadow: 0px 10px 20px $dark-shade_fewer;
+      z-index: 2;
+    }
+  }
+
+  &__subscription {
+    @include isFlex($direction: column, $justify: flex-start);
+    width: 260px;
+    height: 152px;
+    padding-top: 4px;
+
+    @include _800 {
+      height: auto;
+    }
+  }
+
+  &__special-offer  {
+    width: 100%;
+    margin: 18px 0 0;
+    font-size: 1em;
+    line-height: 1.71rem;
+    font-weight: 400;
+    color: $dark-shade_more;
+    letter-spacing: .0001em;
+    pointer-events: none;
+
+    @include _1170 {
+      display: none;
+    }
+  }
+
+  &__form {
+    position: relative;
+    width: 100%;
+    margin-top: 22.5px;
   }
 
   &__basement {
