@@ -113,20 +113,20 @@
     vertical-align: middle;
     list-style: none;
   }
-}
 
-.excellent {
-  background: $linearGradientCitrus;
-}
+  &__excellent {
+    background: $linearGradientCitrus;
+  }
 
-.good {
-  background: $linearGradientTurquoise;
-}
+  &__good {
+    background: $linearGradientTurquoise;
+  }
 
-.satisfied {
-  background: $linearGradientLilac;
-}
+  &__satisfied {
+    background: $linearGradientLilac;
+  }
 
-.disappointed {
-  background: $linearGradientPurple;
+  &__disappointed {
+    background: $linearGradientPurple;
+  }
 }
