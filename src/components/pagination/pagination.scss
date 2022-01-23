@@ -37,76 +37,76 @@
   width: fit-content;
   height: 75px;
   user-select: none;
-}
 
-.js-pagination__buttons {
-  @include isFlex();
-  width: 240px;
-  height: 40.4px;
-  font-size: 0.875em;
-}
-
-.js-pagination__button_current {
-  @include paginationItem();
-  font-weight: 700;
-  color: $light;
-  background: $linearGradientLilac;
-}
-
-.js-pagination__items {
-  @include isFlex();
-  width: 120px;
-  height: 40px;
-}
-
-.js-pagination__info {
-  width: fit-content;
-  height: 23px;
-  margin: 0 auto;
-  line-height: 16px;
-  font-size: $fs_base;
-  letter-spacing: .0001em;
-  text-align: left;
-  pointer-events: none;
-}
-
-.js-pagination__item,
-.js-pagination__button_last,
-.js-pagination__button_first {
-  @include paginationItem();
-  font-weight: 400;
-  color: $dark-shade_medium;
-  background: transparent;
-}
-
-.js-pagination__item:hover {
-  background: $purple;
-}
-
-.js-pagination__button_next {
-  @include paginationItem();
-  @include paginationNav();
-
-  &::before {
-    content: '\e5c8';
-    @include paginationBefore();
-    font-family: $material-icons;
-    -webkit-font-feature-settings: 'liga' 1;
-    -moz-font-feature-settings: 'liga' 1;
-    font-feature-settings: 'liga' 1;
+  &__buttons {
+    @include isFlex();
+    width: 240px;
+    height: 40.4px;
+    font-size: 0.875em;
   }
-}
 
-.js-pagination__button_prev {
-  @include paginationItem();
-  @include paginationNav();
+  &__button_current {
+    @include paginationItem();
+    font-weight: 700;
+    color: $light;
+    background: $linearGradientLilac;
+  }
 
-  &::before {
-    content: '\e5c4';
-    @include paginationBefore();
-    font-family: $material-icons;
-    -webkit-font-feature-settings: 'liga' 1;
-    -moz-font-feature-settings: 'liga' 1;
-    font-feature-settings: 'liga' 1;
+  &__items {
+    @include isFlex();
+    width: 120px;
+    height: 40px;
+  }
+
+  &__info {
+    width: fit-content;
+    height: 23px;
+    margin: 0 auto;
+    line-height: 16px;
+    font-size: $fs_base;
+    letter-spacing: .0001em;
+    text-align: left;
+    pointer-events: none;
+  }
+
+  &__item,
+  &__button_last,
+  &__button_first {
+    @include paginationItem();
+    font-weight: 400;
+    color: $dark-shade_medium;
+    background: transparent;
+  }
+
+  &__item:hover {
+    background: $purple;
+  }
+
+  &__button_next {
+    @include paginationItem();
+    @include paginationNav();
+
+    &::before {
+      content: '\e5c8';
+      @include paginationBefore();
+      font-family: $material-icons;
+      -webkit-font-feature-settings: 'liga' 1;
+      -moz-font-feature-settings: 'liga' 1;
+      font-feature-settings: 'liga' 1;
+    }
+  }
+
+  &__button_prev {
+    @include paginationItem();
+    @include paginationNav();
+
+    &::before {
+      content: '\e5c4';
+      @include paginationBefore();
+      font-family: $material-icons;
+      -webkit-font-feature-settings: 'liga' 1;
+      -moz-font-feature-settings: 'liga' 1;
+      font-feature-settings: 'liga' 1;
+    }
   }
 }
