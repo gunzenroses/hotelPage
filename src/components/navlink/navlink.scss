@@ -33,30 +33,30 @@
     font-weight: 400;
     color: $dark-shade_medium;
     text-decoration: none;
-  }
 
-  &__button_type_header {
-    &::before {
-      display: block;
-      content: attr(title);
-      font-weight: bold;
-      height: 0;
-      overflow: hidden;
-      visibility: hidden;
+    &_type_header {
+      &::before {
+        display: block;
+        content: attr(title);
+        font-weight: bold;
+        height: 0;
+        overflow: hidden;
+        visibility: hidden;
+      }
     }
   }
-}
 
-.navlink:active .navlink__button,
-.navlink:hover .navlink__button {
-  font-weight: 700;
-  color: $dark-shade_more;
-}
+  &:active &__button,
+  &:hover &__button {
+    font-weight: 700;
+    color: $dark-shade_more;
+  }
 
-.navlink_type_footer + .navlink_type_footer {
-  margin-top: 20px;
+  &_type_footer + &_type_footer {
+    margin-top: 20px;
 
-  @include _800 {
-    margin-top: 0;
+    @include _800 {
+      margin-top: 0;
+    }
   }
 }
