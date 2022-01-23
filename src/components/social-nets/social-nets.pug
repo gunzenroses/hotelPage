@@ -1,33 +1,30 @@
 mixin social-nets(theme = "")
-  - var twitterClass = "social-net__item social-net__twitter";
-  - var facebookClass = "social-net__item social-net__facebook";
-  - var instagramClass = "social-net__item social-net__instagram";
-  if theme === ""
-    .social-net
-      a(href="https://www.twitter.com/" 
-        target="_blank" 
-        rel="noopener noreferrer" 
-        class=`${ twitterClass }`)
-      a(href="https://www.facebook.com/" 
-        target="_blank" 
-        rel="noopener noreferrer" 
-        class=`${ facebookClass }`)
-      a(href="https://www.instagram.com/" 
-        target="_blank" 
-        rel="noopener noreferrer" 
-        class=`${ instagramClass }`)
-  else
-    .social-net
-      a(href="https://www.twitter.com/" 
-        target="_blank" 
-        rel="noopener noreferrer" 
-        class=`${ twitterClass } social-net__twitter_in-${ theme }`)
-      a(href="https://www.facebook.com/" 
-        target="_blank" 
-        rel="noopener noreferrer" 
-        class=`${ facebookClass } social-net__facebook_in-${ theme }`)
-      a(href="https://www.instagram.com/" 
-        target="_blank" 
-        rel="noopener noreferrer" 
-        class=`${ instagramClass } social-net__instagram_in-${ theme }`)
-    
+  - 
+    var twitterClass = theme === ""
+      ? "social-net__item social-net__twitter"
+      : `social-net__item social-net__twitter social-net__twitter_in-${ 
+        theme }`
+  - 
+    var facebookClass = theme === ""
+      ? "social-net__item social-net__facebook"
+      : `social-net__item social-net__facebook social-net__facebook_in-${ 
+        theme }`
+  - 
+    var instagramClass = theme === ""
+      ? "social-net__item social-net__instagram"
+      : `social-net__item social-net__instagram social-net__instagram_in-${ 
+        theme }`
+
+  .social-net
+    a(href="https://www.twitter.com/" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      class=`${ twitterClass }`)
+    a(href="https://www.facebook.com/" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      class=`${ facebookClass }`)
+    a(href="https://www.instagram.com/" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      class=`${ instagramClass }`)

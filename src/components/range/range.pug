@@ -1,9 +1,11 @@
 mixin range({ infoText=false, labelText="Range slider" })
+  - 
+    var rangeInfoText = infoText === true
+      ? "Стоимость за сутки пребывания в номере"
+      : ""
+
   .range
     h3.range__label!= labelText 
     input.range__value.js-range__value
     input.range__slider.js-range__slider
-    if infoText
-      .range__info Стоимость за сутки пребывания в номере
-    else
-      .range__info 
+    .range__info!= rangeInfoText
