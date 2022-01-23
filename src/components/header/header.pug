@@ -25,16 +25,16 @@ mixin header({ user="", theme="" })
         ul.header__navbar.header__navbar_dropdown
           +navlink({
             buttonText: "О нас",
-            buttonOnclick: "./some-address"
+            onClick: "./some-address"
           })
           +navlink-dropdown("Услуги")
           +navlink({
             buttonText: "Вакансии",
-            buttonOnclick: "./some-address"
+            onClick: "./some-address"
           })
           +navlink({
             buttonText: "Новости",
-            buttonOnclick: "./some-address"
+            onClick: "./some-address"
           })
           +navlink-dropdown("Соглашения")
       if user
@@ -56,21 +56,21 @@ mixin header({ user="", theme="" })
         ul.header__navbar
           +navlink({
             buttonText: "О нас",
-            buttonOnclick: "./some-address",
-            navlinkModificator: "header",
-            navlinkButtonModificator: "header"
+            onClick: "./some-address",
+            modificator: "header",
+            buttonModificator: "header"
           })
           +navlink-dropdown("Услуги")
           +navlink({
             buttonText: "Вакансии",
-            buttonOnclick: "./some-address",
-            navlinkModificator: "header",
-            navlinkButtonModificator: "header"
+            onClick: "./some-address",
+            modificator: "header",
+            buttonModificator: "header"
           })
           +navlink({
             buttonText: "Новости",
-            buttonOnclick: "./some-address",
-            navlinkModificator: "header",
-            navlinkButtonModificator: "header"
+            onClick: "./some-address",
+            modificator: "header",
+            buttonModificator: "header"
           })
           +navlink-dropdown("Соглашения")

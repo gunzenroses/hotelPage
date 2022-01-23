@@ -42,8 +42,8 @@ mixin footer({ theme="main" })
               for item in footerGroup.items
                 +navlink({
                   buttonText: item.name,
-                  buttonOnclick: item.link,
-                  navlinkModificator: "footer"
+                  onClick: item.link,
+                  modificator: "footer"
                 })
       .footer__info-hidden
         for footerGroup in footerGroups
@@ -53,7 +53,7 @@ mixin footer({ theme="main" })
               for item in footerGroup.items
                 +navlink({ 
                   buttonText: item.name, 
-                  buttonOnclick: item.link
+                  onClick: item.link
                 })
       .footer__subscription
         h3.footer__title Подписка
