@@ -1,5 +1,7 @@
 mixin calendar()
   - var weekdaysNames = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"]
+  - var buttonResetClass = "calendar__button js-calendar__button_reset"
+  - var buttonSubmitClass = "calendar__button js-calendar__button_submit"
   div.calendar.js-calendar
     .calendar__date
       .calendar__control.calendar__control_prev.js-calendar__control_prev
@@ -11,7 +13,5 @@ mixin calendar()
           span!= day
       .calendar__days.js-calendar__days
     .calendar__buttons
-      button.calendar__button.js-calendar__button_reset(type="reset") 
-        != Очистить
-      button.calendar__button.js-calendar__button_submit(type="button") 
-        != Применить
+      button(class=`${ buttonResetClass }` type="reset") Очистить
+      button(class=`${ buttonSubmitClass }` type="button") Применить
