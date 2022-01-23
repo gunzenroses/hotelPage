@@ -3,16 +3,16 @@
 
 @mixin checkboxFake {
   position: relative;
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-    border: 1px solid $dark-shade_less;
-    border-radius: 4px;
-    background-color: transparent;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border: 1px solid $dark-shade_less;
+  border-radius: 4px;
+  background-color: transparent;
 
-    @include _1750-1920 {
-      @include containerBlock(25px, 25px);
-    }
+  @include _1750-1920 {
+    @include containerBlock(25px, 25px);
+  }
 }
 
 .checkbox {
