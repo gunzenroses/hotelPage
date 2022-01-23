@@ -9,7 +9,8 @@ mixin dropdown-guests({ labelText="", dropdownClassShow="", itemNumbers=[0, 0, 0
     if labelRightText
       h3.label.label_right!= labelRightText
     div(class="dropdown js-dropdown-guests")
-      div(class=`dropdown-guests__content js-expand__content ${ dropdownClassShow }`)
+      div(class=`dropdown-guests__content js-expand__content ${ 
+        dropdownClassShow }`)
         +dropdown-item({
           itemDataType: "grownups",
           itemText: "Взрослые",

@@ -1,15 +1,13 @@
 mixin button-link({ buttonText="", buttonOnclick="./some-address", className = "" })
   if className === ""
-    div(class="button-link")
-      a(class="button-link__ref" href= buttonOnclick)= buttonText
+    div(class= "button-link")
+      a(class= "button-link__ref" href= buttonOnclick)= buttonText
   else if className === "colored"
-    a(
-      class="button-link button-link_type_colored" 
+    a(class= "button-link button-link_type_colored" 
       href= buttonOnclick)= buttonText
   else if className === "registration"
-    a(
-      class="button-link button-link_type_registration" 
+    a(class= "button-link button-link_type_registration" 
       href= buttonOnclick)= buttonText
   else
-    div(class=`button-link button-link_type_${ className }`)
-      a(class="button-link__ref" href= buttonOnclick)= buttonText
+    div(class= `button-link button-link_type_${ className }`)
+      a(class= "button-link__ref" href= buttonOnclick)= buttonText

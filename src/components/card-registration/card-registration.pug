@@ -8,8 +8,8 @@ include ../textfield/_type/_name/textfield_type_name.pug
 
 mixin card-registration(submitText)
   form.card-registration.js-card-registration(
-    method="get" 
-    action="./registration.html" )
+    method= "get" 
+    action= "./registration.html" )
     h1.card__title Регистрация аккаунта
     .card-registration__name
       +textfield_type_name({ })

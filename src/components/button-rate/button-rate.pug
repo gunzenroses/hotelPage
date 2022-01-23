@@ -3,19 +3,19 @@ mixin button-rate({ inputName="rating", checkedNum=1 })
     each val in [5, 4, 3, 2, 1]
       if checkedNum <= val
         input(
-          type="radio" 
-          name=inputName 
-          value=val 
-          checked=true 
+          type= "radio" 
+          name= inputName 
+          value= val 
+          checked= true 
           id=`${ inputName }-${ val }`).button-rate__real
         label(
           for=`${ inputName }-${ val }`).button-rate__fake
       else
         input(
-          type="radio" 
-          name=inputName 
-          value=val 
-          checked=false 
+          type= "radio" 
+          name= inputName 
+          value= val 
+          checked= false 
           id=`${ inputName }-${ val }`).button-rate__real
         label(
           for=`${ inputName}-${ val }`).button-rate__fake

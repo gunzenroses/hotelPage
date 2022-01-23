@@ -8,7 +8,7 @@ mixin checkbox-expandable({ dropdownTitleName, dropdownClassShow="" })
           each checkboxItem in checkboxContent
             label.checkbox-expandable__item
               input(
-                type="checkbox" 
+                type= "checkbox" 
                 name= checkboxItem.checkboxName 
                 checked= checkboxItem.ifChecked).checkbox-expandable__real
               span.checkbox-expandable__fake

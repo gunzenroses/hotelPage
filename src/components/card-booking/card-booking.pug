@@ -29,12 +29,12 @@ mixin card-booking({ cardBookingInfo })
       ? "card-booking__line card-booking__line_in-uikit"
       : "card-booking__line"
 
-  form.card-booking(method="get" action="./search-room.html")
+  form.card-booking(method= "get" action= "./search-room.html")
     .card__row
       .card__row_small
         span.card-booking__No №
-        span(class=`${ infoNumberClass }`) "888"  
-        span(class=`${ infoSuiteClass }`) "Люкс"
+        span(class= `${ infoNumberClass }`) "888"  
+        span(class= `${ infoSuiteClass }`) "Люкс"
       .card__row_small
         span.card-booking__price!= "9 990₽"
     .card-booking__date-range

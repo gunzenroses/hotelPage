@@ -1,10 +1,17 @@
 mixin button-like(buttonNumber= 1)
-  if buttonNumber < 10 
-    .button-like.js-button-like
-      .button-like__heart.js-button-like__heart
-      .button-like__number.js-button-like__number!= buttonNumber
-  else
-     .button-like.button-like_popular.js-button-like
-      .button-like__heart.button-like__heart_popular.js-button-like__heart
-      .button-like__number.button-like__number_popular.js-button-like__number
-        != buttonNumber
+  - 
+    var buttonLikeClass = buttonNumber < 10
+      ? "button-like js-button-like"
+      : "button-like js-button-like button-like_popular"
+  -
+    var buttonLikeHeartClass = buttonNumber < 10
+      ? "button-like__heart js-button-like__heart"
+      : "button-like__heart js-button-like__heart button-like__heart_popular"
+  -
+    var buttonLikeNumberClass = buttonNumber < 10
+      ? "button-like__number js-button-like__number"
+      : "button-like__number js-button-like__number button-like__number_popular"
+
+  div(class= buttonLikeClass)
+    div(class= buttonLikeHeartClass)
+    div(class= buttonLikeNumberClass)= buttonNumber
