@@ -2,6 +2,7 @@
 @import '@~Assets/styles/media-mixins.scss';
 @import '@~Assets/styles//mixins.scss';
 @import '@~Assets/styles/fonts.scss';
+@import '@~Component/expand/expand.scss';
 
 .navlink-dropdown {
   @include isFlex($direction: column-reverse);
@@ -73,10 +74,11 @@
       visibility: hidden;
     }
   }
+
+  &:active &__button,
+  &:hover &__button {
+    font-weight: 700;
+    color: $dark-shade_more;
+  }
 }
 
-.navlink-dropdown:active .navlink-dropdown__button,
-.navlink-dropdown:hover .navlink-dropdown__button {
-  font-weight: 700;
-  color: $dark-shade_more;
-}
