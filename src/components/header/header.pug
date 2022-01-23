@@ -8,6 +8,9 @@ mixin header({ user="", theme="" })
     var headerClass = theme === ""
       ? "header" 
       : `header header_in-${ theme }`
+  - 
+    var userClick = user === ""
+      ? "registration.html" : `some-profile-${ user }.html`
   
   header(class= `${ headerClass }`)
     if theme === ""
