@@ -1,0 +1,21 @@
+@import '@~Assets/styles/media-mixins.scss';
+@import '@~Assets/styles/mixins.scss';
+
+@import '../textfield/textfield.scss';
+
+.login {
+  @include isFlex($direction: column);
+  min-height: 98px;
+  width: 100%;
+  margin-top: 3px;
+  padding: 0;
+  border: none;
+
+  &_in-main {
+    margin-top: 20px;
+  }
+
+  &_in-signin {
+    margin-top: 20px;
+  }
+}
