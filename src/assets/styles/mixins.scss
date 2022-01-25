@@ -74,10 +74,7 @@
   display: inline-block;
   height: 15px;
   letter-spacing: .003em;
+  text-transform: uppercase;
   pointer-events: none;
-
-  @include _1750-1920 {
-    font-size: $fs_base;
-    height: $fs_h2;
-  }
+  user-select: none;
 }
