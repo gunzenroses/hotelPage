@@ -2,6 +2,10 @@
 @import '@~Assets/styles/media-mixins.scss';
 @import '@~Assets/styles//mixins.scss';
 
+@import '@~Components/footer/footer.scss';
+@import '@~Components/footer-creative/footer-creative.scss';
+@import '@~Components/header/header.scss';
+
 .headers-n-footers {
   @include isFlex($direction: column, $justify: flex-start);
   width: 1440px;

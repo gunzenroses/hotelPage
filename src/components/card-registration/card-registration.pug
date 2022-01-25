@@ -18,18 +18,11 @@ mixin card-registration(submitText)
         nameText: "name",
         maxText: 20 
       })
-      +textfield({ 
-        inputClass: "name",
-        placeholder: placeholder,
-        valueText: valueText,
-        nameText: nameText,
-        maxText: 20 
-      })
     .card-registration__surname
       +textfield({ 
         inputClass: "name",
         placeholder: "Фамилия",
-        valueText: "surname",
+        valueText: "",
         nameText: "surname",
         maxText: 20 
       })
@@ -47,7 +40,7 @@ mixin card-registration(submitText)
     .card-registration__login
       .container
         +label({ labelText: "Данные для входа в сервис" })
-        +login("")
+        +login()
     .card-registration__specials
       +button-toggle({ inputName: "special offers" })
     .card-registration__button-submit

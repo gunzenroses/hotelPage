@@ -2,8 +2,9 @@
 @import '@~Assets/styles/media-mixins.scss';
 @import '@~Assets/styles//mixins.scss';
 @import '@~Components/button-link/button-link.scss';
-@import '@~Components/navlink-dropdown/navlink-dropdown.scss';
+@import '@~Components/logo/logo.scss';
 @import '@~Components/navlink/navlink.scss';
+@import '@~Components/navlink-dropdown/navlink-dropdown.scss';
 
 .header {
   @include isFlex($align: center);

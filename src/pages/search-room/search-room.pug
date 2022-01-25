@@ -8,10 +8,9 @@ include ../../components/dropdown-guests/dropdown-guests.pug
 include ../../components/dropdown-rooms/dropdown-rooms.pug
 include ../../components/footer/footer.pug
 include ../../components/header/header.pug
-include ../../components/range/range.pug
 include ../../components/pagination/pagination.pug
+include ../../components/range/range.pug
 include ../../components/rich-checkbox/rich-checkbox.pug
-include ../../components/textfield/textfield.pug
 
 block variables
   - var theme = "search";
@@ -76,4 +75,4 @@ block content
               })
         .search-room__pagination 
           +pagination()
-    +footer({ theme: theme })
+    +footer(theme)

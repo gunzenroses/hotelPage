@@ -1,10 +1,11 @@
 mixin checkbox
   - var { houseRules } = require("Components/checkbox/checkbox.json");
+
   fieldset.checkbox
     each houseRule in houseRules
       label.checkbox__item
         input(
-          type="checkbox"
+          type= "checkbox"
           value= houseRule.valueText
           name= houseRule.inputName
           checked= houseRule.ifChecked).checkbox__real

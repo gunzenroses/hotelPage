@@ -45,15 +45,15 @@
     width: 24px;
     height: 18px;
     line-height: 21px;
-  }
 
-  &__icon::before {
-    content: '\e5cf';
-    position: absolute;
-    font-size: $fs_h1;
-    font-family: $material-icons;
-    color: $dark-shade_medium;
-  }
+    &::before {
+      content: '\e5cf';
+      position: absolute;
+      font-size: $fs_h1;
+      font-family: $material-icons;
+      color: $dark-shade_medium;
+    }
+  }  
 
   &__button {
     display: inline-block;
