@@ -24,9 +24,6 @@
 @import '@~Components/range/range.scss';
 @import '@~Components/rich-checkbox/rich-checkbox.scss';
 @import '@~Components/textfield/textfield.scss';
-@import '@~Components/textfield/_type/_birthday/textfield_type_birthday.scss';
-@import '@~Components/textfield/_type/_email/textfield_type_email.scss';
-
 @mixin containerMedium {
   @include isFlex($direction: column);
 

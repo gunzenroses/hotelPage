@@ -3,8 +3,8 @@
 @import '@~Assets/styles/media-mixins.scss';
 @import '@~Components/button-link/button-link.scss';
 @import '@~Components/button-submit/button-submit.scss';
+@import '@~Components/login/login.scss';
 @import '@~Components/textfield/textfield.scss';
-@import '@~Components/textfield/_type/_login/textfield_type_login.scss';
 
 .card-signin {
   @include isFlex($direction: column, $justify: flex-start);

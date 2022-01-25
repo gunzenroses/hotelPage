@@ -3,9 +3,7 @@ include ../radio-buttons/radio-buttons.pug
 include ../button-submit/button-submit.pug
 include ../button-toggle/button-toggle.pug
 include ../label/label.pug
-include ../textfield/_type/_birthday/textfield_type_birthday.pug
-include ../textfield/_type/_login/textfield_type_login.pug
-include ../textfield/_type/_name/textfield_type_name.pug
+include ../login/login.pug
 
 mixin card-registration(submitText)
   form.card-registration.js-card-registration(
@@ -13,23 +11,43 @@ mixin card-registration(submitText)
     action= "./registration.html" )
     h1.card__title Регистрация аккаунта
     .card-registration__name
-      +textfield_type_name({ })
+      +textfield({ 
+        inputClass: "name",
+        placeholder: "Имя",
+        valueText: "",
+        nameText: "name",
+        maxText: 20 
+      })
+      +textfield({ 
+        inputClass: "name",
+        placeholder: placeholder,
+        valueText: valueText,
+        nameText: nameText,
+        maxText: 20 
+      })
     .card-registration__surname
-      +textfield_type_name({ 
-        placeholder: "Фамилия", 
-        value: "surname", 
-        nameText: "surname" })
+      +textfield({ 
+        inputClass: "name",
+        placeholder: "Фамилия",
+        valueText: "surname",
+        nameText: "surname",
+        maxText: 20 
+      })
     .card-registration__radio
       +radio-buttons({ })
     .card-registration__birthday
-      +textfield_type_birthday({ 
-        labelLeft: "Дата рождения", 
-        labelRight: "" 
-      })
+      .container
+        +label({ labelText: "Дата рождения" })
+        +textfield({
+          inputClass: "birthday",
+          placeholder: "ДД.ММ.ГГГГ",
+          nameText: "birthday",
+          maxText: 10
+        })
     .card-registration__login
       .container
         +label({ labelText: "Данные для входа в сервис" })
-        +textfield_type_login("")
+        +login("")
     .card-registration__specials
       +button-toggle({ inputName: "special offers" })
     .card-registration__button-submit

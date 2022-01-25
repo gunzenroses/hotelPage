@@ -1,7 +1,7 @@
 include ../logo/logo.pug
 include ../navlink/navlink.pug
 include ../social-nets/social-nets.pug
-include ../textfield/_type/_subscribe/textfield_type_subscribe.pug
+include ../textfield/textfield.pug
 
 mixin footer({ theme="main" })
   - 
@@ -61,7 +61,11 @@ mixin footer({ theme="main" })
         form.footer__form.js-footer__form(
           method="get" 
           action="./registration.html")
-          +textfield_type_subscribe()
+          +textfield({ 
+            inputClass: "subscibe",
+            placeholder: "Email",
+            nameText: "email",
+          })
     div(class= footerCopywriteClass)
       .footer__basement-text Copyright © 2018 Toxin отель. Все права защищены.
       .footer__social-nets

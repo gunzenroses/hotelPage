@@ -1,12 +1,12 @@
 include ../button-link/button-link.pug
 include ../button-submit/button-submit.pug
 include ../textfield/textfield.pug
-include ../textfield/_type/_login/textfield_type_login.pug
+include ../login/login.pug
 
 mixin card-signin(theme="main")
   form.card-signin.js-card-signin(method= "get" action= "./signin.html")
     h1.card__title Войти
-    +textfield_type_login(theme)
+    +login(theme)
     .card-signin__button
       +button-submit({ buttonText: "Войти" })
     .card-signin__info

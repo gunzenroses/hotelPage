@@ -21,9 +21,6 @@ include ../../../components/rich-checkbox/rich-checkbox.pug
 include ../../../components/navlink/navlink.pug
 include ../../../components/pagination/pagination.pug
 include ../../../components/textfield/textfield.pug
-include ../../../components/textfield/_type/_birthday/textfield_type_birthday.pug
-include ../../../components/textfield/_type/_email/textfield_type_email.pug
-include ../../../components/textfield/_type/_subscribe/textfield_type_subscribe.pug
 
 block variables
   - var title = "UIKit";
@@ -48,7 +45,12 @@ block content
                 labelRightText: "default", 
                 labelRightClass: "email"
               })
-              +textfield_type_email()
+              +textfield({ 
+                inputClass: "email",
+                placeholder: "Email",
+                nameText: "email",
+                autofocus: false 
+              })
           .form-elements__name
             .container
               +label({
@@ -67,10 +69,14 @@ block content
               labelText: "dropdown",
             })
           .form-elements__birthday
-            +textfield_type_birthday({
-              labelLeft: "Masked text field",
-              labelRight: ""
-            })
+            .container
+              +label({ labelText: "Masked text field" })
+              +textfield({
+                inputClass: "birthday",
+                placeholder: "ДД.ММ.ГГГГ",
+                nameText: "birthday",
+                maxText: 10
+              })
         .form-elements__container-second
           .form-elements__date-range_separate.js-dropdown__detection
             +date-range_separate({
@@ -85,7 +91,11 @@ block content
               +label({ 
                 labelText: "Subscription text field" 
               })
-              +textfield_type_subscribe()
+              +textfield({ 
+                inputClass: "subscibe",
+                placeholder: "Email",
+                nameText: "email",
+              })
       .form-elements__input-buttons
         .form-elements__checkbox
           h3.label Сheckbox buttons
