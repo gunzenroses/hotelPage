@@ -320,17 +320,20 @@ class Calendar {
       const betweenInOutYears =
         betweenInOutOneYear || this.betweenInOutDiffYears(prevDay);
       if (this.checkinPrevMonth(prevDay) || this.checkinPrevYear(prevDay)) {
-        prevDays += `<div class="calendar__day_prev_checkin">${ prevDay }</div>`;
+        prevDays += `<div class="calendar__day calendar__day_prev_checkin">${
+          prevDay }</div>`;
       } else if (
         this.checkoutPrevMonth(prevDay) ||
         this.checkoutPrevYear(prevDay)
       ) {
-        prevDays += `<div class="calendar__day_prev_checkout">${ prevDay }</div>`;
+        prevDays += `<div class="calendar__day calendar__day_prev_checkout">${ 
+          prevDay }</div>`;
       } else if (this.betweenInOutPrevMonth(prevDay) || betweenInOutYears) {
-        prevDays += `<div class="calendar__day_ranged_between">${
-          prevDay}</div>`;
+        prevDays += `<div class="calendar__day calendar__day_between">${
+          prevDay }</div>`;
       } else {
-        prevDays += `<div class="calendar__day_prev js-calendar__day_prev">
+        prevDays += 
+          `<div class="calendar__day calendar__day_prev js-calendar__day_prev">
             ${ prevDay }
           </div>`;
       }
@@ -458,15 +461,15 @@ class Calendar {
     let currDays = "";
     for (let i = 1; i <= this.lastDay; i += 1) {
       if (this.checkinToday(i)) {
-        currDays += `<div class="calendar__day_checkin">${ i }</div>`;
+        currDays += `<div class="calendar__day calendar__day_checkin">${i}</div>`;
       } else if (this.checkinCurrMonth(i)) {
-        currDays += `<div class="calendar__day_checkin">${ i }</div>`;
+        currDays += `<div class="calendar__day calendar__day_checkin">${i}</div>`;
       } else if (this.checkoutCurrMonth(i)) {
-        currDays += `<div class="calendar__day_checkout">${ i }</div>`;
+        currDays += `<div class="calendar__day calendar__day_checkout">${i}</div>`;
       } else if (this.todayCurrMonth(i)) {
-        currDays += `<div class="calendar__today">${ i }</div>`;
+        currDays += `<div class="calendar__day calendar__day_today">${i}</div>`;
       } else if (this.betweenInOutCurrentMonth(i)) {
-        currDays += `<div class="calendar__day_ranged">${ i }</div>`;
+        currDays += `<div class="calendar__day calendar__day_ranged">${i}</div>`;
       } else {
         currDays += `<div class="calendar__day">${ i }</div>`;
       }
@@ -586,14 +589,18 @@ class Calendar {
       const betweenInOutAYear = inOutCurrYear || inOutNextYear;
 
       if (this.checkinNextMonth(n, yearIn) || this.checkinNextYear(n)) {
-        nextDays += `<div class="calendar__day_next_checkin">${ n }</div>`;
+        nextDays += `<div class="calendar__day calendar__day_next_checkin">${ 
+          n }</div>`;
       } else if (checkoutNextMonthOrYear) {
-        nextDays += `<div class="calendar__day_next_checkout">${ n }</div>`;
+        nextDays += `<div class="calendar__day calendar__day_next_checkout">${ 
+          n }</div>`;
       } else if (betweenInOutAYear) {
-        nextDays += `<div class="calendar__day_ranged_between">${ n }</div>`;
+        nextDays += `<div class="calendar__day calendar__day_between">${ 
+          n }</div>`;
       } else {
         nextDays += 
-          `<div class="calendar__day_next js-calendar__day_next">${ n }</div>`;
+        `<div class="calendar__day calendar__day_next js-calendar__day_next">${ 
+          n }</div>`;
       }
     }
     return nextDays;
@@ -644,7 +651,7 @@ class Calendar {
     const { n, yearIn, yearOut } = options;
     const betweenInOutCurrYear =
       yearIn && yearOut
-        ? (this.checkout.getMonth() > this.month &&
+        ? (this.checkout.getMonth() > this.month + 1 &&
             this.checkin.getMonth() <= this.month) ||
           (this.checkout.getMonth() === this.month + 1 &&
             this.checkout.getDate() > n)
@@ -657,7 +664,6 @@ class Calendar {
       this.checkin && this.checkout
         ? this.checkin.getFullYear() < this.checkout.getFullYear()
         : false;
-
     const betweenInOutNextYear =
       yearThisCheckinNextCheckout &&
       ((this.month >= this.checkin.getMonth() && yearCheckin) ||
