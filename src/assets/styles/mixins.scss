@@ -70,6 +70,20 @@
   cursor: pointer;
 }
 
+@mixin inputMixin {
+  width: 95%;
+  height: 90%;
+  font-family: $montserrat;
+  color: $dark-shade_more;
+  border: none;
+  background: transparent;
+  appearance: none;
+
+  &::placeholder {
+    color: $dark-shade_less;
+  }
+}
+
 @mixin labelMixin {
   display: inline-block;
   height: 15px;

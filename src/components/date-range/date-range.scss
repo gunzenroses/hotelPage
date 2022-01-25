@@ -135,17 +135,9 @@
   }
 
   &__input {
-    width: 95%;
-    height: 90%;
+    @include inputMixin();
     font-family: inherit;
-    font-size: 14px;
+    font-size: 1rem;
     letter-spacing: .0001em;
-    appearance: none;
-    background: transparent;
-    border: none;
-
-    &::placeholder {
-      color: $dark-shade_more;
-    } 
   }
 }  

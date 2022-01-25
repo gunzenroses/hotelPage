@@ -87,19 +87,11 @@
   }
 
   &__input {
-    width: 95%;
-    height: 90%;
+    @include inputMixin();
     padding-bottom: 2px;
     padding-left: 2px;
     font-family: inherit;
     font-size: 1rem;
-    appearance: none;
-    background: transparent;
-    border: none;
-
-    &::placeholder {
-      color: $dark-shade_less;
-    }
   }
 }
 
