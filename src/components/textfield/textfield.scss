@@ -3,8 +3,6 @@
 @import '@~Assets/styles//mixins.scss';
 @import '@~Assets/styles/fonts.scss';
 
-@import './__input/textfield__input.scss';
-
 .textfield {
   @include isFlex($justify: flex-start, $align: center);
   position: relative;
@@ -28,5 +26,68 @@
     width: 100%;
     min-width: 260px;
     margin: 0 auto;
+  }
+
+  &_type_birthday {
+    padding: 0 0 3px 13px;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  &_type_email {
+    padding: 2px 0 2px 12px;
+    font-size: 1rem;
+  }
+
+  &_type_name {
+    padding: 2px 0 2px 12px;
+    font-size: 1rem;
+  }
+
+  &_type_password {
+    padding: 2px 0 2px 12px;
+    font-size: 1rem;
+  }
+
+  &_type_subscibe {
+    &::before {
+      content: '\e5c8';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 42px;
+      height: 44px;
+      font-family: $material-icons;
+      -webkit-font-feature-settings: 'liga' 1;
+      -moz-font-feature-settings: 'liga' 1;
+      font-feature-settings: 'liga' 1;
+      text-align: center;
+      font-size: $fs_h1;
+      line-height: 42px;
+      color: transparent;
+      background: $linearGradientLilac;
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+  }
+
+  &__input {
+    display: inline-block;
+    width: 95%;
+    height: 90%;
+    margin: 0;
+    padding-left: 2px;
+    line-height: 1.15;
+
+    font-family: inherit;
+    font-size: 13.5px;
+    letter-spacing: .01em;
+    appearance: none;
+    background: transparent;
+    border: none;
+
+    &::placeholder {
+      color: $dark-shade_less;
+    }
   }
 }
