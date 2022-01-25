@@ -39,11 +39,11 @@ mixin card-room({ roomOptions, theme="" })
     })
     .card-room__info
       .card__row
-        .card__row_small
+        .card__group
           span(class= `${ signClass }`) №
           span(class= `${ numberClass }`)= bookingNumber
           span(class= `${ roomTypeClass }`)= bookingType 
-        .card__row_small
+        .card__group
           span.card-room__price!= bookingPrice + "₽"
           span(class= `${ periodClass }`) &nbsp;в сутки
       .card-room__rating
@@ -52,6 +52,6 @@ mixin card-room({ roomOptions, theme="" })
             inputName: starName,
             checkedNum: starRate
           })
-        .card__row_small
+        .card__group
           span.card-room__price!= reviewAmount
           span.card-room__review  Отзывов
