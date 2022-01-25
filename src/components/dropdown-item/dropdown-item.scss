@@ -64,17 +64,26 @@
     }
   }
 
-  &__minus,
+  &__minus {
+    @include dropdownPlus();
+    top: -2px;
+    line-height: 28px;
+    
+    &_last {
+      top: -1px;
+      line-height: 29px;
+    }
+  }
+
   &__plus {
     @include dropdownPlus();
     top: -2px;
     line-height: 28px;
-  }
 
-  &__minus_last,
-  &__plus_last {
-    top: -1px;
-    line-height: 29px;
+    &_last {
+      top: -1px;
+      line-height: 29px;
+    }
   }
 
   &__number {

@@ -44,7 +44,6 @@ mixin donut-chart({ excellent=0, good=0, satisfied=0, dissapointed=0 })
             stop(stop-color="#FFE39C" offset="100%")
         title#impression-title Впечатлeния от номера
 
-        // img starts
         circle.donut-chart__ring(
           cx="50%" cy="50%" 
           r="15.91549430918954" 
@@ -69,7 +68,6 @@ mixin donut-chart({ excellent=0, good=0, satisfied=0, dissapointed=0 })
               id=`donut-chart-segment-${ counter++ }-title` 
               data-some= `${ prevArraySumm }`)!= mark
             - dashOffsetValue -= percent;
-        // img ends
 
       .donut-chart__text
         p.donut-chart__number!= totalData

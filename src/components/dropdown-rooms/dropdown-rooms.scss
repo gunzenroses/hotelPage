@@ -6,7 +6,6 @@
 @import '../label/label.scss';
 @import '../dropdown-item/dropdown-item.scss';
 
-
 .dropdown-rooms {
   @include isFlex($direction: column);
   position: relative;

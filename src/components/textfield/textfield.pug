@@ -5,6 +5,12 @@ mixin textfield({ inputClass="", placeholder="", valueText="", nameText="text", 
       ? "textfield" : `textfield textfield_type_${ inputClass }`
   
   div(class= textfieldClass)
-    input(class="textfield__input" type=textfieldType placeholder=placeholder, 
-      value=valueText name=nameText data-rule=nameText, 
-      maxlength=maxText autofocus=autofocus)
+    input(
+      class= "textfield__input" 
+      type= textfieldType 
+      placeholder= placeholder, 
+      value= valueText 
+      name= nameText 
+      data-rule= nameText, 
+      maxlength= maxText 
+      autofocus= autofocus)

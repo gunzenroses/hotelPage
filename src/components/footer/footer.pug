@@ -59,8 +59,8 @@ mixin footer({ theme="main" })
         h3.footer__title Подписка
         p.footer__special-offer!= footerTextSubscription
         form.footer__form.js-footer__form(
-          method="get" 
-          action="./registration.html")
+          method= "get" 
+          action= "./registration.html")
           +textfield({ 
             inputClass: "subscibe",
             placeholder: "Email",
