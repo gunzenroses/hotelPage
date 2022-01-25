@@ -200,7 +200,7 @@ class Calendar {
     this.render();
   }
 
-  // -------------------end chooseRange-----------------------//
+  // -------------------end chooseRange-----------------------// 
   @boundMethod
   applyRange(e) {
     e.preventDefault();
@@ -303,11 +303,11 @@ class Calendar {
     this.nextMonthDay = ifLastDaySunday ? 6 : this.dayOfWeekLast - 1;
     this.daysLeft = ifLastDaySunday ? 0 : 7 - this.dayOfWeekLast;
     this.dateInCalendar.textContent = `${
-      this.months[this.month]} ${ this.year }`;
+      this.months[this.month] } ${ this.year }`;
 
     this.daysOfMonth.innerHTML = `${
-      this.renderPrevMonth()} ${
-      this.renderCurrentMonth()} ${ this.renderNextMonth() }`;
+      this.renderPrevMonth() } ${
+      this.renderCurrentMonth() } ${ this.renderNextMonth() }`;
   }
 
   renderPrevMonth() {
@@ -461,17 +461,23 @@ class Calendar {
     let currDays = "";
     for (let i = 1; i <= this.lastDay; i += 1) {
       if (this.checkinToday(i)) {
-        currDays += `<div class="calendar__day calendar__day_checkin">${i}</div>`;
+        currDays += 
+          `<div class="calendar__day calendar__day_checkin">${ i }</div>`;
       } else if (this.checkinCurrMonth(i)) {
-        currDays += `<div class="calendar__day calendar__day_checkin">${i}</div>`;
+        currDays += 
+          `<div class="calendar__day calendar__day_checkin">${ i }</div>`;
       } else if (this.checkoutCurrMonth(i)) {
-        currDays += `<div class="calendar__day calendar__day_checkout">${i}</div>`;
+        currDays += 
+          `<div class="calendar__day calendar__day_checkout">${ i }</div>`;
       } else if (this.todayCurrMonth(i)) {
-        currDays += `<div class="calendar__day calendar__day_today">${i}</div>`;
+        currDays += 
+          `<div class="calendar__day calendar__day_today">${ i }</div>`;
       } else if (this.betweenInOutCurrentMonth(i)) {
-        currDays += `<div class="calendar__day calendar__day_ranged">${i}</div>`;
+        currDays += 
+          `<div class="calendar__day calendar__day_ranged">${ i }</div>`;
       } else {
-        currDays += `<div class="calendar__day">${ i }</div>`;
+        currDays += 
+          `<div class="calendar__day">${ i }</div>`;
       }
     }
     return currDays;
