@@ -11,8 +11,7 @@ include ../../../components/calendar/calendar.pug
 include ../../../components/checkbox/checkbox.pug
 include ../../../components/checkbox-expandable/checkbox-expandable.pug
 include ../../../components/comment/comment.pug
-include ../../../components/date-range/_separete/date-range_separate.pug
-include ../../../components/date-range/_common/date-range_common.pug
+include ../../../components/date-range/date-range.pug
 include ../../../components/dropdown-guests/dropdown-guests.pug
 include ../../../components/dropdown-rooms/dropdown-rooms.pug
 include ../../../components/label/label.pug
@@ -79,12 +78,29 @@ block content
               })
         .form-elements__container-second
           .form-elements__date-range_separate.js-dropdown__detection
-            +date-range_separate({
-              inputValue_2: "19.08.2019" 
+            +date-range({
+              dateRanges: [
+                {
+                  labelText: "date dropdown",
+                  value: "",
+                  name: "checkin",
+                  data: "checkin"
+                }, {
+                  labelText: "date dropdown",
+                  value: "19.08.2019",
+                  name: "checkout",
+                  data: "checkout"
+                }
+              ]
             })
           .form-elements__date-range_common.js-dropdown__detection
-            +date-range_common({
-              labelText: "filter date dropdown",
+            +date-range({ 
+              dateRanges: [{
+                labelText: "filter date dropdown",
+                value: "19 авг - 23 авг", 
+                name: "checkin-checkout", 
+                data: "date-range"
+              }],
             })
           .form-elements__subscibe
             .container

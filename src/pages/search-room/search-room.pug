@@ -3,7 +3,7 @@ extends ../../assets/templates/template.pug
 include ../../components/card-room/card-room.pug
 include ../../components/checkbox/checkbox.pug
 include ../../components/checkbox-expandable/checkbox-expandable.pug
-include ../../components/date-range/_common/date-range_common.pug
+include ../../components/date-range/date-range.pug
 include ../../components/dropdown-guests/dropdown-guests.pug
 include ../../components/dropdown-rooms/dropdown-rooms.pug
 include ../../components/footer/footer.pug
@@ -28,8 +28,13 @@ block content
         form.search-room__form
           .search-room__filter-group
             .search-room__filter-date
-              +date-range_common({
-                labelText: "даты пребывания в отеле",
+              +date-range({
+                dateRanges: [{
+                  labelText: "даты пребывания в отеле",
+                  value: "19 авг - 23 авг", 
+                  name: "checkin-checkout", 
+                  data: "date-range"
+                }],
                 theme: theme
               })
             .search-room__filter-guests

@@ -1,5 +1,5 @@
 include ../button-submit/button-submit.pug
-include ../date-range/_separete/date-range_separate.pug
+include ../date-range/date-range.pug
 include ../dropdown-guests/dropdown-guests.pug
 
 mixin card-booking({ cardBookingInfo })
@@ -38,10 +38,24 @@ mixin card-booking({ cardBookingInfo })
       .card__row_small
         span.card-booking__price!= "9 990₽"
     .card-booking__date-range
-      +date-range_separate({
-        inputValue_1: "19.08.2019",
-        inputValue_2: "23.08.2019" 
+      +date-range({
+        dateRanges: [
+          {
+            labelText: "Прибытие",
+            value: "19.08.2019",
+            name: "checkin",
+            data: "checkin"
+          }, {
+            labelText: "Выезд",
+            value: "23.08.2019",
+            name: "checkout",
+            data: "checkout"
+          }
+        ]
       })
+
+      
+
     .card-booking__dropdown_guests
       +dropdown-guests({
         labelText: "Гости",
