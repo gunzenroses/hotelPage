@@ -1,9 +1,9 @@
 @import '@~Assets/styles/colors.scss';
 @import '@~Assets/styles/media-mixins.scss';
 
+@import '../../../label/label.scss';
 @import '../../__container/textfield__container.scss';
 @import '../../__input/textfield__input.scss';
-@import '../../__label/textfield__label.scss';
 @import '../../textfield.scss';
 
 .textfield_type_birthday {

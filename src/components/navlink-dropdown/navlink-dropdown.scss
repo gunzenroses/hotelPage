@@ -2,7 +2,7 @@
 @import '@~Assets/styles/media-mixins.scss';
 @import '@~Assets/styles//mixins.scss';
 @import '@~Assets/styles/fonts.scss';
-@import '@~Component/expand/expand.scss';
+@import '@~Components/expand/expand.scss';
 
 .navlink-dropdown {
   @include isFlex($direction: column-reverse);

@@ -1,10 +1,9 @@
 include ../dropdown-item/dropdown-item.pug
+include ../label/label.pug
 
 mixin dropdown-rooms({ labelText="", dropdownContainerId, dropdownClassShow="", itemNumbers=[0, 0, 0], labelRightText="" })
   .dropdown-rooms
-    h3.label!= labelText
-    if labelRightText
-      h3.label.label_right!= labelRightText
+    +label({ labelText: labelText, labelRightText: labelRightText })
     div(class="dropdown js-dropdown-rooms")
       div(class=`dropdown-rooms__content js-expand__content ${ 
         dropdownClassShow }`)

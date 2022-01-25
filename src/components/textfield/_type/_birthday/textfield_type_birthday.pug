@@ -1,9 +1,9 @@
-include ../../__label/textfield__label.pug
+include ../../../label/label.pug
 include ../../textfield.pug
 
 mixin textfield_type_birthday({ labelLeft="", labelRight="" })
   .textfield__container
-    +textfield__label({ labelText: labelLeft, labelRightText: labelRight })
+    +label({ labelText: labelLeft, labelRightText: labelRight })
     +textfield({
       inputClass: "birthday",
       placeholder: "ДД.ММ.ГГГГ",

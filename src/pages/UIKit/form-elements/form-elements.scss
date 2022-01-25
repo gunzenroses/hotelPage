@@ -18,11 +18,11 @@
 @import '@~Components/date-range/_separete/date-range_separate.scss';
 @import '@~Components/dropdown-guests/dropdown-guests.scss';
 @import '@~Components/dropdown-rooms/dropdown-rooms.scss';
+@import '@~Components/label/label.scss';
 @import '@~Components/pagination/pagination.scss';
 @import '@~Components/range/range.scss';
 @import '@~Components/rich-checkbox/rich-checkbox.scss';
 @import '@~Components/textfield/textfield.scss';
-@import '@~Components/textfield/__label/textfield__label.scss';
 @import '@~Components/textfield/_type/_birthday/textfield_type_birthday.scss';
 @import '@~Components/textfield/_type/_email/textfield_type_email.scss';
 
@@ -252,7 +252,6 @@
     @include headerThird();
     line-height: $fs_h3;
     line-height: 1.045rem;
-    user-select: none;
   }
 
 

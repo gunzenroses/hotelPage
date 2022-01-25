@@ -15,12 +15,12 @@ include ../../../components/date-range/_separete/date-range_separate.pug
 include ../../../components/date-range/_common/date-range_common.pug
 include ../../../components/dropdown-guests/dropdown-guests.pug
 include ../../../components/dropdown-rooms/dropdown-rooms.pug
+include ../../../components/label/label.pug
 include ../../../components/range/range.pug
 include ../../../components/rich-checkbox/rich-checkbox.pug
 include ../../../components/navlink/navlink.pug
 include ../../../components/pagination/pagination.pug
 include ../../../components/textfield/textfield.pug
-include ../../../components/textfield/__label/textfield__label.pug
 include ../../../components/textfield/_type/_birthday/textfield_type_birthday.pug
 include ../../../components/textfield/_type/_email/textfield_type_email.pug
 include ../../../components/textfield/_type/_subscribe/textfield_type_subscribe.pug
@@ -43,7 +43,7 @@ block content
         .form-elements__container-first
           .form-elements__email
             .textfield__container
-              +textfield__label({
+              +label({
                 labelText: "Text field", 
                 labelRightText: "default", 
                 labelRightClass: "email"
@@ -51,7 +51,7 @@ block content
               +textfield_type_email()
           .form-elements__name
             .textfield__container
-              +textfield__label({
+              +label({
                 labelText: "Text field", 
                 labelRightText: "hover / focus", 
                 labelRightClass: "name"
@@ -82,7 +82,9 @@ block content
             })
           .form-elements__subscibe
             .textfield__container
-              +textfield__label({ labelText: "Subscription text field" })
+              +label({ 
+                labelText: "Subscription text field" 
+              })
               +textfield_type_subscribe()
       .form-elements__input-buttons
         .form-elements__checkbox
