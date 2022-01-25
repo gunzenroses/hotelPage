@@ -118,12 +118,12 @@ export default class DropdownGuests {
   }
 
   onZeroGuests() {
-    this.resetButton.classList.remove("js-button__show");
+    this.resetButton.classList.remove("js-dropdown__show");
     this.infoInput.value = "";
   }
 
   onSomeGuests() {
-    this.resetButton.classList.add("js-button__show");
+    this.resetButton.classList.add("js-dropdown__show");
     this.render();
   }
 
