@@ -2,6 +2,8 @@
 @import '@~Assets/styles/media-mixins.scss';
 @import '@~Assets/styles/mixins.scss';
 
+@import '@~Components/calendar/calendar.scss';
+
 .date-range {
   position: relative;
   width: 100%;
@@ -40,6 +42,10 @@
 
     @include _450 {
       margin: 0 auto;
+    }
+
+    &_common {
+      flex-direction: column;
     }
   }
 
@@ -142,4 +148,4 @@
       color: $dark-shade_more;
     } 
   }
-}
+}  
