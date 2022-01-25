@@ -59,6 +59,7 @@
     color: $purple;
     background-color: transparent;
     outline: none;
+    cursor: pointer;
 
     @include _1750-1920 {
       font-size: $fs_base;
