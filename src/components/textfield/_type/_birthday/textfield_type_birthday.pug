@@ -2,7 +2,7 @@ include ../../../label/label.pug
 include ../../textfield.pug
 
 mixin textfield_type_birthday({ labelLeft="", labelRight="" })
-  .textfield__container
+  .container
     +label({ labelText: labelLeft, labelRightText: labelRight })
     +textfield({
       inputClass: "birthday",
