@@ -26,17 +26,11 @@
     margin: 0 auto;
   }
 
-  &_in-details {
+  &_type_details {
     padding-right: 5px;
   }
 
-  &_in-landing {
+  &_type_landing {
     padding-right: 4px;
-  }
-
-  &_compact {
-    &::before {
-      line-height: 42px;
-    }
   }
 }
