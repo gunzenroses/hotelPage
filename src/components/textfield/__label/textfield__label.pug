@@ -1,7 +1,0 @@
-mixin textfield__label({ labelText="", labelRightText="", labelRightClass="" })
-  - 
-    var labelRight = labelRightClass === ""
-      ? "textfield__label" : `textfield__label textfield__label_for-${ labelRightClass }`
-  h3.label!= labelText
-  if labelRightText != ""
-    h3(class= `${ labelRight }`)= labelRightText
