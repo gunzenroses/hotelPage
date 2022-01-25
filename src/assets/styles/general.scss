@@ -21,20 +21,6 @@ body {
   color: $dark-shade_more;
 }
 
-.uikit-logo {
-  position: absolute;
-  top: 30px;
-  left: 30px;
-  width: 48px;
-  height: 48px;
-  border: none;
-
-  @include _750 {
-    top: 10px;
-    left: 10px;
-  }
-}
-
 .error {
   position: relative;
   display: block;
