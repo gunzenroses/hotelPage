@@ -107,13 +107,12 @@
 
     &_in-landing {
       @include _1400-1500 {
-        height: 172px;
+        height: 168px;
       }
     }
   
     &_in-registration {
       @include _1400-1500 {
-        height: 172px;
         margin-top: 101px;
       }
     }
@@ -128,14 +127,13 @@
   
     &_in-details {
       @include _1400-1500 {
-        height: 172px;
-        letter-spacing: .001em;
+        height: 168px;
       }
     }
   
     &_in-signin {
       @include _1400-1500 {
-        height: 172px;
+        height: 168px;
       }
     }
   }
@@ -177,8 +175,7 @@
   &__info {
     @include isFlex($justify: flex-start);
     height: 168px;
-    width: 548px;
-    margin-right: 50px;
+    width: 600px;
     padding-top: 4px;
 
     @include _1500-1920 {

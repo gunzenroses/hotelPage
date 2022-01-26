@@ -6,12 +6,12 @@
       "./assets/images/rooms/room.jpg",
       "./assets/images/rooms/room.jpg"
     ],
-    "bookingNumber": "888",
+    "bookingNumber": 888,
     "bookingType": "Люкс",
     "bookingPrice": "9 990",
     "starName": "rating3",
     "starRate": 5,
-    "reviewAmount": "145"
+    "reviewAmount": 145
   },
   "room840": {
     "src": [
@@ -20,12 +20,12 @@
       "./assets/images/rooms/room2.jpg",
       "./assets/images/rooms/room2.jpg"
     ],
-    "bookingNumber": "840",
+    "bookingNumber": 840,
     "bookingType": "",
     "bookingPrice": "9 900",
     "starName": "rating4",
     "starRate": 4,
-    "reviewAmount": "65"
+    "reviewAmount": 65
   },
   "cardBookingInfo": {
     "theme": "uikit",

@@ -4,6 +4,12 @@
 @import '@~Assets/styles/fonts.scss';
 
 .card {
+   @include _450 {
+    width: 280px;
+    margin: 0 auto;
+    font-size: $fs_h2;
+  }
+
   &__title {
   width: 100%;
   min-height: 30px;
@@ -15,12 +21,10 @@
   color: $dark-shade_most;
   text-align: left;
   pointer-events: none;
-  }
-
-  @include _450 {
-    width: 280px;
-    margin: 0 auto;
-    font-size: $fs_h2;
+    @include _500 {
+      font-size: 1.4rem;
+      text-align: center;
+    }
   }
 
   &__text {

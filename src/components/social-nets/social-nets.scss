@@ -36,34 +36,43 @@
 
   &__facebook {
     height: 30px;
+
+    &_in_landing,
+    &_in_signin {
+      height: 25px;
+    }
+
+    &_in_creative,
+    &_in_search,
+    &_in_details,
+    &_in_registration,
+    &_in_signin {
+      height: 26px;
+    }
   }
 
-  &__twitter,
-  &__instagram,
-  &__facebook_in-creative,
-  &__facebook_in-search,
-  &__facebook_in-details,
-  &__facebook_in-registration,
-  &__facebook_in-signin {
+  &__twitter {
     height: 26px;
+
+    &_in_search,
+    &_in_details,
+    &_in_registration {
+      height: 23px;
+    }
+
+    &_in_landing,
+    &_in_signin {
+      height: 21px;
+    }
   }
 
-  &__twitter_in-search,
-  &__twitter_in-details,
-  &__twitter_in-registration {
-    height: 23px;
-  }
+  &__instagram {
+    height: 26px;
 
-  &__facebook_in-landing,
-  &__facebook_in-signin,
-  &__instagram_in-landing,
-  &__instagram_in-signin {
-    height: 25px;
-  }
-
-  &__twitter_in-landing,
-  &__twitter_in-signin {
-    height: 21px;
+    &_in_landing,
+    &_in_signin {
+      height: 25px;
+    }
   }
 
   &__twitter::before,
@@ -96,7 +105,6 @@
     content: '';
     line-height: 24px;
   }
-
 
   &__instagram::before {
     content: '';

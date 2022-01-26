@@ -8,6 +8,7 @@
 @import '@~Components/expand/expand.scss';
 @import '@~Components/footer/footer';
 @import '@~Components/header/header.scss';
+@import '@~Components/textfield/textfield.scss';
 
 .landing-page {
   @include isFlex($justify: flex-start, $direction: column);
