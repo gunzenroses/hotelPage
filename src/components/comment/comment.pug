@@ -23,5 +23,6 @@ mixin comment(commentData)
       .comment__likes
         +button-like({ 
           buttonNumber: buttonNumber,
+          ifLiked: true
         })
       .comment__text!= commentText

@@ -80,5 +80,9 @@
     font-family: inherit;
     font-size: 13.5px;
     letter-spacing: .01em;
+
+    &::placeholder {
+      color: $dark-shade_less;
+    }
   }
 }

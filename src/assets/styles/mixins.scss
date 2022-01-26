@@ -78,10 +78,6 @@
   border: none;
   background: transparent;
   appearance: none;
-
-  &::placeholder {
-    color: $dark-shade_less;
-  }
 }
 
 @mixin labelMixin {
