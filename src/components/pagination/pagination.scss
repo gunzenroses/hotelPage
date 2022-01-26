@@ -32,30 +32,17 @@
   background: $linearGradientTurquoise;
 }
 
-.js-pagination {
+.pagination {
   @include isFlex($direction: column);
   width: fit-content;
   height: 75px;
   user-select: none;
 
-  &__buttons {
+  &__content {
     @include isFlex();
     width: 240px;
     height: 40.4px;
     font-size: 0.875em;
-  }
-
-  &__button_current {
-    @include paginationItem();
-    font-weight: 700;
-    color: $light;
-    background: $linearGradientLilac;
-  }
-
-  &__items {
-    @include isFlex();
-    width: 120px;
-    height: 40px;
   }
 
   &__info {
@@ -69,44 +56,52 @@
     pointer-events: none;
   }
 
-  &__item,
-  &__button_last,
-  &__button_first {
+  &__item {
     @include paginationItem();
     font-weight: 400;
     color: $dark-shade_medium;
     background: transparent;
-  }
 
-  &__item:hover {
-    background: $purple;
-  }
+    &:hover {
+      background: $purple;
+    }
 
-  &__button_next {
-    @include paginationItem();
-    @include paginationNav();
-
-    &::before {
-      content: '\e5c8';
-      @include paginationBefore();
-      font-family: $material-icons;
-      -webkit-font-feature-settings: 'liga' 1;
-      -moz-font-feature-settings: 'liga' 1;
-      font-feature-settings: 'liga' 1;
+    &_current {
+      font-weight: 700;
+      color: $light;
+      background: $linearGradientLilac;
     }
   }
 
-  &__button_prev {
+  &__button {
     @include paginationItem();
-    @include paginationNav();
 
-    &::before {
+    &_last,
+    &_first {
+      font-weight: 400;
+      color: $dark-shade_medium;
+      background: transparent;
+    }
+
+    &_next,
+    &_prev {
+      @include paginationNav();
+
+      &::before {
+        @include paginationBefore();
+        font-family: $material-icons;
+        -webkit-font-feature-settings: 'liga' 1;
+        -moz-font-feature-settings: 'liga' 1;
+        font-feature-settings: 'liga' 1;
+      }
+    }
+
+    &_next::before {
+      content: '\e5c8';
+    }
+
+    &_prev::before {
       content: '\e5c4';
-      @include paginationBefore();
-      font-family: $material-icons;
-      -webkit-font-feature-settings: 'liga' 1;
-      -moz-font-feature-settings: 'liga' 1;
-      font-feature-settings: 'liga' 1;
     }
   }
 }
