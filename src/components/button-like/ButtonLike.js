@@ -8,13 +8,11 @@ class ButtonLike {
 
   init() {
     this.createChildren();
-    this.render();
     this.enableEventListeners();
   }
 
   createChildren() {
     this.number = this.buttonLike.querySelector(".js-button-like__number");
-    this.data = parseInt(this.number.textContent, 10);
     this.heart = this.buttonLike.querySelector(".js-button-like__heart");
   }
 
@@ -24,9 +22,9 @@ class ButtonLike {
   
   @boundMethod
   render() {
-    this.number.textContent = this.heart.classList.contains(
-      "button-like__heart_popular"
-    ) ? this.data++ : this.data--;
+    const ifLiked = this.buttonLike.classList.contains("button-like_popular");
+    let data = parseInt(this.number.textContent, 10);
+    this.number.textContent = ifLiked ? data - 1 : data + 1;
     this.buttonLike.classList.toggle("button-like_popular");
     this.heart.classList.toggle("button-like__heart_popular");
     this.number.classList.toggle("button-like__number_popular");

@@ -21,5 +21,7 @@ mixin comment(commentData)
       })
     .comment__body
       .comment__likes
-        +button-like(buttonNumber)
+        +button-like({ 
+          buttonNumber: buttonNumber,
+        })
       .comment__text!= commentText

@@ -128,8 +128,13 @@ block content
         .form-elements__button-like
           h3.label like button
           .form-elements__row
-            +button-like(2)
-            +button-like(12)
+            +button-like({
+              buttonNumber: 2
+            })
+            +button-like({ 
+              buttonNumber: 12,
+              ifLiked: true
+            })
         .form-elements__button-rate
           h3.form-element__label_button-rate Rate button
           .form-elements__row
