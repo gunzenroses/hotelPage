@@ -7,26 +7,26 @@ mixin card-booking({ cardBookingInfo })
   -
     var descriptionClass = theme === ""
       ? "card-booking__description" 
-      : `card-booking__description card-booking__description_in-${ theme }`
+      : `card-booking__description card-booking__description_in_${ theme }`
   - 
     var infoSignClass = theme === ""
       ? "card-booking__info-sign" 
-      : `card-booking__info-sign card-booking__info-sign_in-${ theme }`
+      : `card-booking__info-sign card-booking__info-sign_in_${ theme }`
   - 
     var totalPriceClass = theme === ""
       ? "card-booking__summary"
-      : `card-booking__summary card-booking__summary_in-${ theme }`
+      : `card-booking__summary card-booking__summary_in_${ theme }`
   - 
     var infoNumberClass = theme === "uikit"
       ? "card-booking__number" 
-      : `card-booking__number card-booking__number_in-${ theme }`
+      : `card-booking__number card-booking__number_in_${ theme }`
   -
     var infoSuiteClass = theme === "uikit"
       ? "card-booking__suite"
-      : `card-booking__suite card-booking__suite_in-${ theme }`
+      : `card-booking__suite card-booking__suite_in_${ theme }`
   - 
     var bookingLineClass = theme === "uikit"
-      ? "card-booking__line card-booking__line_in-uikit"
+      ? "card-booking__line card-booking__line_in_uikit"
       : "card-booking__line"
 
   form.card-booking(method= "get" action= "./search-room.html")

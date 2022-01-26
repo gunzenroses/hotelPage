@@ -3,7 +3,7 @@ include ../calendar/calendar.pug
 mixin date-range({ dateRanges= [{ labelText: "", value: "19 авг - 23 авг", name: "checkin-checkout", data: "date-range" }], сlassShow="", theme="" })
   -  
     var className = theme === "search" 
-      ? `date-range__info date-range__info_in-${ theme }` 
+      ? `date-range__info date-range__info_in_${ theme }` 
       : "date-range__info"
   - 
     var rangeCalendar = 

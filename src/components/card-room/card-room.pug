@@ -14,22 +14,22 @@ mixin card-room({ roomOptions, theme="" })
   - 
     var buttonRateClass = theme === "" 
       ? "card-room__button-rate"
-      : `card-room__button-rate card-room__button-rate_in-${ theme }`
+      : `card-room__button-rate card-room__button-rate_in_${ theme }`
   - 
     var signClass = theme === "creative" 
-      ? "card-room__sign card-room__sign_in-creative"
+      ? "card-room__sign card-room__sign_in_creative"
       : "card-room__sign"
   - 
     var numberClass = theme === "creative" 
-      ? "card-room__number card-room__number_creative"
+      ? "card-room__number card-room__number_in_creative"
       : "card-room__number"
   -
     var roomTypeClass = theme === "search" 
-      ? "card-room__type card-room__type_in-search"
+      ? "card-room__type card-room__type_in_search"
       : "card-room__type"
   -
     var periodClass = theme === "search" 
-      ? "card-room__period card-room__period_in-search"
+      ? "card-room__period card-room__period_in_search"
       : "card-room__period"
 
   .card-room

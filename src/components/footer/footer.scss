@@ -3,7 +3,9 @@
 @import '@~Assets/styles//mixins.scss';
 @import '@~Assets/styles/fonts.scss';
 @import '@~Components/logo/logo.scss';
+@import '@~Components/navlink/navlink.scss';
 @import '@~Components/social-nets/social-nets.scss';
+@import '@~Components/textfield/textfield.scss';
 
 @mixin containerWithMargins(
   $width: 100%,
@@ -105,19 +107,19 @@
       min-width: 320px;
     }
 
-    &_in-landing {
+    &_in_landing {
       @include _1400-1500 {
         height: 168px;
       }
     }
   
-    &_in-registration {
+    &_in_registration {
       @include _1400-1500 {
         margin-top: 101px;
       }
     }
   
-    &_in-search {
+    &_in_search {
       @include _1400-1500 {
         height: 172px;
         margin-top: 100px;
@@ -125,13 +127,13 @@
       }
     }
   
-    &_in-details {
+    &_in_details {
       @include _1400-1500 {
         height: 168px;
       }
     }
   
-    &_in-signin {
+    &_in_signin {
       @include _1400-1500 {
         height: 168px;
       }
@@ -146,12 +148,12 @@
     margin-right: 38px;
     letter-spacing: .001em;
 
-    &_in-landing {
+    &_in_landing {
       height: 130px;
       @include footerLogo();
     }
 
-    &_in-signin {
+    &_in_signin {
       height: 131px;
       @include footerLogo();
     }
@@ -200,7 +202,7 @@
       display: none;
     }
     
-    &_in-details {
+    &_in_details {
       letter-spacing: .001em;
     }
   }
@@ -369,14 +371,14 @@
       min-width: 320px;
     }
 
-    &_in-landing {
+    &_in_landing {
       @include _1400-1500 {
         padding-top: 23px;
         padding-left: 139px;
       }
     }
 
-    &_in-signin {
+    &_in_signin {
       @include _1400-1500 {
         padding-top: 23px;
         padding-left: 140px;
