@@ -151,8 +151,7 @@ export default class DropdownGuests {
     const adultsInfo = `${ this.adultGuests } ${ adultWord }`;
     const infantsInfo = `${ this.infantGuests } ${ infantWord }`;
 
-    const infoValue = this.infoInput.value;
-    switch (infoValue) {
+    switch (true) {
       case onlyAdults:
         this.infoInput.value = adultsInfo;
         break;
