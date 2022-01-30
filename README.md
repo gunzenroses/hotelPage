@@ -1,12 +1,13 @@
 ## Webpack 4 project with Pug, Sass/Stylus, jQuery, VanillaJS, Babel
 
-The aim of this project is to create a web-pages without frameworks/libraries like React that gives an experience of work with:
+The aim of this project is to create multiple web-pages without frameworks/libraries like React to obtain an experience with:
 
 - Figma and PixelPerfect;
 - webpack and npm;
 - adaptive design;
-- git and basic understanding of gitflow;
-- SPA-assemble.
+- basics of git and gitflow;
+- jquery plagins;
+- assemble of SPA.
 
 ## Plugins to work
 
@@ -18,7 +19,7 @@ The project works with node@14.16.1, npm@8.1.0, git@2.34 and jquery@3.3.1.
 - Styling: `Scss`
 - Scripting: `VanillaJS`
 - JS Compiler: `Babel ES6`
-- jQuery: `ion-rangeslider, jquery-validation, inputmask`
+- jQuery: `ion-rangeslider, jquery-validation, inputmask, autobind-decorator`
 
 ## How to
 
@@ -39,6 +40,7 @@ Run production mode
 
 ## Links to pages
 
+- [All pages](https://gunzenroses.github.io/hotelPage/)
 - [UIKit](https://gunzenroses.github.io/hotelPage/UIKit.html)
 - [Landing page](https://gunzenroses.github.io/hotelPage/landing-page.html)
 - [Search room](https://gunzenroses.github.io/hotelPage/search-room.html)
