@@ -10,7 +10,7 @@
     "fsd"
   ],
   "extends": [
-    "airbnb",
+    "airbnb-base",
     "plugin:fsd/all"
   ],
   "rules": {
