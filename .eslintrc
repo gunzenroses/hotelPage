@@ -14,9 +14,11 @@
     "plugin:fsd/all"
   ],
   "rules": {
-    "linebreak-style": ["error", "windows"],
-    "prefer-destructuring": "off",
     "no-new": "off",
+    "linebreak-style": ["error", "windows"],
+    "prefer-desctucturing": "off",
+    "object-curly-spacing": ["error", "always"],
+    "template-curly-spacing": ["error", "always"],
     "quotes": ["error", "single"],
     "comma-dangle": ["error", "never"],
     "max-len": ["error", {
@@ -25,9 +27,7 @@
       "code": 80,
       "ignoreRegExpLiterals": true,
       "ignoreTemplateLiterals": true
-      }],
-    "no-nested-ternary": "off",
-    "class-methods-use-this": "off"
+      }]
   },
   "settings": {
     "import/resolver": {
@@ -41,7 +41,7 @@
           ["Components", "./src/components/"],
           ["Pages", ".src/pages/]"]
         ],
-        "extensions": [".js", ".jsx"]
+        "extensions": [".js"]
       }
     }
   }
