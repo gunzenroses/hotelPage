@@ -8,32 +8,32 @@ block variables
     var pages = [
       {
         name: "UIKit",
-        href: "/UIKit.html",
+        href: "./UIKit.html",
         src: "./assets/images/navigation/UIKit.jpg",
       },
       {
         name: "Landing page",
-        href: "/landing-page.html",
+        href: "./landing-page.html",
         src: "./assets/images/navigation/LandingPage.jpg",
       },
       {
         name: "Search room",
-        href: "/search-room.html",
+        href: "./search-room.html",
         src: "./assets/images/navigation/SearchRoom.jpg",
       },
       {
         name: 'Room details',
-        href: "/room-details.html",
+        href: "./room-details.html",
         src: "./assets/images/navigation/RoomDetails.jpg",
       },
       {
         name: "Registration",
-        href: "/registration.html",
+        href: "./registration.html",
         src: "./assets/images/navigation/Registration.jpg",
       },
       {
         name: "Sign in",
-        href: "/signin.html",
+        href: "./signin.html",
         src: "./assets/images/navigation/SignIn.jpg",
       }
     ]
@@ -43,7 +43,7 @@ block content
     ul.navigation
       each page in pages
         li.navigation__item
-          a(href=page.href).navigation__link
-            img.navigation__pic(alt=`${ page.name }` src=page.src)
+          a(href= page.href).navigation__link
+            img.navigation__pic(alt= `${ page.name }` src= page.src)
             
     
