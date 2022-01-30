@@ -13,14 +13,14 @@ class Pagination {
     this.paginationContainer = item;
     this.pageButtons = document.createElement('div');
     this.pageButtons.classList.add(
-      'pagination__content', 
+      'pagination__content',
       'js-pagination__content'
     );
     this.paginationContainer.prepend(this.pageButtons);
 
     this.paginationInfo = document.createElement('div');
     this.paginationInfo.classList.add(
-      'pagination__info', 
+      'pagination__info',
       'js-pagination__info'
     );
     this.paginationContainer.append(this.paginationInfo);
@@ -42,14 +42,12 @@ class Pagination {
     this.buttonLast = this.pageButtons.querySelector(
       '.js-pagination__button_last'
     );
-    this.buttonNext =
-      this.num < this.data.totalNum
-        ? this.pageButtons.querySelector('.js-pagination__button_next')
-        : null;
-    this.buttonPrev =
-      this.num > 3
-        ? this.pageButtons.querySelector('.js-pagination__button_prev')
-        : null;
+    this.buttonNext = this.num < this.data.totalNum
+      ? this.pageButtons.querySelector('.js-pagination__button_next')
+      : null;
+    this.buttonPrev = this.num > 3
+      ? this.pageButtons.querySelector('.js-pagination__button_prev')
+      : null;
   }
 
   enable() {
@@ -112,13 +110,13 @@ class Pagination {
     button.value = i;
     if (i === this.num) {
       button.classList.add(
-        'pagination__item', 
-        'pagination__item_current', 
+        'pagination__item',
+        'pagination__item_current',
         'js-pagination__item_current'
       );
     } else {
       button.classList.add(
-        'pagination__item', 
+        'pagination__item',
         'js-pagination__item'
       );
     }
@@ -144,34 +142,33 @@ class Pagination {
   }
 
   addLastButton() {
-    const paginationLast = 
-      `pagination__button pagination__button_last js-pagination__button_last`;
-    this.pageButtons.innerHTML = `${ 
+    const paginationLast = 'pagination__button_last js-pagination__button_last';
+    this.pageButtons.innerHTML = `${
       this.pageButtons.innerHTML
-    }<button class= '${ paginationLast }'>15</button>`;
+    }<button class= 'pagination__button ${ paginationLast }'>15</button>`;
   }
 
   addPrevButton() {
-    const paginationPrev = 
-    `pagination__button pagination__button_prev js-pagination__button_prev`;
-    this.pageButtons.innerHTML = 
-      `<button class= '${ paginationPrev }'></button>${
-         this.pageButtons.innerHTML }`;
+    const paginationPrev = 'pagination__button pagination__button_prev';
+    this.pageButtons.innerHTML = `
+      <button class= '${ paginationPrev } js-pagination__button_prev'></button>
+      ${ this.pageButtons.innerHTML }`;
   }
 
   addNextButton() {
-    const paginationNext = 
-      `pagination__button pagination__button_next js-pagination__button_next`;
-    this.pageButtons.innerHTML = `${ this.pageButtons.innerHTML 
-      }<button class= '${ paginationNext }'></button>`;
+    const paginationNext = 'pagination__button pagination__button_next';
+    this.pageButtons.innerHTML = `
+      ${ this.pageButtons.innerHTML }
+      <button class= '${
+  paginationNext } js-pagination__button_next'></button>`;
   }
 
   addFirstButton() {
-    const patinationFirst = 
-      `pagination__button pagination__button_first js-pagination__button_first`;
-    this.pageButtons.innerHTML = 
-      `<button class= '${ 
-        patinationFirst }'>1</button>${ this.pageButtons.innerHTML }`;
+    const patinationFirst = 'pagination__button pagination__button_first';
+    this.pageButtons.innerHTML = `
+      <button class= '${
+  patinationFirst } js-pagination__button_first'>1</button>
+      ${ this.pageButtons.innerHTML }`;
   }
 
   makeInfoLine() {
@@ -179,7 +176,7 @@ class Pagination {
     const trimStart = (this.num - 1) * this.data.itemsPerPage + 1;
     const trimEnd = trimStart + this.data.itemsPerPage - 1;
     this.paginationInfo.innerText = `${
-      trimStart} – ${ trimEnd } из 100+ вариантов аренды`;
+      trimStart } – ${ trimEnd } из 100+ вариантов аренды`;
   }
 
   @boundMethod

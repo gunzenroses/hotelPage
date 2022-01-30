@@ -1,4 +1,4 @@
-import { boundMethod } from "autobind-decorator";
+import { boundMethod } from 'autobind-decorator';
 
 class ButtonLike {
   constructor(item) {
@@ -12,22 +12,22 @@ class ButtonLike {
   }
 
   createChildren() {
-    this.number = this.buttonLike.querySelector(".js-button-like__number");
-    this.heart = this.buttonLike.querySelector(".js-button-like__heart");
+    this.number = this.buttonLike.querySelector('.js-button-like__number');
+    this.heart = this.buttonLike.querySelector('.js-button-like__heart');
   }
 
   enableEventListeners() {
-    this.buttonLike.addEventListener("click", this.render);
+    this.buttonLike.addEventListener('click', this.render);
   }
-  
+
   @boundMethod
   render() {
-    const ifLiked = this.buttonLike.classList.contains("button-like_popular");
-    let data = parseInt(this.number.textContent, 10);
+    const ifLiked = this.buttonLike.classList.contains('button-like_popular');
+    const data = parseInt(this.number.textContent, 10);
     this.number.textContent = ifLiked ? data - 1 : data + 1;
-    this.buttonLike.classList.toggle("button-like_popular");
-    this.heart.classList.toggle("button-like__heart_popular");
-    this.number.classList.toggle("button-like__number_popular");
+    this.buttonLike.classList.toggle('button-like_popular');
+    this.heart.classList.toggle('button-like__heart_popular');
+    this.number.classList.toggle('button-like__number_popular');
   }
 }
 

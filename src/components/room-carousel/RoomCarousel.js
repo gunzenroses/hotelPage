@@ -1,4 +1,4 @@
-import { boundMethod } from "autobind-decorator";
+import { boundMethod } from 'autobind-decorator';
 
 class RoomCarousel {
   constructor(carousel) {
@@ -12,42 +12,44 @@ class RoomCarousel {
   }
 
   createChildren() {
-    this.carouselInputs = this.carousel.getElementsByClassName(
-      "js-room-carousel__radio"
-    )[0];
+    [this.carouselInputs] = this.carousel.getElementsByClassName(
+      'js-room-carousel__radio'
+    );
     this.carouselPictures = this.carousel.querySelector(
-      ".js-room-carousel__pictures"
+      '.js-room-carousel__pictures'
     );
     this.carouselPictures.style.left = 0;
     this.leftValue = parseInt(this.carouselPictures.style.left, 10);
     this.carouselPrev = this.carousel.querySelector(
-      ".js-room-carousel__button_prev"
+      '.js-room-carousel__button_prev'
     )
-      ? this.carousel.querySelector(".js-room-carousel__button_prev")
+      ? this.carousel.querySelector('.js-room-carousel__button_prev')
       : null;
     this.carouselNext = this.carousel.querySelector(
-      ".js-room-carousel__button_next"
+      '.js-room-carousel__button_next'
     )
-      ? this.carousel.querySelector(".js-room-carousel__button_next")
+      ? this.carousel.querySelector('.js-room-carousel__button_next')
       : null;
     this.carouselRow = this.carouselInputs.getElementsByClassName(
-      "js-room-carousel__radio-real"
+      'js-room-carousel__radio-real'
     );
-    this.firstPicRadio = this.carouselRow[0];
-    this.secondPicRadio = this.carouselRow[1];
-    this.thirdPicRadio = this.carouselRow[2];
-    this.forthPicRadio = this.carouselRow[3];
+    [
+      this.firstPicRadio,
+      this.secondPicRadio,
+      this.thirdPicRadio,
+      this.forthPicRadio
+    ] = this.carouselRow;
     this.firstPicRadio.checked = true;
   }
 
   enable() {
     if (this.carouselPrev) {
-      this.carouselPrev.addEventListener("click", this.prevImage);
+      this.carouselPrev.addEventListener('click', this.prevImage);
     }
     if (this.carouselNext) {
-      this.carouselNext.addEventListener("click", this.nextImage);
+      this.carouselNext.addEventListener('click', this.nextImage);
     }
-    this.carouselInputs.addEventListener("click", this.switchImage);
+    this.carouselInputs.addEventListener('click', this.switchImage);
   }
 
   @boundMethod
@@ -101,13 +103,13 @@ class RoomCarousel {
   @boundMethod
   switchImage(e) {
     switch (e.target.value) {
-      case "picture_2":
+      case 'picture_2':
         this.leftValue = -100;
         break;
-      case "picture_3":
+      case 'picture_3':
         this.leftValue = -200;
         break;
-      case "picture_4":
+      case 'picture_4':
         this.leftValue = -300;
         break;
       default:
