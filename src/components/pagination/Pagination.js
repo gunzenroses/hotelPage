@@ -1,5 +1,5 @@
 import { boundMethod } from 'autobind-decorator';
-import paginationData1 from 'Scripts/my-data';
+import { paginationData1 } from './pagination.json';
 
 class Pagination {
   constructor(item) {
