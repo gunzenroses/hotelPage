@@ -1,8 +1,8 @@
 @import '@~Assets/styles/colors.scss';
+@import '@~Assets/styles/expand.scss';
+@import '@~Assets/styles/fonts.scss';
 @import '@~Assets/styles/media-mixins.scss';
 @import '@~Assets/styles//mixins.scss';
-@import '@~Assets/styles/fonts.scss';
-@import '@~Components/expand/expand.scss';
 
 .navlink-dropdown {
   @include isFlex($direction: column-reverse);
