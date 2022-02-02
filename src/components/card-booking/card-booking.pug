@@ -33,8 +33,8 @@ mixin card-booking({ cardBookingInfo })
     .card__row
       .card__group
         span.card-booking__number-sign №
-        span(class = `${ infoNumberClass }`) 888
-        span(class = `${ infoSuiteClass }`) Люкс
+        span(class = infoNumberClass) 888
+        span(class = infoSuiteClass) Люкс
       .card__group
         span.card-booking__price 9 990₽
         span.card-booking__period &nbsp;в сутки
@@ -67,7 +67,7 @@ mixin card-booking({ cardBookingInfo })
         .card-booking__expense!= `${ priceInfo.infoPrice }₽`
     div(class = totalPriceClass)
       .card-booking__text Итого
-      div(class = `${ bookingLineClass }`)
+      div(class = bookingLineClass)
       .card-booking__text 38 081₽
     .card-booking__button
       +button-submit({ 

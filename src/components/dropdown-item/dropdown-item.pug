@@ -7,13 +7,13 @@ mixin dropdown-item({ itemDataType, itemText, itemDataOrder, itemNumber = 0, ite
   
   if itemClass === ""
     div(
-      class = `${ dropdownItemClass }` 
+      class = dropdownItemClass 
       data-type = itemDataType)
-      div(class = `${ dropdownTextClass }`)= itemText
+      div(class = dropdownTextClass)= itemText
       div(class = `${ dropdownMinusClass } js-dropdown-item__minus_disabled`) - 
-      div(class = `${ dropdownNumberClass }` data-order = itemDataOrder)
+      div(class = dropdownNumberClass data-order = itemDataOrder)
         != itemNumber
-      div(class = `${ dropdownPlusClass }`) +
+      div(class = dropdownPlusClass) +
   else
     div(
       class = `${ dropdownItemClass } dropdown-item__item_last` 

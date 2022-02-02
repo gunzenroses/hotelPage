@@ -62,11 +62,11 @@ mixin donut-chart({ excellent = 0, good = 0, satisfied = 0, dissapointed = 0 })
               stroke = `url(#gradient_${ mark })` 
               stroke-width = "1" 
               stroke-dasharray = `${ dashValue } ${ dashLeft }` 
-              stroke-dashoffset = `${ dashOffsetValue }` 
+              stroke-dashoffset = dashOffsetValue
               aria-labelledby = `donut-chart-segment-${ counter }-title`)
             title(
               id = `donut-chart-segment-${ counter++ }-title` 
-              data-some = `${ prevArraySumm }`)!= mark
+              data-some = prevArraySumm)!= mark
             - dashOffsetValue -= percent;
 
       .donut-chart__text

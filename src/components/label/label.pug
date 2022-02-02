@@ -5,4 +5,4 @@ mixin label({ labelText = "", labelRightText = "", labelRightClass = "" })
 
   h3.label!= labelText
   if labelRightText !== ""
-    h3(class = `${ labelRight }`)= labelRightText
+    h3(class = labelRight)= labelRightText

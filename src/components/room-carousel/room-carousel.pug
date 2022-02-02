@@ -16,13 +16,13 @@ mixin room-carousel({ roomPictures, nameForPictures })
               checked = "checked" 
               name = nameForPictures 
               value = `picture_${ counter++ }`
-              class = `${ carouselRealClass }`)
+              class = carouselRealClass)
           else
             input(
               type = "radio" 
               name = nameForPictures 
               value = `picture_${ counter++ }`
-              class = `${ carouselRealClass }`)
+              class = carouselRealClass)
           span.room-carousel__radio-fake
     .room-carousel__pictures.js-room-carousel__pictures
       for picture in roomPictures
