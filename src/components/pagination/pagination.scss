@@ -90,8 +90,6 @@
       &::before {
         @include paginationBefore();
         font-family: $material-icons;
-        -webkit-font-feature-settings: 'liga' 1;
-        -moz-font-feature-settings: 'liga' 1;
         font-feature-settings: 'liga' 1;
       }
     }

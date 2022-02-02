@@ -86,7 +86,6 @@
     font-family: $font-awesome;
     background-image: $linearGradientLilac;
     color: transparent;
-    -webkit-background-clip: text;
     background-clip: text;
 
     @include _1650-1920 {
