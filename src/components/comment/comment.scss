@@ -17,7 +17,7 @@
   }
 
   &__head {
-    @include isFlex($justify: start);
+    @include isFlex($justify: flex-start);
     height: fit-content;
     pointer-events: none;
   }
@@ -33,7 +33,7 @@
   }
 
   &__body {
-    @include isFlex($justify: start);
+    @include isFlex($justify: flex-start);
     width: 100%;
     height: fit-content;
     min-height: 51px;

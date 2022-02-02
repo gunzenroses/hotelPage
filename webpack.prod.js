@@ -8,6 +8,7 @@ const imageminPngquant = require("imagemin-pngquant");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const postcssPresetEnv = require("postcss-preset-env");
 
 module.exports = merge(common, {
   mode: "production",
@@ -19,21 +20,23 @@ module.exports = merge(common, {
   optimization: {
     minimize: true,
     minimizer: [
-      new TerserPlugin({
-        test: /\.js(\?.*)?$/i,
-        parallel: true,
-        sourceMap: true,
-        cache: true,
-      },
-      new OptimizeCSSAssetsPlugin(),
-    )],
+      new TerserPlugin(
+        {
+          test: /\.js(\?.*)?$/i,
+          parallel: true,
+          sourceMap: true,
+          cache: true,
+        },
+        new OptimizeCSSAssetsPlugin()
+      ),
+    ],
   },
   module: {
     rules: [
       {
         test: /\.css$/,
         use: [
-          MiniCssExtractPlugin.loader,   // for parallel loading of CSS/JS resources later on
+          MiniCssExtractPlugin.loader, // for parallel loading of CSS/JS resources later on
           {
             loader: "css-loader",
             options: {
@@ -58,16 +61,23 @@ module.exports = merge(common, {
               colormin: false,
             },
           },
-            "postcss-loader", // translates CSS into CommonJS
+          {
+            loader: "postcss-loader",
+            options: {
+              postcssOptions: {
+                plugins: [postcssPresetEnv()],
+              },
+            },
+          },
           {
             loader: "sass-loader", // compiles Sass to CSS
             options: {
               sourceMap: true,
             },
-          }
+          },
         ],
       },
-    ]
+    ],
   },
   plugins: [
     new CleanWebpackPlugin(),
@@ -80,11 +90,11 @@ module.exports = merge(common, {
         imageminPngquant({
           quality: [0.6, 0.8],
         }),
-      ]
+      ],
     }),
     new MiniCssExtractPlugin({
       filename: "assets/css/[name].[hash:7].bundle.css",
       chunkFilename: "[id].css",
     }),
-  ]
-})
+  ],
+});

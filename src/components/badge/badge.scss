@@ -29,6 +29,7 @@
     align-items: center;
     background-image: $linearGradientLilac;
     color: transparent;
+    font-feature-settings: "liga";
     background-clip: text;
   }
 }

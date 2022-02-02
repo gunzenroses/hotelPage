@@ -1,9 +1,9 @@
 import { boundMethod } from 'autobind-decorator';
-import { paginationData1 } from './pagination.json';
+import * as paginationData from './pagination.json';
 
 class Pagination {
   constructor(item) {
-    this.data = paginationData1;
+    this.data = paginationData;
     this.num = this.data.currentNum;
     this.createContainer(item);
     this.init();

@@ -18,13 +18,13 @@ module.exports = {
     __dirname: true,
   },
   entry: {
-    "index": "./src/index.js",
-    "UIKit": "./src/pages/UIKit/UIKit.js",
+    index: "./src/index.js",
+    UIKit: "./src/pages/UIKit/UIKit.js",
     "landing-page": "./src/pages/landing-page/landing-page.js",
     "search-room": "./src/pages/search-room/search-room.js",
     "room-details": "./src/pages/room-details/room-details.js",
-    "registration": "./src/pages/registration/registration.js",
-    "signin": "./src/pages/signin/signin.js",
+    registration: "./src/pages/registration/registration.js",
+    signin: "./src/pages/signin/signin.js",
   },
   resolve: {
     extensions: [".js", ".scss"],
@@ -55,6 +55,7 @@ module.exports = {
       },
       {
         test: /fonts.*\.svg$/,
+        type: "javascript/auto",
         exclude: [path.resolve(__dirname, "./src/components/")],
         use: [
           {
@@ -72,6 +73,7 @@ module.exports = {
       },
       {
         test: /fonts.*\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+        type: "javascript/auto",
         loader: "file-loader",
         options: {
           name: "[name].[ext]",
@@ -81,6 +83,7 @@ module.exports = {
       },
       {
         test: /components.*\.(png|jpg|svg|gif)$/,
+        type: "javascript/auto",
         loader: "file-loader",
         options: {
           name: "[name].[ext]",
