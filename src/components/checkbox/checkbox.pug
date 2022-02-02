@@ -3,11 +3,12 @@ mixin checkbox
 
   fieldset.checkbox
     each houseRule in houseRules
+      - var { valueText, inputName, ifChecked, checkboxTitle } = houseRule
       label.checkbox__item
         input(
           type = "checkbox"
-          value = houseRule.valueText
-          name = houseRule.inputName
-          checked = houseRule.ifChecked).checkbox__real
+          value = valueText
+          name = inputName
+          checked = ifChecked).checkbox__real
         span.checkbox__fake
-        span.checkbox__title!= houseRule.checkboxTitle
+        span.checkbox__title!= checkboxTitle

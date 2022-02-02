@@ -8,12 +8,13 @@ mixin checkbox-expandable({ dropdownTitleName, dropdownClassShow = "" })
       div(class = `js-checkbox-expandable__content ${ dropdownClassShow }`)
         fieldset.checkbox-expandable__content
           each checkboxItem in checkboxContent
+            - var { checkboxName, ifChecked, checkboxTitle } = checkboxItem
             label.checkbox-expandable__item
               input(
                 type = "checkbox" 
-                name = checkboxItem.checkboxName 
-                checked = checkboxItem.ifChecked).checkbox-expandable__real
+                name = checkboxName 
+                checked = ifChecked).checkbox-expandable__real
               span.checkbox-expandable__fake
-              span.checkbox-expandable__title!= checkboxItem.checkboxTitle
+              span.checkbox-expandable__title!= checkboxTitle
       .checkbox-expandable__button.js-checkbox-expandable__init
         .dropdown__title!= dropdownTitleName

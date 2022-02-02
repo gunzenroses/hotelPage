@@ -19,12 +19,18 @@ mixin rich-checkbox({ checkboxName = "", containerText = "" })
     .rich-checkbox__label!= containerText
     fieldset.rich-checkbox__list
       each checkboxItem in checkboxItems
+        - 
+          var { 
+            checkboxName, 
+            checkboxValue, 
+            checkboxTitle, 
+            checkboxSubtitle } = checkboxItem
         label.rich-checkbox__item
           input(
             type = "checkbox"
-            name = checkboxItem.checkboxName 
-            value = checkboxItem.checkboxValue).rich-checkbox__real
+            name = checkboxName 
+            value = checkboxValue).rich-checkbox__real
           span.rich-checkbox__fake
           span.rich-checkbox__form
-            span.rich-checkbox__title!= checkboxItem.checkboxTitle
-            span.rich-checkbox__description!= checkboxItem.checkboxSubtitle
+            span.rich-checkbox__title!= checkboxTitle
+            span.rich-checkbox__description!= checkboxSubtitle

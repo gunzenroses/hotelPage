@@ -23,15 +23,16 @@ mixin date-range({ dateRanges = [{ labelText: "", value: "19 авг - 23 авг"
       +calendar()
     div(class = rangeSelectorClass)
       each dateRange in dateRanges
+        - var { labelText, value, name, data } = dateRange
         div(class = rangeItemClass)
-          h3.date-range__label!= dateRange.labelText
+          h3.date-range__label!= labelText
           div(class = className)
             input(
               class = "date-range__input" 
               type = "text" 
-              value = dateRange.value
-              name = dateRange.name
+              value = value
+              name = name
               placeholder = "ДД.ММ.ГГГГ"
               maxlength = 15
-              data-range = dateRange.data
+              data-range = data
               readonly) 

@@ -60,11 +60,12 @@ mixin card-booking({ cardBookingInfo })
         itemNumbers: itemNumbers
       })
     each priceInfo in priceInfos 
+      - var { infoDesctiption, infoSign, infoPrice } = priceInfo
       .card-booking__price-info
-        div(class = descriptionClass)= priceInfo.infoDesctiption
-          if priceInfo.infoSign === "full"
+        div(class = descriptionClass)= infoDesctiption
+          if infoSign === "full"
             div(class = infoSignClass)
-        .card-booking__expense!= `${ priceInfo.infoPrice }₽`
+        .card-booking__expense!= `${ infoPrice }₽`
     div(class = totalPriceClass)
       .card-booking__text Итого
       div(class = bookingLineClass)
