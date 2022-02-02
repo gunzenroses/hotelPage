@@ -209,7 +209,7 @@
     }
   }
 
-  &__roomData {
+  &__room-data {
     @include isFlex();
     width: 675px;
     margin-left: 1px;
@@ -234,7 +234,7 @@
     }
   }
 
-  &__roomInfo {
+  &__room-info {
     @include isFlex($direction: column);
     width: 273px;
     height: fit-content;
@@ -262,7 +262,7 @@
     margin-top: 20px;
   }
 
-  &__roomImpression {
+  &__room-impression {
     @include isFlex($direction: column, $justify: flex-start);
     width: 315px;
     height: 172px;
@@ -407,7 +407,7 @@
     }
   }
 
-  &__cancellation_info {
+  &__cancellation-info {
     width: 100%;
     height: auto;
     margin-top: 19px;

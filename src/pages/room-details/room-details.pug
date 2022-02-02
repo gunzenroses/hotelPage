@@ -35,8 +35,8 @@ block content
         h2.room-details__heading Данные о номере
         .room-details__info_inner
           .room-details__description
-            article.room-details__roomData
-              .room-details__roomInfo
+            article.room-details__room-data
+              .room-details__room-info
                 h2.room-details__title Сведения о номере
                 .room-details__badge_type_comfort
                   +badge({
@@ -56,7 +56,7 @@ block content
                     title: "Уют",
                     description: "Номер оснащён камином"
                   })
-              .room-details__roomImpression
+              .room-details__room-impression
                 h2.room-details__title Впечатления от номера
                 +donut-chart({
                   excellent: 130,
@@ -78,7 +78,7 @@ block content
                 +bullet-checkbox({ checkboxList: checkboxList1 })
             article.room-details__cancellation
               h2.room-details__title Отмена
-              .room-details__cancellation_info
+              .room-details__cancellation-info
                 != cancellationRools
           article.room-details__booking
             +card-booking({ cardBookingInfo: cardBookingInfo })
