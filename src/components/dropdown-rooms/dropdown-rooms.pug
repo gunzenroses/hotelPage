@@ -1,11 +1,11 @@
 include ../dropdown-item/dropdown-item.pug
 include ../label/label.pug
 
-mixin dropdown-rooms({ labelText="", dropdownContainerId, dropdownClassShow="", itemNumbers=[0, 0, 0], labelRightText="" })
+mixin dropdown-rooms({ labelText = "", dropdownContainerId, dropdownClassShow = "", itemNumbers = [0, 0, 0], labelRightText = "" })
   .dropdown-rooms
     +label({ labelText: labelText, labelRightText: labelRightText })
-    div(class= "dropdown js-dropdown-rooms")
-      div(class= `dropdown-rooms__content js-expand__content ${ 
+    div(class = "dropdown js-dropdown-rooms")
+      div(class = `dropdown-rooms__content js-expand__content ${ 
         dropdownClassShow }`)
         +dropdown-item({
           itemDataType: "bedrooms",
@@ -28,7 +28,7 @@ mixin dropdown-rooms({ labelText="", dropdownContainerId, dropdownClassShow="", 
         })
       .dropdown__info.js-dropdown__info.js-expand__init
         input.dropdown__input.js-dropdown__input(
-          value= ""
-          name= "rooms"
-          type= "text"
-          placeholder= "Выберите условия")
+          value = ""
+          name = "rooms"
+          type = "text"
+          placeholder = "Выберите условия")

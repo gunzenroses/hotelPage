@@ -1,8 +1,8 @@
-mixin label({ labelText="", labelRightText="", labelRightClass="" })
+mixin label({ labelText = "", labelRightText = "", labelRightClass = "" })
   - 
     var labelRight = labelRightClass === ""
       ? "label label_right" : `label label_right_for_${ labelRightClass }`
 
   h3.label!= labelText
   if labelRightText !== ""
-    h3(class= `${ labelRight }`)= labelRightText
+    h3(class = `${ labelRight }`)= labelRightText

@@ -1,6 +1,6 @@
 include ../calendar/calendar.pug
 
-mixin date-range({ dateRanges= [{ labelText: "", value: "19 авг - 23 авг", name: "checkin-checkout", data: "date-range" }], сlassShow="", theme="" })
+mixin date-range({ dateRanges = [{ labelText: "", value: "19 авг - 23 авг", name: "checkin-checkout", data: "date-range" }], сlassShow = "", theme = "" })
   -  
     var className = theme === "search" 
       ? `date-range__info date-range__info_in_${ theme }` 
@@ -19,19 +19,19 @@ mixin date-range({ dateRanges= [{ labelText: "", value: "19 авг - 23 авг",
       : "date-range__item date-range__item_separate"
 
   div.date-range.js-date-range
-    div(class= rangeCalendar)
+    div(class = rangeCalendar)
       +calendar()
-    div(class= rangeSelectorClass)
+    div(class = rangeSelectorClass)
       each dateRange in dateRanges
-        div(class= rangeItemClass)
+        div(class = rangeItemClass)
           h3.date-range__label!= dateRange.labelText
-          div(class= className)
+          div(class = className)
             input(
-              class= "date-range__input" 
-              type= "text" 
-              value= dateRange.value
-              name= dateRange.name
-              placeholder= "ДД.ММ.ГГГГ"
-              maxlength= 15
-              data-range= dateRange.data
+              class = "date-range__input" 
+              type = "text" 
+              value = dateRange.value
+              name = dateRange.name
+              placeholder = "ДД.ММ.ГГГГ"
+              maxlength = 15
+              data-range = dateRange.data
               readonly) 

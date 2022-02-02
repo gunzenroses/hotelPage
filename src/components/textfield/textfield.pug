@@ -1,16 +1,16 @@
-mixin textfield({ inputClass="", placeholder="", valueText="", nameText="text", maxText=30, autofocus=false })
+mixin textfield({ inputClass = "", placeholder = "", valueText = "", nameText = "text", maxText = 30, autofocus = false })
   - var textfieldType = inputClass === "password" ? "password" : "text"
   - 
     var textfieldClass = inputClass === "" 
       ? "textfield" : `textfield textfield_type_${ inputClass }`
   
-  div(class= textfieldClass)
+  div(class = textfieldClass)
     input(
-      class= "textfield__input" 
-      type= textfieldType 
-      placeholder= placeholder, 
-      value= valueText 
-      name= nameText 
-      data-rule= nameText, 
-      maxlength= maxText 
-      autofocus= autofocus)
+      class = "textfield__input" 
+      type = textfieldType 
+      placeholder = placeholder, 
+      value = valueText 
+      name = nameText 
+      data-rule = nameText, 
+      maxlength = maxText 
+      autofocus = autofocus)

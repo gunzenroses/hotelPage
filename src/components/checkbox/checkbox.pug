@@ -5,9 +5,9 @@ mixin checkbox
     each houseRule in houseRules
       label.checkbox__item
         input(
-          type= "checkbox"
-          value= houseRule.valueText
-          name= houseRule.inputName
-          checked= houseRule.ifChecked).checkbox__real
+          type = "checkbox"
+          value = houseRule.valueText
+          name = houseRule.inputName
+          checked = houseRule.ifChecked).checkbox__real
         span.checkbox__fake
         span.checkbox__title!= houseRule.checkboxTitle

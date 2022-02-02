@@ -1,4 +1,4 @@
-mixin button-like({ buttonNumber=1, ifLiked= false })
+mixin button-like({ buttonNumber = 1, ifLiked = false })
   - 
     var buttonLikeClass = ifLiked
       ? "button-like js-button-like button-like_popular"
@@ -12,6 +12,6 @@ mixin button-like({ buttonNumber=1, ifLiked= false })
       ? "button-like__number js-button-like__number button-like__number_popular"
       : "button-like__number js-button-like__number"
 
-  div(class= buttonLikeClass)
-    div(class= buttonLikeHeartClass)
-    div(class= buttonLikeNumberClass)= buttonNumber
+  div(class = buttonLikeClass)
+    div(class = buttonLikeHeartClass)
+    div(class = buttonLikeNumberClass)= buttonNumber

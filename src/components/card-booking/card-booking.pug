@@ -29,12 +29,12 @@ mixin card-booking({ cardBookingInfo })
       ? "card-booking__line card-booking__line_in_uikit"
       : "card-booking__line"
 
-  form.card-booking(method= "get" action= "./search-room.html")
+  form.card-booking(method = "get" action = "./search-room.html")
     .card__row
       .card__group
         span.card-booking__number-sign №
-        span(class= `${ infoNumberClass }`) 888
-        span(class= `${ infoSuiteClass }`) Люкс
+        span(class = `${ infoNumberClass }`) 888
+        span(class = `${ infoSuiteClass }`) Люкс
       .card__group
         span.card-booking__price 9 990₽
         span.card-booking__period &nbsp;в сутки
@@ -61,13 +61,13 @@ mixin card-booking({ cardBookingInfo })
       })
     each priceInfo in priceInfos 
       .card-booking__price-info
-        div(class= descriptionClass)= priceInfo.infoDesctiption
+        div(class = descriptionClass)= priceInfo.infoDesctiption
           if priceInfo.infoSign === "full"
-            div(class= infoSignClass)
+            div(class = infoSignClass)
         .card-booking__expense!= `${ priceInfo.infoPrice }₽`
-    div(class= totalPriceClass)
+    div(class = totalPriceClass)
       .card-booking__text Итого
-      div(class= `${ bookingLineClass }`)
+      div(class = `${ bookingLineClass }`)
       .card-booking__text 38 081₽
     .card-booking__button
       +button-submit({ 

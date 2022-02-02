@@ -12,24 +12,24 @@ mixin room-carousel({ roomPictures, nameForPictures })
         label.room-carousel__element
           if counter === 1
             input(
-              type= "radio" 
-              checked= "checked" 
-              name= nameForPictures 
-              value= `picture_${ counter++ }`
-              class= `${ carouselRealClass }`)
+              type = "radio" 
+              checked = "checked" 
+              name = nameForPictures 
+              value = `picture_${ counter++ }`
+              class = `${ carouselRealClass }`)
           else
             input(
-              type= "radio" 
-              name= nameForPictures 
-              value= `picture_${ counter++ }`
-              class= `${ carouselRealClass }`)
+              type = "radio" 
+              name = nameForPictures 
+              value = `picture_${ counter++ }`
+              class = `${ carouselRealClass }`)
           span.room-carousel__radio-fake
     .room-carousel__pictures.js-room-carousel__pictures
       for picture in roomPictures
         .room-carousel__pic
           img(
-            src= picture 
-            alt= "room pictures").room-carousel__img
+            src = picture 
+            alt = "room pictures").room-carousel__img
     .room-carousel__buttons
-      div(class= `${ buttonPrevClass } js-room-carousel__button_prev`)
-      div(class= `${ buttonNextClass } js-room-carousel__button_next`)
+      div(class = `${ buttonPrevClass } js-room-carousel__button_prev`)
+      div(class = `${ buttonNextClass } js-room-carousel__button_next`)

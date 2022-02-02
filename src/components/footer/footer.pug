@@ -3,7 +3,7 @@ include ../navlink/navlink.pug
 include ../social-nets/social-nets.pug
 include ../textfield/textfield.pug
 
-mixin footer(theme="main")
+mixin footer(theme = "main")
   - 
     var { 
       footerText,
@@ -21,22 +21,22 @@ mixin footer(theme="main")
       ? `footer__info footer__info_in_${ theme }` : "footer__info"
 
   footer.footer
-    div(class= footerNavbarClass)
+    div(class = footerNavbarClass)
       if theme === "landing"
-        div(class=`footer__logo footer__logo_in_${ theme }`)
+        div(class = `footer__logo footer__logo_in_${ theme }`)
           +logo()
           .footer__text!= footerText
       else if theme === "signin"
-        div(class=`footer__logo footer__logo_in_${ theme }`)
+        div(class = `footer__logo footer__logo_in_${ theme }`)
           +logo()
           .footer__text!= footerText
       else
-        div(class=`footer__logo`)
+        div(class = `footer__logo`)
           +logo()
           .footer__text!= footerText
-      div(class= infoVisibleClass)
+      div(class = infoVisibleClass)
         for footerGroup in footerGroups
-          div(class=`footer__${ footerGroup.name }`)
+          div(class = `footer__${ footerGroup.name }`)
             h3.footer__title!= footerGroup.text
             ul.footer__links
               for item in footerGroup.items
@@ -47,7 +47,7 @@ mixin footer(theme="main")
                 })
       .footer__info-hidden
         for footerGroup in footerGroups
-          div(class=`footer__${ footerGroup.name }`)
+          div(class = `footer__${ footerGroup.name }`)
             h3.footer__title.js-expand__init!= footerGroup.text
             ul.footer__dropdown.js-expand__content
               for item in footerGroup.items
@@ -59,14 +59,14 @@ mixin footer(theme="main")
         h3.footer__title Подписка
         p.footer__special-offer!= footerTextSubscription
         form.footer__form.js-footer__form(
-          method= "get" 
-          action= "./registration.html")
+          method = "get" 
+          action = "./registration.html")
           +textfield({ 
             inputClass: "subscibe",
             placeholder: "Email",
             nameText: "email",
           })
-    div(class= footerCopywriteClass)
+    div(class = footerCopywriteClass)
       .footer__basement-text Copyright © 2018 Toxin отель. Все права защищены.
       .footer__social-nets
         +social-nets(theme)

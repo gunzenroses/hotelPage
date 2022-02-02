@@ -1,18 +1,18 @@
-mixin checkbox-expandable({ dropdownTitleName, dropdownClassShow="" })
+mixin checkbox-expandable({ dropdownTitleName, dropdownClassShow = "" })
   - 
     var { checkboxContent } = 
     require("Components/checkbox-expandable/checkbox-expandable.json");
 
   .checkbox-expandable.js-checkbox-expandable
     .checkbox-expandable__dropdown
-      div(class=`js-checkbox-expandable__content ${ dropdownClassShow }`)
+      div(class = `js-checkbox-expandable__content ${ dropdownClassShow }`)
         fieldset.checkbox-expandable__content
           each checkboxItem in checkboxContent
             label.checkbox-expandable__item
               input(
-                type= "checkbox" 
-                name= checkboxItem.checkboxName 
-                checked= checkboxItem.ifChecked).checkbox-expandable__real
+                type = "checkbox" 
+                name = checkboxItem.checkboxName 
+                checked = checkboxItem.ifChecked).checkbox-expandable__real
               span.checkbox-expandable__fake
               span.checkbox-expandable__title!= checkboxItem.checkboxTitle
       .checkbox-expandable__button.js-checkbox-expandable__init

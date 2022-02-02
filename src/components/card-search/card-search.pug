@@ -3,7 +3,7 @@ include ../date-range/date-range.pug
 include ../dropdown-guests/dropdown-guests.pug
 
 mixin card-search()
-  form.card-search(method= "get" action= "./search-room.html")
+  form.card-search(method = "get" action = "./search-room.html")
     h1.card__title Найдём номера под ваши пожелания
     .card-search__calendar
       +date-range({

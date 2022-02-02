@@ -1,11 +1,11 @@
 include ../textfield/textfield.pug
 
-mixin login(theme="")
+mixin login(theme = "")
   - 
     var loginClass = theme === ""
       ? "login" : `login login_in_${ theme }`
 
-  div(class= loginClass)
+  div(class = loginClass)
     +textfield({ 
       inputClass: "email",
       placeholder: "Email",

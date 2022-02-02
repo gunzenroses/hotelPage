@@ -3,7 +3,7 @@ include ../logo/logo.pug
 include ../navlink/navlink.pug
 include ../navlink-dropdown/navlink-dropdown.pug
 
-mixin header({ user="", theme="" })
+mixin header({ user = "", theme = "" })
   - 
     var headerClass = theme === ""
       ? "header" 
@@ -12,7 +12,7 @@ mixin header({ user="", theme="" })
     var userClick = user === ""
       ? "registration.html" : `some-profile-${ user }.html`
   
-  header(class= `${ headerClass }`)
+  header(class = `${ headerClass }`)
     if theme === ""
       .header__logo
         +logo()
@@ -38,7 +38,7 @@ mixin header({ user="", theme="" })
           })
           +navlink-dropdown("Соглашения")
       if user
-        a.header__user(href= userClick)= user
+        a.header__user(href = userClick)= user
       else
         .header__forms
           .header__signin

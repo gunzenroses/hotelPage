@@ -1,7 +1,7 @@
 include ../button-rate/button-rate.pug
 include ../room-carousel/room-carousel.pug
 
-mixin card-room({ roomOptions, theme="" })
+mixin card-room({ roomOptions, theme = "" })
   - 
     var {
       src = [], 
@@ -40,14 +40,14 @@ mixin card-room({ roomOptions, theme="" })
     .card-room__info
       .card__row
         .card__group
-          span(class= `${ signClass }`) №
-          span(class= `${ numberClass }`)= bookingNumber
-          span(class= `${ roomTypeClass }`)= bookingType 
+          span(class = `${ signClass }`) №
+          span(class = `${ numberClass }`)= bookingNumber
+          span(class = `${ roomTypeClass }`)= bookingType 
         .card__group
           span.card-room__price!= bookingPrice + "₽"
-          span(class= `${ periodClass }`) &nbsp;в сутки
+          span(class = `${ periodClass }`) &nbsp;в сутки
       .card-room__rating
-        div(class=`${ buttonRateClass }`)
+        div(class = `${ buttonRateClass }`)
           +button-rate({
             inputName: starName,
             checkedNum: starRate

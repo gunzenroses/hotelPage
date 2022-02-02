@@ -1,4 +1,4 @@
-mixin rich-checkbox({ checkboxName="", containerText="" })
+mixin rich-checkbox({ checkboxName = "", containerText = "" })
   - 
     var checkboxItems = [
       {
@@ -21,9 +21,9 @@ mixin rich-checkbox({ checkboxName="", containerText="" })
       each checkboxItem in checkboxItems
         label.rich-checkbox__item
           input(
-            type= "checkbox"
-            name= checkboxItem.checkboxName 
-            value= checkboxItem.checkboxValue).rich-checkbox__real
+            type = "checkbox"
+            name = checkboxItem.checkboxName 
+            value = checkboxItem.checkboxValue).rich-checkbox__real
           span.rich-checkbox__fake
           span.rich-checkbox__form
             span.rich-checkbox__title!= checkboxItem.checkboxTitle
