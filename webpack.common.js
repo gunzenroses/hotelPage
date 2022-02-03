@@ -30,6 +30,7 @@ module.exports = {
     extensions: [".js", ".scss"],
     alias: {
       Main: path.resolve(__dirname, "src"),
+      Libs: path.resolve(__dirname, "src/libs/"),
       Fonts: path.resolve(__dirname, "src/assets/fonts/"),
       Images: path.resolve(__dirname, "src/assets/images/"),
       Scripts: path.resolve(__dirname, "src/assets/scripts/"),

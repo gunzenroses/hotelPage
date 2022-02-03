@@ -5,6 +5,7 @@
     "baseUrl": "./",
     "paths": {
       "Main/*": ["src/*"],
+      "Libs/*": ["src/libs/*"],
       "Fonts/*": ["src/assets/fonts/*"],
       "Images/*": ["src/assets/images/*"],
       "Scripts/*": ["src/scripts/*"],
@@ -13,6 +14,6 @@
       "Pages/*": ["src/pages/*"],
     }
   },
-  "include": ["./src"],
+  "include": ["./src", "validation.js"],
   "exclude": ["node_modules"]
 }
