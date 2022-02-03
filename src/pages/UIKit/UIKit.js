@@ -1,4 +1,3 @@
-import 'Libs/inputmask/Inputmask-init';
 import 'Components/button-like/ButtonLike-init';
 import 'Components/calendar/Calendar-init';
 import 'Components/card-booking/card-booking';
@@ -13,5 +12,6 @@ import 'Components/footer/footer';
 import 'Components/pagination/Pagination-init';
 import 'Components/range/range';
 import 'Components/room-carousel/RoomCarousel-init';
+import 'Components/textfield/textfield';
 
 import './UIkit.scss';
