@@ -34,6 +34,7 @@
       "alias": {
         "map": [
           ["Main", "./src/"],
+          ["Libs", "./src/libs/"],
           ["Fonts", "./src/assets/fonts/"],
           ["Images", "./src/assets/images/"],
           ["Scripts", "./src/scripts/"],
