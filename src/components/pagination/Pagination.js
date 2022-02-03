@@ -98,10 +98,12 @@ class Pagination {
     const ifNumIsOne = this.num === 1;
     const starting = ifNumIsOne ? 1 : this.min;
     const ending = ifNumIsOne ? 3 : this.max;
-
-    for (let i = starting; i <= ending; i += 1) {
-      this.pageButtons.appendChild(this.addButton(i));
-    }
+    const buttonNums = Array.from(
+      {length: (ending - starting)}, (_, i) => i + starting
+    );
+    buttonNums.forEach(
+      i =>  this.pageButtons.appendChild(this.addButton(i))
+    );
   }
 
   addButton(i) {

@@ -312,7 +312,11 @@ class Calendar {
 
   renderPrevMonth() {
     let prevDays = '';
-    for (let p = this.prevMonthDays; p > 0; p -= 1) {
+    const prevDaysArr = Array.from(
+      { length: this.prevMonthDays },
+      (_, i) => this.prevMonthDays - i
+    );
+    prevDaysArr.forEach((p) => {
       const prevDay = this.lastDayPrev - p + 1;
       const betweenInOutOneYear = this.betweenInOutPrevYear(prevDay)
         || this.betweenInOutSameYear(prevDay);
@@ -335,7 +339,7 @@ class Calendar {
         prevDays += `<div class= '${
           prevDayClass } js-calendar__day_prev'>${ prevDay }</div>`;
       }
-    }
+    });
     return prevDays;
   }
 
@@ -458,7 +462,11 @@ class Calendar {
 
   renderCurrentMonth() {
     let currDays = '';
-    for (let i = 1; i <= this.lastDay; i += 1) {
+    const lastDaysArr = Array.from(
+      { length: this.lastDay },
+      (_, i) => i + 1
+    );
+    lastDaysArr.forEach((i) => {
       if (this.checkinToday(i)) {
         currDays
           += `<div class="calendar__day calendar__day_checkin">${ i }</div>`;
@@ -478,7 +486,7 @@ class Calendar {
         currDays
           += `<div class="calendar__day">${ i }</div>`;
       }
-    }
+    });
     return currDays;
   }
 
@@ -571,7 +579,11 @@ class Calendar {
 
   renderNextMonth() {
     let nextDays = '';
-    for (let n = 1; n < this.daysLeft + 1; n += 1) {
+    const nextDaysArr = Array.from(
+      { length: this.daysLeft },
+      (_, i) => i + 1
+    );
+    nextDaysArr.forEach((n) => {
       const yearIn = this.checkin
         ? this.checkin.getFullYear() === this.year
         : false;
@@ -601,7 +613,7 @@ class Calendar {
         += `<div class="calendar__day calendar__day_next js-calendar__day_next">${
             n }</div>`;
       }
-    }
+    });
     return nextDays;
   }
 
