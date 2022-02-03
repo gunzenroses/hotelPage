@@ -1,8 +1,9 @@
 import 'ion-rangeslider';
+import boundMethod from 'autobind-decorator';
 
 class Range {
   constructor() {
-    this.init()
+    this.init();
   }
 
   init() {
@@ -21,6 +22,7 @@ class Range {
     });
   }
 
+  @boundMethod
   changeValue(data) {
     const toPretty = data.to_pretty ? data.to_pretty : '10 000';
     const fromPretty = data.from_pretty ? data.from_pretty : '5 000';
