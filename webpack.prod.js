@@ -73,6 +73,7 @@ module.exports = merge(common, {
             loader: "sass-loader", // compiles Sass to CSS
             options: {
               sourceMap: true,
+              includePaths: [path.resolve("../node_modules")]
             },
           },
         ],

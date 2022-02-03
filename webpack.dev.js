@@ -58,7 +58,14 @@ module.exports = merge(common, {
               },
             },
           }, // translates CSS into CommonJS
-          "sass-loader", // compiles Sass to CSS
+          {
+            loader: "sass-loader", // compiles Sass to CSS
+            options: {
+              includePaths: [
+                path.resolve('../node_modules'),
+              ]
+            }
+          }
         ],
       },
     ],

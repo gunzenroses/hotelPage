@@ -16,15 +16,18 @@ mixin social-nets(theme = "")
         theme }`
 
   .social-net
-    a(href = "https://www.twitter.com/" 
+    a(class = twitterClass
+      href = "https://www.twitter.com/" 
+      target = "_blank"
+      rel = "noopener noreferrer")
+      i.fab.fa-twitter
+    a(class = facebookClass
+      href = "https://www.facebook.com/" 
       target = "_blank" 
-      rel = "noopener noreferrer" 
-      class = twitterClass)
-    a(href = "https://www.facebook.com/" 
+      rel = "noopener noreferrer")
+      i.fab.fa-facebook
+    a(class = instagramClass
+      href = "https://www.instagram.com/" 
       target = "_blank" 
-      rel = "noopener noreferrer" 
-      class = facebookClass)
-    a(href = "https://www.instagram.com/" 
-      target = "_blank" 
-      rel = "noopener noreferrer" 
-      class = instagramClass)
+      rel = "noopener noreferrer")
+      i.fab.fa-instagram

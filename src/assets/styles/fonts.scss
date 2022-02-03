@@ -1,3 +1,6 @@
+//font-awesome
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+
 @font-face {
   font-family: 'montserrat';
   font-weight: 400;
@@ -27,20 +30,8 @@
   url('@~Fonts/material/material-icons.ttf') format('truetype');
 }
 
-@font-face {
-  font-family: 'Font Awesome 5 Brands';
-  font-style: normal;
-  font-weight: 400;
-  src: url('@~Fonts/fa-brands/fa-brands-400.eot') format('eot');
-  src: url('@~Fonts/fa-brands/fa-brands-400.woff2') format('woff2'),
-  url('@~Fonts/fa-brands/fa-brands-400.woff') format('woff'),
-  url('@~Fonts/fa-brands/fa-brands-400.ttf') format('truetype'),
-  url('@~Fonts/fa-brands/fa-brands-400.svg') format('svg');
-}
-
 $material-icons: 'material-icons';
 $montserrat: 'montserrat', Arial, sans-serif;
-$font-awesome: 'Font Awesome 5 Brands';
 
 $fs_base: 14px;   //1rem
 $fs_h1: 1.714rem; //24px
