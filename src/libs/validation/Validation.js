@@ -1,4 +1,4 @@
-require("jquery-validation");
+require('jquery-validation');
 
 class Validation {
   constructor(element) {
@@ -8,6 +8,15 @@ class Validation {
   init(element) {
     this.addMethods();
     this.validate(element);
+  }
+
+  addMethods() {
+    $.validator.addMethod('pwcheck', (value) =>
+      /^[A-Za-z0-9\d=!\-@._*]*$/.test(value)
+    );
+    $.validator.addMethod('lowerCase', (value) => /[a-z]{1,}/.test(value));
+    $.validator.addMethod('upperCase', (value) => /[A-Z]{1,}/.test(value));
+    $.validator.addMethod('hasDigit', (value) => /\d{1,}/.test(value));
   }
 
   validate(element) {
@@ -40,28 +49,28 @@ class Validation {
       },
       messages: {
         email: {
-          required: "Введите email",
-          email: "Некорректный email",
-          minlength: "Поле должно быть длинее 7 символов",
+          required: 'Введите email',
+          email: 'Некорректный email',
+          minlength: 'Поле должно быть длинее 7 символов',
         },
         password: {
-          required: "Введите пароль",
-          pwcheck: "Содержит недопустимые значения",
-          lowerCase: "Пароль должен содержать хотя бы 1 строчную букву",
-          upperCase: "Пароль должен содержать хотя бы 1 заглавную букву",
-          hasDigit: "Пароль должен содержать хотя бы 1 цифру",
-          minlength: "Пароль должен быть длинее 8 символов",
+          required: 'Введите пароль',
+          pwcheck: 'Содержит недопустимые значения',
+          lowerCase: 'Пароль должен содержать хотя бы 1 строчную букву',
+          upperCase: 'Пароль должен содержать хотя бы 1 заглавную букву',
+          hasDigit: 'Пароль должен содержать хотя бы 1 цифру',
+          minlength: 'Пароль должен быть длинее 8 символов',
         },
         name: {
-          required: "Введите Имя",
-          minlength: "Имя должно быть длинее 2 символов",
+          required: 'Введите Имя',
+          minlength: 'Имя должно быть длинее 2 символов',
         },
         surname: {
-          required: "Введите Фамилию",
-          minlength: "Фамилия должна быть длинее 2 символов",
+          required: 'Введите Фамилию',
+          minlength: 'Фамилия должна быть длинее 2 символов',
         },
         birthday: {
-          required: "Введите дату рождения",
+          required: 'Введите дату рождения',
         },
       },
       errorPlacement(error, element) {
@@ -71,15 +80,6 @@ class Validation {
         form.submit();
       },
     });
-  }
-
-  addMethods() {
-    $.validator.addMethod("pwcheck", (value) =>
-      /^[A-Za-z0-9\d=!\-@._*]*$/.test(value)
-    ); // consists of only these
-    $.validator.addMethod("lowerCase", (value) => /[a-z]{1,}/.test(value)); // has a lowercase letter
-    $.validator.addMethod("upperCase", (value) => /[A-Z]{1,}/.test(value)); // has an uppercase letter
-    $.validator.addMethod("hasDigit", (value) => /\d{1,}/.test(value)); // has a digit
   }
 } 
 
