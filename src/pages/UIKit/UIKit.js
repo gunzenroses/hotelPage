@@ -1,4 +1,4 @@
-import 'Scripts/inputmasks';
+import 'Libs/inputmask/Inputmask-init';
 import 'Components/button-like/ButtonLike-init';
 import 'Components/calendar/Calendar-init';
 import 'Components/card-booking/card-booking';

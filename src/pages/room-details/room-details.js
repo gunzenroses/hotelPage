@@ -1,5 +1,5 @@
+import 'Libs/inputmask/Inputmask-init';
 import 'Scripts/expand/Expand-init';
-import 'Scripts/inputmasks';
 import 'Components/button-like/ButtonLike-init';
 import 'Components/card-booking/card-booking';
 import 'Components/footer/footer';
