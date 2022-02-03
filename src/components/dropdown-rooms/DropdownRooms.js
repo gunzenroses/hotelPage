@@ -87,10 +87,10 @@ export default class DropdownRooms {
   updateMinusButton(i) {
     if (this.data[i] > 0) {
       this.dropdownMinuses[i].classList.remove(
-        'js-dropdown-item__minus_disabled'
+        'dropdown-item__minus_disabled'
       );
     } else {
-      this.dropdownMinuses[i].classList.add('js-dropdown-item__minus_disabled');
+      this.dropdownMinuses[i].classList.add('dropdown-item__minus_disabled');
     }
   }
 

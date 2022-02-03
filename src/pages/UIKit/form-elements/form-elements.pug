@@ -201,7 +201,7 @@ block content
           .form-elements__rooms.js-dropdown__detection
             +dropdown-rooms({
               labelText: "dropdown",
-              dropdownClassShow: "js-expand__show",
+              dropdownClassShow: "expand__show",
               labelRightText: "expanded",
               itemNumbers: [2, 2, 0],
             })
@@ -212,13 +212,13 @@ block content
         .form-elements__checkbox-expand
           +checkbox-expandable({
             dropdownTitleName: "Expandable checkbox list",
-            dropdownClassShow: "js-checkbox-expandable__show",
+            dropdownClassShow: "checkbox-expandable__show",
           })
       .form-elements__search-info
         .form-elements__guests_open.js-dropdown__detection
           +dropdown-guests({
             labelText: "dropdown",
-            dropdownClassShow: "js-expand__show"
+            dropdownClassShow: "expand__show"
           })
         .form-elements__rich-checkbox
           +rich-checkbox({
@@ -229,7 +229,7 @@ block content
         .form-elements__guests_open.js-dropdown__detection
           +dropdown-guests({
             labelText: "dropdown",
-            dropdownClassShow: "js-expand__show",
+            dropdownClassShow: "expand__show",
             itemNumbers: [2, 1, 0],
           })
         .form-elements__bullet-checkbox

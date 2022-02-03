@@ -97,8 +97,8 @@
       color: $dark-shade_more;
     }
   }
-}
 
-.js-dropdown__show {
-  display: inline-block;
+  &__show {
+    display: inline-block;
+  }
 }

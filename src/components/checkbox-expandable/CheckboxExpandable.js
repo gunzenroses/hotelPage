@@ -27,7 +27,7 @@ class CheckboxExpandable {
 
   @boundMethod
   dropdownClick() {
-    this.dropdownExpand.classList.toggle('js-checkbox-expandable__show');
+    this.dropdownExpand.classList.toggle('checkbox-expandable__show');
   }
 }
 

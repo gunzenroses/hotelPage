@@ -218,7 +218,7 @@ class Calendar {
       this.rangeSpanText = '';
     }
     this.rangeSpan.value = this.rangeSpanText;
-    this.calendar.classList.remove('js-expand__show');
+    this.calendar.classList.remove('expand__show');
   }
 
   // -------------------end applyStartOrEnd--------------------//
@@ -227,7 +227,7 @@ class Calendar {
     e.preventDefault();
     this.rangeStart.value = this.checkin ? this.applyStart() : '';
     this.rangeEnd.value = this.checkout ? this.applyEnd() : '';
-    this.calendar.classList.remove('js-expand__show');
+    this.calendar.classList.remove('expand__show');
   }
 
   applyStart() {
@@ -266,7 +266,7 @@ class Calendar {
       this.rangeEnd.value = '';
     }
     this.render();
-    this.calendar.classList.remove('js-expand__show');
+    this.calendar.classList.remove('expand__show');
   }
 
   @boundMethod

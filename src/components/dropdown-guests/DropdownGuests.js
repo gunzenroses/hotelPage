@@ -54,10 +54,10 @@ export default class DropdownGuests {
   @boundMethod
   plusAndMinusToItem(e) {
     const trg = e.target;
-    if (trg.classList.contains('js-dropdown-item__minus')) {
+    if (trg.classList.contains('dropdown-item__minus')) {
       this.minusToItem(trg);
     }
-    if (trg.classList.contains('js-dropdown-item__plus')) {
+    if (trg.classList.contains('dropdown-item__plus')) {
       this.plusToItem(trg);
     }
   }
@@ -89,7 +89,7 @@ export default class DropdownGuests {
   @boundMethod
   submitGuests(e) {
     e.preventDefault();
-    this.dropdownExpanded.classList.remove('js-expand__show');
+    this.dropdownExpanded.classList.remove('expand__show');
   }
 
   showItemNumber(i) {
@@ -109,11 +109,11 @@ export default class DropdownGuests {
   activateMinus(i) {
     if (this.data[i] > 0) {
       this.dropdownMinuses[i].classList.remove(
-        'js-dropdown-item__minus_disabled'
+        'dropdown-item__minus_disabled'
       );
     } else {
       this.dropdownMinuses[i].classList.add(
-        'js-dropdown-item__minus_disabled'
+        'dropdown-item__minus_disabled'
       );
     }
   }
@@ -131,12 +131,12 @@ export default class DropdownGuests {
   }
 
   onZeroGuests() {
-    this.resetButton.classList.remove('js-dropdown__show');
+    this.resetButton.classList.remove('dropdown__show');
     this.infoInput.value = '';
   }
 
   onSomeGuests() {
-    this.resetButton.classList.add('js-dropdown__show');
+    this.resetButton.classList.add('dropdown__show');
     this.render();
   }
 

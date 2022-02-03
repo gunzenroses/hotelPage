@@ -42,6 +42,7 @@
   }
 
   &__content {
+    display: none;
     height: 171px;
     width: 266px;
     margin: 3px 0 0;
@@ -148,20 +149,16 @@
       @include containerBlock(5px, 10px);
     }
   }
-}
 
-.js-checkbox-expandable__content {
-  display: none;
-}
+  &__show {
+    @include isFlex($direction: column, $justify: flex-start);
 
-.js-checkbox-expandable__show {
-  @include isFlex($direction: column, $justify: flex-start);
-
-  @include _1650-1920 {
-    width: 100%;
+    @include _1650-1920 {
+      width: 100%;
+    }
   }
-}
 
-.js-checkbox-expandable__show ~ .checkbox-expandable__button::before {
-  content: '\e5ce';
+  &__show ~ &__button::before {
+    content: '\e5ce';
+  }
 }

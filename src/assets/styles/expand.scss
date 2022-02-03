@@ -2,7 +2,7 @@
 @import '@~Assets/styles/media-mixins.scss';
 @import '@~Assets/styles/mixins.scss';
 
-.js-expand__content {
+.expand__content {
   display: none;
 
   @include _450 {
@@ -11,7 +11,7 @@
   }
 }
 
-.js-expand__show {
+.expand__show {
   @include isFlex($direction: column, $justify: flex-start);
 
   @include _1650-1920 {
@@ -19,18 +19,18 @@
   }
 }
 
-.js-expand__show ~ .dropdown__button_transparent::before {
+.expand__show ~ .dropdown__button_transparent::before {
   content: '\e5ce';
 }
 
-.js-expand__show ~ .dropdown__info {
+.expand__show ~ .dropdown__info {
   border: 1px solid $dark-shade_medium;
 }
 
-.js-expand__show ~ .dropdown__info::before {
+.expand__show ~ .dropdown__info::before {
   content: '\e5ce';
 }
 
-.js-expand__show ~ .date-range__selector .date-range__info::before {
+.expand__show ~ .date-range__selector .date-range__info::before {
   transform: rotate(180deg);
 }

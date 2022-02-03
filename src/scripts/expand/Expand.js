@@ -48,16 +48,16 @@ class Expand {
   expandElement(el) {
     const innerParent = el.closest('.js-expand__init').parentElement;
     const innerExpand = innerParent.querySelector('.js-expand__content');
-    innerExpand.classList.toggle('js-expand__show');
+    innerExpand.classList.toggle('expand__show');
     return this;
   }
 
   expandInner(el) {
     this.dropdownWatchedExpands.forEach((item, index) => {
       if (el.closest('.js-expand__init') !== this.dropdownWatchedInits[index]) {
-        item.classList.remove('js-expand__show');
+        item.classList.remove('expand__show');
       } else {
-        item.classList.toggle('js-expand__show');
+        item.classList.toggle('expand__show');
       }
     });
   }
