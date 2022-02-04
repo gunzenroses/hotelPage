@@ -95,7 +95,10 @@ mixin donut-chart({ excellNum = 0, goodNum  = 0, satisNum  = 0, dissapNum  = 0 }
     figcaption.donut-chart__caption
       ul.donut-chart__key-list(aria-hidden = "true" role = "presentation")
         each val, key in donutMarks
-          li(class = `donut-chart__key-item js-donut-chart__key-item_${ key }`)
+          li(
+            class = `donut-chart__key-item js-donut-chart__key-item_${ key }`
+            data-circle-modificator = key
+            )
             span(class = `donut-chart__marker donut-chart__marker_${ key }`)
             != val
 

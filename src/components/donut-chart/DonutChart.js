@@ -40,18 +40,30 @@ class DonutChart {
 
   enable() {
     this.marks.forEach((mark) => {
-      this[`${ mark }Circle`].addEventListener('pointerenter', this.renewChart);
-      this[`${ mark }Item`].addEventListener('pointerenter', () => {
-        this[`${ mark }Circle`].dispatchEvent(
-          new Event('pointerenter', { bubbles: true, cancelable: false })
-        );
-      });
-      this[`${ mark }Item`].addEventListener('pointerleave', () => {
-        this[`${ mark }Circle`].dispatchEvent(
-          new Event('pointerleave', { bubbles: true, cancelable: false })
-        );
-      });
+      this[`${ mark }Circle`].addEventListener(
+        'pointerenter',
+        this.renewChart
+      );
+
+      this[`${ mark }Item`].addEventListener(
+        'pointerenter',
+        this.makeEventOnCircle
+      );
+
+      this[`${ mark }Item`].addEventListener(
+        'pointerleave',
+        this.makeEventOnCircle
+      );
     });
+  }
+
+  @boundMethod
+  makeEventOnCircle(e) {
+    const mark = e.target.dataset.circleModificator;
+    const evt = e.type;
+    this[`${ mark }Circle`].dispatchEvent(
+      new Event(evt, { bubbles: true, cancelable: false })
+    );
   }
 
   @boundMethod
