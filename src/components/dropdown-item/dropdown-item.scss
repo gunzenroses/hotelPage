@@ -89,6 +89,11 @@
       top: -1px;
       line-height: 29px;
     }
+
+    &_disabled {
+      color: $dark-shade_less;
+      border: 1px solid $dark-shade_less;
+    }
   }
 
   &__number {

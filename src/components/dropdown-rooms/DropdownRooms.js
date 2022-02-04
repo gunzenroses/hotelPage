@@ -64,7 +64,7 @@ export default class DropdownRooms {
   render(i) {
     this.adjustData(i);
     this.updateItemNumber(i);
-    this.updateMinusButton(i);
+    this.updateMinusPlusButton(i);
     this.updateInfoInput();
   }
 
@@ -84,13 +84,14 @@ export default class DropdownRooms {
     dropdownItem.innerText = this.data[i];
   }
 
-  updateMinusButton(i) {
-    if (this.data[i] > 0) {
-      this.dropdownMinuses[i].classList.remove(
-        'dropdown-item__minus_disabled'
-      );
-    } else {
+  updateMinusPlusButton(i) {
+    if (this.data[i] <= 0) {
       this.dropdownMinuses[i].classList.add('dropdown-item__minus_disabled');
+    } else if (this.data[i] > 0 && this.data[i] < 10) {
+      this.dropdownPluses[i].classList.remove('dropdown-item__plus_disabled');
+      this.dropdownMinuses[i].classList.remove('dropdown-item__minus_disabled');
+    } else {
+      this.dropdownPluses[i].classList.add('dropdown-item__plus_disabled');
     }
   }
 

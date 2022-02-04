@@ -10,7 +10,7 @@ mixin dropdown-item({ itemDataType, itemText, itemDataOrder, itemNumber = 0, ite
       class = dropdownItemClass 
       data-type = itemDataType)
       div(class = dropdownTextClass)= itemText
-      div(class = `${ dropdownMinusClass } js-dropdown-item__minus_disabled`) - 
+      div(class = `${ dropdownMinusClass }`) - 
       div(class = dropdownNumberClass data-order = itemDataOrder)
         != itemNumber
       div(class = dropdownPlusClass) +
@@ -22,7 +22,7 @@ mixin dropdown-item({ itemDataType, itemText, itemDataOrder, itemNumber = 0, ite
       div(
         class = `${ 
           dropdownMinusClass 
-          } dropdown-item__minus_last js-dropdown-item__minus_disabled`) - 
+          } dropdown-item__minus_last`) - 
       div(
         class = `${ dropdownNumberClass } dropdown-item__number_last` 
         data-order = itemDataOrder)= itemNumber 
