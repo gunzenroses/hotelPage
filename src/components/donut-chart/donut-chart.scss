@@ -4,7 +4,7 @@
 @import '@~Assets/styles/fonts.scss';
 
 .donut-chart {
-  @include isFlex($direction: row-reverse);
+  @include isFlex();
   width: 315px;
   height: 126px;
   margin: 22px 0 0;
@@ -53,17 +53,46 @@
   &__segment {
     fill: transparent;
     stroke-width: 1;
+    cursor: pointer;
+
+    &_hovered {
+      stroke-width: 3;
+    }
   }
 
   &__text {
     @include isFlex($direction: column, $justify: center, $align: center);
     position: relative;
-    top: 17%;
-    left: 17%;
-    width: 65%;
-    height: 65%;
-    color: $purple;
+    top: 3px;
+    left: 3px;
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+    border-radius: 50%;
+    overflow: hidden;
+    color: transparent;
+    background: $purple;
+    background-clip: text;
     font-weight: 700;
+
+    &_excellent {
+      background: $linearGradientCitrus;
+      background-clip: text;
+    }
+
+    &_good {
+      background: $linearGradientTurquoise;
+      background-clip: text;
+    }
+
+    &_satisfied {
+      background: $linearGradientLilac;
+      background-clip: text;
+    }
+
+    &_disappointed {
+      background: $linearGradientPurple;
+      background-clip: text;
+    }
   }
 
   &__number {
@@ -72,7 +101,6 @@
     font-size: $fs_h1;
     font-weight: 600;
     letter-spacing: .005em;
-    color: $purple;
   }
 
   &__label {
@@ -80,7 +108,6 @@
     line-height: 14.63px;
     font-size: 14px;
     font-weight: 700;
-    color: $purple;
     user-select: none;
   }
 
@@ -112,6 +139,7 @@
 
   &__key-item {
     list-style: none;
+    cursor: pointer;
   }
 
   &__marker {

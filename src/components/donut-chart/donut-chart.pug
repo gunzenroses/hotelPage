@@ -1,31 +1,42 @@
-mixin donut-chart({ excellent = 0, good = 0, satisfied = 0, dissapointed = 0 })
+mixin donut-chart({ excellNum = 0, goodNum  = 0, satisNum  = 0, dissapNum  = 0 })
   - 
     var { 
       donutMarks, 
       donutColors } = require("Components/donut-chart/donut-chart.json");
   - 
     var totalData = 
-      parseFloat(excellent) +
-      parseFloat(good) +
-      parseFloat(satisfied) + 
-      parseFloat(dissapointed)
-  - var dissapointed = dissapointed / totalData * 100;
-  - var satisfied = satisfied / totalData * 100;
-  - var good = good / totalData * 100;
-  - var excellent = excellent / totalData * 100;
-  - var donutData = { dissapointed, satisfied, good, excellent } 
+      parseFloat(excellNum) +
+      parseFloat(goodNum) +
+      parseFloat(satisNum) + 
+      parseFloat(dissapNum)
+  - var dissapPerc = dissapNum / totalData * 100;
+  - var satisPerc = satisNum / totalData * 100;
+  - var goodPerc = goodNum / totalData * 100;
+  - var excellPerc = excellNum / totalData * 100;
+  - 
+    var donutData = { 
+      disappointed: {
+        number: dissapNum,
+        percent: dissapPerc
+      }, 
+      satisfied: {
+        number: satisNum,
+        percent: satisPerc
+      }, 
+      good: {
+        number: goodNum,
+        percent: goodPerc
+      }, 
+      excellent: {
+        number: excellNum,
+        percent: excellPerc
+      }
+    } 
   
   - var counter = 1;
   - var dashOffsetValue = parseFloat(25 - 0.5);
-  - var prevArraySumm = 0;
 
-  figure.donut-chart
-    figcaption.donut-chart__caption
-      ul.donut-chart__key-list(aria-hidden = "true" role = "presentation")
-        each val, key in donutMarks
-          li.donut-chart__key-item
-            span(class = `donut-chart__marker donut-chart__marker_${ key }`)
-            != val
+  figure.donut-chart.js-donut-chart
     .donut-chart__content
       svg.donut-chart__img(
         width = "100%" 
@@ -52,22 +63,40 @@ mixin donut-chart({ excellent = 0, good = 0, satisfied = 0, dissapointed = 0 })
           r = "15.91549430918954"
           role = "presentation" 
           )
-        each percent, mark in donutData
-          if (percent>2)
-            - var dashValue = parseInt(percent - 1);
-            - var dashLeft = 100 - dashValue;
-            circle.donut-chart__segment(
-              cx = "50%" cy = "50%" 
-              r = "15.91549430918954"
-              stroke = `url(#gradient_${ mark })`
-              stroke-dasharray = `${ dashValue } ${ dashLeft }` 
-              stroke-dashoffset = dashOffsetValue
-              aria-labelledby = `donut-chart-segment-${ counter }-title`)
-            title(
-              id = `donut-chart-segment-${ counter++ }-title` 
-              data-some = prevArraySumm)!= mark
-            - dashOffsetValue -= percent;
+        each data, mark in donutData
+          - var { number, percent } = data
+          - 
+            var dashValue = percent > 2
+            ? parseInt(percent - 1)
+            : 0;
+          - 
+            var dashLeft = 100 - dashValue;
+          circle(
+            class = `donut-chart__segment js-donut-chart__segment_${ mark }`
+            data-circle-number = number
+            data-circle-modificator = mark
+            cx = "50%" cy = "50%" 
+            r = "15.91549430918954"
+            stroke = `url(#gradient_${ mark })`
+            stroke-dasharray = `${ dashValue } ${ dashLeft }` 
+            stroke-dashoffset = dashOffsetValue
+            aria-labelledby = `donut-chart__segment_${ mark }`)
+          title(
+            class = `donut-chart__title_${ mark }`
+            id = `donut-chart__segment_${ mark }`)!= percent
+          - dashOffsetValue -= percent;
+      .donut-chart__text.js-donut-chart__text
+        p(
+          class = "donut-chart__number js-donut-chart__number"
+          data-total-number = totalData
+          )= totalData
+        p.donut-chart__label.js-donut-chart__label голосов
 
-      .donut-chart__text
-        p.donut-chart__number!= totalData
-        p.donut-chart__label голосов
+    figcaption.donut-chart__caption
+      ul.donut-chart__key-list(aria-hidden = "true" role = "presentation")
+        each val, key in donutMarks
+          li(class = `donut-chart__key-item js-donut-chart__key-item_${ key }`)
+            span(class = `donut-chart__marker donut-chart__marker_${ key }`)
+            != val
+
+
