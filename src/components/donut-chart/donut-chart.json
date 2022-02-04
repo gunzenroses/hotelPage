@@ -1,0 +1,34 @@
+{
+  "donutMarks": {
+    "excellent": "Великолепно", 
+    "good": "Хорошо", 
+    "satisfied": "Удовлетворительно", 
+    "disappointed": "Разочарован"
+  },
+  "donutColors": [
+    {
+      "excellent": {
+        "start": "#FFE39C",
+        "end": "#FFBA9C"
+      }
+    },
+    {
+      "good": {
+        "start": "#6FCF97",
+        "end": "#66D2EA"
+      }
+    },
+    {
+      "satisfied": {
+        "start": "#8BA4F9",
+        "end": "#BC9CFF"
+      }
+    },
+    {
+      "disappointed": {
+        "start": "#909090",
+        "end": "#3D4975"
+      }
+    }
+  ]
+}
