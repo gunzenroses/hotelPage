@@ -166,6 +166,10 @@
     background-color: transparent;
     cursor: pointer;
     outline: none;
+
+    &:hover {
+      color: $dark-shade_medium;
+    }
     
     @include _1750-1920 {
       font-size: $fs_base;

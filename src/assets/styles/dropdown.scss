@@ -61,6 +61,10 @@
     outline: none;
     cursor: pointer;
 
+    &:hover {
+      color: $dark-shade_medium;
+    }
+
     @include _1750-1920 {
       font-size: $fs_base;
     }
