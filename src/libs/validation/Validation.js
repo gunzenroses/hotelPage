@@ -17,6 +17,7 @@ class Validation {
     $.validator.addMethod('lowerCase', (value) => /[a-z]{1,}/.test(value));
     $.validator.addMethod('upperCase', (value) => /[A-Z]{1,}/.test(value));
     $.validator.addMethod('hasDigit', (value) => /\d{1,}/.test(value));
+    $.validator.addMethod('domain', (value) => /\.[a-zA-Z]{2,3}$/.test(value));
   }
 
   validate(element) {
@@ -25,6 +26,7 @@ class Validation {
         email: {
           required: true,
           email: true,
+          domain: true,
           minlength: 7,
         },
         password: {
@@ -51,6 +53,7 @@ class Validation {
         email: {
           required: 'Введите email',
           email: 'Некорректный email',
+          domain: 'Должно находиться на действущем домене (например: .ru, .com)',
           minlength: 'Поле должно быть длинее 7 символов',
         },
         password: {
