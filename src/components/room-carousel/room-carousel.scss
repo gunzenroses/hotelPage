@@ -92,10 +92,12 @@
     border-radius: 50%;
     border: 1px solid $light;
     background: transparent;
+    filter: drop-shadow(0px 5px 5px #1f20414d);
   }
 
   &__radio-real:checked ~ &__radio-fake {
     background: $light;
+    box-shadow: 0px 5px 5px #1f20414d;
   }
 
   &__buttons {
