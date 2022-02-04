@@ -150,8 +150,8 @@ export default class DropdownGuests {
     const onlyInfants = this.adultGuests < 1 && this.infantGuests > 0;
     const adultsWithInfants = this.adultGuests > 0 && this.infantGuests > 0;
 
-    const adultsInfo = `${this.adultGuests} ${adultWord}`;
-    const infantsInfo = `${this.infantGuests} ${infantWord}`;
+    const adultsInfo = `${ this.adultGuests } ${ adultWord }`;
+    const infantsInfo = `${ this.infantGuests } ${ infantWord }`;
 
     switch (true) {
       case onlyAdults:
@@ -161,7 +161,7 @@ export default class DropdownGuests {
         this.infoInput.value = infantsInfo;
         break;
       case adultsWithInfants:
-        this.infoInput.value = `${adultsInfo}, ${infantsInfo}`;
+        this.infoInput.value = `${ adultsInfo }, ${ infantsInfo }`;
         break;
       default:
         this.infoInput.value = '';

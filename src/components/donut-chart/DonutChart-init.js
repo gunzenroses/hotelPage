@@ -1,5 +1,5 @@
-import initClass from "Main/scripts/initClass";
+import initClass from 'Scripts/initClass';
 
-import DonutChart from "./DonutChart";
+import DonutChart from './DonutChart';
 
 initClass('.js-donut-chart', DonutChart);

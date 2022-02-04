@@ -27,7 +27,6 @@ class DonutChart {
       this[`${ mark }Item`] = this.chart.querySelector(
         `.js-donut-chart__key-item_${ mark }`
       );
-      console.log(this[`${ mark }Item`]);
     });
   }
 
@@ -41,21 +40,17 @@ class DonutChart {
 
   enable() {
     this.marks.forEach((mark) => {
-      if (this[`${ mark }Circle`]) {
-        this[`${ mark }Circle`].addEventListener('pointerenter', this.renewChart);
-        this[`${ mark }Item`].addEventListener('pointerenter', () => {
-          this[`${ mark }Circle`].dispatchEvent(
-            new Event('pointerenter', { bubbles: true, cancelable: false })
-          );
-        });
-        this[`${ mark }Item`].addEventListener('pointerleave', () => {
-          this[`${ mark }Circle`].dispatchEvent(
-            new Event('pointerleave', { bubbles: true, cancelable: false })
-          );
-        });
-      } else {
-        return;
-      }
+      this[`${ mark }Circle`].addEventListener('pointerenter', this.renewChart);
+      this[`${ mark }Item`].addEventListener('pointerenter', () => {
+        this[`${ mark }Circle`].dispatchEvent(
+          new Event('pointerenter', { bubbles: true, cancelable: false })
+        );
+      });
+      this[`${ mark }Item`].addEventListener('pointerleave', () => {
+        this[`${ mark }Circle`].dispatchEvent(
+          new Event('pointerleave', { bubbles: true, cancelable: false })
+        );
+      });
     });
   }
 

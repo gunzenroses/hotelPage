@@ -1,5 +1,3 @@
-import Validation from "Main/libs/validation/Validation";
+import Validation from 'Libs/validation/Validation';
 
-document.addEventListener('DOMContentLoaded', () => {
-  new Validation('.js-footer__form');
-});
+new Validation('.js-footer__form');

@@ -1,5 +1,5 @@
-import initClass from "Main/scripts/initClass";
+import initClass from 'Scripts/initClass';
 
-import Textfield from "./Textfield";
+import Textfield from './Textfield';
 
 initClass('input', Textfield);

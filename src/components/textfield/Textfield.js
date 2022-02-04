@@ -9,7 +9,7 @@ class Textfield {
 
   init(item) {
     this.startValidation(item);
-    if (item.getAttribute('name') === "email") {
+    if (item.getAttribute('name') === 'email') {
       item.addEventListener('click', this.correctEmail);
     }
   }
@@ -21,13 +21,13 @@ class Textfield {
   @boundMethod
   correctEmail(e) {
     if (!e.target) return;
-    const item = e.target;
-    const itemText = item.value;
-    if (itemText.search(/@[a-z|A-Z]/i) > 1) { 
-      return
-    } else if (itemText.length > 4) {
+    this.item = e.target;
+    const itemText = this.item.value;
+    const afterDog = itemText.search(/@[a-z|A-Z]/i) > 1;
+    const longEnough = itemText.length > 4;
+    if (!afterDog && longEnough) {
       const newValue = itemText.replace(/[^a-zA-Z0-9\s]/gi, '');
-      item.value = `${ newValue }@`;
+      this.item.value = `${ newValue }@`;
     }
   }
 }

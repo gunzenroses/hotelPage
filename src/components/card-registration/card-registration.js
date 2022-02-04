@@ -1,5 +1,3 @@
-import Validation from "Main/libs/validation/Validation";
+import Validation from 'Libs/validation/Validation';
 
-document.addEventListener("DOMContentLoaded", () => {
-  new Validation(".js-card-registration");
-})
+new Validation('.js-card-registration');

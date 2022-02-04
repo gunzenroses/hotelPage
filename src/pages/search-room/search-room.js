@@ -7,5 +7,6 @@ import 'Components/footer/footer';
 import 'Components/pagination/Pagination-init';
 import 'Components/range/range';
 import 'Components/room-carousel/RoomCarousel-init';
+import 'Components/textfield/Textfield-init';
 
 import './search-room.scss';
