@@ -98,6 +98,7 @@
   &__radio-real:checked ~ &__radio-fake {
     background: $light;
     box-shadow: 0px 5px 5px #1f20414d;
+    filter: none;
   }
 
   &__buttons {
