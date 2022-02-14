@@ -144,11 +144,11 @@
     margin-top: 37.5px;
   }
 
-  &__date-range_separate {
+  &__date-range-separate {
     @include containerSimple(100%, 62px);
   }
 
-  &__date-range_common {
+  &__date-range-common {
     @include containerMedium();
     width: 266px;
     height: 62px;
