@@ -191,7 +191,7 @@
       color: $dark-shade_less;
     }
 
-    &_checkout {
+    &_check-out {
       @include calendarCheckDay();
 
       &::after {
@@ -199,7 +199,7 @@
       }
     }
 
-    &_checkin {
+    &_check-in {
       @include calendarCheckDay();
 
       &::after {
@@ -217,19 +217,19 @@
       background: $dark-shade_fewer;
     }
 
-    &_prev_checkin,
-    &_next_checkin,
-    &_prev_checkout,
-    &_next_checkout {
+    &_prev_check-in,
+    &_next_check-in,
+    &_prev_check-out,
+    &_next_check-out {
       border-radius: 50%;
       color: $dark-shade_less;
       background: $dark-shade_few;
     }
 
-    &_prev_checkin::before,
-    &_next_checkin::before,
-    &_prev_checkout::before,
-    &_next_checkout::before {
+    &_prev_check-in::before,
+    &_next_check-in::before,
+    &_prev_check-out::before,
+    &_next_check-out::before {
       content: '';
       position: absolute;
       top: 0;
@@ -239,15 +239,15 @@
       background: $dark-shade_fewer;
     }
 
-    &_prev_checkin::before,
-    &_next_checkin::before {
+    &_prev_check-in::before,
+    &_next_check-in::before {
       right: 0;
       z-index: -1;
       border-radius: 50% 0 0 50%;
     }
 
-    &_prev_checkout::before,
-    &_next_checkout::before {
+    &_prev_check-out::before,
+    &_next_check-out::before {
       left: 0;
       border-radius: 0 50% 50% 0;
     }
