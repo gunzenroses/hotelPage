@@ -1,22 +1,22 @@
 extend ../../assets/templates/template.pug
 
-include ../../components/card-singin/card-signin.pug
+include ../../components/card-sing-in/card-sign-in.pug
 include ../../components/carousel/carousel.pug
 include ../../components/footer/footer.pug
 include ../../components/header/header.pug
 
 block variables
-  - var theme = "signin";
-  - var title = "signin";
+  - var theme = "sign-in";
+  - var title = "sign-in";
   - var description = "sign in";
   - var keywords = "sign in";
-  - var { signPics } =  require("./signin.json");
+  - var { signPics } =  require("./sign-in.json");
 
 block content
   .sign-in.js-dropdown__detection
     +header({ user: "", theme: theme })
     main.sign-in__content
       +carousel(signPics)
-      .sign-in__card-signin
-        +card-signin(theme)
+      .sign-in__card-sign-in
+        +card-sign-in(theme)
     +footer(theme)

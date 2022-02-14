@@ -2,18 +2,18 @@ include ../button-link/button-link.pug
 include ../button-submit/button-submit.pug
 include ../login/login.pug
 
-mixin card-signin(theme = "main")
-  form.card-signin.js-card-signin(method = "get" action = "./signin.html")
+mixin card-sign-in(theme = "main")
+  form.card-sign-in.js-card-sign-in(method = "get" action = "./sign-in.html")
     h1.card__title Войти
     +login(theme)
-    .card-signin__button
+    .card-sign-in__button
       +button-submit({ buttonText: "Войти" })
-    .card-signin__info
+    .card-sign-in__info
       .card__row
         .card__text Нет аккаунта на Toxin?
-        .card-signin__button-link
+        .card-sign-in__button-link
           +button-link({
             buttonText: "Создать",
             buttonOnclick: "registration.html",
-            className: "signin"
+            className: "sign-in"
           })

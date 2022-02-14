@@ -3,7 +3,7 @@ include ../../../components/card-booking/card-booking.pug
 include ../../../components/card-registration/card-registration.pug
 include ../../../components/card-room/card-room.pug
 include ../../../components/card-search/card-search.pug
-include ../../../components/card-singin/card-signin.pug
+include ../../../components/card-sing-in/card-sign-in.pug
 
 block variables
   - var theme = "uikit"
@@ -27,8 +27,8 @@ block content
         +card-registration("Перейти к оплате")
       .cards__card-booking
         +card-booking({ cardBookingInfo: cardBookingInfo })
-      .cards__card-signin
-        +card-signin()
+      .cards__card-sign-in
+        +card-sign-in()
       .cards__calendar
         +calendar()
       .cards__card-room

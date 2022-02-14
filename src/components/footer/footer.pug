@@ -26,7 +26,7 @@ mixin footer(theme = "main")
         div(class = `footer__logo footer__logo_in_${ theme }`)
           +logo()
           .footer__text!= footerText
-      else if theme === "signin"
+      else if theme === "sign-in"
         div(class = `footer__logo footer__logo_in_${ theme }`)
           +logo()
           .footer__text!= footerText
@@ -62,7 +62,7 @@ mixin footer(theme = "main")
           method = "get" 
           action = "./registration.html")
           +textfield({ 
-            inputClass: "subscibe",
+            inputClass: "subscribe",
             placeholder: "Email",
             nameText: "email",
           })

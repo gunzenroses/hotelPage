@@ -133,7 +133,7 @@
       }
     }
   
-    &_in_signin {
+    &_in_sign-in {
       @include _1400-1500 {
         height: 168px;
       }
@@ -153,7 +153,7 @@
       @include footerLogo();
     }
 
-    &_in_signin {
+    &_in_sign-in {
       height: 131px;
       @include footerLogo();
     }
@@ -379,7 +379,7 @@
       }
     }
 
-    &_in_signin {
+    &_in_sign-in {
       @include _1400-1500 {
         padding-top: 23px;
         padding-left: 140px;

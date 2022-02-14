@@ -5,7 +5,7 @@
 @import '@~Components/card-registration/card-registration.scss';
 @import '@~Components/card-room/card-room.scss';
 @import '@~Components/card-search/card-search.scss';
-@import '@~Components/card-singin/card-signin.scss';
+@import '@~Components/card-sing-in/card-sign-in.scss';
 
 @mixin marginTop {
   @include _1400 {
@@ -91,7 +91,7 @@
     margin-top: 1px;
   }
 
-  &__card-signin {
+  &__card-sign-in {
     @include cardPosition();
     @include marginTop();
     width: 380px;

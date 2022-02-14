@@ -24,7 +24,7 @@ module.exports = {
     "search-room": "./src/pages/search-room/search-room.js",
     "room-details": "./src/pages/room-details/room-details.js",
     registration: "./src/pages/registration/registration.js",
-    signin: "./src/pages/signin/signin.js",
+    "sign-in": "./src/pages/sign-in/sign-in.js",
   },
   resolve: {
     extensions: [".js", ".scss"],

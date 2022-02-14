@@ -41,11 +41,11 @@ mixin header({ user = "", theme = "" })
         a.header__user(href = userClick)= user
       else
         .header__forms
-          .header__signin
+          .header__sign-in
             +button-link({
               buttonText: "Войти",
-              buttonOnclick: "signin.html",
-              className: "signin"
+              buttonOnclick: "sign-in.html",
+              className: "sign-in"
             })
           .header__registration
             +button-link({ 

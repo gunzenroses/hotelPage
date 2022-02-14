@@ -2,7 +2,7 @@
 @import '@~Assets/styles/general.scss';
 @import '@~Assets/styles/media-mixins.scss';
 @import '@~Components/carousel/carousel.scss';
-@import '@~Components/card-singin/card-signin.scss';
+@import '@~Components/card-sing-in/card-sign-in.scss';
 @import '@~Components/header/header.scss';
 
 @import '../registration/registration.scss';
@@ -16,18 +16,18 @@
     height: 702px;
 
     @include _500 {
-      // carouselSignin + card-signin + initial top
+      // carouselsign-in + card-sign-in + initial top
       height: calc(683 / 1440 * 100vw + 360px + 40px);
     }
 
     @include _380 {
-      // carouselSignin + card-signin + initial top
+      // carouselsign-in + card-sign-in + initial top
       height: calc(683 / 1440 * 100vw + 360px);
       min-height: calc(683 / 1440 * 320px + 360px);
     }
   }
 
-  &__card-signin {
+  &__card-sign-in {
     @extend .registration__card-registration;
     width: 380px;
     top: 172px;

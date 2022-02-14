@@ -1,6 +1,6 @@
 import 'Scripts/expand/Expand-init';
-import 'Components/card-singin/card-signin';
+import 'Components/card-sing-in/card-sign-in';
 import 'Components/footer/footer';
 import 'Components/textfield/Textfield-init';
 
-import './signin.scss';
+import './sign-in.scss';
