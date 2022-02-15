@@ -16,9 +16,7 @@ class DonutChart {
 
   createChildren() {
     this.donutNumber = this.chart.querySelector('.js-donut-chart__number');
-    this.donutNumber.style.transition = 'all 0.3s';
     this.donutLabel = this.chart.querySelector('.js-donut-chart__label');
-    this.donutLabel.style.transition = 'all 0.3s';
     this.donutText = this.chart.querySelector('.js-donut-chart__text');
   }
 
