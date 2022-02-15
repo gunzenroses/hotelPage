@@ -8,13 +8,13 @@ class DonutChart {
 
   init() {
     this.marks = ['excellent', 'good', 'satisfied', 'disappointed'];
-    this.createChildrens();
+    this.createChildren();
     this.createItems();
     this.createCircles();
     this.enable();
   }
 
-  createChildrens() {
+  createChildren() {
     this.donutNumber = this.chart.querySelector('.js-donut-chart__number');
     this.donutNumber.style.transition = 'all 0.3s';
     this.donutLabel = this.chart.querySelector('.js-donut-chart__label');
@@ -59,7 +59,7 @@ class DonutChart {
 
   @boundMethod
   makeEventOnCircle(e) {
-    const mark = e.target.dataset.circleModificator;
+    const mark = e.target.dataset.circleModifier;
     const evt = e.type;
     this[`${ mark }Circle`].dispatchEvent(
       new Event(evt, { bubbles: true, cancelable: false })
@@ -80,10 +80,10 @@ class DonutChart {
 
   renewInfo(e) {
     const num = e.target.dataset.circleNumber;
-    const modif = e.target.dataset.circleModificator;
+    const mod = e.target.dataset.circleModifier;
     this.changeNumber(num);
     this.changeLabel(num);
-    this.changeText(modif);
+    this.changeText(mod);
   }
 
   @boundMethod
@@ -123,9 +123,9 @@ class DonutChart {
     this.donutLabel = newLabel;
   }
 
-  changeText(modif) {
-    if (modif) {
-      this.donutText.classList.add(`donut-chart__text_${ modif }`);
+  changeText(mod) {
+    if (mod) {
+      this.donutText.classList.add(`donut-chart__text_${ mod }`);
     } else {
       this.marks.forEach((mark) => {
         this.donutText.classList.remove(`donut-chart__text_${ mark }`);
