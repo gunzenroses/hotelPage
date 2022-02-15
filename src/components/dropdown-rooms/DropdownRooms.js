@@ -113,28 +113,20 @@ export default class DropdownRooms {
   updateInfoInput() {
     this.infoInput.value = '';
     this.roomInfo = '';
-    this.data.forEach((_, i) => {
-      this.roomInfo += this.adjustDataType(i);
+    this.data.forEach((num, i) => {
+      if (num > 0) {
+        this.roomInfo += this.adjustDataType(i);
+      };
     });
-    this.infoInput.value = `${ this.roomInfo.slice(0, 20) }...`;
+    this.infoInput.value = this.roomInfo.length > 20
+      ? `${ this.roomInfo.slice(0, 20) }...`
+      : this.roomInfo;
   }
 
   adjustDataType(j) {
     const dataType = this.dropdownItems[j].dataset.type;
     let dataTypeName;
-    if (this.data[j] === 0) {
-      switch (dataType) {
-        case 'bedrooms':
-          dataTypeName = 'спален';
-          break;
-        case 'beds':
-          dataTypeName = 'кроватей';
-          break;
-        default:
-          dataTypeName = 'ванных комнат';
-          break;
-      }
-    } else if (this.data[j] === 1) {
+    if (this.data[j] === 1) {
       switch (dataType) {
         case 'bedrooms':
           dataTypeName = 'спальня';
