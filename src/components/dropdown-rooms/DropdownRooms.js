@@ -8,12 +8,19 @@ export default class DropdownRooms {
   }
 
   init() {
+    this.createClasses();
     this.createChildren();
     this.makeData();
     this.dropdownItems.forEach((_, index) => {
       this.render(index);
     });
     this.enableEventListeners();
+  }
+
+  createClasses() {
+    this.classItemPlus = 'dropdown-item__plus';
+    this.classItemMinus = 'dropdown-item__minus';
+    this.classNumber = 'dropdown-item__number';
   }
 
   createChildren() {
@@ -23,16 +30,16 @@ export default class DropdownRooms {
       this.container.querySelectorAll('.js-dropdown-item')
     );
     this.dropdownPluses = this.container.querySelectorAll(
-      '.js-dropdown-item__plus'
+      `.js-${ this.classItemPlus }`
     );
     this.dropdownMinuses = this.container.querySelectorAll(
-      '.js-dropdown-item__minus'
+      `.js-${ this.classItemMinus }`
     );
   }
 
   makeData() {
     const nums = Array.from(
-      this.container.querySelectorAll('.js-dropdown-item__number')
+      this.container.querySelectorAll(`.js-${ this.classNumber }`)
     );
     nums.forEach((num) => {
       const value = parseInt(num.textContent, 10);
@@ -79,19 +86,27 @@ export default class DropdownRooms {
 
   updateItemNumber(i) {
     const dropdownItem = this.dropdownItems[i].querySelector(
-      '.js-dropdown-item__number'
+      `.js-${ this.classNumber }`
     );
     dropdownItem.innerText = this.data[i];
   }
 
   updateMinusPlusButton(i) {
     if (this.data[i] <= 0) {
-      this.dropdownMinuses[i].classList.add('dropdown-item__minus_disabled');
+      this.dropdownMinuses[i].classList.add(
+        `${ this.classItemMinus }_disabled`
+      );
     } else if (this.data[i] > 0 && this.data[i] < 10) {
-      this.dropdownPluses[i].classList.remove('dropdown-item__plus_disabled');
-      this.dropdownMinuses[i].classList.remove('dropdown-item__minus_disabled');
+      this.dropdownPluses[i].classList.remove(
+        `${ this.classItemPlus }_disabled`
+      );
+      this.dropdownMinuses[i].classList.remove(
+        `${ this.classItemMinus }_disabled`
+      );
     } else {
-      this.dropdownPluses[i].classList.add('dropdown-item__plus_disabled');
+      this.dropdownPluses[i].classList.add(
+        `${ this.classItemPlus }_disabled`
+      );
     }
   }
 

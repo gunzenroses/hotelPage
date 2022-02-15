@@ -8,6 +8,7 @@ export default class DropdownGuests {
   }
 
   init() {
+    this.createClasses();
     this.createChildren();
     this.makeData();
     this.dropdownItems.forEach((_, i) => {
@@ -15,6 +16,12 @@ export default class DropdownGuests {
     });
     this.totalGuestsCount();
     this.enableEventListeners();
+  }
+
+  createClasses() {
+    this.classNumber = 'dropdown-item__number';
+    this.classItemMinus = 'dropdown-item__minus';
+    this.classItemPlus = 'dropdown-item__plus';
   }
 
   createChildren() {
@@ -25,10 +32,10 @@ export default class DropdownGuests {
       this.container.querySelectorAll('.js-dropdown-item')
     );
     this.dropdownMinuses = this.container.querySelectorAll(
-      '.js-dropdown-item__minus'
+      `.js-${ this.classItemMinus }`
     );
     this.dropdownPluses = this.container.querySelectorAll(
-      '.js-dropdown-item__plus'
+      `.js-${ this.classItemPlus }`
     );
     this.resetButton = this.dropdownExpanded.querySelector(
       '.js-dropdown__button_type_reset'
@@ -40,7 +47,7 @@ export default class DropdownGuests {
 
   makeData() {
     Array.from(
-      this.container.querySelectorAll('.js-dropdown-item__number')
+      this.container.querySelectorAll(`.js-${ this.classNumber }`)
     ).forEach((num) => {
       const value = parseInt(num.textContent, 10);
       this.data.push(value);
@@ -56,10 +63,10 @@ export default class DropdownGuests {
   @boundMethod
   plusAndMinusToItem(e) {
     const trg = e.target;
-    if (trg.classList.contains('dropdown-item__minus')) {
+    if (trg.classList.contains(this.classItemMinus)) {
       this.minusToItem(trg);
     }
-    if (trg.classList.contains('dropdown-item__plus')) {
+    if (trg.classList.contains(this.classItemPlus)) {
       this.plusToItem(trg);
     }
   }
@@ -102,7 +109,7 @@ export default class DropdownGuests {
       this.data[i] = 10;
     }
     const dropdownItem = this.dropdownItems[i].querySelector(
-      '.js-dropdown-item__number'
+      `.js-${ this.classNumber }`
     );
     dropdownItem.innerText = this.data[i];
     this.activateMinusPlus(i);
@@ -110,12 +117,16 @@ export default class DropdownGuests {
 
   activateMinusPlus(i) {
     if (this.data[i] <= 0) {
-      this.dropdownMinuses[i].classList.add('dropdown-item__minus_disabled');
+      this.dropdownMinuses[i].classList.add(`${ 
+        this.classItemMinus }_disabled`);
     } else if (this.data[i] > 0 && this.data[i] < 10) {
-      this.dropdownPluses[i].classList.remove('dropdown-item__plus_disabled');
-      this.dropdownMinuses[i].classList.remove('dropdown-item__minus_disabled');
+      this.dropdownPluses[i].classList.remove(`${ 
+        this.classItemPlus }_disabled`);
+      this.dropdownMinuses[i].classList.remove(`${ 
+        this.classItemMinus }_disabled`);
     } else {
-      this.dropdownPluses[i].classList.add('dropdown-item__plus_disabled');
+      this.dropdownPluses[i].classList.add(`${
+        this.classItemPlus }_disabled`);
     }
   }
 
