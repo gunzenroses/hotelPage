@@ -5,48 +5,61 @@ class Pagination {
   constructor(item) {
     this.data = paginationData;
     this.num = this.data.currentNum;
+    this.createClasses();
     this.createContainer(item);
     this.init();
   }
 
+  createClasses(){
+    this.classContent = 'pagination__content';
+    this.classInfo = 'pagination__info';
+    this.classItem = 'pagination__item';
+    this.classItemCurrent = 'pagination__item_current';
+    this.classButton = 'pagination__button';
+    this.classButtonNext = 'pagination__button_next';
+    this.classButtonPrev = 'pagination__button_prev';
+    this.classButtonFirst = 'pagination__button_first';
+    this.classButtonLast = 'pagination__button_last';
+  }
+ 
   createContainer(item) {
     this.paginationContainer = item;
     this.pageButtons = document.createElement('div');
     this.pageButtons.classList.add(
-      'pagination__content',
-      'js-pagination__content'
+      this.classContent,
+      `js-${ this.classContent }`
     );
-    this.paginationContainer.prepend(this.pageButtons);
-
+    
     this.paginationInfo = document.createElement('div');
     this.paginationInfo.classList.add(
-      'pagination__info',
-      'js-pagination__info'
+      this.classInfo, 
+      `js-${ this.classInfo }`
     );
-    this.paginationContainer.append(this.paginationInfo);
+    
   }
 
   init() {
     this.render();
     this.createChildren();
     this.enable();
+    this.addButtonsToContainer();
   }
 
   createChildren() {
     this.buttonItems = Array.from(
-      this.pageButtons.querySelectorAll('.js-pagination__item')
+      this.pageButtons.querySelectorAll(`.js-${ this.classItem }`)
     );
     this.buttonFirst = this.pageButtons.querySelector(
-      '.js-pagination__button_first'
+      `.js-${ this.classButtonFirst }`
     );
     this.buttonLast = this.pageButtons.querySelector(
-      '.js-pagination__button_last'
+      `.js-${ this.classButtonLast }`
     );
     this.buttonNext = this.num < this.data.totalNum
-      ? this.pageButtons.querySelector('.js-pagination__button_next')
+      ? this.pageButtons.querySelector(`.js-${ this.classButtonNext }`)
       : null;
     this.buttonPrev = this.num > 3
-      ? this.pageButtons.querySelector('.js-pagination__button_prev')
+      ? this.pageButtons.querySelector(`.js-${ this.classButtonPrev }`)
       : null;
   }
 
@@ -66,6 +79,11 @@ class Pagination {
     if (this.buttonLast) {
       this.buttonLast.addEventListener('click', this.onButtonLastClick);
     }
+  }
+
+  addButtonsToContainer(){
+    this.paginationContainer.prepend(this.pageButtons);
+    this.paginationContainer.append(this.paginationInfo);
   }
 
   render() {
@@ -113,15 +131,12 @@ class Pagination {
     button.value = i;
     if (i === this.num) {
       button.classList.add(
-        'pagination__item',
-        'pagination__item_current',
-        'js-pagination__item_current'
+        this.classItem,
+        this.classItemCurrent,
+        `js-${ this.classItemCurrent }`
       );
     } else {
-      button.classList.add(
-        'pagination__item',
-        'js-pagination__item'
-      );
+      button.classList.add(this.classItem, `js-${ this.classItem }`);
     }
     return button;
   }
@@ -138,39 +153,42 @@ class Pagination {
   }
 
   addRestButton() {
-    const paginationRest = 'pagination__item js-pagination__item';
     this.pageButtons.innerHTML = `${
       this.pageButtons.innerHTML
-    }<button value='4' class= ${ paginationRest }>...</button>`;
+    }<button value = '4' class = 'js-${
+       this.classItem 
+      } ${ this.classItem }'>...</button>`;
   }
 
   addLastButton() {
-    const paginationLast = 'pagination__button_last js-pagination__button_last';
     this.pageButtons.innerHTML = `${
       this.pageButtons.innerHTML
-    }<button class= 'pagination__button ${ paginationLast }'>15</button>`;
+    }<button class = 'pagination__button js-${ 
+        this.classButtonLast 
+      } ${ this.classButtonLast } '>15</button>`;
   }
 
   addPrevButton() {
-    const paginationPrev = 'pagination__button pagination__button_prev';
     this.pageButtons.innerHTML = `
-      <button class= '${ paginationPrev } js-pagination__button_prev'></button>
+      <button class = 'pagination__button js-${ 
+        this.classButtonPrev 
+      } ${ this.classButtonPrev }'></button>
       ${ this.pageButtons.innerHTML }`;
   }
 
   addNextButton() {
-    const paginationNext = 'pagination__button pagination__button_next';
     this.pageButtons.innerHTML = `
-      ${ this.pageButtons.innerHTML }
-      <button class= '${
-  paginationNext } js-pagination__button_next'></button>`;
+      ${this.pageButtons.innerHTML}
+      <button class = 'pagination__button js-${
+        this.classButtonNext
+      } ${ this.classButtonNext }'></button>`;
   }
 
   addFirstButton() {
-    const patinationFirst = 'pagination__button pagination__button_first';
     this.pageButtons.innerHTML = `
-      <button class= '${
-  patinationFirst } js-pagination__button_first'>1</button>
+      <button class = 'pagination__button js-${
+        this.classButtonFirst 
+      } ${ this.classButtonFirst }'>1</button>
       ${ this.pageButtons.innerHTML }`;
   }
 
