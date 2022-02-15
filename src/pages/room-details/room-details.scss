@@ -33,7 +33,7 @@
   user-select: none;
   overflow: hidden;
 
-  @include _1920 {
+  @include _all {
     width: 100%;
     height: fit-content;
   }
@@ -46,7 +46,7 @@
     margin-right: auto;
     border-bottom: 1px solid $dark-shade_less;
 
-    @include _1920 {
+    @include _all {
       width: 100%;
       height: auto;
     }
@@ -129,7 +129,7 @@
     }
   }
 
-  &__info_outer {
+  &__info-outer {
     width: 100%;
     height: fit-content;
     padding: 70px 140px 69px 139px;
@@ -144,14 +144,16 @@
     }
   }
 
-  &__info_inner {
+  &__info-inner {
     @include isFlex();
     position: relative;
     width: 100%;
+    max-width: 1650px;
     height: 799px;
 
     @include _1450-1920 {
       height: auto;
+      margin: 0 auto;
     }
 
     @include _1400 {

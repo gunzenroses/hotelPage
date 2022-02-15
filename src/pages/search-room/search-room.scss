@@ -31,22 +31,23 @@
   @include isFlex($direction: column, $justify: flex-start);
   position: relative;
   width: 1440px;
+  min-width: 320px;
   height: fit-content;
   margin: 0 auto;
   background: $light;
   overflow: hidden; //to avoid margin-collapse
   user-select: none;
 
-  @include _1920 {
+  @include _all {
     width: 100%;
     height: auto;
-    min-width: 320px;
   }
 
   &__content {
     @include isFlex();
     position: relative;
     width: 100%;
+    max-width: 1920px;
     height: fit-content;
     min-width: 320px;
     padding: 26px 140px 69px;
@@ -57,6 +58,7 @@
     @include _1500-1920 {
       padding-bottom: 27px;
       justify-content: space-around;
+      margin: 0 auto;
     }
 
     @include _1400 {
@@ -126,6 +128,11 @@
 
     @include _1500-1920 {
       width: 68%;
+      max-width: 900px;
+    }
+
+    @include _1920 {
+      max-width: 68%;
     }
 
     @include _1340 {
@@ -179,11 +186,12 @@
     }
 
     @include _1070 {
+      width: 85%;
       height: auto;
       margin: 0 auto;
     }
 
-    @include _700 {
+    @include _850 {
       width: 100%;
     }
 

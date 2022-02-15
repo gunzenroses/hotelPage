@@ -21,7 +21,7 @@
   background: $light;
   user-select: none;
 
-  @include _1920 {
+  @include _all  {
     width: 100%;
     height: auto;
   }

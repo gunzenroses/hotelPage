@@ -18,7 +18,7 @@
   background: $light;
   user-select: none;
 
-  @include _1920 {
+  @include _all {
     width: 100%;
     height: auto;
     border-bottom: 1px solid $dark-shade_less;
