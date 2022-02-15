@@ -20,7 +20,6 @@ class Expand {
     this.dropdownWatchedInits.forEach((item) => {
       this.dropdownWatchedParents.push(item.parentElement);
     });
-
     this.dropdownWatchedParents.forEach((item) => {
       this.dropdownWatchedExpands.push(
         item.querySelector('.js-expand__content')
@@ -34,11 +33,11 @@ class Expand {
 
   @boundMethod
   dropdownClick(event) {
-    const hasInnerExpand = event.target.closest('.js-expand__show');
-    const hasExpand = event.target.closest('.js-expand__init');
-    const hasParent = event.target.parentElement;
-    const noExpand = !hasInnerExpand && !hasExpand;
     const el = event.target;
+    const hasInnerExpand = el.closest('.js-expand__show');
+    const hasExpand = el.closest('.js-expand__init');
+    const hasParent = el.parentElement;
+    const noExpand = !hasInnerExpand && !hasExpand;
 
     if (hasInnerExpand && hasExpand) this.expandElement(el);
     if (!hasInnerExpand && hasExpand) this.expandInner(el);
@@ -64,7 +63,7 @@ class Expand {
 
   hideElements() {
     this.dropdownWatchedExpands.forEach((item) => {
-      item.classList.remove('js-expand__show');
+      item.classList.remove('expand__show');
     });
   }
 }
