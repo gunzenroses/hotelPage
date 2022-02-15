@@ -65,19 +65,19 @@ class Pagination {
 
   enable() {
     this.buttonItems.forEach((item) => {
-      item.addEventListener('click', this.onButtonClick);
+      item.addEventListener('pointerup', this.onButtonClick);
     });
     if (this.buttonNext) {
-      this.buttonNext.addEventListener('click', this.onButtonNextClick);
+      this.buttonNext.addEventListener('pointerup', this.onButtonNextClick);
     }
     if (this.buttonPrev) {
-      this.buttonPrev.addEventListener('click', this.onButtonPrevClick);
+      this.buttonPrev.addEventListener('pointerup', this.onButtonPrevClick);
     }
     if (this.buttonFirst) {
-      this.buttonFirst.addEventListener('click', this.onButtonFirstClick);
+      this.buttonFirst.addEventListener('pointerup', this.onButtonFirstClick);
     }
     if (this.buttonLast) {
-      this.buttonLast.addEventListener('click', this.onButtonLastClick);
+      this.buttonLast.addEventListener('pointerup', this.onButtonLastClick);
     }
   }
 

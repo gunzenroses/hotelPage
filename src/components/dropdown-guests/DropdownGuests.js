@@ -55,9 +55,9 @@ export default class DropdownGuests {
   }
 
   enableEventListeners() {
-    this.dropdownExpanded.addEventListener('click', this.plusAndMinusToItem);
-    this.resetButton.addEventListener('click', this.resetGuests);
-    this.submitButton.addEventListener('click', this.submitGuests);
+    this.dropdownExpanded.addEventListener('pointerup', this.plusAndMinusToItem);
+    this.resetButton.addEventListener('pointerup', this.resetGuests);
+    this.submitButton.addEventListener('pointerup', this.submitGuests);
   }
 
   @boundMethod

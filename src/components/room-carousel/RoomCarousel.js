@@ -40,12 +40,12 @@ class RoomCarousel {
 
   enable() {
     if (this.carouselPrev) {
-      this.carouselPrev.addEventListener('click', this.prevImage);
+      this.carouselPrev.addEventListener('pointerup', this.prevImage);
     }
     if (this.carouselNext) {
-      this.carouselNext.addEventListener('click', this.nextImage);
+      this.carouselNext.addEventListener('pointerup', this.nextImage);
     }
-    this.carouselInputs.addEventListener('click', this.switchImage);
+    this.carouselInputs.addEventListener('pointerup', this.switchImage);
   }
 
   @boundMethod

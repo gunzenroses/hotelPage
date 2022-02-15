@@ -24,7 +24,7 @@ class ButtonLike {
   }
 
   enableEventListeners() {
-    this.buttonLike.addEventListener('click', this.render);
+    this.buttonLike.addEventListener('pointerup', this.render);
   }
 
   @boundMethod

@@ -10,7 +10,7 @@ class Textfield {
   init(item) {
     this.startValidation(item);
     if (item.getAttribute('name') === 'email') {
-      item.addEventListener('click', this.correctEmail);
+      item.addEventListener('pointerup', this.correctEmail);
     }
   }
 

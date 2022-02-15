@@ -29,7 +29,7 @@ class Expand {
   }
 
   enable() {
-    this.dropdownWatch.addEventListener('click', this.dropdownClick);
+    this.dropdownWatch.addEventListener('pointerup', this.dropdownClick);
   }
 
   @boundMethod

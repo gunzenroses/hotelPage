@@ -22,7 +22,7 @@ class CheckboxExpandable {
   }
 
   enable() {
-    this.dropdownInit.addEventListener('click', this.dropdownClick);
+    this.dropdownInit.addEventListener('pointerup', this.dropdownClick);
   }
 
   @boundMethod

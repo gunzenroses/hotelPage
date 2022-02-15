@@ -49,8 +49,8 @@ export default class DropdownRooms {
 
   enableEventListeners() {
     this.dropdownItems.forEach((_, i) => {
-      this.dropdownMinuses[i].addEventListener('click', this.minusOne);
-      this.dropdownPluses[i].addEventListener('click', this.plusOne);
+      this.dropdownMinuses[i].addEventListener('pointerup', this.minusOne);
+      this.dropdownPluses[i].addEventListener('pointerup', this.plusOne);
     });
   }
 

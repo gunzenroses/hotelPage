@@ -79,17 +79,17 @@ class Calendar {
   }
 
   addEventListener() {
-    this.buttonPrev.addEventListener('click', this.showPrevMonth);
-    this.buttonNext.addEventListener('click', this.showNextMonth);
-    this.daysOfMonth.addEventListener('click', this.chooseRange);
+    this.buttonPrev.addEventListener('pointerup', this.showPrevMonth);
+    this.buttonNext.addEventListener('pointerup', this.showNextMonth);
+    this.daysOfMonth.addEventListener('pointerup', this.chooseRange);
     if (this.calendar) {
-      this.btnReset.addEventListener('click', this.resetInput);
+      this.btnReset.addEventListener('pointerup', this.resetInput);
     }
     if (this.rangeSpan) {
-      this.btnApply.addEventListener('click', this.applyRange);
+      this.btnApply.addEventListener('pointerup', this.applyRange);
     }
     if (this.rangeStart && this.rangeEnd) {
-      this.btnApply.addEventListener('click', this.applyStartOrEnd);
+      this.btnApply.addEventListener('pointerup', this.applyStartOrEnd);
     }
   }
 
