@@ -3,7 +3,7 @@
 @import '@~Assets/styles//mixins.scss';
 
 @import '@~Components/footer/footer.scss';
-@import '@~Components/footer-creative/footer-creative.scss';
+@import '@~Components/footer-mobile/footer-mobile.scss';
 @import '@~Components/header/header.scss';
 
 .headers-n-footers {
@@ -42,7 +42,7 @@
     margin-top: 40px;
   }
 
-  &__footer-creative {
+  &__footer-mobile {
     width: 100%;
     height: fit-content;
     margin: 40px auto 0;
