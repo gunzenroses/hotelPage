@@ -9,6 +9,7 @@
   justify-content: $justify;
   align-items: $align;
   flex-wrap: $wrap;
+  flex-shrink: 0;
 }
 
 @mixin arrowSubmit {
