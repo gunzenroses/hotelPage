@@ -68,9 +68,10 @@
     }
   }
 
-  &__view_main {
+  &__view-main {
     width: 981px;
     height: 100%;
+    object-fit: cover;
     overflow: hidden;
 
     @include _1441-1920 {
@@ -91,7 +92,7 @@
     display: none;
   }
 
-  &__view_miniature {
+  &__view-miniature {
     @include isFlex($direction: column);
     width: 459px;
     height: 100%;
@@ -120,6 +121,7 @@
   &__view_mini {
     width: 100%;
     height: 50%;
+    object-fit: cover;
 
     @include _970 {
       width: 50%;
@@ -441,7 +443,7 @@
       position: relative;
       top: 0;
       right: 0;
-      margin: -20% auto 50px;
+      margin: 50px auto;
     }
 
     @include _450 {
