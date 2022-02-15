@@ -1,14 +1,14 @@
-mixin navlink({ buttonText = "", onClick = "./some-address", modificator = "", buttonModificator = ""})
+mixin navlink({ buttonText = "", onClick = "./some-address", modifier = "", buttonModifier = ""})
 
   - 
-    var navlinkClass = modificator === ""
+    var navlinkClass = modifier === ""
       ? "navlink"
-      : `navlink navlink_type_${ modificator }`
+      : `navlink navlink_type_${ modifier }`
 
   -
-    var navlinkButtonClass = buttonModificator === ""
+    var navlinkButtonClass = buttonModifier === ""
       ? "navlink__button" 
-      : `navlink__button navlink__button_type_${ buttonModificator }`
+      : `navlink__button navlink__button_type_${ buttonModifier }`
 
   li(class = navlinkClass)
     a(
