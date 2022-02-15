@@ -1,20 +1,20 @@
-const path = require("path");
-const common = require("./webpack.common");
-const { merge } = require("webpack-merge");
-const postcssPresetEnv = require("postcss-preset-env");
+const path = require('path');
+const common = require('./webpack.common');
+const { merge } = require('webpack-merge');
+const postcssPresetEnv = require('postcss-preset-env');
 
 module.exports = merge(common, {
-  mode: "development",
+  mode: 'development',
   output: {
-    path: path.resolve(__dirname, "./dist"),
-    publicPath: "/",
-    filename: "assets/js/[name].js",
+    path: path.resolve(__dirname, './dist'),
+    publicPath: '/',
+    filename: 'assets/js/[name].js',
   },
-  devtool: "inline-source-map",
-  target: "web",
+  devtool: 'inline-source-map',
+  target: 'web',
   devServer: {
     static: {
-      directory: path.resolve(__dirname, "./dist"),
+      directory: path.resolve(__dirname, './dist'),
     },
     compress: true,
     hot: true,
@@ -25,9 +25,9 @@ module.exports = merge(common, {
       {
         test: /\.css$/,
         use: [
-          "style-loader",
+          'style-loader',
           {
-            loader: "css-loader",
+            loader: 'css-loader',
             options: {
               importLoaders: 1,
               sourceMap: true,
@@ -40,9 +40,9 @@ module.exports = merge(common, {
       {
         test: /\.scss$/,
         use: [
-          "style-loader",
+          'style-loader',
           {
-            loader: "css-loader",
+            loader: 'css-loader',
             options: {
               importLoaders: 1,
               minimize: true,
@@ -51,7 +51,7 @@ module.exports = merge(common, {
             },
           },
           {
-            loader: "postcss-loader",
+            loader: 'postcss-loader',
             options: {
               postcssOptions: {
                 plugins: [postcssPresetEnv()],
@@ -59,7 +59,7 @@ module.exports = merge(common, {
             },
           }, // translates CSS into CommonJS
           {
-            loader: "sass-loader", // compiles Sass to CSS
+            loader: 'sass-loader', // compiles Sass to CSS
             options: {
               includePaths: [
                 path.resolve('../node_modules'),

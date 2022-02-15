@@ -13,15 +13,15 @@ include ../../components/range/range.pug
 include ../../components/rich-checkbox/rich-checkbox.pug
 
 block variables
-  - var theme = "search";
-  - var title = "room search";
-  - var description = "room search";
-  - var keywords = "search, room";
-  - var  { roomsList } = require("./search-room.json");
+  - var theme = 'search';
+  - var title = 'room search';
+  - var description = 'room search';
+  - var keywords = 'search, room';
+  - var  { roomsList } = require('./search-room.json');
 
 block content
   .search-room.js-dropdown__detection
-    +header({ user: "", theme: theme })
+    +header({ user: '', theme: theme })
     main.search-room__content
       section.search-room__filter
         form.search-room__form
@@ -29,22 +29,22 @@ block content
             .search-room__filter-date
               +date-range({
                 dateRanges: [{
-                  labelText: "даты пребывания в отеле",
-                  value: "19 авг - 23 авг", 
-                  name: "check-in-check-out", 
-                  data: "date-range"
+                  labelText: 'даты пребывания в отеле',
+                  value: '19 авг - 23 авг', 
+                  name: 'check-in-check-out', 
+                  data: 'date-range'
                 }],
                 theme: theme
               })
             .search-room__filter-guests
               +dropdown-guests({
-                labelText: "гости",
+                labelText: 'гости',
                 itemNumbers: [2, 1, 1]
               })
             .search-room__filter-price
               +range({
                 infoText: true,
-                labelText: "Диапазон цены"
+                labelText: 'Диапазон цены'
               })
             .search-room__filter-rules
               h3.label Правила дома
@@ -52,17 +52,17 @@ block content
           .search-room__filter-group
             .search-room__accessibility
               +rich-checkbox({
-                checkboxName: "accessibility",
-                containerText: "Доступность"
+                checkboxName: 'accessibility',
+                containerText: 'Доступность'
               })
             .search-room__filter-rooms
               +dropdown-rooms({
-                labelText: "Удобства номера",
+                labelText: 'Удобства номера',
                 itemNumbers: [2, 2, 0],
               })
             .search-room__filter-extras
               +checkbox-expandable({
-                dropdownTitleName: "Дополнительные удобства"
+                dropdownTitleName: 'Дополнительные удобства'
               })
       section.search-room__rooms
         h1.search-room__text Номера, которые мы для вас подобрали

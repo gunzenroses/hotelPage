@@ -2,7 +2,7 @@ mixin donut-chart({ excellNum = 0, goodNum  = 0, satisNum  = 0, dissapNum  = 0 }
   - 
     var { 
       donutMarks, 
-      donutColors } = require("Components/donut-chart/donut-chart.json");
+      donutColors } = require('Components/donut-chart/donut-chart.json');
   - 
     var totalData = 
       parseFloat(excellNum) +
@@ -39,29 +39,29 @@ mixin donut-chart({ excellNum = 0, goodNum  = 0, satisNum  = 0, dissapNum  = 0 }
   figure.donut-chart.js-donut-chart
     .donut-chart__content
       svg.donut-chart__img(
-        width = "100%" 
-        height = "100%" 
-        viewbox = "0 0 33 33" 
-        aria-labelledby = "impression-title" 
-        role = "img")
+        width = '100%' 
+        height = '100%' 
+        viewbox = '0 0 33 33' 
+        aria-labelledby = 'impression-title' 
+        role = 'img')
         defs
           each donutColor in donutColors 
             each val, key in donutColor
               - var { start, end } = val
               - 
-                var gradientInfo = key === "excellent" | key === "satisfied"
-                  ? "rotate(90)"
-                  : ""
+                var gradientInfo = key === 'excellent' | key === 'satisfied'
+                  ? 'rotate(90)'
+                  : ''
               lineargradient(id= `gradient_${ 
                 key }` gradientTransform = gradientInfo)
-                stop(stop-color = start offset = "0%")
-                stop(stop-color = end offset = "100%")
+                stop(stop-color = start offset = '0%')
+                stop(stop-color = end offset = '100%')
         title#impression-title Впечатлeния от номера
 
         circle.donut-chart__ring(
-          cx = "50%" cy = "50%" 
-          r = "15.91549430918954"
-          role = "presentation" 
+          cx = '50%' cy = '50%' 
+          r = '15.91549430918954'
+          role = 'presentation' 
           )
         each data, mark in donutData
           - var { number, percent } = data
@@ -75,8 +75,8 @@ mixin donut-chart({ excellNum = 0, goodNum  = 0, satisNum  = 0, dissapNum  = 0 }
             class = `donut-chart__segment js-donut-chart__segment_${ mark }`
             data-circle-number = number
             data-circle-modifier = mark
-            cx = "50%" cy = "50%" 
-            r = "15.91549430918954"
+            cx = '50%' cy = '50%' 
+            r = '15.91549430918954'
             stroke = `url(#gradient_${ mark })`
             stroke-dasharray = `${ dashValue } ${ dashLeft }` 
             stroke-dashoffset = dashOffsetValue
@@ -87,13 +87,13 @@ mixin donut-chart({ excellNum = 0, goodNum  = 0, satisNum  = 0, dissapNum  = 0 }
           - dashOffsetValue -= percent;
       .donut-chart__text.js-donut-chart__text
         p(
-          class = "donut-chart__number js-donut-chart__number"
+          class = 'donut-chart__number js-donut-chart__number'
           data-total-number = totalData
           )= totalData
         p.donut-chart__label.js-donut-chart__label голосов
 
     figcaption.donut-chart__caption
-      ul.donut-chart__key-list(aria-hidden = "true" role = "presentation")
+      ul.donut-chart__key-list(aria-hidden = 'true' role = 'presentation')
         each val, key in donutMarks
           li(
             class = `donut-chart__key-item js-donut-chart__key-item_${ key }`

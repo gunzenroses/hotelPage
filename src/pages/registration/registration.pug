@@ -6,17 +6,17 @@ include ../../components/footer/footer.pug
 include ../../components/header/header.pug
 
 block variables
-  - var theme = "registration"
-  - var title = "registration";
-  - var description = "registration";
-  - var keywords = "registration";
-  - var { pics } = require("./registration.json");
+  - var theme = 'registration'
+  - var title = 'registration';
+  - var description = 'registration';
+  - var keywords = 'registration';
+  - var { pics } = require('./registration.json');
 
 block content
   .registration.js-dropdown__detection
-    +header({ user: "", theme: theme })
+    +header({ user: '', theme: theme })
     main.registration__content
       +carousel(pics)
       .registration__card-registration 
-        +card-registration("Зарегистрироваться")
+        +card-registration('Зарегистрироваться')
     +footer(theme)

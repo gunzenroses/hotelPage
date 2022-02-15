@@ -9,28 +9,28 @@ include ../../components/footer/footer.pug
 include ../../components/header/header.pug
 
 block variables
-  - var theme = "details";
-  - var title = "room details";
-  - var description = "room details";
-  - var keywords = "room details";
+  - var theme = 'details';
+  - var title = 'room details';
+  - var description = 'room details';
+  - var keywords = 'room details';
   - 
     var { 
       comment1, 
       comment2, 
       checkboxList1, 
       cancellationRools, 
-      cardBookingInfo } = require("./room-details.json");
+      cardBookingInfo } = require('./room-details.json');
 
 block content
   .room-details.js-dropdown__detection
-    +header({ user: "", theme: theme })
+    +header({ user: '', theme: theme })
     main.room-details__content
       section.room-details__view
-        img(src = "./assets/images/room-details.jpg" alt = "room picture 1").room-details__view_main
+        img(src = './assets/images/room-details.jpg' alt = 'room picture 1').room-details__view_main
         h2.room-details__heading Вид номера
         .room-details__view_miniature
-          img(src = "./assets/images/room-details-2.jpg" alt = "room picture 2").room-details__view_mini
-          img(src = "./assets/images/room-details-3.jpg" alt = "room picture 3").room-details__view_mini
+          img(src = './assets/images/room-details-2.jpg' alt = 'room picture 2').room-details__view_mini
+          img(src = './assets/images/room-details-3.jpg' alt = 'room picture 3').room-details__view_mini
       section.room-details__info_outer
         h2.room-details__heading Данные о номере
         .room-details__info_inner
@@ -40,21 +40,21 @@ block content
                 h2.room-details__title Сведения о номере
                 .room-details__badge_type_comfort
                   +badge({
-                    name: "insert_emoticon", 
-                    title: "Комфорт",
-                    description: "Шумопоглощающие стены"
+                    name: 'insert_emoticon', 
+                    title: 'Комфорт',
+                    description: 'Шумопоглощающие стены'
                   })
                 .room-details__badge_type_commodity
                   +badge({
-                    name: "location_city", 
-                    title: "Удобство",
-                    description: "Окно в каждой из спален"
+                    name: 'location_city', 
+                    title: 'Удобство',
+                    description: 'Окно в каждой из спален'
                   })
                 .room-details__badge_type_cozyness
                   +badge({
-                    name: "whatshot", 
-                    title: "Уют",
-                    description: "Номер оснащён камином"
+                    name: 'whatshot', 
+                    title: 'Уют',
+                    description: 'Номер оснащён камином'
                   })
               .room-details__room-impression
                 h2.room-details__title Впечатления от номера

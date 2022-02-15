@@ -53,7 +53,9 @@ class Calendar {
       );
     }
     if (this.mainContainer.querySelector('input[name=check-in]')) {
-      this.rangeStart = this.mainContainer.querySelector('input[name=check-in]');
+      this.rangeStart = this.mainContainer.querySelector(
+        'input[name=check-in]'
+      );
     }
     if (this.mainContainer.querySelector('input[name=check-out]')) {
       this.rangeEnd = this.mainContainer.querySelector('input[name=check-out]');
@@ -323,16 +325,16 @@ class Calendar {
       const betweenInOutYears = betweenInOutOneYear
         || this.betweenInOutDiffYears(prevDay);
       if (this.checkInPrevMonth(prevDay) || this.checkInPrevYear(prevDay)) {
-        prevDays += `<div class="calendar__day calendar__day_prev_check-in">${
+        prevDays += `<div class='calendar__day calendar__day_prev_check-in'>${
           prevDay }</div>`;
       } else if (
         this.checkOutPrevMonth(prevDay)
         || this.checkOutPrevYear(prevDay)
       ) {
-        prevDays += `<div class="calendar__day calendar__day_prev_check-out">${
+        prevDays += `<div class='calendar__day calendar__day_prev_check-out'>${
           prevDay }</div>`;
       } else if (this.betweenInOutPrevMonth(prevDay) || betweenInOutYears) {
-        prevDays += `<div class="calendar__day calendar__day_between">${
+        prevDays += `<div class='calendar__day calendar__day_between'>${
           prevDay }</div>`;
       } else {
         const prevDayClass = 'calendar__day calendar__day_prev';
@@ -469,22 +471,22 @@ class Calendar {
     lastDaysArr.forEach((i) => {
       if (this.checkInToday(i)) {
         currDays
-          += `<div class="calendar__day calendar__day_check-in">${ i }</div>`;
+          += `<div class='calendar__day calendar__day_check-in'>${ i }</div>`;
       } else if (this.checkInCurrMonth(i)) {
         currDays
-          += `<div class="calendar__day calendar__day_check-in">${ i }</div>`;
+          += `<div class='calendar__day calendar__day_check-in'>${ i }</div>`;
       } else if (this.checkOutCurrMonth(i)) {
         currDays
-          += `<div class="calendar__day calendar__day_check-out">${ i }</div>`;
+          += `<div class='calendar__day calendar__day_check-out'>${ i }</div>`;
       } else if (this.todayCurrMonth(i)) {
         currDays
-          += `<div class="calendar__day calendar__day_today">${ i }</div>`;
+          += `<div class='calendar__day calendar__day_today'>${ i }</div>`;
       } else if (this.betweenInOutCurrentMonth(i)) {
         currDays
-          += `<div class="calendar__day calendar__day_ranged">${ i }</div>`;
+          += `<div class='calendar__day calendar__day_ranged'>${ i }</div>`;
       } else {
         currDays
-          += `<div class="calendar__day">${ i }</div>`;
+          += `<div class='calendar__day'>${ i }</div>`;
       }
     });
     return currDays;
@@ -600,17 +602,17 @@ class Calendar {
       const betweenInOutAYear = inOutCurrYear || inOutNextYear;
 
       if (this.checkInNextMonth(n, yearIn) || this.checkInNextYear(n)) {
-        nextDays += `<div class="calendar__day calendar__day_next_check-in">${
+        nextDays += `<div class='calendar__day calendar__day_next_check-in'>${
           n }</div>`;
       } else if (checkOutNextMonthOrYear) {
-        nextDays += `<div class="calendar__day calendar__day_next_check-out">${
+        nextDays += `<div class='calendar__day calendar__day_next_check-out'>${
           n }</div>`;
       } else if (betweenInOutAYear) {
-        nextDays += `<div class="calendar__day calendar__day_between">${
+        nextDays += `<div class='calendar__day calendar__day_between'>${
           n }</div>`;
       } else {
         nextDays
-        += `<div class="calendar__day calendar__day_next js-calendar__day_next">${
+        += `<div class='calendar__day calendar__day_next js-calendar__day_next'>${
             n }</div>`;
       }
     });

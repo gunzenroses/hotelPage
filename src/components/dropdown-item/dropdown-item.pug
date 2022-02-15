@@ -1,11 +1,11 @@
-mixin dropdown-item({ itemDataType, itemText, itemDataOrder, itemNumber = 0, itemClass = "" })
-  - var dropdownItemClass = "dropdown-item js-dropdown-item";
-  - var dropdownTextClass = "dropdown-item__text";
-  - var dropdownMinusClass = "dropdown-item__minus js-dropdown-item__minus";
-  - var dropdownNumberClass = "dropdown-item__number js-dropdown-item__number";
-  - var dropdownPlusClass = "dropdown-item__plus js-dropdown-item__plus";
+mixin dropdown-item({ itemDataType, itemText, itemDataOrder, itemNumber = 0, itemClass = '' })
+  - var dropdownItemClass = 'dropdown-item js-dropdown-item';
+  - var dropdownTextClass = 'dropdown-item__text';
+  - var dropdownMinusClass = 'dropdown-item__minus js-dropdown-item__minus';
+  - var dropdownNumberClass = 'dropdown-item__number js-dropdown-item__number';
+  - var dropdownPlusClass = 'dropdown-item__plus js-dropdown-item__plus';
   
-  if itemClass === ""
+  if itemClass === ''
     div(
       class = dropdownItemClass 
       data-type = itemDataType)

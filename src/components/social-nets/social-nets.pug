@@ -1,33 +1,33 @@
-mixin social-nets(theme = "")
+mixin social-nets(theme = '')
   - 
-    var twitterClass = theme === ""
-      ? "social-net__item social-net__twitter"
+    var twitterClass = theme === ''
+      ? 'social-net__item social-net__twitter'
       : `social-net__item social-net__twitter social-net__twitter_in_${ 
         theme }`
   - 
-    var facebookClass = theme === ""
-      ? "social-net__item social-net__facebook"
+    var facebookClass = theme === ''
+      ? 'social-net__item social-net__facebook'
       : `social-net__item social-net__facebook social-net__facebook_in_${ 
         theme }`
   - 
-    var instagramClass = theme === ""
-      ? "social-net__item social-net__instagram"
+    var instagramClass = theme === ''
+      ? 'social-net__item social-net__instagram'
       : `social-net__item social-net__instagram social-net__instagram_in_${ 
         theme }`
 
   .social-net
     a(class = twitterClass
-      href = "https://www.twitter.com/" 
-      target = "_blank"
-      rel = "noopener noreferrer")
+      href = 'https://www.twitter.com/' 
+      target = '_blank'
+      rel = 'noopener noreferrer')
       i.fab.fa-twitter
     a(class = facebookClass
-      href = "https://www.facebook.com/" 
-      target = "_blank" 
-      rel = "noopener noreferrer")
+      href = 'https://www.facebook.com/' 
+      target = '_blank' 
+      rel = 'noopener noreferrer')
       i.fab.fa-facebook
     a(class = instagramClass
-      href = "https://www.instagram.com/" 
-      target = "_blank" 
-      rel = "noopener noreferrer")
+      href = 'https://www.instagram.com/' 
+      target = '_blank' 
+      rel = 'noopener noreferrer')
       i.fab.fa-instagram

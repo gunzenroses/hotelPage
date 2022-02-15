@@ -6,15 +6,15 @@ include ../../components/footer/footer.pug
 include ../../components/header/header.pug
 
 block variables
-  - var theme = "sign-in";
-  - var title = "sign-in";
-  - var description = "sign in";
-  - var keywords = "sign in";
-  - var { signPics } =  require("./sign-in.json");
+  - var theme = 'sign-in';
+  - var title = 'sign-in';
+  - var description = 'sign in';
+  - var keywords = 'sign in';
+  - var { signPics } =  require('./sign-in.json');
 
 block content
   .sign-in.js-dropdown__detection
-    +header({ user: "", theme: theme })
+    +header({ user: '', theme: theme })
     main.sign-in__content
       +carousel(signPics)
       .sign-in__card-sign-in

@@ -6,15 +6,15 @@ include ../../components/footer/footer.pug
 include ../../components/header/header.pug
 
 block variables
-  - var theme = "landing"
-  - var title = "landing page";
-  - var description = "landing page";
-  - var keywords = "landing page";
-  - var { landingPics } = require("./landing-page.json");
+  - var theme = 'landing'
+  - var title = 'landing page';
+  - var description = 'landing page';
+  - var keywords = 'landing page';
+  - var { landingPics } = require('./landing-page.json');
 
 block content
   .landing-page.js-dropdown__detection
-    +header({ user: "", theme: theme })
+    +header({ user: '', theme: theme })
     main.landing-page__content
       +carousel-landing(landingPics)
       blockquote.landing-page__text Лучшие номера для вашей работы, отдыха и просто вдохновения

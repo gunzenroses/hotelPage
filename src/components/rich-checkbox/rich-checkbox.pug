@@ -1,19 +1,19 @@
 include ../checkbox-item/checkbox-item.pug
 
-mixin rich-checkbox({ checkboxName = "", containerText = "" })
+mixin rich-checkbox({ checkboxName = '', containerText = '' })
   - 
     var checkboxItems = [
       {
-        checkboxName: "accessibility",
-        checkboxValue: "wide corridor",
-        checkboxTitle: "Широкий коридор",
-        checkboxDescription: "Ширина коридоров в номере <br> не менее 91 см."
+        checkboxName: 'accessibility',
+        checkboxValue: 'wide corridor',
+        checkboxTitle: 'Широкий коридор',
+        checkboxDescription: 'Ширина коридоров в номере <br> не менее 91 см.'
       },
       {
-        checkboxName: "accessibility",
-        checkboxValue: "help for disabled",
-        checkboxTitle: "Помощник для инвалидов",
-        checkboxDescription: "На 1 этаже вас встретит специалист <br> и проводит до номера."
+        checkboxName: 'accessibility',
+        checkboxValue: 'help for disabled',
+        checkboxTitle: 'Помощник для инвалидов',
+        checkboxDescription: 'На 1 этаже вас встретит специалист <br> и проводит до номера.'
       }
     ]
 
@@ -31,6 +31,6 @@ mixin rich-checkbox({ checkboxName = "", containerText = "" })
           valueText: checkboxValue,
           inputName: checkboxName,
           checkboxTitle: checkboxTitle,
-          modifier: "rich",
+          modifier: 'rich',
           checkboxDescription: checkboxDescription
         })

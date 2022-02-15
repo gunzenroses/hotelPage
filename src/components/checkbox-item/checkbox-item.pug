@@ -1,21 +1,21 @@
-mixin checkbox-item({valueText = "", inputName = "", ifChecked = false, checkboxTitle = "", modifier = "", checkboxDescription = ""})
+mixin checkbox-item({valueText = '', inputName = '', ifChecked = false, checkboxTitle = '', modifier = '', checkboxDescription = ''})
   -
-    var itemClass = modifier === "rich"
-      ? "checkbox-item checkbox-item_rich"
-      : "checkbox-item"
+    var itemClass = modifier === 'rich'
+      ? 'checkbox-item checkbox-item_rich'
+      : 'checkbox-item'
   - 
-    var titleClass = modifier === "" 
-      ? "checkbox-item__title" 
+    var titleClass = modifier === '' 
+      ? 'checkbox-item__title' 
       : `checkbox-item__title checkbox-item__title_${modifier}`
 
   label(class = itemClass)
     input(
-      type = "checkbox"
+      type = 'checkbox'
       value = valueText
       name = inputName
       checked = ifChecked).checkbox-item__real
     span.checkbox-item__fake
-    if modifier === "rich"
+    if modifier === 'rich'
       span.checkbox-item__form
         span(class = titleClass)= checkboxTitle
         span.checkbox-item__description!= checkboxDescription

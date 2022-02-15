@@ -1,52 +1,52 @@
 block variables
-  - var title = "";
-  - var description = "";
-  - var keywords = "";
+  - var title = '';
+  - var description = '';
+  - var keywords = '';
 
 doctype html
-html(lang = "ru")
+html(lang = 'ru')
   head
-    meta(charset = "UTF-8")
-    meta(name = "viewport", content = "width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no")
-    meta(http-equiv = "X-UA-Compatible", content = "ie=edge")
+    meta(charset = 'UTF-8')
+    meta(name = 'viewport', content = 'width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no')
+    meta(http-equiv = 'X-UA-Compatible', content = 'ie=edge')
 
     block basicSeo
-      meta(name = "description" content = description)
-      meta(name = "keywords", content = keywords)
-      meta(name = "author" content = "gunzenroses")
+      meta(name = 'description' content = description)
+      meta(name = 'keywords', content = keywords)
+      meta(name = 'author' content = 'gunzenroses')
 
     block favIcons
       //- iOS
-      link(rel = "apple-touch-icon" sizes = "57x57" href = "./assets/favicons/apple-icon-57x57.png")
-      link(rel = "apple-touch-icon" sizes = "60x60" href = "./assets/favicons/apple-icon-60x60.png")
-      link(rel = "apple-touch-icon" sizes = "72x72" href = "./assets/favicons/apple-icon-72x72.png")
-      link(rel = "apple-touch-icon" sizes = "76x76" href = "./assets/favicons/apple-icon-76x76.png")
-      link(rel = "apple-touch-icon" sizes = "114x114" href = "./assets/favicons/apple-icon-114x114.png")
-      link(rel = "apple-touch-icon" sizes = "120x120" href = "./assets/favicons/apple-icon-120x120.png")
-      link(rel = "apple-touch-icon" sizes = "144x144" href = "./assets/favicons/apple-icon-144x144.png")
-      link(rel = "apple-touch-icon" sizes = "152x152" href = "./assets/favicons/apple-icon-152x152.png")
-      link(rel = "apple-touch-icon" sizes = "180x180" href = "./assets/favicons/apple-icon-180x180.png")
+      link(rel = 'apple-touch-icon' sizes = '57x57' href = './assets/favicons/apple-icon-57x57.png')
+      link(rel = 'apple-touch-icon' sizes = '60x60' href = './assets/favicons/apple-icon-60x60.png')
+      link(rel = 'apple-touch-icon' sizes = '72x72' href = './assets/favicons/apple-icon-72x72.png')
+      link(rel = 'apple-touch-icon' sizes = '76x76' href = './assets/favicons/apple-icon-76x76.png')
+      link(rel = 'apple-touch-icon' sizes = '114x114' href = './assets/favicons/apple-icon-114x114.png')
+      link(rel = 'apple-touch-icon' sizes = '120x120' href = './assets/favicons/apple-icon-120x120.png')
+      link(rel = 'apple-touch-icon' sizes = '144x144' href = './assets/favicons/apple-icon-144x144.png')
+      link(rel = 'apple-touch-icon' sizes = '152x152' href = './assets/favicons/apple-icon-152x152.png')
+      link(rel = 'apple-touch-icon' sizes = '180x180' href = './assets/favicons/apple-icon-180x180.png')
       //- android and chrome
-      link(rel = "manifest" type = "application/manifest+json" href = "./assets/favicons/manifest.webmanifest" crossorigin="use-credentials")
-      link(rel = "icon" type = "image/png" sizes = "512x512"  href = "./assets/favicons/android-chrome-512x512.png")
-      link(rel = "icon" type = "image/png" sizes = "512x512"  href = "./assets/favicons/android-chrome-192x192.png")
-      link(rel = "icon" type = "image/png" sizes = "192x192"  href = "./assets/favicons/android-icon-192x192.png")
-      link(rel = "icon" type = "image/png" sizes = "32x32" href = "./assets/favicons/android-icon-96x96.png")
-      link(rel = "icon" type = "image/png" sizes = "96x96" href = "./assets/favicons/android-icon-72x72.png")
-      link(rel = "icon" type = "image/png" sizes = "16x16" href = "./assets/favicons/android-icon-48x48.png")
-      link(rel = "icon" type = "image/png" sizes = "16x16" href = "./assets/favicons/android-icon-36x36.png")
+      link(rel = 'manifest' type = 'application/manifest+json' href = './assets/favicons/manifest.webmanifest' crossorigin='use-credentials')
+      link(rel = 'icon' type = 'image/png' sizes = '512x512'  href = './assets/favicons/android-chrome-512x512.png')
+      link(rel = 'icon' type = 'image/png' sizes = '512x512'  href = './assets/favicons/android-chrome-192x192.png')
+      link(rel = 'icon' type = 'image/png' sizes = '192x192'  href = './assets/favicons/android-icon-192x192.png')
+      link(rel = 'icon' type = 'image/png' sizes = '32x32' href = './assets/favicons/android-icon-96x96.png')
+      link(rel = 'icon' type = 'image/png' sizes = '96x96' href = './assets/favicons/android-icon-72x72.png')
+      link(rel = 'icon' type = 'image/png' sizes = '16x16' href = './assets/favicons/android-icon-48x48.png')
+      link(rel = 'icon' type = 'image/png' sizes = '16x16' href = './assets/favicons/android-icon-36x36.png')
       //- Safari
-      link(rel = "icon" type = "image/svg+xml" href = "./assets/favicons/pinned-tab.svg")
+      link(rel = 'icon' type = 'image/svg+xml' href = './assets/favicons/pinned-tab.svg')
       //- desktop
-      link(rel = "shortcut icon" type = "image/x-icon" href = "./assets/favicons/favicon.ico")
-      link(rel = "icon" type = "image/png" sizes = "96x96" href = "./assets/favicon/favicon-96x96.png")
-      link(rel = "icon" type = "image/png" sizes = "32x32" href = "./assets/favicon/favicon-32x32.png")
-      link(rel = "icon" type = "image/png" sizes = "16x16" href = "./assets/favicon/favicon-16x16.png")
+      link(rel = 'shortcut icon' type = 'image/x-icon' href = './assets/favicons/favicon.ico')
+      link(rel = 'icon' type = 'image/png' sizes = '96x96' href = './assets/favicon/favicon-96x96.png')
+      link(rel = 'icon' type = 'image/png' sizes = '32x32' href = './assets/favicon/favicon-32x32.png')
+      link(rel = 'icon' type = 'image/png' sizes = '16x16' href = './assets/favicon/favicon-16x16.png')
       //- windows
-      meta(name = "msapplication-config" content = "./assets/favicons/browserconfig.xml")
-      meta(name = "msapplication-TileColor" content = "#ffffff")
-      meta(name = "msapplication-TileImage" content = "./assets/favicons/ms-icon-144x144.png")
-      meta(name = "theme-color" content = "#ffffff")
+      meta(name = 'msapplication-config' content = './assets/favicons/browserconfig.xml')
+      meta(name = 'msapplication-TileColor' content = '#ffffff')
+      meta(name = 'msapplication-TileImage' content = './assets/favicons/ms-icon-144x144.png')
+      meta(name = 'theme-color' content = '#ffffff')
     block title
       title #{title}
 

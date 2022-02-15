@@ -1,21 +1,21 @@
-const path = require("path");
-const common = require("./webpack.common");
-const { merge } = require("webpack-merge");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const ImageminPlugin = require("imagemin-webpack-plugin").default;
-const imageminMozjpeg = require("imagemin-mozjpeg");
-const imageminPngquant = require("imagemin-pngquant");
-const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
-const TerserPlugin = require("terser-webpack-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const postcssPresetEnv = require("postcss-preset-env");
+const path = require('path');
+const common = require('./webpack.common');
+const { merge } = require('webpack-merge');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
+const imageminMozjpeg = require('imagemin-mozjpeg');
+const imageminPngquant = require('imagemin-pngquant');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const postcssPresetEnv = require('postcss-preset-env');
 
 module.exports = merge(common, {
-  mode: "production",
+  mode: 'production',
   output: {
-    path: path.resolve(__dirname, "./dist"),
-    publicPath: "https://gunzenroses.github.io/hotelPage/",
-    filename: "assets/js/[name].[hash:7].bundle.js",
+    path: path.resolve(__dirname, './dist'),
+    publicPath: 'https://gunzenroses.github.io/hotelPage/',
+    filename: 'assets/js/[name].[hash:7].bundle.js',
   },
   optimization: {
     minimize: true,
@@ -38,7 +38,7 @@ module.exports = merge(common, {
         use: [
           MiniCssExtractPlugin.loader, // for parallel loading of CSS/JS resources later on
           {
-            loader: "css-loader",
+            loader: 'css-loader',
             options: {
               importLoaders: 1,
               sourceMap: true,
@@ -53,7 +53,7 @@ module.exports = merge(common, {
         use: [
           MiniCssExtractPlugin.loader, // creates style nodes from JS strings
           {
-            loader: "css-loader",
+            loader: 'css-loader',
             options: {
               importLoaders: 1,
               minimize: true,
@@ -62,7 +62,7 @@ module.exports = merge(common, {
             },
           },
           {
-            loader: "postcss-loader",
+            loader: 'postcss-loader',
             options: {
               postcssOptions: {
                 plugins: [postcssPresetEnv()],
@@ -70,10 +70,10 @@ module.exports = merge(common, {
             },
           },
           {
-            loader: "sass-loader", // compiles Sass to CSS
+            loader: 'sass-loader', // compiles Sass to CSS
             options: {
               sourceMap: true,
-              includePaths: [path.resolve("../node_modules")]
+              includePaths: [path.resolve('../node_modules')]
             },
           },
         ],
@@ -94,8 +94,8 @@ module.exports = merge(common, {
       ],
     }),
     new MiniCssExtractPlugin({
-      filename: "assets/css/[name].[hash:7].bundle.css",
-      chunkFilename: "[id].css",
+      filename: 'assets/css/[name].[hash:7].bundle.css',
+      chunkFilename: '[id].css',
     }),
   ],
 });

@@ -1,36 +1,36 @@
 include ../button-rate/button-rate.pug
 include ../room-carousel/room-carousel.pug
 
-mixin card-room({ roomOptions, theme = "" })
+mixin card-room({ roomOptions, theme = '' })
   - 
     var {
       src = [], 
-      bookingNumber = "999", 
+      bookingNumber = '999', 
       bookingType = false, 
       bookingPrice = 0, 
       starName = inputName, 
       starRate = 0, 
       reviewAmount = 0} = roomOptions
   - 
-    var buttonRateClass = theme === "" 
-      ? "card-room__button-rate"
+    var buttonRateClass = theme === '' 
+      ? 'card-room__button-rate'
       : `card-room__button-rate card-room__button-rate_in_${ theme }`
   - 
-    var signClass = theme === "creative" 
-      ? "card-room__sign card-room__sign_in_creative"
-      : "card-room__sign"
+    var signClass = theme === 'creative' 
+      ? 'card-room__sign card-room__sign_in_creative'
+      : 'card-room__sign'
   - 
-    var numberClass = theme === "creative" 
-      ? "card-room__number card-room__number_in_creative"
-      : "card-room__number"
+    var numberClass = theme === 'creative' 
+      ? 'card-room__number card-room__number_in_creative'
+      : 'card-room__number'
   -
-    var roomTypeClass = theme === "search" 
-      ? "card-room__type card-room__type_in_search"
-      : "card-room__type"
+    var roomTypeClass = theme === 'search' 
+      ? 'card-room__type card-room__type_in_search'
+      : 'card-room__type'
   -
-    var periodClass = theme === "search" 
-      ? "card-room__period card-room__period_in_search"
-      : "card-room__period"
+    var periodClass = theme === 'search' 
+      ? 'card-room__period card-room__period_in_search'
+      : 'card-room__period'
 
   .card-room
     +room-carousel({
@@ -44,7 +44,7 @@ mixin card-room({ roomOptions, theme = "" })
           span(class = numberClass)= bookingNumber
           span(class = roomTypeClass)= bookingType 
         .card__group
-          span.card-room__price!= bookingPrice + "₽"
+          span.card-room__price!= bookingPrice + '₽'
           span(class = periodClass) &nbsp;в сутки
       .card-room__rating
         div(class = buttonRateClass)

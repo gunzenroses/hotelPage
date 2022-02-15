@@ -1,45 +1,45 @@
 include ../dropdown-item/dropdown-item.pug
 include ../label/label.pug
 
-mixin dropdown-guests({ labelText = "", dropdownClassShow = "", itemNumbers = [0, 0, 0], labelRightText = "" })
-  - var buttonSubmitClass = "dropdown__button dropdown__button_type_submit";
-  - var buttonResetClass = "dropdown__button dropdown__button_type_reset";
+mixin dropdown-guests({ labelText = '', dropdownClassShow = '', itemNumbers = [0, 0, 0], labelRightText = '' })
+  - var buttonSubmitClass = 'dropdown__button dropdown__button_type_submit';
+  - var buttonResetClass = 'dropdown__button dropdown__button_type_reset';
 
   .dropdown-guests
     +label({ labelText: labelText, labelRightText: labelRightText })
-    div(class = "dropdown js-dropdown-guests")
+    div(class = 'dropdown js-dropdown-guests')
       div(class = `dropdown-guests__content js-expand__content js-expand__show ${ 
         dropdownClassShow }`)
         +dropdown-item({
-          itemDataType: "grownups",
-          itemText: "Взрослые",
+          itemDataType: 'grownups',
+          itemText: 'Взрослые',
           itemDataOrder: 0,
           itemNumber: itemNumbers[0]
         })
         +dropdown-item({
-          itemDataType: "kids",
-          itemText: "Дети",
+          itemDataType: 'kids',
+          itemText: 'Дети',
           itemDataOrder: 1,
           itemNumber: itemNumbers[1]
         })
         +dropdown-item({
-          itemDataType: "infants",
-          itemText: "Младенцы",
+          itemDataType: 'infants',
+          itemText: 'Младенцы',
          itemDataOrder: 2,
          itemNumber: itemNumbers[2]
         })
         .dropdown__buttons
           button(
-            type = "submit"
+            type = 'submit'
             class = `${ buttonSubmitClass } js-dropdown__button_type_submit`
             ) Применить
           button(
-            type = "reset"
+            type = 'reset'
             class = `${ buttonResetClass } js-dropdown__button_type_reset`
             ) Очистить
       .dropdown__info.js-dropdown__info.js-expand__init
         input.dropdown__input.js-dropdown__input(
-          type = "text"
-          placeholder = "Сколько гостей" 
-          name = "guests" 
-          value = "")
+          type = 'text'
+          placeholder = 'Сколько гостей' 
+          name = 'guests' 
+          value = '')

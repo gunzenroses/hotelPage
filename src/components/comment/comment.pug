@@ -4,18 +4,18 @@ include ../info/info.pug
 mixin comment(commentData)
   - 
     var { 
-      authorPic = "", 
-      authorName = "Anonymous", 
+      authorPic = '', 
+      authorName = 'Anonymous', 
       commentTime = Data().getDay(), 
       buttonNumber = 0,
       ifLiked = false,
-      commentText = "none" } = commentData
+      commentText = 'none' } = commentData
 
   .comment
     .comment__head
       img(
         src = authorPic 
-        alt = "profile picture").comment__pic
+        alt = 'profile picture').comment__pic
       +info({ 
         title: authorName, 
         description: commentTime 

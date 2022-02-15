@@ -1,9 +1,9 @@
-mixin button-rate({ inputName = "rating", checkedNum = 1 }) 
+mixin button-rate({ inputName = 'rating', checkedNum = 1 }) 
   .button-rate
     each val in [5, 4, 3, 2, 1]
       if checkedNum <= val
         input(
-          type = "radio" 
+          type = 'radio' 
           name = inputName 
           value = val 
           checked = true 
@@ -12,7 +12,7 @@ mixin button-rate({ inputName = "rating", checkedNum = 1 })
           for = `${ inputName }-${ val }`).button-rate__fake
       else
         input(
-          type = "radio" 
+          type = 'radio' 
           name = inputName 
           value = val 
           checked = false 

@@ -6,25 +6,25 @@ include ../../../components/card-search/card-search.pug
 include ../../../components/card-sing-in/card-sign-in.pug
 
 block variables
-  - var theme = "uikit"
-  - var title = "UIKit";
-  - var description = "UIKit";
-  - var keywords = "UIKit";
+  - var theme = 'uikit'
+  - var title = 'UIKit';
+  - var description = 'UIKit';
+  - var keywords = 'UIKit';
   - 
     var { 
       room888, 
       room840, 
       priceInfos,
-      cardBookingInfo } = require("Pages/UIKit/cards/cards.json");
+      cardBookingInfo } = require('Pages/UIKit/cards/cards.json');
 
 block content
   .cards.js-dropdown__detection
-    img.uikit__logo(src = "./assets/images/logo/logo.svg" alt = "uikit logo")
+    img.uikit__logo(src = './assets/images/logo/logo.svg' alt = 'uikit logo')
     .cards__content
       .cards__card-search
         +card-search()
       .cards__card-registration
-        +card-registration("Перейти к оплате")
+        +card-registration('Перейти к оплате')
       .cards__card-booking
         +card-booking({ cardBookingInfo: cardBookingInfo })
       .cards__card-sign-in
@@ -34,4 +34,4 @@ block content
       .cards__card-room
         +card-room({ roomOptions: room888 })
       .cards__card-room_second
-        +card-room({ roomOptions: room840, theme: "creative" })
+        +card-room({ roomOptions: room840, theme: 'creative' })

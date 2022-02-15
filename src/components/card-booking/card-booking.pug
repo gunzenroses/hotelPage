@@ -5,31 +5,31 @@ include ../dropdown-guests/dropdown-guests.pug
 mixin card-booking({ cardBookingInfo })
   - var { theme, itemNumbers, priceInfos } = cardBookingInfo;
   -
-    var descriptionClass = theme === ""
-      ? "card-booking__description" 
+    var descriptionClass = theme === ''
+      ? 'card-booking__description' 
       : `card-booking__description card-booking__description_in_${ theme }`
   - 
-    var infoSignClass = theme === ""
-      ? "card-booking__info-sign" 
+    var infoSignClass = theme === ''
+      ? 'card-booking__info-sign' 
       : `card-booking__info-sign card-booking__info-sign_in_${ theme }`
   - 
-    var totalPriceClass = theme === ""
-      ? "card-booking__summary"
+    var totalPriceClass = theme === ''
+      ? 'card-booking__summary'
       : `card-booking__summary card-booking__summary_in_${ theme }`
   - 
-    var infoNumberClass = theme === "uikit"
-      ? "card-booking__number" 
+    var infoNumberClass = theme === 'uikit'
+      ? 'card-booking__number' 
       : `card-booking__number card-booking__number_in_${ theme }`
   -
-    var infoSuiteClass = theme === "uikit"
-      ? "card-booking__suite"
+    var infoSuiteClass = theme === 'uikit'
+      ? 'card-booking__suite'
       : `card-booking__suite card-booking__suite_in_${ theme }`
   - 
-    var bookingLineClass = theme === "uikit"
-      ? "card-booking__line card-booking__line_in_uikit"
-      : "card-booking__line"
+    var bookingLineClass = theme === 'uikit'
+      ? 'card-booking__line card-booking__line_in_uikit'
+      : 'card-booking__line'
 
-  form.card-booking(method = "get" action = "./search-room.html")
+  form.card-booking(method = 'get' action = './search-room.html')
     .card__row
       .card__group
         span.card-booking__number-sign №
@@ -42,28 +42,28 @@ mixin card-booking({ cardBookingInfo })
       +date-range({
         dateRanges: [
           {
-            labelText: "Прибытие",
-            value: "19.08.2019",
-            name: "check-in",
-            data: "check-in"
+            labelText: 'Прибытие',
+            value: '19.08.2019',
+            name: 'check-in',
+            data: 'check-in'
           }, {
-            labelText: "Выезд",
-            value: "23.08.2019",
-            name: "check-out",
-            data: "check-out"
+            labelText: 'Выезд',
+            value: '23.08.2019',
+            name: 'check-out',
+            data: 'check-out'
           }
         ]
       })
     .card-booking__dropdown-guests
       +dropdown-guests({
-        labelText: "Гости",
+        labelText: 'Гости',
         itemNumbers: itemNumbers
       })
     each priceInfo in priceInfos 
       - var { infoDesctiption, infoSign, infoPrice } = priceInfo
       .card-booking__price-info
         div(class = descriptionClass)= infoDesctiption
-          if infoSign === "full"
+          if infoSign === 'full'
             div(class = infoSignClass)
         .card-booking__expense!= `${ infoPrice }₽`
     div(class = totalPriceClass)
@@ -72,6 +72,6 @@ mixin card-booking({ cardBookingInfo })
       .card-booking__text 38 081₽
     .card-booking__button
       +button-submit({ 
-        buttonText: "Забронировать",
+        buttonText: 'Забронировать',
         theme: theme
       })

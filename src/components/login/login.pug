@@ -1,19 +1,19 @@
 include ../textfield/textfield.pug
 
-mixin login(theme = "")
+mixin login(theme = '')
   - 
-    var loginClass = theme === ""
-      ? "login" : `login login_in_${ theme }`
+    var loginClass = theme === ''
+      ? 'login' : `login login_in_${ theme }`
 
   div(class = loginClass)
     +textfield({ 
-      inputClass: "email",
-      placeholder: "Email",
-      nameText: "email",
+      inputClass: 'email',
+      placeholder: 'Email',
+      nameText: 'email',
       autofocus: false 
     })
     +textfield({ 
-      inputClass: "password",
-      placeholder: "Пароль",
-      nameText: "password"
+      inputClass: 'password',
+      placeholder: 'Пароль',
+      nameText: 'password'
     })

@@ -3,17 +3,17 @@ include ../logo/logo.pug
 include ../navlink/navlink.pug
 include ../navlink-dropdown/navlink-dropdown.pug
 
-mixin header({ user = "", theme = "" })
+mixin header({ user = '', theme = '' })
   - 
-    var headerClass = theme === ""
-      ? "header" 
+    var headerClass = theme === ''
+      ? 'header' 
       : `header header_in_${ theme }`
   - 
-    var userClick = user === ""
-      ? "registration.html" : `some-profile-${ user }.html`
+    var userClick = user === ''
+      ? 'registration.html' : `some-profile-${ user }.html`
   
   header(class = headerClass)
-    if theme === ""
+    if theme === ''
       .header__logo
         +logo()
     else
@@ -24,53 +24,53 @@ mixin header({ user = "", theme = "" })
       nav.header__dropdown.expand__content.js-expand__content
         ul.header__navbar.header__navbar_dropdown
           +navlink({
-            buttonText: "О нас",
-            onClick: "./some-address"
+            buttonText: 'О нас',
+            onClick: './some-address'
           })
-          +navlink-dropdown("Услуги")
+          +navlink-dropdown('Услуги')
           +navlink({
-            buttonText: "Вакансии",
-            onClick: "./some-address"
+            buttonText: 'Вакансии',
+            onClick: './some-address'
           })
           +navlink({
-            buttonText: "Новости",
-            onClick: "./some-address"
+            buttonText: 'Новости',
+            onClick: './some-address'
           })
-          +navlink-dropdown("Соглашения")
+          +navlink-dropdown('Соглашения')
       if user
         a.header__user(href = userClick)= user
       else
         .header__forms
           .header__sign-in
             +button-link({
-              buttonText: "Войти",
-              buttonOnclick: "sign-in.html",
-              className: "sign-in"
+              buttonText: 'Войти',
+              buttonOnclick: 'sign-in.html',
+              className: 'sign-in'
             })
           .header__registration
             +button-link({ 
-              buttonOnclick: "registration.html",
-              className: "registration"
+              buttonOnclick: 'registration.html',
+              className: 'registration'
             })
       nav.header__navbar-region
         ul.header__navbar
           +navlink({
-            buttonText: "О нас",
-            onClick: "./some-address",
-            modifier: "header",
-            buttonModifier: "header"
+            buttonText: 'О нас',
+            onClick: './some-address',
+            modifier: 'header',
+            buttonModifier: 'header'
           })
-          +navlink-dropdown("Услуги")
+          +navlink-dropdown('Услуги')
           +navlink({
-            buttonText: "Вакансии",
-            onClick: "./some-address",
-            modifier: "header",
-            buttonModifier: "header"
+            buttonText: 'Вакансии',
+            onClick: './some-address',
+            modifier: 'header',
+            buttonModifier: 'header'
           })
           +navlink({
-            buttonText: "Новости",
-            onClick: "./some-address",
-            modifier: "header",
-            buttonModifier: "header"
+            buttonText: 'Новости',
+            onClick: './some-address',
+            modifier: 'header',
+            buttonModifier: 'header'
           })
-          +navlink-dropdown("Соглашения")
+          +navlink-dropdown('Соглашения')

@@ -8,42 +8,42 @@ include ../textfield/textfield.pug
 
 mixin card-registration(submitText)
   form.card-registration.js-card-registration(
-    method = "get" 
-    action = "./registration.html" )
+    method = 'get' 
+    action = './registration.html' )
     h1.card__title Регистрация аккаунта
     .card-registration__name
       +textfield({ 
-        inputClass: "name",
-        placeholder: "Имя",
-        valueText: "",
-        nameText: "name",
+        inputClass: 'name',
+        placeholder: 'Имя',
+        valueText: '',
+        nameText: 'name',
         maxText: 20 
       })
     .card-registration__surname
       +textfield({ 
-        inputClass: "name",
-        placeholder: "Фамилия",
-        valueText: "",
-        nameText: "surname",
+        inputClass: 'name',
+        placeholder: 'Фамилия',
+        valueText: '',
+        nameText: 'surname',
         maxText: 20 
       })
     .card-registration__radio
       +radio-buttons({ })
     .card-registration__birthday
       .container
-        +label({ labelText: "Дата рождения" })
+        +label({ labelText: 'Дата рождения' })
         +textfield({
-          inputClass: "birthday",
-          placeholder: "ДД.ММ.ГГГГ",
-          nameText: "birthday",
+          inputClass: 'birthday',
+          placeholder: 'ДД.ММ.ГГГГ',
+          nameText: 'birthday',
           maxText: 10
         })
     .card-registration__login
       .container
-        +label({ labelText: "Данные для входа в сервис" })
+        +label({ labelText: 'Данные для входа в сервис' })
         +login()
     .card-registration__specials
-      +button-toggle({ inputName: "special offers" })
+      +button-toggle({ inputName: 'special offers' })
     .card-registration__button-submit
       +button-submit({ buttonText: submitText })
     .card-registration__info
@@ -51,7 +51,7 @@ mixin card-registration(submitText)
         .card__text Уже есть аккаунт на Toxin
         .card-registration__button-link
           +button-link({
-            buttonText: "Войти",
-            buttonOnclick: "sign-in.html",
-            className: "sign-in"
+            buttonText: 'Войти',
+            buttonOnclick: 'sign-in.html',
+            className: 'sign-in'
           })

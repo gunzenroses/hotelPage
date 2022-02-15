@@ -3,16 +3,16 @@ include ../../../components/footer/footer.pug
 include ../../../components/footer-mobile/footer-mobile.pug
 
 block variables
-  - var title = "UIKit";
-  - var description = "UIKit";
-  - var keywords = "UIKit";
+  - var title = 'UIKit';
+  - var description = 'UIKit';
+  - var keywords = 'UIKit';
 
 block content
   .headers-n-footers.js-dropdown__detection
-    img.uikit__logo(src = "./assets/images/logo/logo.svg" alt = "uikit logo")
+    img.uikit__logo(src = './assets/images/logo/logo.svg' alt = 'uikit logo')
     +header({ })
     .headers-n-footers__header
-      +header({ user: "Юлий Цезарь" })
+      +header({ user: 'Юлий Цезарь' })
     .headers-n-footers__footer
       +footer()
     .headers-n-footers__footer-mobile
