@@ -22,14 +22,10 @@ class RoomCarousel {
     this.leftValue = parseInt(this.carouselPictures.style.left, 10);
     this.carouselPrev = this.carousel.querySelector(
       '.js-room-carousel__button_prev'
-    )
-      ? this.carousel.querySelector('.js-room-carousel__button_prev')
-      : null;
+    );
     this.carouselNext = this.carousel.querySelector(
       '.js-room-carousel__button_next'
-    )
-      ? this.carousel.querySelector('.js-room-carousel__button_next')
-      : null;
+    );
     this.carouselRow = this.carouselInputs.getElementsByClassName(
       'js-room-carousel__radio-real'
     );
