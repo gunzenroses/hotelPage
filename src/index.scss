@@ -27,29 +27,29 @@ body {
   color: black;
   background-color: white;
   user-select: none;
-}
 
-.navigation__item {
-  width: calc(100%/3);
-  padding: 10px;
-  height: fit-content;
-  list-style-type: none;
-  cursor: pointer;
-}
+  &__item {
+    width: calc(100%/3);
+    padding: 10px;
+    height: fit-content;
+    list-style-type: none;
+    cursor: pointer;
+  }
 
-.navigation__link {
-  position: relative;
-  width: 100%;
-  text-decoration: none;
-}
+  &__link {
+    position: relative;
+    width: 100%;
+    text-decoration: none;
+  }
 
-.navigation__pic {
-  position: relative;
-  top: 0;
-  width: 100%;
-  height: fit-content;
-}
+  &__pic {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: fit-content;
 
-.navigation__pic:hover {
-  box-shadow: 0 0 10px gray;
+    &:hover {
+      box-shadow: 0 0 10px gray;
+    }
+  }
 }

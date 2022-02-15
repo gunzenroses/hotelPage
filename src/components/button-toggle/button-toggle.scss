@@ -36,6 +36,10 @@
     margin: 0 auto;
   }
 
+  &__item + &__item {
+    margin-top: 10px;
+  }
+
   &__real {
     position: absolute;
     width: 40px;
@@ -49,18 +53,6 @@
     @include buttonFake();
   }
 
-  &__title {
-    display: inline-block;
-    color: $dark-shade_more;
-    letter-spacing: 0.001em;
-    line-height: 19px;
-    font-size: 1em;
-  }
-
-  &__item + &__item {
-    margin-top: 10px;
-  }
-
   &__real:checked + &__fake {
     @include buttonFake();
     border-color: $purple;
@@ -69,5 +61,13 @@
       left: 23px;
       background: $linearGradientLilac;
     }
+  }
+
+  &__title {
+    display: inline-block;
+    color: $dark-shade_more;
+    letter-spacing: 0.001em;
+    line-height: 19px;
+    font-size: 1em;
   }
 }

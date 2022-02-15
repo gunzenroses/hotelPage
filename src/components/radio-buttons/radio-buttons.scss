@@ -63,8 +63,9 @@
     @include radioButtonFake();
   }
 
-  &__title {
-    @include radioButtonTitle();
+  &__real:checked ~ &__fake {
+    @include radioButtonFake();
+    border-color: $purple;
   }
 
   &__real:checked + &__fake::before {
@@ -79,9 +80,8 @@
     border-radius: 50%;
   }
 
-  &__real:checked ~ &__fake {
-    @include radioButtonFake();
-    border-color: $purple;
+  &__title {
+    @include radioButtonTitle();
   }
 
   &__real:checked ~ &__title {

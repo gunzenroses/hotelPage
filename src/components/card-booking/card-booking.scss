@@ -231,6 +231,20 @@
       color: $dark-shade_most;
       border-color: $dark-shade_most;
       cursor: pointer;
+
+      &::after {
+        content: 'sign up for discount';
+        position: absolute;
+        top: 0;
+        left: calc(100% + 5px);
+        height: 0;
+        width: 100px;
+        height: fit-content;
+        border-radius: 3px;
+        text-align: center;
+        color: $light;
+        background-color: $purple;
+      }
     }
 
     &::before {
@@ -251,19 +265,5 @@
     &_in_uikit {
       margin-left: 5px;
     }
-  }
-
-  &__info-sign:hover::after {
-    content: 'sign up for discount';
-    position: absolute;
-    top: 0;
-    left: calc(100% + 5px);
-    height: 0;
-    width: 100px;
-    height: fit-content;
-    border-radius: 3px;
-    text-align: center;
-    color: $light;
-    background-color: $purple;
   }
 }

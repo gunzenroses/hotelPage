@@ -72,6 +72,10 @@
     user-select: none;
   }
 
+  &__item + &__item{
+    margin-top: 8px;
+  }
+
   &__form {
     @include isFlex($direction: column, $justify: flex-start);
     max-width: 350px;
@@ -138,9 +142,5 @@
     @include _1650-1920 {
       @include containerBlock(5px, 10px);
     }
-  }
-
-  &__item + &__item{
-    margin-top: 8px;
   }
 }
