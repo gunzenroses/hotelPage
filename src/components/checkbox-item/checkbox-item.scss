@@ -1,0 +1,128 @@
+@import '@~Assets/styles/media-mixins.scss';
+@import '@~Assets/styles/mixins.scss';
+
+@mixin checkBox {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+
+  @include _1750-1920 {
+    @include containerBlock(25px, 25px);
+  }
+}
+
+@mixin checkboxFake {
+  @include checkBox();
+  position: relative;
+  display: inline-block;
+  border: 1px solid $dark-shade_less;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.checkbox-item {
+  @include isFlex($justify: flex-start);
+  width: fit-content;
+  max-width: 100%;
+  text-transform: none;
+  cursor: pointer;
+  user-select: none;
+
+  &_rich {
+    height: fit-content;
+  }
+
+  & + & {
+    margin-top: 10px;
+  }
+
+  &_rich + &_rich {
+    margin-top: 8px;
+  }
+
+  &__real {
+    @include checkBox();
+    position: absolute;
+    opacity: 0;
+    appearance: none;
+  }
+
+  &__fake {
+    @include checkboxFake();
+    min-width: 20px;
+  }
+
+  &__real:checked ~ &__fake {
+    @include checkboxFake();
+    border-color: $purple;
+  }
+
+  &__real:checked + &__fake::before {
+    content: '';
+    @include containerBlock(4px, 6px);
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    border-image: $linearGradientLilac;
+    border-image-slice: 1;
+    border-right: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+
+    @include _1750-1920 {
+      @include containerBlock(5px, 10px);
+    }
+  }
+
+  &__form {
+    @include isFlex($direction: column, $justify: flex-start);
+    max-width: 350px;
+    height: fit-content;
+  }
+
+  &__title {
+    display: block;
+    width: fit-content;
+    margin-top: 2px;
+    font-family: $montserrat;
+    font-size: 13.5px;
+    line-height: 18px;
+    letter-spacing: .02em;
+    color: $dark-shade_medium;
+    font-weight: 400;
+
+    @include _1750-1920 {
+      font-size: $fs_base;
+    }
+
+    &_expandable {
+      margin-top: 0;
+      font-size: $fs_base;
+      line-height: 20px;
+      letter-spacing: 0.003em;
+    }
+
+    &_rich {
+      margin-top: 1px;
+      font-size: $fs_base;
+      letter-spacing: 0.0001em;
+      font-weight: 700;
+      color: $dark-shade_more;
+    }
+  }
+
+  &__description {
+    height: fit-content;
+    margin-top: 5px;
+    font-size: $fs_h3;
+    line-height: 15px;
+    font-weight: 400;
+    letter-spacing: 0.0001em;
+    color: $dark-shade_medium;
+
+    @include _1750-1920 {
+      line-height: $fs_h2;
+      font-size: $fs_base;
+    }
+  }
+}

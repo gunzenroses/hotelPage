@@ -1,14 +1,14 @@
+include ../checkbox-item/checkbox-item.pug
+
 mixin checkbox
   - var { houseRules } = require("Components/checkbox/checkbox.json");
 
   fieldset.checkbox
     each houseRule in houseRules
       - var { valueText, inputName, ifChecked, checkboxTitle } = houseRule
-      label.checkbox__item
-        input(
-          type = "checkbox"
-          value = valueText
-          name = inputName
-          checked = ifChecked).checkbox__real
-        span.checkbox__fake
-        span.checkbox__title!= checkboxTitle
+      +checkbox-item({
+        valueText: valueText, 
+        inputName: inputName, 
+        ifChecked: ifChecked, 
+        checkboxTitle: checkboxTitle
+      })
