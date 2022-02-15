@@ -45,16 +45,6 @@ mixin footer(theme = 'main')
                   onClick: item.link,
                   modifier: 'footer'
                 })
-      .footer__info-hidden
-        for footerGroup in footerGroups
-          div(class = `footer__${ footerGroup.name }`)
-            h3.footer__title.js-expand__init!= footerGroup.text
-            ul.footer__dropdown.js-expand__content
-              for item in footerGroup.items
-                +navlink({ 
-                  buttonText: item.name, 
-                  onClick: item.link
-                })
       .footer__subscription
         h3.footer__title Подписка
         p.footer__special-offer!= footerTextSubscription
