@@ -300,6 +300,7 @@
 
   &__dropdown {
     @include _470 {
+      display: none;
       position: absolute;
       top: 20px;
       width: 200px;
