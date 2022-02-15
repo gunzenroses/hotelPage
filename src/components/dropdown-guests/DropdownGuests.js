@@ -39,10 +39,9 @@ export default class DropdownGuests {
   }
 
   makeData() {
-    const nums = Array.from(
+    Array.from(
       this.container.querySelectorAll('.js-dropdown-item__number')
-    );
-    nums.forEach((num) => {
+    ).forEach((num) => {
       const value = parseInt(num.textContent, 10);
       this.data.push(value);
     });
