@@ -44,7 +44,7 @@
 }
 
 .footer {
-  @include isFlex($direction: column, $align: center);
+  @include isFlex($direction: column, $justify: flex-start, $align: center);
   width: 100%;
   max-width: 1920px;
   height: 445px;
@@ -58,7 +58,7 @@
     height: auto;
   }
 
-  @include _800 {
+  @include _1340 {
     height: fit-content;
   }
 
