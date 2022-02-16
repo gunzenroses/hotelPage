@@ -259,19 +259,17 @@ class Calendar {
   @boundMethod
   resetInput(e) {
     e.preventDefault();
-    const rangeInput = this.rangeSpan;
-    const separateInput = this.rangeStart && this.rangeEnd;
     this.checkIn = '';
     this.checkOut = '';
-    if (rangeInput) {
+    if (this.rangeSpan) {
       this.rangeSpan.value = '';
     }
-    if (separateInput) {
+    if (this.rangeStart && this.rangeEnd) {
       this.rangeStart.value = '';
       this.rangeEnd.value = '';
     }
-    this.render();
     this.calendar.classList.remove('expand__show');
+    this.render();
   }
 
   @boundMethod
@@ -376,9 +374,9 @@ class Calendar {
     if (!this.checkOut) return false;
     const checkOutPrevMonth = this.checkOut.getMonth() === this.month - 1;
     const checkInThisYear = this.checkIn.getFullYear() === this.year;
-    const checkOutPrevDday = this.checkOut.getDate() === prevDay;
+    const checkOutPrevDay = this.checkOut.getDate() === prevDay;
     const checkOutPrevMonthThisYear = this.checkOut
-      ? checkOutPrevMonth && checkInThisYear && checkOutPrevDday
+      ? checkOutPrevMonth && checkInThisYear && checkOutPrevDay
       : false;
     return checkOutPrevMonthThisYear;
   }
@@ -432,10 +430,10 @@ class Calendar {
     const betweenInOutPrevYear = InOutPrevYear
       && inLastMonthBeforePrev
       && outLastMonthAfterPrev;
-    const betweenOutPrevYeaer = outPrevYear && outLastMonthAfterPrev;
+    const betweenOutPrevYear = outPrevYear && outLastMonthAfterPrev;
     const betweenInOutPrevYearFull = betweenInPrevYear
       || betweenInOutPrevYear
-      || betweenOutPrevYeaer;
+      || betweenOutPrevYear;
     return betweenInOutPrevYearFull;
   }
 
