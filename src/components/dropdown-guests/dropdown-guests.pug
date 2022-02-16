@@ -9,8 +9,7 @@ mixin dropdown-guests({ labelText = '', dropdownClassShow = '', itemNumbers = [0
     +label({ labelText: labelText, labelRightText: labelRightText })
     div(class = 'dropdown js-dropdown-guests')
       div(
-        class = `dropdown-guests__content js-expand__content js-expand__show ${ 
-        dropdownClassShow }`)
+        class = `dropdown-guests__content js-expand ${ dropdownClassShow }`)
         +dropdown-item({
           itemDataType: 'grownups',
           itemText: 'Взрослые',

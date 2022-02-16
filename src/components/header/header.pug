@@ -10,7 +10,8 @@ mixin header({ user = '', theme = '' })
       : `header header_in_${ theme }`
   - 
     var userClick = user === ''
-      ? 'registration.html' : `some-profile-${ user }.html`
+      ? 'registration.html' 
+      : `some-profile-${ user }.html`
   
   header(class = headerClass)
     if theme === ''
@@ -21,7 +22,7 @@ mixin header({ user = '', theme = '' })
     .header__menu
       .header__burger-menu.js-expand__init
         span.header__burger-span
-      nav.header__dropdown.expand__content.js-expand__content
+      nav.header__dropdown.expand.js-expand
         ul.header__navbar.header__navbar_dropdown
           +navlink({
             buttonText: 'О нас',

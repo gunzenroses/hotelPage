@@ -22,7 +22,7 @@ class Expand {
     });
     this.dropdownWatchedParents.forEach((item) => {
       this.dropdownWatchedExpands.push(
-        item.querySelector('.js-expand__content')
+        item.querySelector('.js-expand')
       );
     });
   }
@@ -34,7 +34,7 @@ class Expand {
   @boundMethod
   dropdownClick(event) {
     const el = event.target;
-    const hasInnerExpand = el.closest('.js-expand__show');
+    const hasInnerExpand = el.closest('.js-expand');
     const hasExpand = el.closest('.js-expand__init');
     const hasParent = el.parentElement;
     const noExpand = !hasInnerExpand && !hasExpand;
@@ -46,7 +46,7 @@ class Expand {
 
   expandElement(el) {
     const innerParent = el.closest('.js-expand__init').parentElement;
-    const innerExpand = innerParent.querySelector('.js-expand__content');
+    const innerExpand = innerParent.querySelector('.js-expand');
     innerExpand.classList.toggle('expand__show');
     return this;
   }

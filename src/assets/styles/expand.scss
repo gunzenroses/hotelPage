@@ -2,35 +2,35 @@
 @import '@~Assets/styles/media-mixins.scss';
 @import '@~Assets/styles/mixins.scss';
 
-.expand__content {
+.expand {
   display: none;
 
   @include _450 {
     width: 100%;
     min-width: 260px;
   }
-}
 
-.expand__show {
-  @include isFlex($direction: column, $justify: flex-start);
+  &__show {
+    @include isFlex($direction: column, $justify: flex-start);
 
-  @include _1650-1920 {
-    width: 100%;
+    @include _1650-1920 {
+      width: 100%;
+    }
+
+    & ~ .dropdown__button_transparent::before {
+      content: '\e5ce';
+    }
+
+    & ~ .dropdown__info {
+      border: 1px solid $dark-shade_medium;
+    }
+
+    & ~ .dropdown__info::before {
+      content: '\e5ce';
+    }
+
+    & ~ .date-range__selector .date-range__info::before {
+      transform: rotate(180deg);
+    }
   }
-}
-
-.expand__show ~ .dropdown__button_transparent::before {
-  content: '\e5ce';
-}
-
-.expand__show ~ .dropdown__info {
-  border: 1px solid $dark-shade_medium;
-}
-
-.expand__show ~ .dropdown__info::before {
-  content: '\e5ce';
-}
-
-.expand__show ~ .date-range__selector .date-range__info::before {
-  transform: rotate(180deg);
 }
