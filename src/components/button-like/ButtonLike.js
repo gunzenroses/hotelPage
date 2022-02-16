@@ -7,28 +7,28 @@ class ButtonLike {
   }
 
   init() {
-    this.createClasses();
-    this.createChildren();
-    this.enableEventListeners();
+    this._createClasses();
+    this._createChildren();
+    this._enableEventListeners();
   }
 
-  createClasses() {
+  _createClasses() {
     this.classNumber = 'button-like__number';
     this.classHeart = 'button-like__heart';
     this.classButton = 'button-like';
   }
 
-  createChildren() {
+  _createChildren() {
     this.number = this.buttonLike.querySelector(`.js-${ this.classNumber }`);
     this.heart = this.buttonLike.querySelector(`.js-${ this.classHeart }`);
   }
 
-  enableEventListeners() {
-    this.buttonLike.addEventListener('pointerup', this.render);
+  _enableEventListeners() {
+    this.buttonLike.addEventListener('pointerup', this._render);
   }
 
   @boundMethod
-  render() {
+  _render() {
     const ifLiked = this.buttonLike.classList.contains(
       `${ this.classButton }_popular`
     );
