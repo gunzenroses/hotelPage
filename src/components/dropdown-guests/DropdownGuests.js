@@ -25,7 +25,7 @@ export default class DropdownGuests {
   }
 
   createChildren() {
-    this.dropdownExpanded = this.container.querySelector('.js-expand__content');
+    this.dropdownExpanded = this.container.querySelector('.js-expand');
     this.info = this.container.querySelector('.js-dropdown__info');
     this.infoInput = this.container.querySelector('.js-dropdown__input');
     this.dropdownItems = Array.from(
