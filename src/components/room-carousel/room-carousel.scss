@@ -122,12 +122,12 @@
 
     &_next {
       transform: matrix(-1, 0, 0, 1, 0, 0);
-    }
 
-    &_next::before {
-      content: '\e5cb';
-      @include carouselButton();
-      font-family: $material-icons;
+      &::before {
+        content: '\e5cb';
+        @include carouselButton();
+        font-family: $material-icons;
+      }
     }
 
     &_prev::before {

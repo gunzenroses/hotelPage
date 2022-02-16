@@ -25,6 +25,14 @@
     letter-spacing: 0.001em;
   }
 
+  &_type_footer + &_type_footer {
+    margin-top: 20px;
+
+    @include _800 {
+      margin-top: 0;
+    }
+  }
+
   &__button {
     display: inline-block;
     position: relative;
@@ -50,13 +58,5 @@
   &:hover &__button {
     font-weight: 700;
     color: $dark-shade_more;
-  }
-
-  &_type_footer + &_type_footer {
-    margin-top: 20px;
-
-    @include _800 {
-      margin-top: 0;
-    }
   }
 }

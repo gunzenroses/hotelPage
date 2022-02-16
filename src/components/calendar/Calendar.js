@@ -326,7 +326,8 @@ class Calendar {
       const betweenInOutYears = betweenInOutOneYear
         || this.betweenInOutDiffYears(prevDay);
       if (this.checkInPrevMonth(prevDay) || this.checkInPrevYear(prevDay)) {
-        prevDays += `<div class = '${ this.dayCalendar }_prev_check-in'>${ prevDay }</div>`;
+        prevDays += `<div class = '${ 
+          this.dayCalendar }_prev_check-in'>${ prevDay }</div>`;
       } else if (
         this.checkOutPrevMonth(prevDay)
         || this.checkOutPrevYear(prevDay)

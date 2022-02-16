@@ -1,7 +1,8 @@
 mixin label({ labelText = '', labelRightText = '', labelRightClass = '' })
   - 
     var labelRight = labelRightClass === ''
-      ? 'label label_right' : `label label_right_for_${ labelRightClass }`
+      ? 'label label_right' 
+      : `label label_right_for_${ labelRightClass }`
 
   h3.label!= labelText
   if labelRightText !== ''

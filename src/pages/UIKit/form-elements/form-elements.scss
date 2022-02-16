@@ -164,7 +164,10 @@
 
   &__input-buttons {
     @include containerSimple(260px, 537px);
-    @include isFlex($direction: column, $justify: flex-start, $align: flex-start);
+    @include isFlex(
+      $direction: column, 
+      $justify: flex-start, 
+      $align: flex-start);
     margin-right: 124px;
 
     @include _1400 {
@@ -254,7 +257,10 @@
 
   &__clickable-objects {
     @include containerSimple(320px, 503px);
-    @include isFlex($direction: column, $align: flex-start, $justify: flex-start);
+    @include isFlex(
+      $direction: column,
+       $align: flex-start, 
+       $justify: flex-start);
     margin-right: 7px;
 
     @include _1400 {
@@ -348,7 +354,10 @@
   }
 
   &__dropdowns {
-    @include isFlex($direction: column, $justify: flex-start, $align: flex-start);
+    @include isFlex(
+      $direction: column, 
+      $justify: flex-start, 
+      $align: flex-start);
     width: 267px;
     min-height: 647px;
     margin: 99px 168px 0 -1px;
@@ -381,7 +390,10 @@
 
   &__search-info {
     @include containerSimple(320px, 465px);
-    @include isFlex($direction: column, $align: flex-start, $justify: flex-start);
+    @include isFlex(
+      $direction: column, 
+      $align: flex-start, 
+      $justify: flex-start);
     margin-top: 99px;
     margin-right: 60px;
 
@@ -402,7 +414,10 @@
 
   &__room-info {
     @include containerSimple(320px, 467px);
-    @include isFlex($direction: column, $align: flex-start, $justify: flex-start);
+    @include isFlex(
+      $direction: column, 
+      $align: flex-start, 
+      $justify: flex-start);
     margin-top: 99px;
     margin-right: 7px;
 
@@ -418,7 +433,10 @@
 
   &__badges {
     @include containerSimple(291px, fit-content);
-    @include isFlex($direction: column, $justify: flex-start, $align: flex-start);
+    @include isFlex(
+      $direction: column, 
+      $justify: flex-start, 
+      $align: flex-start);
     margin-right: 120px;
     margin-top: 38px;
     margin-left: -1px;
