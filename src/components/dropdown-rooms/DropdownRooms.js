@@ -163,6 +163,6 @@ export default class DropdownRooms {
           break;
       }
     }
-    return `${ this.data[j] } ${ dataTypeName } `;
+    return `${ this.data[j] } ${ dataTypeName }`;
   }
 }
