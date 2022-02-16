@@ -42,7 +42,7 @@ class Pagination {
     this.render();
     this.createChildren();
     this.enable();
-    this.addButtonsToContainer();
+    this.addToContainer();
   }
 
   createChildren() {
@@ -81,7 +81,7 @@ class Pagination {
     }
   }
 
-  addButtonsToContainer(){
+  addToContainer(){
     this.paginationContainer.prepend(this.pageButtons);
     this.paginationContainer.append(this.paginationInfo);
   }
@@ -116,13 +116,12 @@ class Pagination {
     const ifNumIsOne = this.num === 1;
     const start = ifNumIsOne ? 1 : this.min;
     const end = ifNumIsOne ? 3 : this.max;
-    const buttonNums = Array.from(
-      { length: (end - start) },
+    Array.from(
+      { length: (end - start + 1) },
       (_, i) => i + start
-    );
-    buttonNums.forEach(
-      (i) => this.pageButtons.appendChild(this.addButton(i))
-    );
+    ).forEach((i) => {
+      this.pageButtons.appendChild(this.addButton(i)) 
+    });
   }
 
   addButton(i) {
