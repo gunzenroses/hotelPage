@@ -11,13 +11,16 @@ block variables
   - var description = 'landing page';
   - var keywords = 'landing page';
   - var { landingPics } = require('./landing-page.json');
+  - 
+    var landingText = 
+    'Лучшие номера для вашей работы, отдыха и просто вдохновения';
 
 block content
   .landing-page.js-dropdown__detection
     +header({ user: '', theme: theme })
     main.landing-page__content
       +carousel-landing(landingPics)
-      blockquote.landing-page__text Лучшие номера для вашей работы, отдыха и просто вдохновения
+      blockquote.landing-page__text!= landingText
       .landing-page__card-search
         +card-search()
     +footer(theme)

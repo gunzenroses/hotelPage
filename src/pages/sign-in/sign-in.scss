@@ -16,12 +16,12 @@
     height: 702px;
 
     @include _500 {
-      // carouselsign-in + card-sign-in + initial top
+      // carousel sign-in + card-sign-in + initial top
       height: calc(683 / 1440 * 100vw + 360px + 40px);
     }
 
     @include _380 {
-      // carouselsign-in + card-sign-in + initial top
+      // carousel sign-in + card-sign-in + initial top
       height: calc(683 / 1440 * 100vw + 360px);
       min-height: calc(683 / 1440 * 320px + 360px);
     }

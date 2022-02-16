@@ -117,12 +117,12 @@ export default class DropdownGuests {
 
   activateMinusPlus(i) {
     if (this.data[i] <= 0) {
-      this.dropdownMinuses[i].classList.add(`${ 
+      this.dropdownMinuses[i].classList.add(`${
         this.classItemMinus }_disabled`);
     } else if (this.data[i] > 0 && this.data[i] < 10) {
-      this.dropdownPluses[i].classList.remove(`${ 
+      this.dropdownPluses[i].classList.remove(`${
         this.classItemPlus }_disabled`);
-      this.dropdownMinuses[i].classList.remove(`${ 
+      this.dropdownMinuses[i].classList.remove(`${
         this.classItemMinus }_disabled`);
     } else {
       this.dropdownPluses[i].classList.add(`${

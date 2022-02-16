@@ -10,11 +10,18 @@ mixin checkbox-expandable({ dropdownTitleName, dropdownClassShow = '' })
 
   .checkbox-expandable.js-checkbox-expandable
     .checkbox-expandable__dropdown
-      fieldset(class = `${ checkboxContentClass } js-checkbox-expandable__show ${ 
+      fieldset(class = `${ 
+        checkboxContentClass 
+        } js-checkbox-expandable__show ${ 
         dropdownClassShow }`)
 
           each checkboxItem in checkboxContent
-            - var { valueText, checkboxName, ifChecked, checkboxTitle } = checkboxItem
+            - 
+              var { 
+                valueText, 
+                checkboxName, 
+                ifChecked, 
+                checkboxTitle } = checkboxItem
             +checkbox-item({
               valueText: valueText,
               checkboxName: checkboxName,

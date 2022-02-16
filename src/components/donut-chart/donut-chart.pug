@@ -1,35 +1,35 @@
-mixin donut-chart({ excellNum = 0, goodNum  = 0, satisNum  = 0, dissapNum  = 0 })
+mixin donut-chart({ excellentNum = 0, goodNum  = 0, satisfiedNum  = 0, disappointedNum  = 0 })
   - 
     var { 
       donutMarks, 
       donutColors } = require('Components/donut-chart/donut-chart.json');
   - 
     var totalData = 
-      parseFloat(excellNum) +
+      parseFloat(excellentNum) +
       parseFloat(goodNum) +
-      parseFloat(satisNum) + 
-      parseFloat(dissapNum)
-  - var dissapPerc = dissapNum / totalData * 100;
-  - var satisPerc = satisNum / totalData * 100;
-  - var goodPerc = goodNum / totalData * 100;
-  - var excellPerc = excellNum / totalData * 100;
+      parseFloat(satisfiedNum) + 
+      parseFloat(disappointedNum)
+  - var disappointedPercent = disappointedNum / totalData * 100;
+  - var satisfiedPercent = satisfiedNum / totalData * 100;
+  - var goodPercent = goodNum / totalData * 100;
+  - var excellentPercent = excellentNum / totalData * 100;
   - 
     var donutData = { 
       disappointed: {
-        number: dissapNum,
-        percent: dissapPerc
+        number: disappointedNum,
+        percent: disappointedPercent
       }, 
       satisfied: {
-        number: satisNum,
-        percent: satisPerc
+        number: satisfiedNum,
+        percent: satisfiedPercent
       }, 
       good: {
         number: goodNum,
-        percent: goodPerc
+        percent: goodPercent
       }, 
       excellent: {
-        number: excellNum,
-        percent: excellPerc
+        number: excellentNum,
+        percent: excellentPercent
       }
     } 
   
@@ -56,7 +56,7 @@ mixin donut-chart({ excellNum = 0, goodNum  = 0, satisNum  = 0, dissapNum  = 0 }
                 key }` gradientTransform = gradientInfo)
                 stop(stop-color = start offset = '0%')
                 stop(stop-color = end offset = '100%')
-        title#impression-title Впечатлeния от номера
+        title#impression-title Впечатления от номера
 
         circle.donut-chart__ring(
           cx = '50%' cy = '50%' 

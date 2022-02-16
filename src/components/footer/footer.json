@@ -8,19 +8,19 @@
       "items": [
         {
           "name": "О нас",
-          "link": "./some-addresse"
+          "link": "./some-address"
         },
         {
           "name": "Новости",
-          "link": "./some-addresse"
+          "link": "./some-address"
         },
         {
           "name": "Служба поддержки",
-          "link": "./some-addresse"
+          "link": "./some-address"
         },
         {
           "name": "Услуги",
-          "link": "./some-addresse"
+          "link": "./some-address"
         }
       ]
     },
@@ -30,19 +30,19 @@
       "items": [
         {
           "name": "О сервисе",
-          "link": "./some-addresse"
+          "link": "./some-address"
         },
         {
           "name": "Наша команда",
-          "link": "./some-addresse"
+          "link": "./some-address"
         },
         {
           "name": "Вакансии",
-          "link": "./some-addresse"
+          "link": "./some-address"
         },
         {
           "name": "Инвесторы",
-          "link": "./some-addresse"
+          "link": "./some-address"
         }
       ]
     },
@@ -52,15 +52,15 @@
       "items": [
         {
           "name": "Соглашения",
-          "link": "./some-addresse"
+          "link": "./some-address"
         },
         {
           "name": "Сообщества",
-          "link": "./some-addresse"
+          "link": "./some-address"
         },
         {
           "name": "Связь с нами",
-          "link": "./some-addresse"
+          "link": "./some-address"
         }
       ]
     }

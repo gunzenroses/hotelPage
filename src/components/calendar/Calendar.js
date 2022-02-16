@@ -55,7 +55,7 @@ class Calendar {
     this.rangeStart = this.mainContainer.querySelector(
       'input[name = check-in]'
     );
-    
+
     this.rangeEnd = this.mainContainer.querySelector('input[name = check-out]');
 
     this.calendar = this.mainContainer.querySelector(
@@ -70,7 +70,7 @@ class Calendar {
     );
   }
 
-  createClasses(){
+  createClasses() {
     this.dayPrev = 'calendar__day_prev';
     this.dayNext = 'calendar__day_next';
     this.dayBetween = 'calendar__day calendar__day_between';
@@ -326,7 +326,7 @@ class Calendar {
       const betweenInOutYears = betweenInOutOneYear
         || this.betweenInOutDiffYears(prevDay);
       if (this.checkInPrevMonth(prevDay) || this.checkInPrevYear(prevDay)) {
-        prevDays += `<div class = '${ this.dayCalendar }_prev_check-in'>${prevDay}</div>`;
+        prevDays += `<div class = '${ this.dayCalendar }_prev_check-in'>${ prevDay }</div>`;
       } else if (
         this.checkOutPrevMonth(prevDay)
         || this.checkOutPrevYear(prevDay)
@@ -334,12 +334,12 @@ class Calendar {
         prevDays += `<div class = '${ this.dayCalendar }_prev_check-out'>${
           prevDay }</div>`;
       } else if (this.betweenInOutPrevMonth(prevDay) || betweenInOutYears) {
-        prevDays += `<div class = '${ this.dayBetween }'>${prevDay}</div>`;
+        prevDays += `<div class = '${ this.dayBetween }'>${ prevDay }</div>`;
       } else {
-        prevDays += 
-          `<div class = 'calendar__day js-${
-             this.dayPrev 
-            } ${ this.dayPrev }'>${ prevDay }</div>`;
+        prevDays
+          += `<div class = 'calendar__day js-${
+            this.dayPrev
+          } ${ this.dayPrev }'>${ prevDay }</div>`;
       }
     });
     return prevDays;
@@ -471,10 +471,10 @@ class Calendar {
     lastDaysArr.forEach((i) => {
       if (this.checkInToday(i)) {
         currDays
-          += `<div class = '${ this.dayCheckIn  }'>${ i }</div>`;
+          += `<div class = '${ this.dayCheckIn }'>${ i }</div>`;
       } else if (this.checkInCurrMonth(i)) {
         currDays
-          += `<div class = '${ this.dayCheckIn  }'>${ i }</div>`;
+          += `<div class = '${ this.dayCheckIn }'>${ i }</div>`;
       } else if (this.checkOutCurrMonth(i)) {
         currDays
           += `<div class = '${ this.dayCalendar }_check-out'>${ i }</div>`;
@@ -612,7 +612,7 @@ class Calendar {
           n }</div>`;
       } else {
         nextDays += `<div class = 'calendar__day js-${
-           this.dayNext } ${ this.dayNext }'>${ n }</div>`;
+          this.dayNext } ${ this.dayNext }'>${ n }</div>`;
       }
     });
     return nextDays;

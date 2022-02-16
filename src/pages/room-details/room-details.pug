@@ -18,7 +18,7 @@ block variables
       comment1, 
       comment2, 
       checkboxList1, 
-      cancellationRools, 
+      cancellationRules, 
       cardBookingInfo } = require('./room-details.json');
 
 block content
@@ -50,7 +50,7 @@ block content
                     title: 'Удобство',
                     description: 'Окно в каждой из спален'
                   })
-                .room-details__badge_type_cozyness
+                .room-details__badge_type_coziness
                   +badge({
                     name: 'whatshot', 
                     title: 'Уют',
@@ -59,10 +59,10 @@ block content
               .room-details__room-impression
                 h2.room-details__title Впечатления от номера
                 +donut-chart({
-                  excellNum: 130,
+                  excellentNum: 130,
                   goodNum: 65,
-                  satisNum: 65,
-                  dissapNum: 0
+                  satisfiedNum: 65,
+                  disappointedNum: 0
                 })
             article.room-details__reviews
               h2.room-details__title Отзывы посетителей номера
@@ -79,7 +79,7 @@ block content
             article.room-details__cancellation
               h2.room-details__title Отмена
               .room-details__cancellation-info
-                != cancellationRools
+                != cancellationRules
           article.room-details__booking
             +card-booking({ cardBookingInfo: cardBookingInfo })
     +footer(theme)

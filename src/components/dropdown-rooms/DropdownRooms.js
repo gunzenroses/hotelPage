@@ -115,11 +115,11 @@ export default class DropdownRooms {
     this.data.forEach((num, i) => {
       if (num > 0) {
         roomInfo.push(this.adjustDataType(i));
-      };
+      }
     });
     const roomText = roomInfo.join(', ');
-    this.infoInput.value = roomText.length > 20 
-      ? `${ roomText.slice(0, 20) }...` 
+    this.infoInput.value = roomText.length > 20
+      ? `${ roomText.slice(0, 20) }...`
       : roomText;
   }
 
