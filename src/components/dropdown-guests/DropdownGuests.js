@@ -8,23 +8,37 @@ export default class DropdownGuests {
   }
 
   init() {
-    this.createClasses();
-    this.createChildren();
-    this.makeData();
+    this._createClasses();
+    this._createChildren();
+    this._makeData();
     this.dropdownItems.forEach((_, i) => {
-      this.showItemNumber(i);
+      this._showItemNumber(i);
     });
-    this.totalGuestsCount();
-    this.enableEventListeners();
+    this._totalGuestsCount();
+    this._enableEventListeners();
   }
 
-  createClasses() {
+  @boundMethod
+  resetGuests() {
+    this.data = [0, 0, 0];
+    this.dropdownItems.forEach((_, i) => {
+      this._showItemNumber(i);
+    });
+    this._onZeroGuests();
+  }
+
+  @boundMethod
+  submitGuests() {
+    this.dropdownExpanded.classList.remove('expand__show');
+  }
+
+  _createClasses() {
     this.classNumber = 'dropdown-item__number';
     this.classItemMinus = 'dropdown-item__minus';
     this.classItemPlus = 'dropdown-item__plus';
   }
 
-  createChildren() {
+  _createChildren() {
     this.dropdownExpanded = this.container.querySelector('.js-expand');
     this.info = this.container.querySelector('.js-dropdown__info');
     this.infoInput = this.container.querySelector('.js-dropdown__input');
@@ -32,10 +46,10 @@ export default class DropdownGuests {
       this.container.querySelectorAll('.js-dropdown-item')
     );
     this.dropdownMinuses = this.container.querySelectorAll(
-      `.js-${ this.classItemMinus }`
+      `.js-${this.classItemMinus}`
     );
     this.dropdownPluses = this.container.querySelectorAll(
-      `.js-${ this.classItemPlus }`
+      `.js-${this.classItemPlus}`
     );
     this.resetButton = this.dropdownExpanded.querySelector(
       '.js-dropdown__button_type_reset'
@@ -45,63 +59,50 @@ export default class DropdownGuests {
     );
   }
 
-  makeData() {
+  _makeData() {
     Array.from(
-      this.container.querySelectorAll(`.js-${ this.classNumber }`)
+      this.container.querySelectorAll(`.js-${this.classNumber}`)
     ).forEach((num) => {
       const value = parseInt(num.textContent, 10);
       this.data.push(value);
     });
   }
 
-  enableEventListeners() {
-    this.dropdownExpanded.addEventListener('pointerup', this.plusAndMinusToItem);
+  _enableEventListeners() {
+    this.dropdownExpanded.addEventListener(
+      'pointerup',
+      this._plusAndMinusToItem
+    );
     this.resetButton.addEventListener('pointerup', this.resetGuests);
     this.submitButton.addEventListener('pointerup', this.submitGuests);
   }
 
   @boundMethod
-  plusAndMinusToItem(e) {
+  _plusAndMinusToItem(e) {
     const trg = e.target;
     if (trg.classList.contains(this.classItemMinus)) {
-      this.minusToItem(trg);
+      this._minusToItem(trg);
     }
     if (trg.classList.contains(this.classItemPlus)) {
-      this.plusToItem(trg);
+      this._plusToItem(trg);
     }
   }
 
-  minusToItem(trg) {
+  _minusToItem(trg) {
     this.orderInData = parseInt(trg.nextElementSibling.dataset.order, 10);
     this.data[this.orderInData] -= 1;
-    this.showItemNumber(this.orderInData);
-    this.totalGuestsCount();
+    this._showItemNumber(this.orderInData);
+    this._totalGuestsCount();
   }
 
-  plusToItem(trg) {
+  _plusToItem(trg) {
     this.orderInData = parseInt(trg.previousElementSibling.dataset.order, 10);
     this.data[this.orderInData] += 1;
-    this.showItemNumber(this.orderInData);
-    this.totalGuestsCount();
+    this._showItemNumber(this.orderInData);
+    this._totalGuestsCount();
   }
 
-  @boundMethod
-  resetGuests(e) {
-    e.preventDefault();
-    this.data = [0, 0, 0];
-    this.dropdownItems.forEach((_, i) => {
-      this.showItemNumber(i);
-    });
-    this.onZeroGuests();
-  }
-
-  @boundMethod
-  submitGuests(e) {
-    e.preventDefault();
-    this.dropdownExpanded.classList.remove('expand__show');
-  }
-
-  showItemNumber(i) {
+  _showItemNumber(i) {
     const temp = this.data[i];
     if (temp < 0) {
       this.data[i] = 0;
@@ -109,59 +110,57 @@ export default class DropdownGuests {
       this.data[i] = 10;
     }
     const dropdownItem = this.dropdownItems[i].querySelector(
-      `.js-${ this.classNumber }`
+      `.js-${this.classNumber}`
     );
     dropdownItem.innerText = this.data[i];
-    this.activateMinusPlus(i);
+    this._activateMinusPlus(i);
   }
 
-  activateMinusPlus(i) {
+  _activateMinusPlus(i) {
     if (this.data[i] <= 0) {
-      this.dropdownMinuses[i].classList.add(`${
-        this.classItemMinus }_disabled`);
+      this.dropdownMinuses[i].classList.add(`${this.classItemMinus}_disabled`);
     } else if (this.data[i] > 0 && this.data[i] < 10) {
-      this.dropdownPluses[i].classList.remove(`${
-        this.classItemPlus }_disabled`);
-      this.dropdownMinuses[i].classList.remove(`${
-        this.classItemMinus }_disabled`);
+      this.dropdownPluses[i].classList.remove(`${this.classItemPlus}_disabled`);
+      this.dropdownMinuses[i].classList.remove(
+        `${this.classItemMinus}_disabled`
+      );
     } else {
-      this.dropdownPluses[i].classList.add(`${
-        this.classItemPlus }_disabled`);
+      this.dropdownPluses[i].classList.add(`${this.classItemPlus}_disabled`);
     }
   }
 
-  totalGuestsCount() {
+  _totalGuestsCount() {
     this.adultGuests = parseInt(this.data[0], 10) + parseInt(this.data[1], 10);
     this.infantGuests = parseInt(this.data[2], 10);
     this.totalGuests = this.adultGuests + this.infantGuests;
 
     if (this.totalGuests > 0) {
-      this.onSomeGuests();
+      this._onSomeGuests();
     } else {
-      this.onZeroGuests();
+      this._onZeroGuests();
     }
   }
 
-  onZeroGuests() {
+  _onZeroGuests() {
     this.resetButton.classList.remove('dropdown__show');
     this.infoInput.value = '';
   }
 
-  onSomeGuests() {
+  _onSomeGuests() {
     this.resetButton.classList.add('dropdown__show');
-    this.render();
+    this._render();
   }
 
-  render() {
-    const adultWord = this.matchWordForAdult();
-    const infantWord = this.matchWordForInfant();
+  _render() {
+    const adultWord = this._matchWordForAdult();
+    const infantWord = this._matchWordForInfant();
 
     const onlyAdults = this.adultGuests > 0 && this.infantGuests < 1;
     const onlyInfants = this.adultGuests < 1 && this.infantGuests > 0;
     const adultsWithInfants = this.adultGuests > 0 && this.infantGuests > 0;
 
-    const adultsInfo = `${ this.adultGuests } ${ adultWord }`;
-    const infantsInfo = `${ this.infantGuests } ${ infantWord }`;
+    const adultsInfo = `${this.adultGuests} ${adultWord}`;
+    const infantsInfo = `${this.infantGuests} ${infantWord}`;
 
     switch (true) {
       case onlyAdults:
@@ -171,7 +170,7 @@ export default class DropdownGuests {
         this.infoInput.value = infantsInfo;
         break;
       case adultsWithInfants:
-        this.infoInput.value = `${ adultsInfo }, ${ infantsInfo }`;
+        this.infoInput.value = `${adultsInfo}, ${infantsInfo}`;
         break;
       default:
         this.infoInput.value = '';
@@ -179,7 +178,7 @@ export default class DropdownGuests {
     }
   }
 
-  matchWordForAdult() {
+  _matchWordForAdult() {
     let form;
     switch (this.adultGuests) {
       case 1:
@@ -201,7 +200,7 @@ export default class DropdownGuests {
     return form;
   }
 
-  matchWordForInfant() {
+  _matchWordForInfant() {
     let form;
     switch (this.infantGuests) {
       case 1:

@@ -17,13 +17,13 @@ class Range {
       hide_from_to: true,
       prettify_enabled: true,
       step: 100,
-      onStart: this.changeValue,
-      onChange: this.changeValue
+      onStart: this._changeValue,
+      onChange: this._changeValue
     });
   }
 
   @boundMethod
-  changeValue(data) {
+  _changeValue(data) {
     const toPretty = data.to_pretty ? data.to_pretty : '10 000';
     const fromPretty = data.from_pretty ? data.from_pretty : '5 000';
     this.rangeValue = $(data.input).siblings('.js-range__value');

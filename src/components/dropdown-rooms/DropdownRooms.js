@@ -8,22 +8,22 @@ export default class DropdownRooms {
   }
 
   init() {
-    this.createClasses();
-    this.createChildren();
-    this.makeData();
+    this._createClasses();
+    this._createChildren();
+    this._makeData();
     this.dropdownItems.forEach((_, index) => {
-      this.render(index);
+      this._render(index);
     });
-    this.enableEventListeners();
+    this._enableEventListeners();
   }
 
-  createClasses() {
+  _createClasses() {
     this.classItemPlus = 'dropdown-item__plus';
     this.classItemMinus = 'dropdown-item__minus';
     this.classNumber = 'dropdown-item__number';
   }
 
-  createChildren() {
+  _createChildren() {
     this.info = this.container.querySelector('.js-dropdown__info');
     this.infoInput = this.container.querySelector('.js-dropdown__input');
     this.dropdownItems = Array.from(
@@ -37,7 +37,7 @@ export default class DropdownRooms {
     );
   }
 
-  makeData() {
+  _makeData() {
     Array.from(
       this.container.querySelectorAll(`.js-${ this.classNumber }`)
     ).forEach((num) => {
@@ -46,35 +46,35 @@ export default class DropdownRooms {
     });
   }
 
-  enableEventListeners() {
+  _enableEventListeners() {
     this.dropdownItems.forEach((_, i) => {
-      this.dropdownMinuses[i].addEventListener('pointerup', this.minusOne);
-      this.dropdownPluses[i].addEventListener('pointerup', this.plusOne);
+      this.dropdownMinuses[i].addEventListener('pointerup', this._minusOne);
+      this.dropdownPluses[i].addEventListener('pointerup', this._plusOne);
     });
   }
 
   @boundMethod
-  minusOne(e) {
+  _minusOne(e) {
     const order = parseInt(e.target.nextElementSibling.dataset.order, 10);
     this.data[order] -= 1;
-    this.render(order);
+    this._render(order);
   }
 
   @boundMethod
-  plusOne(e) {
+  _plusOne(e) {
     const order = parseInt(e.target.previousElementSibling.dataset.order, 10);
     this.data[order] += 1;
-    this.render(order);
+    this._render(order);
   }
 
-  render(i) {
-    this.adjustData(i);
-    this.updateItemNumber(i);
-    this.updateMinusPlusButton(i);
-    this.updateInfoInput();
+  _render(i) {
+    this._adjustData(i);
+    this._updateItemNumber(i);
+    this._updateMinusPlusButton(i);
+    this._updateInfoInput();
   }
 
-  adjustData(i) {
+  _adjustData(i) {
     const temp = this.data[i];
     if (temp < 0) {
       this.data[i] = 0;
@@ -83,14 +83,14 @@ export default class DropdownRooms {
     }
   }
 
-  updateItemNumber(i) {
+  _updateItemNumber(i) {
     const dropdownItem = this.dropdownItems[i].querySelector(
       `.js-${ this.classNumber }`
     );
     dropdownItem.innerText = this.data[i];
   }
 
-  updateMinusPlusButton(i) {
+  _updateMinusPlusButton(i) {
     if (this.data[i] <= 0) {
       this.dropdownMinuses[i].classList.add(
         `${ this.classItemMinus }_disabled`
@@ -109,12 +109,12 @@ export default class DropdownRooms {
     }
   }
 
-  updateInfoInput() {
+  _updateInfoInput() {
     this.infoInput.value = '';
     const roomInfo = [];
     this.data.forEach((num, i) => {
       if (num > 0) {
-        roomInfo.push(this.adjustDataType(i));
+        roomInfo.push(this._adjustDataType(i));
       }
     });
     const roomText = roomInfo.join(', ');
@@ -123,7 +123,7 @@ export default class DropdownRooms {
       : roomText;
   }
 
-  adjustDataType(j) {
+  _adjustDataType(j) {
     const dataType = this.dropdownItems[j].dataset.type;
     let dataTypeName;
     if (this.data[j] === 1) {

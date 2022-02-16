@@ -7,11 +7,59 @@ class RoomCarousel {
   }
 
   init() {
-    this.createChildren();
-    this.enable();
+    this._createChildren();
+    this._enable();
   }
 
-  createChildren() {
+  @boundMethod
+  prevImage() {
+    this.leftValue += 100;
+    switch (this.leftValue) {
+      case -100:
+        this.secondPicRadio.checked = true;
+        this.carouselPictures.style.left = `${this.leftValue}%`;
+        break;
+      case -200:
+        this.thirdPicRadio.checked = true;
+        this.carouselPictures.style.left = `${this.leftValue}%`;
+        break;
+      case 100:
+        this.leftValue = -300;
+        this.forthPicRadio.checked = true;
+        this.carouselPictures.style.left = `${this.leftValue}%`;
+        break;
+      default:
+        this.firstPicRadio.checked = true;
+        this.carouselPictures.style.left = `${this.leftValue}%`;
+        break;
+    }
+  }
+
+  @boundMethod
+  nextImage() {
+    this.leftValue -= 100;
+    switch (this.leftValue) {
+      case -100:
+        this.secondPicRadio.checked = true;
+        this.carouselPictures.style.left = `${this.leftValue}%`;
+        break;
+      case -200:
+        this.thirdPicRadio.checked = true;
+        this.carouselPictures.style.left = `${this.leftValue}%`;
+        break;
+      case -300:
+        this.forthPicRadio.checked = true;
+        this.carouselPictures.style.left = `${this.leftValue}%`;
+        break;
+      default:
+        this.leftValue = 0;
+        this.firstPicRadio.checked = true;
+        this.carouselPictures.style.left = `${this.leftValue}%`;
+        break;
+    }
+  }
+
+  _createChildren() {
     [this.carouselInputs] = this.carousel.getElementsByClassName(
       'js-room-carousel__radio'
     );
@@ -33,71 +81,23 @@ class RoomCarousel {
       this.firstPicRadio,
       this.secondPicRadio,
       this.thirdPicRadio,
-      this.forthPicRadio
+      this.forthPicRadio,
     ] = this.carouselRow;
     this.firstPicRadio.checked = true;
   }
 
-  enable() {
+  _enable() {
     if (this.carouselPrev) {
       this.carouselPrev.addEventListener('pointerup', this.prevImage);
     }
     if (this.carouselNext) {
       this.carouselNext.addEventListener('pointerup', this.nextImage);
     }
-    this.carouselInputs.addEventListener('pointerup', this.switchImage);
+    this.carouselInputs.addEventListener('pointerup', this._switchImage);
   }
 
   @boundMethod
-  prevImage() {
-    this.leftValue += 100;
-    switch (this.leftValue) {
-      case -100:
-        this.secondPicRadio.checked = true;
-        this.carouselPictures.style.left = `${ this.leftValue }%`;
-        break;
-      case -200:
-        this.thirdPicRadio.checked = true;
-        this.carouselPictures.style.left = `${ this.leftValue }%`;
-        break;
-      case 100:
-        this.leftValue = -300;
-        this.forthPicRadio.checked = true;
-        this.carouselPictures.style.left = `${ this.leftValue }%`;
-        break;
-      default:
-        this.firstPicRadio.checked = true;
-        this.carouselPictures.style.left = `${ this.leftValue }%`;
-        break;
-    }
-  }
-
-  @boundMethod
-  nextImage() {
-    this.leftValue -= 100;
-    switch (this.leftValue) {
-      case -100:
-        this.secondPicRadio.checked = true;
-        this.carouselPictures.style.left = `${ this.leftValue }%`;
-        break;
-      case -200:
-        this.thirdPicRadio.checked = true;
-        this.carouselPictures.style.left = `${ this.leftValue }%`;
-        break;
-      case -300:
-        this.forthPicRadio.checked = true;
-        this.carouselPictures.style.left = `${ this.leftValue }%`;
-        break;
-      default:
-        this.leftValue = 0;
-        this.firstPicRadio.checked = true;
-        this.carouselPictures.style.left = `${ this.leftValue }%`;
-        break;
-    }
-  }
-
-  @boundMethod
-  switchImage(e) {
+  _switchImage(e) {
     switch (e.target.value) {
       case 'picture_2':
         this.leftValue = -100;
@@ -112,7 +112,7 @@ class RoomCarousel {
         this.leftValue = 0;
         break;
     }
-    this.carouselPictures.style.left = `${ this.leftValue }%`;
+    this.carouselPictures.style.left = `${this.leftValue}%`;
   }
 }
 

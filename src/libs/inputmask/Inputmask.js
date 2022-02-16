@@ -8,13 +8,13 @@ class InputMask {
   init(element) {
     this.elementName = element.getAttribute('name');
     if (this.elementName === 'email') {
-      this.maskEmail(element);
+      this._maskEmail(element);
     } else if (this.elementName === 'birthday') {
-      this.maskDatetime(element);
+      this._maskDateTime(element);
     }
   }
 
-  maskEmail(element) {
+  _maskEmail(element) {
     this.emailMask = Inputmask({
       mask: '*{1,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{1,20}[.*{2,6}][.*{1,2}]',
       greedy: false,
@@ -32,7 +32,7 @@ class InputMask {
     }).mask(element);
   }
 
-  maskDatetime(element) {
+  _maskDateTime(element) {
     this.dateMask = Inputmask('datetime', {
       placeholder: 'ДД.ММ.ГГГГ',
       separator: '.',

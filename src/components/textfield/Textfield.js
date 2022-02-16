@@ -10,16 +10,16 @@ class Textfield {
   init(item) {
     this.startValidation(item);
     if (item.getAttribute('name') === 'email') {
-      item.addEventListener('pointerup', this.correctEmail);
+      item.addEventListener('pointerup', this._correctEmail);
     }
   }
 
-  startValidation(element) {
-    this.validation = new Inputmask(element);
+  startValidation(item) {
+    this.validation = new Inputmask(item);
   }
 
   @boundMethod
-  correctEmail(e) {
+  _correctEmail(e) {
     if (!e.target) return;
     this.item = e.target;
     const itemText = this.item.value;
@@ -27,7 +27,7 @@ class Textfield {
     const longEnough = itemText.length > 4;
     if (!afterDog && longEnough) {
       const newValue = itemText.replace(/[^a-zA-Z0-9\s]/gi, '');
-      this.item.value = `${ newValue }@`;
+      this.item.value = `${newValue}@`;
     }
   }
 }
