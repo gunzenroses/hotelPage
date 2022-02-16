@@ -38,10 +38,9 @@ export default class DropdownRooms {
   }
 
   makeData() {
-    const nums = Array.from(
+    Array.from(
       this.container.querySelectorAll(`.js-${ this.classNumber }`)
-    );
-    nums.forEach((num) => {
+    ).forEach((num) => {
       const value = parseInt(num.textContent, 10);
       this.data.push(value);
     });
@@ -112,15 +111,16 @@ export default class DropdownRooms {
 
   updateInfoInput() {
     this.infoInput.value = '';
-    this.roomInfo = '';
+    const roomInfo = [];
     this.data.forEach((num, i) => {
       if (num > 0) {
-        this.roomInfo += this.adjustDataType(i);
+        roomInfo.push(this.adjustDataType(i));
       };
     });
-    this.infoInput.value = this.roomInfo.length > 20
-      ? `${ this.roomInfo.slice(0, 20) }...`
-      : this.roomInfo;
+    const roomText = roomInfo.join(', ');
+    this.infoInput.value = roomText.length > 20 
+      ? `${ roomText.slice(0, 20) }...` 
+      : roomText;
   }
 
   adjustDataType(j) {
@@ -163,6 +163,6 @@ export default class DropdownRooms {
           break;
       }
     }
-    return `${ this.data[j] } ${ dataTypeName }, `;
+    return `${ this.data[j] } ${ dataTypeName } `;
   }
 }
