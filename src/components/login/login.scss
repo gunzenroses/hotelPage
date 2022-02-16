@@ -5,8 +5,8 @@
 
 .login {
   @include isFlex($direction: column);
-  min-height: 98px;
   width: 100%;
+  min-height: 98px;
   margin-top: 3px;
   padding: 0;
   border: none;

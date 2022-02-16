@@ -4,11 +4,11 @@
 
 .checkbox {
   @include isFlex($direction: column);
-  appearance: none;
   width: 224px;
   margin: 0;
   padding: 0;
   border: none;
+  appearance: none;
 
   @include _1650-1920 {
     width: 100%;

@@ -26,8 +26,8 @@
   @include isFlex($direction: column, $justify: flex-start);
   position: relative;
   width: 1440px;
-  height: 1937px;
   min-width: 320px;
+  height: 1937px;
   margin: 0 auto;
   background: $light;
   user-select: none;
@@ -227,9 +227,9 @@
     }
 
     @include _970 {
-      width: 100%;
       flex-direction: row;
       justify-content: space-between;
+      width: 100%;
       margin-bottom: 0;
     }
 
@@ -402,8 +402,8 @@
     @include headerSecond();
     line-height: 22px;
     font-weight: 700;
-    color: $dark-shade_most;
     letter-spacing: 0.001em;
+    color: $dark-shade_most;
 
     @include _1650-1920 {
       margin: 0 auto;
@@ -416,8 +416,8 @@
     height: auto;
     margin-top: 19px;
     line-height: $fs_h1;
-    color: $dark-shade_more;
     letter-spacing: 0.0001em;
+    color: $dark-shade_more;
 
     @include _1500-1920 {
       margin-top: 20px;

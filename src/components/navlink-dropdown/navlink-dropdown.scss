@@ -66,10 +66,10 @@
     text-decoration: none;
 
     &::before {
-      display: block;
       content: attr(title);
-      font-weight: bold;
+      display: block;
       height: 0;
+      font-weight: bold;
       overflow: hidden;
       visibility: hidden;
     }

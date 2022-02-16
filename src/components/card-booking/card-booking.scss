@@ -34,8 +34,8 @@
 
   &__date-range {
     width: 100%;
-    margin-top: 23px;
     height: 62px;
+    margin-top: 23px;
   }
 
   &__dropdown-guests {
@@ -54,9 +54,9 @@
     margin-left: 1px;
     line-height: 24px;
     font-size: $fs_h2;
-    color: $dark-shade_most;
-    font-weight: 700;
     letter-spacing: .01em;
+    font-weight: 700;
+    color: $dark-shade_most;
     pointer-events: none;
 
     @include _1750-1920 {
@@ -101,9 +101,9 @@
   &__number-sign {
     display: inline-block;
     padding-right: 3px;
+    line-height: 11px;
     font-size: $fs_base;
     font-weight: 700;
-    line-height: 11px;
     color: $dark-shade_most;
 
     @include _1750-1920 {
@@ -114,11 +114,10 @@
   &__number {
     display: inline-block;
     font-size: $fs_h1;
+    line-height: 9px;
     letter-spacing: .001em;
     font-weight: 700;
-    line-height: 9px;
     color: $dark-shade_most;
-
 
     @include _1750-1920 {
       font-size: $fs_h1;
@@ -133,8 +132,8 @@
     display: inline-block;
     line-height: 11px;
     font-size: $fs_h3;
-    font-weight: 700;
     letter-spacing: .02em;
+    font-weight: 700;
     color: $purple;
     text-transform: uppercase;
 
@@ -144,18 +143,18 @@
   }
 
   &__price {
+    line-height: 19px;
     font-size: $fs_base;
     font-weight: 700;
-    line-height: 19px;
     letter-spacing: .01em;
     color: $dark-shade_medium;
   }
 
   &__period {
+    line-height: 19px;
     font-size: $fs_h3;
     font-weight: 400;
     letter-spacing: .01em;
-    line-height: 19px;
     color: $dark-shade_medium;
   }
 
@@ -163,9 +162,9 @@
     @include isFlex();
     width: 100%;
     min-height: 24px;
-    line-height: 18px;
     margin-top: 10px;
     margin-left: 1px;
+    line-height: 18px;
     color: $dark-shade_more;
     pointer-events: none;
 
@@ -221,8 +220,8 @@
     width: 20px;
     min-width: 20px;
     height: 20px;
-    border-radius: 50%;
     border: 1px solid $dark-shade_less;
+    border-radius: 50%;
     line-height: 20px;
     color: $dark-shade_less;
     background: $light;
@@ -238,7 +237,6 @@
         position: absolute;
         top: 0;
         left: calc(100% + 5px);
-        height: 0;
         width: 100px;
         height: fit-content;
         border-radius: 3px;

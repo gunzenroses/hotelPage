@@ -37,8 +37,8 @@
     position: relative;
     width: 60%;
     height: fit-content;
-    margin-right: 0;
     margin-bottom: 20px;
+    margin-right: 0;
     align-items: center;
   }
 }
@@ -174,11 +174,11 @@
   &__text {
     width: 100%;
     margin: 0;
-    font-size: 1em;
     line-height: 1.71rem;
+    font-size: 1em;
+    letter-spacing: .0001em;
     font-weight: 400;
     color: $dark-shade_more;
-    letter-spacing: .0001em;
     pointer-events: none;
 
     @include _1170 {
@@ -188,8 +188,8 @@
 
   &__info {
     @include isFlex($justify: flex-start);
-    height: 168px;
     width: 600px;
+    height: 168px;
     padding-top: 4px;
 
     @include _1500-1920 {
@@ -324,11 +324,11 @@
   &__special-offer  {
     width: 100%;
     margin: 18px 0 0;
-    font-size: 1em;
     line-height: 1.71rem;
+    font-size: 1em;
+    letter-spacing: .0001em;
     font-weight: 400;
     color: $dark-shade_more;
-    letter-spacing: .0001em;
     pointer-events: none;
 
     @include _1170 {
@@ -360,11 +360,11 @@
     }
 
     @include _800 {
-      border-top: none;
       flex-direction: column;
       width: fit-content;
       height: 76px;
       margin: 18px auto 120px;
+      border-top: none;
     }
 
     &_in_landing {

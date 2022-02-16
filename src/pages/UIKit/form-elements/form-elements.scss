@@ -42,13 +42,13 @@
 }
 
 .form-elements {
+  display: block;
+  position: relative;
   width: 1440px;
   height: 1853px;
   margin: 0 auto;
-  position: relative;
-  display: block;
-  overflow: auto;
   background: $light;
+  overflow: auto;
 
   @include _1440 {
     width: 100vw;
@@ -106,8 +106,8 @@
 
   &__container-first {
     @include isFlex($direction: column, $justify: flex-start);
-    height: 322px;
     width: 100%;
+    height: 322px;
     margin-top: 1px;
   }
 
@@ -133,14 +133,12 @@
     width: 100%;
     height: 62px;
     margin-top: 25px;
-
-
   }
 
   &__container-second {
     @include isFlex($direction: column, $justify: flex-start);
-    min-height: 274px;
     width: 320px;
+    min-height: 274px;
     margin-top: 37.5px;
   }
 
@@ -179,8 +177,8 @@
     @include isFlex($direction: column);
     position: relative;
     width: 100%;
-    height: 127px;
     min-width: 260px;
+    height: 127px;
     margin-top: 2px;
 
     @include _450 {
@@ -208,9 +206,9 @@
 
   &__toggle {
     @include isFlex($direction: column);
-      height: 87px;
-      width: 268px;
-      margin-top: 39px;
+    height: 87px;
+    width: 268px;
+    margin-top: 39px;
   }
 
   &__label_toggle {
@@ -259,8 +257,8 @@
     @include containerSimple(320px, 503px);
     @include isFlex(
       $direction: column,
-       $align: flex-start, 
-       $justify: flex-start);
+      $align: flex-start, 
+      $justify: flex-start);
     margin-right: 7px;
 
     @include _1400 {
@@ -297,8 +295,8 @@
   &__row_buttons-link {
     @include isFlex($direction: row);
     flex-wrap: wrap;
-    height: 148px;
     width: 218px;
+    height: 148px;
     margin-top: 11px;
 
     @include _450 {
@@ -328,7 +326,6 @@
       margin: 0 auto;
     }
   }
-
 
   &__button-item {
     display: block;

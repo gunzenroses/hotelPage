@@ -23,13 +23,13 @@
 }
 
 .cards {
-  position: relative;
   display: block;
+  position: relative;
   width: 1440px;
   height: 1353px;
   margin: 50px auto;
-  overflow: auto;
   background: $background;
+  overflow: auto;
 
   @include _1440 {
     width: 100vw;

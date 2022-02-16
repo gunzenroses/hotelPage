@@ -5,9 +5,9 @@
 @mixin radioButtonTitle {
   display: inline-block;
   width: 73px;
+  height: 100%;
   line-height: 19px;
   letter-spacing: .005em;
-  height: 100%;
   color: $dark-shade_medium;
   user-select: none;
 }
@@ -41,8 +41,8 @@
     height: 24px;
     font-weight: 400;
     font-size: $fs_base;
-    text-transform: none;
     letter-spacing: .002em;
+    text-transform: none;
     cursor: pointer;
 
     @include _1750-1920 {
@@ -70,10 +70,10 @@
 
   &__real:checked + &__fake::before {
     content: '';
+    display: block;
     position: absolute;
     top: 3px;
     left: 3px;
-    display: block;
     width: 12px;
     height: 12px;
     background: $linearGradientLilac;

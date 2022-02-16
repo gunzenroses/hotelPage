@@ -21,9 +21,9 @@
 
   &__content {
     display: block;
+    position: relative;
     width: 120px;
     height: 120px;
-    position: relative;
 
     @include _1650-1920 {
       width: 167px;
@@ -44,10 +44,10 @@
   }
 
   &__ring {
-    overflow: visible;
     fill: transparent;
     stroke: #fff;
     stroke-width: 1;
+    overflow: visible;
   }
 
   &__segment {
@@ -68,11 +68,11 @@
     width: calc(100% - 6px);
     height: calc(100% - 6px);
     border-radius: 50%;
-    overflow: hidden;
+    font-weight: 700;
     color: transparent;
     background: $purple;
     background-clip: text;
-    font-weight: 700;
+    overflow: hidden;
 
     &_excellent {
       background: $linearGradientCitrus;
@@ -114,9 +114,9 @@
   &__caption {
     width: 165px;
     height: 96px;
-    line-height: 24px;
     margin-top: 26px;
     margin-left: 30px;
+    line-height: 24px;
     font-size: $fs_base;
 
     @include _1650-1920 {

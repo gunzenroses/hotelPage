@@ -30,8 +30,8 @@
 
   &__content {
     display: none;
-    height: 171px;
     width: 266px;
+    height: 171px;
     margin: 3px 0 0;
     padding: 0;
     border: none;
@@ -47,10 +47,10 @@
     width: 100%;
     height: 44px;
     padding: 0;
+    letter-spacing: 0.01em;
     border: none;
     background: transparent;
     color: $dark-shade_more;
-    letter-spacing: 0.01em;
     white-space: nowrap;
     cursor: pointer;
 

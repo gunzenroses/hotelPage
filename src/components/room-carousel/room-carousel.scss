@@ -80,8 +80,8 @@
     position: absolute;
     width: 7.5px;
     height: 7.5px;
-    cursor: pointer;
     appearance: none;
+    cursor: pointer;
   }
 
   &__radio-fake {
@@ -103,8 +103,8 @@
 
   &__buttons {
     @include isFlex();
-    position: absolute;
     display: none;
+    position: absolute;
     width: 100%;
     height: 100%;
   }

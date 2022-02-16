@@ -12,11 +12,11 @@
 
 .landing-page {
   @include isFlex($justify: flex-start, $direction: column);
-  position: relative;
   display: block;
+  position: relative;
   width: 1440px;
-  height: auto;
   min-width: 320px;
+  height: auto;
   margin: 0 auto;
   background: $light;
   user-select: none;
@@ -30,9 +30,9 @@
     @include isFlex($justify: flex-start, $direction: column);
     position: relative;
     width: 100%;
+    min-width: 320px;
     height: 830px;
     margin: 0 auto;
-    min-width: 320px;
 
     @include _1400 {
       height: calc(830 / 1440 * 100vw);
@@ -72,8 +72,8 @@
       position: relative;
       bottom: 0;
       right: 0;
-      text-align: center;
       margin: 20px auto;
+      text-align: center;
     }
   }
 

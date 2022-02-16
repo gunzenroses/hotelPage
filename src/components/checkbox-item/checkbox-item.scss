@@ -84,12 +84,12 @@
     display: block;
     width: fit-content;
     margin-top: 2px;
+    line-height: 18px;
     font-family: $montserrat;
     font-size: 13.5px;
-    line-height: 18px;
     letter-spacing: .02em;
-    color: $dark-shade_medium;
     font-weight: 400;
+    color: $dark-shade_medium;
 
     @include _1750-1920 {
       font-size: $fs_base;
@@ -97,8 +97,8 @@
 
     &_expandable {
       margin-top: 0;
-      font-size: $fs_base;
       line-height: 20px;
+      font-size: $fs_base;
       letter-spacing: 0.003em;
     }
 
@@ -114,10 +114,10 @@
   &__description {
     height: fit-content;
     margin-top: 5px;
-    font-size: $fs_h3;
     line-height: 15px;
-    font-weight: 400;
+    font-size: $fs_h3;
     letter-spacing: 0.0001em;
+    font-weight: 400;
     color: $dark-shade_medium;
 
     @include _1750-1920 {

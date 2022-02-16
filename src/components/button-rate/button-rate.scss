@@ -4,8 +4,8 @@
   @include isFlex($direction: row-reverse);
   width: 120px;
   height: fit-content;
-  font-size: 29px;
   line-height: 21px;
+  font-size: 29px;
   user-select: none;
 
   &__real {
@@ -16,7 +16,6 @@
   &__fake {
     width: 24px;
     height: 24px;
-    color: $purple;
     background-image: $linearGradientLilac;
     color: transparent;
     background-clip: text;

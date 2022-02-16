@@ -3,11 +3,11 @@
 @import '@~Assets/styles/fonts.scss';
 
 .info {
-  height: 47px;
   width: 200px;
+  height: 47px;
   line-height: 24px;
-  font-size: $fs_base;
   font-family: $montserrat;
+  font-size: $fs_base;
   letter-spacing: .0001em;
 
   @include _1750-1920 {

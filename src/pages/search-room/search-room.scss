@@ -35,7 +35,7 @@
   height: fit-content;
   margin: 0 auto;
   background: $light;
-  overflow: hidden; //to avoid margin-collapse
+  overflow: hidden;
   user-select: none;
 
   @include _all {
@@ -48,12 +48,12 @@
     position: relative;
     width: 100%;
     max-width: 1920px;
-    height: fit-content;
     min-width: 320px;
+    height: fit-content;
     padding: 26px 140px 69px;
     border-bottom: 1px solid $dark-shade_less;
-    overflow: auto;
     background: $light;
+    overflow: auto;
 
     @include _1500-1920 {
       padding-bottom: 27px;
@@ -63,8 +63,8 @@
 
     @include _1400 {
       justify-content: space-around;
-      height: fit-content;
       width: 100%;
+      height: fit-content;
       padding: 5% 7%;
     }
 
@@ -116,8 +116,8 @@
     @include _450 {
       justify-content: center;
       width: 85%;
-      min-width: 260px;
       max-width: 320px;
+      min-width: 260px;
     }
   }
 
@@ -156,10 +156,10 @@
 
   &__text {
     margin: 0;
+    line-height: 37px;
     font-size: $fs_h1;
     font-weight: 700;
     color: $dark-shade_most;
-    line-height: 37px;
     letter-spacing: 0.0001em;
 
     @include _1170 {

@@ -13,8 +13,8 @@
   margin: 0 auto;
   padding-top: 141px;
   padding-bottom: 132px;
-  overflow: auto;
   background: $background;
+  overflow: auto;
 
   @include _1440 {
     width: 100vw;

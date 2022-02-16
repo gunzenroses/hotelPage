@@ -30,8 +30,8 @@ body {
 
   &__item {
     width: calc(100%/3);
-    padding: 10px;
     height: fit-content;
+    padding: 10px;
     list-style-type: none;
     cursor: pointer;
   }

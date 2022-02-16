@@ -4,8 +4,8 @@
 @import '@~Assets/styles/fonts.scss';
 
 @mixin dropdownItem {
-  height: 30px;
   width: 100%;
+  height: 30px;
   padding-right: 6px;
   font-size: $fs_h3;
   text-transform: uppercase;
@@ -35,9 +35,9 @@
 
 @mixin  dropdownNumber {
   width: 32px;
+  font-size: 13px;
   font-weight: 700;
   text-align: center;
-  font-size: 13px;
 
   @include _1750-1920 {
     font-size: $fs_base;

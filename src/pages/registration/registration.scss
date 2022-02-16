@@ -12,8 +12,8 @@
   @include isFlex($direction: column, $justify: flex-start);
   position: relative;
   width: 1440px;
-  height: fit-content;
   min-width: 320px;
+  height: fit-content;
   margin: 0 auto;
   background: $light;
   user-select: none;

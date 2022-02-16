@@ -23,13 +23,13 @@
 
   &_type_footer {
     letter-spacing: 0.001em;
-  }
 
-  &_type_footer + &_type_footer {
-    margin-top: 20px;
+    & + & {
+      margin-top: 20px;
 
-    @include _800 {
-      margin-top: 0;
+      @include _800 {
+        margin-top: 0;
+      }
     }
   }
 
@@ -44,10 +44,10 @@
 
     &_type_header {
       &::before {
-        display: block;
         content: attr(title);
-        font-weight: bold;
+        display: block;
         height: 0;
+        font-weight: bold;
         overflow: hidden;
         visibility: hidden;
       }
