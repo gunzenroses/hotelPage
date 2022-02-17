@@ -5,10 +5,10 @@ class Pagination {
   constructor(item) {
     this.data = paginationData;
     this.num = this.data.currentNum;
-    this.init();
+    this.init(item);
   }
 
-  init() {
+  init(item) {
     this._createClasses();
     this._createContainer(item);
     this._render();
@@ -34,30 +34,28 @@ class Pagination {
     this.pageButtons = document.createElement('div');
     this.pageButtons.classList.add(
       this.classContent,
-      `js-${this.classContent}`
+      `js-${ this.classContent }`
     );
     this.paginationInfo = document.createElement('div');
-    this.paginationInfo.classList.add(this.classInfo, `js-${this.classInfo}`);
+    this.paginationInfo.classList.add(this.classInfo, `js-${ this.classInfo }`);
   }
 
   _createChildren() {
     this.buttonItems = Array.from(
-      this.pageButtons.querySelectorAll(`.js-${this.classItem}`)
+      this.pageButtons.querySelectorAll(`.js-${ this.classItem }`)
     );
     this.buttonFirst = this.pageButtons.querySelector(
-      `.js-${this.classButtonFirst}`
+      `.js-${ this.classButtonFirst }`
     );
     this.buttonLast = this.pageButtons.querySelector(
-      `.js-${this.classButtonLast}`
+      `.js-${ this.classButtonLast }`
     );
-    this.buttonNext =
-      this.num < this.data.totalNum
-        ? this.pageButtons.querySelector(`.js-${this.classButtonNext}`)
-        : null;
-    this.buttonPrev =
-      this.num > 3
-        ? this.pageButtons.querySelector(`.js-${this.classButtonPrev}`)
-        : null;
+    this.buttonNext = this.num < this.data.totalNum
+      ? this.pageButtons.querySelector(`.js-${ this.classButtonNext }`)
+      : null;
+    this.buttonPrev = this.num > 3
+      ? this.pageButtons.querySelector(`.js-${ this.classButtonPrev }`)
+      : null;
   }
 
   _enable() {
@@ -128,10 +126,10 @@ class Pagination {
       button.classList.add(
         this.classItem,
         this.classItemCurrent,
-        `js-${this.classItemCurrent}`
+        `js-${ this.classItemCurrent }`
       );
     } else {
-      button.classList.add(this.classItem, `js-${this.classItem}`);
+      button.classList.add(this.classItem, `js-${ this.classItem }`);
     }
     return button;
   }
@@ -148,36 +146,44 @@ class Pagination {
   }
 
   _addRestButton() {
-    this.pageButtons.innerHTML = `${this.pageButtons.innerHTML}<button value = '4' class = 'js-${this.classItem} ${this.classItem}'>...</button>`;
+    this.pageButtons.innerHTML = `${
+      this.pageButtons.innerHTML }<button value = '4' class = 'js-${
+      this.classItem } ${ this.classItem }'>...</button>`;
   }
 
   _addLastButton() {
-    this.pageButtons.innerHTML = `${this.pageButtons.innerHTML}<button class = 'pagination__button js-${this.classButtonLast} ${this.classButtonLast} '>15</button>`;
+    this.pageButtons.innerHTML = `${
+      this.pageButtons.innerHTML }<button class = 'pagination__button js-${
+      this.classButtonLast } ${ this.classButtonLast } '>15</button>`;
   }
 
   _addPrevButton() {
     this.pageButtons.innerHTML = `
-      <button class = 'pagination__button js-${this.classButtonPrev} ${this.classButtonPrev}'></button>
-      ${this.pageButtons.innerHTML}`;
+      <button class = 'pagination__button js-${
+  this.classButtonPrev } ${ this.classButtonPrev }'></button>
+      ${ this.pageButtons.innerHTML }`;
   }
 
   _addNextButton() {
     this.pageButtons.innerHTML = `
-      ${this.pageButtons.innerHTML}
-      <button class = 'pagination__button js-${this.classButtonNext} ${this.classButtonNext}'></button>`;
+      ${ this.pageButtons.innerHTML }
+      <button class = 'pagination__button js-${
+  this.classButtonNext } ${ this.classButtonNext }'></button>`;
   }
 
   _addFirstButton() {
     this.pageButtons.innerHTML = `
-      <button class = 'pagination__button js-${this.classButtonFirst} ${this.classButtonFirst}'>1</button>
-      ${this.pageButtons.innerHTML}`;
+      <button class = 'pagination__button js-${
+  this.classButtonFirst } ${ this.classButtonFirst }'>1</button>
+      ${ this.pageButtons.innerHTML }`;
   }
 
   _makeInfoLine() {
     this.paginationInfo.innerHTML = '';
     const trimStart = (this.num - 1) * this.data.itemsPerPage + 1;
     const trimEnd = trimStart + this.data.itemsPerPage - 1;
-    this.paginationInfo.innerText = `${trimStart} – ${trimEnd} из 100+ вариантов аренды`;
+    this.paginationInfo.innerText = `${
+      trimStart } – ${ trimEnd } из 100+ вариантов аренды`;
   }
 
   @boundMethod

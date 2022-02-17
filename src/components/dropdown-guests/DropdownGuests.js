@@ -46,10 +46,10 @@ export default class DropdownGuests {
       this.container.querySelectorAll('.js-dropdown-item')
     );
     this.dropdownMinuses = this.container.querySelectorAll(
-      `.js-${this.classItemMinus}`
+      `.js-${ this.classItemMinus }`
     );
     this.dropdownPluses = this.container.querySelectorAll(
-      `.js-${this.classItemPlus}`
+      `.js-${ this.classItemPlus }`
     );
     this.resetButton = this.dropdownExpanded.querySelector(
       '.js-dropdown__button_type_reset'
@@ -61,7 +61,7 @@ export default class DropdownGuests {
 
   _makeData() {
     Array.from(
-      this.container.querySelectorAll(`.js-${this.classNumber}`)
+      this.container.querySelectorAll(`.js-${ this.classNumber }`)
     ).forEach((num) => {
       const value = parseInt(num.textContent, 10);
       this.data.push(value);
@@ -110,7 +110,7 @@ export default class DropdownGuests {
       this.data[i] = 10;
     }
     const dropdownItem = this.dropdownItems[i].querySelector(
-      `.js-${this.classNumber}`
+      `.js-${ this.classNumber }`
     );
     dropdownItem.innerText = this.data[i];
     this._activateMinusPlus(i);
@@ -118,14 +118,18 @@ export default class DropdownGuests {
 
   _activateMinusPlus(i) {
     if (this.data[i] <= 0) {
-      this.dropdownMinuses[i].classList.add(`${this.classItemMinus}_disabled`);
+      this.dropdownMinuses[i].classList.add(
+        `${ this.classItemMinus }_disabled`
+      );
     } else if (this.data[i] > 0 && this.data[i] < 10) {
-      this.dropdownPluses[i].classList.remove(`${this.classItemPlus}_disabled`);
+      this.dropdownPluses[i].classList.remove(
+        `${ this.classItemPlus }_disabled`
+      );
       this.dropdownMinuses[i].classList.remove(
-        `${this.classItemMinus}_disabled`
+        `${ this.classItemMinus }_disabled`
       );
     } else {
-      this.dropdownPluses[i].classList.add(`${this.classItemPlus}_disabled`);
+      this.dropdownPluses[i].classList.add(`${ this.classItemPlus }_disabled`);
     }
   }
 
@@ -159,8 +163,8 @@ export default class DropdownGuests {
     const onlyInfants = this.adultGuests < 1 && this.infantGuests > 0;
     const adultsWithInfants = this.adultGuests > 0 && this.infantGuests > 0;
 
-    const adultsInfo = `${this.adultGuests} ${adultWord}`;
-    const infantsInfo = `${this.infantGuests} ${infantWord}`;
+    const adultsInfo = `${ this.adultGuests } ${ adultWord }`;
+    const infantsInfo = `${ this.infantGuests } ${ infantWord }`;
 
     switch (true) {
       case onlyAdults:
@@ -170,7 +174,7 @@ export default class DropdownGuests {
         this.infoInput.value = infantsInfo;
         break;
       case adultsWithInfants:
-        this.infoInput.value = `${adultsInfo}, ${infantsInfo}`;
+        this.infoInput.value = `${ adultsInfo }, ${ infantsInfo }`;
         break;
       default:
         this.infoInput.value = '';

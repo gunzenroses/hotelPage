@@ -17,20 +17,20 @@ class RoomCarousel {
     switch (this.leftValue) {
       case -100:
         this.secondPicRadio.checked = true;
-        this.carouselPictures.style.left = `${this.leftValue}%`;
+        this.carouselPictures.style.left = `${ this.leftValue }%`;
         break;
       case -200:
         this.thirdPicRadio.checked = true;
-        this.carouselPictures.style.left = `${this.leftValue}%`;
+        this.carouselPictures.style.left = `${ this.leftValue }%`;
         break;
       case 100:
         this.leftValue = -300;
         this.forthPicRadio.checked = true;
-        this.carouselPictures.style.left = `${this.leftValue}%`;
+        this.carouselPictures.style.left = `${ this.leftValue }%`;
         break;
       default:
         this.firstPicRadio.checked = true;
-        this.carouselPictures.style.left = `${this.leftValue}%`;
+        this.carouselPictures.style.left = `${ this.leftValue }%`;
         break;
     }
   }
@@ -41,20 +41,20 @@ class RoomCarousel {
     switch (this.leftValue) {
       case -100:
         this.secondPicRadio.checked = true;
-        this.carouselPictures.style.left = `${this.leftValue}%`;
+        this.carouselPictures.style.left = `${ this.leftValue }%`;
         break;
       case -200:
         this.thirdPicRadio.checked = true;
-        this.carouselPictures.style.left = `${this.leftValue}%`;
+        this.carouselPictures.style.left = `${ this.leftValue }%`;
         break;
       case -300:
         this.forthPicRadio.checked = true;
-        this.carouselPictures.style.left = `${this.leftValue}%`;
+        this.carouselPictures.style.left = `${ this.leftValue }%`;
         break;
       default:
         this.leftValue = 0;
         this.firstPicRadio.checked = true;
-        this.carouselPictures.style.left = `${this.leftValue}%`;
+        this.carouselPictures.style.left = `${ this.leftValue }%`;
         break;
     }
   }
@@ -81,7 +81,7 @@ class RoomCarousel {
       this.firstPicRadio,
       this.secondPicRadio,
       this.thirdPicRadio,
-      this.forthPicRadio,
+      this.forthPicRadio
     ] = this.carouselRow;
     this.firstPicRadio.checked = true;
   }
@@ -112,7 +112,7 @@ class RoomCarousel {
         this.leftValue = 0;
         break;
     }
-    this.carouselPictures.style.left = `${this.leftValue}%`;
+    this.carouselPictures.style.left = `${ this.leftValue }%`;
   }
 }
 

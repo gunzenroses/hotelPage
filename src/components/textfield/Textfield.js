@@ -27,7 +27,7 @@ class Textfield {
     const longEnough = itemText.length > 4;
     if (!afterDog && longEnough) {
       const newValue = itemText.replace(/[^a-zA-Z0-9\s]/gi, '');
-      this.item.value = `${newValue}@`;
+      this.item.value = `${ newValue }@`;
     }
   }
 }

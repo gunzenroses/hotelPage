@@ -29,30 +29,33 @@ class DonutChart {
 
   _createItems() {
     this.marks.forEach((mark) => {
-      this[`${mark}Item`] = this.chart.querySelector(
-        `.js-donut-chart__key-item_${mark}`
+      this[`${ mark }Item`] = this.chart.querySelector(
+        `.js-donut-chart__key-item_${ mark }`
       );
     });
   }
 
   _createCircles() {
     this.marks.forEach((mark) => {
-      this[`${mark}Circle`] = this.chart.querySelector(
-        `.js-donut-chart__segment_${mark}`
+      this[`${ mark }Circle`] = this.chart.querySelector(
+        `.js-donut-chart__segment_${ mark }`
       );
     });
   }
 
   _enable() {
     this.marks.forEach((mark) => {
-      this[`${mark}Circle`].addEventListener('pointerenter', this._renewChart);
+      this[`${ mark }Circle`].addEventListener(
+        'pointerenter',
+        this._renewChart
+      );
 
-      this[`${mark}Item`].addEventListener(
+      this[`${ mark }Item`].addEventListener(
         'pointerenter',
         this._makeEventOnCircle
       );
 
-      this[`${mark}Item`].addEventListener(
+      this[`${ mark }Item`].addEventListener(
         'pointerleave',
         this._makeEventOnCircle
       );
@@ -63,7 +66,7 @@ class DonutChart {
   _makeEventOnCircle(e) {
     const mark = e.target.dataset.circleModifier;
     const evt = e.type;
-    this[`${mark}Circle`].dispatchEvent(
+    this[`${ mark }Circle`].dispatchEvent(
       new Event(evt, { bubbles: true, cancelable: false })
     );
   }
@@ -120,10 +123,10 @@ class DonutChart {
 
   _changeText(mod) {
     if (mod) {
-      this.donutText.classList.add(`donut-chart__text_${mod}`);
+      this.donutText.classList.add(`donut-chart__text_${ mod }`);
     } else {
       this.marks.forEach((mark) => {
-        this.donutText.classList.remove(`donut-chart__text_${mark}`);
+        this.donutText.classList.remove(`donut-chart__text_${ mark }`);
       });
     }
   }

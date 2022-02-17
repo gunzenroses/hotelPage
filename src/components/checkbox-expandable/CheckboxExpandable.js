@@ -11,8 +11,6 @@ class CheckboxExpandable {
     this._enable();
   }
 
-  
-
   _createChildren() {
     this.dropdownInit = this.dropdown.querySelector(
       '.js-checkbox-expandable__init'
