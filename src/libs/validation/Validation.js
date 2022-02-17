@@ -77,15 +77,15 @@ class Validation {
   }
 
   _addMethods() {
-    this.validator.addMethod('pwcheck', (value) => {
-      /^[A-Za-z0-9\d=!\-@._*]*$/.test(value);
-    });
+    this.validator.addMethod(
+      'pwcheck', 
+      (value) => /^[A-Za-z0-9\d=!\-@._*]*$/.test(value));
     this.validator.addMethod('lowerCase', (value) => /[a-z]{1,}/.test(value));
     this.validator.addMethod('upperCase', (value) => /[A-Z]{1,}/.test(value));
     this.validator.addMethod('hasDigit', (value) => /\d{1,}/.test(value));
-    this.validator.addMethod('domain', (value) => {
-      /\.[a-zA-Z]{2,3}$/.test(value);
-    });
+    this.validator.addMethod(
+      'domain', 
+      (value) => /\.[a-zA-Z]{2,3}$/.test(value));
   }
 }
 
