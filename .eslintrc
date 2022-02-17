@@ -14,9 +14,10 @@
     "plugin:fsd/all"
   ],
   "rules": {
+    "no-underscore-dangle": "off",
     "no-new": "off",
     "linebreak-style": ["error", "windows"],
-    "prefer-desctucturing": "off",
+    "prefer-destructuring": "off",
     "object-curly-spacing": ["error", "always"],
     "template-curly-spacing": ["error", "always"],
     "quotes": ["error", "single"],
