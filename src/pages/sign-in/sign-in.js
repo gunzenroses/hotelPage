@@ -1,4 +1,4 @@
-import 'Scripts/expand/Expand-init';
+import 'Scripts/Expand/Expand-init';
 import 'Components/card-sing-in/card-sign-in';
 import 'Components/footer/footer';
 import 'Components/textfield/Textfield-init';

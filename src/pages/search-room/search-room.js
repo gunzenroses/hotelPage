@@ -1,4 +1,4 @@
-import 'Scripts/expand/Expand-init';
+import 'Scripts/Expand/Expand-init';
 import 'Components/calendar/Calendar-init';
 import 'Components/checkbox-expandable/CheckboxExpandable-init';
 import 'Components/dropdown-guests/DropdownGuests-init';
