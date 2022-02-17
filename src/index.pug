@@ -36,17 +36,15 @@ block variables
         href: './sign-in.html',
         src: './assets/images/navigation/sign-in.jpg',
       }
-    ]
+    ];
 
 block content
   main.index-content
     ul.navigation
       each page in pages
-        - var { href, name, src } = page
+        - var { href, name, src } = page;
         li.navigation__item
           a(href = href).navigation__link
             img.navigation__pic(
               alt = name 
               src = src)
-            
-    

@@ -2,11 +2,11 @@ mixin checkbox-item({valueText = '', inputName = '', ifChecked = false, checkbox
   -
     var itemClass = modifier === 'rich'
       ? 'checkbox-item checkbox-item_rich'
-      : 'checkbox-item'
+      : 'checkbox-item';
   - 
     var titleClass = modifier === '' 
       ? 'checkbox-item__title' 
-      : `checkbox-item__title checkbox-item__title_${ modifier }`
+      : `checkbox-item__title checkbox-item__title_${ modifier }`;
 
   label(class = itemClass)
     input(

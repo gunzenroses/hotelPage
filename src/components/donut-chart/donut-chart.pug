@@ -8,7 +8,7 @@ mixin donut-chart({ excellentNum = 0, goodNum  = 0, satisfiedNum  = 0, disappoin
       parseFloat(excellentNum) +
       parseFloat(goodNum) +
       parseFloat(satisfiedNum) + 
-      parseFloat(disappointedNum)
+      parseFloat(disappointedNum);
   - var disappointedPercent = disappointedNum / totalData * 100;
   - var satisfiedPercent = satisfiedNum / totalData * 100;
   - var goodPercent = goodNum / totalData * 100;
@@ -31,7 +31,7 @@ mixin donut-chart({ excellentNum = 0, goodNum  = 0, satisfiedNum  = 0, disappoin
         number: excellentNum,
         percent: excellentPercent
       }
-    } 
+    };
   
   - var counter = 1;
   - var dashOffsetValue = parseFloat(25 - 0.5);
@@ -47,11 +47,11 @@ mixin donut-chart({ excellentNum = 0, goodNum  = 0, satisfiedNum  = 0, disappoin
         defs
           each donutColor in donutColors 
             each val, key in donutColor
-              - var { start, end } = val
+              - var { start, end } = val;
               - 
                 var gradientInfo = key === 'excellent' | key === 'satisfied'
                   ? 'rotate(90)'
-                  : ''
+                  : '';
               lineargradient(id= `gradient_${ 
                 key }` gradientTransform = gradientInfo)
                 stop(stop-color = start offset = '0%')
@@ -64,7 +64,7 @@ mixin donut-chart({ excellentNum = 0, goodNum  = 0, satisfiedNum  = 0, disappoin
           role = 'presentation' 
           )
         each data, mark in donutData
-          - var { number, percent } = data
+          - var { number, percent } = data;
           - 
             var dashValue = percent > 2
             ? parseInt(percent - 1)

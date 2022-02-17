@@ -1,9 +1,13 @@
 mixin textfield({ inputClass = '', placeholder = '', valueText = '', nameText = 'text', maxText = 30, autofocus = false })
-  - var textfieldType = inputClass === 'password' ? 'password' : 'text'
+  - 
+    var textfieldType = inputClass === 'password' 
+      ? 'password' 
+      : 'text';
   - 
     var textfieldClass = inputClass === '' 
-      ? 'textfield' : `textfield textfield_type_${ inputClass }`
-  
+      ? 'textfield' 
+      : `textfield textfield_type_${ inputClass }`;
+
   div(class = textfieldClass)
     input(
       class = 'textfield__input' 

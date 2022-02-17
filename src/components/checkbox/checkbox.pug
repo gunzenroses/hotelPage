@@ -5,7 +5,7 @@ mixin checkbox
 
   fieldset.checkbox
     each houseRule in houseRules
-      - var { valueText, inputName, ifChecked, checkboxTitle } = houseRule
+      - var { valueText, inputName, ifChecked, checkboxTitle } = houseRule;
       +checkbox-item({
         valueText: valueText, 
         inputName: inputName, 

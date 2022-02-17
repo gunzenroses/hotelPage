@@ -4,7 +4,7 @@ mixin login(theme = '')
   - 
     var loginClass = theme === ''
       ? 'login' 
-      : `login login_in_${ theme }`
+      : `login login_in_${ theme }`;
 
   div(class = loginClass)
     +textfield({ 

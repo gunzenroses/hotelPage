@@ -12,13 +12,16 @@ mixin footer(theme = 'main')
     } = require('Components/footer/footer.json');
   - 
     var footerCopyrightClass = theme === 'main'
-      ? 'footer__basement' : `footer__basement footer__basement_in_${ theme }`
+      ? 'footer__basement' 
+      : `footer__basement footer__basement_in_${ theme }`;
   -
     var footerNavbarClass = theme === 'main'
-      ? 'footer__navbar' : `footer__navbar footer__navbar_in_${ theme }`
+      ? 'footer__navbar' 
+      : `footer__navbar footer__navbar_in_${ theme }`;
   - 
     var infoVisibleClass = theme === 'details' 
-      ? `footer__info footer__info_in_${ theme }` : 'footer__info'
+      ? `footer__info footer__info_in_${ theme }` 
+      : 'footer__info';
 
   footer.footer
     div(class = footerNavbarClass)

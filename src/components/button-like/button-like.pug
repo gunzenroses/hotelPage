@@ -2,15 +2,15 @@ mixin button-like({ buttonNumber = 1, ifLiked = false })
   - 
     var buttonLikeClass = ifLiked
       ? 'button-like js-button-like button-like_popular'
-      : 'button-like js-button-like'
+      : 'button-like js-button-like';
   -
     var buttonLikeHeartClass = ifLiked
       ? 'button-like__heart js-button-like__heart button-like__heart_popular'
-      : 'button-like__heart js-button-like__heart'
+      : 'button-like__heart js-button-like__heart';
   -
     var buttonLikeNumberClass = ifLiked
       ? 'button-like__number js-button-like__number button-like__number_popular'
-      : 'button-like__number js-button-like__number'
+      : 'button-like__number js-button-like__number';
 
   div(class = buttonLikeClass)
     div(class = buttonLikeHeartClass)

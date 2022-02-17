@@ -16,7 +16,7 @@ mixin rich-checkbox({ checkboxName = '', containerText = '' })
         checkboxDescription: 
           'На 1 этаже вас встретит специалист <br> и проводит до номера.'
       }
-    ]
+    ];
 
   .rich-checkbox
     .rich-checkbox__label!= containerText
@@ -27,7 +27,7 @@ mixin rich-checkbox({ checkboxName = '', containerText = '' })
             checkboxName, 
             checkboxValue, 
             checkboxTitle, 
-            checkboxDescription } = checkboxItem
+            checkboxDescription } = checkboxItem;
         +checkbox-item({
           valueText: checkboxValue,
           inputName: checkboxName,

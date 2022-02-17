@@ -8,6 +8,7 @@
 
 .headers-n-footers {
   @include isFlex($direction: column, $justify: flex-start);
+  position: relative;
   width: 1440px;
   height: 1350px;
   margin: 0 auto;

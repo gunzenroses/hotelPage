@@ -3,12 +3,12 @@ mixin navlink({ buttonText = '', onClick = './some-address', modifier = '', butt
   - 
     var navlinkClass = modifier === ''
       ? 'navlink'
-      : `navlink navlink_type_${ modifier }`
+      : `navlink navlink_type_${ modifier }`;
 
   -
     var navlinkButtonClass = buttonModifier === ''
       ? 'navlink__button' 
-      : `navlink__button navlink__button_type_${ buttonModifier }`
+      : `navlink__button navlink__button_type_${ buttonModifier }`;
 
   li(class = navlinkClass)
     a(

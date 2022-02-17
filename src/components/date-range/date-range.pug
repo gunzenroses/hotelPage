@@ -4,26 +4,26 @@ mixin date-range({ dateRanges = [{ labelText: '', value: '', name: 'check-in-che
   -  
     var className = theme === 'search' 
       ? `date-range__info date-range__info_in_${ theme }` 
-      : 'date-range__info'
+      : 'date-range__info';
   - 
     var rangeCalendar = 
       `date-range__calendar js-date-range__calendar js-expand ${
-        classShow }`
+        classShow }`;
   -
     var rangeSelectorClass = dateRanges.length === 1
       ? 'date-range__selector date-range__selector_common js-expand__init'
-      : 'date-range__selector js-expand__init'
+      : 'date-range__selector js-expand__init';
   -
     var rangeItemClass = dateRanges.length === 1
       ? 'date-range__item'
-      : 'date-range__item date-range__item_separate'
+      : 'date-range__item date-range__item_separate';
 
   div.date-range.js-date-range
     div(class = rangeCalendar)
       +calendar()
     div(class = rangeSelectorClass)
       each dateRange in dateRanges
-        - var { labelText, value, name, data } = dateRange
+        - var { labelText, value, name, data } = dateRange;
         div(class = rangeItemClass)
           h3.date-range__label!= labelText
           div(class = className)
