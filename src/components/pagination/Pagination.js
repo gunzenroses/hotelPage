@@ -11,10 +11,7 @@ class Pagination {
   init(item) {
     this._createClasses();
     this._createContainer(item);
-    this._render();
-    this._createChildren();
     this._enable();
-    this._addToContainer();
   }
 
   _createClasses() {
@@ -40,6 +37,13 @@ class Pagination {
     this.paginationInfo.classList.add(this.classInfo, `js-${ this.classInfo }`);
   }
 
+  _enable() {
+    this._render();
+    this._createChildren();
+    this._addListeners();
+    this._addToContainer();
+  }
+
   _createChildren() {
     this.buttonItems = Array.from(
       this.pageButtons.querySelectorAll(`.js-${ this.classItem }`)
@@ -58,7 +62,7 @@ class Pagination {
       : null;
   }
 
-  _enable() {
+  _addListeners() {
     this.buttonItems.forEach((item) => {
       item.addEventListener('pointerup', this._onButtonClick);
     });
@@ -189,31 +193,31 @@ class Pagination {
   @boundMethod
   _onButtonClick(e) {
     this.num = parseInt(e.target.value, 10);
-    this.init();
+    this._enable();
   }
 
   @boundMethod
   _onButtonNextClick() {
     this.num += 1;
-    this.init();
+    this._enable();
   }
 
   @boundMethod
   _onButtonPrevClick() {
     this.num -= 1;
-    this.init();
+    this._enable();
   }
 
   @boundMethod
   _onButtonFirstClick() {
     this.num = 1;
-    this.init();
+    this._enable();
   }
 
   @boundMethod
   _onButtonLastClick() {
     this.num = 15;
-    this.init();
+    this._enable();
   }
 }
 
