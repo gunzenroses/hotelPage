@@ -8,6 +8,7 @@ class DonutChart {
 
   init() {
     this.marks = ['excellent', 'good', 'satisfied', 'disappointed'];
+    this._createClasses();
     this._createChildren();
     this._createItems();
     this._createCircles();
@@ -21,16 +22,24 @@ class DonutChart {
     this._changeText();
   }
 
+  _createClasses() {
+    this.classNumber = 'donut-chart__number';
+    this.classLabel = 'donut-chart__label';
+    this.classText = 'donut-chart__text';
+    this.classSegment = 'donut-chart__segment';
+    this.classKeyItem = 'donut-chart__key-item';
+  }
+
   _createChildren() {
-    this.donutNumber = this.chart.querySelector('.js-donut-chart__number');
-    this.donutLabel = this.chart.querySelector('.js-donut-chart__label');
-    this.donutText = this.chart.querySelector('.js-donut-chart__text');
+    this.donutNumber = this.chart.querySelector(`.js-${ this.classNumber }`);
+    this.donutLabel = this.chart.querySelector(`.js-${ this.classLabel }`);
+    this.donutText = this.chart.querySelector(`.js-${ this.classText }`);
   }
 
   _createItems() {
     this.marks.forEach((mark) => {
       this[`${ mark }Item`] = this.chart.querySelector(
-        `.js-donut-chart__key-item_${ mark }`
+        `.js-${ this.classKeyItem }_${ mark }`
       );
     });
   }
@@ -38,7 +47,7 @@ class DonutChart {
   _createCircles() {
     this.marks.forEach((mark) => {
       this[`${ mark }Circle`] = this.chart.querySelector(
-        `.js-donut-chart__segment_${ mark }`
+        `.js-${ this.classSegment }_${ mark }`
       );
     });
   }
@@ -79,7 +88,7 @@ class DonutChart {
 
   _renewCircle(e) {
     e.target.style.transition = 'all 0.3s';
-    e.target.classList.add('donut-chart__segment_hovered');
+    e.target.classList.add(`${ this.classSegment }_hovered`);
     e.target.addEventListener('pointerleave', this._restoreCircle);
   }
 
@@ -93,7 +102,7 @@ class DonutChart {
 
   @boundMethod
   _restoreCircle(e) {
-    e.target.classList.remove('donut-chart__segment_hovered');
+    e.target.classList.remove(`${ this.classSegment }_hovered`);
     e.target.removeEventListener('pointerleave', this._restoreCircle);
     this.restoreInfo();
   }
@@ -123,10 +132,10 @@ class DonutChart {
 
   _changeText(mod) {
     if (mod) {
-      this.donutText.classList.add(`donut-chart__text_${ mod }`);
+      this.donutText.classList.add(`${ this.classText }_${ mod }`);
     } else {
       this.marks.forEach((mark) => {
-        this.donutText.classList.remove(`donut-chart__text_${ mark }`);
+        this.donutText.classList.remove(`${ this.classText }_${ mark }`);
       });
     }
   }

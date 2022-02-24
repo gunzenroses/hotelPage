@@ -7,34 +7,41 @@ class Expand {
   }
 
   init() {
+    this._createClasses();
     this._createChildren();
     this._enable();
   }
 
   expandElement(el) {
-    const innerParent = el.closest('.js-expand__init').parentElement;
-    const innerExpand = innerParent.querySelector('.js-expand');
-    innerExpand.classList.toggle('expand__show');
+    const innerParent = el.closest(this.classInit).parentElement;
+    const innerExpand = innerParent.querySelector(this.classExpand);
+    innerExpand.classList.toggle(this.classShow);
     return this;
   }
 
   hideElements() {
     this.dropdownWatchedExpands.forEach((item) => {
-      item.classList.remove('expand__show');
+      item.classList.remove(this.classShow);
     });
+  }
+
+  _createClasses() {
+    this.classInit = '.js-expand__init';
+    this.classExpand = '.js-expand';
+    this.classShow = 'expand__show';
   }
 
   _createChildren() {
     this.dropdownWatchedParents = [];
     this.dropdownWatchedExpands = [];
     this.dropdownWatchedInits = Array.from(
-      this.dropdownWatch.querySelectorAll('.js-expand__init')
+      this.dropdownWatch.querySelectorAll(this.classInit)
     );
     this.dropdownWatchedInits.forEach((item) => {
       this.dropdownWatchedParents.push(item.parentElement);
     });
     this.dropdownWatchedParents.forEach((item) => {
-      this.dropdownWatchedExpands.push(item.querySelector('.js-expand'));
+      this.dropdownWatchedExpands.push(item.querySelector(this.classExpand));
     });
   }
 
@@ -45,8 +52,8 @@ class Expand {
   @boundMethod
   _dropdownClick(event) {
     const el = event.target;
-    const hasInnerExpand = el.closest('.js-expand');
-    const hasExpand = el.closest('.js-expand__init');
+    const hasInnerExpand = el.closest(this.classExpand);
+    const hasExpand = el.closest(this.classInit);
     const hasParent = el.parentElement;
     const noExpand = !hasInnerExpand && !hasExpand;
 
@@ -57,10 +64,10 @@ class Expand {
 
   _expandInner(el) {
     this.dropdownWatchedExpands.forEach((item, index) => {
-      if (el.closest('.js-expand__init') !== this.dropdownWatchedInits[index]) {
-        item.classList.remove('expand__show');
+      if (el.closest(this.classInit) !== this.dropdownWatchedInits[index]) {
+        item.classList.remove(this.classShow);
       } else {
-        item.classList.toggle('expand__show');
+        item.classList.toggle(this.classShow);
       }
     });
   }

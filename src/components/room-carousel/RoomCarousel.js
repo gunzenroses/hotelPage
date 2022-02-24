@@ -7,6 +7,7 @@ class RoomCarousel {
   }
 
   init() {
+    this._createClasses();
     this._createChildren();
     this._enable();
   }
@@ -59,23 +60,31 @@ class RoomCarousel {
     }
   }
 
+  _createClasses() {
+    this.classRadio = 'room-carousel__radio';
+    this.classPictures = 'room-carousel__pictures';
+    this.classButtonPrev = 'room-carousel__button_prev';
+    this.classButtonNext = 'room-carousel__button_next';
+    this.classRadioReal = 'room-carousel__radio-real';
+  }
+
   _createChildren() {
     [this.carouselInputs] = this.carousel.getElementsByClassName(
-      'js-room-carousel__radio'
+      `js-${ this.classRadio }`
     );
     this.carouselPictures = this.carousel.querySelector(
-      '.js-room-carousel__pictures'
+      `.js-${ this.classPictures }`
     );
     this.carouselPictures.style.left = 0;
     this.leftValue = parseInt(this.carouselPictures.style.left, 10);
     this.carouselPrev = this.carousel.querySelector(
-      '.js-room-carousel__button_prev'
+      `.js-${ this.classButtonPrev }`
     );
     this.carouselNext = this.carousel.querySelector(
-      '.js-room-carousel__button_next'
+      `.js-${ this.classButtonNext }`
     );
     this.carouselRow = this.carouselInputs.getElementsByClassName(
-      'js-room-carousel__radio-real'
+      `js-${ this.classRadioReal }`
     );
     [
       this.firstPicRadio,

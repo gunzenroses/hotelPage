@@ -157,13 +157,13 @@ class Pagination {
 
   _addLastButton() {
     this.pageButtons.innerHTML = `${
-      this.pageButtons.innerHTML }<button class = 'pagination__button js-${
+      this.pageButtons.innerHTML }<button class = '${ this.classButton } js-${
       this.classButtonLast } ${ this.classButtonLast } '>15</button>`;
   }
 
   _addPrevButton() {
     this.pageButtons.innerHTML = `
-      <button class = 'pagination__button js-${
+      <button class = '${ this.classButton } js-${
   this.classButtonPrev } ${ this.classButtonPrev }'></button>
       ${ this.pageButtons.innerHTML }`;
   }
@@ -171,13 +171,13 @@ class Pagination {
   _addNextButton() {
     this.pageButtons.innerHTML = `
       ${ this.pageButtons.innerHTML }
-      <button class = 'pagination__button js-${
+      <button class = '${ this.classButton } js-${
   this.classButtonNext } ${ this.classButtonNext }'></button>`;
   }
 
   _addFirstButton() {
     this.pageButtons.innerHTML = `
-      <button class = 'pagination__button js-${
+      <button class = '${ this.classButton } js-${
   this.classButtonFirst } ${ this.classButtonFirst }'>1</button>
       ${ this.pageButtons.innerHTML }`;
   }

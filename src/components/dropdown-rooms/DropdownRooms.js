@@ -18,16 +18,19 @@ export default class DropdownRooms {
   }
 
   _createClasses() {
+    this.classItem = 'dropdown-item';
+    this.classInfo = 'dropdown__info';
+    this.classInput = 'dropdown__input';
     this.classItemPlus = 'dropdown-item__plus';
     this.classItemMinus = 'dropdown-item__minus';
     this.classNumber = 'dropdown-item__number';
   }
 
   _createChildren() {
-    this.info = this.container.querySelector('.js-dropdown__info');
-    this.infoInput = this.container.querySelector('.js-dropdown__input');
+    this.info = this.container.querySelector(`.js-${ this.classInfo }`);
+    this.infoInput = this.container.querySelector(`.js-${ this.classInput }`);
     this.dropdownItems = Array.from(
-      this.container.querySelectorAll('.js-dropdown-item')
+      this.container.querySelectorAll(`.js-${ this.classItem }`)
     );
     this.dropdownPluses = this.container.querySelectorAll(
       `.js-${ this.classItemPlus }`

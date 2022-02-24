@@ -7,7 +7,17 @@ class Range {
   }
 
   init() {
-    $('.js-range__slider').ionRangeSlider({
+    this._makeClasses();
+    this._makeSlider();
+  }
+
+  _makeClasses() {
+    this.classSlider = '.js-range__slider';
+    this.classSliderValue = '.js-range__value';
+  }
+
+  _makeSlider() {
+    $(this.classSlider).ionRangeSlider({
       type: 'double',
       min: 0,
       max: 15000,
@@ -26,7 +36,7 @@ class Range {
   _changeValue(data) {
     const toPretty = data.to_pretty ? data.to_pretty : '10 000';
     const fromPretty = data.from_pretty ? data.from_pretty : '5 000';
-    this.rangeValue = $(data.input).siblings('.js-range__value');
+    this.rangeValue = $(data.input).siblings(this.classSliderValue);
     this.rangeValue.val(`${ fromPretty }₽ - ${ toPretty }₽`);
   }
 }

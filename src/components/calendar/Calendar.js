@@ -7,9 +7,9 @@ class Calendar {
   }
 
   init(item) {
-    this._createChildren(item);
     this._createClasses();
-    this.setCheckInCheckOut();
+    this._createChildren(item);
+    this._setCheckInCheckOut();
     this._render();
     this._addListeners();
   }
@@ -25,11 +25,11 @@ class Calendar {
       this.rangeStart.value = '';
       this.rangeEnd.value = '';
     }
-    this.calendar.classList.remove('expand__show');
+    this.calendar.classList.remove(this.classExpandShow);
     this._render();
   }
 
-  setCheckInCheckOut() {
+  _setCheckInCheckOut() {
     if (this.rangeSpan) {
       const rangeData = this.rangeSpan.value.split(' - ');
 
@@ -55,11 +55,7 @@ class Calendar {
     }
     if (this.rangeStart && this.rangeEnd) {
       const checkInData = this.rangeStart.value.split('.');
-      this.checkIn = new Date(
-        checkInData[2],
-        checkInData[1],
-        checkInData[0]
-      );
+      this.checkIn = new Date(checkInData[2], checkInData[1], checkInData[0]);
       const checkOutData = this.rangeEnd.value.split('.');
       this.checkOut = new Date(
         checkOutData[2],
@@ -67,6 +63,24 @@ class Calendar {
         checkOutData[0]
       );
     }
+  }
+
+  _createClasses() {
+    this.classCalendarDay = 'calendar__day';
+    this.classDayPrev = 'calendar__day_prev';
+    this.classDayNext = 'calendar__day_next';
+    this.classDayBetween = 'calendar__day calendar__day_between';
+    this.classDayCheckIn = 'calendar__day calendar__day_check-in';
+    this.classDayCalendar = 'calendar__day calendar__day';
+    this.classButtonSubmit = 'calendar__button_submit';
+    this.classButtonReset = 'calendar__button_reset';
+    this.classDateRangeCalendar = 'date-range__calendar';
+    this.classDateRange = 'date-range';
+    this.classCalendarDays = 'calendar__days';
+    this.classCalendarMonth = 'calendar__month';
+    this.classControlNext = 'calendar__control_next';
+    this.classControlPrev = 'calendar__control_prev';
+    this.classExpandShow = 'expand__show';
   }
 
   _createChildren(item) {
@@ -87,19 +101,21 @@ class Calendar {
     ];
 
     this.buttonPrev = this.calendarContainer.querySelector(
-      '.js-calendar__control_prev'
+      `.js-${ this.classControlPrev }`
     );
     this.buttonNext = this.calendarContainer.querySelector(
-      '.js-calendar__control_next'
+      `.js-${ this.classControlNext }`
     );
     this.dateInCalendar = this.calendarContainer.querySelector(
-      '.js-calendar__month'
+      `.js-${ this.classCalendarMonth }`
     );
     this.daysOfMonth = this.calendarContainer.querySelector(
-      '.js-calendar__days'
+      `.js-${ this.classCalendarDays }`
     );
 
-    this.mainContainer = this.calendarContainer.closest('.js-date-range');
+    this.mainContainer = this.calendarContainer.closest(
+      `.js-${ this.classDateRange }`
+    );
     if (this.mainContainer === null) {
       this.mainContainer = this.calendarContainer;
     }
@@ -115,23 +131,15 @@ class Calendar {
     this.rangeEnd = this.mainContainer.querySelector('input[name = check-out]');
 
     this.calendar = this.mainContainer.querySelector(
-      '.js-date-range__calendar'
+      `.js-${ this.classDateRangeCalendar }`
     );
 
     this.btnApply = this.mainContainer.querySelector(
-      '.js-calendar__button_submit'
+      `.js-${ this.classButtonSubmit }`
     );
     this.btnReset = this.mainContainer.querySelector(
-      '.js-calendar__button_reset'
+      `.js-${ this.classButtonReset }`
     );
-  }
-
-  _createClasses() {
-    this.dayPrev = 'calendar__day_prev';
-    this.dayNext = 'calendar__day_next';
-    this.dayBetween = 'calendar__day calendar__day_between';
-    this.dayCheckIn = 'calendar__day calendar__day_check-in';
-    this.dayCalendar = 'calendar__day calendar__day';
   }
 
   _addListeners() {
@@ -157,10 +165,16 @@ class Calendar {
   // ---------------start chooseRange-------------------//
   @boundMethod
   _chooseRange(e) {
-    const hasPrevDays = e.target.classList.contains(`js-${ this.dayPrev }`);
-    const hasNextDays = e.target.classList.contains(`js-${ this.dayNext }`);
+    const hasPrevDays = e.target.classList.contains(
+      `js-${ this.classDayPrev }`
+    );
+    const hasNextDays = e.target.classList.contains(
+      `js-${ this.classDayNext }`
+    );
     const noOtherDays = !hasPrevDays && !hasNextDays;
-    const hasDays = e.target.classList.contains('.js-calendar__days');
+    const hasDays = e.target.classList.contains(
+      `.js-${ this.classCalendarDays }`
+    );
     const noDays = noOtherDays && !hasDays;
     const chosenDay = new Date(this.year, this.month, +e.target.innerText);
     const afterToday = chosenDay > new Date();
@@ -265,17 +279,20 @@ class Calendar {
     if (this.existCheckInCheckOut) {
       this.rangeStartMonth = this.months[this.checkIn.getMonth()].slice(0, 3);
       this.rangeEndMonth = this.months[this.checkOut.getMonth()].slice(0, 3);
-      const checkInInfo = `${ this.checkIn.getDate() } ${ this.rangeStartMonth }`;
-      const checkOutInfo = `${ this.checkOut.getDate() } ${ this.rangeEndMonth }`;
+      const checkInInfo = `${
+        this.checkIn.getDate() } ${ this.rangeStartMonth }`;
+      const checkOutInfo = `${
+        this.checkOut.getDate() } ${ this.rangeEndMonth }`;
       this.rangeSpanText = `${ checkInInfo } - ${ checkOutInfo }`;
     } else if (this.existCheckInOnly) {
       this.rangeStartMonth = this.months[this.checkIn.getMonth()].slice(0, 3);
-      this.rangeSpanText = `${ this.checkIn.getDate() } ${ this.rangeStartMonth }`;
+      this.rangeSpanText = `${
+        this.checkIn.getDate() } ${ this.rangeStartMonth }`;
     } else {
       this.rangeSpanText = '';
     }
     this.rangeSpan.value = this.rangeSpanText;
-    this.calendar.classList.remove('expand__show');
+    this.calendar.classList.remove(this.classExpandShow);
   }
 
   // -------------------start applyStartOrEnd--------------------//
@@ -283,7 +300,7 @@ class Calendar {
   _applyStartOrEnd() {
     this.rangeStart.value = this.checkIn ? this._applyStart() : '';
     this.rangeEnd.value = this.checkOut ? this._applyEnd() : '';
-    this.calendar.classList.remove('expand__show');
+    this.calendar.classList.remove(this.classExpandShow);
   }
 
   _applyStart() {
@@ -360,22 +377,22 @@ class Calendar {
       const betweenInOutYears = betweenInOutOneYear
         || this._betweenInOutDiffYears(prevDay);
       if (this._checkInPrevMonth(prevDay) || this._checkInPrevYear(prevDay)) {
-        prevDays
-          += `<div class = '${
-            this.dayCalendar }_prev_check-in'>${ prevDay }</div>`;
+        prevDays += `<div class = '${
+          this.classDayCalendar }_prev_check-in'>${ prevDay }</div>`;
       } else if (
         this._checkOutPrevMonth(prevDay)
         || this._checkOutPrevYear(prevDay)
       ) {
-        prevDays
-          += `<div class = '${
-            this.dayCalendar }_prev_check-out'>${ prevDay }</div>`;
+        prevDays += `<div class = '${
+          this.classDayCalendar }_prev_check-out'>${ prevDay }</div>`;
       } else if (this._betweenInOutPrevMonth(prevDay) || betweenInOutYears) {
-        prevDays += `<div class = '${ this.dayBetween }'>${ prevDay }</div>`;
+        prevDays += `<div class = '${
+          this.classDayBetween }'>${ prevDay }</div>`;
       } else {
-        prevDays
-          += `<div class = 'calendar__day js-${
-            this.dayPrev } ${ this.dayPrev }'>${ prevDay }</div>`;
+        prevDays += `<div class = '${
+          this.classCalendarDay
+        } js-${ this.classDayPrev } ${
+          this.classDayPrev }'>${ prevDay }</div>`;
       }
     });
     return prevDays;
@@ -466,8 +483,7 @@ class Calendar {
     const betweenInOutPrevYear = InOutPrevYear
       && inLastMonthBeforePrev
       && outLastMonthAfterPrev;
-    const betweenOutPrevYear = outPrevYear
-      && outLastMonthAfterPrev;
+    const betweenOutPrevYear = outPrevYear && outLastMonthAfterPrev;
     const betweenInOutPrevYearFull = betweenInPrevYear
       || betweenInOutPrevYear
       || betweenOutPrevYear;
@@ -504,18 +520,20 @@ class Calendar {
     const lastDaysArr = Array.from({ length: this.lastDay }, (_, i) => i + 1);
     lastDaysArr.forEach((i) => {
       if (this._checkInToday(i)) {
-        currDays += `<div class = '${ this.dayCheckIn }'>${ i }</div>`;
+        currDays += `<div class = '${ this.classDayCheckIn }'>${ i }</div>`;
       } else if (this._checkInCurrMonth(i)) {
-        currDays += `<div class = '${ this.dayCheckIn }'>${ i }</div>`;
+        currDays += `<div class = '${ this.classDayCheckIn }'>${ i }</div>`;
       } else if (this._checkOutCurrMonth(i)) {
-        currDays
-          += `<div class = '${ this.dayCalendar }_check-out'>${ i }</div>`;
+        currDays += `<div class = '${
+          this.classDayCalendar }_check-out'>${ i }</div>`;
       } else if (this._todayCurrMonth(i)) {
-        currDays += `<div class = '${ this.dayCalendar }_today'>${ i }</div>`;
+        currDays += `<div class = '${
+          this.classDayCalendar }_today'>${ i }</div>`;
       } else if (this._betweenInOutCurrentMonth(i)) {
-        currDays += `<div class = '${ this.dayCalendar }_ranged'>${ i }</div>`;
+        currDays += `<div class = '${
+          this.classDayCalendar }_ranged'>${ i }</div>`;
       } else {
-        currDays += `<div class = 'calendar__day'>${ i }</div>`;
+        currDays += `<div class = '${ this.classCalendarDay }'>${ i }</div>`;
       }
     });
     return currDays;
@@ -637,17 +655,18 @@ class Calendar {
       const betweenInOutAYear = inOutCurrYear || inOutNextYear;
 
       if (this._checkInNextMonth(n, yearIn) || this._checkInNextYear(n)) {
-        nextDays
-          += `<div class = '${ this.dayCalendar }_next_check-in'>${ n }</div>`;
+        nextDays += `<div class = '${
+          this.classDayCalendar }_next_check-in'>${ n }</div>`;
       } else if (checkOutNextMonthOrYear) {
-        nextDays
-          += `<div class = '${ this.dayCalendar }_next_check-out'>${ n }</div>`;
+        nextDays += `<div class = '${
+          this.classDayCalendar }_next_check-out'>${ n }</div>`;
       } else if (betweenInOutAYear) {
-        nextDays += `<div class = '${ this.dayBetween }'>${ n }</div>`;
+        nextDays += `<div class = '${ this.classDayBetween }'>${ n }</div>`;
       } else {
-        nextDays
-          += `<div class = 'calendar__day js-${
-            this.dayNext } ${ this.dayNext }'>${ n }</div>`;
+        nextDays += `<div class = '${
+          this.classCalendarDay
+        } js-${ this.classDayNext
+        } ${ this.classDayNext }'>${ n }</div>`;
       }
     });
     return nextDays;

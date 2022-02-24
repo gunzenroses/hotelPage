@@ -29,21 +29,29 @@ export default class DropdownGuests {
 
   @boundMethod
   submitGuests() {
-    this.dropdownExpanded.classList.remove('expand__show');
+    this.dropdownExpanded.classList.remove(this.classExpandShow);
   }
 
   _createClasses() {
+    this.classExpand = '.js-expand';
+    this.classItem = 'dropdown-item';
+    this.classInfo = 'dropdown__info';
+    this.classInput = 'dropdown__input';
     this.classNumber = 'dropdown-item__number';
     this.classItemMinus = 'dropdown-item__minus';
     this.classItemPlus = 'dropdown-item__plus';
+    this.classDropdownShow = 'dropdown__show';
+    this.classExpandShow = 'expand__show';
+    this.classDropdownReset = 'dropdown__button_type_reset';
+    this.classDropdownSubmit = 'dropdown__button_type_submit';
   }
 
   _createChildren() {
-    this.dropdownExpanded = this.container.querySelector('.js-expand');
-    this.info = this.container.querySelector('.js-dropdown__info');
-    this.infoInput = this.container.querySelector('.js-dropdown__input');
+    this.dropdownExpanded = this.container.querySelector(this.classExpand);
+    this.info = this.container.querySelector(`.js-${ this.classInfo }`);
+    this.infoInput = this.container.querySelector(`.js-${ this.classInput }`);
     this.dropdownItems = Array.from(
-      this.container.querySelectorAll('.js-dropdown-item')
+      this.container.querySelectorAll(`.js-${ this.classItem }`)
     );
     this.dropdownMinuses = this.container.querySelectorAll(
       `.js-${ this.classItemMinus }`
@@ -52,10 +60,10 @@ export default class DropdownGuests {
       `.js-${ this.classItemPlus }`
     );
     this.resetButton = this.dropdownExpanded.querySelector(
-      '.js-dropdown__button_type_reset'
+      `.js-${ this.classDropdownReset }`
     );
     this.submitButton = this.dropdownExpanded.querySelector(
-      '.js-dropdown__button_type_submit'
+      `.js-${ this.classDropdownSubmit }`
     );
   }
 
@@ -146,12 +154,12 @@ export default class DropdownGuests {
   }
 
   _onZeroGuests() {
-    this.resetButton.classList.remove('dropdown__show');
+    this.resetButton.classList.remove(this.classDropdownShow);
     this.infoInput.value = '';
   }
 
   _onSomeGuests() {
-    this.resetButton.classList.add('dropdown__show');
+    this.resetButton.classList.add(this.classDropdownShow);
     this._render();
   }
 
