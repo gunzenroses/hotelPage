@@ -65,13 +65,13 @@ class Calendar {
       }
     }
     if (this.rangeStart && this.rangeEnd) {
-      if (this.rangeStart.value){
-         const checkInData = this.rangeStart.value.split('.');
+      if (this.rangeStart.value) {
+        const checkInData = this.rangeStart.value.split('.');
         this.checkIn = new Date(checkInData[2], checkInData[1], checkInData[0]);
       } else {
         this.checkIn = '';
       }
-      if (this.rangeEnd.value){
+      if (this.rangeEnd.value) {
         const checkOutData = this.rangeEnd.value.split('.');
         this.checkOut = new Date(
           checkOutData[2],
@@ -205,7 +205,7 @@ class Calendar {
     const thisDateNum = parseInt(e.target.innerText, 10);
     const chosenDay = new Date(this.year, this.month, thisDateNum);
     const afterToday = chosenDay >= new Date();
-    const today = this.year === new Date().getFullYear() 
+    const today = this.year === new Date().getFullYear()
       && this.month === new Date().getMonth()
       && thisDateNum === new Date().getDate();
 
@@ -296,8 +296,8 @@ class Calendar {
   _makeCheckIn(e) {
     this.checkOut = '';
     this.checkIn = new Date(
-      this.year, 
-      this.month, 
+      this.year,
+      this.month,
       parseInt(e.target.innerText, 10)
     );
     this._render();
@@ -305,9 +305,9 @@ class Calendar {
 
   _makeCheckOut(e) {
     this.checkOut = new Date(
-      this.year, 
-      this.month, 
-      parseInt(e.target.innerText)
+      this.year,
+      this.month,
+      parseInt(e.target.innerText, 10)
     );
     this._render();
   }
@@ -397,7 +397,8 @@ class Calendar {
     const ifLastDaySunday = this.dayOfWeekLast === 0;
     this.nextMonthDay = ifLastDaySunday ? 6 : this.dayOfWeekLast - 1;
     this.daysLeft = ifLastDaySunday ? 0 : 7 - this.dayOfWeekLast;
-    this.dateInCalendar.textContent = `${ this.months[this.month] } ${ this.year }`;
+    this.dateInCalendar.textContent = `${
+      this.months[this.month] } ${ this.year }`;
 
     this.daysOfMonth.innerHTML = `${
       this._renderPrevMonth() } ${
@@ -574,11 +575,11 @@ class Calendar {
         currDays += `<div class = '${
           this.classDayCalendar }_ranged'>${ i }</div>`;
       } else if (this._beforeToday(i)) {
-        currDays += `<div class = '${ 
-          this.classCalendarDay 
-        } ${ this.classDayBeforeToday }'>${i}</div>`;
+        currDays += `<div class = '${
+          this.classCalendarDay
+        } ${ this.classDayBeforeToday }'>${ i }</div>`;
       } else {
-        currDays += `<div class = '${ this.classCalendarDay }'>${i}</div>`;
+        currDays += `<div class = '${ this.classCalendarDay }'>${ i }</div>`;
       }
     });
     return currDays;
@@ -594,12 +595,12 @@ class Calendar {
 
   _beforeToday(i) {
     const dateOfToday = new Date();
-    
+
     const prevYear = dateOfToday.getFullYear() > this.year;
 
     const thisYear = dateOfToday.getFullYear() === this.year;
     const prevMonth = dateOfToday.getMonth() > this.month;
-    const thisYearPrevMonth = thisYear  && prevMonth;
+    const thisYearPrevMonth = thisYear && prevMonth;
 
     const thisMonth = dateOfToday.getMonth() === this.month;
     const prevDay = dateOfToday.getDate() > i;
