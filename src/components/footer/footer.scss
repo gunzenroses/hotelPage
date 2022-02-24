@@ -1,6 +1,6 @@
 @import '@~Assets/styles/colors.scss';
 @import '@~Assets/styles/media-mixins.scss';
-@import '@~Assets/styles//mixins.scss';
+@import '@~Assets/styles/mixins.scss';
 @import '@~Assets/styles/fonts.scss';
 @import '@~Components/logo/logo.scss';
 @import '@~Components/navlink/navlink.scss';
@@ -46,8 +46,7 @@
 .footer {
   @include isFlex($direction: column, $justify: flex-start, $align: center);
   width: 100%;
-  max-width: 1920px;
-  height: 443px;
+  height: 445px;
   margin: 0 auto;
   border-radius: 4px;
   background: $light;
@@ -66,23 +65,26 @@
     min-width: 320px;
   }
 
+  &__main {
+    width: 100%;
+    height: fit-content;
+    border-bottom: 1px solid $dark-shade_less;
+
+    @include _800 {
+      border-bottom: none;
+    }
+  }
+
   &__navbar {
     @include isFlex($wrap: wrap);
     position: relative;
-    width: 1160px;
+    width: 80.55%;
+    max-width: 1800px;
     height: fit-content;
-    margin: 100px 133px 104px;
+    margin: 100px auto 104px;
     letter-spacing: .01em;
 
-    @include _1500-1920 {
-      margin: 100px 10%;
-    }
-
-    @include _1650-1920 {
-      width: 80%;
-    }
-
-    @include _1340 {
+    @include _1440 {
       @include containerWithMargins(
         $width: 85%,
         $height: 172px,
@@ -148,6 +150,18 @@
     margin-right: 38px;
     letter-spacing: .001em;
 
+    @include _1440 {
+      margin-right: 20px;
+    }
+
+    @include _1340 {
+      margin: 0;
+    }
+
+    @include _1170 {
+      margin-right: 40px;
+    }
+
     @include _800 {
       top: 0;
       width: fit-content;
@@ -192,7 +206,7 @@
     height: 168px;
     padding-top: 4px;
 
-    @include _1500-1920 {
+    @include _1500{
       justify-content: space-between;
       width: 50%;
       margin-right: 0;
@@ -345,18 +359,19 @@
   &__basement {
     @include isFlex($align: flex-start);
     width: 100%;
+    max-width: calc(1800px + 19%);
     height: 71px;
-    padding: 24px 136px 22px 140px;
-    border-top: 1px solid $dark-shade_less;
+    padding: 24px 9.5% 22px 9.6%;
 
-    @include _1500-1920 {
+    @include _1440 {
       align-items: center;
-      padding: 0 10%;
+      width: 100%;
+      padding: 0 7.5%;
     }
 
-    @include _1340 {
-      align-items: center;
-      padding: 0 7%;
+    @include _1170 {
+      width: calc(415px + 260px + 5%);
+      padding: 0;
     }
 
     @include _800 {

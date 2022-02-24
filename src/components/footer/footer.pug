@@ -24,41 +24,42 @@ mixin footer(theme = 'main')
       : 'footer__info';
 
   footer.footer
-    div(class = footerNavbarClass)
-      if theme === 'landing'
-        div(class = `footer__logo footer__logo_in_${ theme }`)
-          +logo()
-          .footer__text!= footerText
-      else if theme === 'sign-in'
-        div(class = `footer__logo footer__logo_in_${ theme }`)
-          +logo()
-          .footer__text!= footerText
-      else
-        div(class = `footer__logo`)
-          +logo()
-          .footer__text!= footerText
-      div(class = infoVisibleClass)
-        for footerGroup in footerGroups
-          div(class = `footer__${ footerGroup.name }`)
-            h3.footer__title!= footerGroup.text
-            ul.footer__links
-              for item in footerGroup.items
-                +navlink({
-                  buttonText: item.name,
-                  onClick: item.link,
-                  modifier: 'footer'
-                })
-      .footer__subscription
-        h3.footer__title Подписка
-        p.footer__special-offer!= footerTextSubscription
-        form.footer__form.js-footer__form(
-          method = 'get' 
-          action = './registration.html')
-          +textfield({ 
-            inputClass: 'subscribe',
-            placeholder: 'Email',
-            nameText: 'email',
-          })
+    .footer__main
+      div(class = footerNavbarClass)
+        if theme === 'landing'
+          div(class = `footer__logo footer__logo_in_${ theme }`)
+            +logo()
+            .footer__text!= footerText
+        else if theme === 'sign-in'
+          div(class = `footer__logo footer__logo_in_${ theme }`)
+            +logo()
+            .footer__text!= footerText
+        else
+          div(class = `footer__logo`)
+            +logo()
+            .footer__text!= footerText
+        div(class = infoVisibleClass)
+          for footerGroup in footerGroups
+            div(class = `footer__${ footerGroup.name }`)
+              h3.footer__title!= footerGroup.text
+              ul.footer__links
+                for item in footerGroup.items
+                  +navlink({
+                    buttonText: item.name,
+                    onClick: item.link,
+                    modifier: 'footer'
+                  })
+        .footer__subscription
+          h3.footer__title Подписка
+          p.footer__special-offer!= footerTextSubscription
+          form.footer__form.js-footer__form(
+            method = 'get' 
+            action = './registration.html')
+            +textfield({ 
+              inputClass: 'subscribe',
+              placeholder: 'Email',
+              nameText: 'email',
+            })
     div(class = footerCopyrightClass)
       .footer__basement-text Copyright © 2018 Toxin отель. Все права защищены.
       .footer__social-nets
