@@ -1,25 +1,25 @@
 ## Webpack 4 project with Pug, Sass/Stylus, jQuery, VanillaJS, Babel
 
-The aim of this project is to create multiple web-pages without frameworks/libraries like React to obtain an experience with:
+The aim of this project is to create multiple web-pages without frameworks/libraries like React to obtain an experience of work with:
 
 - Figma and PixelPerfect;
 - webpack and npm;
 - adaptive design;
-- basics of git and gitflow;
-- jquery plagins;
-- assemble of SPA.
+- git and gitflow;
+- jquery plugins;
+- SPA.
 
-## Plugins to work
+## Required plugins
 
 The project works with node@14.16.1, npm@8.1.0, git@2.34 and jquery@3.3.1.
 
 ## Used technologies and libraries
 
-- Templating: `Pug`
+- Template: `Pug`
 - Styling: `Scss`
 - Scripting: `VanillaJS`
 - JS Compiler: `Babel ES6`
-- jQuery: `ion-rangeslider, jquery-validation, inputmask, autobind-decorator`
+- jQuery-plugins: `ion-rangeslider, jquery-validation, inputmask, autobind-decorator`
 
 ## How to
 
@@ -29,13 +29,13 @@ Clone repository
 Change directory to "hotelPage"
 >`cd hotelPage`
 
-Install dependancies
+Install dependencies
 >`npm i`
 
-Run development mode (devServer on localhost:8080)
+Assemble project (without producing files) and run it on devServer on localhost:8080
 >`npm run dev`
 
-Run production mode
+Build project files in `/dist` folder
 >`npm run build`
 
 ## Links to pages
