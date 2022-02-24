@@ -10,7 +10,7 @@
   }
 }
 
-@mixin _1750-1920 {
+@mixin _1750 {
   @media (min-width: 1750px) {
     @content;
   }
@@ -22,7 +22,7 @@
   }
 }
 
-@mixin _1500{
+@mixin _1500 {
   @media (min-width: 1500px) {
     @content;
   }

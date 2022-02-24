@@ -13,7 +13,7 @@
   user-select: none;
   cursor: pointer;
 
-  @include _1750-1920 {
+  @include _1750{
     width: 60px;
   }
 
@@ -44,7 +44,7 @@
     background-size: cover;
     text-align: center;
 
-    @include _1750-1920 {
+    @include _1750{
       position: absolute;
       top: 4px;
       left: 11px;
@@ -65,7 +65,7 @@
     line-height: 100%;
     transform: translate(30%, -50%);
 
-    @include _1750-1920 {
+    @include _1750{
       font-size: $fs_h2;
     }
 

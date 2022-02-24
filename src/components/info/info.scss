@@ -10,7 +10,7 @@
   font-size: $fs_base;
   letter-spacing: .0001em;
 
-  @include _1750-1920 {
+  @include _1750{
     width: 300px;
     margin-left: 14px;
   }

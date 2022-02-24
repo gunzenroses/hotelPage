@@ -62,7 +62,7 @@
     letter-spacing: .002em;
     z-index: 2;
 
-    @include _1750-1920 {
+    @include _1750{
       width: 400px;
       line-height: $fs_h2;
       font-size: $fs_h2;

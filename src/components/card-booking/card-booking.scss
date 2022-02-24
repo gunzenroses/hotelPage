@@ -59,7 +59,7 @@
     color: $dark-shade_most;
     pointer-events: none;
 
-    @include _1750-1920 {
+    @include _1750{
       max-width: 490px;
     }
 
@@ -106,7 +106,7 @@
     font-weight: 700;
     color: $dark-shade_most;
 
-    @include _1750-1920 {
+    @include _1750{
       font-size: $fs_h2;
     }
   }
@@ -119,7 +119,7 @@
     font-weight: 700;
     color: $dark-shade_most;
 
-    @include _1750-1920 {
+    @include _1750{
       font-size: $fs_h1;
     }
 
@@ -168,7 +168,7 @@
     color: $dark-shade_more;
     pointer-events: none;
 
-    @include _1750-1920 {
+    @include _1750{
       max-width: 490px;
     }
 

@@ -17,7 +17,7 @@
   letter-spacing: .001em;
   color: $dark-shade_most;
 
-  @include _1750-1920 {
+  @include _1750{
     font-size: $fs_base;
   }
 }
@@ -39,7 +39,7 @@
   font-weight: 700;
   text-align: center;
 
-  @include _1750-1920 {
+  @include _1750{
     font-size: $fs_base;
   }
 }

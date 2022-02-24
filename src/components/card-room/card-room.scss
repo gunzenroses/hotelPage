@@ -34,7 +34,7 @@
     font-weight: 700;
     color: $dark-shade_most;
 
-    @include _1750-1920 {
+    @include _1750{
       font-size: $fs_h2;
     }
 
@@ -52,7 +52,7 @@
     font-weight: 700;
     color: $dark-shade_most;
 
-    @include _1750-1920 {
+    @include _1750{
       font-size: $fs_h1;
     }
 
@@ -71,7 +71,7 @@
     color: $purple;
     text-transform: uppercase;
 
-    @include _1750-1920 {
+    @include _1750{
       font-size: $fs_base;
     }
 
@@ -87,7 +87,7 @@
     letter-spacing: .001em;
     color: $dark-shade_medium;
 
-    @include _1750-1920 {
+    @include _1750{
       font-size: $fs_base;
     }
 
@@ -133,7 +133,7 @@
     font-weight: 700;
     color: $dark-shade_medium;
 
-    @include _1750-1920 {
+    @include _1750{
       font-size: $fs_h2;
     }
   }
@@ -145,7 +145,7 @@
     font-weight: 400;
     color: $dark-shade_medium;
 
-    @include _1750-1920 {
+    @include _1750{
       font-size: $fs_base;
     }
   }

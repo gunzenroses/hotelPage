@@ -30,7 +30,7 @@
     text-transform: uppercase;
     user-select: none;
 
-    @include _1750-1920 {
+    @include _1750{
       font-size: $fs_base;
       height: $fs_h2;
     }
@@ -45,7 +45,7 @@
     padding: 0;
     border: none;
 
-    @include _1750-1920 {
+    @include _1750{
       height: fit-content;
     }
   }

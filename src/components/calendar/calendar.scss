@@ -132,7 +132,7 @@
     color: $purple;
     align-items: center;
 
-    @include _1750-1920 {
+    @include _1750{
       font-size: $fs_h2;
     }
   }
@@ -171,7 +171,7 @@
       color: $dark-shade_medium;
     }
     
-    @include _1750-1920 {
+    @include _1750{
       font-size: $fs_base;
     }
   }
