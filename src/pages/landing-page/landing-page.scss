@@ -3,7 +3,7 @@
 @import '@~Assets/styles/fonts.scss';
 @import '@~Assets/styles/general.scss';
 @import '@~Assets/styles/media-mixins.scss';
-@import '@~Assets/styles//mixins.scss';
+@import '@~Assets/styles/mixins.scss';
 @import '@~Components/carousel-landing/carousel-landing.scss';
 @import '@~Components/card-search/card-search.scss';
 @import '@~Components/footer/footer';
@@ -80,7 +80,7 @@
   &__card-search {
     position: absolute;
     top: 66px;
-    left: 140px;
+    left: 9.72%;
     z-index: 2;
 
     @include _970 {

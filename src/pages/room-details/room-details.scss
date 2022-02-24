@@ -4,7 +4,7 @@
 @import '@~Assets/styles/expand.scss';
 @import '@~Assets/styles/fonts.scss';
 @import '@~Assets/styles/media-mixins.scss';
-@import '@~Assets/styles//mixins.scss';
+@import '@~Assets/styles/mixins.scss';
 @import '@~Components/badge/badge.scss';
 @import '@~Components/bullet-checkbox/bullet-checkbox.scss';
 @import '@~Components/card-booking/card-booking.scss';
@@ -187,7 +187,7 @@
     height: 799px;
     margin-top: 1px;
 
-    @include _1500-1920 {
+    @include _1500{
       width: 60%;
       height: fit-content;
     }
@@ -218,7 +218,7 @@
     width: 675px;
     margin-left: 1px;
 
-    @include _1500-1920 {
+    @include _1500{
       width: 90%;
     }
 
@@ -245,7 +245,7 @@
     margin-right: 88px;
     background: $light;
 
-    @include _1650-1920 {
+    @include _1650 {
       width: 40%;
     }
 
@@ -272,7 +272,7 @@
     height: 172px;
     background: $light;
 
-    @include _1650-1920 {
+    @include _1650 {
       width: 55%;
       height: fit-content;
     }
@@ -298,7 +298,7 @@
     margin-top: 12px;
     background: $light;
 
-    @include _1650-1920 {
+    @include _1650 {
       height: fit-content;
       margin-top: 50px;
     }
@@ -350,7 +350,7 @@
     margin-top: 6px;
     background: $light;
 
-    @include _1500-1920 {
+    @include _1500{
       margin-top: 20px;
       width: 40%;
       height: fit-content;
@@ -381,7 +381,7 @@
     margin-top: 5px;
     background: $light;
 
-    @include _1500-1920 {
+    @include _1500{
       margin-top: 20px;
       width: 50%;
       height: fit-content;
@@ -405,7 +405,7 @@
     letter-spacing: 0.001em;
     color: $dark-shade_most;
 
-    @include _1650-1920 {
+    @include _1650 {
       margin: 0 auto;
       font-size: $fs_h1;
     }
@@ -419,7 +419,7 @@
     letter-spacing: 0.0001em;
     color: $dark-shade_more;
 
-    @include _1500-1920 {
+    @include _1500{
       margin-top: 20px;
     }
 

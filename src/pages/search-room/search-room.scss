@@ -3,7 +3,7 @@
 @import '@~Assets/styles/fonts.scss';
 @import '@~Assets/styles/general.scss';
 @import '@~Assets/styles/media-mixins.scss';
-@import '@~Assets/styles//mixins.scss';
+@import '@~Assets/styles/mixins.scss';
 @import '@~Components/card-room/card-room.scss';
 @import '@~Components/checkbox/checkbox.scss';
 @import '@~Components/checkbox-expandable/checkbox-expandable.scss';
@@ -18,7 +18,7 @@
 @import '@~Components/textfield/textfield.scss';
 
 @mixin formMargin {
-  @include _1650-1920 {
+  @include _1650 {
     margin-top: 40px;
   }
 
@@ -55,7 +55,7 @@
     background: $light;
     overflow: auto;
 
-    @include _1500-1920 {
+    @include _1500{
       padding-bottom: 27px;
       justify-content: space-around;
       margin: 0 auto;
@@ -84,7 +84,7 @@
     height: 739px;
     margin-top: 6px;
 
-    @include _1500-1920 {
+    @include _1500{
       height: fit-content;
     }
 
@@ -126,7 +126,7 @@
     width: 835px;
     height: fit-content;
 
-    @include _1500-1920 {
+    @include _1500{
       width: 68%;
       max-width: 900px;
     }
@@ -208,7 +208,7 @@
     margin-top: 19px;
     margin-left: 291px;
 
-    @include _1500-1920 {
+    @include _1500{
       margin: 20px auto 0;
     }
 

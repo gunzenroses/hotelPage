@@ -1,4 +1,4 @@
-@import '@~Assets/styles//mixins.scss';
+@import '@~Assets/styles/mixins.scss';
 
 .button-rate {
   @include isFlex($direction: row-reverse);

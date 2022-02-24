@@ -1,7 +1,7 @@
 @import '@~Assets/styles/colors.scss';
 @import '@~Assets/styles/fonts.scss';
 @import '@~Assets/styles/media-mixins.scss';
-@import '@~Assets/styles//mixins.scss';
+@import '@~Assets/styles/mixins.scss';
 @import '@~Components/checkbox-item/checkbox-item.scss';
 
 .rich-checkbox {
@@ -9,7 +9,7 @@
   width: 100%;
   height: 144px;
 
-  @include _1650-1920 {
+  @include _1650 {
     width: 100%;
     height: fit-content;
   }

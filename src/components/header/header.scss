@@ -1,6 +1,6 @@
 @import '@~Assets/styles/colors.scss';
 @import '@~Assets/styles/media-mixins.scss';
-@import '@~Assets/styles//mixins.scss';
+@import '@~Assets/styles/mixins.scss';
 @import '@~Components/button-link/button-link.scss';
 @import '@~Components/logo/logo.scss';
 @import '@~Components/navlink/navlink.scss';
@@ -18,7 +18,7 @@
   box-sizing: border-box;
   box-shadow: 0px 10px 20px $dark-shade_fewer;
 
-  @include _1650-1920 {
+  @include _1650 {
     width: 100%;
     padding: 0 10%;
   }

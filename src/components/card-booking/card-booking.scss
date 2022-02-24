@@ -1,6 +1,6 @@
 @import '@~Assets/styles/colors.scss';
 @import '@~Assets/styles/media-mixins.scss';
-@import '@~Assets/styles//mixins.scss';
+@import '@~Assets/styles/mixins.scss';
 @import '@~Assets/styles/fonts.scss';
 @import '@~Components/button-submit/button-submit.scss';
 @import '@~Components/date-range/date-range.scss';
@@ -16,7 +16,7 @@
   background: $light;
   box-shadow: 0px 0px 25px $shadow;
 
-  @include _1650-1920 {
+  @include _1650 {
     width: 100%;
   }
 
@@ -186,7 +186,7 @@
     text-align: left;
     letter-spacing: .0001em;
 
-    @include _1650-1920 {
+    @include _1650 {
       width: calc(100% - 100px);
     }
 
@@ -210,7 +210,7 @@
     text-align: right;
     letter-spacing: .002em;
 
-    @include _1650-1920 {
+    @include _1650 {
       max-width: 90px;
     }
   }

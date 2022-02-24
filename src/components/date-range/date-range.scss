@@ -25,7 +25,7 @@
     background: $light;
     z-index: 2;
 
-    @include _1650-1920 {
+    @include _1650 {
       width: 100%;
     }
 
@@ -58,7 +58,7 @@
     &_separate {
       width: 150px;
 
-      @include _1650-1920 {
+      @include _1650 {
         width: 48%;
         max-width: 240px;
       }

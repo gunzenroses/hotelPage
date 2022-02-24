@@ -13,7 +13,7 @@
   &__show {
     @include isFlex($direction: column, $justify: flex-start);
 
-    @include _1650-1920 {
+    @include _1650 {
       width: 100%;
     }
 

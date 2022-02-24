@@ -1,5 +1,5 @@
 @import '@~Assets/styles/media-mixins.scss';
-@import '@~Assets/styles//mixins.scss';
+@import '@~Assets/styles/mixins.scss';
 @import '@~Components/checkbox-item/checkbox-item.scss';
 
 .checkbox-expandable {
@@ -8,7 +8,7 @@
   width: 266px;
   min-width: 260px;
 
-  @include _1650-1920 {
+  @include _1650 {
     width: 100%;
   }
 
@@ -23,7 +23,7 @@
     width: inherit;
     user-select: none;
 
-    @include _1650-1920 {
+    @include _1650 {
       width: 100%;
     }
   }
@@ -36,7 +36,7 @@
     padding: 0;
     border: none;
 
-    @include _1650-1920 {
+    @include _1650 {
       width: 100%;
     }
   }
@@ -73,7 +73,7 @@
   &__show {
     @include isFlex($direction: column, $justify: flex-start);
 
-    @include _1650-1920 {
+    @include _1650 {
       width: 100%;
     }
   }

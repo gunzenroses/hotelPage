@@ -1,6 +1,6 @@
 @import '@~Assets/styles/colors.scss';
 @import '@~Assets/styles/media-mixins.scss';
-@import '@~Assets/styles//mixins.scss';
+@import '@~Assets/styles/mixins.scss';
 @import '@~Assets/styles/fonts.scss';
 
 .dropdown {
@@ -9,7 +9,7 @@
   width: inherit;
   user-select: none;
 
-  @include _1650-1920 {
+  @include _1650 {
     width: 100%;
   }
 
