@@ -24,6 +24,7 @@
     background: transparent;
     color: $dark-shade_more;
     letter-spacing: 0.01em;
+    cursor: pointer;
 
     &::before {
       @include dropdownButton();
