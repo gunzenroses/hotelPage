@@ -47,7 +47,7 @@
 .calendar {
   @include isFlex($direction: column, $justify: flex-start);
   width: 100%;
-  min-height: 370px;
+  height: fit-content;
   border: 1px solid $dark-shade_less;
   border-radius: 4px;
   background: $light;
@@ -114,7 +114,7 @@
   &__weeks {
     @include isFlex($direction: column);
     width: 280px;
-    min-height: 240px;
+    height: fit-content;
     margin: 9px auto 0;
   
     @include _1650-1920 {
@@ -179,6 +179,11 @@
   &__day {
     @include calendarDay();
 
+    &:hover {
+      background: $dark-shade_few;
+      border-radius: 50%;
+    }
+
     &_today {
       border-radius: 50%;
       font-weight: 700;
@@ -186,9 +191,15 @@
       background: $linearGradientTurquoise;
     }
 
+    &_disabled {
+      pointer-events: none;
+      cursor: default;
+    }
+
     &_prev,
     &_next {
       color: $dark-shade_less;
+      cursor: default;
     }
 
     &_check-out {

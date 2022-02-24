@@ -69,6 +69,7 @@ class Calendar {
     this.classCalendarDay = 'calendar__day';
     this.classDayPrev = 'calendar__day_prev';
     this.classDayNext = 'calendar__day_next';
+    this.classDayBeforeToday = 'calendar__day_disabled';
     this.classDayBetween = 'calendar__day calendar__day_between';
     this.classDayCheckIn = 'calendar__day calendar__day_check-in';
     this.classDayCalendar = 'calendar__day calendar__day';
@@ -517,8 +518,8 @@ class Calendar {
 
   _renderCurrentMonth() {
     let currDays = '';
-    const lastDaysArr = Array.from({ length: this.lastDay }, (_, i) => i + 1);
-    lastDaysArr.forEach((i) => {
+    const thisDaysArr = Array.from({ length: this.lastDay }, (_, i) => i + 1);
+    thisDaysArr.forEach((i) => {
       if (this._checkInToday(i)) {
         currDays += `<div class = '${ this.classDayCheckIn }'>${ i }</div>`;
       } else if (this._checkInCurrMonth(i)) {
@@ -532,8 +533,12 @@ class Calendar {
       } else if (this._betweenInOutCurrentMonth(i)) {
         currDays += `<div class = '${
           this.classDayCalendar }_ranged'>${ i }</div>`;
+      } else if (this._beforeToday(i)) {
+        currDays += `<div class = '${ 
+          this.classCalendarDay 
+        } ${ this.classDayBeforeToday }'>${i}</div>`;
       } else {
-        currDays += `<div class = '${ this.classCalendarDay }'>${ i }</div>`;
+        currDays += `<div class = '${ this.classCalendarDay }'>${i}</div>`;
       }
     });
     return currDays;
@@ -545,6 +550,26 @@ class Calendar {
     const thisDayI = i === new Date().getDate();
     const today = thisDayI && thisIfCurrYear && thisMonthCurrMonth;
     return today;
+  }
+
+  _beforeToday(i) {
+    const dateOfToday = new Date();
+    
+    const prevYear = dateOfToday.getFullYear() > this.year;
+
+    const thisYear = dateOfToday.getFullYear() === this.year;
+    const prevMonth = dateOfToday.getMonth() > this.month;
+    const thisYearPrevMonth = thisYear  && prevMonth;
+
+    const thisMonth = dateOfToday.getMonth() === this.month;
+    const prevDay = dateOfToday.getDate() > i;
+    const thisYearAndMonthPrevDay = thisYear && thisMonth && prevDay;
+
+    const dayBeforeToday = prevYear
+      || thisYearPrevMonth
+      || thisYearAndMonthPrevDay;
+
+    return dayBeforeToday;
   }
 
   _checkInToday(i) {
