@@ -31,37 +31,60 @@ class Calendar {
 
   _setCheckInCheckOut() {
     if (this.rangeSpan) {
-      const rangeData = this.rangeSpan.value.split(' - ');
-
-      const checkInData = rangeData[0].split(' ');
-      const checkInDay = checkInData[0];
-      const checkInMonthName = checkInData[1];
-      const checkInMonth = this.months.indexOf(checkInMonthName);
-      this.checkIn = new Date(
-        new Date().getFullYear(),
-        checkInMonth,
-        checkInDay
-      );
-
-      const checkOutData = rangeData[1].split(' ');
-      const checkOutDay = checkOutData[0];
-      const checkOutMonthName = checkOutData[1];
-      const checkOutMonth = this.months.indexOf(checkOutMonthName);
-      this.checkOut = new Date(
-        new Date().getFullYear(),
-        checkOutMonth,
-        checkOutDay
-      );
+      if (this.rangeSpan.value) {
+        const rangeData = this.rangeSpan.value.split(' - ');
+        if (rangeData[0]) {
+          const checkInData = rangeData[0].split(' ');
+          const checkInDay = checkInData[0];
+          const checkInMonthName = checkInData[1];
+          const checkInMonth = this.months.indexOf(checkInMonthName);
+          this.checkIn = new Date(
+            new Date().getFullYear(),
+            checkInMonth,
+            checkInDay
+          );
+        } else {
+          this.checkIn = '';
+        }
+        if (rangeData[1]) {
+          const checkOutData = rangeData[1].split(' ');
+          const checkOutDay = checkOutData[0];
+          const checkOutMonthName = checkOutData[1];
+          const checkOutMonth = this.months.indexOf(checkOutMonthName);
+          this.checkOut = new Date(
+            new Date().getFullYear(),
+            checkOutMonth,
+            checkOutDay
+          );
+        } else {
+          this.checkOut = '';
+        }
+      } else {
+        this.checkIn = '';
+        this.checkOut = '';
+      }
     }
     if (this.rangeStart && this.rangeEnd) {
-      const checkInData = this.rangeStart.value.split('.');
-      this.checkIn = new Date(checkInData[2], checkInData[1], checkInData[0]);
-      const checkOutData = this.rangeEnd.value.split('.');
-      this.checkOut = new Date(
-        checkOutData[2],
-        checkOutData[1],
-        checkOutData[0]
-      );
+      if (this.rangeStart.value){
+         const checkInData = this.rangeStart.value.split('.');
+        this.checkIn = new Date(checkInData[2], checkInData[1], checkInData[0]);
+      } else {
+        this.checkIn = '';
+      }
+      if (this.rangeEnd.value){
+        const checkOutData = this.rangeEnd.value.split('.');
+        this.checkOut = new Date(
+          checkOutData[2],
+          checkOutData[1],
+          checkOutData[0]
+        );
+      } else {
+        this.checkOut = '';
+      }
+    }
+    if (!this.rangeSpan && !(this.rangeStart && this.rangeEnd)) {
+      this.checkIn = '';
+      this.checkOut = '';
     }
   }
 
@@ -315,6 +338,7 @@ class Calendar {
   // -------------------start applyStartOrEnd--------------------//
   @boundMethod
   _applyStartOrEnd() {
+    this._examineCheckInCheckOut();
     this.rangeStart.value = this.checkIn ? this._applyStart() : '';
     this.rangeEnd.value = this.checkOut ? this._applyEnd() : '';
     this.calendar.classList.remove(this.classExpandShow);
