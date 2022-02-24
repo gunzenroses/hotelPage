@@ -199,6 +199,7 @@
     &_prev,
     &_next {
       color: $dark-shade_less;
+      pointer-events: none;
       cursor: default;
     }
 
@@ -226,6 +227,8 @@
     &_between {
       color: $dark-shade_less;
       background: $dark-shade_fewer;
+      pointer-events: none;
+      cursor: default;
     }
 
     &_prev_check-in,

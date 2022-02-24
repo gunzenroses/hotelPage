@@ -176,11 +176,19 @@ class Calendar {
     const hasDays = e.target.classList.contains(
       `.js-${ this.classCalendarDays }`
     );
-    const noDays = noOtherDays && !hasDays;
-    const chosenDay = new Date(this.year, this.month, +e.target.innerText);
-    const afterToday = chosenDay > new Date();
+    const calendarDay = e.target.classList.contains(this.classCalendarDay);
+    const noDays = noOtherDays && !hasDays && calendarDay;
+
+    const thisDateNum = parseInt(e.target.innerText, 10);
+    const chosenDay = new Date(this.year, this.month, thisDateNum);
+    const afterToday = chosenDay >= new Date();
+    const today = this.year === new Date().getFullYear() 
+      && this.month === new Date().getMonth()
+      && thisDateNum === new Date().getDate();
+
+    const todayOrAfterToday = today || afterToday;
     this._examineCheckInCheckOut();
-    if (noDays && afterToday) {
+    if (noDays && todayOrAfterToday) {
       if (this.existCheckInCheckOut) this._makeCheckIn(e);
       else if (this.existCheckInOnly) {
         const [dayBeforeCheckIn, dayAfterCheckIn] = this._getCheckInData(e);
@@ -264,12 +272,20 @@ class Calendar {
 
   _makeCheckIn(e) {
     this.checkOut = '';
-    this.checkIn = new Date(this.year, this.month, +e.target.innerText);
+    this.checkIn = new Date(
+      this.year, 
+      this.month, 
+      parseInt(e.target.innerText, 10)
+    );
     this._render();
   }
 
   _makeCheckOut(e) {
-    this.checkOut = new Date(this.year, this.month, +e.target.innerText);
+    this.checkOut = new Date(
+      this.year, 
+      this.month, 
+      parseInt(e.target.innerText)
+    );
     this._render();
   }
 
