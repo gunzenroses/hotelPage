@@ -58,7 +58,7 @@
     height: 485px;
     overflow: hidden;
 
-    @include _1441-1920 {
+    @include _1441 {
       height: calc(485 / 1440 * 100vw);
     }
 
@@ -74,7 +74,7 @@
     object-fit: cover;
     overflow: hidden;
 
-    @include _1441-1920 {
+    @include _1441 {
       width: 68.1%;
     }
 
@@ -98,7 +98,7 @@
     height: 100%;
     overflow: hidden;
 
-    @include _1441-1920 {
+    @include _1441 {
       width: 32%;
     }
 
@@ -134,7 +134,7 @@
     height: fit-content;
     padding: 70px 140px 69px 139px;
 
-    @include _1450-1920 {
+    @include _1450 {
       height: auto;
     }
 
@@ -151,7 +151,7 @@
     max-width: 1650px;
     height: 799px;
 
-    @include _1450-1920 {
+    @include _1450 {
       height: auto;
       margin: 0 auto;
     }
@@ -430,7 +430,7 @@
   }
 
   &__booking {
-    @include _1450-1920 {
+    @include _1450 {
       max-width: 550px;
       height: fit-content;
     }

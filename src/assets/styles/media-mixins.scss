@@ -28,13 +28,13 @@
   }
 }
 
-@mixin _1450-1920 {
+@mixin _1450 {
   @media (min-width: 1450px) {
     @content;
   }
 }
 
-@mixin _1441-1920 {
+@mixin _1441 {
   @media (min-width: 1441px) {
     @content;
   } 
