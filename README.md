@@ -32,10 +32,10 @@ Change directory to "hotelPage"
 Install dependencies
 >`npm i`
 
-Assemble project (without producing files) and run it on devServer on localhost:8080
+Assemble project (without producing files) and run it with devServer on localhost:8080
 >`npm run dev`
 
-Build project files in `/dist` folder
+Assemble project files to the `/dist` folder
 >`npm run build`
 
 ## Links to pages
