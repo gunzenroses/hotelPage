@@ -1,9 +1,11 @@
 mixin room-carousel({ roomPictures, nameForPictures })
-  - var buttonPrevClass = 'room-carousel__button room-carousel__button_prev';
-  - var buttonNextClass = 'room-carousel__button room-carousel__button_next';
-  - 
-    var carouselRealClass = 
-      'room-carousel__radio-real js-room-carousel__radio-real';
+  - var modPrev = 'prev';
+  - var modNext = 'next'
+  - var classButton = 'room-carousel__button';
+  - var classRadioReal = 'room-carousel__radio-real';
+  - var classButtonPrev = `${ classButton }_${ modPrev }`;
+  - var classButtonNext = `${ classButton }_${ modNext }`;
+  - var carouselRealClass = `${ classRadioReal } js-${ classRadioReal }`;
   - var counter = 1;
 
   .room-carousel.js-room-carousel
@@ -31,5 +33,5 @@ mixin room-carousel({ roomPictures, nameForPictures })
             src = picture 
             alt = 'room pictures').room-carousel__img
     .room-carousel__buttons
-      div(class = `${ buttonPrevClass } js-room-carousel__button_prev`)
-      div(class = `${ buttonNextClass } js-room-carousel__button_next`)
+      div(class = `${ classButton } ${ classButtonPrev } js-${ classButtonPrev }`)
+      div(class = `${ classButton } ${ classButtonNext } js-${ classButtonNext }`)

@@ -17,13 +17,26 @@ class Pagination {
   _createClasses() {
     this.classContent = 'pagination__content';
     this.classInfo = 'pagination__info';
+
+    const currentMod = 'current';
     this.classItem = 'pagination__item';
-    this.classItemCurrent = 'pagination__item_current';
+    this.arrClassesOfItem = [this.classItem, `js-${ this.classItem }`];
+    this.arrClassesOfItemCurrent = [this.classItem, `${ this.classItem }_${ currentMod }`, `js-${ this.classItem }_${ currentMod }`];
+
+    const lastMod = 'last';
+    const firstMod = 'first';
+    const nextMod = 'next';
+    const prevMod = 'prev';
     this.classButton = 'pagination__button';
-    this.classButtonNext = 'pagination__button_next';
-    this.classButtonPrev = 'pagination__button_prev';
-    this.classButtonFirst = 'pagination__button_first';
-    this.classButtonLast = 'pagination__button_last';
+    this.classButtonLast = `${ this.classButton } ${ this.classButton }_${ lastMod } js-${ this.classButton }_${ lastMod }`;
+    this.selectorButtonLast = `.js-${ this.classButton }_${ lastMod }`;
+    this.classButtonFirst = `${ this.classButton } ${ this.classButton }_${ firstMod } js-${ this.classButton }_${ firstMod }`;
+    this.selectorButtonFirst = `.js-${ this.classButton }_${ firstMod }`;
+    this.classButtonNext = `${ this.classButton } ${ this.classButton }_${ nextMod } js-${ this.classButton }_${ nextMod }`;
+    this.selectorButtonNext = `.js-${ this.classButton }_${ nextMod }`;
+    this.classButtonPrev = `${ this.classButton } ${ this.classButton }_${ prevMod } js-${ this.classButton }_${ prevMod }`;
+    this.selectorButtonPrev = `.js-${ this.classButton }_${ prevMod }`;
+
   }
 
   _createContainer(item) {
@@ -48,17 +61,13 @@ class Pagination {
     this.buttonItems = Array.from(
       this.pageButtons.querySelectorAll(`.js-${ this.classItem }`)
     );
-    this.buttonFirst = this.pageButtons.querySelector(
-      `.js-${ this.classButtonFirst }`
-    );
-    this.buttonLast = this.pageButtons.querySelector(
-      `.js-${ this.classButtonLast }`
-    );
+    this.buttonFirst = this.pageButtons.querySelector(this.selectorButtonFirst);
+    this.buttonLast = this.pageButtons.querySelector(this.selectorButtonLast);
     this.buttonNext = this.num < this.data.totalNum
-      ? this.pageButtons.querySelector(`.js-${ this.classButtonNext }`)
+      ? this.pageButtons.querySelector(this.selectorButtonNext)
       : null;
     this.buttonPrev = this.num > 3
-      ? this.pageButtons.querySelector(`.js-${ this.classButtonPrev }`)
+      ? this.pageButtons.querySelector(this.selectorButtonPrev)
       : null;
   }
 
@@ -127,13 +136,9 @@ class Pagination {
     button.innerText = i;
     button.value = i;
     if (i === this.num) {
-      button.classList.add(
-        this.classItem,
-        this.classItemCurrent,
-        `js-${ this.classItemCurrent }`
-      );
+      button.classList.add(...this.arrClassesOfItemCurrent);
     } else {
-      button.classList.add(this.classItem, `js-${ this.classItem }`);
+      button.classList.add(...this.arrClassesOfItem);
     }
     return button;
   }
@@ -157,28 +162,24 @@ class Pagination {
 
   _addLastButton() {
     this.pageButtons.innerHTML = `${
-      this.pageButtons.innerHTML }<button class = '${ this.classButton } js-${
-      this.classButtonLast } ${ this.classButtonLast } '>15</button>`;
+      this.pageButtons.innerHTML }<button class = '${ this.classButtonLast }'>15</button>`;
   }
 
   _addPrevButton() {
     this.pageButtons.innerHTML = `
-      <button class = '${ this.classButton } js-${
-  this.classButtonPrev } ${ this.classButtonPrev }'></button>
+      <button class = '${ this.classButtonPrev }'></button>
       ${ this.pageButtons.innerHTML }`;
   }
 
   _addNextButton() {
     this.pageButtons.innerHTML = `
       ${ this.pageButtons.innerHTML }
-      <button class = '${ this.classButton } js-${
-  this.classButtonNext } ${ this.classButtonNext }'></button>`;
+      <button class = '${ this.classButtonNext }'></button>`;
   }
 
   _addFirstButton() {
     this.pageButtons.innerHTML = `
-      <button class = '${ this.classButton } js-${
-  this.classButtonFirst } ${ this.classButtonFirst }'>1</button>
+      <button class = '${ this.classButtonFirst }'>1</button>
       ${ this.pageButtons.innerHTML }`;
   }
 

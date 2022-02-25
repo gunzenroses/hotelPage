@@ -38,12 +38,12 @@
 
   &__list {
     @include isFlex($direction: column);
-    appearance: none;
     width: 100%;
     height: 115px;
     margin: 0;
     padding: 0;
     border: none;
+    appearance: none;
 
     @include _1750{
       height: fit-content;

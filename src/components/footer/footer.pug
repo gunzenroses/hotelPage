@@ -11,34 +11,30 @@ mixin footer(theme = 'main')
       footerGroups
     } = require('Components/footer/footer.json');
   - 
-    var footerCopyrightClass = theme === 'main'
+    var classCopyright = theme === 'main'
       ? 'footer__basement' 
       : `footer__basement footer__basement_in_${ theme }`;
   -
-    var footerNavbarClass = theme === 'main'
+    var classNavbar = theme === 'main'
       ? 'footer__navbar' 
       : `footer__navbar footer__navbar_in_${ theme }`;
   - 
-    var infoVisibleClass = theme === 'details' 
+    var classInfo = theme === 'details' 
       ? `footer__info footer__info_in_${ theme }` 
       : 'footer__info';
+  
+  - 
+    var classFooterLogo = theme === 'landing' | theme === 'sign-in'
+      ? `footer__logo footer__logo_in_${ theme }`
+      : 'footer__logo';
 
   footer.footer
     .footer__main
-      div(class = footerNavbarClass)
-        if theme === 'landing'
-          div(class = `footer__logo footer__logo_in_${ theme }`)
-            +logo()
-            .footer__text!= footerText
-        else if theme === 'sign-in'
-          div(class = `footer__logo footer__logo_in_${ theme }`)
-            +logo()
-            .footer__text!= footerText
-        else
-          div(class = `footer__logo`)
-            +logo()
-            .footer__text!= footerText
-        div(class = infoVisibleClass)
+      div(class = classNavbar)
+        div(class = classFooterLogo)
+          +logo()
+          .footer__text!= footerText
+        div(class = classInfo)
           for footerGroup in footerGroups
             div(class = `footer__${ footerGroup.name }`)
               h3.footer__title!= footerGroup.text
@@ -60,7 +56,7 @@ mixin footer(theme = 'main')
               placeholder: 'Email',
               nameText: 'email',
             })
-    div(class = footerCopyrightClass)
+    div(class = classCopyright)
       .footer__basement-text Copyright © 2018 Toxin отель. Все права защищены.
       .footer__social-nets
         +social-nets(theme)

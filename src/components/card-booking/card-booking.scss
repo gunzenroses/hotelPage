@@ -65,8 +65,8 @@
 
     @include _450 {
       justify-content: space-between;
-      min-width: 260px;
       width: 100%;
+      min-width: 260px;
       margin: 9px 0;
     }
 
@@ -113,8 +113,8 @@
 
   &__number {
     display: inline-block;
-    font-size: $fs_h1;
     line-height: 9px;
+    font-size: $fs_h1;
     letter-spacing: .001em;
     font-weight: 700;
     color: $dark-shade_most;
@@ -174,8 +174,8 @@
 
     @include _450 {
       justify-content: space-between;
-      min-width: 260px;
       width: 100%;
+      min-width: 260px;
       margin: 9px 0;
     }
   }

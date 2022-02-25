@@ -18,12 +18,16 @@ export default class DropdownRooms {
   }
 
   _createClasses() {
-    this.classItem = 'dropdown-item';
+    const modDisabled = 'disabled';
     this.classInfo = 'dropdown__info';
     this.classInput = 'dropdown__input';
-    this.classItemPlus = 'dropdown-item__plus';
-    this.classItemMinus = 'dropdown-item__minus';
-    this.classNumber = 'dropdown-item__number';
+
+    this.classItem = 'dropdown-item';
+    this.classItemPlus = `${ this.classItem }__plus`;
+    this.classItemMinus = `${ this.classItem }__minus`;
+    this.classNumber = `${ this.classItem }__number`;
+    this.classItemPlusDisabled = `${ this.classItemPlus }_${ modDisabled }`
+    this.classItemMinusDisabled = `${ this.classItemMinus }_${ modDisabled }`;
   }
 
   _createChildren() {
@@ -95,20 +99,12 @@ export default class DropdownRooms {
 
   _updateMinusPlusButton(i) {
     if (this.data[i] <= 0) {
-      this.dropdownMinuses[i].classList.add(
-        `${ this.classItemMinus }_disabled`
-      );
+      this.dropdownMinuses[i].classList.add(this.classItemMinusDisabled);
     } else if (this.data[i] > 0 && this.data[i] < 10) {
-      this.dropdownPluses[i].classList.remove(
-        `${ this.classItemPlus }_disabled`
-      );
-      this.dropdownMinuses[i].classList.remove(
-        `${ this.classItemMinus }_disabled`
-      );
+      this.dropdownPluses[i].classList.remove(this.classItemPlusDisabled);
+      this.dropdownMinuses[i].classList.remove(this.classItemMinusDisabled);
     } else {
-      this.dropdownPluses[i].classList.add(
-        `${ this.classItemPlus }_disabled`
-      );
+      this.dropdownPluses[i].classList.add(this.classItemPlusDisabled);
     }
   }
 

@@ -49,8 +49,8 @@
     padding: 0;
     letter-spacing: 0.01em;
     border: none;
-    background: transparent;
     color: $dark-shade_more;
+    background: transparent;
     white-space: nowrap;
     cursor: pointer;
 
@@ -61,8 +61,8 @@
 
     &::before {
       @include dropdownButton();
-      color: $dark-shade_medium;
       line-height: 45px;
+      color: $dark-shade_medium;
     }
 
     @include _450 {

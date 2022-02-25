@@ -61,11 +61,12 @@ class RoomCarousel {
   }
 
   _createClasses() {
-    this.classRadio = 'room-carousel__radio';
-    this.classPictures = 'room-carousel__pictures';
-    this.classButtonPrev = 'room-carousel__button_prev';
-    this.classButtonNext = 'room-carousel__button_next';
-    this.classRadioReal = 'room-carousel__radio-real';
+    this.classBlock = 'room-carousel';
+    this.classRadio = `${ this.classBlock }__radio`;
+    this.classPictures = `${ this.classBlock }__pictures`;
+    this.classButtonPrev = `${ this.classBlock }__button_prev`;
+    this.classButtonNext = `${ this.classBlock }__button_next`;
+    this.classRadioReal = `${ this.classBlock }__radio-real`;
   }
 
   _createChildren() {

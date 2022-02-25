@@ -34,16 +34,23 @@ export default class DropdownGuests {
 
   _createClasses() {
     this.classExpand = '.js-expand';
-    this.classItem = 'dropdown-item';
-    this.classInfo = 'dropdown__info';
-    this.classInput = 'dropdown__input';
-    this.classNumber = 'dropdown-item__number';
-    this.classItemMinus = 'dropdown-item__minus';
-    this.classItemPlus = 'dropdown-item__plus';
-    this.classDropdownShow = 'dropdown__show';
     this.classExpandShow = 'expand__show';
-    this.classDropdownReset = 'dropdown__button_type_reset';
-    this.classDropdownSubmit = 'dropdown__button_type_submit';
+
+    const blockName = 'dropdown';
+    this.classInfo = `${ blockName }__info`;
+    this.classInput = `${ blockName }__input`;
+    this.classDropdownShow = `${ blockName }__show`;
+    this.classDropdownReset = `${ blockName }__button_type_reset`;
+    this.classDropdownSubmit = `${ blockName }__button_type_submit`;
+
+    this.classItem = 'dropdown-item';
+    this.classNumber = `${ this.classItem }__number`;
+    this.classItemMinus = `${ this.classItem }__minus`;
+    this.classItemPlus = `${ this.classItem }__plus`;
+
+    const disabledMod = 'disabled';
+    this.classItemMinusDisabled = `${ this.classItemMinus }_${ disabledMod }`;
+    this.classItemPlusDisabled = `${ this.classItemPlus }_${ disabledMod }`;
   }
 
   _createChildren() {
@@ -126,18 +133,12 @@ export default class DropdownGuests {
 
   _activateMinusPlus(i) {
     if (this.data[i] <= 0) {
-      this.dropdownMinuses[i].classList.add(
-        `${ this.classItemMinus }_disabled`
-      );
+      this.dropdownMinuses[i].classList.add(this.classItemMinusDisabled);
     } else if (this.data[i] > 0 && this.data[i] < 10) {
-      this.dropdownPluses[i].classList.remove(
-        `${ this.classItemPlus }_disabled`
-      );
-      this.dropdownMinuses[i].classList.remove(
-        `${ this.classItemMinus }_disabled`
-      );
+      this.dropdownPluses[i].classList.remove(this.classItemPlusDisabled);
+      this.dropdownMinuses[i].classList.remove(this.classItemMinusDisabled);
     } else {
-      this.dropdownPluses[i].classList.add(`${ this.classItemPlus }_disabled`);
+      this.dropdownPluses[i].classList.add(this.classItemPlusDisabled);
     }
   }
 
