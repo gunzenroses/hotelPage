@@ -1,6 +1,6 @@
 {
   "signPics": [
-    "./assets/images/sign-in-1.jpg", 
-    "./assets/images/sign-in-2.jpg"
+    "./assets/images/sign-in/sign-in-1.jpg", 
+    "./assets/images/sign-in/sign-in-2.jpg"
   ]
 }
