@@ -1,4 +1,4 @@
-import Inputmask from 'Main/libs/Inputmask/inputmask';
+import Inputmask from 'inputmask';
 
 class InputMask {
   constructor(element) {
