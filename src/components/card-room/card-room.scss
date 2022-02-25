@@ -34,10 +34,6 @@
     font-weight: 700;
     color: $dark-shade_most;
 
-    @include _1750{
-      font-size: $fs_h2;
-    }
-
     &_in_creative {
       line-height: 20px;
     }
@@ -51,10 +47,6 @@
     letter-spacing: .001em;
     font-weight: 700;
     color: $dark-shade_most;
-
-    @include _1750{
-      font-size: $fs_h1;
-    }
 
     &_in_creative {
       line-height: 20px;
@@ -86,10 +78,6 @@
     font-weight: 400;
     letter-spacing: .001em;
     color: $dark-shade_medium;
-
-    @include _1750{
-      font-size: $fs_base;
-    }
 
     &_in_search {
       line-height: 20px;
@@ -132,10 +120,6 @@
     letter-spacing: .01em;
     font-weight: 700;
     color: $dark-shade_medium;
-
-    @include _1750{
-      font-size: $fs_h2;
-    }
   }
 
   &__review {

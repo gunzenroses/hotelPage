@@ -84,10 +84,6 @@
     letter-spacing: .001em;
     text-transform: uppercase;
     text-align: start;
-
-    @include _1750{
-      font-size: $fs_base;
-    }
   }
 
   &__input {

@@ -29,11 +29,6 @@
     font-weight: 700;
     text-transform: uppercase;
     user-select: none;
-
-    @include _1750{
-      font-size: $fs_base;
-      height: $fs_h2;
-    }
   }
 
   &__list {

@@ -7,72 +7,73 @@ mixin header({ user = '', theme = '' })
   - var userName = user.split(' ').join('-');
   - 
     var headerClass = theme === ''
-      ? 'header' 
-      : `header header_in_${ theme }`;
+      ? 'header__content' 
+      : `header__content header__content_in_${ theme }`;
   - 
     var userClick = user === ''
       ? 'registration.html' 
       : `${ userName }.html`;
   
-  header(class = headerClass)
-    if theme === ''
-      .header__logo
-        +logo()
-    else
-      +logo()
-    .header__menu
-      .header__burger-menu.js-expand__init
-        span.header__burger-span
-      nav.header__dropdown.expand.js-expand
-        ul.header__navbar.header__navbar_dropdown
-          +navlink({
-            buttonText: 'О нас',
-            onClick: './some-address'
-          })
-          +navlink-dropdown('Услуги')
-          +navlink({
-            buttonText: 'Вакансии',
-            onClick: './some-address'
-          })
-          +navlink({
-            buttonText: 'Новости',
-            onClick: './some-address'
-          })
-          +navlink-dropdown('Соглашения')
-      if user
-        a.header__user(href = userClick)= user
+  header.header
+    div(class = headerClass)
+      if theme === ''
+        .header__logo
+          +logo()
       else
-        .header__forms
-          .header__sign-in
-            +button-link({
-              buttonText: 'Войти',
-              buttonOnclick: 'sign-in.html',
-              className: 'sign-in'
+        +logo()
+      .header__menu
+        .header__burger-menu.js-expand__init
+          span.header__burger-span
+        nav.header__dropdown.expand.js-expand
+          ul.header__navbar.header__navbar_dropdown
+            +navlink({
+              buttonText: 'О нас',
+              onClick: './some-address'
             })
-          .header__registration
-            +button-link({ 
-              buttonOnclick: 'registration.html',
-              className: 'registration'
+            +navlink-dropdown('Услуги')
+            +navlink({
+              buttonText: 'Вакансии',
+              onClick: './some-address'
             })
-      nav.header__navbar-region
-        ul.header__navbar
-          +navlink({
-            buttonText: 'О нас',
-            onClick: './some-address',
-            modifier: 'header',
-            buttonModifier: 'header'
-          })
-          +navlink-dropdown('Услуги')
-          +navlink({
-            buttonText: 'Вакансии',
-            onClick: './some-address',
-            modifier: 'header',
-            buttonModifier: 'header'
-          })
-          +navlink({
-            buttonText: 'Новости',
-            onClick: './some-address',
-            modifier: 'header',
-            buttonModifier: 'header'
-          })
-          +navlink-dropdown('Соглашения')
+            +navlink({
+              buttonText: 'Новости',
+              onClick: './some-address'
+            })
+            +navlink-dropdown('Соглашения')
+        if user
+          a.header__user(href = userClick)= user
+        else
+          .header__forms
+            .header__sign-in
+              +button-link({
+                buttonText: 'Войти',
+                buttonOnclick: 'sign-in.html',
+                className: 'sign-in'
+              })
+            .header__registration
+              +button-link({ 
+                buttonOnclick: 'registration.html',
+                className: 'registration'
+              })
+        nav.header__navbar-region
+          ul.header__navbar
+            +navlink({
+              buttonText: 'О нас',
+              onClick: './some-address',
+              modifier: 'header',
+              buttonModifier: 'header'
+            })
+            +navlink-dropdown('Услуги')
+            +navlink({
+              buttonText: 'Вакансии',
+              onClick: './some-address',
+              modifier: 'header',
+              buttonModifier: 'header'
+            })
+            +navlink({
+              buttonText: 'Новости',
+              onClick: './some-address',
+              modifier: 'header',
+              buttonModifier: 'header'
+            })
+            +navlink-dropdown('Соглашения')

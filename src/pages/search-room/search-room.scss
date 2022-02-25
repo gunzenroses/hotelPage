@@ -43,6 +43,15 @@
     height: auto;
   }
 
+  &__main {
+    width: 100%;
+    min-width: 320px;
+    height: fit-content;
+    border-bottom: 1px solid $dark-shade_less;
+    background: $light;
+    overflow: auto;
+  }
+
   &__content {
     @include isFlex();
     position: relative;
@@ -50,15 +59,12 @@
     max-width: 1920px;
     min-width: 320px;
     height: fit-content;
+    margin: 0 auto;
     padding: 26px 140px 69px;
-    border-bottom: 1px solid $dark-shade_less;
-    background: $light;
-    overflow: auto;
 
     @include _1500{
       padding-bottom: 27px;
       justify-content: space-around;
-      margin: 0 auto;
     }
 
     @include _1400 {

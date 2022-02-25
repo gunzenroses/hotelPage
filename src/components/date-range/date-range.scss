@@ -81,11 +81,6 @@
     color: $dark-shade_most;
     text-transform: uppercase;
     user-select: none;
-
-    @include _1750{
-      height: $fs_h2;
-      font-size: $fs_base;
-    }
   }
     
   &__info {

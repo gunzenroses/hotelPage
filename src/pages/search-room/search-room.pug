@@ -22,58 +22,59 @@ block variables
 block content
   .search-room.js-dropdown__detection
     +header({ user: '', theme: theme })
-    main.search-room__content
-      section.search-room__filter
-        form.search-room__form
-          .search-room__filter-group
-            .search-room__filter-date
-              +date-range({
-                dateRanges: [{
-                  labelText: 'даты пребывания в отеле',
-                  value: '19 авг - 23 авг', 
-                  name: 'check-in-check-out', 
-                  data: 'date-range'
-                }],
-                placeHolder: 'ДД.ММ - ДД.ММ',
-                theme: theme
-              })
-            .search-room__filter-guests
-              +dropdown-guests({
-                labelText: 'гости',
-                itemNumbers: [2, 1, 1]
-              })
-            .search-room__filter-price
-              +range({
-                infoText: true,
-                labelText: 'Диапазон цены'
-              })
-            .search-room__filter-rules
-              h3.label Правила дома
-              +checkbox
-          .search-room__filter-group
-            .search-room__accessibility
-              +rich-checkbox({
-                checkboxName: 'accessibility',
-                containerText: 'Доступность'
-              })
-            .search-room__filter-rooms
-              +dropdown-rooms({
-                labelText: 'Удобства номера',
-                itemNumbers: [2, 2, 0],
-              })
-            .search-room__filter-extras
-              +checkbox-expandable({
-                dropdownTitleName: 'Дополнительные удобства'
-              })
-      section.search-room__rooms
-        h1.search-room__text Номера, которые мы для вас подобрали
-        .search-room__result
-          each room in roomsList 
-            .search-room__card-room
-              +card-room({ 
-                roomOptions: room, 
-                theme: theme 
-              })
-        .search-room__pagination 
-          +pagination()
+    main.search-room__main
+      .search-room__content
+        section.search-room__filter
+          form.search-room__form
+            .search-room__filter-group
+              .search-room__filter-date
+                +date-range({
+                  dateRanges: [{
+                    labelText: 'даты пребывания в отеле',
+                    value: '19 авг - 23 авг', 
+                    name: 'check-in-check-out', 
+                    data: 'date-range'
+                  }],
+                  placeHolder: 'ДД.ММ - ДД.ММ',
+                  theme: theme
+                })
+              .search-room__filter-guests
+                +dropdown-guests({
+                  labelText: 'гости',
+                  itemNumbers: [2, 1, 1]
+                })
+              .search-room__filter-price
+                +range({
+                  infoText: true,
+                  labelText: 'Диапазон цены'
+                })
+              .search-room__filter-rules
+                h3.label Правила дома
+                +checkbox
+            .search-room__filter-group
+              .search-room__accessibility
+                +rich-checkbox({
+                  checkboxName: 'accessibility',
+                  containerText: 'Доступность'
+                })
+              .search-room__filter-rooms
+                +dropdown-rooms({
+                  labelText: 'Удобства номера',
+                  itemNumbers: [2, 2, 0],
+                })
+              .search-room__filter-extras
+                +checkbox-expandable({
+                  dropdownTitleName: 'Дополнительные удобства'
+                })
+        section.search-room__rooms
+          h1.search-room__text Номера, которые мы для вас подобрали
+          .search-room__result
+            each room in roomsList 
+              .search-room__card-room
+                +card-room({ 
+                  roomOptions: room, 
+                  theme: theme 
+                })
+          .search-room__pagination 
+            +pagination()
     +footer(theme)
