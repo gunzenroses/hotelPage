@@ -1,0 +1,41 @@
+.irs, .irs--flat, .js-irs-0 {
+  @include containerBlock(100%, 16px);
+  position: relative;
+  user-select: none;
+}
+
+.irs-line {
+  @include containerBlock(100%, 6px);
+  position: relative;
+  margin-top: 18px;
+  border-radius: 3px;
+  background-color: $light;
+  border: 1px solid $dark-shade_less;
+  cursor: pointer;
+}
+
+.irs-hidden-input {
+  display: none;
+}
+
+.irs-bar {
+  position: absolute;
+  top: 18px;
+  display: block;
+  height: 6px;
+  border-radius: 3px;
+  background: $linearGradientTurquoise;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.irs-handle {
+  @include containerBlock(15px, 15px);
+  position: absolute;
+  top: 14px;
+  border-radius: 10px;
+  border: 2px solid $light;
+  background: $linearGradientTurquoise;
+  z-index: 1;
+  cursor: pointer;
+}
