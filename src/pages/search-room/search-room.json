@@ -16,10 +16,10 @@
     },
     {
       "src": [
-        "./assets/images/rooms/room2.jpg",
-        "./assets/images/rooms/room2.jpg",
-        "./assets/images/rooms/room2.jpg",
-        "./assets/images/rooms/room2.jpg"
+        "./assets/images/rooms/room-2.jpg",
+        "./assets/images/rooms/room-2.jpg",
+        "./assets/images/rooms/room-2.jpg",
+        "./assets/images/rooms/room-2.jpg"
       ],
       "bookingNumber": "840",
       "bookingType": "",
@@ -30,10 +30,10 @@
     },
     {
       "src": [
-        "./assets/images/rooms/room3.jpg",
-        "./assets/images/rooms/room3.jpg",
-        "./assets/images/rooms/room2.jpg",
-        "./assets/images/rooms/room3.jpg"
+        "./assets/images/rooms/room-3.jpg",
+        "./assets/images/rooms/room-3.jpg",
+        "./assets/images/rooms/room-2.jpg",
+        "./assets/images/rooms/room-3.jpg"
       ],
       "bookingNumber": "980",
       "bookingType": "Люкс",
@@ -44,10 +44,10 @@
     },
     {
       "src": [
-        "./assets/images/rooms/room4.jpg",
-        "./assets/images/rooms/room4.jpg",
-        "./assets/images/rooms/room4.jpg",
-        "./assets/images/rooms/room4.jpg"
+        "./assets/images/rooms/room-4.jpg",
+        "./assets/images/rooms/room-4.jpg",
+        "./assets/images/rooms/room-4.jpg",
+        "./assets/images/rooms/room-4.jpg"
       ],
       "bookingNumber": "856",
       "bookingType": "",
@@ -58,10 +58,10 @@
     },
     {
       "src": [
-        "./assets/images/rooms/room5.jpg",
-        "./assets/images/rooms/room5.jpg",
-        "./assets/images/rooms/room5.jpg",
-        "./assets/images/rooms/room5.jpg"
+        "./assets/images/rooms/room-5.jpg",
+        "./assets/images/rooms/room-5.jpg",
+        "./assets/images/rooms/room-5.jpg",
+        "./assets/images/rooms/room-5.jpg"
       ],
       "bookingNumber": "740",
       "bookingType": "",
@@ -72,10 +72,10 @@
     },
     {
       "src": [
-        "./assets/images/rooms/room6.jpg",
-        "./assets/images/rooms/room6.jpg",
-        "./assets/images/rooms/room6.jpg",
-        "./assets/images/rooms/room6.jpg"
+        "./assets/images/rooms/room-6.jpg",
+        "./assets/images/rooms/room-6.jpg",
+        "./assets/images/rooms/room-6.jpg",
+        "./assets/images/rooms/room-6.jpg"
       ],
       "bookingNumber": "982",
       "bookingType": "",
@@ -86,10 +86,10 @@
     },
     {
       "src": [
-        "./assets/images/rooms/room7.jpg",
-        "./assets/images/rooms/room7.jpg",
-        "./assets/images/rooms/room7.jpg",
-        "./assets/images/rooms/room7.jpg"
+        "./assets/images/rooms/room-7.jpg",
+        "./assets/images/rooms/room-7.jpg",
+        "./assets/images/rooms/room-7.jpg",
+        "./assets/images/rooms/room-7.jpg"
       ],
       "bookingNumber": "678",
       "bookingType": "",
@@ -100,10 +100,10 @@
     },
     {
       "src": [
-        "./assets/images/rooms/room8.jpg",
-        "./assets/images/rooms/room8.jpg",
-        "./assets/images/rooms/room8.jpg",
-        "./assets/images/rooms/room8.jpg"
+        "./assets/images/rooms/room-8.jpg",
+        "./assets/images/rooms/room-8.jpg",
+        "./assets/images/rooms/room-8.jpg",
+        "./assets/images/rooms/room-8.jpg"
       ],
       "bookingNumber": "450",
       "bookingType": "",
@@ -114,10 +114,10 @@
     },
     {
       "src": [
-        "./assets/images/rooms/room9.jpg",
-        "./assets/images/rooms/room9.jpg",
-        "./assets/images/rooms/room9.jpg",
-        "./assets/images/rooms/room9.jpg"
+        "./assets/images/rooms/room-9.jpg",
+        "./assets/images/rooms/room-9.jpg",
+        "./assets/images/rooms/room-9.jpg",
+        "./assets/images/rooms/room-9.jpg"
       ],
       "bookingNumber": "350",
       "bookingType": "",
@@ -128,10 +128,10 @@
     },
     {
       "src": [
-        "./assets/images/rooms/room10.jpg",
-        "./assets/images/rooms/room10.jpg",
-        "./assets/images/rooms/room10.jpg",
-        "./assets/images/rooms/room10.jpg"
+        "./assets/images/rooms/room-10.jpg",
+        "./assets/images/rooms/room-10.jpg",
+        "./assets/images/rooms/room-10.jpg",
+        "./assets/images/rooms/room-10.jpg"
       ],
       "bookingNumber": "666",
       "bookingType": "",
@@ -142,10 +142,10 @@
     },
     {
       "src": [
-        "./assets/images/rooms/room11.jpg",
-        "./assets/images/rooms/room11.jpg",
-        "./assets/images/rooms/room11.jpg",
-        "./assets/images/rooms/room11.jpg"
+        "./assets/images/rooms/room-11.jpg",
+        "./assets/images/rooms/room-11.jpg",
+        "./assets/images/rooms/room-11.jpg",
+        "./assets/images/rooms/room-11.jpg"
       ],
       "bookingNumber": "444",
       "bookingType": "",
@@ -156,10 +156,10 @@
     },
     {
       "src": [
-        "./assets/images/rooms/room12.jpg",
-        "./assets/images/rooms/room12.jpg",
-        "./assets/images/rooms/room12.jpg",
-        "./assets/images/rooms/room12.jpg"
+        "./assets/images/rooms/room-12.jpg",
+        "./assets/images/rooms/room-12.jpg",
+        "./assets/images/rooms/room-12.jpg",
+        "./assets/images/rooms/room-12.jpg"
       ],
       "bookingNumber": "352",
       "bookingType": "",
