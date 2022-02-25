@@ -9,3 +9,4 @@ package-lock.json
 .editorconfig
 .package-lock.json
 yarn.lock
+.prettierignore
