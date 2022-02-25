@@ -1,6 +1,6 @@
 import { boundMethod } from 'autobind-decorator';
 
-import Inputmask from 'Libs/inputmask/Inputmask';
+import Inputmask from 'Main/libs/Inputmask/Inputmask';
 
 class Textfield {
   constructor(item) {
