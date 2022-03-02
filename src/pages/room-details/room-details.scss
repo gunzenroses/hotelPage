@@ -53,38 +53,32 @@
   }
 
   &__view {
-    @include isFlex($justify: flex-start);
+    display: grid;
+    grid-template-columns: 68.125% 31.875%;
     width: 100%;
     height: 485px;
     overflow: hidden;
 
     @include _1441 {
-      height: calc(485 / 1440 * 100vw);
+      height: fit-content;
     }
 
     @include _970 {
-      @include isFlex($direction: column);
-      height: fit-content;
-    }
-  }
-
-  &__view-main {
-    width: 981px;
-    height: 100%;
-    object-fit: cover;
-    overflow: hidden;
-
-    @include _1441 {
-      width: 68.1%;
+      grid-template:
+        "a a a a"
+        "a a a a"
+        "b b c c";
+      height: 75vw;
+      animation: changeGrid 20s infinite;
     }
 
-    @include _1340 {
-      width: 68.1%;
-    }
-
-    @include _970 {
-      width: 100%;
-      height: fit-content;
+    @include _500 {
+      @include isFlex();
+      position: relative;
+      width: 300%;
+      height: 50vw;
+      overflow: hidden;
+      animation: changeFlex 24s ease-in-out infinite;
     }
   }
 
@@ -92,40 +86,31 @@
     display: none;
   }
 
-  &__view-miniature {
-    @include isFlex($direction: column);
-    width: 459px;
+  &__img {
+    width: 100%;
     height: 100%;
+    object-fit: cover;
     overflow: hidden;
 
-    @include _1441 {
-      width: 32%;
+    &_first {
+      grid-row-start: 1;
+      grid-row-end: 3;
+
+     @include _970 {
+       grid-area: a;
+     }
     }
 
-    @include _1340 {
-      width: 32%;
+    &_second {
+      @include _970 {
+        grid-area: b;
+      }
     }
 
-    @include _970 {
-      flex-direction: row;
-      width: 100%;
-      height: fit-content;
-    }
-
-    @include _450 {
-      display: none;
-      visibility: hidden;
-    }
-  }
-
-  &__view_mini {
-    width: 100%;
-    height: 50%;
-    object-fit: cover;
-
-    @include _970 {
-      width: 50%;
-      height: auto;
+    &_third {
+      @include _970 {
+        grid-area: c;
+      }
     }
   }
 
@@ -451,5 +436,56 @@
     @include _450 {
       margin: 0 auto 50px;
     }
+  }
+}
+
+@keyframes changeGrid {
+  0% {
+    grid-template:
+        "a a a a"
+        "a a a a"
+        "b b c c";
+  }
+  34% {
+    grid-template:
+        "b b b b"
+        "b b b b"
+        "c c a a";
+  };
+  67% {
+    grid-template:
+        "c c c c"
+        "c c c c"
+        "a a b b";
+  }
+  100% {
+    grid-template:
+        "a a a a"
+        "a a a a"
+        "b b c c";
+  }
+}
+
+@keyframes changeFlex {
+  0% {
+    left: 0%;
+  }
+  32% {
+    left: 0%;
+  }
+  34% {
+    left: -100%;
+  }
+  65% {
+    left: -100%;
+  }
+  67% {
+    left: -200%;
+  }
+  98% {
+    left: -200%;
+  }
+  100% {
+    left: 0%;
   }
 }

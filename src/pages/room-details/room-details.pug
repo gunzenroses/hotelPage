@@ -26,19 +26,18 @@ block content
     +header({ user: '', theme: theme })
     main.room-details__content
       section.room-details__view
+        h2.room-details__heading Вид номера
         img(
           src = './assets/images/room-details/room-details.jpg' 
-          alt = 'room picture 1').room-details__view-main
-        h2.room-details__heading Вид номера
-        .room-details__view-miniature
-          img(
-            src = './assets/images/room-details/room-details-2.jpg' 
-            alt = 'room picture 2').room-details__view_mini
-          img(
-            src = './assets/images/room-details/room-details-3.jpg' 
-            alt = 'room picture 3').room-details__view_mini
+          alt = 'room picture 1').room-details__img.room-details__img_first
+        //- .room-details__view-miniature
+        img(
+          src = './assets/images/room-details/room-details-2.jpg' 
+          alt = 'room picture 2').room-details__img.room-details__img_second
+        img(
+          src = './assets/images/room-details/room-details-3.jpg' 
+          alt = 'room picture 3').room-details__img.room-details__img_third
       section.room-details__info-outer
-        h2.room-details__heading Данные о номере
         .room-details__info-inner
           .room-details__description
             article.room-details__room-data
