@@ -69,7 +69,6 @@
         "a a a a"
         "b b c c";
       height: 75vw;
-      animation: changeGrid 20s infinite;
     }
 
     @include _500 {
@@ -436,33 +435,6 @@
     @include _450 {
       margin: 0 auto 50px;
     }
-  }
-}
-
-@keyframes changeGrid {
-  0% {
-    grid-template:
-        "a a a a"
-        "a a a a"
-        "b b c c";
-  }
-  34% {
-    grid-template:
-        "b b b b"
-        "b b b b"
-        "c c a a";
-  };
-  67% {
-    grid-template:
-        "c c c c"
-        "c c c c"
-        "a a b b";
-  }
-  100% {
-    grid-template:
-        "a a a a"
-        "a a a a"
-        "b b c c";
   }
 }
 
