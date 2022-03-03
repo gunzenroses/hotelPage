@@ -26,7 +26,7 @@ export default class DropdownRooms {
     this.classItemPlus = `${ this.classItem }__plus`;
     this.classItemMinus = `${ this.classItem }__minus`;
     this.classNumber = `${ this.classItem }__number`;
-    this.classItemPlusDisabled = `${ this.classItemPlus }_${ modDisabled }`
+    this.classItemPlusDisabled = `${ this.classItemPlus }_${ modDisabled }`;
     this.classItemMinusDisabled = `${ this.classItemMinus }_${ modDisabled }`;
   }
 

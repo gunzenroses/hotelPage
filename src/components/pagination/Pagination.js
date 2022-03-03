@@ -21,22 +21,26 @@ class Pagination {
     const currentMod = 'current';
     this.classItem = 'pagination__item';
     this.arrClassesOfItem = [this.classItem, `js-${ this.classItem }`];
-    this.arrClassesOfItemCurrent = [this.classItem, `${ this.classItem }_${ currentMod }`, `js-${ this.classItem }_${ currentMod }`];
+    this.arrClassesOfItemCurrent = [this.classItem, `${ this.classItem }_${
+      currentMod }`, `js-${ this.classItem }_${ currentMod }`];
 
     const lastMod = 'last';
     const firstMod = 'first';
     const nextMod = 'next';
     const prevMod = 'prev';
     this.classButton = 'pagination__button';
-    this.classButtonLast = `${ this.classButton } ${ this.classButton }_${ lastMod } js-${ this.classButton }_${ lastMod }`;
+    this.classButtonLast = `${ this.classButton } ${ this.classButton }_${
+      lastMod } js-${ this.classButton }_${ lastMod }`;
     this.selectorButtonLast = `.js-${ this.classButton }_${ lastMod }`;
-    this.classButtonFirst = `${ this.classButton } ${ this.classButton }_${ firstMod } js-${ this.classButton }_${ firstMod }`;
+    this.classButtonFirst = `${ this.classButton } ${ this.classButton }_${
+      firstMod } js-${ this.classButton }_${ firstMod }`;
     this.selectorButtonFirst = `.js-${ this.classButton }_${ firstMod }`;
-    this.classButtonNext = `${ this.classButton } ${ this.classButton }_${ nextMod } js-${ this.classButton }_${ nextMod }`;
+    this.classButtonNext = `${ this.classButton } ${ this.classButton }_${
+      nextMod } js-${ this.classButton }_${ nextMod }`;
     this.selectorButtonNext = `.js-${ this.classButton }_${ nextMod }`;
-    this.classButtonPrev = `${ this.classButton } ${ this.classButton }_${ prevMod } js-${ this.classButton }_${ prevMod }`;
+    this.classButtonPrev = `${ this.classButton } ${ this.classButton }_${
+      prevMod } js-${ this.classButton }_${ prevMod }`;
     this.selectorButtonPrev = `.js-${ this.classButton }_${ prevMod }`;
-
   }
 
   _createContainer(item) {
@@ -162,7 +166,8 @@ class Pagination {
 
   _addLastButton() {
     this.pageButtons.innerHTML = `${
-      this.pageButtons.innerHTML }<button class = '${ this.classButtonLast }'>15</button>`;
+      this.pageButtons.innerHTML }<button class = '${
+      this.classButtonLast }'>15</button>`;
   }
 
   _addPrevButton() {
