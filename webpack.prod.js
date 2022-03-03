@@ -15,7 +15,7 @@ module.exports = merge(common, {
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: 'https://gunzenroses.github.io/hotelPage/',
-    filename: 'assets/js/[name].[hash:7].bundle.js',
+    filename: 'assets/js/[name].[fullhash:7].bundle.js',
   },
   optimization: {
     minimize: true,
@@ -94,7 +94,7 @@ module.exports = merge(common, {
       ],
     }),
     new MiniCssExtractPlugin({
-      filename: 'assets/css/[name].[hash:7].bundle.css',
+      filename: 'assets/css/[name].[fullhash:7].bundle.css',
       chunkFilename: '[id].css',
     }),
   ],
