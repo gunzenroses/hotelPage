@@ -4,7 +4,7 @@
 @import '@~Assets/styles/fonts.scss';
 
 .card {
-  @include _450 {
+  @include xxs {
     width: 280px;
     margin: 0 auto;
     font-size: $fs_h2;
@@ -22,7 +22,7 @@
   text-align: left;
   pointer-events: none;
 
-    @include _500 {
+    @include xs {
       font-size: 1.4rem;
       text-align: center;
     }
@@ -42,7 +42,7 @@
     width: 100%;
     height: fit-content;
 
-    @include _450 {
+    @include xxs {
       margin: 0 auto;
     }
 

@@ -22,7 +22,7 @@
     margin-top: 40px;
   }
 
-  @include _1170 {
+  @include lg {
     margin-top: 30px;
   }
 }
@@ -62,25 +62,22 @@
     margin: 0 auto;
     padding: 26px 140px 69px;
 
-    @include _1500{
+    @include _1500 {
       padding-bottom: 27px;
       justify-content: space-around;
     }
 
-    @include _1400 {
+    @include xl {
       justify-content: space-around;
-      width: 100%;
+      width: 1170px;
       height: fit-content;
-      padding: 5% 7%;
+      padding-left: 0;
+      padding-right: 0;
     }
 
-    @include _1170 {
+    @include lg {
       flex-direction: column;
       width: 100%;
-    }
-
-    @include _450 {
-      padding: 0;
     }
   }
 
@@ -94,13 +91,13 @@
       height: fit-content;
     }
 
-    @include _1170 {
+    @include lg {
       height: auto;
       width: 650px;
       margin: 0 auto 30px;
     }
 
-    @include _750 {
+    @include sm {
       width: 100%;
     }
   }
@@ -108,18 +105,18 @@
   &__form {
     width: 100%;
 
-    @include _1170 {
+    @include lg {
       @include isFlex($direction: row, $wrap: wrap);
       height: auto;
       margin: 0 auto;
     }
 
-    @include _750 {
+    @include sm {
       flex-direction: column;
       width: 380px;
     }
 
-    @include _450 {
+    @include xxs {
       justify-content: center;
       width: 85%;
       max-width: 320px;
@@ -130,9 +127,10 @@
   &__rooms {
     @include isFlex($direction: column, $justify: flex-start);
     width: 835px;
+    min-width: 320px;
     height: fit-content;
 
-    @include _1500{
+    @include _1500 {
       width: 68%;
       max-width: 900px;
     }
@@ -141,22 +139,18 @@
       max-width: 68%;
     }
 
-    @include _1340 {
-      width: 637px;
-      height: auto;
+    @include lg {
+      width: 890px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    @include _1170 {
-      width: 100%;
+    @include md {
+      width: 650px;
     }
 
-    @include _850 {
-      flex-direction: column;
-    }
-
-    @include _450 {
-      width: 100%;
-      min-width: 320px;
+    @include sm {
+      width: 90%;
     }
   }
 
@@ -168,12 +162,12 @@
     color: $dark-shade_most;
     letter-spacing: 0.0001em;
 
-    @include _1170 {
+    @include lg {
       margin: 30px auto;
       text-align: center;
     }
 
-    @include _450 {
+    @include xxs {
       width: 85%;
       font-size: $fs_h2;
     }
@@ -186,22 +180,14 @@
     margin-top: 18px;
     padding-left: 1px;
 
-    @include _1340 {
-      height: auto;
+    @include xl {
       justify-content: space-around;
-    }
-
-    @include _1070 {
-      width: 85%;
       height: auto;
-      margin: 0 auto;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    @include _850 {
-      width: 100%;
-    }
-
-    @include _450 {
+    @include xxs {
       width: 85%;
     }
   }
@@ -218,13 +204,13 @@
       margin: 20px auto 0;
     }
 
-    @include _1400 {
+    @include xl {
       margin: 41px auto 0;
     }
   }
 
   &__filter-group {
-    @include _750 {
+    @include sm {
       width: 100%;
     }
   }

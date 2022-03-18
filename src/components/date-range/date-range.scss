@@ -10,7 +10,7 @@
   min-width: 260px;
   height: 100%;
 
-  @include _450 {
+  @include xxs {
     margin: 0 auto;
   }
 
@@ -19,21 +19,11 @@
     position: absolute;
     top: 65px;
     left: 0;
-    width: 320px;
+    width: 100%;
     height: fit-content;
-    margin-top: 4px;
+    margin: 4px auto 0;
     background: $light;
     z-index: 2;
-
-    @include _1650 {
-      width: 100%;
-    }
-
-    @include _750 {
-      width: 100%;
-      min-width: 260px;
-      margin: 0 auto;
-    }
   }
 
   &__selector {
@@ -41,7 +31,7 @@
     @include containerSimple();
     min-width: 260px;
 
-    @include _450 {
+    @include xxs {
       margin: 0 auto;
     }
 
@@ -63,7 +53,7 @@
         max-width: 240px;
       }
 
-      @include _450 {
+      @include xxs {
         width: calc(150 / 320 * 100%);
         min-width: 130px;
       }
@@ -97,7 +87,7 @@
     white-space: nowrap;
     cursor: pointer;
 
-    @include _450 {
+    @include xxs {
       width: 100%;
       margin: 0 auto;
     }
@@ -121,7 +111,7 @@
       font-size: $fs_h2;
     }
 
-    @include _450 {
+    @include xxs {
       min-width: 100%;
     }
 

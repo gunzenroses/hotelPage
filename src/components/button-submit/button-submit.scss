@@ -21,7 +21,7 @@
     color: $light;
   }
 
-  @include _450 {
+  @include xxs {
     min-width: 260px;
     margin: 0 auto;
   }

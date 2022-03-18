@@ -12,7 +12,7 @@
   min-height: 133px;
   user-select: none;
 
-  @include _450 {
+  @include xxs {
     margin: 0 auto;
   }
 
@@ -55,7 +55,7 @@
     text-align: left;
     pointer-events: none;
 
-    @include _450 {
+    @include xxs {
       width: 70%;
     }
   }

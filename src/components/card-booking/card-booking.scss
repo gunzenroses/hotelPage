@@ -20,7 +20,7 @@
     width: 100%;
   }
 
-  @include _450 {
+  @include xxs {
     width: 100%;
     min-width: 320px;
     padding: 25px;
@@ -63,7 +63,7 @@
       max-width: 490px;
     }
 
-    @include _450 {
+    @include xxs {
       justify-content: space-between;
       width: 100%;
       min-width: 260px;
@@ -172,7 +172,7 @@
       max-width: 490px;
     }
 
-    @include _450 {
+    @include xxs {
       justify-content: space-between;
       width: 100%;
       min-width: 260px;
@@ -190,7 +190,7 @@
       width: calc(100% - 100px);
     }
 
-    @include _450 {
+    @include xxs {
       width: calc(100% - 120px);
       max-width: 170px;
     }

@@ -12,7 +12,7 @@
     width: 100%;
   }
 
-  @include _450 {
+  @include xxs {
     width: 280px;
     margin: 0 auto;
   }
@@ -65,7 +65,7 @@
       color: $dark-shade_medium;
     }
 
-    @include _450 {
+    @include xxs {
       margin: 0 auto;
     }
   }

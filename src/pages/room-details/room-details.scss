@@ -63,7 +63,7 @@
       height: fit-content;
     }
 
-    @include _970 {
+    @include md {
       grid-template:
         "a a a a"
         "a a a a"
@@ -71,11 +71,13 @@
       height: 75vw;
     }
 
-    @include _500 {
+    @include xs {
       @include isFlex();
       position: relative;
       width: 300%;
+      min-width: calc(3 * 320px);
       height: 50vw;
+      min-height: 160px;
       overflow: hidden;
       animation: changeFlex 24s ease-in-out infinite;
     }
@@ -95,19 +97,19 @@
       grid-row-start: 1;
       grid-row-end: 3;
 
-     @include _970 {
+     @include md {
        grid-area: a;
      }
     }
 
     &_second {
-      @include _970 {
+      @include md {
         grid-area: b;
       }
     }
 
     &_third {
-      @include _970 {
+      @include md {
         grid-area: c;
       }
     }
@@ -116,15 +118,15 @@
   &__info-outer {
     width: 100%;
     height: fit-content;
-    padding: 70px 140px 69px 139px;
+    padding: 70px 140px 46px 139px;
 
-    @include _1450 {
-      height: auto;
+    @include xl {
+      padding: 70px 10%;
     }
 
-    @include _1400 {
-      height: auto;
-      padding: 0%;
+    @include xxs {
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 
@@ -133,91 +135,74 @@
     position: relative;
     width: 100%;
     max-width: 1650px;
-    height: 799px;
+    height: auto;
+    margin: 0 auto;
 
-    @include _1450 {
-      height: auto;
-      margin: 0 auto;
-    }
-
-    @include _1400 {
+    @include xl {
       width: 80%;
       height: auto;
-      margin: 70px auto;
+      margin-right: auto;
+      margin-left: auto;
     }
 
-    @include _1250 {
+    @include lg {
       width: 95%;
-      margin: 3% auto;
     }
 
-    @include _970 {
+    @include md {
       flex-direction: column-reverse;
     }
 
-    @include _690 {
+    @include sm {
       width: 100%;
-      padding: 0 auto;
-    }
-
-    @include _450 {
-      margin: 0 auto;
+      padding: 0;
     }
   }
 
   &__description {
     @include isFlex($justify: flex-start, $wrap: wrap);
-    width: 712px;
-    height: 799px;
+    width: calc(712/1161 * 100%);
+    height: fit-content;
     margin-top: 1px;
 
-    @include _1500{
-      width: 60%;
-      height: fit-content;
-    }
-
-    @include _1400 {
+    @include xl {
       justify-content: space-between;
       width: 100%;
       height: auto;
       padding: 0 calc((100% - 760px) / 2);
     }
 
-    @include _970 {
+    @include md {
       padding: 0 7%;
     }
 
-    @include _690 {
+    @include sm {
       flex-direction: column;
       padding: 0 12%;
     }
 
-    @include _450 {
+    @include xxs {
       padding: 0 7%;
     }
   }
 
   &__room-data {
     @include isFlex();
-    width: 675px;
+    width: calc(675/712 * 100%);
     margin-left: 1px;
 
-    @include _1500{
-      width: 90%;
-    }
-
-    @include _1400 {
+    @include xl {
       flex-direction: column;
     }
 
-    @include _970 {
+    @include md {
       flex-direction: row;
       justify-content: space-between;
       width: 100%;
       margin-bottom: 0;
     }
 
-    @include _690 {
+    @include sm {
       flex-direction: column;
     }
   }
@@ -233,7 +218,7 @@
       width: 40%;
     }
 
-    @include _1400 {
+    @include xl {
       margin-right: 0;
     }
   }
@@ -261,15 +246,19 @@
       height: fit-content;
     }
 
-    @include _1400 {
+    @include xl {
       margin-top: 20px;
     }
 
-    @include _970 {
+    @include md {
       margin-top: 0;
     }
 
-    @include _450 {
+    @include sm {
+      margin-top: 30px;
+    }
+
+    @include xxs {
       width: 280px;
     }
   }
@@ -279,7 +268,7 @@
     position: relative;
     width: 100%;
     height: 330px;
-    margin-top: 12px;
+    margin-top: 13px;
     background: $light;
 
     @include _1650 {
@@ -287,7 +276,7 @@
       margin-top: 50px;
     }
 
-    @include _1400 {
+    @include xl {
       height: auto;
       margin: 30px auto 0;
     }
@@ -304,7 +293,7 @@
       right: 10%;
     }
   
-    @include _970 {
+    @include md {
       display: none;
     }
   }
@@ -313,7 +302,7 @@
     width: 100%;
     margin-top: 17px;
 
-    @include _1400 {
+    @include xl {
       margin-top: 20px;
     }
   }
@@ -328,23 +317,18 @@
 
   &__rules {
     @include isFlex($direction: column, $justify: flex-start);
-    width: 292px;
+    width: calc(292/712 * 100%);
     height: 158px;
+    height: fit-content;
     margin-right: 70px;
-    margin-top: 6px;
+    margin-top: 7px;
     background: $light;
 
-    @include _1500{
-      margin-top: 20px;
-      width: 40%;
-      height: fit-content;
-    }
-
-    @include _1400 {
+    @include xl {
       margin-right: 0;
     }
 
-    @include _450 {
+    @include xxs {
       margin-top: 20px;
     }
   }
@@ -353,30 +337,25 @@
     @include headerSecond();
     margin-left: 21px;
 
-    @include _700 {
+    @include sm {
       margin-left: 0;
     }
   }
 
   &__cancellation {
     @include isFlex($direction: column, $justify: flex-start);
-    width: 341px;
+    width: calc(341/712 * 100%);
     height: 138px;
-    margin-top: 5px;
+    height: fit-content;
+    margin-top: 6px;
     background: $light;
 
-    @include _1500{
-      margin-top: 20px;
-      width: 50%;
-      height: fit-content;
-    }
-
-    @include _1400 {
+    @include xl {
       width: calc(100% - 292px - 20px);
       height: auto;
     }
 
-    @include _700 {
+    @include sm {
       width: 100%;
       margin-top: 40px;
     }
@@ -403,36 +382,33 @@
     letter-spacing: 0.0001em;
     color: $dark-shade_more;
 
-    @include _1500{
-      margin-top: 20px;
-    }
-
-    @include _1400 {
+    @include xl {
       margin: 20px;
       margin-left: 0;
     }
   }
 
   &__booking {
-    @include _1450 {
-      max-width: 550px;
-      height: fit-content;
-    }
+    width: calc(380/1161 * 100%);
+    max-width: 550px;
+    min-width: 380px;
+    height: fit-content;
 
-    @include _1400 {
+    @include xl {
       position: absolute;
       top: 0;
-      right: calc((100% - 800px) / 2);
+      right: 0;
     }
 
-    @include _970 {
+    @include md {
       position: relative;
       top: 0;
       right: 0;
       margin: 50px auto;
     }
 
-    @include _450 {
+    @include xxs {
+      min-width: 320px;
       margin: 0 auto 50px;
     }
   }

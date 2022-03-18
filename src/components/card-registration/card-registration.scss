@@ -22,7 +22,7 @@
   background: $light;
   box-shadow: 0px 0px 25px $shadow;
 
-  @include _400 {
+  @include xxs {
     width: 100vw;
     min-width: 320px;
     margin: 0 auto;

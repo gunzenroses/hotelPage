@@ -10,6 +10,7 @@
   @include isFlex($direction: column, $justify: flex-start);
   position: relative;
   width: 1440px;
+  min-width: 320px;
   height: 1350px;
   margin: 0 auto;
   padding-top: 141px;
@@ -17,18 +18,9 @@
   background: $background;
   overflow: auto;
 
-  @include _1440 {
+  @include xl {
     width: 100vw;
     height: auto;
-  }
-
-  @include _750 {
-    min-width: 320px;
-    
-    &::before {
-      top: 10px;
-      left: 10px;
-    }
   }
 
   &__header {

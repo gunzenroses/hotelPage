@@ -20,11 +20,11 @@
 }
 
 @mixin footerLogo {
-  @include _1340 {
+  @include xl {
     margin: 0;
   }
 
-  @include _1170 {
+  @include lg {
     position: absolute;
     top: -11px;
     right: 0;
@@ -33,7 +33,7 @@
     margin-right: 50px;
   }
 
-  @include _800 {
+  @include sm {
     position: relative;
     width: 60%;
     height: fit-content;
@@ -48,6 +48,7 @@
   width: 100%;
   height: 445px;
   margin: 0 auto;
+  min-width: 320px;
   border-radius: 4px;
   background: $light;
   box-sizing: border-box;
@@ -57,12 +58,8 @@
     height: auto;
   }
 
-  @include _1340 {
+  @include xl {
     height: fit-content;
-  }
-
-  @include _470 {
-    min-width: 320px;
   }
 
   &__main {
@@ -70,7 +67,7 @@
     height: fit-content;
     border-bottom: 1px solid $dark-shade_less;
 
-    @include _800 {
+    @include sm {
       border-bottom: none;
     }
   }
@@ -80,11 +77,12 @@
     position: relative;
     width: 80.55%;
     max-width: 1800px;
+    min-width: 320px;
     height: fit-content;
     margin: 100px auto 104px;
     letter-spacing: .01em;
 
-    @include _1440 {
+    @include xl {
       @include containerWithMargins(
         $width: 85%,
         $height: 172px,
@@ -94,19 +92,15 @@
       );
     }
 
-    @include _1170 {
+    @include lg {
       width: calc(415px + 260px + 5%);
     }
 
-    @include _800 {
+    @include sm {
       width: fit-content;
       height: fit-content;
       margin: 120px auto 0;
       justify-content: center;
-    }
-
-    @include _470 {
-      min-width: 320px;
     }
 
     &_in_landing {
@@ -150,19 +144,19 @@
     margin-right: 38px;
     letter-spacing: .001em;
 
-    @include _1440 {
+    @include xl {
       margin-right: 20px;
     }
 
-    @include _1340 {
+    @include xl {
       margin: 0;
     }
 
-    @include _1170 {
+    @include lg {
       margin-right: 40px;
     }
 
-    @include _800 {
+    @include sm {
       top: 0;
       width: fit-content;
       margin: 0;
@@ -171,7 +165,7 @@
     &_in_landing {
       height: 130px;
 
-      @include _800 {
+      @include sm {
         height: fit-content;
       }
     }
@@ -179,7 +173,7 @@
     &_in_sign-in {
       height: 131px;
 
-      @include _800 {
+      @include sm {
         height: fit-content;
       }
     }
@@ -195,7 +189,7 @@
     color: $dark-shade_more;
     pointer-events: none;
 
-    @include _1170 {
+    @include lg {
       display: none;
     }
   }
@@ -206,19 +200,20 @@
     height: 168px;
     padding-top: 4px;
 
-    @include _1500{
+    @include _1500 {
       justify-content: space-between;
       width: 50%;
       margin-right: 0;
     }
 
-    @include _1340 {
-      width: 35%;
+    @include xl {
+      justify-content: space-between;
+      width: calc(100% - 260px - 260px - 180px);
       min-width: 415px;
       margin-right: 0;
     }
 
-    @include _800 {
+    @include sm {
       display: none;
     }
     
@@ -232,12 +227,12 @@
     width: 200px;
     height: 168px;
 
-    @include _1340 {
+    @include xl {
       width: 150px;
       margin-right: 5%;
     }
 
-    @include _800 {
+    @include sm {
       display: none;
     }
   }
@@ -251,14 +246,6 @@
     letter-spacing: .001em;
     color: $dark-shade_most;
     text-transform: uppercase;
-
-    @include _470 {
-      font-weight: 400;
-
-      &:hover {
-        font-weight: 700;
-      }
-    }
   }
 
   &__links {
@@ -278,15 +265,9 @@
     width: 200px;
     height: 168px;
 
-    @include _1340 {
+    @include xl {
       width: 135px;
       margin-right: 5%;
-    }
-
-    @include _470 {
-      position: relative;
-      width: 100%;
-      height: 20px;
     }
   }
 
@@ -295,32 +276,9 @@
     width: 200px;
     height: 130px;
 
-    @include _1340 {
+    @include xl {
       width: 120px;
       margin-right: 5%;
-    }
-
-    @include _470 {
-      position: relative;
-      width: 100%;
-      height: 20px;
-    }
-  }
-
-  &__dropdown {
-    @include _470 {
-      display: none;
-      position: absolute;
-      top: 20px;
-      width: 200px;
-      margin: 0;
-      padding: 10px 15px;
-      border-radius: 4px;
-      line-height: 18px;
-      background: $light;
-      box-sizing: border-box;
-      box-shadow: 0px 10px 20px $dark-shade_fewer;
-      z-index: 2;
     }
   }
 
@@ -330,7 +288,7 @@
     height: 152px;
     padding-top: 4px;
 
-    @include _800 {
+    @include sm {
       display: none;
     }
   }
@@ -345,7 +303,7 @@
     color: $dark-shade_more;
     pointer-events: none;
 
-    @include _1170 {
+    @include lg {
       display: none;
     }
   }
@@ -363,18 +321,18 @@
     height: 71px;
     padding: 24px 9.5% 22px 9.6%;
 
-    @include _1440 {
+    @include xl {
       align-items: center;
       width: 100%;
       padding: 0 7.5%;
     }
 
-    @include _1170 {
+    @include lg {
       width: calc(415px + 260px + 5%);
       padding: 0;
     }
 
-    @include _800 {
+    @include sm {
       flex-direction: column;
       width: fit-content;
       height: 76px;
@@ -405,7 +363,7 @@
     font-size: 14px;
     pointer-events: none;
 
-    @include _450 {
+    @include xxs {
       width: 230px;
       text-align: center;
     }

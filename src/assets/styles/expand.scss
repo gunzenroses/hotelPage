@@ -5,7 +5,7 @@
 .expand {
   display: none;
 
-  @include _450 {
+  @include xxs {
     width: 100%;
     min-width: 260px;
   }

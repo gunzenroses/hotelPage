@@ -26,7 +26,7 @@
 @mixin containerMedium {
   @include isFlex($direction: column);
 
-  @include _450 {
+  @include xxs {
     width: 280px;
     margin: 0 auto;
   }
@@ -50,13 +50,10 @@
   background: $light;
   overflow: auto;
 
-  @include _1440 {
+  @include xl {
     width: 100vw;
-    height: auto;
-  }
-
-  @include _850 {
     min-width: 320px;
+    height: auto;
   }
 
   &__content {
@@ -66,28 +63,28 @@
     margin: 143px 0 128px 141px;
     background: $light;
 
-    @include _1400 {
+    @include xl {
       width: 85%;
       height: auto;
       max-width: 1160px;
       margin: 9% auto 9%;
     }
 
-    @include _1250 {
+    @include lg {
       justify-content: space-evenly;
       max-width: 890px;
       margin: 7% auto 7%;
     }
 
-    @include _970 {
+    @include md {
       justify-content: space-around;
       width: 85%;
+      max-width: 575px;
       margin: 5% auto 5%;
     }
 
-    @include _850 {
+    @include sm {
       justify-content: center;
-      max-width: 575px;
     }
   }
 
@@ -95,11 +92,11 @@
     @include containerSimple(321px, 636px);
     margin-right: 117px;
 
-    @include _1400 {
+    @include xl {
       margin: 0;
     }
 
-    @include _850 {
+    @include md {
       margin-bottom: 40px;
     }
   }
@@ -145,6 +142,10 @@
     width: 320px;
     min-height: 274px;
     margin-top: 37.5px;
+
+    @include xxs {
+      justify-content: space-between;
+    }
   }
 
   &__date-range-separate {
@@ -173,7 +174,7 @@
       $align: flex-start);
     margin-right: 124px;
 
-    @include _1400 {
+    @include xl {
       margin: 0;
     }
   }
@@ -186,7 +187,7 @@
     height: 127px;
     margin-top: 2px;
 
-    @include _450 {
+    @include xxs {
       margin: 0 auto;
     }
   }
@@ -266,11 +267,11 @@
       $justify: flex-start);
     margin-right: 7px;
 
-    @include _1400 {
+    @include xl {
       margin: 0;
     }
 
-    @include _1250 {
+    @include lg {
       margin-top: 40px;
     }
   }
@@ -286,7 +287,7 @@
     height: 269px;
     margin-top: 31px;
 
-    @include _450 {
+    @include xxs {
       width: 280px;
       margin: 0 auto;
     }
@@ -304,7 +305,7 @@
     height: 148px;
     margin-top: 11px;
 
-    @include _450 {
+    @include xxs {
       width: 280px;
       margin: 0 auto;
     }
@@ -315,7 +316,7 @@
     width: 147px;
     margin-top: 3px;
 
-    @include _450 {
+    @include xxs {
       width: 280px;
       margin: 0 auto;
     }
@@ -326,7 +327,7 @@
     height: 44px;
     margin-top: 28px;
 
-    @include _450 {
+    @include xxs {
       width: 280px;
       margin: 0 auto;
     }
@@ -350,7 +351,7 @@
     margin-left: 1px;
     margin-top: 40px;
 
-    @include _450 {
+    @include xxs {
       margin: 0 auto;
     }
   }
@@ -364,7 +365,7 @@
     min-height: 647px;
     margin: 99px 168px 0 -1px;
 
-    @include _1400 {
+    @include xl {
       margin: 0;
       margin-top: 40px;
     }
@@ -399,7 +400,7 @@
     margin-top: 99px;
     margin-right: 60px;
 
-    @include _1400 {
+    @include xl {
       margin: 0;
       margin-top: 40px;
     }
@@ -418,7 +419,7 @@
     margin-top: 99px;
     margin-right: 7px;
 
-    @include _1400 {
+    @include xl {
       margin: 0;
       margin-top: 40px;
     }
@@ -438,7 +439,7 @@
     margin-top: 38px;
     margin-left: -1px;
 
-    @include _1400 {
+    @include xl {
       margin: 0;
       margin-top: 40px;
     }
@@ -457,13 +458,13 @@
     margin-top: 48px;
     margin-right: 8px;
 
-    @include _1400 {
+    @include xl {
       width: 55vw;
       max-width: 711px;
       margin: 40px 0 0;
     }
 
-    @include _1250 {
+    @include lg {
       width: 90%;
       height: auto;
     }

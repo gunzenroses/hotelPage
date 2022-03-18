@@ -18,21 +18,21 @@
     position: relative;
     width: 100%;
     max-width: calc(1800px + 19%);
+    min-width: 320px;
     height: 70px;
     margin: 0 auto;
     padding: 12px 9.7% 15px;
     box-sizing: border-box;
 
-    @include _1340 {
+    @include xl {
       padding: 15px 7%;
     }
 
-    @include _750 {
-      min-width: 320px;
+    @include sm {
       padding: 15px 5%;
     }
 
-    @include _550 {
+    @include xs {
       padding: 15px 2%;
     }
 
@@ -78,15 +78,11 @@
     margin-left: 20px;
     color: $dark-shade_medium;
 
-    @include _1450 {
-      width: fit-content;
-    }
-
-    @include _1070 {
+    @include lg {
       width: 80%;
     }
 
-    @include _550 {
+    @include xs {
       width: 70%;
       min-width: 260px;
       margin-left: 10px;
@@ -113,7 +109,7 @@
     height: 21px;
     margin-right: 19px;
 
-    @include _1070 {
+    @include lg {
       display: none;
     }
   }
@@ -149,7 +145,7 @@
     width: 303px;
     height: 34px;
 
-    @include _550 {
+    @include xs {
       width: 210px;
     }
   }
@@ -167,7 +163,7 @@
     height: 34px;
     line-height: 34px;
 
-    @include _550 {
+    @include xs {
       width: calc(200px - 87px);
     }
   }
@@ -181,11 +177,11 @@
     margin-right: 20px;
     cursor: pointer;
 
-    @include _1070 {
+    @include lg {
       display: block;
     }
 
-    @include _550 {
+    @include xs {
       margin: 0 10px;
     }
   }

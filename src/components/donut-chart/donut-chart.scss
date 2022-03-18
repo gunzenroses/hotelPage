@@ -15,7 +15,7 @@
     margin-top: 30px;
   }
 
-  @include _450 {
+  @include xxs {
     width: 100%;
   }
 
@@ -31,7 +31,7 @@
       margin-left: 50px;
     }
 
-    @include _380 {
+    @include xxs {
       width: 100px;
     }
   }
@@ -123,7 +123,7 @@
       width: 200px;
     }
 
-    @include _380 {
+    @include xxs {
       margin-left: 15px;
       margin-top: 15px;
     }

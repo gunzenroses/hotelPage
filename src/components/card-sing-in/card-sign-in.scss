@@ -8,6 +8,7 @@
 .card-sign-in {
   @include isFlex($direction: column, $justify: flex-start);
   width: 100%;
+  min-width: 320px;
   height: fit-content;
   min-height: 358px;
   padding: 39px 29px 31px;
@@ -16,8 +17,7 @@
   background: $light;
   box-shadow: 0px 0px 25px $shadow;
 
-  @include _400 {
-    min-width: 320px;
+  @include xxs {
     padding: 25px 20px;
   }
 

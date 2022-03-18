@@ -15,15 +15,8 @@
     @extend .registration__content;
     height: 702px;
 
-    @include _500 {
-      // carousel sign-in + card-sign-in + initial top
-      height: calc(683 / 1440 * 100vw + 360px + 40px);
-    }
-
-    @include _380 {
-      // carousel sign-in + card-sign-in + initial top
-      height: calc(683 / 1440 * 100vw + 360px);
-      min-height: calc(683 / 1440 * 320px + 360px);
+    @include xxs {
+      height: fit-content;
     }
   }
 
@@ -33,7 +26,7 @@
     top: 172px;
     transform: translateX(-49%);
 
-    @include _500 {
+    @include xxs {
       top: 0;
       width: 100%;
       transform: none;

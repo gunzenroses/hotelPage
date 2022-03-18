@@ -34,16 +34,16 @@
     height: 830px;
     margin: 0 auto;
 
-    @include _1400 {
+    @include xl {
       height: calc(830 / 1440 * 100vw);
     }
 
-    @include _970 {
+    @include md {
       width: 100%;
       height: calc(830 / 1440 * 970px);
     }
 
-    @include _500 {
+    @include xs {
       width: 100%;
       // carousel + card-search + text + in-registration top
       height: calc(830 / 1440 * 100vw + 374px + 48px + 40px);
@@ -68,7 +68,7 @@
       font-size: $fs_h2;
     }
 
-    @include _500 {
+    @include xs {
       position: relative;
       bottom: 0;
       right: 0;
@@ -83,12 +83,12 @@
     left: 9.72%;
     z-index: 2;
 
-    @include _970 {
+    @include md {
       left: 50%;
       transform: translateX(-50%);
     }
 
-    @include _500 {
+    @include xs {
       position: relative;
       top: 0;
       left: 0;

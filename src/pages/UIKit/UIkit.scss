@@ -1,6 +1,7 @@
 @import '@~Assets/styles/colors.scss';
 @import '@~Assets/styles/expand.scss';
 @import '@~Assets/styles/general.scss';
+@import '@~Assets/styles/media-mixins.scss';
 
 @import './form-elements/form-elements.scss';
 @import './cards/cards.scss';
@@ -17,7 +18,7 @@
     height: 48px;
     border: none;
 
-    @include _750 {
+    @include sm {
       top: 10px;
       left: 10px;
     }

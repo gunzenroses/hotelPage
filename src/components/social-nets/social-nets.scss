@@ -8,11 +8,11 @@
   height: 26px;
   margin-right: 1px;
 
-  @include _800 {
+  @include sm {
     height: 36px;
   }
 
-  @include _400 {
+  @include xxs {
     width: 100px;
   }
   

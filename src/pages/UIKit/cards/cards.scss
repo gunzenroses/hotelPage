@@ -8,11 +8,11 @@
 @import '@~Components/card-sing-in/card-sign-in.scss';
 
 @mixin marginTop {
-  @include _1400 {
+  @include xl {
     margin-top: 20px;
   }
 
-  @include _850 {
+  @include md {
     margin-top: 30px;
   }
 }
@@ -31,12 +31,12 @@
   background: $background;
   overflow: auto;
 
-  @include _1440 {
+  @include xl {
     width: 100vw;
     height: auto;
   }
 
-  @include _970 {
+  @include md {
     min-width: 320px;
   }
 
@@ -47,7 +47,7 @@
     margin: 150px 0 134px 140px;
     background: transparent;
 
-    @include _1400 {
+    @include xl {
       width: 85%;
       max-width: 1160px;
       height: 1600px;
@@ -55,19 +55,16 @@
       align-items: center;
     }
 
-    @include _1070 {
+    @include lg {
       max-width: 890px;
       margin: 7% auto 7%;
     }
 
-    @include _970 {
+    @include md {
       width: 100%;
+      height: auto;
       min-width: 320px;
       margin: 7% auto;
-    }
-
-    @include _850 {
-      height: auto;
     }
   }
 

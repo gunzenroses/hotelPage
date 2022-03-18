@@ -22,7 +22,7 @@
     border: 1px solid $dark-shade_medium;
   }
 
-  @include _450 {
+  @include xxs {
     width: 100%;
     min-width: 260px;
     margin: 0 auto;

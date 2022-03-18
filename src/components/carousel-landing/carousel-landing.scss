@@ -9,7 +9,7 @@
   min-height: calc(830 / 1440 * 320px);
   overflow: hidden;
 
-  @include _500 {
+  @include xs {
     width: 100%;
     height: calc(830 / 1440 * 100vw);
   }
@@ -34,11 +34,11 @@
     height: 100%;
     object-fit: cover;
 
-    @include _970 {
+    @include md {
       height: calc(830 / 1440 * 970px);
     }
 
-    @include _500 {
+    @include xs {
       height: auto;
     }
   }

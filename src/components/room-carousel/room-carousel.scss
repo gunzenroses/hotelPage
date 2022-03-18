@@ -23,11 +23,11 @@
   min-height: 152px;
   overflow: hidden;
 
-  @include _700 {
+  @include sm {
     height: 211px;
   }
 
-  @include _450 {
+  @include xxs {
     width: 85vw;
     height: 47vw;
     min-width: 258px;

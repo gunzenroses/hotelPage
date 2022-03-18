@@ -32,7 +32,7 @@
       content: 'Зарегистрироваться';
       color: $light;
 
-      @include _550 {
+      @include xs {
         content: 'Регистрация';
       }
     }
