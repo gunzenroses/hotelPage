@@ -22,12 +22,6 @@
   }
 }
 
-@mixin _1500 {
-  @media (min-width: 1500px) {
-    @content;
-  }
-}
-
 @mixin _1441 {
   @media (min-width: 1441px) {
     @content;

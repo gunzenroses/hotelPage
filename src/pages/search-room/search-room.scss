@@ -62,11 +62,6 @@
     margin: 0 auto;
     padding: 26px 140px 69px;
 
-    @include _1500 {
-      padding-bottom: 27px;
-      justify-content: space-around;
-    }
-
     @include xl {
       justify-content: space-around;
       width: 1170px;
@@ -83,13 +78,9 @@
 
   &__filter {
     @include isFlex($direction: column, $justify: flex-start);
-    width: 266px;
-    height: 739px;
+    width: calc(266/1160 * 100%);
+    height: fit-content;
     margin-top: 6px;
-
-    @include _1500{
-      height: fit-content;
-    }
 
     @include lg {
       height: auto;
@@ -126,18 +117,9 @@
 
   &__rooms {
     @include isFlex($direction: column, $justify: flex-start);
-    width: 835px;
+    width: calc(835/1160 * 100%);
     min-width: 320px;
     height: fit-content;
-
-    @include _1500 {
-      width: 68%;
-      max-width: 900px;
-    }
-
-    @include _1920 {
-      max-width: 68%;
-    }
 
     @include lg {
       width: 890px;
@@ -198,11 +180,7 @@
 
   &__pagination {
     margin-top: 19px;
-    margin-left: 291px;
-
-    @include _1500{
-      margin: 20px auto 0;
-    }
+    margin-left: calc(291/835 * 100%);
 
     @include xl {
       margin: 41px auto 0;

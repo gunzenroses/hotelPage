@@ -195,16 +195,10 @@
   }
 
   &__info {
-    @include isFlex($justify: flex-start);
-    width: 600px;
+    @include isFlex($justify: space-between);
+    width: calc(600/1160 * 100%);
     height: 168px;
     padding-top: 4px;
-
-    @include _1500 {
-      justify-content: space-between;
-      width: 50%;
-      margin-right: 0;
-    }
 
     @include xl {
       justify-content: space-between;
