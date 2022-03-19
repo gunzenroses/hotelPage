@@ -7,18 +7,6 @@
 @import '@~Components/social-nets/social-nets.scss';
 @import '@~Components/textfield/textfield.scss';
 
-@mixin containerWithMargins(
-  $width: 100%,
-  $height: 100%,
-  $mt: 0,
-  $ms: 0,
-  $mb: 0,
-) {
-  width: $width;
-  height: $height;
-  margin: $mt $ms $mb;
-}
-
 @mixin footerLogo {
   @include xl {
     margin: 0;
@@ -43,24 +31,35 @@
   }
 }
 
+@mixin navbarAdaptive {
+  @include xl {
+    width: 85%;
+    height: 172px;
+    margin: 60px auto;
+  }
+
+  @include lg {
+    width: calc(415px + 260px + 5%);
+  }
+
+  @include sm {
+    width: fit-content;
+    height: fit-content;
+    margin: 120px auto 0;
+    justify-content: center;
+  }
+}
+
 .footer {
   @include isFlex($direction: column, $justify: flex-start, $align: center);
   width: 100%;
-  height: 445px;
+  height: fit-content;
   margin: 0 auto;
   min-width: 320px;
   border-radius: 4px;
   background: $light;
   box-sizing: border-box;
   box-shadow: 0px 10px 20px $dark-shade_fewer;
-
-  @include _1441  {
-    height: auto;
-  }
-
-  @include xl {
-    height: fit-content;
-  }
 
   &__main {
     width: 100%;
@@ -82,56 +81,27 @@
     margin: 100px auto 104px;
     letter-spacing: .01em;
 
-    @include xl {
-      @include containerWithMargins(
-        $width: 85%,
-        $height: 172px,
-        $mt: 60px,
-        $ms: auto,
-        $mb: 60px
-      );
-    }
+    @include navbarAdaptive;
 
-    @include lg {
-      width: calc(415px + 260px + 5%);
-    }
-
-    @include sm {
-      width: fit-content;
-      height: fit-content;
-      margin: 120px auto 0;
-      justify-content: center;
-    }
-
-    &_in_landing {
-      @include _1400-1500 {
+    &_in_landing,
+    &_in_details,
+    &_in_sign-in {
+      @include xxl {
         height: 168px;
       }
     }
   
     &_in_registration {
-      @include _1400-1500 {
+      @include xxl {
         margin-top: 101px;
       }
     }
   
     &_in_search {
-      @include _1400-1500 {
+      @include xxl {
         height: 172px;
         margin-top: 100px;
         margin-bottom: 100px;
-      }
-    }
-  
-    &_in_details {
-      @include _1400-1500 {
-        height: 168px;
-      }
-    }
-  
-    &_in_sign-in {
-      @include _1400-1500 {
-        height: 168px;
       }
     }
   }
@@ -335,7 +305,7 @@
     }
 
     &_in_landing {
-      @include _1400-1500 {
+      @include xxl {
         padding-top: 23px;
         padding-right: 137px;
         padding-left: 139px;
@@ -343,7 +313,7 @@
     }
 
     &_in_sign-in {
-      @include _1400-1500 {
+      @include xxl {
         padding-top: 23px;
         padding-left: 140px;
       }

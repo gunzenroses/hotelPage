@@ -14,17 +14,12 @@
   @include isFlex($justify: flex-start, $direction: column);
   display: block;
   position: relative;
-  width: 1440px;
+  width: 100%;
   min-width: 320px;
   height: auto;
   margin: 0 auto;
   background: $light;
   user-select: none;
-
-  @include _all  {
-    width: 100%;
-    height: auto;
-  }
 
   &__content {
     @include isFlex($justify: flex-start, $direction: column);
@@ -62,7 +57,7 @@
     letter-spacing: .002em;
     z-index: 2;
 
-    @include _1750{
+    @include xxxl{
       width: 400px;
       line-height: $fs_h2;
       font-size: $fs_h2;

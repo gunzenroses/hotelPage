@@ -12,10 +12,6 @@
   font-size: 13.5px;
   letter-spacing: .02em;
   user-select: none;
-
-  @include _1650 {
-    width: fit-content;
-  }
   
   &__icon {
     position: relative;

@@ -51,7 +51,7 @@
     text-transform: none;
     letter-spacing: .0001em;
 
-    @include _1750{
+    @include xxxl{
       font-size: $fs_base;
       text-align: center;
     }

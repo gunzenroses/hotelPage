@@ -9,7 +9,7 @@
   width: inherit;
   user-select: none;
 
-  @include _1650 {
+  @include xxxl {
     width: 100%;
   }
 
@@ -65,7 +65,7 @@
       color: $dark-shade_medium;
     }
 
-    @include _1750{
+    @include xxxl{
       font-size: $fs_base;
     }
 

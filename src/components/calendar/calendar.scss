@@ -37,10 +37,6 @@
   z-index: 3;
   user-select: none;
 
-  @include _1650 {
-    width: 100%;
-  }
-
   &__date {
     @include isFlex($align: center);
     height: 64px;
@@ -106,7 +102,7 @@
     color: $purple;
     align-items: center;
 
-    @include _1750{
+    @include xxxl{
       font-size: $fs_h2;
     }
   }
@@ -146,7 +142,7 @@
       color: $dark-shade_medium;
     }
     
-    @include _1750{
+    @include xxxl{
       font-size: $fs_base;
     }
   }

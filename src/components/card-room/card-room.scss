@@ -63,7 +63,7 @@
     color: $purple;
     text-transform: uppercase;
 
-    @include _1750{
+    @include xxxl{
       font-size: $fs_base;
     }
 
@@ -129,7 +129,7 @@
     font-weight: 400;
     color: $dark-shade_medium;
 
-    @include _1750{
+    @include xxxl{
       font-size: $fs_base;
     }
   }

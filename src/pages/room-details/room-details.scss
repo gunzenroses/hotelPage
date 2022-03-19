@@ -25,43 +25,30 @@
 .room-details {
   @include isFlex($direction: column, $justify: flex-start);
   position: relative;
-  width: 1440px;
+  width: 100%;
   min-width: 320px;
-  height: 1937px;
+  height: fit-content;
   margin: 0 auto;
   background: $light;
   user-select: none;
   overflow: hidden;
 
-  @include _all {
-    width: 100%;
-    height: fit-content;
-  }
-
   &__content {
     @include isFlex($direction: column);
     position: relative;
+    width: 100%;
     min-width: 320px;
     margin-left: auto;
     margin-right: auto;
     border-bottom: 1px solid $dark-shade_less;
-
-    @include _all {
-      width: 100%;
-      height: auto;
-    }
   }
 
   &__view {
     display: grid;
     grid-template-columns: 68.125% 31.875%;
     width: 100%;
-    height: 485px;
+    height: fit-content;
     overflow: hidden;
-
-    @include _1441 {
-      height: fit-content;
-    }
 
     @include md {
       grid-template:
@@ -209,14 +196,10 @@
 
   &__room-info {
     @include isFlex($direction: column);
-    width: 273px;
+    width: calc(273/675 * 100%);
     height: fit-content;
     margin-right: 88px;
     background: $light;
-
-    @include _1650 {
-      width: 40%;
-    }
 
     @include xl {
       margin-right: 0;
@@ -237,14 +220,9 @@
 
   &__room-impression {
     @include isFlex($direction: column, $justify: flex-start);
-    width: 315px;
+    width: calc(315/675 * 100%);
     height: 172px;
     background: $light;
-
-    @include _1650 {
-      width: 55%;
-      height: fit-content;
-    }
 
     @include xl {
       margin-top: 20px;
@@ -271,7 +249,7 @@
     margin-top: 13px;
     background: $light;
 
-    @include _1650 {
+    @include xxxl {
       height: fit-content;
       margin-top: 50px;
     }
@@ -288,7 +266,7 @@
     top: 6px;
     right: 1px;
   
-    @include _1750{
+    @include xxxl{
       font-size: $fs_h2;
       right: 10%;
     }
@@ -368,7 +346,7 @@
     letter-spacing: 0.001em;
     color: $dark-shade_most;
 
-    @include _1650 {
+    @include xxxl {
       margin: 0 auto;
       font-size: $fs_h1;
     }

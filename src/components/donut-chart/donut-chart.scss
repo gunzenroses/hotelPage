@@ -5,13 +5,11 @@
 
 .donut-chart {
   @include isFlex();
-  width: 315px;
-  height: 126px;
+  width: 100%;
+  height: fit-content;
   margin: 22px 0 0;
 
-  @include _1650 {
-    width: 100%;
-    height: fit-content;
+  @include xxxl {
     margin-top: 30px;
   }
 
@@ -25,7 +23,7 @@
     width: 120px;
     height: 120px;
 
-    @include _1650 {
+    @include xxxl {
       width: 167px;
       height: 167px;
       margin-left: 50px;
@@ -119,7 +117,7 @@
     line-height: 24px;
     font-size: $fs_base;
 
-    @include _1650 {
+    @include xxxl {
       width: 200px;
     }
 

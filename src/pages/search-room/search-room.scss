@@ -18,10 +18,6 @@
 @import '@~Components/textfield/textfield.scss';
 
 @mixin formMargin {
-  @include _1650 {
-    margin-top: 40px;
-  }
-
   @include lg {
     margin-top: 30px;
   }
@@ -30,18 +26,13 @@
 .search-room {
   @include isFlex($direction: column, $justify: flex-start);
   position: relative;
-  width: 1440px;
+  width: 100%;
   min-width: 320px;
   height: fit-content;
   margin: 0 auto;
   background: $light;
   overflow: hidden;
   user-select: none;
-
-  @include _all {
-    width: 100%;
-    height: auto;
-  }
 
   &__main {
     width: 100%;

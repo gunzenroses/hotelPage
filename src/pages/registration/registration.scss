@@ -11,18 +11,13 @@
 .registration {
   @include isFlex($direction: column, $justify: flex-start);
   position: relative;
-  width: 1440px;
+  width: 100%;
   min-width: 320px;
   height: fit-content;
   margin: 0 auto;
+  border-bottom: 1px solid $dark-shade_less;
   background: $light;
   user-select: none;
-
-  @include _all {
-    width: 100%;
-    height: auto;
-    border-bottom: 1px solid $dark-shade_less;
-  }
 
   &__content {
     @include isFlex($direction: column);

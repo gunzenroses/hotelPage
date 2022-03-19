@@ -40,14 +40,11 @@
   &__row {
     @include isFlex();
     width: 100%;
+    max-width: 490px;
     height: fit-content;
 
     @include xxs {
       margin: 0 auto;
-    }
-
-    @include _1650 {
-      max-width: 490px;
     }
   }
 

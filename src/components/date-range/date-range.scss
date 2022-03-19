@@ -46,12 +46,8 @@
     height: 100%;
 
     &_separate {
-      width: 150px;
-
-      @include _1650 {
-        width: 48%;
-        max-width: 240px;
-      }
+      width: 47%;
+      max-width: 240px;
 
       @include xxs {
         width: calc(150 / 320 * 100%);
@@ -107,7 +103,7 @@
       cursor: pointer;
     }
 
-    @include _1750{
+    @include xxxl{
       font-size: $fs_h2;
     }
 
