@@ -45,13 +45,13 @@ mixin card-registration(submitText)
     .card-registration__specials
       +button-toggle({ inputName: 'special offers' })
     .card-registration__button-submit
-      +button-submit({ buttonText: submitText })
+      +button-submit({ buttonLinkText: submitText })
     .card-registration__info
       .card__row
         .card__text Уже есть аккаунт на Toxin
         .card-registration__button-link
           +button-link({
-            buttonText: 'Войти',
-            buttonHref: 'sign-in.html',
+            buttonLinkText: 'Войти',
+            buttonLinkHref: 'sign-in.html',
             className: 'sign-in'
           })

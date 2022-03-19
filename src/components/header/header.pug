@@ -27,16 +27,16 @@ mixin header({ user = '', theme = '' })
         nav.header__dropdown.expand.js-expand
           ul.header__navbar.header__navbar_dropdown
             +navlink({
-              buttonText: 'О нас',
+              buttonLinkText: 'О нас',
               onClick: './some-address'
             })
             +navlink-dropdown('Услуги')
             +navlink({
-              buttonText: 'Вакансии',
+              buttonLinkText: 'Вакансии',
               onClick: './some-address'
             })
             +navlink({
-              buttonText: 'Новости',
+              buttonLinkText: 'Новости',
               onClick: './some-address'
             })
             +navlink-dropdown('Соглашения')
@@ -46,32 +46,32 @@ mixin header({ user = '', theme = '' })
           .header__forms
             .header__sign-in
               +button-link({
-                buttonText: 'Войти',
-                buttonHref: 'sign-in.html',
+                buttonLinkText: 'Войти',
+                buttonLinkHref: 'sign-in.html',
                 className: 'sign-in'
               })
             .header__registration
               +button-link({ 
-                buttonHref: 'registration.html',
+                buttonLinkHref: 'registration.html',
                 className: 'registration'
               })
         nav.header__navbar-region
           ul.header__navbar
             +navlink({
-              buttonText: 'О нас',
+              buttonLinkText: 'О нас',
               onClick: './some-address',
               modifier: 'header',
               buttonModifier: 'header'
             })
             +navlink-dropdown('Услуги')
             +navlink({
-              buttonText: 'Вакансии',
+              buttonLinkText: 'Вакансии',
               onClick: './some-address',
               modifier: 'header',
               buttonModifier: 'header'
             })
             +navlink({
-              buttonText: 'Новости',
+              buttonLinkText: 'Новости',
               onClick: './some-address',
               modifier: 'header',
               buttonModifier: 'header'

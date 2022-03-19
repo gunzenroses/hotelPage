@@ -41,7 +41,7 @@ mixin footer(theme = 'main')
               ul.footer__links
                 for item in footerGroup.items
                   +navlink({
-                    buttonText: item.name,
+                    buttonLinkText: item.name,
                     onClick: item.link,
                     modifier: 'footer'
                   })

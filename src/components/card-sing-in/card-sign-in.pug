@@ -7,13 +7,13 @@ mixin card-sign-in(theme = 'main')
     h1.card__title Войти
     +login(theme)
     .card-sign-in__button
-      +button-submit({ buttonText: 'Войти' })
+      +button-submit({ buttonLinkText: 'Войти' })
     .card-sign-in__info
       .card__row
         .card__text Нет аккаунта на Toxin?
         .card-sign-in__button-link
           +button-link({
-            buttonText: 'Создать',
-            buttonHref: 'registration.html',
+            buttonLinkText: 'Создать',
+            buttonLinkHref: 'registration.html',
             className: 'sign-in'
           })

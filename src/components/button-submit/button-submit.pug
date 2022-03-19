@@ -1,4 +1,4 @@
-mixin button-submit({ buttonText = '', theme = '' })
+mixin button-submit({ buttonLinkText = '', theme = '' })
   - 
     var buttonSubmitClass = theme === ''
       ? 'button-submit' 
@@ -6,4 +6,4 @@ mixin button-submit({ buttonText = '', theme = '' })
 
   button(
     class = buttonSubmitClass 
-    type = 'submit')= buttonText
+    type = 'submit')= buttonLinkText
