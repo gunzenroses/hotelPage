@@ -1,6 +1,5 @@
 include ../../../components/badge/badge.pug
 include ../../../components/bullet-checkbox/bullet-checkbox.pug
-include ../../../components/button/button.pug
 include ../../../components/button-like/button-like.pug
 include ../../../components/button-link/button-link.pug
 include ../../../components/button-rate/button-rate.pug
@@ -13,6 +12,7 @@ include ../../../components/date-range/date-range.pug
 include ../../../components/dropdown-guests/dropdown-guests.pug
 include ../../../components/dropdown-rooms/dropdown-rooms.pug
 include ../../../components/label/label.pug
+include ../../../components/link/link.pug
 include ../../../components/pagination/pagination.pug
 include ../../../components/radio-buttons/radio-buttons.pug
 include ../../../components/range/range.pug
@@ -176,13 +176,13 @@ block content
                className: ''
               })
           .form-elements__row_buttons-basic
-            +button({ 
-              buttonText: 'Click me',
-              buttonOnclick: './some-address' 
+            +link({ 
+              linkText: 'Click me',
+              linkHref: './some-address' 
             })
-            +button({
-              buttonText: 'Click me',
-              buttonOnclick: './some-address'
+            +link({
+              linkText: 'Click me',
+              linkHref: './some-address'
             })
           .form-elements__button-submit 
             +button-submit({ buttonText: 'Перейти к оплате' })
