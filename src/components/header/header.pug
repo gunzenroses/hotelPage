@@ -47,12 +47,12 @@ mixin header({ user = '', theme = '' })
             .header__sign-in
               +button-link({
                 buttonText: 'Войти',
-                buttonOnclick: 'sign-in.html',
+                buttonHref: 'sign-in.html',
                 className: 'sign-in'
               })
             .header__registration
               +button-link({ 
-                buttonOnclick: 'registration.html',
+                buttonHref: 'registration.html',
                 className: 'registration'
               })
         nav.header__navbar-region
