@@ -28,8 +28,9 @@
 
   &__selector {
     @include isFlex();
-    @include containerSimple();
+    width: 100%;
     min-width: 260px;
+    height: 100%;
 
     @include xxs {
       margin: 0 auto;

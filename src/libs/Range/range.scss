@@ -1,12 +1,16 @@
 .irs, .irs--flat, .js-irs-0 {
-  @include containerBlock(100%, 16px);
   position: relative;
+  display: block;
+  width: 100%;
+  height: 16px;
   user-select: none;
 }
 
 .irs-line {
-  @include containerBlock(100%, 6px);
   position: relative;
+  display: block;
+  width: 100%;
+  height: 6px;
   margin-top: 18px;
   border-radius: 3px;
   background-color: $light;
@@ -30,9 +34,11 @@
 }
 
 .irs-handle {
-  @include containerBlock(15px, 15px);
   position: absolute;
   top: 14px;
+  display: block;
+  width: 15px;
+  height: 15px;
   border-radius: 10px;
   border: 2px solid $light;
   background: $linearGradientTurquoise;

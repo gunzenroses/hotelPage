@@ -89,7 +89,8 @@
   }
 
   &__textfields {
-    @include containerSimple(321px, 636px);
+    width: 321px;
+    height: 636px;
     margin-right: 117px;
 
     @include xl {
@@ -149,7 +150,8 @@
   }
 
   &__date-range-separate {
-    @include containerSimple(100%, 62px);
+    width: 100%;
+    height: 62px;
   }
 
   &__date-range-common {
@@ -167,11 +169,12 @@
   }
 
   &__input-buttons {
-    @include containerSimple(260px, 537px);
     @include isFlex(
       $direction: column, 
       $justify: flex-start, 
       $align: flex-start);
+    width: 260px;
+    height: 537px;
     margin-right: 124px;
 
     @include xl {
@@ -260,11 +263,12 @@
 
 
   &__clickable-objects {
-    @include containerSimple(320px, 503px);
     @include isFlex(
       $direction: column,
       $align: flex-start, 
       $justify: flex-start);
+    width: 320px;
+    height: 503px;
     margin-right: 7px;
 
     @include xl {
@@ -392,11 +396,12 @@
   }
 
   &__search-info {
-    @include containerSimple(320px, 465px);
     @include isFlex(
       $direction: column, 
       $align: flex-start, 
       $justify: flex-start);
+    width: 320px;
+    height: 465px;
     margin-top: 99px;
     margin-right: 60px;
 
@@ -411,11 +416,12 @@
   }
 
   &__room-info {
-    @include containerSimple(320px, 467px);
     @include isFlex(
       $direction: column, 
       $align: flex-start, 
       $justify: flex-start);
+    width: 320px;
+    height: 467px;
     margin-top: 99px;
     margin-right: 7px;
 
@@ -430,11 +436,12 @@
   }
 
   &__badges {
-    @include containerSimple(291px, fit-content);
     @include isFlex(
       $direction: column, 
       $justify: flex-start, 
       $align: flex-start);
+    width: 291px;
+    height: fit-content;
     margin-right: 120px;
     margin-top: 38px;
     margin-left: -1px;

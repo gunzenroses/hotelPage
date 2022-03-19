@@ -6,8 +6,10 @@
   height: 20px;
   margin-right: 10px;
 
-  @include xxxl{
-    @include containerBlock(25px, 25px);
+  @include xxxl {
+    display: block;
+    width: 25px;
+    height: 25px;
   }
 }
 
@@ -59,18 +61,22 @@
 
   &__real:checked + &__fake::before {
     content: '';
-    @include containerBlock(4px, 6px);
     position: absolute;
     top: 45%;
     left: 50%;
+    display: block;
+    width: 4px;
+    height: 6px;
     transform: translate(-50%, -50%) rotate(45deg);
     border-image: $linearGradientLilac;
     border-image-slice: 1;
     border-right: 2px solid transparent;
     border-bottom: 2px solid transparent;
 
-    @include xxxl{
-      @include containerBlock(5px, 10px);
+    @include xxxl {
+      display: block;
+      width: 5px;
+      height: 10px;
     }
   }
 

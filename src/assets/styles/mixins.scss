@@ -12,18 +12,6 @@
   flex-shrink: 0;
 }
 
-@mixin arrowSubmit {
-  content: '\e5c8';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 44px;
-  height: 44px;
-  font-family: $material-icons;
-  text-align: center;
-  font-size: $fs_h1;
-}
-
 @mixin buttonLink {
   position: relative;
   font-weight: 700;
@@ -37,20 +25,6 @@
   &:hover {
     opacity: .5;
   }
-}
-
-@mixin containerBlock($w: 100%, $h: 100%) {
-  display: block;
-  width: $w;
-  height: $h;
-}
-
-@mixin containerSimple(
-  $w: 100%,
-  $h: 100%,
-) {
-  width: $w;
-  height: $h;
 }
 
 @mixin dropdownButton {
