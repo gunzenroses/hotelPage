@@ -20,12 +20,12 @@ mixin checkbox-expandable({ dropdownTitleName, dropdownClassShow = '' })
               var { 
                 valueText, 
                 checkboxName, 
-                ifChecked, 
+                checked, 
                 checkboxTitle } = checkboxItem;
             +checkbox-item({
               valueText: valueText,
               inputName: checkboxName,
-              ifChecked: ifChecked,
+              checked: checked,
               checkboxTitle: checkboxTitle,
               modifier: 'expandable'
             })

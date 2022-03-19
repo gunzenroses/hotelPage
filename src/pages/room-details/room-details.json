@@ -3,16 +3,16 @@
     "authorPic": "./assets/images/avatar/avatar.jpg",
     "authorName": "Мурад Сарафанов",
     "commentTime": "5 дней назад",
-    "buttonNumber": 12,
-    "ifLiked": true,
+    "likesAmount": 12,
+    "liked": true,
     "commentText": "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."
   },
   "comment2": {
     "authorPic": "./assets/images/avatar/avatar-2.jpg",
     "authorName": "Патрисия Стёклышкова",
     "commentTime": "Неделю назад",
-    "buttonNumber": 2,
-    "ifLiked": false,
+    "likesAmount": 2,
+    "liked": false,
     "commentText": "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент."
   },
   "checkboxList1": [

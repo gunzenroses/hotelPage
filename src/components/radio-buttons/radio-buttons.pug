@@ -1,11 +1,11 @@
-mixin radio-buttons({ ifCheckedMan = true, ifCheckedWoman = false })
+mixin radio-buttons({ checkedMan = true, checkedWoman = false })
   .radio-buttons
     label.radio-buttons__item
       input.radio-buttons__real(
         type = 'radio' 
         name = 'gender' 
         value = 'male' 
-        checked = ifCheckedMan)
+        checked = checkedMan)
       span.radio-buttons__fake.radio-buttons__fake_type_male
       span(class = 'radio-buttons__title') Мужчина
     label.radio-buttons__item
@@ -13,6 +13,6 @@ mixin radio-buttons({ ifCheckedMan = true, ifCheckedWoman = false })
         type = 'radio' 
         name = 'gender' 
         value = 'female' 
-        checked = ifCheckedWoman)
+        checked = checkedWoman)
       span.radio-buttons__fake
       span(class = 'radio-buttons__title') Женщина

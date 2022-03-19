@@ -3,19 +3,19 @@
     {
       "valueText": "smoking_allowed",
       "inputName": "house-rules",
-      "ifChecked": false,
+      "checked": false,
       "checkboxTitle": "Можно курить"
     },
     {
       "valueText": "pets_allowed",
       "inputName": "house-rules",
-      "ifChecked": true,
+      "checked": true,
       "checkboxTitle": "Можно с питомцами"
     },
     {
       "valueText": "guests_allowed",
       "inputName": "house-rules",
-      "ifChecked": true,
+      "checked": true,
       "checkboxTitle": "Можно пригласить гостей (до 10 человек)"
     }
   ]

@@ -7,8 +7,8 @@
     "authorPic": "./assets/images/avatar/avatar.jpg", 
     "authorName": "Мурад Сарафанов", 
     "commentTime": "5 дней назад", 
-    "buttonNumber": 12,
-    "ifLiked": true,
+    "likesAmount": 12,
+    "liked": true,
     "commentText": "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий.\u00A0 И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей." 
   }
 }

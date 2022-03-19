@@ -3,37 +3,37 @@
     {
       "valueText": "breakfast",
       "checkboxName": "breakfast",
-      "ifChecked": false,
+      "checked": false,
       "checkboxTitle": "Завтрак"
     },
     {
       "valueText": "desk",
       "checkboxName": "desk",
-      "ifChecked": true,
+      "checked": true,
       "checkboxTitle": "Письменный стол"
     },
     {
       "valueText": "feeding chair",
       "checkboxName": "feeding chair",
-      "ifChecked": true,
+      "checked": true,
       "checkboxTitle": "Стул для кормления"
     },
     {
       "valueText": "baby bed",
       "checkboxName": "baby bed",
-      "ifChecked": true,
+      "checked": true,
       "checkboxTitle": "Кроватка"
     },
     {
       "valueText": "TV",
       "checkboxName": "TV",
-      "ifChecked": false,
+      "checked": false,
       "checkboxTitle": "Телевизор"
     },
     {
       "valueText": "shampoo",
       "checkboxName": "shampoo",
-      "ifChecked": false,
+      "checked": false,
       "checkboxTitle": "Шампунь"
     }
   ]

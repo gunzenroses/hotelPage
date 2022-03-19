@@ -29,11 +29,11 @@ class ButtonLike {
 
   @boundMethod
   _render() {
-    const ifLiked = this.buttonLike.classList.contains(
+    const liked = this.buttonLike.classList.contains(
       `${ this.classButton }_popular`
     );
     const data = parseInt(this.number.textContent, 10);
-    this.number.textContent = ifLiked ? data - 1 : data + 1;
+    this.number.textContent = liked ? data - 1 : data + 1;
     this.buttonLike.classList.toggle(`${ this.classButton }_popular`);
     this.heart.classList.toggle(`${ this.classHeart }_popular`);
     this.number.classList.toggle(`${ this.classNumber }_popular`);

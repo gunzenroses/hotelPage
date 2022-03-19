@@ -7,8 +7,8 @@ mixin comment(commentData)
       authorPic = '', 
       authorName = 'Anonymous', 
       commentTime = Data().getDay(), 
-      buttonNumber = 0,
-      ifLiked = false,
+      likesAmount = 0,
+      liked = false,
       commentText = 'none' } = commentData;
 
   .comment
@@ -23,7 +23,7 @@ mixin comment(commentData)
     .comment__body
       .comment__likes
         +button-like({ 
-          buttonNumber: buttonNumber,
-          ifLiked: ifLiked
+          likesAmount: likesAmount,
+          liked: liked
         })
       .comment__text!= commentText

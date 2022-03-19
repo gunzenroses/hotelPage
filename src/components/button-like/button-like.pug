@@ -1,17 +1,17 @@
-mixin button-like({ buttonNumber = 1, ifLiked = false })
+mixin button-like({ likesAmount = 1, liked = false })
   - 
-    var buttonLikeClass = ifLiked
+    var buttonLikeClass = liked
       ? 'button-like js-button-like button-like_popular'
       : 'button-like js-button-like';
   -
-    var buttonLikeHeartClass = ifLiked
+    var buttonLikeHeartClass = liked
       ? 'button-like__heart js-button-like__heart button-like__heart_popular'
       : 'button-like__heart js-button-like__heart';
   -
-    var buttonLikeNumberClass = ifLiked
+    var buttonLikeNumberClass = liked
       ? 'button-like__number js-button-like__number button-like__number_popular'
       : 'button-like__number js-button-like__number';
 
   div(class = buttonLikeClass)
     div(class = buttonLikeHeartClass)
-    div(class = buttonLikeNumberClass)= buttonNumber
+    div(class = buttonLikeNumberClass)= likesAmount

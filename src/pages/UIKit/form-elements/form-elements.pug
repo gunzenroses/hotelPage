@@ -121,18 +121,18 @@ block content
           .form-elements__group_toggle
             +button-toggle({
               inputName: 'offer1',
-              ifChecked: true
+              checked: true
             })
             +button-toggle({ inputName: 'offer2' })
         .form-elements__button-like
           h3.label like button
           .form-elements__row
             +button-like({
-              buttonNumber: 2
+              likesAmount: 2
             })
             +button-like({ 
-              buttonNumber: 12,
-              ifLiked: true
+              likesAmount: 12,
+              liked: true
             })
         .form-elements__button-rate
           h3.form-element__label_button-rate Rate button
