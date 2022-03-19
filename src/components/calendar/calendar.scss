@@ -102,7 +102,7 @@
     color: $purple;
     align-items: center;
 
-    @include xxxl{
+    @include xxxl {
       font-size: $fs_h2;
     }
   }
@@ -142,7 +142,7 @@
       color: $dark-shade_medium;
     }
     
-    @include xxxl{
+    @include xxxl {
       font-size: $fs_base;
     }
   }
