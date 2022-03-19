@@ -6,11 +6,12 @@ include ../../components/footer/footer.pug
 include ../../components/header/header.pug
 
 block variables
-  - var theme = 'registration';
-  - var title = 'registration';
-  - var description = 'registration';
-  - var keywords = 'registration';
-  - var { pics } = require('./registration.json');
+  -
+    const theme = 'registration';
+    const title = 'registration';
+    const description = 'registration';
+    const keywords = 'registration';
+    const { pics } = require('./registration.json');
 
 block content
   .registration.js-dropdown__detection

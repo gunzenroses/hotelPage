@@ -1,11 +1,11 @@
 extend ./assets/templates/template.pug
 
 block variables
-  - var title = 'Hotel page';
-  - var description = 'navigation';
-  - var keywords = 'navigation, hotel pages';
   - 
-    var pages = [
+    const title = 'Hotel page';
+    const description = 'navigation';
+    const keywords = 'navigation, hotel pages';
+    const pages = [
       {
         name: 'UIKit',
         href: './UIKit.html',
@@ -42,7 +42,7 @@ block content
   main.index-content
     ul.navigation
       each page in pages
-        - var { href, name, src } = page;
+        - const { href, name, src } = page;
         li.navigation__item
           a(href = href).navigation__link
             img.navigation__pic(

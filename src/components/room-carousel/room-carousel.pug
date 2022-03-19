@@ -1,12 +1,13 @@
 mixin room-carousel({ roomPictures, nameForPictures })
-  - var modPrev = 'prev';
-  - var modNext = 'next'
-  - var classButton = 'room-carousel__button';
-  - var classRadioReal = 'room-carousel__radio-real';
-  - var classButtonPrev = `${ classButton }_${ modPrev }`;
-  - var classButtonNext = `${ classButton }_${ modNext }`;
-  - var carouselRealClass = `${ classRadioReal } js-${ classRadioReal }`;
-  - var counter = 1;
+  -
+    const modPrev = 'prev';
+    const modNext = 'next'
+    const classButton = 'room-carousel__button';
+    const classRadioReal = 'room-carousel__radio-real';
+    const classButtonPrev = `${ classButton }_${ modPrev }`;
+    const classButtonNext = `${ classButton }_${ modNext }`;
+    const carouselRealClass = `${ classRadioReal } js-${ classRadioReal }`;
+    let counter = 1;
 
   .room-carousel.js-room-carousel
     .room-carousel__radio.js-room-carousel__radio 

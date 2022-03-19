@@ -3,29 +3,30 @@ include ../date-range/date-range.pug
 include ../dropdown-guests/dropdown-guests.pug
 
 mixin card-booking({ cardBookingInfo })
-  - var { theme, itemNumbers, priceInfos } = cardBookingInfo;
-  -
-    var descriptionClass = theme === ''
+  - 
+    const { theme, itemNumbers, priceInfos } = cardBookingInfo;
+
+    const descriptionClass = theme === ''
       ? 'card-booking__description' 
       : `card-booking__description card-booking__description_in_${ theme }`;
-  - 
-    var infoSignClass = theme === ''
+
+    const infoSignClass = theme === ''
       ? 'card-booking__info-sign' 
       : `card-booking__info-sign card-booking__info-sign_in_${ theme }`;
-  - 
-    var totalPriceClass = theme === ''
+
+    const totalPriceClass = theme === ''
       ? 'card-booking__summary'
       : `card-booking__summary card-booking__summary_in_${ theme }`;
-  - 
-    var infoNumberClass = theme === 'uikit'
+
+    const infoNumberClass = theme === 'uikit'
       ? 'card-booking__number' 
       : `card-booking__number card-booking__number_in_${ theme }`;
-  -
-    var infoSuiteClass = theme === 'uikit'
+
+    const infoSuiteClass = theme === 'uikit'
       ? 'card-booking__suite'
       : `card-booking__suite card-booking__suite_in_${ theme }`;
-  - 
-    var bookingLineClass = theme === 'uikit'
+
+    const bookingLineClass = theme === 'uikit'
       ? 'card-booking__line card-booking__line_in_uikit'
       : 'card-booking__line';
 
@@ -60,7 +61,7 @@ mixin card-booking({ cardBookingInfo })
         itemNumbers: itemNumbers
       })
     each priceInfo in priceInfos 
-      - var { infoDescription, infoSign, infoPrice } = priceInfo;
+      - const { infoDescription, infoSign, infoPrice } = priceInfo;
       .card-booking__price-info
         div(class = descriptionClass)= infoDescription
           if infoSign === 'full'

@@ -1,6 +1,6 @@
 mixin label({ labelText = '', labelRightText = '', labelRightClass = '' })
   - 
-    var labelRight = labelRightClass === ''
+    const labelRight = labelRightClass === ''
       ? 'label label_right' 
       : `label label_right_for_${ labelRightClass }`;
 

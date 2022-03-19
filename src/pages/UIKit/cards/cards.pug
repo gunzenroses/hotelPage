@@ -6,16 +6,13 @@ include ../../../components/card-search/card-search.pug
 include ../../../components/card-sing-in/card-sign-in.pug
 
 block variables
-  - var theme = 'uikit';
-  - var title = 'UIKit';
-  - var description = 'UIKit';
-  - var keywords = 'UIKit';
   - 
-    var { 
+    var {
       room888, 
-      room840, 
+      room840,
       priceInfos,
-      cardBookingInfo } = require('Pages/UIKit/cards/cards.json');
+      cardBookingInfo
+    } = require('Pages/UIKit/cards/cards.json');
 
 block content
   .cards.js-dropdown__detection

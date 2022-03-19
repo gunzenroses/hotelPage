@@ -1,11 +1,11 @@
 include ../checkbox-item/checkbox-item.pug
 
 mixin checkbox
-  - var { houseRules } = require('Components/checkbox/checkbox.json');
+  - const { houseRules } = require('Components/checkbox/checkbox.json');
 
   fieldset.checkbox
     each houseRule in houseRules
-      - var { valueText, inputName, checked, checkboxTitle } = houseRule;
+      - const { valueText, inputName, checked, checkboxTitle } = houseRule;
       +checkbox-item({
         valueText: valueText, 
         inputName: inputName, 

@@ -5,26 +5,25 @@ include ../textfield/textfield.pug
 
 mixin footer(theme = 'main')
   - 
-    var { 
+    const { 
       footerText,
       footerTextSubscription,
       footerGroups
     } = require('Components/footer/footer.json');
-  - 
-    var classCopyright = theme === 'main'
+
+    const classCopyright = theme === 'main'
       ? 'footer__basement' 
       : `footer__basement footer__basement_in_${ theme }`;
-  -
-    var classNavbar = theme === 'main'
+
+    const classNavbar = theme === 'main'
       ? 'footer__navbar' 
       : `footer__navbar footer__navbar_in_${ theme }`;
-  - 
-    var classInfo = theme === 'details' 
+
+    const classInfo = theme === 'details' 
       ? `footer__info footer__info_in_${ theme }` 
       : 'footer__info';
-  
-  - 
-    var classFooterLogo = theme === 'landing' | theme === 'sign-in'
+
+    const classFooterLogo = theme === 'landing' | theme === 'sign-in'
       ? `footer__logo footer__logo_in_${ theme }`
       : 'footer__logo';
 

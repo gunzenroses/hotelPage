@@ -2,10 +2,10 @@ include ../checkbox-item/checkbox-item.pug
 
 mixin checkbox-expandable({ dropdownTitleName, dropdownClassShow = '' })
   - 
-    var { checkboxContent } = 
+    const { checkboxContent } = 
     require('Components/checkbox-expandable/checkbox-expandable.json');
-  - 
-    var checkboxContentClass = 
+
+    const checkboxContentClass = 
       'checkbox-expandable__content js-checkbox-expandable__content';
 
   .checkbox-expandable.js-checkbox-expandable
@@ -17,7 +17,7 @@ mixin checkbox-expandable({ dropdownTitleName, dropdownClassShow = '' })
 
           each checkboxItem in checkboxContent
             - 
-              var { 
+              const { 
                 valueText, 
                 checkboxName, 
                 checked, 

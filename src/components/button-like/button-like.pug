@@ -1,14 +1,12 @@
 mixin button-like({ likesAmount = 1, liked = false })
   - 
-    var buttonLikeClass = liked
+    const buttonLikeClass = liked
       ? 'button-like js-button-like button-like_popular'
       : 'button-like js-button-like';
-  -
-    var buttonLikeHeartClass = liked
+    const buttonLikeHeartClass = liked
       ? 'button-like__heart js-button-like__heart button-like__heart_popular'
       : 'button-like__heart js-button-like__heart';
-  -
-    var buttonLikeNumberClass = liked
+    const buttonLikeNumberClass = liked
       ? 'button-like__number js-button-like__number button-like__number_popular'
       : 'button-like__number js-button-like__number';
 

@@ -2,7 +2,7 @@ include ../textfield/textfield.pug
 
 mixin login(theme = '')
   - 
-    var loginClass = theme === ''
+    const loginClass = theme === ''
       ? 'login' 
       : `login login_in_${ theme }`;
 

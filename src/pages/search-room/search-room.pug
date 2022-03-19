@@ -13,11 +13,12 @@ include ../../components/range/range.pug
 include ../../components/rich-checkbox/rich-checkbox.pug
 
 block variables
-  - var theme = 'search';
-  - var title = 'room search';
-  - var description = 'room search';
-  - var keywords = 'search, room';
-  - var  { roomsList } = require('./search-room.json');
+  -
+    const theme = 'search';
+    const title = 'room search';
+    const description = 'room search';
+    const keywords = 'search, room';
+    const  { roomsList } = require('./search-room.json');
 
 block content
   .search-room.js-dropdown__detection

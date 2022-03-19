@@ -2,19 +2,19 @@ include ../calendar/calendar.pug
 
 mixin date-range({ dateRanges = [{ labelText: '', value: '', name: 'check-in-check-out', data: 'date-range' }], placeHolder = 'ДД.ММ.ГГГГ', classShow = '', theme = '' })
   -  
-    var className = theme === 'search' 
+    const className = theme === 'search' 
       ? `date-range__info date-range__info_in_${ theme }` 
       : 'date-range__info';
-  - 
-    var rangeCalendar = 
+
+    const rangeCalendar = 
       `date-range__calendar js-date-range__calendar js-expand ${
         classShow }`;
-  -
-    var rangeSelectorClass = dateRanges.length === 1
+
+    const rangeSelectorClass = dateRanges.length === 1
       ? 'date-range__selector date-range__selector_common js-expand__init'
       : 'date-range__selector js-expand__init';
-  -
-    var rangeItemClass = dateRanges.length === 1
+
+    const rangeItemClass = dateRanges.length === 1
       ? 'date-range__item'
       : 'date-range__item date-range__item_separate';
 
@@ -23,7 +23,7 @@ mixin date-range({ dateRanges = [{ labelText: '', value: '', name: 'check-in-che
       +calendar()
     div(class = rangeSelectorClass)
       each dateRange in dateRanges
-        - var { labelText, value, name, data } = dateRange;
+        - const { labelText, value, name, data } = dateRange;
         div(class = rangeItemClass)
           h3.date-range__label!= labelText
           div(class = className)

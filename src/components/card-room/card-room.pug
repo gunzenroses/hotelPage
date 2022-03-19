@@ -3,32 +3,32 @@ include ../room-carousel/room-carousel.pug
 
 mixin card-room({ roomOptions, theme = '' })
   - 
-    var {
-      src = [], 
-      bookingNumber = '999', 
-      bookingType = false, 
-      bookingPrice = 0, 
-      starName = inputName, 
-      starRate = 0, 
-      reviewAmount = 0} = roomOptions;
-  - 
-    var buttonRateClass = theme === '' 
+    const {
+      src, 
+      bookingNumber, 
+      bookingType, 
+      bookingPrice, 
+      starName, 
+      starRate, 
+      reviewAmount} = roomOptions;
+
+    const buttonRateClass = theme === '' 
       ? 'card-room__button-rate'
       : `card-room__button-rate card-room__button-rate_in_${ theme }`;
-  - 
-    var signClass = theme === 'creative' 
+
+    const signClass = theme === 'creative' 
       ? 'card-room__sign card-room__sign_in_creative'
       : 'card-room__sign';
-  - 
-    var numberClass = theme === 'creative' 
+
+    const numberClass = theme === 'creative' 
       ? 'card-room__number card-room__number_in_creative'
       : 'card-room__number';
-  -
-    var roomTypeClass = theme === 'search' 
+
+    const roomTypeClass = theme === 'search' 
       ? 'card-room__type card-room__type_in_search'
       : 'card-room__type';
-  -
-    var periodClass = theme === 'search' 
+
+    const periodClass = theme === 'search' 
       ? 'card-room__period card-room__period_in_search'
       : 'card-room__period';
 

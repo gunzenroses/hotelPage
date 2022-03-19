@@ -1,10 +1,10 @@
 mixin checkbox-item({valueText = '', inputName = '', checked = false, checkboxTitle = '', modifier = '', checkboxDescription = ''})
   -
-    var itemClass = modifier === 'rich'
+    const itemClass = modifier === 'rich'
       ? 'checkbox-item checkbox-item_rich'
       : 'checkbox-item';
-  - 
-    var titleClass = modifier === '' 
+
+    const titleClass = modifier === '' 
       ? 'checkbox-item__title' 
       : `checkbox-item__title checkbox-item__title_${ modifier }`;
 

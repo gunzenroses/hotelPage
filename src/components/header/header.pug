@@ -4,13 +4,14 @@ include ../navlink/navlink.pug
 include ../navlink-dropdown/navlink-dropdown.pug
 
 mixin header({ user = '', theme = '' })
-  - var userName = user.split(' ').join('-');
   - 
-    var headerClass = theme === ''
+    const userName = user.split(' ').join('-');
+
+    const headerClass = theme === ''
       ? 'header__content' 
       : `header__content header__content_in_${ theme }`;
-  - 
-    var userClick = user === ''
+
+    const userClick = user === ''
       ? 'registration.html' 
       : `${ userName }.html`;
   

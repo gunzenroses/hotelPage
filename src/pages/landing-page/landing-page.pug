@@ -6,14 +6,15 @@ include ../../components/footer/footer.pug
 include ../../components/header/header.pug
 
 block variables
-  - var theme = 'landing';
-  - var title = 'landing page';
-  - var description = 'landing page';
-  - var keywords = 'landing page';
-  - var { landingPics } = require('./landing-page.json');
   - 
-    var landingText = 
-    'Лучшие номера для вашей работы, отдыха и просто вдохновения';
+    const theme = 'landing';
+    const title = 'landing page';
+    const description = 'landing page';
+    const keywords = 'landing page';
+    const { landingPics } = require('./landing-page.json');
+
+    const landingText = 
+      'Лучшие номера для вашей работы, отдыха и просто вдохновения';
 
 block content
   .landing-page.js-dropdown__detection

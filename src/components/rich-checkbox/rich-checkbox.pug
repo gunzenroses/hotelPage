@@ -2,7 +2,7 @@ include ../checkbox-item/checkbox-item.pug
 
 mixin rich-checkbox({ checkboxName = '', containerText = '' })
   - 
-    var checkboxItems = [
+    const checkboxItems = [
       {
         checkboxName: 'accessibility',
         checkboxValue: 'wide corridor',
@@ -23,7 +23,7 @@ mixin rich-checkbox({ checkboxName = '', containerText = '' })
     fieldset.rich-checkbox__list
       each checkboxItem in checkboxItems
         - 
-          var { 
+          const { 
             checkboxName, 
             checkboxValue, 
             checkboxTitle, 
