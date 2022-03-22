@@ -57,7 +57,7 @@
     letter-spacing: .002em;
     z-index: 2;
 
-    @include xxxl{
+    @include xxxl {
       width: 400px;
       line-height: $fs_h2;
       font-size: $fs_h2;
