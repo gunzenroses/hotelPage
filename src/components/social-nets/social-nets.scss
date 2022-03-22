@@ -27,7 +27,7 @@
     text-decoration: none;
     cursor: pointer;
 
-    @include xxxl{
+    @include xxxl {
       display: block;
       width: 40px;
       height: 40px;
@@ -36,41 +36,76 @@
 
   &__twitter {
     height: 32px;
-
-    &_in_search,
-    &_in_details,
-    &_in_registration {
-      height: 28px;
-    }
-
-    &_in_landing,
-    &_in_sign-in {
-      height: 27px;
-    }
   }
 
   &__facebook {
     height: 31px;
-
-    &_in_landing,
-    &_in_sign-in {
-      height: 26px;
-    }
-
-    &_in_creative,
-    &_in_search,
-    &_in_details,
-    &_in_registration,
-    &_in_sign-in {
-      height: 26px;
-    }
   }
 
   &__instagram {
     height: 28px;
+  }
 
-    &_in_landing,
-    &_in_sign-in {
+  &_in_landing {
+    & .social-net__twitter {
+      height: 27px;
+    }
+
+    & .social-net__facebook {
+      height: 26px;
+    }
+
+    & .social-net__instagram {
+      height: 26px;
+    }
+  }
+
+  &_in_search {
+    & .social-net__twitter {
+      height: 28px;
+    }
+
+    & .social-net__facebook {
+      height: 26px;
+    }
+  }
+
+  &_in_details {
+    & .social-net__twitter {
+      height: 28px;
+    }
+
+    & .social-net__facebook {
+      height: 26px;
+    }
+  }
+
+  &_in_registration {
+    & .social-net__twitter {
+      height: 28px;
+    }
+
+    & .social-net__facebook {
+      height: 26px;
+    }
+  }
+
+  &_in_sign-in {
+    & .social-net__twitter {
+      height: 27px;
+    }
+
+    & .social-net__facebook {
+      height: 26px;
+    }
+
+    & .social-net__instagram {
+      height: 26px;
+    }
+  }
+
+  &_in_creative {
+    & .social-net__facebook {
       height: 26px;
     }
   }

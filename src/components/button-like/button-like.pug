@@ -3,13 +3,7 @@ mixin button-like({ likesAmount = 1, liked = false })
     const buttonLikeClass = liked
       ? 'button-like js-button-like button-like_popular'
       : 'button-like js-button-like';
-    const buttonLikeHeartClass = liked
-      ? 'button-like__heart js-button-like__heart button-like__heart_popular'
-      : 'button-like__heart js-button-like__heart';
-    const buttonLikeNumberClass = liked
-      ? 'button-like__number js-button-like__number button-like__number_popular'
-      : 'button-like__number js-button-like__number';
 
   div(class = buttonLikeClass)
-    div(class = buttonLikeHeartClass)
-    div(class = buttonLikeNumberClass)= likesAmount
+    .button-like__heart.js-button-like__heart
+    .button-like__number.js-button-like__number!= likesAmount

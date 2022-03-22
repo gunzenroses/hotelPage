@@ -1,32 +1,21 @@
 mixin social-nets(theme = '')
-  - 
-    const twitterClass = theme === ''
-      ? 'social-net__item social-net__twitter'
-      : `social-net__item social-net__twitter social-net__twitter_in_${ 
-        theme }`;
-
-    const facebookClass = theme === ''
-      ? 'social-net__item social-net__facebook'
-      : `social-net__item social-net__facebook social-net__facebook_in_${ 
-        theme }`;
-
-    const instagramClass = theme === ''
-      ? 'social-net__item social-net__instagram'
-      : `social-net__item social-net__instagram social-net__instagram_in_${ 
-        theme }`;
+  -
+    const socialNetClass = theme === ''
+      ? 'social-net'
+      : `social-net_in_${ theme }`;
 
   .social-net
-    a(class = twitterClass
+    a(class = 'social-net__item social-net__twitter'
       href = 'https://www.twitter.com/' 
       target = '_blank'
       rel = 'noopener noreferrer')
       i.fab.fa-twitter
-    a(class = facebookClass
+    a(class = 'social-net__item social-net__facebook'
       href = 'https://www.facebook.com/' 
       target = '_blank' 
       rel = 'noopener noreferrer')
       i.fab.fa-facebook
-    a(class = instagramClass
+    a(class = 'social-net__item social-net__instagram'
       href = 'https://www.instagram.com/' 
       target = '_blank' 
       rel = 'noopener noreferrer')

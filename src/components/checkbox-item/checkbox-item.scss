@@ -30,16 +30,8 @@
   user-select: none;
   cursor: pointer;
 
-  &_rich {
-    height: fit-content;
-  }
-
   & + & {
     margin-top: 10px;
-  }
-
-  &_rich + &_rich {
-    margin-top: 8px;
   }
 
   &__real {
@@ -97,23 +89,8 @@
     font-weight: 400;
     color: $dark-shade_medium;
 
-    @include xxxl{
+    @include xxxl {
       font-size: $fs_base;
-    }
-
-    &_expandable {
-      margin-top: 0;
-      line-height: 20px;
-      font-size: $fs_base;
-      letter-spacing: 0.003em;
-    }
-
-    &_rich {
-      margin-top: 1px;
-      font-size: $fs_base;
-      letter-spacing: 0.0001em;
-      font-weight: 700;
-      color: $dark-shade_more;
     }
   }
 
@@ -126,9 +103,42 @@
     font-weight: 400;
     color: $dark-shade_medium;
 
-    @include xxxl{
+    @include xxxl {
       line-height: $fs_h2;
       font-size: $fs_base;
+    }
+  }
+
+  &_expandable {
+    & .checkbox-item__title {
+      margin-top: 0;
+      line-height: 20px;
+      font-size: $fs_base;
+      letter-spacing: 0.003em;
+
+      @include xxxl {
+        font-size: $fs_base;
+      }
+    }
+  }
+
+  &_rich {
+    height: fit-content;
+
+    & + .checkbox-item_rich {
+      margin-top: 8px;
+    }
+
+    & .checkbox-item__title {
+      margin-top: 1px;
+      font-size: $fs_base;
+      letter-spacing: 0.0001em;
+      font-weight: 700;
+      color: $dark-shade_more;
+
+      @include xxxl {
+        font-size: $fs_base;
+      }
     }
   }
 }

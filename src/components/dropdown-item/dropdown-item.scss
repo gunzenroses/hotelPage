@@ -3,25 +3,6 @@
 @import '@~Assets/styles/mixins.scss';
 @import '@~Assets/styles/fonts.scss';
 
-@mixin dropdownItem {
-  width: 100%;
-  height: 30px;
-  padding-right: 6px;
-  font-size: $fs_h3;
-  text-transform: uppercase;
-}
-
-@mixin dropdownText {
-  width: calc(100% - 30px - 30px - 32px);
-  font-weight: 700;
-  letter-spacing: .001em;
-  color: $dark-shade_most;
-
-  @include xxxl{
-    font-size: $fs_base;
-  }
-}
-
 @mixin dropdownPlus {
   position: relative;
   width: 30px;
@@ -33,34 +14,25 @@
   cursor: pointer;
 }
 
-@mixin  dropdownNumber {
-  width: 32px;
-  font-size: 13px;
-  font-weight: 700;
-  text-align: center;
-
-  @include xxxl{
-    font-size: $fs_base;
-  }
-}
-
 .dropdown-item {
-  @include dropdownItem();
   @include isFlex($justify: flex-start);
+  width: 100%;
+  height: 30px;
   margin-top: 7px;
+  padding-right: 6px;
   padding-left: 14px;
-
-  &_last {
-    margin-top: 6px;
-    padding-left: 14px;
-  }
+  font-size: $fs_h3;
+  text-transform: uppercase;  
 
   &__text {
-    @include dropdownText();
+    width: calc(100% - 30px - 30px - 32px);
     margin-top: 5px;
+    font-weight: 700;
+    letter-spacing: .001em;
+    color: $dark-shade_most;
 
-    &_last {
-      margin-top: 6px;
+    @include xxxl {
+      font-size: $fs_base;
     }
   }
 
@@ -68,11 +40,6 @@
     @include dropdownPlus();
     top: -2px;
     line-height: 28px;
-    
-    &_last {
-      top: -1px;
-      line-height: 29px;
-    }
 
     &_disabled {
       color: $dark-shade_less;
@@ -86,11 +53,6 @@
     top: -2px;
     line-height: 28px;
 
-    &_last {
-      top: -1px;
-      line-height: 29px;
-    }
-
     &_disabled {
       color: $dark-shade_less;
       border: 1px solid $dark-shade_less;
@@ -98,10 +60,35 @@
   }
 
   &__number {
-    @include dropdownNumber();
+    width: 32px;
     margin-top: 4px;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
 
-    &_last {
+    @include xxxl {
+      font-size: $fs_base;
+    }
+  }
+
+  &_last {
+    margin-top: 6px;
+    padding-left: 14px;
+
+    & .dropdown-item__text {
+      margin-top: 6px;
+    }
+
+    & .dropdown-item__minus {
+      top: -1px;
+      line-height: 29px;
+    }
+
+    & .dropdown-item__plus {
+      line-height: 29px;
+    }
+
+    & .dropdown-item__number {
       margin-top: 5px;
     }
   }

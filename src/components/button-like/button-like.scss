@@ -2,6 +2,38 @@
 @import '@~Assets/styles/media-mixins.scss';
 @import '@~Assets/styles/fonts.scss';
 
+@mixin buttonLikeHeart {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 8px;
+  height: 8px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+
+  @include xxxl {
+    position: absolute;
+    top: 4px;
+    left: 11px;
+    width: 12px;
+    height: 12px;
+  }
+}
+
+@mixin buttonLikeNumber {
+  position: absolute;
+  top: 56%;
+  font-size: 0.7em;
+  line-height: 100%;
+  transform: translate(30%, -50%);
+
+  @include xxxl {
+    font-size: $fs_h2;
+  }
+}
+
 .button-like {
   position: relative;
   width: 40px;
@@ -13,7 +45,7 @@
   user-select: none;
   cursor: pointer;
 
-  @include xxxl{
+  @include xxxl {
     width: 60px;
   }
 
@@ -28,49 +60,27 @@
     cursor: pointer;
   }
 
-  &_popular {
-    background: $linearGradientLilac;
-  }
-
   &__heart {
-    position: absolute;
-    top: 6px;
-    left: 6px;
-    width: 8px;
-    height: 8px;
     background-image: url('@~Components/button-like/img/heart.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    text-align: center;
-
-    @include xxxl{
-      position: absolute;
-      top: 4px;
-      left: 11px;
-      width: 12px;
-      height: 12px;
-    }
-
-    &_popular {
-      background-image: url('@~Components/button-like/img/heart-popular.svg');
-    }
+    @include buttonLikeHeart();
   }
 
   &__number {
-    position: absolute;
-    top: 56%;
     right: 35%;
-    font-size: 0.7em;
-    line-height: 100%;
-    transform: translate(30%, -50%);
+    @include buttonLikeNumber();
+  }
 
-    @include xxxl{
-      font-size: $fs_h2;
+  &_popular {
+    background: $linearGradientLilac;
+
+    & .button-like__heart {
+      background-image: url('@~Components/button-like/img/heart-popular.svg');
+      @include buttonLikeHeart();
     }
 
-    &_popular {
+    & .button-like__number {
       right: 32%;
+      @include buttonLikeNumber();
     }
   }
 }

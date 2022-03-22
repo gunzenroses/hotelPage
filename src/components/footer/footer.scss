@@ -7,49 +7,6 @@
 @import '@~Components/social-nets/social-nets.scss';
 @import '@~Components/textfield/textfield.scss';
 
-@mixin footerLogo {
-  @include xl {
-    margin: 0;
-  }
-
-  @include lg {
-    position: absolute;
-    top: -11px;
-    right: 0;
-    width: 106px;
-    height: 40px;
-    margin-right: 50px;
-  }
-
-  @include sm {
-    position: relative;
-    width: 60%;
-    height: fit-content;
-    margin-bottom: 20px;
-    margin-right: 0;
-    align-items: center;
-  }
-}
-
-@mixin navbarAdaptive {
-  @include xl {
-    width: 85%;
-    height: 172px;
-    margin: 60px auto;
-  }
-
-  @include lg {
-    width: calc(415px + 260px + 5%);
-  }
-
-  @include sm {
-    width: fit-content;
-    height: fit-content;
-    margin: 120px auto 0;
-    justify-content: center;
-  }
-}
-
 .footer {
   @include isFlex($direction: column, $justify: flex-start, $align: center);
   width: 100%;
@@ -81,33 +38,25 @@
     margin: 100px auto 104px;
     letter-spacing: .01em;
 
-    @include navbarAdaptive;
+    @include xl {
+      width: 85%;
+      height: 172px;
+      margin: 60px auto;
+    }
 
-    &_in_landing,
-    &_in_details,
-    &_in_sign-in {
-      @include xxl {
-        height: 168px;
-      }
+    @include lg {
+      width: calc(415px + 260px + 5%);
     }
-  
-    &_in_registration {
-      @include xxl {
-        margin-top: 101px;
-      }
-    }
-  
-    &_in_search {
-      @include xxl {
-        height: 172px;
-        margin-top: 100px;
-        margin-bottom: 100px;
-      }
+
+    @include sm {
+      justify-content: center;
+      width: fit-content;
+      height: fit-content;
+      margin: 120px auto 0;
     }
   }
 
   &__logo {
-    @include footerLogo();
     @include isFlex($direction: column);
     width: 260px;
     height: 131px;
@@ -115,37 +64,25 @@
     letter-spacing: .001em;
 
     @include xl {
-      margin-right: 20px;
-    }
-
-    @include xl {
       margin: 0;
     }
 
     @include lg {
+      position: absolute;
+      top: -11px;
+      right: 0;
+      width: 106px;
+      height: 40px;
       margin-right: 40px;
     }
 
     @include sm {
+      position: relative;
       top: 0;
       width: fit-content;
+      height: fit-content;
       margin: 0;
-    }
-
-    &_in_landing {
-      height: 130px;
-
-      @include sm {
-        height: fit-content;
-      }
-    }
-
-    &_in_sign-in {
-      height: 131px;
-
-      @include sm {
-        height: fit-content;
-      }
+      align-items: center;
     }
   }
 
@@ -179,10 +116,6 @@
 
     @include sm {
       display: none;
-    }
-    
-    &_in_details {
-      letter-spacing: .001em;
     }
   }
 
@@ -303,21 +236,6 @@
       margin: 18px auto 120px;
       border-top: none;
     }
-
-    &_in_landing {
-      @include xxl {
-        padding-top: 23px;
-        padding-right: 137px;
-        padding-left: 139px;
-      }
-    }
-
-    &_in_sign-in {
-      @include xxl {
-        padding-top: 23px;
-        padding-left: 140px;
-      }
-    }
   }
 
   &__basement-text {
@@ -335,5 +253,82 @@
 
   &__social-nets {
     width: 116px;
-  }  
+  }
+
+  &_in_landing {
+    & .footer__navbar {
+      @include xxl {
+        height: 168px;
+      }
+    }
+
+    & .footer__logo {
+      height: 130px;
+
+      @include sm {
+        height: fit-content;
+      }
+    }
+
+    & .footer__basement {
+      @include xxl {
+        padding-top: 23px;
+        padding-right: 137px;
+        padding-left: 139px;
+      }
+    }
+  }
+
+  &_in_details {
+    & .footer__navbar {
+      @include xxl {
+        height: 168px;
+      }
+    }
+
+    & .footer__info {
+      letter-spacing: .001em;
+    }
+  }
+
+  &_in_sign-in {
+    & .footer__navbar {
+      @include xxl {
+        height: 168px;
+      }
+    }
+
+    & .footer__logo {
+      height: 131px;
+
+      @include sm {
+        height: fit-content;
+      }
+    }
+
+    & .footer__basement {
+      @include xxl {
+        padding-top: 23px;
+        padding-left: 140px;
+      }
+    }
+  }
+
+  &_in_registration {
+    & .footer__navbar {
+      @include xxl {
+        margin-top: 101px;
+      }
+    }
+  }
+
+  &_in_search {
+    & .footer__navbar {
+      @include xxl {
+        height: 172px;
+        margin-top: 100px;
+        margin-bottom: 100px;
+      }
+    }
+  }
 }

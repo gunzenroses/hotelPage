@@ -49,6 +49,8 @@
     @include isFlex();
     position: relative;
     width: 100%;
+    max-width: 490px;
+    min-width: 260px;
     min-height: 24px;
     margin-top: 30px;
     margin-left: 1px;
@@ -59,26 +61,9 @@
     color: $dark-shade_most;
     pointer-events: none;
 
-    @include xxxl{
-      max-width: 490px;
-    }
-
     @include xxs {
       justify-content: space-between;
-      width: 100%;
-      min-width: 260px;
       margin: 9px 0;
-    }
-
-    &_in_uikit {
-      width: 103%;
-    }
-
-    &_in_details {
-      width: 100%;
-      margin-top: 42px;
-      margin-left: 0px;
-      letter-spacing: .001em;
     }
   }
 
@@ -92,10 +77,6 @@
     width: calc(100% - 140px);
     height: 19px;
     border-bottom: 1px dotted $dark-shade_less;
-
-    &_in_uikit {
-      width: 190px;
-    }
   }
 
   &__number-sign {
@@ -106,7 +87,7 @@
     font-weight: 700;
     color: $dark-shade_most;
 
-    @include xxxl{
+    @include xxxl {
       font-size: $fs_h2;
     }
   }
@@ -119,12 +100,8 @@
     font-weight: 700;
     color: $dark-shade_most;
 
-    @include xxxl{
+    @include xxxl {
       font-size: $fs_h1;
-    }
-
-    &_in_details {
-      line-height: 11px;
     }
   }
 
@@ -136,10 +113,6 @@
     font-weight: 700;
     color: $purple;
     text-transform: uppercase;
-
-    &_in_details {
-      margin-left: 8px;
-    }
   }
 
   &__price {
@@ -168,7 +141,7 @@
     color: $dark-shade_more;
     pointer-events: none;
 
-    @include xxxl{
+    @include xxxl {
       max-width: 490px;
     }
 
@@ -193,14 +166,6 @@
     @include xxs {
       width: calc(100% - 120px);
       max-width: 170px;
-    }
-
-    &_in_uikit {
-      max-width: 239px;
-    }
-
-    &_in_details {
-      max-width: 245px;
     }
   }
 
@@ -253,13 +218,47 @@
       font-weight: 700;
       color: inherit;
     }
+  }
 
-    &_in_details {
+  &_in_uikit {
+    & .card-booking__summary {
+      width: 103%;
+    }
+
+    & .card-booking__line {
+      width: 190px;
+    }
+
+    & .card-booking__description {
+      max-width: 239px;
+    }
+
+    & .card-booking__info-sign {
+      margin-left: 5px;
+    }
+  }
+
+  &_in_details {
+    & .card-booking__summary {
+      margin-top: 42px;
+      margin-left: 0px;
+      letter-spacing: .001em;
+    }
+
+    & .card-booking__number {
+      line-height: 11px;
+    }
+
+    & .card-booking__suite {
       margin-left: 8px;
     }
 
-    &_in_uikit {
-      margin-left: 5px;
+    & .card-booking__description {
+      max-width: 245px;
+    }
+
+    & .card-booking__info-sign {
+      margin-left: 8px;
     }
   }
 }

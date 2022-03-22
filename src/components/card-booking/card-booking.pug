@@ -3,39 +3,19 @@ include ../date-range/date-range.pug
 include ../dropdown-guests/dropdown-guests.pug
 
 mixin card-booking({ cardBookingInfo })
-  - 
+  -
     const { theme, itemNumbers, priceInfos } = cardBookingInfo;
 
-    const descriptionClass = theme === ''
-      ? 'card-booking__description' 
-      : `card-booking__description card-booking__description_in_${ theme }`;
+    const cardBookingClass = theme === ''
+      ? 'card-booking'
+      : `card-booking card-booking_in_${ theme }`
 
-    const infoSignClass = theme === ''
-      ? 'card-booking__info-sign' 
-      : `card-booking__info-sign card-booking__info-sign_in_${ theme }`;
-
-    const totalPriceClass = theme === ''
-      ? 'card-booking__summary'
-      : `card-booking__summary card-booking__summary_in_${ theme }`;
-
-    const infoNumberClass = theme === 'uikit'
-      ? 'card-booking__number' 
-      : `card-booking__number card-booking__number_in_${ theme }`;
-
-    const infoSuiteClass = theme === 'uikit'
-      ? 'card-booking__suite'
-      : `card-booking__suite card-booking__suite_in_${ theme }`;
-
-    const bookingLineClass = theme === 'uikit'
-      ? 'card-booking__line card-booking__line_in_uikit'
-      : 'card-booking__line';
-
-  form.card-booking(method = 'get' action = './search-room.html')
+  form(class = cardBookingClass method = 'get' action = './search-room.html')
     .card__row
       .card__group
         span.card-booking__number-sign №
-        span(class = infoNumberClass) 888
-        span(class = infoSuiteClass) Люкс
+        span.card-booking__number 888
+        span.card-booking__suite Люкс
       .card__group
         span.card-booking__price 9 990₽
         span.card-booking__period &nbsp;в сутки
@@ -63,13 +43,13 @@ mixin card-booking({ cardBookingInfo })
     each priceInfo in priceInfos 
       - const { infoDescription, infoSign, infoPrice } = priceInfo;
       .card-booking__price-info
-        div(class = descriptionClass)= infoDescription
+        .card-booking__description!= infoDescription
           if infoSign === 'full'
-            div(class = infoSignClass)
+            .card-booking__info-sign
         .card-booking__expense!= `${ infoPrice }₽`
-    div(class = totalPriceClass)
+    .card-booking__summary
       .card-booking__text Итого
-      div(class = bookingLineClass)
+      .card-booking__line
       .card-booking__text 38 081₽
     .card-booking__button
       +button-submit({ 

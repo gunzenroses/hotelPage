@@ -2,7 +2,7 @@ include ../button-rate/button-rate.pug
 include ../room-carousel/room-carousel.pug
 
 mixin card-room({ roomOptions, theme = '' })
-  - 
+  -
     const {
       src, 
       bookingNumber, 
@@ -12,27 +12,11 @@ mixin card-room({ roomOptions, theme = '' })
       starRate, 
       reviewAmount} = roomOptions;
 
-    const buttonRateClass = theme === '' 
-      ? 'card-room__button-rate'
-      : `card-room__button-rate card-room__button-rate_in_${ theme }`;
+    const cardRoomClass = theme === ''
+      ? 'card-room'
+      : `card-room card-room_in_${ theme }`
 
-    const signClass = theme === 'creative' 
-      ? 'card-room__sign card-room__sign_in_creative'
-      : 'card-room__sign';
-
-    const numberClass = theme === 'creative' 
-      ? 'card-room__number card-room__number_in_creative'
-      : 'card-room__number';
-
-    const roomTypeClass = theme === 'search' 
-      ? 'card-room__type card-room__type_in_search'
-      : 'card-room__type';
-
-    const periodClass = theme === 'search' 
-      ? 'card-room__period card-room__period_in_search'
-      : 'card-room__period';
-
-  .card-room
+  div(class = cardRoomClass)
     +room-carousel({
       roomPictures: src,
       nameForPictures: `room ${ bookingNumber }`
@@ -40,14 +24,14 @@ mixin card-room({ roomOptions, theme = '' })
     .card-room__info
       .card__row
         .card__group
-          span(class = signClass) №
-          span(class = numberClass)= bookingNumber
-          span(class = roomTypeClass)= bookingType 
+          span.card-room__sign №
+          span.card-room__number!= bookingNumber
+          span.card-room__type!= bookingType 
         .card__group
-          span.card-room__price!= bookingPrice + '₽'
-          span(class = periodClass) &nbsp;в сутки
+          span.card-room__price!= `${bookingPrice}₽`
+          span.card-room__period &nbsp;в сутки
       .card-room__rating
-        div(class = buttonRateClass)
+        .card-room__button-rate
           +button-rate({
             inputName: starName,
             checkedNum: starRate
