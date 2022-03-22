@@ -4,7 +4,7 @@ include ../label/label.pug
 mixin dropdown-rooms({ labelText = '', dropdownContainerId, dropdownClassShow = '', itemNumbers = [0, 0, 0], labelRightText = '' })
   .dropdown-rooms
     +label({ labelText: labelText, labelRightText: labelRightText })
-    div(class = 'dropdown js-dropdown-rooms')
+    .dropdown.js-dropdown-rooms
       div(
         class = `dropdown-rooms__content js-expand ${ dropdownClassShow }`)
         +dropdown-item({
@@ -23,7 +23,7 @@ mixin dropdown-rooms({ labelText = '', dropdownContainerId, dropdownClassShow = 
           itemDataType: 'bathrooms',
           itemText: 'Ванные комнаты',
           itemDataOrder: 2,
-          itemClass: 'last',
+          modifier: 'last',
           itemNumber: itemNumbers[2]
         })
       .dropdown__info.js-dropdown__info.js-expand__init
