@@ -1,28 +1,17 @@
 import { boundMethod } from 'autobind-decorator';
 
-export default class DropdownGuests {
-  constructor(item) {
-    this.container = item;
-    this.data = [];
-    this.init();
-  }
+import DropdownItem from '../dropdown-item/DropdownItem';
 
-  init() {
-    this._createClasses();
-    this._createChildren();
-    this._makeData();
-    this.dropdownItems.forEach((_, i) => {
-      this._showItemNumber(i);
-    });
-    this._totalGuestsCount();
-    this._enableEventListeners();
+export default class DropdownGuests extends DropdownItem {
+  constructor(item) {
+    super(item);
   }
 
   @boundMethod
   resetGuests() {
     this.data = [0, 0, 0];
     this.dropdownItems.forEach((_, i) => {
-      this._showItemNumber(i);
+      this._render(i);
     });
     this._onZeroGuests();
   }
@@ -33,39 +22,19 @@ export default class DropdownGuests {
   }
 
   _createClasses() {
+    super._createClasses();
     this.classExpand = '.js-expand';
     this.classExpandShow = 'expand__show';
 
     const blockName = 'dropdown';
-    this.classInfo = `${ blockName }__info`;
-    this.classInput = `${ blockName }__input`;
     this.classDropdownShow = `${ blockName }__show`;
     this.classDropdownReset = `${ blockName }__button_type_reset`;
     this.classDropdownSubmit = `${ blockName }__button_type_submit`;
-
-    this.classItem = 'dropdown-item';
-    this.classNumber = `${ this.classItem }__number`;
-    this.classItemMinus = `${ this.classItem }__minus`;
-    this.classItemPlus = `${ this.classItem }__plus`;
-
-    const disabledMod = 'disabled';
-    this.classItemMinusDisabled = `${ this.classItemMinus }_${ disabledMod }`;
-    this.classItemPlusDisabled = `${ this.classItemPlus }_${ disabledMod }`;
   }
 
   _createChildren() {
+    super._createChildren();
     this.dropdownExpanded = this.container.querySelector(this.classExpand);
-    this.info = this.container.querySelector(`.js-${ this.classInfo }`);
-    this.infoInput = this.container.querySelector(`.js-${ this.classInput }`);
-    this.dropdownItems = Array.from(
-      this.container.querySelectorAll(`.js-${ this.classItem }`)
-    );
-    this.dropdownMinuses = this.container.querySelectorAll(
-      `.js-${ this.classItemMinus }`
-    );
-    this.dropdownPluses = this.container.querySelectorAll(
-      `.js-${ this.classItemPlus }`
-    );
     this.resetButton = this.dropdownExpanded.querySelector(
       `.js-${ this.classDropdownReset }`
     );
@@ -74,75 +43,13 @@ export default class DropdownGuests {
     );
   }
 
-  _makeData() {
-    Array.from(
-      this.container.querySelectorAll(`.js-${ this.classNumber }`)
-    ).forEach((num) => {
-      const value = parseInt(num.textContent, 10);
-      this.data.push(value);
-    });
-  }
-
   _enableEventListeners() {
-    this.dropdownExpanded.addEventListener(
-      'pointerup',
-      this._plusAndMinusToItem
-    );
+    super._enableEventListeners();
     this.resetButton.addEventListener('pointerup', this.resetGuests);
     this.submitButton.addEventListener('pointerup', this.submitGuests);
   }
 
-  @boundMethod
-  _plusAndMinusToItem(e) {
-    const trg = e.target;
-    if (trg.classList.contains(this.classItemMinus)) {
-      this._minusToItem(trg);
-    }
-    if (trg.classList.contains(this.classItemPlus)) {
-      this._plusToItem(trg);
-    }
-  }
-
-  _minusToItem(trg) {
-    this.orderInData = parseInt(trg.nextElementSibling.dataset.order, 10);
-    this.data[this.orderInData] -= 1;
-    this._showItemNumber(this.orderInData);
-    this._totalGuestsCount();
-  }
-
-  _plusToItem(trg) {
-    this.orderInData = parseInt(trg.previousElementSibling.dataset.order, 10);
-    this.data[this.orderInData] += 1;
-    this._showItemNumber(this.orderInData);
-    this._totalGuestsCount();
-  }
-
-  _showItemNumber(i) {
-    const temp = this.data[i];
-    if (temp < 0) {
-      this.data[i] = 0;
-    } else if (temp >= 10) {
-      this.data[i] = 10;
-    }
-    const dropdownItem = this.dropdownItems[i].querySelector(
-      `.js-${ this.classNumber }`
-    );
-    dropdownItem.innerText = this.data[i];
-    this._activateMinusPlus(i);
-  }
-
-  _activateMinusPlus(i) {
-    if (this.data[i] <= 0) {
-      this.dropdownMinuses[i].classList.add(this.classItemMinusDisabled);
-    } else if (this.data[i] > 0 && this.data[i] < 10) {
-      this.dropdownPluses[i].classList.remove(this.classItemPlusDisabled);
-      this.dropdownMinuses[i].classList.remove(this.classItemMinusDisabled);
-    } else {
-      this.dropdownPluses[i].classList.add(this.classItemPlusDisabled);
-    }
-  }
-
-  _totalGuestsCount() {
+  _updateInfoInput() {
     this.adultGuests = parseInt(this.data[0], 10) + parseInt(this.data[1], 10);
     this.infantGuests = parseInt(this.data[2], 10);
     this.totalGuests = this.adultGuests + this.infantGuests;
@@ -161,10 +68,10 @@ export default class DropdownGuests {
 
   _onSomeGuests() {
     this.resetButton.classList.add(this.classDropdownShow);
-    this._render();
+    this._adjustInputData();
   }
 
-  _render() {
+  _adjustInputData() {
     const adultWord = this._matchWordForAdult();
     const infantWord = this._matchWordForInfant();
 
