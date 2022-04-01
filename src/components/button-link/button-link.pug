@@ -1,13 +1,13 @@
-mixin button-link({ buttonLinkText = '', buttonLinkHref = './some-address', className = '' })
-  if className === ''
-    div(class = 'button-link')
-      a(class = 'button-link__ref' href = buttonLinkHref)= buttonLinkText
-  else if className === 'colored'
-    a(class = 'button-link button-link_type_colored' 
-      href = buttonLinkHref)= buttonLinkText
-  else if className === 'registration'
-    a(class = 'button-link button-link_type_registration' 
-      href = buttonLinkHref)= buttonLinkText
-  else
-    div(class = `button-link button-link_type_${ className }`)
-      a(class = 'button-link__ref' href = buttonLinkHref)= buttonLinkText
+mixin button-link({ buttonLinkText = '', buttonLinkHref = './some-address', element = 'form-link' })
+  - 
+    const elements = {
+      link: 'button-link__link',
+      registration: 'button-link__link button-link__link_in-registration',
+      'form-link': 'button-link__form-link',
+      'sign-in': 'button-link__form-link button-link__form-link_in-sign-in',
+    };
+
+    const classes = elements[element];
+
+  div(class = 'button-link')
+    a(class = classes href = buttonLinkHref)= buttonLinkText

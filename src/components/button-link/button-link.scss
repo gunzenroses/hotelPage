@@ -14,33 +14,31 @@
   user-select: none;
   cursor: pointer;
 
-  &_type_sign-in {
-    font-size: 0.84rem;
-  }
-
-  &_type_colored {
+  &__link {
+    vertical-align: text-bottom;
     padding: 0;
     padding-right: 3px;
+    line-height: 40px;
     color: $light;
-  }
+    text-decoration: none;
 
-  &_type_registration {
-    padding: 0;
-    padding-right: 1px;
-    letter-spacing: .03em;
-    color: $light;
+    &_in-registration {
+      padding-right: 1px;
+      letter-spacing: .03em;
+      line-height: 30px;
 
-    &::before {
-      content: 'Зарегистрироваться';
-      color: $light;
+      &::before {
+        content: 'Зарегистрироваться';
+        color: $light;
 
-      @include xs {
-        content: 'Регистрация';
+        @include xs {
+          content: 'Регистрация';
+        }
       }
     }
   }
 
-  &__ref {
+  &__form-link {
     @include isFlex($justify: center, $align: center);
     position: absolute;
     top: 2px;
@@ -53,5 +51,9 @@
     background: $light;
     color: $purple;
     text-decoration: none;
+
+    &_in-sign-in {
+      font-size: 0.84rem;
+    }
   }
 }
