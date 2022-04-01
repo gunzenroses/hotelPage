@@ -23,7 +23,12 @@
   "cancellationRules": "Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.",
   "cardBookingInfo": {
     "theme": "details",
-    "itemNumbers": [2, 1, 0],
+    "roomInfos": {
+        "roomNumber": 888, 
+        "roomType": "Люкс", 
+        "roomPrice": "9 990"
+      },
+    "guestsAmount": [2, 1, 0],
     "priceInfos": [
       {
         "infoDescription": "9 990₽ х 4 суток",
@@ -40,6 +45,7 @@
         "infoPrice": "300",
         "infoSign": "full"
       }
-    ]
+    ],
+    "totalPrice": "38 081"
   }
 }

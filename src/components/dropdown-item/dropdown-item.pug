@@ -1,4 +1,4 @@
-mixin dropdown-item({ itemDataType, itemText, itemDataOrder, itemNumber = 0, modifier = '' })
+mixin dropdown-item({ itemDataType, itemText, itemDataOrder, itemAmount = 0, modifier = '' })
   -
     const classDropdown = modifier === ''
       ? 'dropdown-item js-dropdown-item'
@@ -11,5 +11,5 @@ mixin dropdown-item({ itemDataType, itemText, itemDataOrder, itemNumber = 0, mod
     .dropdown-item__minus.js-dropdown-item__minus - 
     div(
       class = 'dropdown-item__number js-dropdown-item__number' 
-      data-order = itemDataOrder)= itemNumber
+      data-order = itemDataOrder)= itemAmount
     .dropdown-item__plus.js-dropdown-item__plus +

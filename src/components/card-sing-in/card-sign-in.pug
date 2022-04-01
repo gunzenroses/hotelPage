@@ -2,15 +2,15 @@ include ../button-link/button-link.pug
 include ../button-submit/button-submit.pug
 include ../login/login.pug
 
-mixin card-sign-in(theme = 'main')
+mixin card-sign-in({ title = 'Войти', theme = 'main', text = 'Нет аккаунта на Toxin?'})
   form.card-sign-in.js-card-sign-in(method = 'get' action = './sign-in.html')
-    h1.card__title Войти
+    h1.card__title!= title
     +login(theme)
     .card-sign-in__button
       +button-submit({ buttonLinkText: 'Войти' })
     .card-sign-in__info
       .card__row
-        .card__text Нет аккаунта на Toxin?
+        .card__text!= text
         .card-sign-in__button-link
           +button-link({
             buttonLinkText: 'Создать',

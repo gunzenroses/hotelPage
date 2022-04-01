@@ -12,7 +12,8 @@
       "bookingPrice": "9 990",
       "starName": "rating1",
       "starRate": 5,
-      "reviewAmount": "145"
+      "reviewAmount": "145",
+      "reviewWordForm": "Отзывов"
     },
     {
       "src": [
@@ -26,7 +27,8 @@
       "bookingPrice": "9 900",
       "starName": "rating2",
       "starRate": 4,
-      "reviewAmount": "65"
+      "reviewAmount": "65",
+      "reviewWordForm": "Отзывов"
     },
     {
       "src": [
@@ -40,7 +42,8 @@
       "bookingPrice": "8 500",
       "starName": "rating3",
       "starRate": 3,
-      "reviewAmount": "35"
+      "reviewAmount": "35",
+      "reviewWordForm": "Отзывов"
     },
     {
       "src": [
@@ -54,7 +57,8 @@
       "bookingPrice": "7 300",
       "starName": "rating4",
       "starRate": 5,
-      "reviewAmount": "19"
+      "reviewAmount": "19",
+      "reviewWordForm": "Отзывов"
     },
     {
       "src": [
@@ -68,7 +72,8 @@
       "bookingPrice": "6 000",
       "starName": "rating5",
       "starRate": 4,
-      "reviewAmount": "44"
+      "reviewAmount": "44",
+      "reviewWordForm": "Отзыва"
     },
     {
       "src": [
@@ -82,7 +87,8 @@
       "bookingPrice": "5 800",
       "starName": "rating6",
       "starRate": 3,
-      "reviewAmount": "56"
+      "reviewAmount": "56",
+      "reviewWordForm": "Отзывов"
     },
     {
       "src": [
@@ -96,7 +102,8 @@
       "bookingPrice": "5 500",
       "starName": "rating7",
       "starRate": 5,
-      "reviewAmount": "45"
+      "reviewAmount": "45",
+      "reviewWordForm": "Отзывов"
     },
     {
       "src": [
@@ -110,7 +117,8 @@
       "bookingPrice": "5 300",
       "starName": "rating8",
       "starRate": 4,
-      "reviewAmount": "39"
+      "reviewAmount": "39",
+      "reviewWordForm": "Отзывов"
     },
     {
       "src": [
@@ -124,7 +132,8 @@
       "bookingPrice": "5 000",
       "starName": "rating9",
       "starRate": 3,
-      "reviewAmount": "77"
+      "reviewAmount": "77",
+      "reviewWordForm": "Отзывов"
     },
     {
       "src": [
@@ -138,7 +147,8 @@
       "bookingPrice": "5 000",
       "starName": "rating10",
       "starRate": 5,
-      "reviewAmount": "25"
+      "reviewAmount": "25",
+      "reviewWordForm": "Отзывов"
     },
     {
       "src": [
@@ -152,7 +162,8 @@
       "bookingPrice": "5 000",
       "starName": "rating11",
       "starRate": 3,
-      "reviewAmount": "15"
+      "reviewAmount": "15",
+      "reviewWordForm": "Отзывов"
     },
     {
       "src": [
@@ -166,7 +177,8 @@
       "bookingPrice": "5 000",
       "starName": "rating12",
       "starRate": 3,
-      "reviewAmount": "55"
+      "reviewAmount": "55",
+      "reviewWordForm": "Отзывов"
     }
   ]
 }

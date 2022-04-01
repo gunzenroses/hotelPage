@@ -19,5 +19,5 @@ block content
     main.registration__content
       +carousel(pics)
       .registration__card-registration 
-        +card-registration('Зарегистрироваться')
-    +footer(theme)
+        +card-registration({ submitText: 'Зарегистрироваться' })
+    +footer({ theme: theme })

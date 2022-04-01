@@ -1,18 +1,28 @@
 mixin radio-buttons({ checkedMan = true, checkedWoman = false })
+  - 
+    const genders = [{ 
+      value: 'male',
+      checked: checkedMan,
+      title: 'Мужчина'
+    },
+    { 
+      value: 'female',
+      checked: checkedWoman,
+      title: 'Женщина'
+    }]
+
   .radio-buttons
-    label.radio-buttons__item
-      input.radio-buttons__real(
-        type = 'radio' 
-        name = 'gender' 
-        value = 'male' 
-        checked = checkedMan)
-      span.radio-buttons__fake.radio-buttons__fake_type_male
-      span(class = 'radio-buttons__title') Мужчина
-    label.radio-buttons__item
-      input.radio-buttons__real(
-        type = 'radio' 
-        name = 'gender' 
-        value = 'female' 
-        checked = checkedWoman)
-      span.radio-buttons__fake
-      span(class = 'radio-buttons__title') Женщина
+    for gender in genders
+      - 
+        const classFake = value === 'male'
+          ? 'radio-buttons__fake radio-buttons__fake_type_male'
+          : 'radio-buttons__fake'
+
+      label.radio-buttons__item
+        input.radio-buttons__real(
+          type = 'radio' 
+          name = 'gender' 
+          value = value 
+          checked = checked)
+        span(class = classFake)
+        span(class = 'radio-buttons__title')!= title

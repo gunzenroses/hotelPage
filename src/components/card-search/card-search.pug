@@ -2,9 +2,9 @@ include ../button-submit/button-submit.pug
 include ../date-range/date-range.pug
 include ../dropdown-guests/dropdown-guests.pug
 
-mixin card-search()
+mixin card-search(title = "Найдём номера под ваши пожелания")
   form.card-search(method = 'get' action = './search-room.html')
-    h1.card__title Найдём номера под ваши пожелания
+    h1.card__title!= title
     .card-search__calendar
       +date-range({
         dateRanges: [

@@ -24,7 +24,8 @@
     "bookingPrice": "9 990",
     "starName": "rating3",
     "starRate": 5,
-    "reviewAmount": 145
+    "reviewAmount": 145,
+    "reviewWordForm": "Отзывов"
   },
   "room840": {
     "src": [
@@ -38,11 +39,17 @@
     "bookingPrice": "9 900",
     "starName": "rating4",
     "starRate": 4,
-    "reviewAmount": 65
+    "reviewAmount": 65,
+    "reviewWordForm": "Отзывов"
   },
   "cardBookingInfo": {
     "theme": "uikit",
-    "itemNumbers": [2, 1, 0],
+    "roomInfos": {
+      "roomNumber": 888,
+      "roomType": "Люкс",
+      "roomPrice": "9 990"
+    },
+    "guestsAmount": [2, 1, 0],
     "priceInfos": [
       {
         "infoDescription": "9 990₽ х 4 суток",
@@ -59,6 +66,7 @@
         "infoPrice": "300",
         "infoSign": "full"
       }
-    ]
+    ],
+    "totalPrice": "38 081"
   }
 }

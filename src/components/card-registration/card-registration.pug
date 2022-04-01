@@ -6,11 +6,11 @@ include ../label/label.pug
 include ../login/login.pug
 include ../textfield/textfield.pug
 
-mixin card-registration(submitText)
+mixin card-registration({ title = 'Регистрация аккаунта', submitText, text = 'Уже есть аккаунт на Toxin' })
   form.card-registration.js-card-registration(
     method = 'get' 
     action = './registration.html' )
-    h1.card__title Регистрация аккаунта
+    h1.card__title!= title
     .card-registration__name
       +textfield({ 
         inputClass: 'name',
@@ -48,7 +48,7 @@ mixin card-registration(submitText)
       +button-submit({ buttonLinkText: submitText })
     .card-registration__info
       .card__row
-        .card__text Уже есть аккаунт на Toxin
+        .card__text!= text
         .card-registration__button-link
           +button-link({
             buttonLinkText: 'Войти',

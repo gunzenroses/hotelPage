@@ -49,6 +49,7 @@
 
     &::before {
       @include dropdownButton();
+      width: 32px;
       line-height: 45px;
       color: $dark-shade_medium;
     }

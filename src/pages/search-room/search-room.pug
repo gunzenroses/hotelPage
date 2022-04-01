@@ -42,11 +42,11 @@ block content
               .search-room__filter-guests
                 +dropdown-guests({
                   labelText: 'гости',
-                  itemNumbers: [2, 1, 1]
+                  guestsAmount: [2, 1, 1]
                 })
               .search-room__filter-price
                 +range({
-                  infoText: true,
+                  infoText: 'Стоимость за сутки пребывания в номере',
                   labelText: 'Диапазон цены'
                 })
               .search-room__filter-rules
@@ -61,7 +61,7 @@ block content
               .search-room__filter-rooms
                 +dropdown-rooms({
                   labelText: 'Удобства номера',
-                  itemNumbers: [2, 2, 0],
+                  roomsAmount: [2, 2, 0],
                 })
               .search-room__filter-extras
                 +checkbox-expandable({
@@ -78,4 +78,4 @@ block content
                 })
           .search-room__pagination 
             +pagination()
-    +footer(theme)
+    +footer({ theme: theme })

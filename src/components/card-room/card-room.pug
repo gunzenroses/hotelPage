@@ -10,7 +10,9 @@ mixin card-room({ roomOptions, theme = '' })
       bookingPrice, 
       starName, 
       starRate, 
-      reviewAmount} = roomOptions;
+      reviewAmount,
+      reviewWordForm
+    } = roomOptions;
 
     const cardRoomClass = theme === ''
       ? 'card-room'
@@ -38,4 +40,4 @@ mixin card-room({ roomOptions, theme = '' })
           })
         .card__group
           span.card-room__price!= reviewAmount
-          span.card-room__review  Отзывов
+          span.card-room__review!= reviewWordForm

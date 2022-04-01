@@ -4,20 +4,21 @@ include ../dropdown-guests/dropdown-guests.pug
 
 mixin card-booking({ cardBookingInfo })
   -
-    const { theme, itemNumbers, priceInfos } = cardBookingInfo;
+    const { theme, roomInfos, guestsAmount, priceInfos, totalPrice } = cardBookingInfo;
 
     const cardBookingClass = theme === ''
       ? 'card-booking'
       : `card-booking card-booking_in_${ theme }`
 
   form(class = cardBookingClass method = 'get' action = './search-room.html')
+    - const { roomNumber, roomType, roomPrice } = roomInfos;
     .card__row
       .card__group
         span.card-booking__number-sign №
-        span.card-booking__number 888
-        span.card-booking__suite Люкс
+        span.card-booking__number!= roomNumber
+        span.card-booking__suite!= roomType
       .card__group
-        span.card-booking__price 9 990₽
+        span.card-booking__price!= `${roomPrice}₽`
         span.card-booking__period &nbsp;в сутки
     .card-booking__date-range
       +date-range({
@@ -38,7 +39,7 @@ mixin card-booking({ cardBookingInfo })
     .card-booking__dropdown-guests
       +dropdown-guests({
         labelText: 'Гости',
-        itemNumbers: itemNumbers
+        guestsAmount: guestsAmount
       })
     each priceInfo in priceInfos 
       - const { infoDescription, infoSign, infoPrice } = priceInfo;
@@ -50,7 +51,7 @@ mixin card-booking({ cardBookingInfo })
     .card-booking__summary
       .card-booking__text Итого
       .card-booking__line
-      .card-booking__text 38 081₽
+      .card-booking__text!= `${totalPrice}₽`
     .card-booking__button
       +button-submit({ 
         buttonLinkText: 'Забронировать',

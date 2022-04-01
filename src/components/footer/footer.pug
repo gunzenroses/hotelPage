@@ -3,7 +3,7 @@ include ../navlink/navlink.pug
 include ../social-nets/social-nets.pug
 include ../textfield/textfield.pug
 
-mixin footer(theme = 'main')
+mixin footer({ theme = 'main', subscribeTitle = 'Подписка', copyright = 'Copyright © 2018 Toxin отель. Все права защищены.' })
   - 
     const { 
       footerText,
@@ -33,7 +33,7 @@ mixin footer(theme = 'main')
                     modifier: 'footer'
                   })
         .footer__subscription
-          h3.footer__title Подписка
+          h3.footer__title!= subscribeTitle
           p.footer__special-offer!= footerTextSubscription
           form.footer__form.js-footer__form(
             method = 'get' 
@@ -44,6 +44,6 @@ mixin footer(theme = 'main')
               nameText: 'email',
             })
     .footer__basement
-      .footer__basement-text Copyright © 2018 Toxin отель. Все права защищены.
+      .footer__basement-text!= copyright
       .footer__social-nets
         +social-nets(theme)

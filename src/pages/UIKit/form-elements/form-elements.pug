@@ -183,14 +183,14 @@ mixin form-elements(checkboxList, comment1)
             +dropdown-rooms({
               labelText: 'dropdown',
               labelRightText: 'default',
-              itemNumbers: [2, 2, 0],
+              roomsAmount: [2, 2, 0],
             })
           .form-elements__rooms.js-dropdown__detection
             +dropdown-rooms({
               labelText: 'dropdown',
               dropdownClassShow: 'expand__show',
               labelRightText: 'expanded',
-              itemNumbers: [2, 2, 0],
+              roomsAmount: [2, 2, 0],
             })
         .form-elements__checkbox-rolled-up
           +checkbox-expandable({
@@ -217,7 +217,7 @@ mixin form-elements(checkboxList, comment1)
           +dropdown-guests({
             labelText: 'dropdown',
             dropdownClassShow: 'expand__show',
-            itemNumbers: [2, 1, 0],
+            guestsAmount: [2, 1, 0],
           })
         .form-elements__bullet-checkbox
           +bullet-checkbox({

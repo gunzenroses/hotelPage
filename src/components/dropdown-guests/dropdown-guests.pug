@@ -1,7 +1,7 @@
 include ../dropdown-item/dropdown-item.pug
 include ../label/label.pug
 
-mixin dropdown-guests({ labelText = '', dropdownClassShow = '', itemNumbers = [0, 0, 0], labelRightText = '' })
+mixin dropdown-guests({ labelText = '', dropdownClassShow = '', guestsAmount = [0, 0, 0], labelRightText = '' })
   - 
     const buttonSubmitClass = 'dropdown__button dropdown__button_type_submit';
     const buttonResetClass = 'dropdown__button dropdown__button_type_reset';
@@ -15,19 +15,19 @@ mixin dropdown-guests({ labelText = '', dropdownClassShow = '', itemNumbers = [0
           itemDataType: 'grownups',
           itemText: 'Взрослые',
           itemDataOrder: 0,
-          itemNumber: itemNumbers[0]
+          itemAmount: guestsAmount[0]
         })
         +dropdown-item({
           itemDataType: 'kids',
           itemText: 'Дети',
           itemDataOrder: 1,
-          itemNumber: itemNumbers[1]
+          itemAmount: guestsAmount[1]
         })
         +dropdown-item({
           itemDataType: 'infants',
           itemText: 'Младенцы',
          itemDataOrder: 2,
-         itemNumber: itemNumbers[2]
+         itemAmount: guestsAmount[2]
         })
         .dropdown__buttons
           button(
