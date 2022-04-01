@@ -1,4 +1,4 @@
-mixin button-link({ buttonLinkText = '', buttonLinkHref = './some-address', element = 'form-link' })
+mixin button-link({ buttonLinkText = '', buttonLinkHref = './some-address', innerElement = 'form-link' })
   - 
     const elements = {
       link: 'button-link__link',
@@ -7,7 +7,7 @@ mixin button-link({ buttonLinkText = '', buttonLinkHref = './some-address', elem
       'sign-in': 'button-link__form-link button-link__form-link_in-sign-in',
     };
 
-    const classes = elements[element];
+    const classes = elements[innerElement];
 
   div(class = 'button-link')
     a(class = classes href = buttonLinkHref)= buttonLinkText
