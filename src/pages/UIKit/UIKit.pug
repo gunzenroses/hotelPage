@@ -1,13 +1,25 @@
 extends ../../assets/templates/template.pug
 
+include ./form-elements/form-elements.pug
+include ./cards/cards.pug
+include ./headers-n-footers/headers-n-footers.pug
+
 block variables
   -
-    const title = 'Hotel page: UIKit';
-    const description = 'UIKit';
-    const keywords = 'UIKit';
+    let title = 'Hotel page: UIKit';
+    let description = 'UIKit';
+    let keywords = 'UIKit';
+    const {
+      checkboxList, 
+      comment1,
+      room888, 
+      room840,
+      priceInfos,
+      cardBookingInfo
+    } = require('Pages/UIKit/UIKit.json');
 
 block content
   .uikit
-    include ./form-elements/form-elements.pug
-    include ./cards/cards.pug
-    include ./headers-n-footers/headers-n-footers.pug
+    +form-elements(checkboxList, comment1)
+    +cards(room888, room840, priceInfos, cardBookingInfo)
+    +headers-n-footers()

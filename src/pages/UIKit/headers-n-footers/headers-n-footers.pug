@@ -2,7 +2,7 @@ include ../../../components/header/header.pug
 include ../../../components/footer/footer.pug
 include ../../../components/footer-mobile/footer-mobile.pug
 
-block content
+mixin headers-n-footers
   .headers-n-footers.js-dropdown__detection
     img.uikit__logo(src = './assets/images/logo/logo.svg' alt = 'uikit logo')
     +header({ })

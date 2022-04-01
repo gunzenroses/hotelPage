@@ -19,14 +19,7 @@ include ../../../components/range/range.pug
 include ../../../components/rich-checkbox/rich-checkbox.pug
 include ../../../components/textfield/textfield.pug
 
-block variables
-  - 
-    const { 
-      checkboxList, 
-      comment1 
-    } = require('Pages/UIKit/form-elements/form-elements.json');
-
-block content
+mixin form-elements(checkboxList, comment1)
   .form-elements
     img.uikit__logo(src = './assets/images/logo/logo.svg' alt = 'uikit logo')
     .form-elements__content

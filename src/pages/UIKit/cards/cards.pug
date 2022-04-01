@@ -5,16 +5,7 @@ include ../../../components/card-room/card-room.pug
 include ../../../components/card-search/card-search.pug
 include ../../../components/card-sing-in/card-sign-in.pug
 
-block variables
-  - 
-    var {
-      room888, 
-      room840,
-      priceInfos,
-      cardBookingInfo
-    } = require('Pages/UIKit/cards/cards.json');
-
-block content
+mixin cards(room888, room840, priceInfos, cardBookingInfo)
   .cards.js-dropdown__detection
     img.uikit__logo(src = './assets/images/logo/logo.svg' alt = 'uikit logo')
     .cards__content
