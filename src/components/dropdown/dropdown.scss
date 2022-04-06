@@ -48,4 +48,83 @@
       height: 159px;
     }
   }
+
+  &__info {
+    @include isFlex($justify: flex-start, $align: center);
+    position: relative;
+    width: 100%;
+    height: 44px;
+    padding: 0px 0px 0px 12px;
+    border: 1px solid $dark-shade_less;
+    border-radius: 4px 4px 0 0;
+    background: transparent;
+    color: $dark-shade_more;
+    letter-spacing: 0.01em;
+    cursor: pointer;
+
+    &::before {
+      @include dropdownButton();
+      width: 44px;
+      line-height: 43px;
+    }
+
+    @include xxs {
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+
+    &__buttons {
+    @include isFlex($justify: space-between, $direction: row-reverse);
+    width: 100%;
+    height: 30px;
+    margin-top: 18px;
+    padding-right: 6px;
+    padding-left: 13px;
+    font-size: $fs_h3;
+    text-transform: uppercase;
+  }
+
+  &__button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-family: inherit;
+    font-size: $fs_h3;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $purple;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+
+    &:hover {
+      color: $dark-shade_medium;
+    }
+
+    @include xxxl {
+      font-size: $fs_base;
+    }
+
+    &_type_reset {
+      display: none;
+    }
+
+    &_type_submit {
+      display: inline-block;
+    }
+  }
+
+  &__input {
+    @include inputMixin();
+    padding-bottom: 2px;
+    padding-left: 2px;
+    font-family: inherit;
+    font-size: 1rem;
+    pointer-events: none;
+
+    &::placeholder {
+      color: $dark-shade_more;
+    }
+  }
 }
