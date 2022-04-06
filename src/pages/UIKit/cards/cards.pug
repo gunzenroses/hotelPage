@@ -5,7 +5,7 @@ include ../../../components/card-room/card-room.pug
 include ../../../components/card-search/card-search.pug
 include ../../../components/card-sing-in/card-sign-in.pug
 
-mixin cards(room888, room840, priceInfos, cardBookingInfo)
+mixin cards({ room1, room2, info })
   .cards.js-dropdown__detection
     img.uikit__logo(src = './assets/images/logo/logo.svg' alt = 'uikit logo')
     .cards__content
@@ -14,12 +14,17 @@ mixin cards(room888, room840, priceInfos, cardBookingInfo)
       .cards__card-registration
         +card-registration({ submitText: 'Перейти к оплате' })
       .cards__card-booking
-        +card-booking({ cardBookingInfo: cardBookingInfo })
+        +card-booking({ info: info })
       .cards__card-sign-in
         +card-sign-in({})
       .cards__calendar
         +calendar()
       .cards__card-room
-        +card-room({ roomOptions: room888 })
+        +card-room({
+          options: room1
+        })
       .cards__card-room_second
-        +card-room({ roomOptions: room840, theme: 'creative' })
+        +card-room({ 
+          options: room2,
+          theme: 'creative' 
+        })

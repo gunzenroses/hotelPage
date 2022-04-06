@@ -7,13 +7,13 @@
         "./assets/images/rooms/room.jpg",
         "./assets/images/rooms/room.jpg"
       ],
-      "bookingNumber": "888",
-      "bookingType": "Люкс",
-      "bookingPrice": "9 990",
+      "number": "888",
+      "type": "Люкс",
+      "price": "9 990",
       "starName": "rating1",
-      "starRate": 5,
+      "rating": 5,
       "reviewAmount": "145",
-      "reviewWordForm": "Отзывов"
+      "reviewWord": "Отзывов"
     },
     {
       "src": [
@@ -22,13 +22,13 @@
         "./assets/images/rooms/room-2.jpg",
         "./assets/images/rooms/room-2.jpg"
       ],
-      "bookingNumber": "840",
-      "bookingType": "",
-      "bookingPrice": "9 900",
+      "number": "840",
+      "type": "",
+      "price": "9 900",
       "starName": "rating2",
-      "starRate": 4,
+      "rating": 4,
       "reviewAmount": "65",
-      "reviewWordForm": "Отзывов"
+      "reviewWord": "Отзывов"
     },
     {
       "src": [
@@ -37,13 +37,13 @@
         "./assets/images/rooms/room-2.jpg",
         "./assets/images/rooms/room-3.jpg"
       ],
-      "bookingNumber": "980",
-      "bookingType": "Люкс",
-      "bookingPrice": "8 500",
+      "number": "980",
+      "type": "Люкс",
+      "price": "8 500",
       "starName": "rating3",
-      "starRate": 3,
+      "rating": 3,
       "reviewAmount": "35",
-      "reviewWordForm": "Отзывов"
+      "reviewWord": "Отзывов"
     },
     {
       "src": [
@@ -52,13 +52,13 @@
         "./assets/images/rooms/room-4.jpg",
         "./assets/images/rooms/room-4.jpg"
       ],
-      "bookingNumber": "856",
-      "bookingType": "",
-      "bookingPrice": "7 300",
+      "number": "856",
+      "type": "",
+      "price": "7 300",
       "starName": "rating4",
-      "starRate": 5,
+      "rating": 5,
       "reviewAmount": "19",
-      "reviewWordForm": "Отзывов"
+      "reviewWord": "Отзывов"
     },
     {
       "src": [
@@ -67,13 +67,13 @@
         "./assets/images/rooms/room-5.jpg",
         "./assets/images/rooms/room-5.jpg"
       ],
-      "bookingNumber": "740",
-      "bookingType": "",
-      "bookingPrice": "6 000",
+      "number": "740",
+      "type": "",
+      "price": "6 000",
       "starName": "rating5",
-      "starRate": 4,
+      "rating": 4,
       "reviewAmount": "44",
-      "reviewWordForm": "Отзыва"
+      "reviewWord": "Отзыва"
     },
     {
       "src": [
@@ -82,13 +82,13 @@
         "./assets/images/rooms/room-6.jpg",
         "./assets/images/rooms/room-6.jpg"
       ],
-      "bookingNumber": "982",
-      "bookingType": "",
-      "bookingPrice": "5 800",
+      "number": "982",
+      "type": "",
+      "price": "5 800",
       "starName": "rating6",
-      "starRate": 3,
+      "rating": 3,
       "reviewAmount": "56",
-      "reviewWordForm": "Отзывов"
+      "reviewWord": "Отзывов"
     },
     {
       "src": [
@@ -97,13 +97,13 @@
         "./assets/images/rooms/room-7.jpg",
         "./assets/images/rooms/room-7.jpg"
       ],
-      "bookingNumber": "678",
-      "bookingType": "",
-      "bookingPrice": "5 500",
+      "number": "678",
+      "type": "",
+      "price": "5 500",
       "starName": "rating7",
-      "starRate": 5,
+      "rating": 5,
       "reviewAmount": "45",
-      "reviewWordForm": "Отзывов"
+      "reviewWord": "Отзывов"
     },
     {
       "src": [
@@ -112,13 +112,13 @@
         "./assets/images/rooms/room-8.jpg",
         "./assets/images/rooms/room-8.jpg"
       ],
-      "bookingNumber": "450",
-      "bookingType": "",
-      "bookingPrice": "5 300",
+      "number": "450",
+      "type": "",
+      "price": "5 300",
       "starName": "rating8",
-      "starRate": 4,
+      "rating": 4,
       "reviewAmount": "39",
-      "reviewWordForm": "Отзывов"
+      "reviewWord": "Отзывов"
     },
     {
       "src": [
@@ -127,13 +127,13 @@
         "./assets/images/rooms/room-9.jpg",
         "./assets/images/rooms/room-9.jpg"
       ],
-      "bookingNumber": "350",
-      "bookingType": "",
-      "bookingPrice": "5 000",
+      "number": "350",
+      "type": "",
+      "price": "5 000",
       "starName": "rating9",
-      "starRate": 3,
+      "rating": 3,
       "reviewAmount": "77",
-      "reviewWordForm": "Отзывов"
+      "reviewWord": "Отзывов"
     },
     {
       "src": [
@@ -142,13 +142,13 @@
         "./assets/images/rooms/room-10.jpg",
         "./assets/images/rooms/room-10.jpg"
       ],
-      "bookingNumber": "666",
-      "bookingType": "",
-      "bookingPrice": "5 000",
+      "number": "666",
+      "type": "",
+      "price": "5 000",
       "starName": "rating10",
-      "starRate": 5,
+      "rating": 5,
       "reviewAmount": "25",
-      "reviewWordForm": "Отзывов"
+      "reviewWord": "Отзывов"
     },
     {
       "src": [
@@ -157,13 +157,13 @@
         "./assets/images/rooms/room-11.jpg",
         "./assets/images/rooms/room-11.jpg"
       ],
-      "bookingNumber": "444",
-      "bookingType": "",
-      "bookingPrice": "5 000",
+      "number": "444",
+      "type": "",
+      "price": "5 000",
       "starName": "rating11",
-      "starRate": 3,
+      "rating": 3,
       "reviewAmount": "15",
-      "reviewWordForm": "Отзывов"
+      "reviewWord": "Отзывов"
     },
     {
       "src": [
@@ -172,13 +172,13 @@
         "./assets/images/rooms/room-12.jpg",
         "./assets/images/rooms/room-12.jpg"
       ],
-      "bookingNumber": "352",
-      "bookingType": "",
-      "bookingPrice": "5 000",
+      "number": "352",
+      "type": "",
+      "price": "5 000",
       "starName": "rating12",
-      "starRate": 3,
+      "rating": 3,
       "reviewAmount": "55",
-      "reviewWordForm": "Отзывов"
+      "reviewWord": "Отзывов"
     }
   ]
 }

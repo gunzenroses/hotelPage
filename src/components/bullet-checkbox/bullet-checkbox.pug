@@ -1,7 +1,7 @@
-mixin bullet-checkbox({ checkboxList = [], labelText = '' })
+mixin bullet-checkbox({ checkboxList = [], text = '' })
   .bullet-checkbox
-    if labelText !== ''
-      h3.bullet-checkbox__label!= labelText
+    if text !== ''
+      h3.bullet-checkbox__label!= text
     .bullet-checkbox__list
       for item in checkboxList 
         label.bullet-checkbox__item

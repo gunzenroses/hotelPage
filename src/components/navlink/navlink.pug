@@ -1,5 +1,4 @@
-mixin navlink({ buttonLinkText = '', onClick = './some-address', modifier = '', buttonModifier = '' })
-
+mixin navlink({ text = '', onClick = './some-address', modifier = '', buttonModifier = '' })
   - 
     const navlinkClass = modifier === ''
       ? 'navlink'
@@ -14,4 +13,4 @@ mixin navlink({ buttonLinkText = '', onClick = './some-address', modifier = '', 
     a(
       class = navlinkButtonClass 
       href = onClick 
-      title = buttonLinkText)= buttonLinkText
+      title = text)= text

@@ -1,6 +1,6 @@
 include ../calendar/calendar.pug
 
-mixin date-range({ dateRanges = [{ labelText: '', value: '', name: 'check-in-check-out', data: 'date-range' }], placeHolder = 'ДД.ММ.ГГГГ', showContent = '', theme = '' })
+mixin date-range({ dateRanges = [{ text: '', value: '', name: 'check-in-check-out', data: 'date-range' }], placeHolder = 'ДД.ММ.ГГГГ', showContent = '', theme = '' })
   -
     const className = theme === 'search' 
       ? 'date-range__info date-range__info_in_search'
@@ -16,9 +16,9 @@ mixin date-range({ dateRanges = [{ labelText: '', value: '', name: 'check-in-che
       +calendar()
     div(class = rangeSelectorClass)
       each dateRange in dateRanges
-        - const { labelText, value, name, data } = dateRange;
+        - const { text, value, name, data } = dateRange;
         .date-range__item
-          h3.date-range__label!= labelText
+          h3.date-range__label!= text
           div(class = className)
             input(
               class = 'date-range__input' 

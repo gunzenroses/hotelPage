@@ -31,7 +31,7 @@ block content
               .search-room__filter-date
                 +date-range({
                   dateRanges: [{
-                    labelText: 'даты пребывания в отеле',
+                    text: 'даты пребывания в отеле',
                     value: '19 авг - 23 авг', 
                     name: 'check-in-check-out', 
                     data: 'date-range'
@@ -41,14 +41,14 @@ block content
                 })
               .search-room__filter-guests
                 +dropdown({
-                  labelText: 'гости',
+                  text: 'гости',
                   itemsAmount: [2, 1, 1],
                   haveControlButtons: true
                 })
               .search-room__filter-price
                 +range({
                   infoText: 'Стоимость за сутки пребывания в номере',
-                  labelText: 'Диапазон цены'
+                  text: 'Диапазон цены'
                 })
               .search-room__filter-rules
                 h3.label Правила дома
@@ -56,17 +56,17 @@ block content
             .search-room__filter-group
               .search-room__accessibility
                 +rich-checkbox({
-                  checkboxName: 'accessibility',
-                  containerText: 'Доступность'
+                  name: 'accessibility',
+                  text: 'Доступность'
                 })
               .search-room__filter-rooms
                 +dropdown({
-                  labelText: 'Удобства номера',
+                  text: 'Удобства номера',
                   itemsAmount: [2, 2, 0],
                 })
               .search-room__filter-extras
                 +checkbox-expandable({
-                  dropdownTitleName: 'Дополнительные удобства'
+                  title: 'Дополнительные удобства'
                 })
         section.search-room__rooms
           h1.search-room__text Номера, которые мы для вас подобрали
@@ -74,7 +74,7 @@ block content
             each room in roomsList 
               .search-room__card-room
                 +card-room({ 
-                  roomOptions: room, 
+                  options: room, 
                   theme: theme 
                 })
           .search-room__pagination 

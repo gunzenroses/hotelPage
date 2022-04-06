@@ -4,20 +4,20 @@ include ../info/info.pug
 mixin comment(commentData)
   - 
     const { 
-      authorPic = '', 
-      authorName = 'Anonymous', 
+      picture = '', 
+      author = 'Anonymous', 
       commentTime = Data().getDay(), 
       likesAmount = 0,
       liked = false,
-      commentText = 'none' } = commentData;
+      text = 'none' } = commentData;
 
   .comment
     .comment__head
       img(
-        src = authorPic 
+        src = picture 
         alt = 'profile picture').comment__pic
       +info({ 
-        title: authorName, 
+        title: author, 
         description: commentTime 
       })
     .comment__body
@@ -26,4 +26,4 @@ mixin comment(commentData)
           likesAmount: likesAmount,
           liked: liked
         })
-      .comment__text!= commentText
+      .comment__text!= text

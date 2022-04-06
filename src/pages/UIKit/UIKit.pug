@@ -15,11 +15,15 @@ block variables
       room888, 
       room840,
       priceInfos,
-      cardBookingInfo
+      info
     } = require('Pages/UIKit/UIKit.json');
 
 block content
   .uikit
     +form-elements(checkboxList, comment1)
-    +cards(room888, room840, priceInfos, cardBookingInfo)
+    +cards({ 
+      room1: room888, 
+      room2: room840, 
+      info: info
+    })
     +headers-n-footers()

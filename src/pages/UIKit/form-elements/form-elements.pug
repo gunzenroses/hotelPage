@@ -27,41 +27,43 @@ mixin form-elements(checkboxList, comment1)
           .form-elements__email
             .container
               +label({
-                labelText: 'Text field', 
-                labelRightText: 'default', 
-                labelRightClass: 'email'
+                text: 'Text field', 
+                rightText: 'default', 
+                rightClass: 'email'
               })
               +textfield({ 
-                inputClass: 'email',
+                modifier: 'email',
                 placeholder: 'Email',
-                nameText: 'email',
+                name: 'email',
                 autofocus: false 
               })
           .form-elements__name
             .container
               +label({
-                labelText: 'Text field', 
-                labelRightText: 'hover / focus', 
-                labelRightClass: 'name'
+                text: 'Text field', 
+                rightText: 'hover / focus', 
+                rightClass: 'name'
               })
               +textfield({
                 placeholder: 'Text', 
-                valueText: 'This is pretty awesome', 
-                nameText: 'text', 
+                value: 'This is pretty awesome', 
+                name: 'text', 
                 maxText: 20
               })
           .form-elements__guests.js-dropdown__detection
             +dropdown({
-              labelText: 'dropdown',
+              text: 'dropdown',
               haveControlButtons: true
             })
           .form-elements__birthday
             .container
-              +label({ labelText: 'Masked text field' })
+              +label({ 
+                text: 'Masked text field' 
+              })
               +textfield({
-                inputClass: 'birthday',
+                modifier: 'birthday',
                 placeholder: 'ДД.ММ.ГГГГ',
-                nameText: 'birthday',
+                name: 'birthday',
                 maxText: 10
               })
         .form-elements__container-second
@@ -69,11 +71,11 @@ mixin form-elements(checkboxList, comment1)
             +date-range({
               dateRanges: [
                 {
-                  labelText: 'date dropdown',
+                  text: 'date dropdown',
                   name: 'check-in',
                   data: 'check-in'
                 }, {
-                  labelText: 'date dropdown',
+                  text: 'date dropdown',
                   value: '19.08.2019',
                   name: 'check-out',
                   data: 'check-out'
@@ -83,7 +85,7 @@ mixin form-elements(checkboxList, comment1)
           .form-elements__date-range-common.js-dropdown__detection
             +date-range({ 
               dateRanges: [{
-                labelText: 'filter date dropdown',
+                text: 'filter date dropdown',
                 value: '19 авг - 23 авг', 
                 name: 'check-in-check-out', 
                 data: 'date-range'
@@ -92,12 +94,12 @@ mixin form-elements(checkboxList, comment1)
           .form-elements__subscribe
             .container
               +label({ 
-                labelText: 'Subscription text field' 
+                text: 'Subscription text field' 
               })
               +textfield({ 
-                inputClass: 'subscribe',
+                modifier: 'subscribe',
                 placeholder: 'Email',
-                nameText: 'email',
+                name: 'email',
               })
       .form-elements__input-buttons
         .form-elements__checkbox
@@ -110,10 +112,12 @@ mixin form-elements(checkboxList, comment1)
           h3.form-elements__label.form-elements__label_toggle Toggle
           .form-elements__group_toggle
             +button-toggle({
-              inputName: 'offer1',
+              name: 'offer1',
               checked: true
             })
-            +button-toggle({ inputName: 'offer2' })
+            +button-toggle({ 
+              name: 'offer2' 
+            })
         .form-elements__button-like
           h3.label like button
           .form-elements__row
@@ -128,12 +132,12 @@ mixin form-elements(checkboxList, comment1)
           h3.form-element__label_button-rate Rate button
           .form-elements__row
             +button-rate({
-              inputName: 'rating',
-              checkedNum: 4
+              name: 'rating',
+              rating: 4
             })
             +button-rate({
-              inputName: 'rating2',
-              checkedNum: 5
+              name: 'rating2',
+              rating: 5
             })
       .form-elements__clickable-objects
         .form-elements__range
@@ -143,25 +147,25 @@ mixin form-elements(checkboxList, comment1)
           .form-elements__row_buttons-link
             .form-elements__button-item
               +button-link({
-                buttonLinkText: 'Click me',
-                buttonLinkHref: './some-address',
+                text: 'Click me',
+                href: './some-address',
                 innerElement: 'link'
               })
             .form-elements__button-item
               +button-link({
-                buttonLinkText: 'Click me',
-                buttonLinkHref: './some-address',
+                text: 'Click me',
+                href: './some-address',
                 innerElement: 'link'
               })
             .form-elements__button-item
              +button-link({
-               buttonLinkText: 'Click me',
-               buttonLinkHref: './some-address'
+               text: 'Click me',
+               href: './some-address'
               })
             .form-elements__button-item
              +button-link({
-               buttonLinkText: 'Click me',
-               buttonLinkHref: './some-address'
+               text: 'Click me',
+               href: './some-address'
               })
           .form-elements__row_buttons-basic
             +link({ 
@@ -173,7 +177,9 @@ mixin form-elements(checkboxList, comment1)
               linkHref: './some-address'
             })
           .form-elements__button-submit 
-            +button-submit({ buttonLinkText: 'Перейти к оплате' })
+            +button-submit({ 
+              text: 'Перейти к оплате' 
+            })
         .form-elements__pagination
             h3.label pagination
             +pagination()
@@ -181,42 +187,42 @@ mixin form-elements(checkboxList, comment1)
         .form-elements__room-criterions
           .form-elements__rooms.js-dropdown__detection
             +dropdown({
-              labelText: 'dropdown',
-              labelRightText: 'default',
+              text: 'dropdown',
+              rightLabel: 'default',
               itemsAmount: [2, 2, 0],
             })
           .form-elements__rooms.js-dropdown__detection
             +dropdown({
-              labelText: 'dropdown',
+              text: 'dropdown',
               showContent: true,
-              labelRightText: 'expanded',
+              rightLabel: 'expanded',
               itemsAmount: [2, 2, 0],
             })
         .form-elements__checkbox-rolled-up
           +checkbox-expandable({
-            dropdownTitleName: 'Expandable checkbox list'
+            title: 'Expandable checkbox list'
           })
         .form-elements__checkbox-expand
           +checkbox-expandable({
-            dropdownTitleName: 'Expandable checkbox list',
+            title: 'Expandable checkbox list',
             showContent: true,
           })
       .form-elements__search-info
         .form-elements__guests_open.js-dropdown__detection
           +dropdown({
-            labelText: 'dropdown',
+            text: 'dropdown',
             showContent: true,
             haveControlButtons: true
           })
         .form-elements__rich-checkbox
           +rich-checkbox({
-            checkboxName: 'accessibility',
-            containerText: 'Rich Checkbox Buttons'
+            name: 'accessibility',
+            text: 'Rich Checkbox Buttons'
           })
       .form-elements__room-info
         .form-elements__guests_open.js-dropdown__detection
           +dropdown({
-            labelText: 'dropdown',
+            text: 'dropdown',
             showContent: true,
             itemsAmount: [2, 1, 0],
             haveControlButtons: true
@@ -224,7 +230,7 @@ mixin form-elements(checkboxList, comment1)
         .form-elements__bullet-checkbox
           +bullet-checkbox({
             checkboxList: checkboxList,
-            labelText: 'bullet list'
+            text: 'bullet list'
           })
       .form-elements__badges
         +badge({ 

@@ -1,22 +1,22 @@
 {
   "houseRules": [
     {
-      "valueText": "smoking_allowed",
-      "inputName": "house-rules",
+      "value": "smoking_allowed",
+      "name": "house-rules",
       "checked": false,
-      "checkboxTitle": "Можно курить"
+      "title": "Можно курить"
     },
     {
-      "valueText": "pets_allowed",
-      "inputName": "house-rules",
+      "value": "pets_allowed",
+      "name": "house-rules",
       "checked": true,
-      "checkboxTitle": "Можно с питомцами"
+      "title": "Можно с питомцами"
     },
     {
-      "valueText": "guests_allowed",
-      "inputName": "house-rules",
+      "value": "guests_allowed",
+      "name": "house-rules",
       "checked": true,
-      "checkboxTitle": "Можно пригласить гостей (до 10 человек)"
+      "title": "Можно пригласить гостей (до 10 человек)"
     }
   ]
 }

@@ -1,8 +1,8 @@
-mixin button-toggle({ inputName = '', checked = false, title = 'Получать спецпредложения' })
+mixin button-toggle({ name = '', checked = false, title = 'Получать спецпредложения' })
   label.button-toggle
     input(
       type = 'checkbox' 
-      name = inputName 
+      name = name 
       value = '' 
       checked = checked).button-toggle__real
     span.button-toggle__fake

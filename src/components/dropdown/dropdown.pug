@@ -1,7 +1,7 @@
 include ../dropdown-item/dropdown-item.pug
 include ../label/label.pug
 
-mixin dropdown({ labelText = 'dropdown', showContent = false, itemsAmount = [0, 0, 0], haveControlButtons = false, labelRightText = '' })
+mixin dropdown({ text = 'dropdown', showContent = false, itemsAmount = [0, 0, 0], haveControlButtons = false, rightLabel = '' })
   - 
     const dropdownClassShow = showContent === true
       ? 'dropdown__show'
@@ -17,15 +17,18 @@ mixin dropdown({ labelText = 'dropdown', showContent = false, itemsAmount = [0, 
     const { placeholder, name } = dropdownInfo;
 
   .dropdown
-    +label({ labelText: labelText, labelRightText: labelRightText })
+    +label({ 
+      text: text, 
+      rightText: rightLabel 
+    })
     .dropdown__container.js-dropdown
       div(class = contentClass)
         each itemInfo, index in itemsInfo
           - const { itemDataType, itemText } = itemInfo
             +dropdown-item({
-              itemDataType: itemDataType,
-              itemText: itemText,
-              itemDataOrder: index,
+              dataType: itemDataType,
+              text: itemText,
+              dataOrder: index,
               itemAmount: itemsAmount[index]
             })
         if (haveControlButtons)

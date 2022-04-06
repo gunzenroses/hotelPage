@@ -1,7 +1,7 @@
-mixin navlink-dropdown(buttonLinkText)
+mixin navlink-dropdown(text)
   li.navlink-dropdown.js-navlink-dropdown
     .navlink-dropdown__expand.js-navlink-dropdown__expand
       .navlink-dropdown__content
     .navlink-dropdown__init.js-navlink-dropdown__init
       span.navlink-dropdown__icon
-      span.navlink-dropdown__button(title = buttonLinkText)!= buttonLinkText
+      span.navlink-dropdown__button(title = text)!= text

@@ -3,7 +3,7 @@ include ../navlink/navlink.pug
 include ../social-nets/social-nets.pug
 include ../textfield/textfield.pug
 
-mixin footer({ theme = 'main', subscribeTitle = 'Подписка', copyright = 'Copyright © 2018 Toxin отель. Все права защищены.' })
+mixin footer({ theme = 'main', title = 'Подписка', copyright = 'Copyright © 2018 Toxin отель. Все права защищены.' })
   - 
     const { 
       footerText,
@@ -28,20 +28,20 @@ mixin footer({ theme = 'main', subscribeTitle = 'Подписка', copyright = 
               ul.footer__links
                 for item in footerGroup.items
                   +navlink({
-                    buttonLinkText: item.name,
+                    text: item.name,
                     onClick: item.link,
                     modifier: 'footer'
                   })
         .footer__subscription
-          h3.footer__title!= subscribeTitle
+          h3.footer__title!= title
           p.footer__special-offer!= footerTextSubscription
           form.footer__form.js-footer__form(
             method = 'get' 
             action = './registration.html')
             +textfield({ 
-              inputClass: 'subscribe',
+              modifier: 'subscribe',
               placeholder: 'Email',
-              nameText: 'email',
+              name: 'email',
             })
     .footer__basement
       .footer__basement-text!= copyright

@@ -6,52 +6,60 @@ include ../label/label.pug
 include ../login/login.pug
 include ../textfield/textfield.pug
 
-mixin card-registration({ title = 'Регистрация аккаунта', submitText, text = 'Уже есть аккаунт на Toxin' })
+mixin card-registration({ title = 'Регистрация аккаунта', submitText = "", text = 'Уже есть аккаунт на Toxin' })
   form.card-registration.js-card-registration(
     method = 'get' 
     action = './registration.html' )
     h1.card__title!= title
     .card-registration__name
       +textfield({ 
-        inputClass: 'name',
+        modifier: 'name',
         placeholder: 'Имя',
-        valueText: '',
-        nameText: 'name',
+        value: '',
+        name: 'name',
         maxText: 20 
       })
     .card-registration__surname
       +textfield({ 
-        inputClass: 'name',
+        modifier: 'name',
         placeholder: 'Фамилия',
-        valueText: '',
-        nameText: 'surname',
+        value: '',
+        name: 'surname',
         maxText: 20 
       })
     .card-registration__radio
       +radio-buttons({ })
     .card-registration__birthday
       .container
-        +label({ labelText: 'Дата рождения' })
+        +label({ 
+          text: 'Дата рождения' 
+        })
         +textfield({
-          inputClass: 'birthday',
+          modifier: 'birthday',
           placeholder: 'ДД.ММ.ГГГГ',
-          nameText: 'birthday',
+          name: 'birthday',
           maxText: 10
         })
     .card-registration__login
       .container
-        +label({ labelText: 'Данные для входа в сервис' })
+        +label({ 
+          text: 'Данные для входа в сервис' 
+        })
         +login()
     .card-registration__specials
-      +button-toggle({ inputName: 'special offers' })
+      +button-toggle({ 
+        name: 'special offers' 
+      })
     .card-registration__button-submit
-      +button-submit({ buttonLinkText: submitText })
+      +button-submit({ 
+        text: submitText 
+      })
     .card-registration__info
       .card__row
         .card__text!= text
         .card-registration__button-link
           +button-link({
-            buttonLinkText: 'Войти',
-            buttonLinkHref: 'sign-in.html',
+            text: 'Войти',
+            href: 'sign-in.html',
             innerElement: 'sign-in'
           })

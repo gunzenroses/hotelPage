@@ -15,9 +15,14 @@ block variables
 
 block content
   .registration.js-dropdown__detection
-    +header({ user: '', theme: theme })
+    +header({ 
+      user: '', 
+      theme: theme 
+    })
     main.registration__content
       +carousel(pics)
       .registration__card-registration 
-        +card-registration({ submitText: 'Зарегистрироваться' })
+        +card-registration({ 
+          submitText: 'Зарегистрироваться' 
+        })
     +footer({ theme: theme })

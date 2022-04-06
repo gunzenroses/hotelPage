@@ -8,13 +8,13 @@ mixin login(theme = '')
 
   div(class = loginClass)
     +textfield({ 
-      inputClass: 'email',
+      modifier: 'email',
       placeholder: 'Email',
-      nameText: 'email',
+      name: 'email',
       autofocus: false 
     })
     +textfield({ 
-      inputClass: 'password',
+      modifier: 'password',
       placeholder: 'Пароль',
-      nameText: 'password'
+      name: 'password'
     })

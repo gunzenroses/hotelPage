@@ -28,16 +28,16 @@ mixin header({ user = '', theme = '' })
         nav.header__dropdown.js-header__expand
           ul.header__navbar.header__navbar_dropdown
             +navlink({
-              buttonLinkText: 'О нас',
+              text: 'О нас',
               onClick: './some-address'
             })
             +navlink-dropdown('Услуги')
             +navlink({
-              buttonLinkText: 'Вакансии',
+              text: 'Вакансии',
               onClick: './some-address'
             })
             +navlink({
-              buttonLinkText: 'Новости',
+              text: 'Новости',
               onClick: './some-address'
             })
             +navlink-dropdown('Соглашения')
@@ -47,32 +47,32 @@ mixin header({ user = '', theme = '' })
           .header__forms
             .header__sign-in
               +button-link({
-                buttonLinkText: 'Войти',
-                buttonLinkHref: 'sign-in.html',
+                text: 'Войти',
+                href: 'sign-in.html',
                 innerElement: 'sign-in'
               })
             .header__registration
               +button-link({ 
-                buttonLinkHref: 'registration.html',
+                href: 'registration.html',
                 innerElement: 'registration'
               })
         nav.header__navbar-region
           ul.header__navbar
             +navlink({
-              buttonLinkText: 'О нас',
+              text: 'О нас',
               onClick: './some-address',
               modifier: 'header',
               buttonModifier: 'header'
             })
             +navlink-dropdown('Услуги')
             +navlink({
-              buttonLinkText: 'Вакансии',
+              text: 'Вакансии',
               onClick: './some-address',
               modifier: 'header',
               buttonModifier: 'header'
             })
             +navlink({
-              buttonLinkText: 'Новости',
+              text: 'Новости',
               onClick: './some-address',
               modifier: 'header',
               buttonModifier: 'header'

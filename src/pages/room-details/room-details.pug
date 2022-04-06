@@ -19,7 +19,7 @@ block variables
       comment2, 
       checkboxList1, 
       cancellationRules, 
-      cardBookingInfo } = require('./room-details.json');
+      info } = require('./room-details.json');
 
 block content
   .room-details.js-dropdown__detection
@@ -30,7 +30,6 @@ block content
         img(
           src = './assets/images/room-details/room-details.jpg' 
           alt = 'room picture 1').room-details__img.room-details__img_first
-        //- .room-details__view-miniature
         img(
           src = './assets/images/room-details/room-details-2.jpg' 
           alt = 'room picture 2').room-details__img.room-details__img_second
@@ -86,5 +85,5 @@ block content
               .room-details__cancellation-info
                 != cancellationRules
           article.room-details__booking
-            +card-booking({ cardBookingInfo: cardBookingInfo })
+            +card-booking({ info: info })
     +footer({ theme: theme })

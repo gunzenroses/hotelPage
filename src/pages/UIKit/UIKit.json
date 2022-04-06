@@ -5,12 +5,12 @@
     "Время прибытия — после 13:00, а выезд до 12:00"
   ],
   "comment1": {
-    "authorPic": "./assets/images/avatar/avatar.jpg",
-    "authorName": "Мурад Сарафанов",
+    "picture": "./assets/images/avatar/avatar.jpg",
+    "author": "Мурад Сарафанов",
     "commentTime": "5 дней назад",
     "likesAmount": 12,
     "liked": true,
-    "commentText": "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий.\u00A0 И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."
+    "text": "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий.\u00A0 И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."
   },
   "room888": {
     "src": [
@@ -19,13 +19,13 @@
       "./assets/images/rooms/room.jpg",
       "./assets/images/rooms/room.jpg"
     ],
-    "bookingNumber": 888,
-    "bookingType": "Люкс",
-    "bookingPrice": "9 990",
+    "number": 888,
+    "type": "Люкс",
+    "price": "9 990",
     "starName": "rating3",
-    "starRate": 5,
+    "rating": 5,
     "reviewAmount": 145,
-    "reviewWordForm": "Отзывов"
+    "reviewWord": "Отзывов"
   },
   "room840": {
     "src": [
@@ -34,15 +34,15 @@
       "./assets/images/rooms/room-2.jpg",
       "./assets/images/rooms/room-2.jpg"
     ],
-    "bookingNumber": 840,
-    "bookingType": "",
-    "bookingPrice": "9 900",
+    "number": 840,
+    "type": "",
+    "price": "9 900",
     "starName": "rating4",
-    "starRate": 4,
+    "rating": 4,
     "reviewAmount": 65,
-    "reviewWordForm": "Отзывов"
+    "reviewWord": "Отзывов"
   },
-  "cardBookingInfo": {
+  "info": {
     "theme": "uikit",
     "roomInfos": {
       "roomNumber": 888,

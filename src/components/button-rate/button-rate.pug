@@ -1,11 +1,11 @@
-mixin button-rate({ inputName = 'rating', checkedNum = 1 }) 
+mixin button-rate({ name = 'rating', rating = 1 }) 
   .button-rate
     each val in [5, 4, 3, 2, 1]
       input(
         type = 'radio' 
-        name = inputName 
+        name = name 
         value = val 
-        checked = checkedNum <= val 
-        id = `${ inputName }-${ val }`).button-rate__real
+        checked = rating <= val 
+        id = `${ name }-${ val }`).button-rate__real
       label(
-        for = `${ inputName }-${ val }`).button-rate__fake
+        for = `${ name }-${ val }`).button-rate__fake

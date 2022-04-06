@@ -7,13 +7,15 @@ mixin card-sign-in({ title = 'Войти', theme = 'main', text = 'Нет акк
     h1.card__title!= title
     +login(theme)
     .card-sign-in__button
-      +button-submit({ buttonLinkText: 'Войти' })
+      +button-submit({ 
+        text: 'Войти' 
+      })
     .card-sign-in__info
       .card__row
         .card__text!= text
         .card-sign-in__button-link
           +button-link({
-            buttonLinkText: 'Создать',
-            buttonLinkHref: 'registration.html',
+            text: 'Создать',
+            href: 'registration.html',
             innerElement: 'sign-in'
           })

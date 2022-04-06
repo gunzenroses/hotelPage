@@ -1,40 +1,40 @@
 {
   "checkboxContent": [
     {
-      "valueText": "breakfast",
-      "checkboxName": "breakfast",
+      "value": "breakfast",
+      "name": "breakfast",
       "checked": false,
-      "checkboxTitle": "Завтрак"
+      "title": "Завтрак"
     },
     {
-      "valueText": "desk",
-      "checkboxName": "desk",
+      "value": "desk",
+      "name": "desk",
       "checked": true,
-      "checkboxTitle": "Письменный стол"
+      "title": "Письменный стол"
     },
     {
-      "valueText": "feeding chair",
-      "checkboxName": "feeding chair",
+      "value": "feeding chair",
+      "name": "feeding chair",
       "checked": true,
-      "checkboxTitle": "Стул для кормления"
+      "title": "Стул для кормления"
     },
     {
-      "valueText": "baby bed",
-      "checkboxName": "baby bed",
+      "value": "baby bed",
+      "name": "baby bed",
       "checked": true,
-      "checkboxTitle": "Кроватка"
+      "title": "Кроватка"
     },
     {
-      "valueText": "TV",
-      "checkboxName": "TV",
+      "value": "TV",
+      "name": "TV",
       "checked": false,
-      "checkboxTitle": "Телевизор"
+      "title": "Телевизор"
     },
     {
-      "valueText": "shampoo",
-      "checkboxName": "shampoo",
+      "value": "shampoo",
+      "name": "shampoo",
       "checked": false,
-      "checkboxTitle": "Шампунь"
+      "title": "Шампунь"
     }
   ]
 }

@@ -9,11 +9,11 @@ mixin card-search(title = 'Найдём номера под ваши пожел�
       +date-range({
         dateRanges: [
           {
-            labelText: 'Прибытие',
+            text: 'Прибытие',
             name: 'check-in',
             data: 'check-in'
           }, {
-            labelText: 'Выезд',
+            text: 'Выезд',
             name: 'check-out',
             data: 'check-out'
           }
@@ -21,11 +21,11 @@ mixin card-search(title = 'Найдём номера под ваши пожел�
       })
     .card-search__guests
       +dropdown({
-        labelText: 'Гости',
+        text: 'Гости',
         haveControlButtons: true
       })
     .card-search__button
       +button-submit({ 
-        buttonLinkText: 'Подобрать номер',
+        text: 'Подобрать номер',
         theme: theme
       })

@@ -1,10 +1,10 @@
 include ../checkbox-item/checkbox-item.pug
 
-mixin checkbox-expandable({ dropdownTitleName, showContent = false })
+mixin checkbox-expandable({ title = "", showContent = false })
   - 
     const dropdownClassShow = showContent === true
       ? 'checkbox-expandable__show'
-      : ''
+      : '';
     const { checkboxContent } = 
       require('Components/checkbox-expandable/checkbox-expandable.json');
 
@@ -20,16 +20,16 @@ mixin checkbox-expandable({ dropdownTitleName, showContent = false })
           each checkboxItem in checkboxContent
             - 
               const { 
-                valueText, 
-                checkboxName, 
+                value, 
+                name, 
                 checked, 
-                checkboxTitle } = checkboxItem;
+                checkbox } = checkboxItem;
             +checkbox-item({
-              valueText: valueText,
-              inputName: checkboxName,
+              value: value,
+              name: name,
               checked: checked,
-              checkboxTitle: checkboxTitle,
+              title: title,
               modifier: 'expandable'
             })
       .checkbox-expandable__button.js-checkbox-expandable__init
-        .checkbox-expandable__title!= dropdownTitleName
+        .checkbox-expandable__title!= title

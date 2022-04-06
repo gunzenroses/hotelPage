@@ -1,6 +1,6 @@
-mixin range({ infoText = '', labelText = 'Range slider' })
+mixin range({ infoText = '', text = 'Range slider' })
   .range
-    h3.range__label!= labelText 
+    h3.range__label!= text 
     input.range__value.js-range__value
     input.range__slider.js-range__slider
     .range__info!= rangeInfoText
