@@ -1,6 +1,6 @@
 include ../button-submit/button-submit.pug
 include ../date-range/date-range.pug
-include ../dropdown-guests/dropdown-guests.pug
+include ../dropdown/dropdown.pug
 
 mixin card-search(title = 'Найдём номера под ваши пожелания')
   form.card-search(method = 'get' action = './search-room.html')
@@ -20,8 +20,9 @@ mixin card-search(title = 'Найдём номера под ваши пожел�
         ]
       })
     .card-search__guests
-      +dropdown-guests({
+      +dropdown({
         labelText: 'Гости',
+        haveControlButtons: true
       })
     .card-search__button
       +button-submit({ 

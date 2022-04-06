@@ -1,0 +1,38 @@
+{
+  "guests": [
+    {
+      "itemDataType": "grownups",
+      "itemText": "Взрослые"
+    },
+    {
+      "itemDataType": "kids",
+      "itemText": "Дети"
+    },
+    {
+      "itemDataType": "infants",
+      "itemText": "Младенцы"
+    }
+  ],
+  "rooms": [
+    {
+      "itemDataType": "bedrooms",
+      "itemText": "Спальни"
+    },
+    {
+      "itemDataType": "beds",
+      "itemText": "Кровати"
+    },
+    {
+      "itemDataType": "bathrooms",
+      "itemText": "Ванные комнаты"
+    }
+  ],
+  "guestsInput": {
+    "placeholder": "Сколько гостей",
+    "name": "guests"
+  },
+  "roomsInput": {
+    "placeholder": "Выберите условия",
+    "name": "rooms"
+  }
+}

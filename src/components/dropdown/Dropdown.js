@@ -2,23 +2,9 @@ import { boundMethod } from 'autobind-decorator';
 
 import DropdownItem from '../dropdown-item/DropdownItem';
 
-export default class DropdownGuests extends DropdownItem {
+export default class Dropdown extends DropdownItem {
   constructor(item) {
     super(item);
-  }
-
-  @boundMethod
-  resetGuests() {
-    this.data = [0, 0, 0];
-    this.dropdownItems.forEach((_, i) => {
-      this._render(i);
-    });
-    this._onZeroGuests();
-  }
-
-  @boundMethod
-  submitGuests() {
-    this.dropdownExpanded.classList.remove(this.classExpandShow);
   }
 
   _createClasses() {
@@ -45,11 +31,22 @@ export default class DropdownGuests extends DropdownItem {
 
   _enableEventListeners() {
     super._enableEventListeners();
-    this.resetButton.addEventListener('pointerup', this.resetGuests);
-    this.submitButton.addEventListener('pointerup', this.submitGuests);
+    if (this.resetButton) {
+      this.resetButton.addEventListener('pointerup', this._resetGuests);
+      this.submitButton.addEventListener('pointerup', this._submitItems);
+    }
   }
 
   _updateInfoInput() {
+    this.infoInput.value = '';
+    if (this.resetButton) {
+      this._updateGuest();
+    } else {
+      this._updateRooms();
+    }
+  }
+
+  _updateGuest() {
     this.adultGuests = parseInt(this.data[0], 10) + parseInt(this.data[1], 10);
     this.infantGuests = parseInt(this.data[2], 10);
     this.totalGuests = this.adultGuests + this.infantGuests;
@@ -57,13 +54,12 @@ export default class DropdownGuests extends DropdownItem {
     if (this.totalGuests > 0) {
       this._onSomeGuests();
     } else {
-      this._onZeroGuests();
+      this._onZero();
     }
   }
 
-  _onZeroGuests() {
+  _onZero() {
     this.resetButton.classList.remove(this.classDropdownShow);
-    this.infoInput.value = '';
   }
 
   _onSomeGuests() {
@@ -140,5 +136,75 @@ export default class DropdownGuests extends DropdownItem {
         break;
     }
     return form;
+  }
+
+  _updateRooms() {
+    const roomInfo = [];
+    this.data.forEach((num, i) => {
+      if (num > 0) {
+        roomInfo.push(this._adjustDataType(i));
+      }
+    });
+    const roomText = roomInfo.join(', ');
+    this.infoInput.value = roomText.length > 20
+      ? `${ roomText.slice(0, 20) }...`
+      : roomText;
+  }
+
+  _adjustDataType(j) {
+    const dataType = this.dropdownItems[j].dataset.type;
+    let dataTypeName;
+    if (this.data[j] === 1) {
+      switch (dataType) {
+        case 'bedrooms':
+          dataTypeName = 'спальня';
+          break;
+        case 'beds':
+          dataTypeName = 'кровать';
+          break;
+        default:
+          dataTypeName = 'ванная комната';
+          break;
+      }
+    } else if (this.data[j] > 1 && this.data[j] < 5) {
+      switch (dataType) {
+        case 'bedrooms':
+          dataTypeName = 'спальни';
+          break;
+        case 'beds':
+          dataTypeName = 'кровати';
+          break;
+        default:
+          dataTypeName = 'ванных комнаты';
+          break;
+      }
+    } else {
+      switch (dataType) {
+        case 'bedrooms':
+          dataTypeName = 'спален';
+          break;
+        case 'beds':
+          dataTypeName = 'кроватей';
+          break;
+        default:
+          dataTypeName = 'ванных комнат';
+          break;
+      }
+    }
+    return `${ this.data[j] } ${ dataTypeName }`;
+  }
+
+  @boundMethod
+  _resetGuests() {
+    this.data = [0, 0, 0];
+    this.dropdownItems.forEach((_, i) => {
+      this._render(i);
+    });
+    this._onZero();
+  }
+
+  @boundMethod
+  _submitItems() {
+    this.dropdownExpanded.classList.remove(this.classExpandShow);
   }
 }

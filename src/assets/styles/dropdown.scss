@@ -4,14 +4,14 @@
 @import '@~Assets/styles/fonts.scss';
 
 .dropdown {
-  @include isFlex($direction: column-reverse);
-  position: relative;
-  width: inherit;
-  user-select: none;
+  // @include isFlex($direction: column-reverse);
+  // position: relative;
+  // width: inherit;
+  // user-select: none;
 
-  @include xxxl {
-    width: 100%;
-  }
+  // @include xxxl {
+  //   width: 100%;
+  // }
 
   &__info {
     @include isFlex($justify: flex-start, $align: center);

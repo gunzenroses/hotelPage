@@ -1,0 +1,43 @@
+include ../dropdown-item/dropdown-item.pug
+include ../label/label.pug
+
+mixin dropdown({ labelText = 'dropdown', dropdownClassShow = '', itemsAmount = [0, 0, 0], haveControlButtons = false, labelRightText = '' })
+  - 
+    const buttonSubmitClass = 'dropdown__button dropdown__button_type_submit';
+    const buttonContainerClass = haveControlButtons === false
+      ? `dropdown__content js-expand ${ dropdownClassShow }`
+      : `dropdown__content dropdown__content_with-control-buttons js-expand ${ dropdownClassShow }`;
+    const buttonResetClass = 'dropdown__button dropdown__button_type_reset';
+    const { guests, rooms, guestsInput, roomsInput } = require('Components/dropdown/dropdown.json');
+    const itemsInfo = haveControlButtons ? guests : rooms;
+    const dropdownInfo = haveControlButtons ? guestsInput : roomsInput;
+    const { placeholder, name } = dropdownInfo;
+
+  .dropdown
+    +label({ labelText: labelText, labelRightText: labelRightText })
+    .dropdown__container.js-dropdown
+      div(class = buttonContainerClass)
+        each itemInfo, index in itemsInfo
+          - const { itemDataType, itemText } = itemInfo
+            +dropdown-item({
+              itemDataType: itemDataType,
+              itemText: itemText,
+              itemDataOrder: index,
+              itemAmount: itemsAmount[index]
+            })
+        if (haveControlButtons)
+          .dropdown__buttons
+            button(
+              type = 'button'
+              class = `${ buttonSubmitClass } js-dropdown__button_type_submit`
+              ) Применить
+            button(
+              type = 'button'
+              class = `${ buttonResetClass } js-dropdown__button_type_reset`
+              ) Очистить
+      .dropdown__info.js-dropdown__info.js-expand__init
+        input.dropdown__input.js-dropdown__input(
+          type = 'text'
+          placeholder = placeholder
+          name = name
+          value = '')

@@ -1,6 +1,6 @@
 include ../button-submit/button-submit.pug
 include ../date-range/date-range.pug
-include ../dropdown-guests/dropdown-guests.pug
+include ../dropdown/dropdown.pug
 
 mixin card-booking({ cardBookingInfo })
   -
@@ -37,9 +37,10 @@ mixin card-booking({ cardBookingInfo })
         ]
       })
     .card-booking__dropdown-guests
-      +dropdown-guests({
+      +dropdown({
         labelText: 'Гости',
-        guestsAmount: guestsAmount
+        itemsAmount: guestsAmount,
+        haveControlButtons: true
       })
     each priceInfo in priceInfos 
       - const { infoDescription, infoSign, infoPrice } = priceInfo;
