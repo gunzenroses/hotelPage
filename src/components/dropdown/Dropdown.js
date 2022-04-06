@@ -9,23 +9,24 @@ export default class Dropdown extends DropdownItem {
 
   _createClasses() {
     super._createClasses();
-    this.classExpand = '.js-expand';
-
     const blockName = 'dropdown';
+    this.classInfo = `.js-${ blockName }__info`;
+    this.classExpand = `.js-${ blockName }__content`;
+    this.classDropdownReset = `.js-${ blockName }__button_type_reset`;
+    this.classDropdownSubmit = `.js-${ blockName }__button_type_submit`;
     this.classDropdownShow = `${ blockName }__show`;
-    this.classButtonShow = `${ blockName }__button_visible`
-    this.classDropdownReset = `${ blockName }__button_type_reset`;
-    this.classDropdownSubmit = `${ blockName }__button_type_submit`;
+    this.classButtonShow = `${ blockName }__button_visible`;
   }
 
   _createChildren() {
     super._createChildren();
+    this.info = this.container.querySelector(this.classInfo);
     this.dropdownExpanded = this.container.querySelector(this.classExpand);
     this.resetButton = this.dropdownExpanded.querySelector(
-      `.js-${ this.classDropdownReset }`
+      this.classDropdownReset
     );
     this.submitButton = this.dropdownExpanded.querySelector(
-      `.js-${ this.classDropdownSubmit }`
+      this.classDropdownSubmit
     );
   }
 
@@ -34,6 +35,18 @@ export default class Dropdown extends DropdownItem {
     if (this.resetButton) {
       this.resetButton.addEventListener('pointerup', this._resetGuests);
       this.submitButton.addEventListener('pointerup', this._submitItems);
+    }
+    document.addEventListener('pointerup', this._clickEvent);
+  }
+
+  @boundMethod
+  _clickEvent(e) {
+    const clickOnExpanded = e.target.closest(this.classExpand);
+    const clickOnInit = e.target.closest(this.classInfo);
+    if (clickOnInit) {
+      this._toggleContent();
+    } else if (!clickOnExpanded) {
+      this._hideElements();
     }
   }
 
@@ -192,6 +205,15 @@ export default class Dropdown extends DropdownItem {
       }
     }
     return `${ this.data[j] } ${ dataTypeName }`;
+  }
+
+  _toggleContent() {
+    console.log(11)
+    this.dropdownExpanded.classList.toggle(this.classDropdownShow);
+  }
+
+  _hideElements() {
+    this.dropdownExpanded.classList.remove(this.classDropdownShow);
   }
 
   @boundMethod

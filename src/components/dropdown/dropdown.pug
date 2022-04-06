@@ -5,11 +5,11 @@ mixin dropdown({ labelText = 'dropdown', showContent = false, itemsAmount = [0, 
   - 
     const dropdownClassShow = showContent === true
       ? 'dropdown__show'
-      : ''
+      : '';
+    const contentClass = haveControlButtons === false
+      ? `dropdown__content js-dropdown__content ${ dropdownClassShow }`
+      : `dropdown__content dropdown__content_with-control-buttons js-dropdown__content ${ dropdownClassShow }`;
     const buttonSubmitClass = 'dropdown__button dropdown__button_type_submit';
-    const buttonContainerClass = haveControlButtons === false
-      ? `dropdown__content js-expand ${ dropdownClassShow }`
-      : `dropdown__content dropdown__content_with-control-buttons js-expand ${ dropdownClassShow }`;
     const buttonResetClass = 'dropdown__button dropdown__button_type_reset';
     const { guests, rooms, guestsInput, roomsInput } = require('Components/dropdown/dropdown.json');
     const itemsInfo = haveControlButtons ? guests : rooms;
@@ -19,7 +19,7 @@ mixin dropdown({ labelText = 'dropdown', showContent = false, itemsAmount = [0, 
   .dropdown
     +label({ labelText: labelText, labelRightText: labelRightText })
     .dropdown__container.js-dropdown
-      div(class = buttonContainerClass)
+      div(class = contentClass)
         each itemInfo, index in itemsInfo
           - const { itemDataType, itemText } = itemInfo
             +dropdown-item({
@@ -38,7 +38,7 @@ mixin dropdown({ labelText = 'dropdown', showContent = false, itemsAmount = [0, 
               type = 'button'
               class = `${ buttonResetClass } js-dropdown__button_type_reset`
               ) Очистить
-      .dropdown__info.js-dropdown__info.js-expand__init
+      .dropdown__info.js-dropdown__info
         input.dropdown__input.js-dropdown__input(
           type = 'text'
           placeholder = placeholder

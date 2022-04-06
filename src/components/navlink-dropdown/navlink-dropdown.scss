@@ -25,6 +25,10 @@
       width: 100%;
       min-width: 260px;
     }
+
+    &_visible {
+      display: block;
+    }
   }
 
   &__content {

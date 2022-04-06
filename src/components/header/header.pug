@@ -15,7 +15,7 @@ mixin header({ user = '', theme = '' })
       ? 'registration.html' 
       : `${ userName }.html`;
   
-  header.header
+  header.header.js-header
     div(class = headerClass)
       if theme === ''
         .header__logo
@@ -23,9 +23,9 @@ mixin header({ user = '', theme = '' })
       else
         +logo()
       .header__menu
-        .header__burger-menu.js-expand__init
+        .header__burger-menu.js-header__init
           span.header__burger-span
-        nav.header__dropdown.expand.js-expand
+        nav.header__dropdown.js-header__expand
           ul.header__navbar.header__navbar_dropdown
             +navlink({
               buttonLinkText: 'О нас',

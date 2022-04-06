@@ -19,7 +19,6 @@ export default class DropdownItem {
 
   _createClasses() {
     const modDisabled = 'disabled';
-    this.classInfo = 'dropdown__info';
     this.classInput = 'dropdown__input';
 
     this.classItem = 'dropdown-item';
@@ -31,7 +30,6 @@ export default class DropdownItem {
   }
 
   _createChildren() {
-    this.info = this.container.querySelector(`.js-${ this.classInfo }`);
     this.infoInput = this.container.querySelector(`.js-${ this.classInput }`);
     this.dropdownItems = Array.from(
       this.container.querySelectorAll(`.js-${ this.classItem }`)

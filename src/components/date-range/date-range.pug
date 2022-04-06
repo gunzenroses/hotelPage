@@ -1,18 +1,18 @@
 include ../calendar/calendar.pug
 
-mixin date-range({ dateRanges = [{ labelText: '', value: '', name: 'check-in-check-out', data: 'date-range' }], placeHolder = 'ДД.ММ.ГГГГ', classShow = '', theme = '' })
+mixin date-range({ dateRanges = [{ labelText: '', value: '', name: 'check-in-check-out', data: 'date-range' }], placeHolder = 'ДД.ММ.ГГГГ', showContent = '', theme = '' })
   -
     const className = theme === 'search' 
       ? 'date-range__info date-range__info_in_search'
       : 'date-range__info';
 
     const rangeSelectorClass = dateRanges.length === 1
-      ? 'date-range__selector js-expand__init'
-      : 'date-range__selector js-expand__init date-range__selector_separate';
+      ? 'date-range__selector js-date-range__init'
+      : 'date-range__selector js-date-range__init date-range__selector_separate';
 
   div.date-range.js-date-range
-    div(class = `date-range__calendar js-date-range__calendar js-expand ${
-        classShow }`)
+    div(class = `date-range__calendar js-date-range__calendar ${
+        showContent }`)
       +calendar()
     div(class = rangeSelectorClass)
       each dateRange in dateRanges
