@@ -1,8 +1,11 @@
 include ../dropdown-item/dropdown-item.pug
 include ../label/label.pug
 
-mixin dropdown({ labelText = 'dropdown', dropdownClassShow = '', itemsAmount = [0, 0, 0], haveControlButtons = false, labelRightText = '' })
+mixin dropdown({ labelText = 'dropdown', showContent = false, itemsAmount = [0, 0, 0], haveControlButtons = false, labelRightText = '' })
   - 
+    const dropdownClassShow = showContent === true
+      ? 'dropdown__show'
+      : ''
     const buttonSubmitClass = 'dropdown__button dropdown__button_type_submit';
     const buttonContainerClass = haveControlButtons === false
       ? `dropdown__content js-expand ${ dropdownClassShow }`

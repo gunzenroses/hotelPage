@@ -1,5 +1,4 @@
 @import '@~Assets/styles/colors.scss';
-@import '@~Assets/styles/expand.scss';
 @import '@~Assets/styles/fonts.scss';
 @import '@~Assets/styles/media-mixins.scss';
 @import '@~Assets/styles/mixins.scss';
@@ -17,6 +16,15 @@
 
   @include xxxl {
     width: fit-content;
+  }
+
+  &__expand {
+    display: none;
+
+    @include xxs {
+      width: 100%;
+      min-width: 260px;
+    }
   }
 
   &__content {

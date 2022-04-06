@@ -10,10 +10,10 @@ export default class Dropdown extends DropdownItem {
   _createClasses() {
     super._createClasses();
     this.classExpand = '.js-expand';
-    this.classExpandShow = 'expand__show';
 
     const blockName = 'dropdown';
     this.classDropdownShow = `${ blockName }__show`;
+    this.classButtonShow = `${ blockName }__button_visible`
     this.classDropdownReset = `${ blockName }__button_type_reset`;
     this.classDropdownSubmit = `${ blockName }__button_type_submit`;
   }
@@ -59,11 +59,11 @@ export default class Dropdown extends DropdownItem {
   }
 
   _onZero() {
-    this.resetButton.classList.remove(this.classDropdownShow);
+    this.resetButton.classList.remove(this.classButtonShow);
   }
 
   _onSomeGuests() {
-    this.resetButton.classList.add(this.classDropdownShow);
+    this.resetButton.classList.add(this.classButtonShow);
     this._adjustInputData();
   }
 
@@ -205,6 +205,6 @@ export default class Dropdown extends DropdownItem {
 
   @boundMethod
   _submitItems() {
-    this.dropdownExpanded.classList.remove(this.classExpandShow);
+    this.dropdownExpanded.classList.remove(this.classDropdownShow);
   }
 }

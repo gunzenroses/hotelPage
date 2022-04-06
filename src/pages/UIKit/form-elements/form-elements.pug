@@ -188,7 +188,7 @@ mixin form-elements(checkboxList, comment1)
           .form-elements__rooms.js-dropdown__detection
             +dropdown({
               labelText: 'dropdown',
-              dropdownClassShow: 'expand__show',
+              showContent: true,
               labelRightText: 'expanded',
               itemsAmount: [2, 2, 0],
             })
@@ -199,13 +199,13 @@ mixin form-elements(checkboxList, comment1)
         .form-elements__checkbox-expand
           +checkbox-expandable({
             dropdownTitleName: 'Expandable checkbox list',
-            dropdownClassShow: 'checkbox-expandable__show',
+            showContent: true,
           })
       .form-elements__search-info
         .form-elements__guests_open.js-dropdown__detection
           +dropdown({
             labelText: 'dropdown',
-            dropdownClassShow: 'expand__show',
+            showContent: true,
             haveControlButtons: true
           })
         .form-elements__rich-checkbox
@@ -217,7 +217,7 @@ mixin form-elements(checkboxList, comment1)
         .form-elements__guests_open.js-dropdown__detection
           +dropdown({
             labelText: 'dropdown',
-            dropdownClassShow: 'expand__show',
+            showContent: true,
             itemsAmount: [2, 1, 0],
             haveControlButtons: true
           })

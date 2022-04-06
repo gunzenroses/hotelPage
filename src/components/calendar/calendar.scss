@@ -244,4 +244,12 @@
       border-radius: 0 50% 50% 0;
     }
   }
+
+  &__show {
+    @include isFlex($direction: column, $justify: flex-start);
+
+    @include xxxl {
+      width: 100%;
+    }
+  }
 }

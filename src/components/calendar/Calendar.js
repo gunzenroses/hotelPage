@@ -104,7 +104,7 @@ class Calendar {
     this.classCalendarMonth = 'calendar__month';
     this.classControlNext = 'calendar__control_next';
     this.classControlPrev = 'calendar__control_prev';
-    this.classExpandShow = 'expand__show';
+    this.classExpandShow = 'calendar__show';
   }
 
   _createChildren(item) {

@@ -1,7 +1,10 @@
 include ../checkbox-item/checkbox-item.pug
 
-mixin checkbox-expandable({ dropdownTitleName, dropdownClassShow = '' })
+mixin checkbox-expandable({ dropdownTitleName, showContent = false })
   - 
+    const dropdownClassShow = showContent === true
+      ? 'checkbox-expandable__show'
+      : ''
     const { checkboxContent } = 
       require('Components/checkbox-expandable/checkbox-expandable.json');
 

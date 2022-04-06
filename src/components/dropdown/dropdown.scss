@@ -1,5 +1,4 @@
 @import '@~Assets/styles/colors.scss';
-@import '@~Assets/styles/dropdown.scss';
 @import '@~Assets/styles/media-mixins.scss';
 @import '@~Assets/styles/mixins.scss';
 
@@ -113,6 +112,10 @@
     &_type_submit {
       display: inline-block;
     }
+
+    &_visible {
+      display: block;
+    }
   }
 
   &__input {
@@ -125,6 +128,22 @@
 
     &::placeholder {
       color: $dark-shade_more;
+    }
+  }
+
+  &__show {
+    @include isFlex($direction: column, $justify: flex-start);
+
+    @include xxxl {
+      width: 100%;
+    }
+
+    & ~ .dropdown__info {
+      border: 1px solid $dark-shade_medium;
+    }
+
+    & ~ .dropdown__info::before {
+      content: '\e5ce';
     }
   }
 }

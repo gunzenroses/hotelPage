@@ -75,4 +75,16 @@
     text-transform: uppercase;
     text-align: start;
   }
+
+  &__show {
+    @include isFlex($direction: column, $justify: flex-start);
+
+    @include xxxl {
+      width: 100%;
+    }
+
+    & ~ .date-range__selector .date-range__info::before {
+      transform: rotate(180deg);
+    }
+  }
 }
