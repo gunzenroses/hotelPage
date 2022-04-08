@@ -1,0 +1,31 @@
+mixin button({ text = '', href = './some-address', theme = '', innerElement = 'button' })
+  - 
+    const buttonSubmit = theme === '' 
+      ? 'button button_type_submit' 
+      : `button button_type_submit button_style_in_${ theme }`;
+
+    const formLink = theme === ''
+      ? 'button__form-link'
+      : `button__form-link button__form-link_type_${ theme }`;
+
+    const link = theme === ''
+      ? 'button__link'
+      : `button__link button__link_type_${ theme }`;
+
+    const elements = {
+      button: 'button button_style_borderless',
+      link: link,
+      'form-link': formLink,
+      submit: buttonSubmit
+    };
+
+    const classes = elements[innerElement];
+    const tag = innerElement === 'submit' ? 'button' : 'a';
+    const type = innerElement === 'submit' ? 'submit' : 'text/html';
+
+  if innerElement === 'button' | innerElement === 'submit'
+    #{tag}(class = classes type = type)&attributes(
+      innerElement === 'button' ? {'href': href} : {})= text
+  else
+    div(class = 'button button_style_border')
+      #{tag}(class = classes href = href type = type)= text

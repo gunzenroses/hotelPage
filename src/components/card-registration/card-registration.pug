@@ -1,9 +1,8 @@
-include ../button-link/button-link.pug
-include ../radio-buttons/radio-buttons.pug
-include ../button-submit/button-submit.pug
+include ../button/button.pug
 include ../button-toggle/button-toggle.pug
 include ../label/label.pug
 include ../login/login.pug
+include ../radio-buttons/radio-buttons.pug
 include ../textfield/textfield.pug
 
 mixin card-registration({ title = 'Регистрация аккаунта', submitText = "", text = 'Уже есть аккаунт на Toxin' })
@@ -51,15 +50,17 @@ mixin card-registration({ title = 'Регистрация аккаунта', sub
         name: 'special offers' 
       })
     .card-registration__button-submit
-      +button-submit({ 
-        text: submitText 
+      +button({
+        innerElement: 'submit',
+        text: submitText
       })
     .card-registration__info
       .card__row
         .card__text!= text
         .card-registration__button-link
-          +button-link({
+          +button({
             text: 'Войти',
             href: 'sign-in.html',
-            innerElement: 'sign-in'
+            innerElement: 'form-link',
+            theme: 'sign-in'
           })

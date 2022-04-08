@@ -1,5 +1,4 @@
-include ../button-link/button-link.pug
-include ../button-submit/button-submit.pug
+include ../button/button.pug
 include ../login/login.pug
 
 mixin card-sign-in({ title = 'Войти', theme = 'main', text = 'Нет аккаунта на Toxin?'})
@@ -7,15 +6,17 @@ mixin card-sign-in({ title = 'Войти', theme = 'main', text = 'Нет акк
     h1.card__title!= title
     +login(theme)
     .card-sign-in__button
-      +button-submit({ 
+      +button({ 
+        innerElement: 'submit',
         text: 'Войти' 
       })
     .card-sign-in__info
       .card__row
         .card__text!= text
         .card-sign-in__button-link
-          +button-link({
+          +button({
             text: 'Создать',
             href: 'registration.html',
-            innerElement: 'sign-in'
+            innerElement: 'form-link',
+            theme: 'sign-in'
           })

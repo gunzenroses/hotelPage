@@ -1,4 +1,4 @@
-include ../button-submit/button-submit.pug
+include ../button/button.pug
 include ../date-range/date-range.pug
 include ../dropdown/dropdown.pug
 
@@ -54,7 +54,8 @@ mixin card-booking({ info })
       .card-booking__line
       .card-booking__text!= `${totalPrice}₽`
     .card-booking__button
-      +button-submit({ 
+      +button({ 
         text: 'Забронировать',
+        innerElement: 'submit',
         theme: theme
       })

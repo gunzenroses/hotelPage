@@ -1,4 +1,4 @@
-include ../button-submit/button-submit.pug
+include ../button/button.pug
 include ../date-range/date-range.pug
 include ../dropdown/dropdown.pug
 
@@ -25,7 +25,8 @@ mixin card-search(title = 'Найдём номера под ваши пожел�
         haveControlButtons: true
       })
     .card-search__button
-      +button-submit({ 
+      +button({
+        innerElement: 'submit',
         text: 'Подобрать номер',
         theme: theme
       })

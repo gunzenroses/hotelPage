@@ -1,4 +1,4 @@
-include ../button-link/button-link.pug
+include ../button/button.pug
 include ../logo/logo.pug
 include ../navlink/navlink.pug
 include ../navlink-dropdown/navlink-dropdown.pug
@@ -46,15 +46,17 @@ mixin header({ user = '', theme = '' })
         else
           .header__forms
             .header__sign-in
-              +button-link({
+              +button({
                 text: 'Войти',
                 href: 'sign-in.html',
-                innerElement: 'sign-in'
+                innerElement: 'form-link',
+                theme: 'sign-in'
               })
             .header__registration
-              +button-link({ 
+              +button({ 
                 href: 'registration.html',
-                innerElement: 'registration'
+                innerElement: 'link',
+                theme: 'registration'
               })
         nav.header__navbar-region
           ul.header__navbar

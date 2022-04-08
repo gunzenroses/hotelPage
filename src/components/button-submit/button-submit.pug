@@ -1,9 +1,0 @@
-mixin button-submit({ text = '', theme = '' })
-  - 
-    const className = theme === ''
-      ? 'button-submit' 
-      : `button-submit button-submit_type_${ theme }`;
-
-  button(
-    class = className 
-    type = 'submit')= text
