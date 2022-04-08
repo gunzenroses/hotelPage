@@ -41,8 +41,8 @@ export default class Dropdown extends DropdownItem {
 
   @boundMethod
   _clickEvent(e) {
-    const clickOnExpanded = e.target.closest(this.classExpand);
-    const clickOnInit = e.target.closest(this.classInfo);
+    const clickOnExpanded = e.target.closest(this.classExpand) === this.dropdownExpanded;
+    const clickOnInit = e.target.closest(this.classInfo) === this.info;
     if (clickOnInit) {
       this._toggleContent();
     } else if (!clickOnExpanded) {
