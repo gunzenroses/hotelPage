@@ -12,12 +12,6 @@ class DateRange {
     this._enable();
   }
 
-  hideElements() {
-    this.dropdownWatchedExpands.forEach((item) => {
-      item.classList.remove(this.classShow);
-    });
-  }
-
   _createClasses() {
     this.classInit = '.js-date-range__init';
     this.classExpand = '.js-date-range__calendar';
@@ -39,9 +33,9 @@ class DateRange {
 
   @boundMethod
   _dropdownClick(e) {
-    const clickOnExpanded = e.target.closest(this.classExpand) 
+    const clickOnExpanded = e.target.closest(this.classExpand) === this.dropdownExpand
       || e.target.classList.contains(this.classInner);
-    const clickOnInit = e.target.closest(this.classInit);
+    const clickOnInit = e.target.closest(this.classInit) === this.dropdownInit;
     if (clickOnInit) {
       this._toggleClass();
     } else if (!clickOnExpanded) {
