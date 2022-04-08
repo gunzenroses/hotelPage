@@ -2,7 +2,7 @@ include ../checkbox-item/checkbox-item.pug
 
 mixin checkbox-expandable({ title = "", showContent = false })
   - 
-    const dropdownClassShow = showContent === true
+    const classShow = showContent === true
       ? 'checkbox-expandable__show'
       : '';
     const { checkboxContent } = 
@@ -16,7 +16,7 @@ mixin checkbox-expandable({ title = "", showContent = false })
       fieldset(class = `${ 
         checkboxContentClass 
         } js-checkbox-expandable__show ${ 
-        dropdownClassShow }`)
+        classShow }`)
           each checkboxItem in checkboxContent
             - 
               const { 

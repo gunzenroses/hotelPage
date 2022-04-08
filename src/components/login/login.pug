@@ -2,11 +2,11 @@ include ../textfield/textfield.pug
 
 mixin login(theme = '')
   - 
-    const loginClass = theme === ''
+    const className = theme === ''
       ? 'login' 
       : `login login_in_${ theme }`;
 
-  div(class = loginClass)
+  div(class = className)
     +textfield({ 
       modifier: 'email',
       placeholder: 'Email',

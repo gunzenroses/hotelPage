@@ -1,9 +1,9 @@
 mixin button-like({ likesAmount = 1, liked = false })
   - 
-    const buttonLikeClass = liked
+    const className = liked
       ? 'button-like js-button-like button-like_popular'
       : 'button-like js-button-like';
 
-  div(class = buttonLikeClass)
+  div(class = className)
     .button-like__heart.js-button-like__heart
     .button-like__number.js-button-like__number!= likesAmount

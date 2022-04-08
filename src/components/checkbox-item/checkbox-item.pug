@@ -1,10 +1,10 @@
 mixin checkbox-item({ value = '', name = '', checked = false, title = '', modifier = '', description = '' })
   -
-    const itemClass = modifier === 'rich'
+    const className = modifier === 'rich'
       ? 'checkbox-item checkbox-item_rich'
       : 'checkbox-item';
 
-  label(class = itemClass)
+  label(class = className)
     input(
       type = 'checkbox'
       value = value

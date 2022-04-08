@@ -1,10 +1,10 @@
 mixin social-nets(theme = '')
   -
-    const socialNetClass = theme === ''
+    const className = theme === ''
       ? 'social-net'
       : `social-net_in_${ theme }`;
 
-  .social-net
+  div(class = className)
     a(class = 'social-net__item social-net__twitter'
       href = 'https://www.twitter.com/' 
       target = '_blank'

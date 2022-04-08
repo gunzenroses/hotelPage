@@ -1,17 +1,17 @@
 mixin textfield({ modifier = '', placeholder = '', value = '', name = 'text', maxText = 30, autofocus = false })
   - 
-    const textfieldType = modifier === 'password' 
+    const type = modifier === 'password' 
       ? 'password' 
       : 'text';
 
-    const textfieldClass = modifier === '' 
+    const className = modifier === '' 
       ? 'textfield' 
       : `textfield textfield_type_${ modifier }`;
 
-  div(class = textfieldClass)
+  div(class = className)
     input(
       class = 'textfield__input' 
-      type = textfieldType 
+      type = type 
       placeholder = placeholder, 
       value = value 
       name = name 

@@ -10,4 +10,4 @@ mixin button-link({ text = '', href = './some-address', innerElement = 'form-lin
     const classes = elements[innerElement];
 
   div(class = 'button-link')
-    a(class = classes href = buttonLinkHref)= buttonLinkText
+    a(class = classes href = href)= text
