@@ -1,13 +1,13 @@
 mixin dropdown-item({ dataType, text, dataOrder, itemAmount = 0, modifier = '' })
   -
-    const classDropdown = modifier === ''
+    const className = modifier === ''
       ? 'dropdown-item js-dropdown-item'
       : `dropdown-item js-dropdown-item dropdown-item_${ modifier }`
 
   div(
-    class = classDropdown 
+    class = className 
     data-type = dataType)
-    .dropdown-item__text.js-dropdown-item__text!= itemText
+    .dropdown-item__text.js-dropdown-item__text!= text
     .dropdown-item__minus.js-dropdown-item__minus - 
     div(
       class = 'dropdown-item__number js-dropdown-item__number' 
