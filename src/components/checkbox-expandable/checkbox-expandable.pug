@@ -1,6 +1,6 @@
 include ../checkbox-item/checkbox-item.pug
 
-mixin checkbox-expandable({ title = "", showContent = false })
+mixin checkbox-expandable({ text = "", showContent = false })
   - 
     const classShow = showContent === true
       ? 'checkbox-expandable__show'
@@ -23,7 +23,7 @@ mixin checkbox-expandable({ title = "", showContent = false })
                 value, 
                 name, 
                 checked, 
-                checkbox } = checkboxItem;
+                title } = checkboxItem;
             +checkbox-item({
               value: value,
               name: name,
@@ -32,4 +32,4 @@ mixin checkbox-expandable({ title = "", showContent = false })
               modifier: 'expandable'
             })
       .checkbox-expandable__button.js-checkbox-expandable__init
-        .checkbox-expandable__title!= title
+        .checkbox-expandable__title!= text
