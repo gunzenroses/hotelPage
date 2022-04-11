@@ -2,7 +2,7 @@ mixin social-nets(theme = '')
   -
     const className = theme === ''
       ? 'social-net'
-      : `social-net_in_${ theme }`;
+      : `social-net social-net_in_${ theme }`;
 
   div(class = className)
     a(class = 'social-net__item social-net__twitter'
