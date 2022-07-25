@@ -4,7 +4,7 @@ import * as paginationData from './pagination.json';
 class Pagination {
   constructor(item) {
     this.data = paginationData;
-    this.num = this.data.currentNum;
+    this.num = 1;
     this.init(item);
   }
 

@@ -1,6 +1,6 @@
 @import '@~Assets/styles/media-mixins.scss';
 @import '@~Assets/styles/mixins.scss';
-@import '@~Components/checkbox-item/checkbox-item.scss';
+@import '@~Components/checkbox/checkbox.scss';
 
 .checkbox-expandable {
   @include isFlex($direction: column);

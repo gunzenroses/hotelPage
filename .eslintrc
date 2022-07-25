@@ -41,7 +41,8 @@
           ["Scripts", "./src/scripts/"],
           ["Styles", "./src/assets/styles/"],
           ["Components", "./src/components/"],
-          ["Pages", ".src/pages/]"]
+          ["Pages", ".src/pages/]"],
+          ["Utils", "src/utils/"]
         ],
         "extensions": [".js"]
       }

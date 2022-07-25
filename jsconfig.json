@@ -13,6 +13,7 @@
       "Styles/*": ["src/assets/styles/*"],
       "Components/*": ["src/components/*"],
       "Pages/*": ["src/pages/*"],
+      "Utils/*": ["src/utils/*"],
     }
   },
   "include": ["./src", "validation.js"],

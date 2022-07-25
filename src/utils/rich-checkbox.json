@@ -1,0 +1,17 @@
+{
+  "accessibilityItems": [
+    {
+      "name": "accessibility",
+      "value": "wide corridor",
+      "title": "Широкий коридор",
+      "description": "Ширина коридоров в номере <br> не менее 91 см."
+    },
+    {
+      "name": "accessibility",
+      "value": "help for disabled",
+      "title": "Помощник для инвалидов",
+      "description": 
+        "На 1 этаже вас встретит специалист <br> и проводит до номера."
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+@import '@~Assets/styles/media-mixins.scss';
+@import '@~Assets/styles/mixins.scss';
+@import '@~Components/checkbox/checkbox.scss';
+
+.checkbox-list {
+  @include isFlex($direction: column);
+  width: 224px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  appearance: none;
+
+  @include xxxl {
+    width: 100%;
+  }
+}

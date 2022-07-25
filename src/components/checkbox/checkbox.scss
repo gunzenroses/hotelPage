@@ -1,16 +1,144 @@
 @import '@~Assets/styles/media-mixins.scss';
 @import '@~Assets/styles/mixins.scss';
-@import '@~Components/checkbox-item/checkbox-item.scss';
 
-.checkbox {
-  @include isFlex($direction: column);
-  width: 224px;
-  margin: 0;
-  padding: 0;
-  border: none;
-  appearance: none;
+@mixin checkBox {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
 
   @include xxxl {
-    width: 100%;
+    display: block;
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@mixin checkboxFake {
+  @include checkBox();
+  position: relative;
+  display: inline-block;
+  border: 1px solid $dark-shade_less;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.checkbox {
+  @include isFlex($justify: flex-start);
+  width: fit-content;
+  max-width: 100%;
+  text-transform: none;
+  user-select: none;
+  cursor: pointer;
+
+  & + & {
+    margin-top: 10px;
+  }
+
+  &__real {
+    @include checkBox();
+    position: absolute;
+    opacity: 0;
+    appearance: none;
+  }
+
+  &__fake {
+    @include checkboxFake();
+    min-width: 20px;
+  }
+
+  &__real:checked ~ &__fake {
+    @include checkboxFake();
+    border-color: $purple;
+  }
+
+  &__real:checked + &__fake::before {
+    content: '';
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    display: block;
+    width: 4px;
+    height: 6px;
+    transform: translate(-50%, -50%) rotate(45deg);
+    border-image: $linearGradientLilac;
+    border-image-slice: 1;
+    border-right: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+
+    @include xxxl {
+      display: block;
+      width: 5px;
+      height: 10px;
+    }
+  }
+
+  &__form {
+    @include isFlex($direction: column, $justify: flex-start);
+    max-width: 350px;
+    height: fit-content;
+  }
+
+  &__title {
+    display: block;
+    width: fit-content;
+    margin-top: 2px;
+    line-height: 18px;
+    font-family: $montserrat;
+    font-size: 13.5px;
+    letter-spacing: .02em;
+    font-weight: 400;
+    color: $dark-shade_medium;
+
+    @include xxxl {
+      font-size: $fs_base;
+    }
+  }
+
+  &__description {
+    height: fit-content;
+    margin-top: 5px;
+    line-height: 15px;
+    font-size: $fs_h3;
+    letter-spacing: 0.0001em;
+    font-weight: 400;
+    color: $dark-shade_medium;
+
+    @include xxxl {
+      line-height: $fs_h2;
+      font-size: $fs_base;
+    }
+  }
+
+  &_expandable {
+    & .checkbox__title {
+      margin-top: 0;
+      line-height: 20px;
+      font-size: $fs_base;
+      letter-spacing: 0.003em;
+
+      @include xxxl {
+        font-size: $fs_base;
+      }
+    }
+  }
+
+  &_rich {
+    height: fit-content;
+
+    & + .checkbox_rich {
+      margin-top: 8px;
+    }
+
+    & .checkbox__title {
+      margin-top: 1px;
+      font-size: $fs_base;
+      letter-spacing: 0.0001em;
+      font-weight: 700;
+      color: $dark-shade_more;
+
+      @include xxxl {
+        font-size: $fs_base;
+      }
+    }
   }
 }

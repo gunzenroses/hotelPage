@@ -1,0 +1,20 @@
+{
+  "itemsRooms": [
+    {
+      "itemDataType": "bedrooms",
+      "itemText": "Спальни"
+    },
+    {
+      "itemDataType": "beds",
+      "itemText": "Кровати"
+    },
+    {
+      "itemDataType": "bathrooms",
+      "itemText": "Ванные комнаты"
+    }
+  ],
+  "dropdownRooms": {
+    "placeholder": "Выберите условия",
+    "name": "rooms"
+  }
+}

@@ -1,7 +1,7 @@
 extends ../../assets/templates/template.pug
 
 include ../../components/card-room/card-room.pug
-include ../../components/checkbox/checkbox.pug
+include ../../components/checkbox-list/checkbox-list.pug
 include ../../components/checkbox-expandable/checkbox-expandable.pug
 include ../../components/date-range/date-range.pug
 include ../../components/dropdown/dropdown.pug
@@ -19,6 +19,12 @@ block variables
     let description = 'room search';
     let keywords = 'search, room';
     const  { roomsList } = require('./search-room.json');
+    const { houseRules } = require('Utils/checkbox-list.json');
+    const { checkboxContent } = 
+      require('Utils/checkbox-expandable.json');
+    const { itemsGuests, dropdownGuests } = require('Utils/dropdown-guests.json');
+    const { itemsRooms, dropdownRooms } = require('Utils/dropdown-rooms.json');
+    const { accessibilityItems } = require('Utils/rich-checkbox.json');
 
 block content
   .search-room.js-dropdown__detection
@@ -43,7 +49,8 @@ block content
                 +dropdown({
                   text: 'гости',
                   itemsAmount: [2, 1, 1],
-                  haveControlButtons: true
+                  itemsInfo: itemsGuests,
+                  dropdownInfo: dropdownGuests,
                 })
               .search-room__filter-price
                 +range({
@@ -52,20 +59,26 @@ block content
                 })
               .search-room__filter-rules
                 h3.label Правила дома
-                +checkbox
+                +checkbox-list({
+                  items: houseRules
+                })
             .search-room__filter-group
               .search-room__accessibility
                 +rich-checkbox({
                   name: 'accessibility',
-                  text: 'Доступность'
+                  text: 'Доступность',
+                  items: accessibilityItems,
                 })
               .search-room__filter-rooms
                 +dropdown({
                   text: 'Удобства номера',
                   itemsAmount: [2, 2, 0],
+                  itemsInfo: itemsRooms,
+                  dropdownInfo: dropdownRooms,
                 })
               .search-room__filter-extras
                 +checkbox-expandable({
+                  items: checkboxContent,
                   text: 'Дополнительные удобства'
                 })
         section.search-room__rooms

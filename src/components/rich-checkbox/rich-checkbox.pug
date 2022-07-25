@@ -1,34 +1,17 @@
-include ../checkbox-item/checkbox-item.pug
+include ../checkbox/checkbox.pug
 
-mixin rich-checkbox({ name = '', text = '' })
-  - 
-    const checkboxList = [
-      {
-        name: 'accessibility',
-        value: 'wide corridor',
-        title: 'Широкий коридор',
-        description: 'Ширина коридоров в номере <br> не менее 91 см.'
-      },
-      {
-        name: 'accessibility',
-        value: 'help for disabled',
-        title: 'Помощник для инвалидов',
-        description: 
-          'На 1 этаже вас встретит специалист <br> и проводит до номера.'
-      }
-    ];
-
+mixin rich-checkbox({ name = '', text = '', items })
   .rich-checkbox
     .rich-checkbox__label!= text
     fieldset.rich-checkbox__list
-      each checkboxItem in checkboxList
+      each item in items
         - 
           const { 
             name, 
             value, 
             title, 
-            description } = checkboxItem;
-        +checkbox-item({
+            description } = item;
+        +checkbox({
           value: value,
           name: name,
           title: title,

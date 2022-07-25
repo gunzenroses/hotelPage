@@ -1,13 +1,10 @@
-include ../checkbox-item/checkbox-item.pug
+include ../checkbox/checkbox.pug
 
-mixin checkbox-expandable({ text = "", showContent = false })
+mixin checkbox-expandable({ items, text = "", showContent = false })
   - 
     const classShow = showContent === true
       ? 'checkbox-expandable__show'
       : '';
-    const { checkboxContent } = 
-      require('Components/checkbox-expandable/checkbox-expandable.json');
-
     const checkboxContentClass = 
       'checkbox-expandable__content js-checkbox-expandable__content';
 
@@ -17,14 +14,14 @@ mixin checkbox-expandable({ text = "", showContent = false })
         checkboxContentClass 
         } js-checkbox-expandable__show ${ 
         classShow }`)
-          each checkboxItem in checkboxContent
+          each item in items
             - 
               const { 
                 value, 
                 name, 
                 checked, 
-                title } = checkboxItem;
-            +checkbox-item({
+                title } = item;
+            +checkbox({
               value: value,
               name: name,
               checked: checked,

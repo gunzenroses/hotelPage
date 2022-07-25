@@ -4,7 +4,7 @@ include ../../../components/button/button.pug
 include ../../../components/button-like/button-like.pug
 include ../../../components/button-rate/button-rate.pug
 include ../../../components/button-toggle/button-toggle.pug
-include ../../../components/checkbox/checkbox.pug
+include ../../../components/checkbox-list/checkbox-list.pug
 include ../../../components/checkbox-expandable/checkbox-expandable.pug
 include ../../../components/comment/comment.pug
 include ../../../components/date-range/date-range.pug
@@ -17,6 +17,24 @@ include ../../../components/rich-checkbox/rich-checkbox.pug
 include ../../../components/textfield/textfield.pug
 
 mixin form-elements(checkboxList, comment1)
+  -
+    const genders = [{ 
+      value: 'male',
+      checked: checkedMan,
+      title: 'Мужчина'
+    },
+    { 
+      value: 'female',
+      checked: checkedWoman,
+      title: 'Женщина'
+    }];
+    const { houseRules } = require('Utils/checkbox-list.json');
+    const { checkboxContent } = 
+      require('Utils/checkbox-expandable.json');
+    const { itemsGuests, dropdownGuests } = require('Utils/dropdown-guests.json');
+    const { itemsRooms, dropdownRooms } = require('Utils/dropdown-rooms.json');
+    const { accessibilityItems } = require('Utils/rich-checkbox.json');
+
   .form-elements
     img.uikit__logo(src = './assets/images/logo/logo.svg' alt = 'uikit logo')
     .form-elements__content
@@ -51,7 +69,8 @@ mixin form-elements(checkboxList, comment1)
           .form-elements__guests.js-dropdown__detection
             +dropdown({
               text: 'dropdown',
-              haveControlButtons: true
+              itemsInfo: itemsGuests,
+              dropdownInfo: dropdownGuests,
             })
           .form-elements__birthday
             .container
@@ -103,10 +122,13 @@ mixin form-elements(checkboxList, comment1)
       .form-elements__input-buttons
         .form-elements__checkbox
           h3.label Checkbox buttons
-          +checkbox()
+          +checkbox-list({ items: houseRules })
         .form-elements__radio 
           h3.form-elements__label.form-elements__label_radio Radio buttons
-          +radio-buttons({ }) 
+          +radio-buttons({ 
+            items: genders, 
+            name: 'gender'
+          }) 
         .form-elements__toggle
           h3.form-elements__label.form-elements__label_toggle Toggle
           .form-elements__group_toggle
@@ -192,6 +214,8 @@ mixin form-elements(checkboxList, comment1)
               text: 'dropdown',
               rightLabel: 'default',
               itemsAmount: [2, 2, 0],
+              itemsInfo: itemsRooms,
+              dropdownInfo: dropdownRooms,
             })
           .form-elements__rooms.js-dropdown__detection
             +dropdown({
@@ -199,13 +223,17 @@ mixin form-elements(checkboxList, comment1)
               showContent: true,
               rightLabel: 'expanded',
               itemsAmount: [2, 2, 0],
+              itemsInfo: itemsRooms,
+              dropdownInfo: dropdownRooms,
             })
         .form-elements__checkbox-rolled-up
           +checkbox-expandable({
+            items: checkboxContent,
             text: 'Expandable checkbox list'
           })
         .form-elements__checkbox-expand
           +checkbox-expandable({
+            items: checkboxContent,
             text: 'Expandable checkbox list',
             showContent: true,
           })
@@ -214,12 +242,14 @@ mixin form-elements(checkboxList, comment1)
           +dropdown({
             text: 'dropdown',
             showContent: true,
-            haveControlButtons: true
+            itemsInfo: itemsGuests,
+            dropdownInfo: dropdownGuests,
           })
         .form-elements__rich-checkbox
           +rich-checkbox({
             name: 'accessibility',
-            text: 'Rich Checkbox Buttons'
+            text: 'Rich Checkbox Buttons',
+            items: accessibilityItems,
           })
       .form-elements__room-info
         .form-elements__guests_open.js-dropdown__detection
@@ -227,7 +257,8 @@ mixin form-elements(checkboxList, comment1)
             text: 'dropdown',
             showContent: true,
             itemsAmount: [2, 1, 0],
-            haveControlButtons: true
+            itemsInfo: itemsGuests,
+            dropdownInfo: dropdownGuests,
           })
         .form-elements__bullet-checkbox
           +bullet-checkbox({

@@ -1,0 +1,20 @@
+{
+  "itemsGuests": [
+    {
+      "itemDataType": "grownups",
+      "itemText": "Взрослые"
+    },
+    {
+      "itemDataType": "kids",
+      "itemText": "Дети"
+    },
+    {
+      "itemDataType": "infants",
+      "itemText": "Младенцы"
+    }
+  ],
+  "dropdownGuests": {
+    "placeholder": "Сколько гостей",
+    "name": "guests"
+  }
+}

@@ -1,14 +1,19 @@
-include ../checkbox-item/checkbox-item.pug
+mixin checkbox({ value = '', name = '', checked = false, title = '', modifier = '', description = '' })
+  -
+    const className = modifier === 'rich'
+      ? 'checkbox checkbox_rich'
+      : 'checkbox';
 
-mixin checkbox
-  - const { houseRules } = require('Components/checkbox/checkbox.json');
-
-  fieldset.checkbox
-    each houseRule in houseRules
-      - const { value, name, checked, title } = houseRule;
-      +checkbox-item({
-        value: value, 
-        name: name, 
-        checked: checked, 
-        title: title
-      })
+  label(class = className)
+    input(
+      type = 'checkbox'
+      value = value
+      name = name
+      checked = checked).checkbox__real
+    span.checkbox__fake
+    if modifier === 'rich'
+      span.checkbox__form
+        span.checkbox__title!= title
+        span.checkbox__description!= description
+    else 
+      span.checkbox__title!= title

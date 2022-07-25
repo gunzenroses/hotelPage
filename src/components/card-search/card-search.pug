@@ -3,6 +3,7 @@ include ../date-range/date-range.pug
 include ../dropdown/dropdown.pug
 
 mixin card-search(title = 'Найдём номера под ваши пожелания')
+  - const { itemsGuests, dropdownGuests } = require('Utils/dropdown-guests.json');
   form.card-search(method = 'get' action = './search-room.html')
     h1.card__title!= title
     .card-search__calendar
@@ -22,7 +23,8 @@ mixin card-search(title = 'Найдём номера под ваши пожел�
     .card-search__guests
       +dropdown({
         text: 'Гости',
-        haveControlButtons: true
+        itemsInfo: itemsGuests,
+        dropdownInfo: dropdownGuests,
       })
     .card-search__button
       +button({

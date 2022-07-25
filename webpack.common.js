@@ -36,6 +36,7 @@ module.exports = {
       Scripts: path.resolve(__dirname, 'src/assets/scripts/'),
       Styles: path.resolve(__dirname, 'src/assets/styles/'),
       Components: path.resolve(__dirname, 'src/components/'),
+      Utils: path.resolve(__dirname, 'src/utils'),
       Pages: path.resolve(__dirname, 'src/pages/'),
     },
     modules: [path.resolve(__dirname, 'src'), 'node_modules'],

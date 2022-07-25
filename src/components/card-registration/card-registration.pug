@@ -6,6 +6,18 @@ include ../radio-buttons/radio-buttons.pug
 include ../textfield/textfield.pug
 
 mixin card-registration({ title = 'Регистрация аккаунта', submitText = "", text = 'Уже есть аккаунт на Toxin' })
+  - 
+    const genders = [{ 
+      value: 'male',
+      checked: checkedMan,
+      title: 'Мужчина'
+    },
+    { 
+      value: 'female',
+      checked: checkedWoman,
+      title: 'Женщина'
+    }]
+
   form.card-registration.js-card-registration(
     method = 'get' 
     action = './registration.html' )
@@ -27,7 +39,10 @@ mixin card-registration({ title = 'Регистрация аккаунта', sub
         maxText: 20 
       })
     .card-registration__radio
-      +radio-buttons({ })
+      +radio-buttons({ 
+        items: genders, 
+        name: 'gender'
+      })
     .card-registration__birthday
       .container
         +label({ 

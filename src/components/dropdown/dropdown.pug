@@ -1,7 +1,7 @@
 include ../dropdown-item/dropdown-item.pug
 include ../label/label.pug
 
-mixin dropdown({ text = 'dropdown', showContent = false, itemsAmount = [0, 0, 0], haveControlButtons = false, rightLabel = '' })
+mixin dropdown({ text = 'dropdown', showContent = false, itemsAmount = [0, 0, 0], itemsInfo, dropdownInfo, rightLabel = '' })
   - 
     const dropdownClassShow = showContent === true
       ? 'dropdown__show'
@@ -11,9 +11,6 @@ mixin dropdown({ text = 'dropdown', showContent = false, itemsAmount = [0, 0, 0]
       : `dropdown__content dropdown__content_with-control-buttons js-dropdown__content ${ dropdownClassShow }`;
     const buttonSubmitClass = 'dropdown__button dropdown__button_type_submit';
     const buttonResetClass = 'dropdown__button dropdown__button_type_reset';
-    const { guests, rooms, guestsInput, roomsInput } = require('Components/dropdown/dropdown.json');
-    const itemsInfo = haveControlButtons ? guests : rooms;
-    const dropdownInfo = haveControlButtons ? guestsInput : roomsInput;
     const { placeholder, name } = dropdownInfo;
 
   .dropdown

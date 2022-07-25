@@ -1,27 +1,12 @@
-mixin radio-buttons({ checkedMan = true, checkedWoman = false })
-  - 
-    const genders = [{ 
-      value: 'male',
-      checked: checkedMan,
-      title: 'Мужчина'
-    },
-    { 
-      value: 'female',
-      checked: checkedWoman,
-      title: 'Женщина'
-    }]
-
+mixin radio-buttons({ items, name })
   .radio-buttons
-    each gender in genders
-      - const { value, checked, title } = gender;
+    each item in items
+      - const { value, checked, title } = item;
       label.radio-buttons__item
         input.radio-buttons__real(
           type = 'radio' 
-          name = 'gender' 
+          name = name 
           value = value 
           checked = checked)
-        if value === 'male'
-          span(class = 'radio-buttons__fake radio-buttons__fake_type_male')
-        else 
-          span(class = 'radio-buttons__fake')
+        span(class = 'radio-buttons__fake')
         span(class = 'radio-buttons__title')!= title

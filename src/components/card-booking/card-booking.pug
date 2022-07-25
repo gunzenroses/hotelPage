@@ -8,7 +8,9 @@ mixin card-booking({ info })
 
     const cardBookingClass = theme === ''
       ? 'card-booking'
-      : `card-booking card-booking_in_${ theme }`
+      : `card-booking card-booking_in_${ theme }`;
+    
+    const { itemsGuests, dropdownGuests } = require('Utils/dropdown-guests.json');
 
   form(class = cardBookingClass method = 'get' action = './search-room.html')
     - const { roomNumber, roomType, roomPrice } = roomInfos;
@@ -40,7 +42,8 @@ mixin card-booking({ info })
       +dropdown({
         text: 'Гости',
         itemsAmount: guestsAmount,
-        haveControlButtons: true
+        itemsInfo: itemsGuests,
+        dropdownInfo: dropdownGuests,
       })
     each priceInfo in priceInfos 
       - const { infoDescription, infoSign, infoPrice } = priceInfo;

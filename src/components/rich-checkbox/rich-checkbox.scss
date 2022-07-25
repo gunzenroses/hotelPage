@@ -2,7 +2,7 @@
 @import '@~Assets/styles/fonts.scss';
 @import '@~Assets/styles/media-mixins.scss';
 @import '@~Assets/styles/mixins.scss';
-@import '@~Components/checkbox-item/checkbox-item.scss';
+@import '@~Components/checkbox/checkbox.scss';
 
 .rich-checkbox {
   @include isFlex($direction: column);

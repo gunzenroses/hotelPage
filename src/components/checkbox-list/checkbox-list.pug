@@ -1,0 +1,12 @@
+include ../checkbox/checkbox.pug
+
+mixin checkbox-list({ items })
+  fieldset.checkbox-list
+    each item in items
+      - const { value, name, checked, title } = item;
+      +checkbox({
+        value: value, 
+        name: name, 
+        checked: checked, 
+        title: title
+      })
