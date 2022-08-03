@@ -1,5 +1,5 @@
 import 'Components/calendar/Calendar-init';
-import 'Components/checkbox-expandable/CheckboxExpandable-init';
+import 'Components/checkbox-list/CheckboxList-init';
 import 'Components/date-range/DateRange-init';
 import 'Components/dropdown/Dropdown-init';
 import 'Components/footer/footer';

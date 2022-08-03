@@ -1,12 +1,29 @@
 include ../checkbox/checkbox.pug
 
-mixin checkbox-list({ items })
-  fieldset.checkbox-list
-    each item in items
-      - const { value, name, checked, title } = item;
-      +checkbox({
-        value: value, 
-        name: name, 
-        checked: checked, 
-        title: title
-      })
+mixin checkbox-list({ items, text = '', showContent = false })
+  - 
+    const classList = text === ''
+      ? 'checkbox-list'
+      : 'checkbox-list js-checkbox-list';
+
+    const classListContent = text === ''
+      ? 'checkbox-list__content'
+      : 'checkbox-list__content js-checkbox-list__content checkbox-list__content_expandable ';
+
+    const classShow = showContent === true
+      ? 'checkbox-list__show'
+      : '';
+
+  div(class = classList)
+    fieldset(class = `${classListContent} ${classShow}`)
+      each item in items
+        - const { value, name, checked, title } = item;
+        +checkbox({
+          value: value, 
+          name: name, 
+          checked: checked, 
+          title: title
+        })
+    if (text !== '')
+      .checkbox-list__button.js-checkbox-list__init
+        .checkbox-list__title!= text

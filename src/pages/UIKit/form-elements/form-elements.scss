@@ -9,8 +9,7 @@
 @import '@~Components/button-like/button-like.scss';
 @import '@~Components/button-rate/button-rate.scss';
 @import '@~Components/button-toggle/button-toggle.scss';
-@import '@~Components/checkbox/checkbox.scss';
-@import '@~Components/checkbox-expandable/checkbox-expandable.scss';
+@import '@~Components/checkbox-list/checkbox-list.scss';
 @import '@~Components/comment/comment.scss';
 @import '@~Components/date-range/date-range.scss';
 @import '@~Components/dropdown/dropdown.scss';
@@ -18,7 +17,7 @@
 @import '@~Components/pagination/pagination.scss';
 @import '@~Components/radio-buttons/radio-buttons.scss';
 @import '@~Components/range/range.scss';
-@import '@~Components/rich-checkbox/rich-checkbox.scss';
+@import '@~Components/rich-checkbox-list/rich-checkbox-list.scss';
 
 @mixin containerMedium {
   @include isFlex($direction: column);
@@ -409,7 +408,7 @@
   }
 
   &__rich-checkbox {
-    margin-top: 258px;
+    margin-top: 242px;
   }
 
   &__room-info {

@@ -4,15 +4,14 @@
 @import '@~Assets/styles/media-mixins.scss';
 @import '@~Assets/styles/mixins.scss';
 @import '@~Components/card-room/card-room.scss';
-@import '@~Components/checkbox/checkbox.scss';
-@import '@~Components/checkbox-expandable/checkbox-expandable.scss';
+@import '@~Components/checkbox-list/checkbox-list.scss';
 @import '@~Components/date-range/date-range.scss';
 @import '@~Components/dropdown/dropdown.scss';
 @import '@~Components/footer/footer';
 @import '@~Components/header/header.scss';
 @import '@~Components/pagination/pagination.scss';
 @import '@~Components/range/range.scss';
-@import '@~Components/rich-checkbox/rich-checkbox.scss';
+@import '@~Components/rich-checkbox-list/rich-checkbox-list.scss';
 @import '@~Components/textfield/textfield.scss';
 
 @mixin formMargin {

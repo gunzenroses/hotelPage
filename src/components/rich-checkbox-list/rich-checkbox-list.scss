@@ -7,7 +7,6 @@
 .rich-checkbox {
   @include isFlex($direction: column);
   width: 100%;
-  height: 144px;
 
   @include xxs {
     width: 100%;
@@ -17,8 +16,8 @@
 
   &__label {
     display: inline-block;
-    height: 15px;
-    line-height: $fs_h3;
+    height: 44px;
+    line-height: 44px;
     font-size: $fs_h3;
     letter-spacing: .003em;
     font-weight: 700;
@@ -29,8 +28,7 @@
   &__list {
     @include isFlex($direction: column);
     width: 100%;
-    height: 115px;
-    margin: 0;
+    margin: 1px 0 0;
     padding: 0;
     border: none;
     appearance: none;

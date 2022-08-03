@@ -5,7 +5,6 @@ include ../../../components/button-like/button-like.pug
 include ../../../components/button-rate/button-rate.pug
 include ../../../components/button-toggle/button-toggle.pug
 include ../../../components/checkbox-list/checkbox-list.pug
-include ../../../components/checkbox-expandable/checkbox-expandable.pug
 include ../../../components/comment/comment.pug
 include ../../../components/date-range/date-range.pug
 include ../../../components/dropdown/dropdown.pug
@@ -13,7 +12,7 @@ include ../../../components/label/label.pug
 include ../../../components/pagination/pagination.pug
 include ../../../components/radio-buttons/radio-buttons.pug
 include ../../../components/range/range.pug
-include ../../../components/rich-checkbox/rich-checkbox.pug
+include ../../../components/rich-checkbox-list/rich-checkbox-list.pug
 include ../../../components/textfield/textfield.pug
 
 mixin form-elements(checkboxList, comment1)
@@ -227,12 +226,12 @@ mixin form-elements(checkboxList, comment1)
               dropdownInfo: dropdownRooms,
             })
         .form-elements__checkbox-rolled-up
-          +checkbox-expandable({
+          +checkbox-list({
             items: checkboxContent,
             text: 'Expandable checkbox list'
           })
         .form-elements__checkbox-expand
-          +checkbox-expandable({
+          +checkbox-list({
             items: checkboxContent,
             text: 'Expandable checkbox list',
             showContent: true,
@@ -246,7 +245,7 @@ mixin form-elements(checkboxList, comment1)
             dropdownInfo: dropdownGuests,
           })
         .form-elements__rich-checkbox
-          +rich-checkbox({
+          +rich-checkbox-list({
             name: 'accessibility',
             text: 'Rich Checkbox Buttons',
             items: accessibilityItems,

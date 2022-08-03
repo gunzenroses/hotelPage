@@ -1,6 +1,6 @@
 import { boundMethod } from 'autobind-decorator';
 
-class CheckboxExpandable {
+class Checkbox {
   constructor(dropdown) {
     this.dropdown = dropdown;
     this.init();
@@ -13,9 +13,9 @@ class CheckboxExpandable {
   }
 
   _createClasses() {
-    this.classExpandInit = 'checkbox-expandable__init';
-    this.classExpandContent = 'checkbox-expandable__content';
-    this.classExpandShow = 'checkbox-expandable__show';
+    this.classExpandInit = 'checkbox-list__init';
+    this.classExpandContent = 'checkbox-list__content';
+    this.classExpandShow = 'checkbox-list__show';
   }
 
   _createChildren() {
@@ -38,4 +38,4 @@ class CheckboxExpandable {
   }
 }
 
-export default CheckboxExpandable;
+export default Checkbox;
